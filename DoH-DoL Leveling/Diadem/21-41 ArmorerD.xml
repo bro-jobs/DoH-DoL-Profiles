@@ -3,7 +3,7 @@
 Authors:  Kayla / Angles24
 -->
 <Profile>
-<Name>Crafting Leatherworker to 51</Name>
+<Name>Crafting Armorer to 41</Name>
 <Order>
 
 	<!-- Leave Diadem -->
@@ -21,19 +21,19 @@ Authors:  Kayla / Angles24
 		</While>
 	</If>
 
-	<!-- Grade 4 Skybuilders' Leather -->
-	<If Condition="(Core.Me.Levels[ClassJobType.Leatherworker] &gt; 20) and  (Core.Me.Levels[ClassJobType.Leatherworker] &lt; 51)">
-		<If Condition="ClassName != ClassJobType.Leatherworker">
-			<ChangeClass Job="Leatherworker"/>
+	<!-- Grade 4 Skybuilders' Steel Plate -->
+	<If Condition="(Core.Me.Levels[ClassJobType.Armorer] &gt; 20) and  (Core.Me.Levels[ClassJobType.Armorer] &lt; 41)">
+		<If Condition="ClassName != ClassJobType.Armorer">
+			<ChangeClass Job="Armorer"/>
 		</If>
-		<If Condition="ClassName == ClassJobType.Leatherworker">
+		<If Condition="ClassName == ClassJobType.Armorer">
 			<AutoInventoryEquip/>
 			<WaitTimer WaitTime="5"/>
 			<If Condition="Core.Me.HasAura(1411)">
-				<Lisbeth Json="[{'Group':1,'Item':31917,'Amount':15,'Enabled':true,'Type':'Leatherworker','Collectable':false}]"/>
+				<Lisbeth Json="[{'Group':1,'Item':31915,'Amount':13,'Enabled':true,'Type':'Armorer','Collectable':false}]"/>
 			</If>
 			<If Condition="not Core.Me.HasAura(1411)">
-				<Lisbeth Json="[{'Group':1,'Item':31917,'Amount':30,'Enabled':true,'Type':'Leatherworker','Collectable':false}]"/>
+				<Lisbeth Json="[{'Group':1,'Item':31915,'Amount':25,'Enabled':true,'Type':'Armorer','Collectable':false}]"/>
 			</If>
 		</If>
 	</If>
@@ -47,12 +47,12 @@ Authors:  Kayla / Angles24
 	</If>
 
 	<!-- Reload Profile -->
-	<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 51">
-		<LLoadProfile Path="21-51 LeatherworkerD.xml"/>
+	<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 41">
+		<LLoadProfile Path="21-41 ArmorerD.xml"/>
 	</If>
 
 	<!-- Load Start -->
-	<LogMessage Message="Congrats on Level 51 on Leatherworker, moving on."/>
+	<LogMessage Message="Congrats on Level 41 on Armorer, moving on."/>
 	<AutoInventoryEquip/>
 	<WaitTimer WaitTime="5"/>
 	<LLoadProfile Path="../Start.xml"/>

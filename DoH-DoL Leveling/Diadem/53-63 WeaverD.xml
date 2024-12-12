@@ -3,7 +3,7 @@
 Authors:  Kayla / Angles24
 -->
 <Profile>
-<Name>Crafting Goldsmith to 63</Name>
+<Name>Crafting Weaver to 63</Name>
 <Order>
 
 	<!-- Leave Diadem -->
@@ -21,19 +21,19 @@ Authors:  Kayla / Angles24
 		</While>
 	</If>
 
-	<!-- Grade 4 Skybuilders' Rings -->
-	<If Condition="(Core.Me.Levels[ClassJobType.Goldsmith] &gt; 50) and  (Core.Me.Levels[ClassJobType.Goldsmith] &lt; 63)">
-		<If Condition="ClassName != ClassJobType.Goldsmith">
-			<ChangeClass Job="Goldsmith"/>
+	<!-- Grade 4 Skybuilders' Cloth -->
+	<If Condition="(Core.Me.Levels[ClassJobType.Weaver] &gt; 50) and  (Core.Me.Levels[ClassJobType.Weaver] &lt; 63)">
+		<If Condition="ClassName != ClassJobType.Weaver">
+			<ChangeClass Job="Weaver"/>
 		</If>
-		<If Condition="ClassName == ClassJobType.Goldsmith">
+		<If Condition="ClassName == ClassJobType.Weaver">
 			<AutoInventoryEquip/>
 			<WaitTimer WaitTime="5"/>
 			<If Condition="Core.Me.HasAura(1411)">
-				<Lisbeth Json="[{'Group':1,'Item':31924,'Amount':15,'Enabled':true,'Type':'Goldsmith','Collectable':false}]"/>
+				<Lisbeth Json="[{'Group':1,'Item':31926,'Amount':9,'Enabled':true,'Type':'Weaver','Collectable':false}]"/>
 			</If>
 			<If Condition="not Core.Me.HasAura(1411)">
-				<Lisbeth Json="[{'Group':1,'Item':31924,'Amount':30,'Enabled':true,'Type':'Goldsmith','Collectable':false}]"/>
+				<Lisbeth Json="[{'Group':1,'Item':31926,'Amount':18,'Enabled':true,'Type':'Weaver','Collectable':false}]"/>
 			</If>
 		</If>
 	</If>
@@ -47,12 +47,12 @@ Authors:  Kayla / Angles24
 	</If>
 
 	<!-- Reload Profile -->
-	<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 63">
-		<LLoadProfile Path="51-63 GoldsmithD.xml"/>
+	<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 63">
+		<LLoadProfile Path="53-63 WeaverD.xml"/>
 	</If>
 
 	<!-- Load Start -->
-	<LogMessage Message="Congrats on Level 63 on Goldsmith, moving on."/>
+	<LogMessage Message="Congrats on Level 63 on Weaver, moving on."/>
 	<AutoInventoryEquip/>
 	<WaitTimer WaitTime="5"/>
 	<LLoadProfile Path="../Start.xml"/>

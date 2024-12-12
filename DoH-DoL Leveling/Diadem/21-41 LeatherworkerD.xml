@@ -3,7 +3,7 @@
 Authors:  Kayla / Angles24
 -->
 <Profile>
-<Name>Crafting Leatherworker to 63</Name>
+<Name>Crafting Leatherworker to 41</Name>
 <Order>
 
 	<!-- Leave Diadem -->
@@ -21,8 +21,8 @@ Authors:  Kayla / Angles24
 		</While>
 	</If>
 
-	<!-- Grade 4 Skybuilders' Leather Straps -->
-	<If Condition="(Core.Me.Levels[ClassJobType.Leatherworker] &gt; 50) and  (Core.Me.Levels[ClassJobType.Leatherworker] &lt; 63)">
+	<!-- Grade 4 Skybuilders' Leather -->
+	<If Condition="(Core.Me.Levels[ClassJobType.Leatherworker] &gt; 20) and  (Core.Me.Levels[ClassJobType.Leatherworker] &lt; 41)">
 		<If Condition="ClassName != ClassJobType.Leatherworker">
 			<ChangeClass Job="Leatherworker"/>
 		</If>
@@ -30,10 +30,10 @@ Authors:  Kayla / Angles24
 			<AutoInventoryEquip/>
 			<WaitTimer WaitTime="5"/>
 			<If Condition="Core.Me.HasAura(1411)">
-				<Lisbeth Json="[{'Group':1,'Item':31925,'Amount':15,'Enabled':true,'Type':'Leatherworker','Collectable':false}]"/>
+				<Lisbeth Json="[{'Group':1,'Item':31917,'Amount':13,'Enabled':true,'Type':'Leatherworker','Collectable':false}]"/>
 			</If>
 			<If Condition="not Core.Me.HasAura(1411)">
-				<Lisbeth Json="[{'Group':1,'Item':31925,'Amount':30,'Enabled':true,'Type':'Leatherworker','Collectable':false}]"/>
+				<Lisbeth Json="[{'Group':1,'Item':31917,'Amount':25,'Enabled':true,'Type':'Leatherworker','Collectable':false}]"/>
 			</If>
 		</If>
 	</If>
@@ -47,12 +47,12 @@ Authors:  Kayla / Angles24
 	</If>
 
 	<!-- Reload Profile -->
-	<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 63">
-		<LLoadProfile Path="51-63 LeatherworkerD.xml"/>
+	<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 41">
+		<LLoadProfile Path="21-41 LeatherworkerD.xml"/>
 	</If>
 
 	<!-- Load Start -->
-	<LogMessage Message="Congrats on Level 63 on Leatherworker, moving on."/>
+	<LogMessage Message="Congrats on Level 41 on Leatherworker, moving on."/>
 	<AutoInventoryEquip/>
 	<WaitTimer WaitTime="5"/>
 	<LLoadProfile Path="../Start.xml"/>

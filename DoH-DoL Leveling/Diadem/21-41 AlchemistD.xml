@@ -3,7 +3,7 @@
 Authors:  Kayla / Angles24
 -->
 <Profile>
-<Name>Crafting Blacksmith to 80</Name>
+<Name>Crafting Alchemist to 41</Name>
 <Order>
 
 	<!-- Leave Diadem -->
@@ -21,19 +21,19 @@ Authors:  Kayla / Angles24
 		</While>
 	</If>
 
-	<!-- Grade 4 Skybuilders' Crosscut Saw -->
-	<If Condition="(Core.Me.Levels[ClassJobType.Blacksmith] &gt; 69) and  (Core.Me.Levels[ClassJobType.Blacksmith] &lt; 80)">
-		<If Condition="ClassName != ClassJobType.Blacksmith">
-			<ChangeClass Job="Blacksmith"/>
+	<!-- Grade 4 Skybuilders' Ink -->
+	<If Condition="(Core.Me.Levels[ClassJobType.Alchemist] &gt; 20) and  (Core.Me.Levels[ClassJobType.Alchemist] &lt; 41)">
+		<If Condition="ClassName != ClassJobType.Alchemist">
+			<ChangeClass Job="Alchemist"/>
 		</If>
-		<If Condition="ClassName == ClassJobType.Blacksmith">
+		<If Condition="ClassName == ClassJobType.Alchemist">
 			<AutoInventoryEquip/>
 			<WaitTimer WaitTime="5"/>
-			<If Condition="not Core.Me.HasAura(1411)">
-				<Lisbeth Json="[{'Group':1,'Item':31938,'Amount':25,'Enabled':true,'Type':'Blacksmith','Collectable':false}]"/>
-			</If>
 			<If Condition="Core.Me.HasAura(1411)">
-				<Lisbeth Json="[{'Group':1,'Item':31938,'Amount':10,'Enabled':true,'Type':'Blacksmith','Collectable':false}]"/>
+				<Lisbeth Json="[{'Group':1,'Item':31919,'Amount':13,'Enabled':true,'Type':'Alchemist','Collectable':false}]"/>
+			</If>
+			<If Condition="not Core.Me.HasAura(1411)">
+				<Lisbeth Json="[{'Group':1,'Item':31919,'Amount':25,'Enabled':true,'Type':'Alchemist','Collectable':false}]"/>
 			</If>
 		</If>
 	</If>
@@ -47,12 +47,12 @@ Authors:  Kayla / Angles24
 	</If>
 
 	<!-- Reload Profile -->
-	<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 80">
-		<LLoadProfile Path="70-80 BlacksmithD.xml"/>
+	<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 41">
+		<LLoadProfile Path="21-41 AlchemistD.xml"/>
 	</If>
 
 	<!-- Load Start -->
-	<LogMessage Message="Congrats on Level 80 on Blacksmith, moving on."/>
+	<LogMessage Message="Congrats on Level 41 on Alchemist, moving on."/>
 	<AutoInventoryEquip/>
 	<WaitTimer WaitTime="5"/>
 	<LLoadProfile Path="../Start.xml"/>

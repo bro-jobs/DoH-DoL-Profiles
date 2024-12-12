@@ -3,7 +3,7 @@
 Authors:  Kayla / Angles24
 -->
 <Profile>
-<Name>Crafting Armorer to 63</Name>
+<Name>Crafting Carpenter to 53</Name>
 <Order>
 
 	<!-- Leave Diadem -->
@@ -21,19 +21,19 @@ Authors:  Kayla / Angles24
 		</While>
 	</If>
 
-	<!-- Grade 4 Skybuilders' Rivets -->
-	<If Condition="(Core.Me.Levels[ClassJobType.Armorer] &gt; 50) and  (Core.Me.Levels[ClassJobType.Armorer] &lt; 63)">
-		<If Condition="ClassName != ClassJobType.Armorer">
-			<ChangeClass Job="Armorer"/>
+	<!-- Grade 4 Skybuilders' Plywood -->
+	<If Condition="(Core.Me.Levels[ClassJobType.Carpenter] &gt; 40) and  (Core.Me.Levels[ClassJobType.Carpenter] &lt; 53)">
+		<If Condition="ClassName != ClassJobType.Carpenter">
+			<ChangeClass Job="Carpenter"/>
 		</If>
-		<If Condition="ClassName == ClassJobType.Armorer">
+		<If Condition="ClassName == ClassJobType.Carpenter">
 			<AutoInventoryEquip/>
 			<WaitTimer WaitTime="5"/>
 			<If Condition="Core.Me.HasAura(1411)">
-				<Lisbeth Json="[{'Group':1,'Item':31923,'Amount':15,'Enabled':true,'Type':'Armorer','Collectable':false}]"/>
+				<Lisbeth Json="[{'Group':1,'Item':31921,'Amount':10,'Enabled':true,'Type':'Carpenter','Collectable':false}]"/>
 			</If>
 			<If Condition="not Core.Me.HasAura(1411)">
-				<Lisbeth Json="[{'Group':1,'Item':31923,'Amount':30,'Enabled':true,'Type':'Armorer','Collectable':false}]"/>
+				<Lisbeth Json="[{'Group':1,'Item':31921,'Amount':20,'Enabled':true,'Type':'Carpenter','Collectable':false}]"/>
 			</If>
 		</If>
 	</If>
@@ -47,12 +47,12 @@ Authors:  Kayla / Angles24
 	</If>
 
 	<!-- Reload Profile -->
-	<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 63">
-		<LLoadProfile Path="51-63 ArmorerD.xml"/>
+	<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 53">
+		<LLoadProfile Path="41-53 CarpenterD.xml"/>
 	</If>
 
 	<!-- Load Start -->
-	<LogMessage Message="Congrats on Level 63 on Armorer, moving on."/>
+	<LogMessage Message="Congrats on Level 53 on Carpenter, moving on."/>
 	<AutoInventoryEquip/>
 	<WaitTimer WaitTime="5"/>
 	<LLoadProfile Path="../Start.xml"/>

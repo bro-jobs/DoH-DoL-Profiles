@@ -3,7 +3,7 @@
 Authors:  Kayla / Angles24
 -->
 <Profile>
-<Name>Crafting Weaver to 51</Name>
+<Name>Crafting Blacksmith to 63</Name>
 <Order>
 
 	<!-- Leave Diadem -->
@@ -21,19 +21,19 @@ Authors:  Kayla / Angles24
 		</While>
 	</If>
 
-	<!-- Grade 4 Skybuilders' Rope -->
-	<If Condition="(Core.Me.Levels[ClassJobType.Weaver] &gt; 20) and  (Core.Me.Levels[ClassJobType.Weaver] &lt; 51)">
-		<If Condition="ClassName != ClassJobType.Weaver">
-			<ChangeClass Job="Weaver"/>
+	<!-- Grade 4 Skybuilders' Nails -->
+	<If Condition="(Core.Me.Levels[ClassJobType.Blacksmith] &gt; 50) and  (Core.Me.Levels[ClassJobType.Blacksmith] &lt; 63)">
+		<If Condition="ClassName != ClassJobType.Blacksmith">
+			<ChangeClass Job="Blacksmith"/>
 		</If>
-		<If Condition="ClassName == ClassJobType.Weaver">
+		<If Condition="ClassName == ClassJobType.Blacksmith">
 			<AutoInventoryEquip/>
 			<WaitTimer WaitTime="5"/>
 			<If Condition="Core.Me.HasAura(1411)">
-				<Lisbeth Json="[{'Group':1,'Item':31918,'Amount':15,'Enabled':true,'Type':'Weaver','Collectable':false}]"/>
+				<Lisbeth Json="[{'Group':1,'Item':31922,'Amount':9,'Enabled':true,'Type':'Blacksmith','Collectable':false}]"/>
 			</If>
 			<If Condition="not Core.Me.HasAura(1411)">
-				<Lisbeth Json="[{'Group':1,'Item':31918,'Amount':30,'Enabled':true,'Type':'Weaver','Collectable':false}]"/>
+				<Lisbeth Json="[{'Group':1,'Item':31922,'Amount':18,'Enabled':true,'Type':'Blacksmith','Collectable':false}]"/>
 			</If>
 		</If>
 	</If>
@@ -47,12 +47,12 @@ Authors:  Kayla / Angles24
 	</If>
 
 	<!-- Reload Profile -->
-	<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 51">
-		<LLoadProfile Path="21-51 WeaverD.xml"/>
+	<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 63">
+		<LLoadProfile Path="53-63 BlacksmithD.xml"/>
 	</If>
 
 	<!-- Load Start -->
-	<LogMessage Message="Congrats on Level 51 on Weaver, moving on."/>
+	<LogMessage Message="Congrats on Level 63 on Blacksmith, moving on."/>
 	<AutoInventoryEquip/>
 	<WaitTimer WaitTime="5"/>
 	<LLoadProfile Path="../Start.xml"/>

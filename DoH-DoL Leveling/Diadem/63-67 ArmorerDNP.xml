@@ -29,7 +29,7 @@ Authors:  Kayla / Angles24
 		<If Condition="ClassName == ClassJobType.Armorer">
 			<AutoInventoryEquip/>
 			<WaitTimer WaitTime="5"/>
-			<Lisbeth Json="[{'Group':1,'Item':31931,'Amount':15,'Enabled':true,'Type':'Armorer','Collectable':false}]"/>
+			<Lisbeth Json="[{'Group':1,'Item':31931,'Amount':17,'Enabled':true,'Type':'Armorer','Collectable':false}]"/>
 		</If>
 	</If>
 

@@ -3,7 +3,7 @@
 Authors:  Kayla / Angles24
 -->
 <Profile>
-<Name>Crafting Blacksmith to 51</Name>
+<Name>Crafting Alchemist to 53</Name>
 <Order>
 
 	<!-- Leave Diadem -->
@@ -21,19 +21,19 @@ Authors:  Kayla / Angles24
 		</While>
 	</If>
 
-	<!-- Grade 4 Skybuilders' Alloy -->
-	<If Condition="(Core.Me.Levels[ClassJobType.Blacksmith] &gt; 20) and  (Core.Me.Levels[ClassJobType.Blacksmith] &lt; 51)">
-		<If Condition="ClassName != ClassJobType.Blacksmith">
-			<ChangeClass Job="Blacksmith"/>
+	<!-- Grade 4 Skybuilders' Ink -->
+	<If Condition="(Core.Me.Levels[ClassJobType.Alchemist] &gt; 40) and  (Core.Me.Levels[ClassJobType.Alchemist] &lt; 53)">
+		<If Condition="ClassName != ClassJobType.Alchemist">
+			<ChangeClass Job="Alchemist"/>
 		</If>
-		<If Condition="ClassName == ClassJobType.Blacksmith">
+		<If Condition="ClassName == ClassJobType.Alchemist">
 			<AutoInventoryEquip/>
 			<WaitTimer WaitTime="5"/>
 			<If Condition="Core.Me.HasAura(1411)">
-				<Lisbeth Json="[{'Group':1,'Item':31914,'Amount':15,'Enabled':true,'Type':'Blacksmith','Collectable':false}]"/>
+				<Lisbeth Json="[{'Group':1,'Item':31927,'Amount':10,'Enabled':true,'Type':'Alchemist','Collectable':false}]"/>
 			</If>
 			<If Condition="not Core.Me.HasAura(1411)">
-				<Lisbeth Json="[{'Group':1,'Item':31914,'Amount':30,'Enabled':true,'Type':'Blacksmith','Collectable':false}]"/>
+				<Lisbeth Json="[{'Group':1,'Item':31927,'Amount':20,'Enabled':true,'Type':'Alchemist','Collectable':false}]"/>
 			</If>
 		</If>
 	</If>
@@ -47,12 +47,12 @@ Authors:  Kayla / Angles24
 	</If>
 
 	<!-- Reload Profile -->
-	<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 51">
-		<LLoadProfile Path="21-51 BlacksmithD.xml"/>
+	<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 53">
+		<LLoadProfile Path="41-53 AlchemistD.xml"/>
 	</If>
 
 	<!-- Load Start -->
-	<LogMessage Message="Congrats on Level 51 on Blacksmith, moving on."/>
+	<LogMessage Message="Congrats on Level 53 on Alchemist, moving on."/>
 	<AutoInventoryEquip/>
 	<WaitTimer WaitTime="5"/>
 	<LLoadProfile Path="../Start.xml"/>
