@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Profile>
+<name>Test</name>
+<Order>
+	<RunCode name="Test" />
+</Order>
+<CodeChunks>
+	<CodeChunk name="Test">
+	<![CDATA[
+		Logging.Write("testing...");
+		int exp = (int)Experience.CurrentExperience;
+		Logging.Write($"{exp}");
+	]]>
+	</CodeChunk>
+
+</CodeChunks>
+</Profile>

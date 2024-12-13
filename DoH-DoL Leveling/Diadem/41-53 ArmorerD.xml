@@ -29,12 +29,7 @@ Authors:  Kayla / Angles24
 		<If Condition="ClassName == ClassJobType.Armorer">
 			<AutoInventoryEquip/>
 			<WaitTimer WaitTime="5"/>
-			<If Condition="Core.Me.HasAura(1411)">
-				<Lisbeth Json="[{'Group':1,'Item':31923,'Amount':10,'Enabled':true,'Type':'Armorer','Collectable':false}]"/>
-			</If>
-			<If Condition="not Core.Me.HasAura(1411)">
-				<Lisbeth Json="[{'Group':1,'Item':31923,'Amount':20,'Enabled':true,'Type':'Armorer','Collectable':false}]"/>
-			</If>
+			<RunCode Name="SetLisbethJson" />
 		</If>
 	</If>
 
@@ -77,6 +72,45 @@ Authors:  Kayla / Angles24
 	<![CDATA[
 		Logging.Write("[Handin] calling");
 		await LlamaLibrary.Utilities.Ishgard.Handin();
+	]]>
+	</CodeChunk>
+	<CodeChunk Name="SetLisbethJson">
+	<![CDATA[
+		int amount = 17;
+		int level = Core.Me.Levels[ClassJobType.Armorer];
+		
+		switch(level) {
+			case 41: amount = 16; break;
+			case 42: amount = 15; break;
+			case 43: amount = 14; break;
+			case 44: amount = 13; break;
+			case 45: amount = 13; break;
+			case 46: amount = 12; break;
+			case 47: amount = 11; break;
+			case 48: amount = 10; break;
+			case 49: amount = 9; break;
+			case 50: amount = 7; break;
+			case 51: amount = 6; break;
+			case 52: amount = 3; break;
+		}
+		
+		if (Core.Me.HasAura(1411)) {
+			amount = (int)Math.Ceiling((amount + 1) / 2.0);
+		}
+		
+		ff14bot.Helpers.Logging.Write($"Estimated amount of collectables needed to level to next checkpoint: {amount}");
+		
+		var lisbeth = BotManager.Bots.FirstOrDefault(c => c.Name == "Lisbeth");
+		if (lisbeth != null)
+		{
+			var lisbethObject = lisbeth.GetType().GetProperty("Lisbeth").GetValue(lisbeth);
+			if (lisbethObject != null)
+			{
+				var json = $"[{{'Group':1,'Item':31923,'Amount':{amount},'Enabled':true,'Type':'Armorer','Collectable':false}}]";
+				var orderMethod = lisbethObject.GetType().GetMethod("ExecuteOrders");
+				await (Task<bool>)orderMethod.Invoke(lisbethObject, new object[] { json, false });
+			}
+		}
 	]]>
 	</CodeChunk>
 </CodeChunks>

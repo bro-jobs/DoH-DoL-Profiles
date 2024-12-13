@@ -75,47 +75,81 @@ Authors:  Kayla / Angles24
 	]]>
 	</CodeChunk>
 	<CodeChunk Name="SetLisbethJson">
-	<![CDATA[
-		int amount = 24;
-		int level = Core.Me.Levels[ClassJobType.Alchemist];
-		
-		switch(level) {
-			case 22: case 23: amount = 23; break;
-			case 24: case 25: amount = 22; break;
-			case 26: amount = 21; break;
-			case 27: case 28: amount = 20; break;
-			case 29: amount = 19; break;
-			case 30: amount = 18; break;
-			case 31: amount = 17; break;
-			case 32: amount = 16; break;
-			case 33: amount = 14; break;
-			case 34: amount = 13; break;
-			case 35: amount = 11; break;
-			case 36: amount = 10; break;
-			case 37: amount = 8; break;
-			case 38: amount = 6; break;
-			case 39: amount = 5; break;
-			case 40: amount = 3; break;
-		}
-		
-		if (Core.Me.HasAura(1411)) {
-			amount = (int)Math.Ceiling((amount + 1) / 2.0);
-		}
-		
-		ff14bot.Helpers.Logging.Write($"Estimated amount of collectables needed to level to next checkpoint: {amount}");
-		
-		var lisbeth = BotManager.Bots.FirstOrDefault(c => c.Name == "Lisbeth");
-		if (lisbeth != null)
-		{
-			var lisbethObject = lisbeth.GetType().GetProperty("Lisbeth").GetValue(lisbeth);
-			if (lisbethObject != null)
+		<![CDATA[
+			int amount = 23;
+			int level = Core.Me.Levels[ClassJobType.Alchemist];
+			int exp = (int)Experience.CurrentExperience;
+
+			amount = (level, exp) switch
 			{
-				var json = $"[{{'Group':1,'Item':31919,'Amount':{amount},'Enabled':true,'Type':'Alchemist','Collectable':false}}]";
-				var orderMethod = lisbethObject.GetType().GetMethod("ExecuteOrders");
-				await (Task<bool>)orderMethod.Invoke(lisbethObject, new object[] { json, false });
+			(40, > 86774) => 1,
+			(40, >= 18548) => 2,
+			(40, >= 0) => 3,
+			(39, > 92202) => 3,
+			(39, >= 23936) => 4,
+			(39, >= 0) => 5,
+			(38, > 88490) => 5,
+			(38, >= 20188) => 6,
+			(38, >= 0) => 7,
+			(37, > 72599) => 7,
+			(37, >= 4256) => 8,
+			(37, >= 0) => 9,
+			(36, > 48589) => 9,
+			(36, >= 0) => 10,
+			(35, > 81440) => 10,
+			(35, >= 12984) => 11,
+			(35, >= 0) => 12,
+			(34, > 38616) => 12,
+			(34, >= 0) => 13,
+			(33, > 56314) => 13,
+			(33, >= 0) => 14,
+			(32, > 64944) => 14,
+			(32, >= 0) => 15,
+			(31, > 68308) => 15,
+			(31, >= 0) => 16,
+			(30, > 61492) => 16,
+			(30, >= 0) => 17,
+			(29, > 51320) => 17,
+			(29, >= 0) => 18,
+			(28, > 39330) => 18,
+			(28, >= 0) => 19,
+			(27, > 19523) => 19,
+			(27, >= 0) => 20,
+			(26, > 0) => 20,
+			(25, > 33693) => 20,
+			(25, >= 0) => 21,
+			(24, > 0) => 21,
+			(23, > 28411) => 21,
+			(23, >= 0) => 22,
+			(22, > 0) => 22,
+			(21, > 8232) => 22,
+			(21, >= 0) => 23,
+			(20, > 0) => 23,
+			(19, > 0) => 23,
+			(18, > 0) => 23,
+			(17, > 13411) => 23,
+			(17, >= 0) => 23,
+			_ => amount
+			};
+
+			if (Core.Me.HasAura(1411)) {
+				amount = (int)Math.Ceiling((amount + 1) / 2.0);
 			}
-		}
-	]]>
+
+			ff14bot.Helpers.Logging.Write($"Estimated amount of collectables needed to level to next checkpoint: {amount}");
+
+			var lisbeth = BotManager.Bots.FirstOrDefault(c => c.Name == "Lisbeth");
+			if (lisbeth != null)
+			{
+				var lisbethObject = lisbeth.GetType().GetProperty("Lisbeth").GetValue(lisbeth);
+				if (lisbethObject != null)
+				{
+					var json = $"[{{'Group':1,'Item':31919,'Amount':{amount},'Enabled':true,'Type':'Alchemist','Collectable':false}}]";
+					var orderMethod = lisbethObject.GetType().GetMethod("ExecuteOrders");
+					await (Task<bool>)orderMethod.Invoke(lisbethObject, new object[] { json, false });
+				}
+			}
+		]]>
 	</CodeChunk>
 
 </CodeChunks>
