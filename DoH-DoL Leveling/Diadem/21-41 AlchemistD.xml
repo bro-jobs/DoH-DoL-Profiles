@@ -29,12 +29,7 @@ Authors:  Kayla / Angles24
 		<If Condition="ClassName == ClassJobType.Alchemist">
 			<AutoInventoryEquip/>
 			<WaitTimer WaitTime="5"/>
-			<If Condition="Core.Me.HasAura(1411)">
-				<Lisbeth Json="[{'Group':1,'Item':31919,'Amount':13,'Enabled':true,'Type':'Alchemist','Collectable':false}]"/>
-			</If>
-			<If Condition="not Core.Me.HasAura(1411)">
-				<Lisbeth Json="[{'Group':1,'Item':31919,'Amount':25,'Enabled':true,'Type':'Alchemist','Collectable':false}]"/>
-			</If>
+			<RunCode Name="SetLisbethJson" />
 		</If>
 	</If>
 
@@ -79,5 +74,49 @@ Authors:  Kayla / Angles24
 		await LlamaLibrary.Utilities.Ishgard.Handin();
 	]]>
 	</CodeChunk>
+	<CodeChunk Name="SetLisbethJson">
+	<![CDATA[
+		int amount = 24;
+		int level = Core.Me.Levels[ClassJobType.Alchemist];
+		
+		switch(level) {
+			case 22: case 23: amount = 23; break;
+			case 24: case 25: amount = 22; break;
+			case 26: amount = 21; break;
+			case 27: case 28: amount = 20; break;
+			case 29: amount = 19; break;
+			case 30: amount = 18; break;
+			case 31: amount = 17; break;
+			case 32: amount = 16; break;
+			case 33: amount = 14; break;
+			case 34: amount = 13; break;
+			case 35: amount = 11; break;
+			case 36: amount = 10; break;
+			case 37: amount = 8; break;
+			case 38: amount = 6; break;
+			case 39: amount = 5; break;
+			case 40: amount = 3; break;
+		}
+		
+		if (Core.Me.HasAura(1411)) {
+			amount = (int)Math.Ceiling((amount + 1) / 2.0);
+		}
+		
+		ff14bot.Helpers.Logging.Write($"Estimated amount of collectables needed to level to next checkpoint: {amount}");
+		
+		var lisbeth = BotManager.Bots.FirstOrDefault(c => c.Name == "Lisbeth");
+		if (lisbeth != null)
+		{
+			var lisbethObject = lisbeth.GetType().GetProperty("Lisbeth").GetValue(lisbeth);
+			if (lisbethObject != null)
+			{
+				var json = $"[{{'Group':1,'Item':31919,'Amount':{amount},'Enabled':true,'Type':'Alchemist','Collectable':false}}]";
+				var orderMethod = lisbethObject.GetType().GetMethod("ExecuteOrders");
+				await (Task<bool>)orderMethod.Invoke(lisbethObject, new object[] { json, false });
+			}
+		}
+	]]>
+	</CodeChunk>
+
 </CodeChunks>
 </Profile>
