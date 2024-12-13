@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Profile>
+<name>autocraftloggingtest</name>
+<Order>
+	<RunCode Name="checkautocraft21"/>
+</Order>
+<CodeChunks>
+<CodeChunk Name="checkautocraft21">
+<![CDATA[
+    try 
+    {
+        string workingDirectory = Directory.GetCurrentDirectory();
+        string settingsPath = Path.Combine(workingDirectory, "Settings");
+        string logFilePath = Path.Combine(settingsPath, "autocraft21.txt");
+        
+        if (File.Exists(logFilePath) && File.ReadAllText(logFilePath).Trim() == "1")
+        {
+            var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+            var profileDir = Path.GetDirectoryName(profilePath);
+            var autoCraftPath = Path.Combine(profileDir, "../Autocraft/Lv21.xml");
+            
+            if (File.Exists(autoCraftPath))
+            {
+                ff14bot.NeoProfiles.NeoProfileManager.Load(autoCraftPath);
+            }
+        }
+    }
+    catch
+    {
+    }
+]]>
+</CodeChunk>
+</CodeChunks>
+</Profile>

@@ -30,15 +30,24 @@ class LevelOptimizer:
         level_exp_file (str): Path to CSV with level, exp columns
         synthesis_exp_file (str): Path to CSV with level2, exp2 columns
         """
+        # Read CSVs
         self.level_exp_df = pd.read_csv(level_exp_file)
         self.synthesis_exp_df = pd.read_csv(synthesis_exp_file)
 
-        # Remove commas and convert to integers
-        self.level_exp_df['exp'] = self.level_exp_df['exp'].str.replace(',', '').astype(int)
-        self.level_exp_df['level'] = self.level_exp_df['level'].astype(int)
+        # Helper function to safely convert column to int
+        def safe_convert_to_int(series):
+            if series.dtype == 'O':  # Object (string) type
+                try:
+                    return series.str.replace(',', '').astype(int)
+                except AttributeError:
+                    return series.astype(int)
+            return series.astype(int)
 
-        self.synthesis_exp_df['exp2'] = self.synthesis_exp_df['exp2'].str.replace(',', '').astype(int)
-        self.synthesis_exp_df['level2'] = self.synthesis_exp_df['level2'].astype(int)
+        # Convert columns to integers, handling both string and numeric inputs
+        self.level_exp_df['level'] = safe_convert_to_int(self.level_exp_df['level'])
+        self.level_exp_df['exp'] = safe_convert_to_int(self.level_exp_df['exp'])
+        self.synthesis_exp_df['level2'] = safe_convert_to_int(self.synthesis_exp_df['level2'])
+        self.synthesis_exp_df['exp2'] = safe_convert_to_int(self.synthesis_exp_df['exp2'])
 
         # Create lookup dictionaries for faster access
         self.level_exp_dict = dict(zip(self.level_exp_df['level'], self.level_exp_df['exp']))
@@ -380,10 +389,20 @@ class LevelOptimizer:
         print("</CodeChunk>")
 
 
-optimizer = LevelOptimizer("levels.csv", "lv20collect.csv")
+optimizer_21 = LevelOptimizer("levels.csv", "lv20collect.csv")
 
 # Lv 21 and above can craft Lv 20 collectable with 100% HQ.
 
-optimizer.print_breakpoints(target_level=41, turn_in_exp=67771)
+optimizer_21.generate_codechunk(target_level=41, turn_in_exp=67771)
 
-optimizer.generate_codechunk(target_level=41, turn_in_exp=67771)
+optimizer_41 = LevelOptimizer("levels.csv", "lv40collect.csv")
+
+# Lv 41-53 can only reliably craft to the first or second collectability rating.
+
+optimizer_41.generate_codechunk(target_level=53, turn_in_exp=90527, max_collectables=32)
+
+optimizer_53 = LevelOptimizer("levels.csv", "lv40bcollect.csv")
+
+# Lv 53-63 can reliably craft to 100% HQ.
+
+optimizer_53.generate_codechunk(target_level=63, turn_in_exp=359521, max_collectables=30)

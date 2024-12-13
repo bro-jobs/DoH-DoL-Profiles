@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Profile>
+<Name>Crafting Lv21 Gear</Name>
+<Order>
+    <AutoInventoryEquip/>
+	
+		<LogMessage Message="Selling Lv1-21 junk..."/>
+		<LogMessage Message="CAUTION! This may sell HQ items that you'd rather put on the marketboard!"/>
+		
+		<LLSellItem ItemIds="2669, 1002669, 2341, 1002341, 2219, 1002219, 2658, 1002658"/>
+		<LLSellItem ItemIds="2652, 1002652, 3023, 1003023, 3019, 1003019, 3014, 1003014"/>
+		<LLSellItem ItemIds="2959, 1002959, 2961, 1002961, 3310, 1003310, 4834, 5107"/>
+		<LLSellItem ItemIds="5824, 5823, 5258, 1005258, 5057, 1005057, 5063, 1005063"/>
+		<LLSellItem ItemIds="5091, 1005091, 5364, 1005364, 5367, 1005367, 5385"/>
+		<LLSellItem ItemIds="5324, 1005324, 5325, 1005325, 5334, 1005334, 5341"/>
+		<LLSellItem ItemIds="2652, 1002652, 3023, 1003023, 3019, 1003019, 3014, 1003014"/>
+		<LLSellItem ItemIds="5343, 5275, 1005275, 5432, 5509, 5534"/>
+		<LLSellItem ItemIds="2314, 2340, 2366, 2391, 2416, 2442, 2467, 2493"/>
+		<LLSellItem ItemIds="2519, 2545"/>
+		<LLSellItem ItemIds="2328, 2355, 2380, 2405, 2430, 2456, 2481, 2507"/>
+		<LLSellItem ItemIds="2534, 2560"/>
+    <WaitTimer WaitTime="5"/>
+    <LLoadProfile Path="../Start.xml"/>
+</Order>
+<CodeChunks>
+</CodeChunks>
+</Profile>

@@ -14,6 +14,13 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 <!ENTITY craft80 "1">
 <!ENTITY craft90 "1">
 
+<!-- EXPERIMENTAL: automatically let the bot craft the necessary gear at each breakpoint. Set to 0 to disable. 1 to enable. -->
+<!ENTITY autocraft "1">
+
+<!-- EXPERIMENTAL: automatically let the bot sell NQ *and* HQ residuals at each breakpoint. Set to 0 to disable. 1 to enable. -->
+<!ENTITY autosell "1">
+<!-- Starting on a new character? Delete all autocraft and autosell log files in /Settings in your RebornBuddy profile -->
+
 <!ENTITY craftClass "1"><!-- Just remember after you finished crafting you meld items before restarting. -->
 <!ENTITY crp "1">
 <!ENTITY bsm "1">
@@ -41,6 +48,26 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 	<Order>
 	
 	<DisablePlugin Name="Enable Flight"/>
+	
+		<If Condition="&autocraft; == 1">
+			<RunCode Name="autocraftlogging21" />
+			<RunCode Name="autocraftlogging41" />
+			<RunCode Name="autocraftlogging53" />
+			<RunCode Name="autocraftlogging63" />
+			<RunCode Name="autocraftlogging70"/>
+			<RunCode Name="autocraftlogging80"/>
+			<RunCode Name="autocraftlogging90"/>
+		</If>
+		
+		<If Condition="&autosell; == 1">
+			<RunCode Name="autoselllogging21"/>
+			<RunCode Name="autoselllogging41"/>
+			<RunCode Name="autoselllogging53"/>
+			<RunCode Name="autoselllogging63"/>
+			<RunCode Name="autoselllogging70"/>
+			<RunCode Name="autoselllogging80"/>
+			<RunCode Name="autoselllogging90"/>
+		</If>
 	
 	<!-- Check to see if we have unlock all Crafting Profiles -->
 		<If Condition="not (IsQuestCompleted(65807) and IsQuestCompleted(65809) 
@@ -118,14 +145,26 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 			<LLoadProfile Path="Quests/Unlock Ishgard Firmament.xml"/>
 		</If>
 			
-			
 		<!-- Craft Gathering and Crafting Gear 21 -->
-		<If Condition="&craft21; == 1 and ((&crp; == 1 and HighestILvl(ClassJobType.Carpenter) &lt; 17) or (&bsm; == 1 and HighestILvl(ClassJobType.Blacksmith) &lt; 17) or (&arm; == 1 and HighestILvl(ClassJobType.Armorer) &lt; 17) or (&gsm; == 1 and HighestILvl(ClassJobType.Goldsmith) &lt; 17) or (&ltw; == 1 and HighestILvl(ClassJobType.Leatherworker) &lt; 17) or (&wvr; == 1 and HighestILvl(ClassJobType.Weaver) &lt; 17) or (&alc; == 1 and HighestILvl(ClassJobType.Alchemist) &lt; 17) or (&cul; == 1 and HighestILvl(ClassJobType.Culinarian) &lt; 17) or (&min; == 1 and HighestILvl(ClassJobType.Miner) &lt; 17) or (&btn; == 1 and HighestILvl(ClassJobType.Botanist) &lt; 17))">
+		<If Condition="&craft21; == 1 and &autocraft; == 0 and ((&crp; == 1 and HighestILvl(ClassJobType.Carpenter) &lt; 17) or (&bsm; == 1 and HighestILvl(ClassJobType.Blacksmith) &lt; 17) or (&arm; == 1 and HighestILvl(ClassJobType.Armorer) &lt; 17) or (&gsm; == 1 and HighestILvl(ClassJobType.Goldsmith) &lt; 17) or (&ltw; == 1 and HighestILvl(ClassJobType.Leatherworker) &lt; 17) or (&wvr; == 1 and HighestILvl(ClassJobType.Weaver) &lt; 17) or (&alc; == 1 and HighestILvl(ClassJobType.Alchemist) &lt; 17) or (&cul; == 1 and HighestILvl(ClassJobType.Culinarian) &lt; 17) or (&min; == 1 and HighestILvl(ClassJobType.Miner) &lt; 17) or (&btn; == 1 and HighestILvl(ClassJobType.Botanist) &lt; 17))">
 			<LogMessage Message="Craft level 21 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and make sure your gearsets are updated with the new gear."/>
 			<UserDialog DialogText="Craft level 21 craft and gather gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and make sure your gearsets are updated with the new gear.\n\nIf you keep seeing this popup even though you have upgraded your gear edit the Start.xml profile and change craft21 1 to craft21 0, save and start the bot again."/>	
 		</If>
 		
+		<If Condition="&craft21; == 1 and &autocraft; == 1">
+			<RunCode Name="autocraftcheck21" />
+		</If>
+		
+		<!-- Sell More Lv1-21 Junk -->
+		
+		<If Condition="&craft21; == 1 and &autosell; == 1">
+			<RunCode Name="autosellcheck21" />
+		</If>
+		
 		<!-- 21-51 Ishgard Crafting -->
+		
+		<LogMessage Message="Moving on to Lv21-41..."/>
+		
 		<If Condition="&crp; == 1">
 			<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 41">
 				<LLoadProfile Path="Diadem/21-41 CarpenterD.xml"/>
@@ -966,6 +1005,299 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 					await Coroutine.Sleep(2000);
 				}
 			]]>
+		</CodeChunk>
+		<CodeChunk Type="Definition" Name="AutocraftLogging">
+		<![CDATA[
+			public static async Task<bool> LogAutocraftLevel(int level)
+			{
+				try 
+				{
+					string workingDirectory = Directory.GetCurrentDirectory();
+					string settingsPath = Path.Combine(workingDirectory, "Settings");
+					string logFilePath = Path.Combine(settingsPath, $"autocraft{level}.txt");
+					
+					if (File.Exists(logFilePath))
+					{
+						string content = File.ReadAllText(logFilePath).Trim();
+						if (content == "2")
+						{
+							return true;
+						}
+					}
+					
+					Directory.CreateDirectory(settingsPath);
+					File.WriteAllText(logFilePath, "1");
+					return true;
+				}
+				catch
+				{
+					return true;
+				}
+			}
+		]]>
+		</CodeChunk>
+
+		<CodeChunk Type="Definition" Name="AutocraftCheck">
+		<![CDATA[
+			public static async Task<bool> CheckAutocraftLevel(int level)
+			{
+				try 
+				{
+					string workingDirectory = Directory.GetCurrentDirectory();
+					string settingsPath = Path.Combine(workingDirectory, "Settings");
+					string logFilePath = Path.Combine(settingsPath, $"autocraft{level}.txt");
+					
+					if (File.Exists(logFilePath) && File.ReadAllText(logFilePath).Trim() == "1")
+					{
+						var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+						var profileDir = Path.GetDirectoryName(profilePath);
+						var autoCraftPath = Path.Combine(profileDir, $"../Autocraft/Lv{level}.xml");
+						
+						if (File.Exists(autoCraftPath))
+						{
+							File.WriteAllText(logFilePath, "2");
+							ff14bot.NeoProfiles.NeoProfileManager.Load(autoCraftPath);
+						}
+					}
+					return true;
+				}
+				catch
+				{
+					return true;
+				}
+			}
+		]]>
+		</CodeChunk>
+
+		<CodeChunk Name="autocraftlogging21">
+		<![CDATA[
+			await LogAutocraftLevel(21);
+		]]>
+		</CodeChunk>
+
+		<CodeChunk Name="autocraftlogging41">
+		<![CDATA[
+			await LogAutocraftLevel(41);
+		]]>
+		</CodeChunk>
+
+		<CodeChunk Name="autocraftlogging53">
+		<![CDATA[
+			await LogAutocraftLevel(53);
+		]]>
+		</CodeChunk>
+
+		<CodeChunk Name="autocraftlogging63">
+		<![CDATA[
+			await LogAutocraftLevel(63);
+		]]>
+		</CodeChunk>
+
+		<CodeChunk Name="autocraftlogging70">
+		<![CDATA[
+			await LogAutocraftLevel(70);
+		]]>
+		</CodeChunk>
+
+		<CodeChunk Name="autocraftlogging80">
+		<![CDATA[
+			await LogAutocraftLevel(80);
+		]]>
+		</CodeChunk>
+
+		<CodeChunk Name="autocraftlogging90">
+		<![CDATA[
+			await LogAutocraftLevel(90);
+		]]>
+		</CodeChunk>
+		
+		<CodeChunk Name="autocraftcheck21">
+		<![CDATA[
+			await CheckAutocraftLevel(21);
+		]]>
+		</CodeChunk>
+
+		<CodeChunk Name="autocraftcheck41">
+		<![CDATA[
+			await CheckAutocraftLevel(41);
+		]]>
+		</CodeChunk>
+
+		<CodeChunk Name="autocraftcheck53">
+		<![CDATA[
+			await CheckAutocraftLevel(53);
+		]]>
+		</CodeChunk>
+
+		<CodeChunk Name="autocraftcheck63">
+		<![CDATA[
+			await CheckAutocraftLevel(63);
+		]]>
+		</CodeChunk>
+
+		<CodeChunk Name="autocraftcheck70">
+		<![CDATA[
+			await CheckAutocraftLevel(70);
+		]]>
+		</CodeChunk>
+
+		<CodeChunk Name="autocraftcheck80">
+		<![CDATA[
+			await CheckAutocraftLevel(80);
+		]]>
+		</CodeChunk>
+
+		<CodeChunk Name="autocraftcheck90">
+		<![CDATA[
+			await CheckAutocraftLevel(90);
+		]]>
+		</CodeChunk>
+		
+		<CodeChunk Type="Definition" Name="AutosellLogging">
+		<![CDATA[
+			public static async Task<bool> LogAutosellLevel(int level)
+			{
+				try 
+				{
+					string workingDirectory = Directory.GetCurrentDirectory();
+					string settingsPath = Path.Combine(workingDirectory, "Settings");
+					string logFilePath = Path.Combine(settingsPath, $"autosell{level}.txt");
+					
+					if (File.Exists(logFilePath))
+					{
+						string content = File.ReadAllText(logFilePath).Trim();
+						if (content == "2")
+						{
+							return true;
+						}
+					}
+					
+					Directory.CreateDirectory(settingsPath);
+					File.WriteAllText(logFilePath, "1");
+					return true;
+				}
+				catch
+				{
+					return true;
+				}
+			}
+		]]>
+		</CodeChunk>
+
+		<CodeChunk Type="Definition" Name="AutosellCheck">
+		<![CDATA[
+			public static async Task<bool> CheckAutosellLevel(int level)
+			{
+				try 
+				{
+					string workingDirectory = Directory.GetCurrentDirectory();
+					string settingsPath = Path.Combine(workingDirectory, "Settings");
+					string logFilePath = Path.Combine(settingsPath, $"autosell{level}.txt");
+					
+					if (File.Exists(logFilePath) && File.ReadAllText(logFilePath).Trim() == "1")
+					{
+						var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+						var profileDir = Path.GetDirectoryName(profilePath);
+						var autoSellPath = Path.Combine(profileDir, $"../Autosell/Lv{level}.xml");
+						
+						if (File.Exists(autoSellPath))
+						{
+							File.WriteAllText(logFilePath, "2");
+							ff14bot.NeoProfiles.NeoProfileManager.Load(autoSellPath);
+						}
+					}
+					return true;
+				}
+				catch
+				{
+					return true;
+				}
+			}
+		]]>
+		</CodeChunk>
+
+		<CodeChunk Name="autoselllogging21">
+		<![CDATA[
+			await LogAutosellLevel(21);
+		]]>
+		</CodeChunk>
+
+		<CodeChunk Name="autoselllogging41">
+		<![CDATA[
+			await LogAutosellLevel(41);
+		]]>
+		</CodeChunk>
+
+		<CodeChunk Name="autoselllogging53">
+		<![CDATA[
+			await LogAutosellLevel(53);
+		]]>
+		</CodeChunk>
+
+		<CodeChunk Name="autoselllogging63">
+		<![CDATA[
+			await LogAutosellLevel(63);
+		]]>
+		</CodeChunk>
+
+		<CodeChunk Name="autoselllogging70">
+		<![CDATA[
+			await LogAutosellLevel(70);
+		]]>
+		</CodeChunk>
+
+		<CodeChunk Name="autoselllogging80">
+		<![CDATA[
+			await LogAutosellLevel(80);
+		]]>
+		</CodeChunk>
+
+		<CodeChunk Name="autoselllogging90">
+		<![CDATA[
+			await LogAutosellLevel(90);
+		]]>
+		</CodeChunk>
+		
+		<CodeChunk Name="autosellcheck21">
+		<![CDATA[
+			await CheckAutosellLevel(21);
+		]]>
+		</CodeChunk>
+
+		<CodeChunk Name="autosellcheck41">
+		<![CDATA[
+			await CheckAutosellLevel(41);
+		]]>
+		</CodeChunk>
+
+		<CodeChunk Name="autosellcheck53">
+		<![CDATA[
+			await CheckAutosellLevel(53);
+		]]>
+		</CodeChunk>
+
+		<CodeChunk Name="autosellcheck63">
+		<![CDATA[
+			await CheckAutosellLevel(63);
+		]]>
+		</CodeChunk>
+
+		<CodeChunk Name="autosellcheck70">
+		<![CDATA[
+			await CheckAutosellLevel(70);
+		]]>
+		</CodeChunk>
+
+		<CodeChunk Name="autosellcheck80">
+		<![CDATA[
+			await CheckAutosellLevel(80);
+		]]>
+		</CodeChunk>
+
+		<CodeChunk Name="autosellcheck90">
+		<![CDATA[
+			await CheckAutosellLevel(90);
+		]]>
 		</CodeChunk>
 	</CodeChunks>
 </Profile>

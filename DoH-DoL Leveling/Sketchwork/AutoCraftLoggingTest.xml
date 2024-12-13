@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Profile>
+<name>autocraftloggingtest</name>
+<Order>
+	<RunCode Name="autocraftlogging21"/>
+</Order>
+<CodeChunks>
+	<CodeChunk Name="autocraftlogging21">
+<![CDATA[
+    string workingDirectory = Directory.GetCurrentDirectory();
+    string settingsPath = Path.Combine(workingDirectory, "Settings");
+    string logFilePath = Path.Combine(settingsPath, "autocraft21.txt");
+    Directory.CreateDirectory(settingsPath);
+    File.WriteAllText(logFilePath, "1");
+]]>
+</CodeChunk>
+
+</CodeChunks>
+</Profile>
