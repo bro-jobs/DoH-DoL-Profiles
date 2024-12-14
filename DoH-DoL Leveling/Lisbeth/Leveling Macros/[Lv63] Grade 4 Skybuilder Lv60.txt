@@ -1,0 +1,371 @@
+Name: [Lv63] Grade 4 Skybuilder Lv60
+Type: Craft
+Enabled: True
+Conditions: (MaxDurability == 60 && MaxProgress == 580 && Craftsmanship >= 962 && Control >= 946 && CP >= 463 && RecipeLevel == 150 && PlayerLevel >= 63 && PlayerLevel <= 70)
+Cost: 0
+
+S1:
+=> S100 (Quality >= 3240)
+=> S200
+
+S100:
+- Muscle Memory
+- Waste Not II
+=> S111 (IsExcellent == true)
+=> S112
+
+S111:
+- Standard Touch
+- Innovation
+- Standard Touch
+=> S101 (IsExcellent == true)
+=> S113
+
+S113:
+- Standard Touch
+=> S101 (IsExcellent == true)
+=> S114
+
+S114:
+- Standard Touch
+=> S101 (IsExcellent == true)
+=> S102
+
+S112:
+- Standard Touch
+=> S108 (IsExcellent == true)
+=> S109
+
+S108:
+- Standard Touch
+- Innovation
+- Standard Touch
+=> S101 (IsExcellent == true)
+=> S110
+
+S110:
+- Standard Touch
+=> S101
+
+S109:
+- Standard Touch
+=> S106 (IsExcellent == true)
+=> S107
+
+S106:
+- Standard Touch
+- Innovation
+- Standard Touch
+=> S101
+
+S107:
+- Great Strides
+=> S101 (IsExcellent == true)
+=> S105
+
+S105:
+- Innovation
+=> S101 (IsExcellent == true)
+=> S104
+
+S104:
+- Standard Touch
+=> S101 (IsExcellent == true)
+=> S103
+
+S103:
+- Standard Touch
+=> S101 (IsExcellent == true)
+=> S102
+
+S102:
+- Great Strides
+=> S101
+
+S101:
+- Byregot's Blessing
+- Basic Synthesis
+
+S200:
+- Muscle Memory
+=> S241 (IsExcellent == true)
+=> S242
+
+S241:
+- Precise Touch
+- Waste Not II
+- Basic Touch
+=> S243 (IsExcellent == true)
+=> S244
+
+S243:
+- Precise Touch
+- Innovation
+- Standard Touch
+=> S201 (IsExcellent == true)
+=> S245
+
+S245:
+- Standard Touch
+=> S201 (IsExcellent == true)
+=> S202
+
+S244:
+- Standard Touch
+=> S246 (IsExcellent == true)
+=> S247
+
+S246:
+- Precise Touch
+- Innovation
+- Standard Touch
+=> S201 (IsExcellent == true)
+=> S202
+
+S247:
+- Innovation
+=> S248 (IsExcellent == true)
+=> S249
+
+S248:
+- Precise Touch
+=> S202
+
+S249:
+- Standard Touch
+=> S201 (IsExcellent == true)
+=> S250
+
+S250:
+- Standard Touch
+=> S201 (IsExcellent == true)
+=> S251
+
+S251:
+- Standard Touch
+=> S201 (IsExcellent == true)
+=> S252
+
+S252:
+- Standard Touch
+=> S201 (IsExcellent == true)
+=> S253
+
+S253:
+- Waste Not
+=> S201 (IsExcellent == true)
+=> S202
+
+S242:
+- Waste Not II
+=> S232 (IsExcellent == true)
+=> S233
+
+S232:
+- Precise Touch
+- Innovation
+- Standard Touch
+=> S234 (IsExcellent == true)
+=> S235
+
+S234:
+- Precise Touch
+- Innovation
+- Standard Touch
+=> S201 (IsExcellent == true)
+=> S202
+
+S235:
+- Standard Touch
+=> S236 (IsExcellent == true)
+=> S237
+
+S236:
+- Precise Touch
+=> S202
+
+S237:
+- Standard Touch
+=> S201 (IsExcellent == true)
+=> S238
+
+S238:
+- Standard Touch
+=> S201 (IsExcellent == true)
+=> S239
+
+S239:
+- Basic Touch
+=> S201 (IsExcellent == true)
+=> S240
+
+S240:
+- Standard Touch
+=> S201 (IsExcellent == true)
+=> S202
+
+S233:
+- Basic Touch
+=> S225 (IsExcellent == true)
+=> S226
+
+S225:
+- Precise Touch
+- Innovation
+- Standard Touch
+=> S227 (IsExcellent == true)
+=> S228
+
+S227:
+- Precise Touch
+=> S202
+
+S228:
+- Standard Touch
+=> S201 (IsExcellent == true)
+=> S229
+
+S229:
+- Standard Touch
+=> S201 (IsExcellent == true)
+=> S230
+
+S230:
+- Standard Touch
+=> S201 (IsExcellent == true)
+=> S231
+
+S231:
+- Basic Touch
+=> S201 (IsExcellent == true)
+=> S202
+
+S226:
+- Standard Touch
+=> S220 (IsExcellent == true)
+=> S221
+
+S220:
+- Precise Touch
+- Innovation
+- Basic Touch
+=> S201 (IsExcellent == true)
+=> S222
+
+S222:
+- Standard Touch
+=> S201 (IsExcellent == true)
+=> S223
+
+S223:
+- Standard Touch
+=> S201 (IsExcellent == true)
+=> S224
+
+S224:
+- Standard Touch
+=> S201 (IsExcellent == true)
+=> S202
+
+S221:
+- Standard Touch
+=> S216 (IsExcellent == true)
+=> S217
+
+S216:
+- Precise Touch
+- Innovation
+- Basic Touch
+=> S201 (IsExcellent == true)
+=> S218
+
+S218:
+- Standard Touch
+=> S201 (IsExcellent == true)
+=> S219
+
+S219:
+- Standard Touch
+=> S201 (IsExcellent == true)
+=> S202
+
+S217:
+- Innovation
+=> S213 (IsExcellent == true)
+=> S214
+
+S213:
+- Precise Touch
+- Basic Touch
+- Standard Touch
+=> S201 (IsExcellent == true)
+=> S215
+
+S215:
+- Great Strides
+=> S201 (IsExcellent == true)
+=> S212
+
+S214:
+- Basic Touch
+=> S210 (IsExcellent == true)
+=> S211
+
+S210:
+- Precise Touch
+- Basic Touch
+- Great Strides
+=> S201 (IsExcellent == true)
+=> S212
+
+S212:
+- Innovation
+=> S201
+
+S211:
+- Standard Touch
+=> S207 (IsExcellent == true)
+=> S208
+
+S207:
+- Standard Touch
+- Basic Touch
+- Great Strides
+=> S201
+
+S209:
+- Innovation
+=> S201
+
+S208:
+- Standard Touch
+=> S201 (IsExcellent == true)
+=> S206
+
+S206:
+- Standard Touch
+=> S201 (IsExcellent == true)
+=> S205
+
+S205:
+- Innovation
+=> S201 (IsExcellent == true)
+=> S204
+
+S204:
+- Waste Not
+=> S201 (IsExcellent == true)
+=> S203
+
+S203:
+- Standard Touch
+=> S201 (IsExcellent == true)
+=> S202
+
+S202:
+- Great Strides
+=> S201
+
+S201:
+- Byregot's Blessing
+- Basic Synthesis

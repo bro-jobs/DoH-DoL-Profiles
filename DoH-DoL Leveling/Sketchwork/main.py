@@ -404,8 +404,12 @@ optimizer_21_CUL = LevelOptimizer("levels.csv", "lv20CULcollect.csv")
 optimizer_41 = LevelOptimizer("levels.csv", "lv40collect.csv")
 # optimizer_41_HQ is for: Lv41-63 CRP, CUL
 optimizer_41_HQ = LevelOptimizer("levels.csv", "lv40HQcollect.csv")
+
+optimizer_41_HQ.generate_codechunk(target_level=63, turn_in_exp=359521, max_collectables=39)
 # optimizer_41_WVR is for: Lv41-63 WVR
 optimizer_41_WVR = LevelOptimizer("levels.csv", "lv40WVRcollect.csv")
+
+optimizer_41_WVR.generate_codechunk(target_level=63, turn_in_exp=359521, max_collectables=38)
 # CRP, CUL, and WVR should be leveled to 63 first: they can hit Lv3 collectability
 # because of HQ mat.
 
@@ -415,3 +419,12 @@ optimizer_41.generate_codechunk(target_level=50, turn_in_exp=177985, max_collect
 optimizer_50 = LevelOptimizer("levels.csv", "lv40bcollect.csv")
 
 optimizer_50.generate_codechunk(target_level=53, turn_in_exp=177985, max_collectables=9)
+
+#optimizer_53 is for: Lv53-63 BSM, ARM, GSM, LTW, ALC
+optimizer_53 = LevelOptimizer("levels.csv", "lv40FULLcollect.csv")
+optimizer_53.generate_codechunk(target_level=63, turn_in_exp=359521, max_collectables=30)
+
+#optimizer_63 is for all classes and we can reach third collectability rating here.
+# Make sure to turn Suborder Mode to Quick Synth All on Lisbeth from here on!
+optimizer_63 = LevelOptimizer("levels.csv", "lv60collect.csv")
+optimizer_63.generate_codechunk(target_level=67, turn_in_exp=464875, max_collectables=12)

@@ -3,7 +3,7 @@
 Authors:  Kayla / Angles24
 -->
 <Profile>
-<Name>Crafting Leatherworker to 65</Name>
+<Name>Crafting Leatherworker to 67</Name>
 <Order>
 
 	<!-- Leave Diadem -->
@@ -29,7 +29,7 @@ Authors:  Kayla / Angles24
 		<If Condition="ClassName == ClassJobType.Leatherworker">
 			<AutoInventoryEquip/>
 			<WaitTimer WaitTime="5"/>
-			<Lisbeth Json="[{'Group':1,'Item':31933,'Amount':17,'Enabled':true,'Type':'Leatherworker','Collectable':false}]"/>
+			<RunCode Name="SetLisbethJson" />
 		</If>
 	</If>
 
@@ -73,6 +73,52 @@ Authors:  Kayla / Angles24
 		Logging.Write("[Handin] calling");
 		await LlamaLibrary.Utilities.Ishgard.Handin();
 	]]>
+	</CodeChunk>
+	<CodeChunk Name="SetLisbethJson">
+		<![CDATA[
+			int amount = 12;
+			int level = Core.Me.Levels[ClassJobType.Alchemist];
+			int exp = (int)Experience.CurrentExperience;
+
+			amount = (level, exp) switch
+			{
+			(66, > 1449736) => 1,
+			(66, >= 931472) => 2,
+			(66, >= 413208) => 3,
+			(66, >= 0) => 4,
+			(65, > 1718270) => 4,
+			(65, >= 1192890) => 5,
+			(65, >= 671068) => 6,
+			(65, >= 149246) => 7,
+			(65, >= 0) => 8,
+			(64, > 1327502) => 8,
+			(64, >= 799988) => 9,
+			(64, >= 275320) => 10,
+			(64, >= 0) => 11,
+			(63, > 1357407) => 11,
+			(63, >= 812796) => 12,
+			(63, >= 0) => 12,
+			_ => amount
+			};
+
+			if (Core.Me.HasAura(1411)) {
+				amount = (int)Math.Ceiling((amount + 1) / 2.0);
+			}
+
+			ff14bot.Helpers.Logging.Write($"Estimated amount of collectables needed to level to next checkpoint: {amount}");
+
+			var lisbeth = BotManager.Bots.FirstOrDefault(c => c.Name == "Lisbeth");
+			if (lisbeth != null)
+			{
+				var lisbethObject = lisbeth.GetType().GetProperty("Lisbeth").GetValue(lisbeth);
+				if (lisbethObject != null)
+				{
+					var json = $"[{{'Group':1,'Item':31935,'Amount':{amount},'Enabled':true,'Type':'Alchemist','Collectable':false}}]";
+					var orderMethod = lisbethObject.GetType().GetMethod("ExecuteOrders");
+					await (Task<bool>)orderMethod.Invoke(lisbethObject, new object[] { json, false });
+				}
+			}
+		]]>
 	</CodeChunk>
 </CodeChunks>
 </Profile>

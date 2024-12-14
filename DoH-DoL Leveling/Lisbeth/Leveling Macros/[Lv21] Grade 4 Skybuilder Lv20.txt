@@ -65,7 +65,7 @@ S3:
 
 S2:
 - Standard Touch
-=> S7:
+=> S7
 
 S7:
 - Veneration

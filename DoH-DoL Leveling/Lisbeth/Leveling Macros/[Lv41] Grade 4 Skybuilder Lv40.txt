@@ -1,7 +1,7 @@
 Name: [Lv41] Grade 4 Skybuilder Lv40
 Type: Craft
 Enabled: True
-Conditions: (MaxDurability == 60 && MaxProgress == 138 && Craftsmanship >= 220 && Control >= 220 && CP >= 366 && RecipeLevel == 40 && PlayerLevel >= 41 && PlayerLevel < 50)
+Conditions: (MaxDurability == 60 && MaxProgress == 138 && Craftsmanship >= 220 && Control >= 220 && CP >= 366 && RecipeLevel == 40 && PlayerLevel >= 41 && PlayerLevel <= 63)
 Cost: 0
 
 S1:

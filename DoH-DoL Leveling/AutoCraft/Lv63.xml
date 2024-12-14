@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Profile>
+<Name>Crafting Lv63 Gear</Name>
+<Order>
+    <RunCode Name="SetLisbethJson" />
+    <LogMessage Message="Crafted Lv63 Gear!"/>
+    <AutoInventoryEquip/>
+    <WaitTimer WaitTime="5"/>
+    <LLoadProfile Path="../Start.xml"/>
+</Order>
+<CodeChunks>
+<CodeChunk Name="SetLisbethJson">
+<![CDATA[
+    // Try to get profile path and construct relative path from there
+    var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+    var profileDir = System.IO.Path.GetDirectoryName(profilePath);
+    var jsonPath = System.IO.Path.Combine(profileDir, "../Lisbeth/GearSets/GEAR63.json");
+    
+    var json = System.IO.File.ReadAllText(jsonPath);
+    var lisbeth = BotManager.Bots.FirstOrDefault(c => c.Name == "Lisbeth");
+    if (lisbeth != null)
+    {
+        var lisbethObject = lisbeth.GetType().GetProperty("Lisbeth").GetValue(lisbeth);
+        if (lisbethObject != null)
+        {
+            var orderMethod = lisbethObject.GetType().GetMethod("ExecuteOrders");
+            await (Task<bool>)orderMethod.Invoke(lisbethObject, new object[] { json, false });
+        }
+    }
+]]>
+</CodeChunk>
+</CodeChunks>
+</Profile>
