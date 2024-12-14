@@ -3,7 +3,7 @@
 Authors:  Kayla / Angles24
 -->
 <Profile>
-<Name>Crafting Weaver to 53</Name>
+<Name>Crafting Culinarian to 63</Name>
 <Order>
 
 	<!-- Leave Diadem -->
@@ -21,15 +21,15 @@ Authors:  Kayla / Angles24
 		</While>
 	</If>
 
-	<!-- Grade 4 Skybuilders' Rope -->
-	<If Condition="(Core.Me.Levels[ClassJobType.Weaver] &gt; 40) and  (Core.Me.Levels[ClassJobType.Weaver] &lt; 53)">
-		<If Condition="ClassName != ClassJobType.Weaver">
-			<ChangeClass Job="Weaver"/>
+	<!-- Lv41-63 -->
+	<If Condition="(Core.Me.Levels[ClassJobType.Culinarian] &gt; 40) and  (Core.Me.Levels[ClassJobType.Culinarian] &lt; 63)">
+		<If Condition="ClassName != ClassJobType.Culinarian">
+			<ChangeClass Job="Culinarian"/>
 		</If>
-		<If Condition="ClassName == ClassJobType.Weaver">
+		<If Condition="ClassName == ClassJobType.Culinarian">
 			<AutoInventoryEquip/>
 			<WaitTimer WaitTime="5"/>
-			<RunCode Name="SetLisbethJson" />
+			<RunCode Name="SetLisbethJson1" />
 		</If>
 	</If>
 
@@ -42,12 +42,12 @@ Authors:  Kayla / Angles24
 	</If>
 
 	<!-- Reload Profile -->
-	<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 53">
-		<LLoadProfile Path="41-53 WeaverD.xml"/>
+	<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 63">
+		<LLoadProfile Path="41-63 CulinarianD.xml"/>
 	</If>
 
 	<!-- Load Start -->
-	<LogMessage Message="Congrats on Level 53 on Weaver, moving on."/>
+	<LogMessage Message="Congrats on Level 63 on Culinarian, moving on."/>
 	<AutoInventoryEquip/>
 	<WaitTimer WaitTime="5"/>
 	<LLoadProfile Path="../Start.xml"/>
@@ -74,60 +74,78 @@ Authors:  Kayla / Angles24
 		await LlamaLibrary.Utilities.Ishgard.Handin();
 	]]>
 	</CodeChunk>
-	<CodeChunk Name="SetLisbethJson">
+	<CodeChunk Name="SetLisbethJson1">
 	<![CDATA[
-		int amount = 32;
-		int level = Core.Me.Levels[ClassJobType.Alchemist];
+		int amount = 39;
+		int level = Core.Me.Levels[ClassJobType.Culinarian];
 		int exp = (int)Experience.CurrentExperience;
 
 		amount = (level, exp) switch
 		{
-		(52, > 483984) => 1,
-		(52, >= 387968) => 2,
-		(52, >= 291952) => 3,
-		(52, >= 195936) => 4,
-		(52, >= 99920) => 5,
-		(52, >= 3904) => 6,
-		(52, >= 0) => 7,
-		(51, > 396891) => 7,
-		(51, >= 299304) => 8,
-		(51, >= 201717) => 9,
-		(51, >= 104130) => 10,
-		(51, >= 6543) => 11,
-		(51, >= 0) => 12,
-		(50, > 311140) => 12,
-		(50, >= 211985) => 13,
-		(50, >= 112830) => 14,
-		(50, >= 13675) => 15,
-		(50, >= 0) => 16,
-		(49, > 165650) => 16,
-		(49, >= 60986) => 17,
-		(49, >= 0) => 18,
-		(48, > 201124) => 18,
-		(48, >= 93342) => 19,
-		(48, >= 0) => 20,
-		(47, > 216914) => 20,
-		(47, >= 109141) => 21,
-		(47, >= 585) => 22,
-		(46, > 213800) => 22,
-		(47, > 0) => 23,
-		(46, > 104443) => 23,
-		(46, >= 0) => 24,
-		(45, > 190082) => 24,
-		(45, >= 76780) => 25,
-		(45, >= 0) => 26,
-		(44, > 152525) => 26,
-		(44, >= 38301) => 27,
-		(44, >= 0) => 28,
-		(43, > 105450) => 28,
-		(43, >= 0) => 29,
-		(42, > 162715) => 29,
-		(42, >= 48326) => 30,
-		(42, >= 0) => 31,
-		(41, > 94433) => 31,
-		(41, >= 0) => 32,
-		(40, > 133794) => 32,
-		(40, >= 0) => 32,
+		(62, > 1172758) => 1,
+		(62, >= 811516) => 2,
+		(62, >= 450274) => 3,
+		(62, >= 89032) => 4,
+		(62, >= 0) => 5,
+		(61, > 1183790) => 5,
+		(61, >= 822548) => 6,
+		(61, >= 461306) => 7,
+		(61, >= 100064) => 8,
+		(61, >= 0) => 9,
+		(60, > 1125822) => 9,
+		(60, >= 764580) => 10,
+		(60, >= 403338) => 11,
+		(60, >= 42096) => 12,
+		(60, >= 0) => 13,
+		(59, > 889982) => 13,
+		(59, >= 528596) => 14,
+		(59, >= 167210) => 15,
+		(59, >= 0) => 16,
+		(58, > 917568) => 16,
+		(58, >= 556041) => 17,
+		(58, >= 194514) => 18,
+		(58, >= 0) => 19,
+		(57, > 849270) => 19,
+		(57, >= 487600) => 20,
+		(57, >= 125930) => 21,
+		(57, >= 0) => 22,
+		(56, > 688070) => 22,
+		(56, >= 326255) => 23,
+		(56, >= 0) => 24,
+		(55, > 796832) => 24,
+		(55, >= 432425) => 25,
+		(55, >= 70322) => 26,
+		(55, >= 0) => 27,
+		(54, > 449443) => 27,
+		(54, >= 87052) => 28,
+		(54, >= 0) => 29,
+		(53, > 366868) => 29,
+		(53, >= 3760) => 30,
+		(53, >= 0) => 31,
+		(52, > 176229) => 31,
+		(52, >= 0) => 32,
+		(51, > 265672) => 32,
+		(51, >= 0) => 33,
+		(50, > 297749) => 33,
+		(50, >= 0) => 34,
+		(49, > 156318) => 34,
+		(49, >= 0) => 35,
+		(48, > 0) => 35,
+		(47, > 225270) => 35,
+		(47, >= 0) => 36,
+		(46, > 26700) => 36,
+		(46, >= 0) => 37,
+		(45, > 0) => 37,
+		(44, > 0) => 37,
+		(43, > 169699) => 37,
+		(43, >= 0) => 38,
+		(42, > 0) => 38,
+		(41, > 85803) => 38,
+		(41, >= 0) => 39,
+		(40, > 0) => 39,
+		(39, > 0) => 39,
+		(38, > 98818) => 39,
+		(38, >= 0) => 39,
 		_ => amount
 		};
 		
@@ -143,7 +161,7 @@ Authors:  Kayla / Angles24
 			var lisbethObject = lisbeth.GetType().GetProperty("Lisbeth").GetValue(lisbeth);
 			if (lisbethObject != null)
 			{
-				var json = $"[{{'Group':1,'Item':31926,'Amount':{amount},'Enabled':true,'Type':'Weaver','Collectable':false}}]";
+				var json = $"[{{'Group':1,'Item':31928,'Amount':{amount},'Enabled':true,'Type':'Culinarian','Collectable':false}}]";
 				var orderMethod = lisbethObject.GetType().GetMethod("ExecuteOrders");
 				await (Task<bool>)orderMethod.Invoke(lisbethObject, new object[] { json, false });
 			}

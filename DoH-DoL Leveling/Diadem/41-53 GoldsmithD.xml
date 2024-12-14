@@ -21,15 +21,35 @@ Authors:  Kayla / Angles24
 		</While>
 	</If>
 
-	<!-- Grade 4 Skybuilders' Ingot -->
-	<If Condition="(Core.Me.Levels[ClassJobType.Goldsmith] &gt; 40) and  (Core.Me.Levels[ClassJobType.Goldsmith] &lt; 53)">
+	<!-- Lv41-50 -->
+	<If Condition="(Core.Me.Levels[ClassJobType.Goldsmith] &gt; 40) and  (Core.Me.Levels[ClassJobType.Goldsmith] &lt; 50)">
 		<If Condition="ClassName != ClassJobType.Goldsmith">
 			<ChangeClass Job="Goldsmith"/>
 		</If>
 		<If Condition="ClassName == ClassJobType.Goldsmith">
 			<AutoInventoryEquip/>
 			<WaitTimer WaitTime="5"/>
-			<RunCode Name="SetLisbethJson" />
+			<RunCode Name="SetLisbethJson1" />
+		</If>
+	</If>
+	
+	<!-- Turn in-->
+	<If Condition="WorldManager.ZoneId != 901">
+		<While Condition="(HasIshgardItem() &gt; 0) or (HasIshgardGatheringMining() &gt; 0) or (HasIshgardGatheringBotanist() &gt; 0)">
+			<GetTo ZoneId="886" XYZ="50.08479, -16, 168.9252"/>
+			<RunCode Name="TurnIn"/>
+		</While>
+	</If>
+	
+	<!-- Lv50-53 -->
+	<If Condition="(Core.Me.Levels[ClassJobType.Goldsmith] &gt; 49) and  (Core.Me.Levels[ClassJobType.Goldsmith] &lt; 53)">
+		<If Condition="ClassName != ClassJobType.Goldsmith">
+			<ChangeClass Job="Goldsmith"/>
+		</If>
+		<If Condition="ClassName == ClassJobType.Goldsmith">
+			<AutoInventoryEquip/>
+			<WaitTimer WaitTime="5"/>
+			<RunCode Name="SetLisbethJson2" />
 		</If>
 	</If>
 
@@ -74,60 +94,78 @@ Authors:  Kayla / Angles24
 		await LlamaLibrary.Utilities.Ishgard.Handin();
 	]]>
 	</CodeChunk>
-	<CodeChunk Name="SetLisbethJson">
+	<CodeChunk Name="SetLisbethJson1">
 	<![CDATA[
-		int amount = 32;
-		int level = Core.Me.Levels[ClassJobType.Alchemist];
+		int amount = 10;
+		int level = Core.Me.Levels[ClassJobType.Goldsmith];
 		int exp = (int)Experience.CurrentExperience;
 
 		amount = (level, exp) switch
 		{
-		(52, > 483984) => 1,
-		(52, >= 387968) => 2,
-		(52, >= 291952) => 3,
-		(52, >= 195936) => 4,
-		(52, >= 99920) => 5,
-		(52, >= 3904) => 6,
-		(52, >= 0) => 7,
-		(51, > 396891) => 7,
-		(51, >= 299304) => 8,
-		(51, >= 201717) => 9,
-		(51, >= 104130) => 10,
-		(51, >= 6543) => 11,
-		(51, >= 0) => 12,
-		(50, > 311140) => 12,
-		(50, >= 211985) => 13,
-		(50, >= 112830) => 14,
-		(50, >= 13675) => 15,
-		(50, >= 0) => 16,
-		(49, > 165650) => 16,
-		(49, >= 60986) => 17,
-		(49, >= 0) => 18,
-		(48, > 201124) => 18,
-		(48, >= 93342) => 19,
-		(48, >= 0) => 20,
-		(47, > 216914) => 20,
-		(47, >= 109141) => 21,
-		(47, >= 585) => 22,
-		(46, > 213800) => 22,
-		(47, > 0) => 23,
-		(46, > 104443) => 23,
-		(46, >= 0) => 24,
-		(45, > 190082) => 24,
-		(45, >= 76780) => 25,
-		(45, >= 0) => 26,
-		(44, > 152525) => 26,
-		(44, >= 38301) => 27,
-		(44, >= 0) => 28,
-		(43, > 105450) => 28,
-		(43, >= 0) => 29,
-		(42, > 162715) => 29,
-		(42, >= 48326) => 30,
-		(42, >= 0) => 31,
-		(41, > 94433) => 31,
-		(41, >= 0) => 32,
-		(40, > 133794) => 32,
-		(40, >= 0) => 32,
+		(49, > 71600) => 1,
+		(49, >= 0) => 2,
+		(48, > 126632) => 2,
+		(48, >= 0) => 3,
+		(47, > 165099) => 3,
+		(47, >= 0) => 4,
+		(46, > 187777) => 4,
+		(46, >= 0) => 5,
+		(45, > 191453) => 5,
+		(45, >= 0) => 6,
+		(44, > 184140) => 6,
+		(44, >= 0) => 7,
+		(43, > 168218) => 7,
+		(43, >= 0) => 8,
+		(42, > 142404) => 8,
+		(42, >= 0) => 9,
+		(41, > 106698) => 9,
+		(41, >= 0) => 10,
+		(40, > 61740) => 10,
+		(40, >= 0) => 10,
+		_ => amount
+		};
+		
+		if (Core.Me.HasAura(1411)) {
+			amount = (int)Math.Ceiling((amount + 1) / 2.0);
+		}
+		
+		ff14bot.Helpers.Logging.Write($"Estimated amount of collectables needed to level to next checkpoint: {amount}");
+		
+		var lisbeth = BotManager.Bots.FirstOrDefault(c => c.Name == "Lisbeth");
+		if (lisbeth != null)
+		{
+			var lisbethObject = lisbeth.GetType().GetProperty("Lisbeth").GetValue(lisbeth);
+			if (lisbethObject != null)
+			{
+				var json = $"[{{'Group':1,'Item':31924,'Amount':{amount},'Enabled':true,'Type':'Goldsmith','Collectable':false}}]";
+				var orderMethod = lisbethObject.GetType().GetMethod("ExecuteOrders");
+				await (Task<bool>)orderMethod.Invoke(lisbethObject, new object[] { json, false });
+			}
+		}
+	]]>
+	</CodeChunk>
+	
+	<CodeChunk Name="SetLisbethJson2">
+	<![CDATA[
+		int amount = 9;
+		int level = Core.Me.Levels[ClassJobType.Goldsmith];
+		int exp = (int)Experience.CurrentExperience;
+
+		amount = (level, exp) switch
+		{
+		(52, > 396248) => 1,
+		(52, >= 212496) => 2,
+		(52, >= 28744) => 3,
+		(52, >= 0) => 4,
+		(51, > 338388) => 4,
+		(51, >= 152985) => 5,
+		(51, >= 0) => 6,
+		(50, > 380347) => 6,
+		(50, >= 191650) => 7,
+		(50, >= 4600) => 8,
+		(50, >= 0) => 9,
+		(49, > 69098) => 9,
+		(49, >= 0) => 9,
 		_ => amount
 		};
 		

@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Profile>
-<Name>Selling Lv21 Junk</Name>
+<Name>Selling Lv53 Junk</Name>
 <Order>
     <AutoInventoryEquip/>
 	
-		<LogMessage Message="Selling Lv1-21 junk..."/>
+		<LogMessage Message="Selling Lv1-53 junk..."/>
 		<LogMessage Message="CAUTION! This may sell HQ items that you'd rather put on the marketboard!"/>
 		
+		<!-- Lv1-21 Stuff -->
 		<LLSellItem ItemIds="2669, 1002669, 2341, 1002341, 2219, 1002219, 2658, 1002658" Armory="true"/>
 		<LLSellItem ItemIds="2652, 1002652, 3023, 1003023, 3019, 1003019, 3014, 1003014" Armory="true"/>
 		<LLSellItem ItemIds="2959, 1002959, 2961, 1002961, 3310, 1003310, 4834, 5107" Armory="true"/>
@@ -23,6 +24,18 @@
 		<LLSellItem ItemIds="5515, 1005515, 4595, 1004595, 4849, 1004849, 4856, 1004856" Armory="true"/>
 		<LLSellItem ItemIds="5518, 4660, 1004660, 4847, 1004847, 4640, 1004640, 4850, 1004850" Armory="true"/>
 		<LLSellItem ItemIds="4642, 1004642, 4853, 1004853, 12862" Armory="true"/>
+		
+		<!-- Lv21-41 Stuff -->
+		<!-- We're selling some low level stuff now instead of prior because we want to prevent selling a gear piece that is still -->
+		<!-- part of an gearset before all DoH/DoL are fully updated. -->
+		<LLSellItem ItemIds="2315, 1002315, 2367, 1002367, 2392, 1002392, 2417, 1002417, 2443, 1002443, 2468, 1002468, 2494, 1002494" Armory="true"/>
+		<LLSellItem ItemIds="2520, 1002520, 2546, 1002546" Armory="true"/>
+		<LLSellItem ItemIds="2330, 1002330, 2357, 1002357, 2382, 1002382, 2407, 1002407, 2432, 1002432, 2458, 1002458, 2483, 1002483" Armory="true"/>
+		<LLSellItem ItemIds="2509, 1002509, 2535, 1002535, 2561, 1002561, 2670, 1002670" Armory="true"/>
+		<LLSellItem ItemIds="4766, 4849, 1004849, 5155, 5201, 1005201, 5260, 1005260, 5336, 1005336, 5327, 1005327" Armory="true"/>
+		<LLSellItem ItemIds="5499, 5524, 5551, 5322, 5310, 5436, 5456, 5346, 5386" Armory="true"/>
+		
+		<!-- Lv41-53 Stuff -->
     <WaitTimer WaitTime="5"/>
     <LLoadProfile Path="../Start.xml"/>
 </Order>

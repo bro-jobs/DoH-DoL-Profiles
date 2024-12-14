@@ -393,16 +393,25 @@ optimizer_21 = LevelOptimizer("levels.csv", "lv20collect.csv")
 
 # Lv 21 and above can craft Lv 20 collectable with 100% HQ.
 
-optimizer_21.generate_codechunk(target_level=41, turn_in_exp=67771)
+# optimizer_21.generate_codechunk(target_level=41, turn_in_exp=67771)
 
-optimizer_41 = LevelOptimizer("levels.csv", "lv40collect.csv")
+optimizer_21_CUL = LevelOptimizer("levels.csv", "lv20CULcollect.csv")
+
+# optimizer_21_CUL.generate_codechunk(target_level=41, turn_in_exp=67771)
 
 # Lv 41-53 can only reliably craft to the first or second collectability rating.
+# optimizer_41 is for: Lv41-49 BSM, ARM, GSM, LTW, ALC
+optimizer_41 = LevelOptimizer("levels.csv", "lv40collect.csv")
+# optimizer_41_HQ is for: Lv41-63 CRP, CUL
+optimizer_41_HQ = LevelOptimizer("levels.csv", "lv40HQcollect.csv")
+# optimizer_41_WVR is for: Lv41-63 WVR
+optimizer_41_WVR = LevelOptimizer("levels.csv", "lv40WVRcollect.csv")
+# CRP, CUL, and WVR should be leveled to 63 first: they can hit Lv3 collectability
+# because of HQ mat.
 
-optimizer_41.generate_codechunk(target_level=53, turn_in_exp=90527, max_collectables=32)
+optimizer_41.generate_codechunk(target_level=50, turn_in_exp=177985, max_collectables=10)
 
-optimizer_53 = LevelOptimizer("levels.csv", "lv40bcollect.csv")
+#optimizer_50 is for: Lv50-53 BSM, ARM, GSM, LTW, ALC
+optimizer_50 = LevelOptimizer("levels.csv", "lv40bcollect.csv")
 
-# Lv 53-63 can reliably craft to 100% HQ.
-
-optimizer_53.generate_codechunk(target_level=63, turn_in_exp=359521, max_collectables=30)
+optimizer_50.generate_codechunk(target_level=53, turn_in_exp=177985, max_collectables=9)

@@ -77,7 +77,7 @@ Authors:  Kayla / Angles24
 	<CodeChunk Name="SetLisbethJson">
 	<![CDATA[
 			int amount = 23;
-			int level = Core.Me.Levels[ClassJobType.Alchemist];
+			int level = Core.Me.Levels[ClassJobType.Blacksmith];
 			int exp = (int)Experience.CurrentExperience;
 
 			amount = (level, exp) switch

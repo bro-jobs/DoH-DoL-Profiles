@@ -77,8 +77,11 @@ Authors:  Kayla / Angles24
 	<CodeChunk Name="SetLisbethJson">
 	<![CDATA[
 			int amount = 23;
-			int level = Core.Me.Levels[ClassJobType.Alchemist];
+			int level = Core.Me.Levels[ClassJobType.Carpenter];
 			int exp = (int)Experience.CurrentExperience;
+			
+			ff14bot.Helpers.Logging.Write($"Current level: {level}");
+			ff14bot.Helpers.Logging.Write($"Current EXP: {exp}");
 
 			amount = (level, exp) switch
 			{

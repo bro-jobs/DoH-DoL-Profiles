@@ -1,0 +1,73 @@
+Name: [Lv21] Grade 4 Skybuilder Lv20
+Type: Craft
+Enabled: True
+Conditions: (MaxDurability == 60 && MaxProgress == 74 && Craftsmanship >= 140 && Craftsmanship <= 190 && Control >= 147 && CP >= 325 && RecipeLevel == 20)
+Cost: 0
+
+S1:
+- Basic Touch
+- Basic Touch
+- Standard Touch
+=> S12 (IsExcellent == true)
+=> S13
+
+S12:
+- Standard Touch
+- Master's Mend
+- Standard Touch
+=> S2 (IsExcellent == true)
+=> S3
+
+S13:
+- Master's Mend
+=> S10 (IsExcellent == true)
+=> S11
+
+S10:
+- Standard Touch
+- Great Strides
+- Standard Touch
+- Basic Touch
+=> S7
+
+S11:
+- Basic Touch
+=> S8 (IsExcellent == true)
+=> S9
+
+S8:
+- Standard Touch
+=> S3
+
+S9:
+- Standard Touch
+=> S5 (IsExcellent == true)
+=> S6
+
+S5:
+- Standard Touch
+- Basic Touch
+=> S7
+
+S6:
+- Great Strides
+=> S2 (IsExcellent == true)
+=> S4
+
+S4:
+- Standard Touch
+=> S2 (IsExcellent == true)
+=> S3
+
+S3:
+- Great Strides
+=> S2
+
+S2:
+- Standard Touch
+=> S7:
+
+S7:
+- Veneration
+- Basic Synthesis
+- Basic Synthesis

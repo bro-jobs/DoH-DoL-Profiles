@@ -8,7 +8,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 <!-- Overrides: Set these to 0 to IGNORE that gear check as you level. -->
 <!ENTITY craft21 "1">
 <!ENTITY craft41 "1">
-<!ENTITY craft51 "1">
+<!ENTITY craft53 "1">
 <!ENTITY craft63 "1">
 <!ENTITY craft70 "1">
 <!ENTITY craft80 "1">
@@ -161,7 +161,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 			<RunCode Name="autosellcheck21" />
 		</If>
 		
-		<!-- 21-51 Ishgard Crafting -->
+		<!-- 21-41 Ishgard Crafting -->
 		
 		<LogMessage Message="Moving on to Lv21-41..."/>
 		
@@ -207,15 +207,26 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		</If>
 		
 		<!-- Craft Gathering and Crafting Gear 41 -->
-		<If Condition="&craft41; == 1 and ((&crp; == 1 and HighestILvl(ClassJobType.Carpenter) &lt; 37) or (&bsm; == 1 and HighestILvl(ClassJobType.Blacksmith) &lt; 37) or (&arm; == 1 and HighestILvl(ClassJobType.Armorer) &lt; 37) or (&gsm; == 1 and HighestILvl(ClassJobType.Goldsmith) &lt; 37) or (&ltw; == 1 and HighestILvl(ClassJobType.Leatherworker) &lt; 37) or (&wvr; == 1 and HighestILvl(ClassJobType.Weaver) &lt; 37) or (&alc; == 1 and HighestILvl(ClassJobType.Alchemist) &lt; 37) or (&cul; == 1 and HighestILvl(ClassJobType.Culinarian) &lt; 37) or (&min; == 1 and HighestILvl(ClassJobType.Miner) &lt; 37) or (&btn; == 1 and HighestILvl(ClassJobType.Botanist) &lt; 37))">
+		<If Condition="&craft41; == 1 and &autocraft; == 0 and ((&crp; == 1 and HighestILvl(ClassJobType.Carpenter) &lt; 37) or (&bsm; == 1 and HighestILvl(ClassJobType.Blacksmith) &lt; 37) or (&arm; == 1 and HighestILvl(ClassJobType.Armorer) &lt; 37) or (&gsm; == 1 and HighestILvl(ClassJobType.Goldsmith) &lt; 37) or (&ltw; == 1 and HighestILvl(ClassJobType.Leatherworker) &lt; 37) or (&wvr; == 1 and HighestILvl(ClassJobType.Weaver) &lt; 37) or (&alc; == 1 and HighestILvl(ClassJobType.Alchemist) &lt; 37) or (&cul; == 1 and HighestILvl(ClassJobType.Culinarian) &lt; 37) or (&min; == 1 and HighestILvl(ClassJobType.Miner) &lt; 37) or (&btn; == 1 and HighestILvl(ClassJobType.Botanist) &lt; 37))">
 			<LogMessage Message="Craft level 41 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and make sure your gearsets are updated with the new gear."/>
-			<UserDialog DialogText="Craft level 41 craft and gather gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and make sure your gearsets are updated with the new gear.\n\nIf you keep seeing this popup even though you have upgraded your gear edit the Start.xml profile and change craft21 1 to craft21 0, save and start the bot again."/>	
+			<UserDialog DialogText="Craft level 41 craft and gather gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and make sure your gearsets are updated with the new gear.\n\nIf you keep seeing this popup even though you have upgraded your gear edit the Start.xml profile and change craft41 1 to craft41 0, save and start the bot again."/>	
+		</If>
+		
+		<If Condition="&craft41; == 1 and &autocraft; == 1">
+			<RunCode Name="autocraftcheck41" />
+		</If>
+		
+		<!-- Sell More Lv21-41 Junk -->
+		
+		<If Condition="&craft41; == 1 and &autosell; == 1">
+			<RunCode Name="autosellcheck41" />
 		</If>
 		
 		<!-- 41-53 Ishgard Crafting -->
+		<!-- Note: CRP, WVR, CUL are directly leveled to 63 as this is more optimal -->
 		<If Condition="&crp; == 1">
 			<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 53">
-				<LLoadProfile Path="Diadem/41-53 CarpenterD.xml"/>
+				<LLoadProfile Path="Diadem/41-63 CarpenterD.xml"/>
 			</If>
 		</If>
 		<If Condition="&bsm; == 1">
@@ -240,7 +251,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		</If>
 		<If Condition="&wvr; == 1">
 			<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 53">
-				<LLoadProfile Path="Diadem/41-53 WeaverD.xml"/>
+				<LLoadProfile Path="Diadem/41-63 WeaverD.xml"/>
 			</If>
 		</If>
 		<If Condition="&alc; == 1">
@@ -250,11 +261,10 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		</If>
 		<If Condition="&cul; == 1">
 			<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 53">
-				<LLoadProfile Path="Diadem/41-53 CulinarianD.xml"/>
+				<LLoadProfile Path="Diadem/41-63 CulinarianD.xml"/>
 			</If>
 		</If>
 		
-				
 		<!-- Gatherer's to 51 -->
 		<If Condition="&min; == 1">
 			<If Condition="not IsQuestCompleted(66182) or Core.Me.Levels[ClassJobType.Miner] &lt; 51">
@@ -266,8 +276,6 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 				<LLoadProfile Path="Gathering/21-51 Botanist.xml"/>
 			</If>
 		</If>
-		
-		
 		
 		<!-- Heavensward Aether Currents -->
 		<If Condition="not (IsAetherCurrentCompleted(397,0) and IsAetherCurrentCompleted(397,1) and IsAetherCurrentCompleted(397,2)
@@ -289,19 +297,22 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		</If>
 		
 		
-		<!-- Craft Gathering and Crafting Gear 51 -->
-		<If Condition="&craft51; == 1 and ((&crp; == 1 and HighestILvl(ClassJobType.Carpenter) &lt; 50) or (&bsm; == 1 and HighestILvl(ClassJobType.Blacksmith) &lt; 50) or (&arm; == 1 and HighestILvl(ClassJobType.Armorer) &lt; 50) or (&gsm; == 1 and HighestILvl(ClassJobType.Goldsmith) &lt; 50) or (&ltw; == 1 and HighestILvl(ClassJobType.Leatherworker) &lt; 50) or (&wvr; == 1 and HighestILvl(ClassJobType.Weaver) &lt; 50) or (&alc; == 1 and HighestILvl(ClassJobType.Alchemist) &lt; 50) or (&cul; == 1 and HighestILvl(ClassJobType.Culinarian) &lt; 50) or (&min; == 1 and HighestILvl(ClassJobType.Miner) &lt; 54) or (&btn; == 1 and HighestILvl(ClassJobType.Botanist) &lt; 54))">
-			<LogMessage Message="Craft level 51 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and make sure your gearsets are updated with the new gear."/>		
-			<UserDialog DialogText="Craft level 51 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and make sure your gearsets are updated with the new gear.\n\nIf you keep seeing this popup even though you have upgraded your gear edit the Start.xml profile and change 'craft51 1' to 'craft51 0', save and start thebot again."/>	
+		<!-- Craft Gathering and Crafting Gear 53 -->
+		<If Condition="&craft53; == 1 and &autocraft; == 0 and ((&crp; == 1 and HighestILvl(ClassJobType.Carpenter) &lt; 50) or (&bsm; == 1 and HighestILvl(ClassJobType.Blacksmith) &lt; 50) or (&arm; == 1 and HighestILvl(ClassJobType.Armorer) &lt; 50) or (&gsm; == 1 and HighestILvl(ClassJobType.Goldsmith) &lt; 50) or (&ltw; == 1 and HighestILvl(ClassJobType.Leatherworker) &lt; 50) or (&wvr; == 1 and HighestILvl(ClassJobType.Weaver) &lt; 50) or (&alc; == 1 and HighestILvl(ClassJobType.Alchemist) &lt; 50) or (&cul; == 1 and HighestILvl(ClassJobType.Culinarian) &lt; 50) or (&min; == 1 and HighestILvl(ClassJobType.Miner) &lt; 54) or (&btn; == 1 and HighestILvl(ClassJobType.Botanist) &lt; 54))">
+			<LogMessage Message="Craft level 53 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and make sure your gearsets are updated with the new gear."/>		
+			<UserDialog DialogText="Craft level 53 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and make sure your gearsets are updated with the new gear.\n\nIf you keep seeing this popup even though you have upgraded your gear edit the Start.xml profile and change 'craft53 1' to 'craft53 0', save and start thebot again."/>	
 		</If>
 		
-				
-		<!-- 51-63 Ishgard Crafting -->
-		<If Condition="&crp; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 63">
-				<LLoadProfile Path="Diadem/53-63 CarpenterD.xml"/>
-			</If>
+		<If Condition="&craft53; == 1 and &autocraft; == 1">
+			<RunCode Name="autocraftcheck53" />
 		</If>
+		
+		<!-- Sell More Lv41-53 Junk -->
+		
+		<If Condition="&craft53; == 1 and &autosell; == 1">
+			<RunCode Name="autosellcheck53" />
+		</If>
+		
 		<If Condition="&bsm; == 1">
 			<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 63">
 				<LLoadProfile Path="Diadem/53-63 BlacksmithD.xml"/>
@@ -322,22 +333,11 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 				<LLoadProfile Path="Diadem/53-63 LeatherworkerD.xml"/>
 			</If>
 		</If>
-		<If Condition="&wvr; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 63">
-				<LLoadProfile Path="Diadem/53-63 WeaverD.xml"/>
-			</If>
-		</If>
 		<If Condition="&alc; == 1">
 			<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 63">
 				<LLoadProfile Path="Diadem/53-63 AlchemistD.xml"/>
 			</If>
 		</If>
-		<If Condition="&cul; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 63">
-				<LLoadProfile Path="Diadem/53-63 CulinarianD.xml"/>
-			</If>
-		</If>	
-		
 		
 		<!-- Stormblood Aether Currents -->
 		<If Condition="not (IsAetherCurrentCompleted(613,0) and IsAetherCurrentCompleted(613,1) and IsAetherCurrentCompleted(613,2)
@@ -1047,16 +1047,22 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 					string settingsPath = Path.Combine(workingDirectory, "Settings");
 					string logFilePath = Path.Combine(settingsPath, $"autocraft{level}.txt");
 					
-					if (File.Exists(logFilePath) && File.ReadAllText(logFilePath).Trim() == "1")
+					if (File.Exists(logFilePath))
 					{
-						var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
-						var profileDir = Path.GetDirectoryName(profilePath);
-						var autoCraftPath = Path.Combine(profileDir, $"../Autocraft/Lv{level}.xml");
-						
-						if (File.Exists(autoCraftPath))
+						string content = File.ReadAllText(logFilePath);
+						if (content.Trim() == "1")
 						{
-							File.WriteAllText(logFilePath, "2");
-							ff14bot.NeoProfiles.NeoProfileManager.Load(autoCraftPath);
+							var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+							var profileDir = Path.GetDirectoryName(profilePath);
+							var autoCraftPath = Path.Combine(profileDir, $"Autocraft/Lv{level}.xml");
+							
+							if (File.Exists(autoCraftPath))
+							{
+								File.WriteAllText(logFilePath, "2");
+								await Coroutine.Sleep(500);
+								ff14bot.NeoProfiles.NeoProfileManager.Load(autoCraftPath);
+								await Coroutine.Sleep(1000);
+							}
 						}
 					}
 					return true;
@@ -1194,16 +1200,22 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 					string settingsPath = Path.Combine(workingDirectory, "Settings");
 					string logFilePath = Path.Combine(settingsPath, $"autosell{level}.txt");
 					
-					if (File.Exists(logFilePath) && File.ReadAllText(logFilePath).Trim() == "1")
+					if (File.Exists(logFilePath))
 					{
-						var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
-						var profileDir = Path.GetDirectoryName(profilePath);
-						var autoSellPath = Path.Combine(profileDir, $"../Autosell/Lv{level}.xml");
-						
-						if (File.Exists(autoSellPath))
+						string content = File.ReadAllText(logFilePath);
+						if (content.Trim() == "1")
 						{
-							File.WriteAllText(logFilePath, "2");
-							ff14bot.NeoProfiles.NeoProfileManager.Load(autoSellPath);
+							var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+							var profileDir = Path.GetDirectoryName(profilePath);
+							var autosellPath = Path.Combine(profileDir, $"Autosell/Lv{level}.xml");
+							
+							if (File.Exists(autosellPath))
+							{
+								File.WriteAllText(logFilePath, "2");
+								await Coroutine.Sleep(500);
+								ff14bot.NeoProfiles.NeoProfileManager.Load(autosellPath);
+								await Coroutine.Sleep(1000);
+							}
 						}
 					}
 					return true;

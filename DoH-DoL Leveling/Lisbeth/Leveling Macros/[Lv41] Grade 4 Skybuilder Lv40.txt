@@ -1,0 +1,336 @@
+Name: [Lv41] Grade 4 Skybuilder Lv40
+Type: Craft
+Enabled: True
+Conditions: (MaxDurability == 60 && MaxProgress == 138 && Craftsmanship >= 220 && Control >= 220 && CP >= 366 && RecipeLevel == 40 && PlayerLevel >= 41 && PlayerLevel < 50)
+Cost: 0
+
+S1:
+=> S200 (Quality >= 1750)
+=> S100 (PlayerLevel >= 41 && PlayerLevel < 50)
+=> S300 (PlayerLevel >= 53 && Craftsmanship >= 470 && Control >= 440 && CP >= 394)
+=> S400 (PlayerLevel >= 50)
+
+S300:
+- Innovation
+=> S318 (IsExcellent == true)
+=> S319
+
+S318:
+- Standard Touch
+- Waste Not II
+- Standard Touch
+=> S301 (IsExcellent == true)
+=> S321
+
+S321:
+- Innovation
+=> S301 (IsExcellent == true)
+=> S303
+
+
+S319:
+- Waste Not II
+=> S312 (IsExcellent == true)
+=> S313
+
+S312:
+- Standard Touch
+- Great Strides
+- Standard Touch
+=> S314 (IsExcellent == true)
+=> S315
+
+S314:
+- Standard Touch
+- Great Strides
+=> S301
+
+S315:
+- Innovation
+=> S301 (IsExcellent == true)
+=> S316
+
+S316:
+- Standard Touch
+=> S301 (IsExcellent == true)
+=> S317
+
+S317:
+- Standard Touch
+=> S301
+
+S313:
+- Standard Touch
+=> S309 (IsExcellent == true)
+=> S310
+
+S309:
+- Standard Touch
+- Innovation
+- Standard Touch
+=> S301 (IsExcellent == true)
+=> S311
+
+S311:
+- Standard Touch
+=> S301
+
+S310:
+- Standard Touch
+=> S307 (IsExcellent == true)
+=> S308
+
+S307:
+- Standard Touch
+- Innovation
+- Standard Touch
+=> S301
+
+S308:
+- Standard Touch
+=> S305 (IsExcellent == true)
+=> S306
+
+S305:
+- Standard Touch
+- Great Strides
+- Innovation
+=> S301
+
+S306:
+- Innovation
+=> S301 (IsExcellent == true)
+=> S304
+
+S304:
+- Standard Touch
+=> S301 (IsExcellent == true)
+=> S303
+
+S303:
+- Standard Touch
+=> S301 (IsExcellent == true)
+=> S302
+
+S302:
+- Great Strides
+=> S301
+
+S301:
+- Byregot's Blessing
+- Veneration
+- Basic Synthesis
+
+S400:
+- Innovation
+=> S412 (IsExcellent == true)
+=> S411
+
+S412:
+- Standard Touch
+- Waste Not II
+- Standard Touch
+=> S408 (IsExcellent == true)
+=> S409
+
+S411:
+- Waste Not II
+- Basic Touch
+- Standard Touch
+- Standard Touch
+=> S408 (IsExcellent == true)
+=> S409
+
+S408:
+- Basic Touch
+- Innovation
+- Basic Touch
+=> S410
+
+S409:
+- Innovation
+- Basic Touch
+- Standard Touch
+=> S410
+
+S410:
+- Basic Touch
+=> S406 (IsExcellent == true)
+=> S407
+
+S406:
+- Standard Touch
+- Great Strides
+=> S403
+
+S407:
+- Standard Touch
+=> S403 (IsExcellent == true)
+=> S405
+
+S405:
+- Great Strides
+=> S403 (IsExcellent == true)
+=> S404
+
+S403:
+- Byregot's Blessing
+- Veneration
+- Basic Synthesis
+- Basic Synthesis
+
+S404:
+- Veneration
+=> S401 (IsExcellent == true)
+=> S402
+
+S402:
+- Innovation
+=> S401
+
+S401:
+- Byregot's Blessing
+- Basic Synthesis
+- Basic Synthesis
+
+S200:
+- Waste Not
+=> S212 (IsExcellent == true)
+=> S213
+
+S212:
+- Standard Touch
+- Innovation
+=> S211
+
+S213:
+- Innovation
+- Standard Touch
+=> S210 (IsExcellent == true)
+=> S211
+
+S210:
+- Standard Touch
+=> S205
+
+S211:
+- Standard Touch
+=> S208 (IsExcellent == true)
+=> S209
+
+S208:
+- Standard Touch
+=> S202
+
+S209:
+- Standard Touch
+=> S201 (IsExcellent == true)
+=> S207
+
+S207:
+- Standard Touch
+=> S204 (IsExcellent == true)
+=> S205
+
+S204:
+- Standard Touch
+=> S206 (Quality >= 3500)
+=> S201
+
+S205:
+- Innovation
+=> S201 (IsExcellent == true)
+=> S203
+
+S203:
+- Standard Touch
+=> S201 (IsExcellent == true)
+=> S202
+
+S202:
+- Great Strides
+=> S201
+
+S201:
+- Standard Touch
+=> S206
+
+S206:
+- Veneration
+- Basic Synthesis
+- Basic Synthesis
+
+S100:
+- Waste Not
+- Basic Touch
+=> S12 (IsExcellent == true)
+=> S13
+
+S12:
+- Standard Touch
+- Innovation
+- Basic Touch
+- Standard Touch
+- Basic Touch
+=> S8 (IsExcellent == true)
+=> S9
+
+S13:
+- Innovation
+- Basic Touch
+- Standard Touch
+- Basic Touch
+- Standard Touch
+=> S8 (IsExcellent == true)
+=> S9
+
+S8:
+- Basic Touch
+- Master's Mend
+- Innovation
+=> S2 (IsExcellent == true)
+=> S11
+
+S11:
+- Basic Touch
+=> S2 (IsExcellent == true)
+=> S6
+
+S9:
+- Master's Mend
+=> S4 (IsExcellent == true)
+=> S5
+
+S4:
+- Basic Touch
+- Innovation
+- Basic Touch
+=> S2 (IsExcellent == true)
+=> S6
+
+S6:
+- Standard Touch
+=> S7
+
+S7:
+- Basic Touch
+- Veneration
+- Basic Synthesis
+- Basic Synthesis
+
+S5:
+- Innovation
+- Basic Touch
+- Standard Touch
+=> S2 (IsExcellent == true)
+=> S3
+
+S3:
+- Basic Touch
+=> S2
+
+S2:
+- Standard Touch
+- Veneration
+- Basic Synthesis
+- Basic Synthesis
