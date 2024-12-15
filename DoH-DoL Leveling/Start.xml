@@ -49,26 +49,6 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 	
 	<DisablePlugin Name="Enable Flight"/>
 	
-		<If Condition="&autocraft; == 1">
-			<RunCode Name="autocraftlogging21" />
-			<RunCode Name="autocraftlogging41" />
-			<RunCode Name="autocraftlogging53" />
-			<RunCode Name="autocraftlogging63" />
-			<RunCode Name="autocraftlogging70"/>
-			<RunCode Name="autocraftlogging80"/>
-			<RunCode Name="autocraftlogging90"/>
-		</If>
-		
-		<If Condition="&autosell; == 1">
-			<RunCode Name="autoselllogging21"/>
-			<RunCode Name="autoselllogging41"/>
-			<RunCode Name="autoselllogging53"/>
-			<RunCode Name="autoselllogging63"/>
-			<RunCode Name="autoselllogging70"/>
-			<RunCode Name="autoselllogging80"/>
-			<RunCode Name="autoselllogging90"/>
-		</If>
-	
 	<!-- Check to see if we have unlock all Crafting Profiles -->
 		<If Condition="not (IsQuestCompleted(65807) and IsQuestCompleted(65809) 
 						and IsQuestCompleted(65827) and IsQuestCompleted(65674) 
@@ -416,7 +396,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 			<RunCode Name="autocraftcheck63" />
 		</If>
 		
-		<!-- Sell More Lv21-41 Junk -->
+		<!-- Sell More Lv53-63 Junk -->
 		
 		<If Condition="&craft63; == 1 and &autosell; == 1">
 			<RunCode Name="autosellcheck63" />
@@ -474,13 +454,42 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 			
 		
 		<!-- Craft Class Quest Items and Get Master III Books -->
-		<If Condition="(&craftClass; == 1) and not (IsQuestCompleted(67979) and IsQuestCompleted(68153) and IsQuestCompleted(68132) and IsQuestCompleted(68137) and IsQuestCompleted(67969) and IsQuestCompleted(67974) and IsQuestCompleted(68142) and IsQuestCompleted(68147))">
+		<If Condition="(&craftClass; == 1) and (&autocraft; == 0) and not (IsQuestCompleted(67979) and IsQuestCompleted(68153) and IsQuestCompleted(68132) and IsQuestCompleted(68137) and IsQuestCompleted(67969) and IsQuestCompleted(67974) and IsQuestCompleted(68142) and IsQuestCompleted(68147))">
 			<LogMessage Message="Get Master III books and then Craft class quest items, import orders into lisbeth. You can find it under Quest Items folder, clear bags before beginning and store items in a safe place for later and set craftClass setting to 0 on start profile."/>
 			<UserDialog DialogText="Get Master III books and then Craft class quest items, import orders into lisbeth. You can find it under Quest Items folder, clear bags before beginning and store items in a safe place for later and edit the Start.xml profile and change 'craftClass 1' to 'craftClass 0', save and start thebot again."/>	
-		</If>		
+		</If>
 		
-				
-		<!-- Start Class Quest Profiles -->
+		<!-- Sell all junk up to this point to give ourselves space to craft crafter quest items. -->
+		
+		<If Condition="&autosell; == 1">
+			<RunCode Name="autosellcheck67" />
+		</If>
+		
+		<If Condition="&autocraft; == 1">
+			<RunCode Name="autocraftcheck67" />
+		</If>
+		
+		<!-- Sell junk from the first wave of crafter quests. -->
+		
+		<If Condition="&autosell; == 1">
+			<RunCode Name="autosellcheck68" />
+		</If>
+		
+		<If Condition="&autocraft; == 1">
+			<RunCode Name="autocraftcheck68" />
+		</If>
+		
+		<!-- Sell junk from the second wave of crafter quests. -->
+		
+		<If Condition="&autosell; == 1">
+			<RunCode Name="autosellcheck69" />
+		</If>
+		
+		<If Condition="&autocraft; == 1">
+			<RunCode Name="autocraftcheck69" />
+		</If>
+		
+		<!-- Class Quest Profiles -->
 		<If Condition="&crp; == 1">
 			<If Condition="not IsQuestCompleted(67979)">
 				<LLoadProfile Path="Quests/Carpenter Class Quests.xml"/>
@@ -578,9 +587,19 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 			
 
 		<!-- Farm Yellow Scrip Level 70 Gear -->
-		<If Condition="&craft70; == 1 and ((&crp; == 1 and HighestILvl(ClassJobType.Carpenter) &lt; 340) or (&bsm; == 1 and HighestILvl(ClassJobType.Blacksmith) &lt; 340) or (&arm; == 1 and HighestILvl(ClassJobType.Armorer) &lt; 340) or (&gsm; == 1 and HighestILvl(ClassJobType.Goldsmith) &lt; 340) or (&ltw; == 1 and HighestILvl(ClassJobType.Leatherworker) &lt; 340) or (&wvr; == 1 and HighestILvl(ClassJobType.Weaver) &lt; 340) or (&alc; == 1 and HighestILvl(ClassJobType.Alchemist) &lt; 340) or (&cul; == 1 and HighestILvl(ClassJobType.Culinarian) &lt; 340) or (&min; == 1 and HighestILvl(ClassJobType.Miner) &lt; 340) or (&btn; == 1 and HighestILvl(ClassJobType.Botanist) &lt; 340))">
+		<If Condition="&craft70; == 1 and &autocraft; == 0 and ((&crp; == 1 and HighestILvl(ClassJobType.Carpenter) &lt; 340) or (&bsm; == 1 and HighestILvl(ClassJobType.Blacksmith) &lt; 340) or (&arm; == 1 and HighestILvl(ClassJobType.Armorer) &lt; 340) or (&gsm; == 1 and HighestILvl(ClassJobType.Goldsmith) &lt; 340) or (&ltw; == 1 and HighestILvl(ClassJobType.Leatherworker) &lt; 340) or (&wvr; == 1 and HighestILvl(ClassJobType.Weaver) &lt; 340) or (&alc; == 1 and HighestILvl(ClassJobType.Alchemist) &lt; 340) or (&cul; == 1 and HighestILvl(ClassJobType.Culinarian) &lt; 340) or (&min; == 1 and HighestILvl(ClassJobType.Miner) &lt; 340) or (&btn; == 1 and HighestILvl(ClassJobType.Botanist) &lt; 340))">
 			<LogMessage Message="Get level 70 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to get and make sure your gearsets are updated with the new gear."/>
 			<UserDialog DialogText="Get level 70 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to get and make sure your gearsets are updated with the new gear.\n\nIf you keep seeing this popup even though you have upgraded your gear edit the Start.xml profile and change 'craft70 1' to 'craft70 0', save and start thebot again."/>	
+		</If>
+
+		<If Condition="&craft70; == 1 and &autocraft; == 1">
+			<RunCode Name="autocraftcheck70" />
+		</If>
+		
+		<!-- Sell More Lv53-63 Junk -->
+		
+		<If Condition="&craft70; == 1 and &autosell; == 1">
+			<RunCode Name="autosellcheck70" />
 		</If>		
 		
 		
@@ -1036,36 +1055,6 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 				}
 			]]>
 		</CodeChunk>
-		<CodeChunk Type="Definition" Name="AutocraftLogging">
-		<![CDATA[
-			public static async Task<bool> LogAutocraftLevel(int level)
-			{
-				try 
-				{
-					string workingDirectory = Directory.GetCurrentDirectory();
-					string settingsPath = Path.Combine(workingDirectory, "Settings");
-					string logFilePath = Path.Combine(settingsPath, $"autocraft{level}.txt");
-					
-					if (File.Exists(logFilePath))
-					{
-						string content = File.ReadAllText(logFilePath).Trim();
-						if (content == "2")
-						{
-							return true;
-						}
-					}
-					
-					Directory.CreateDirectory(settingsPath);
-					File.WriteAllText(logFilePath, "1");
-					return true;
-				}
-				catch
-				{
-					return true;
-				}
-			}
-		]]>
-		</CodeChunk>
 
 		<CodeChunk Type="Definition" Name="AutocraftCheck">
 		<![CDATA[
@@ -1075,26 +1064,33 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 				{
 					string workingDirectory = Directory.GetCurrentDirectory();
 					string settingsPath = Path.Combine(workingDirectory, "Settings");
-					string logFilePath = Path.Combine(settingsPath, $"autocraft{level}.txt");
+					string logFilePath = Path.Combine(settingsPath, "autocraft.txt");
 					
-					if (File.Exists(logFilePath))
+					// Create the file if it doesn't exist
+					if (!File.Exists(logFilePath))
 					{
-						string content = File.ReadAllText(logFilePath);
-						if (content.Trim() == "1")
-						{
-							var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
-							var profileDir = Path.GetDirectoryName(profilePath);
-							var autoCraftPath = Path.Combine(profileDir, $"Autocraft/Lv{level}.xml");
-							
-							if (File.Exists(autoCraftPath))
-							{
-								File.WriteAllText(logFilePath, "2");
-								await Coroutine.Sleep(500);
-								ff14bot.NeoProfiles.NeoProfileManager.Load(autoCraftPath);
-								await Coroutine.Sleep(1000);
-							}
-						}
+						File.WriteAllText(logFilePath, "");
 					}
+					
+					// Read content and check for craft{level}
+					string content = File.ReadAllText(logFilePath);
+					if (content.Contains($"craft{level}"))
+					{
+						return true;
+					}
+					
+					// If we get here, we need to run the profile
+					var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+					var profileDir = Path.GetDirectoryName(profilePath);
+					var autoCraftPath = Path.Combine(profileDir, $"Autocraft/Lv{level}.xml");
+					
+					if (File.Exists(autoCraftPath))
+					{
+						await Coroutine.Sleep(500);
+						ff14bot.NeoProfiles.NeoProfileManager.Load(autoCraftPath);
+						await Coroutine.Sleep(1000);
+					}
+					
 					return true;
 				}
 				catch
@@ -1102,48 +1098,6 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 					return true;
 				}
 			}
-		]]>
-		</CodeChunk>
-
-		<CodeChunk Name="autocraftlogging21">
-		<![CDATA[
-			await LogAutocraftLevel(21);
-		]]>
-		</CodeChunk>
-
-		<CodeChunk Name="autocraftlogging41">
-		<![CDATA[
-			await LogAutocraftLevel(41);
-		]]>
-		</CodeChunk>
-
-		<CodeChunk Name="autocraftlogging53">
-		<![CDATA[
-			await LogAutocraftLevel(53);
-		]]>
-		</CodeChunk>
-
-		<CodeChunk Name="autocraftlogging63">
-		<![CDATA[
-			await LogAutocraftLevel(63);
-		]]>
-		</CodeChunk>
-
-		<CodeChunk Name="autocraftlogging70">
-		<![CDATA[
-			await LogAutocraftLevel(70);
-		]]>
-		</CodeChunk>
-
-		<CodeChunk Name="autocraftlogging80">
-		<![CDATA[
-			await LogAutocraftLevel(80);
-		]]>
-		</CodeChunk>
-
-		<CodeChunk Name="autocraftlogging90">
-		<![CDATA[
-			await LogAutocraftLevel(90);
 		]]>
 		</CodeChunk>
 		
@@ -1168,6 +1122,24 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		<CodeChunk Name="autocraftcheck63">
 		<![CDATA[
 			await CheckAutocraftLevel(63);
+		]]>
+		</CodeChunk>
+
+		<CodeChunk Name="autocraftcheck67">
+		<![CDATA[
+			await CheckAutocraftLevel(67);
+		]]>
+		</CodeChunk>
+
+		<CodeChunk Name="autocraftcheck68">
+		<![CDATA[
+			await CheckAutocraftLevel(68);
+		]]>
+		</CodeChunk>
+		
+		<CodeChunk Name="autocraftcheck69">
+		<![CDATA[
+			await CheckAutocraftLevel(69);
 		]]>
 		</CodeChunk>
 
@@ -1228,26 +1200,33 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 				{
 					string workingDirectory = Directory.GetCurrentDirectory();
 					string settingsPath = Path.Combine(workingDirectory, "Settings");
-					string logFilePath = Path.Combine(settingsPath, $"autosell{level}.txt");
+					string logFilePath = Path.Combine(settingsPath, "autosell.txt");
 					
-					if (File.Exists(logFilePath))
+					// Create the file if it doesn't exist
+					if (!File.Exists(logFilePath))
 					{
-						string content = File.ReadAllText(logFilePath);
-						if (content.Trim() == "1")
-						{
-							var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
-							var profileDir = Path.GetDirectoryName(profilePath);
-							var autosellPath = Path.Combine(profileDir, $"Autosell/Lv{level}.xml");
-							
-							if (File.Exists(autosellPath))
-							{
-								File.WriteAllText(logFilePath, "2");
-								await Coroutine.Sleep(500);
-								ff14bot.NeoProfiles.NeoProfileManager.Load(autosellPath);
-								await Coroutine.Sleep(1000);
-							}
-						}
+						File.WriteAllText(logFilePath, "");
 					}
+					
+					// Read content and check for sell{level}
+					string content = File.ReadAllText(logFilePath);
+					if (content.Contains($"sell{level}"))
+					{
+						return true;
+					}
+					
+					// If we get here, we need to run the profile
+					var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+					var profileDir = Path.GetDirectoryName(profilePath);
+					var autosellPath = Path.Combine(profileDir, $"AutoSell/Lv{level}.xml");
+					
+					if (File.Exists(autosellPath))
+					{
+						await Coroutine.Sleep(500);
+						ff14bot.NeoProfiles.NeoProfileManager.Load(autosellPath);
+						await Coroutine.Sleep(1000);
+					}
+					
 					return true;
 				}
 				catch
@@ -1255,48 +1234,6 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 					return true;
 				}
 			}
-		]]>
-		</CodeChunk>
-
-		<CodeChunk Name="autoselllogging21">
-		<![CDATA[
-			await LogAutosellLevel(21);
-		]]>
-		</CodeChunk>
-
-		<CodeChunk Name="autoselllogging41">
-		<![CDATA[
-			await LogAutosellLevel(41);
-		]]>
-		</CodeChunk>
-
-		<CodeChunk Name="autoselllogging53">
-		<![CDATA[
-			await LogAutosellLevel(53);
-		]]>
-		</CodeChunk>
-
-		<CodeChunk Name="autoselllogging63">
-		<![CDATA[
-			await LogAutosellLevel(63);
-		]]>
-		</CodeChunk>
-
-		<CodeChunk Name="autoselllogging70">
-		<![CDATA[
-			await LogAutosellLevel(70);
-		]]>
-		</CodeChunk>
-
-		<CodeChunk Name="autoselllogging80">
-		<![CDATA[
-			await LogAutosellLevel(80);
-		]]>
-		</CodeChunk>
-
-		<CodeChunk Name="autoselllogging90">
-		<![CDATA[
-			await LogAutosellLevel(90);
 		]]>
 		</CodeChunk>
 		
@@ -1321,6 +1258,24 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		<CodeChunk Name="autosellcheck63">
 		<![CDATA[
 			await CheckAutosellLevel(63);
+		]]>
+		</CodeChunk>
+		
+		<CodeChunk Name="autosellcheck67">
+		<![CDATA[
+			await CheckAutosellLevel(67);
+		]]>
+		</CodeChunk>
+		
+		<CodeChunk Name="autosellcheck68">
+		<![CDATA[
+			await CheckAutosellLevel(68);
+		]]>
+		</CodeChunk>
+		
+		<CodeChunk Name="autosellcheck69">
+		<![CDATA[
+			await CheckAutosellLevel(69);
 		]]>
 		</CodeChunk>
 

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Profile>
-<Name>Selling Lv63 Junk</Name>
+<Name>Selling Crafter Quest Part 1 Junk</Name>
 <Order>
     <AutoInventoryEquip/>
 	
-		<LogMessage Message="Selling Lv1-63 junk..."/>
+		<LogMessage Message="Selling Crafter Quest Part 1 junk..."/>
 		<LogMessage Message="CAUTION! This may sell HQ items that you'd rather put on the marketboard!"/>
 		
 		<!-- Lv1-21 Stuff -->
@@ -27,7 +27,7 @@
 		
 		<!-- Lv21-41 Stuff -->
 		<!-- We're selling some low level stuff now instead of prior because we want to prevent selling a gear piece that is still -->
-		<!-- part of an gearset before all DoH/DoL are fully updated. -->
+		<!-- part of a gearset before all DoH/DoL are fully updated. -->
 		<LLSellItem ItemIds="2315, 1002315, 2367, 1002367, 2392, 1002392, 2417, 1002417, 2443, 1002443, 2468, 1002468, 2494, 1002494" Armory="true"/>
 		<LLSellItem ItemIds="2520, 1002520, 2546, 1002546" Armory="true"/>
 		<LLSellItem ItemIds="2330, 1002330, 2357, 1002357, 2382, 1002382, 2407, 1002407, 2432, 1002432, 2458, 1002458, 2483, 1002483" Armory="true"/>
@@ -52,7 +52,25 @@
 		<LLSellItem ItemIds="32005, 31961, 32006, 31962, 32007, 31963, 32008, 31964, 32009, 31965, 32010, 31966, 32011, 31967, 32012, 31968, 32013, 31969, 32014, 31970" Armory="true"/>
 		<LLSellItem ItemIds="19910, 12579, 12891, 5158, 19950" Armory="true"/>
 		<LLSellItem ItemIds="7671, 21800, 5594, 12900, 19982, 5536, 19868, 4672, 13258, 5143" Armory="true"/>
-    <WaitTimer WaitTime="5"/>
+		
+		<!-- Lv63-67 Stuff -->
+		<LLSellItem ItemIds="19877, 12578, 5346, 12539, 5395, 12598, 19931, 19978, 12595, 12642, 4811, 1012595, 1019978, 5282, 1005282, 5296, 5300, 5526, 5111, 5303, 5316, 12568, 19999, 20000, 5320, 19923, 12604, 1012604, 5496, 12636" Armory="true"/>
+		<LLSellItem ItemIds="32015, 32016, 32017, 32018, 32019, 32020, 32021, 32022, 32023, 32024" Armory="true"/>
+		
+		<!-- First wave of craft quests -->
+		<LLSellItem ItemIds="12538, 5107, 4831, 5106, 5121, 5141, 12534, 5384, 5403, 5405, 5393, 5391, 5130, 5143, 5402, 5263, 5388, 5144, 12554, 12555, 12585, 12579, 5152, 5465, 5306, 5319, 5444, 5448, 5449, 5456, 5466, 5557, 8149, 12627, 12629, 12635, 12636, 12637, 1925, 5371, 5374, 5376, 5366, 12580, 12581, 12582, 12583, 5485, 2349, 5056, 5057, 12519, 12525, 12529, 12526, 12530, 4034, 2802, 4009, 5083, 5084, 5089, 5068, 5171, 5182, 5185, 5194, 5196, 5198, 5262, 12544, 12545, 12644, 5284, 4856, 5471, 5505, 5506, 5507, 5508, 12607, 12614, 2015, 1917, 1925, 1862, 2039, 1937, 1942, 10611, 10636, 12583, 10609, 2551, 1778, 2350, 1723, 1796, 1659, 1663, 11877, 12528, 10588, 10591, 3096, 2502, 3149, 3861, 3868, 2830, 3203, 10721, 10756, 10667, 10682, 2078, 2125, 2878, 2876, 2872, 4514, 11068, 12644, 12108" Armory="true"/>
+		<LLSellItem ItemIds="1012538, 1005107, 1004831, 1005106, 1005121, 1005141, 1012534, 1005384, 1005403, 1005405, 1005393, 1005391, 1005130, 1005143, 1005402, 1005263, 1005388, 1005144, 1012554, 1012555, 1012585, 1012579, 1005152, 1005465, 1005306, 1005319, 1005444, 1005448, 1005449, 1005456, 1005466, 1005557, 1008149, 1012627, 1012629, 1012635, 1012636, 1012637, 1001925, 1005371, 1005374, 1005376, 1005366, 1012580, 1012581, 1012582, 1012583, 1005485, 1002349, 1005056, 1005057, 1012519, 1012525, 1012529, 1012526, 1012530, 1004034, 1002802, 1004009, 1005083, 1005084, 1005089, 1005068, 1005171, 1005182, 1005185, 1005194, 1005196, 1005198, 1005262, 1012544, 1012545, 1012644, 1005284, 1004856, 1005471, 1005505, 1005506, 1005507, 1005508, 1012607, 1012614, 1002015, 1001917, 1001925, 1001862, 1002039, 1001937, 1001942, 1010611, 1010636, 1012583, 1010609, 1002551, 1001778, 1002350, 1001723, 1001796, 1001659, 1001663, 1011877, 1012528, 1010588, 1010591, 1003096, 1002502, 1003149, 1003861, 1003868, 1002830, 1003203, 1010721, 1010756, 1010667, 1010682, 1002078, 1002125, 1002878, 1002876, 1002872, 1004514, 1011068, 1012644, 1012108" Armory="true"/>
+		<!-- Quest-given NQ weaps. The ilvl260 NQ RH weapon is better so is not discarded. -->
+		<LLSellItem ItemIds="2332, 2320, 2322, 2336, 2324, 11915, 11872, 11873, 19517, 19527" Armory="true"/>
+		<LLSellItem ItemIds="2344, 2359, 2347, 2349, 2362, 2351, 11919, 11876, 11877, 19518, 19528" Armory="true"/>
+		<LLSellItem ItemIds="2370, 2384, 2373, 2374, 2387, 2376, 11923, 11880, 11881, 19519, 19529" Armory="true"/>
+		<LLSellItem ItemIds="2395, 2409, 2398, 2399, 2412, 2401, 11927, 11884, 11885, 19520, 19530" Armory="true"/>
+		<!-- Quest-given left side gear, in case there's any -->
+		<LLSellItem ItemIds="2714, 2731, 2750" Armory="true"/>
+		
+		
+
+	<WaitTimer WaitTime="5"/>
 	<RunCode Name="Logger" />
 	<WaitTimer WaitTime="5"/>
     <LLoadProfile Path="../Start.xml"/>
@@ -66,7 +84,7 @@
             string settingsPath = Path.Combine(workingDirectory, "Settings");
             string logFilePath = Path.Combine(settingsPath, $"autosell.txt");
             
-            File.AppendAllText(logFilePath, "sell63" + Environment.NewLine);
+            File.AppendAllText(logFilePath, "sell68" + Environment.NewLine);
         }
         catch (Exception ex)
         {

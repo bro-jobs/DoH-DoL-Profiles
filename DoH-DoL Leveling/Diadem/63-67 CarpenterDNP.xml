@@ -77,8 +77,8 @@ Authors:  Kayla / Angles24
 	</CodeChunk>
 	<CodeChunk Name="SetLisbethJson">
 		<![CDATA[
-			int amount = 12;
-			int level = Core.Me.Levels[ClassJobType.Alchemist];
+			int amount = 14;
+			int level = Core.Me.Levels[ClassJobType.Carpenter];
 			int exp = (int)Experience.CurrentExperience;
 
 			amount = (level, exp) switch
@@ -98,7 +98,10 @@ Authors:  Kayla / Angles24
 			(64, >= 0) => 11,
 			(63, > 1357407) => 11,
 			(63, >= 812796) => 12,
-			(63, >= 0) => 12,
+			(63, >= 285279) => 13,
+			(63, >= 0) => 14,
+			(62, > 1280382) => 14,
+			(62, >= 0) => 14,
 			_ => amount
 			};
 
@@ -114,7 +117,7 @@ Authors:  Kayla / Angles24
 				var lisbethObject = lisbeth.GetType().GetProperty("Lisbeth").GetValue(lisbeth);
 				if (lisbethObject != null)
 				{
-					var json = $"[{{'Group':1,'Item':31935,'Amount':{amount},'Enabled':true,'Type':'Alchemist','Collectable':false}}]";
+					var json = $"[{{'Group':1,'Item':31929,'Amount':{amount},'Enabled':true,'Type':'Carpenter','Collectable':false}}]";
 					var orderMethod = lisbethObject.GetType().GetMethod("ExecuteOrders");
 					await (Task<bool>)orderMethod.Invoke(lisbethObject, new object[] { json, false });
 				}

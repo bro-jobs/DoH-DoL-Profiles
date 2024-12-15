@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Profile>
+<Name>Crafting First Wave of Crafting Quest Items</Name>
+<Order>
+
+	<!-- TODO: Modify Lisbeth JSON based on whether the character already learned Master III -->
+	
+    <RunCode Name="MasterBooks" />
+	
+	<WaitTimer WaitTime="5"/>
+	<UseInventoryItem ItemID="12244"/>
+	<WaitTimer WaitTime="5"/>
+	<UseInventoryItem ItemID="12245"/>
+	<WaitTimer WaitTime="5"/>
+	<UseInventoryItem ItemID="12246"/>
+	<WaitTimer WaitTime="5"/>
+	<UseInventoryItem ItemID="12247"/>
+	<WaitTimer WaitTime="5"/>
+	<UseInventoryItem ItemID="12248"/>
+	<WaitTimer WaitTime="5"/>
+	<UseInventoryItem ItemID="12249"/>
+	<WaitTimer WaitTime="5"/>
+	<UseInventoryItem ItemID="12250"/>
+	<WaitTimer WaitTime="5"/>
+	
+	<LogMessage Message="Master Books acquired!"/>
+	
+	<RunCode Name="SetLisbethJson2" />
+    <AutoInventoryEquip/>
+    <WaitTimer WaitTime="5"/>
+	
+	<LogMessage Message="Attempting to affix materia to quest items..."/>
+	
+	<LogMessage Message="Traveling to Mutamix to finish the quest at the same time."/>
+	
+	<LisbethTravel Zone="141" Position="115.5356, 31, -390.4169"/>
+	
+	<!-- Player should usually have 4+ competence I unless we're exceptionally unlucky... -->
+	
+	<AffixMateria EquipmentId="1827" MateriaId="5699" />
+	<AffixMateria EquipmentId="2344" MateriaId="5699" />
+	<AffixMateria EquipmentId="2236" MateriaId="5699" />
+	<AffixMateria EquipmentId="2111" MateriaId="5699" />
+	
+	<!-- Lv50 quest -->
+	
+	<AffixMateria EquipmentId="1001942" MateriaId="5671" />
+	<AffixMateria EquipmentId="1001663" MateriaId="5676" />
+	<AffixMateria EquipmentId="1003203" MateriaId="5666" />
+	<AffixMateria EquipmentId="1004514" MateriaId="5631" />
+	
+	<TurnIn QuestId="66176" NpcId="1001425" XYZ="115.5356, 31, -390.4169"/>
+	
+	<WaitTimer WaitTime="5"/>
+	<AutoInventoryEquip/>
+    <WaitTimer WaitTime="5"/>
+	
+		<If Condition="not IsQuestCompleted(67979)">
+			<LLoadProfile Path="Quests/Carpenter Class Quests.xml"/>
+		</If>
+		
+		<If Condition="not IsQuestCompleted(68153)">
+			<LLoadProfile Path="Quests/Blacksmith Class Quests.xml"/>
+		</If>
+		
+		<If Condition="not IsQuestCompleted(68132)">
+			<LLoadProfile Path="Quests/Armorer Class Quests.xml"/>
+		</If>
+		
+		<If Condition="not IsQuestCompleted(68137)">
+			<LLoadProfile Path="Quests/Goldsmith Class Quests.xml"/>
+		</If>
+		
+	<RunCode Name="Logger" />
+	<WaitTimer WaitTime="5"/>
+		
+    <LLoadProfile Path="../Start.xml"/>
+</Order>
+<CodeChunks>
+<CodeChunk Name="MasterBooks">
+    <![CDATA[
+        // Settings
+        const string ChunkName = "MasterBookMiniCheck";
+        
+        // Logging setup
+        var log = new LlamaLibrary.Logging.LLogger(ChunkName, System.Windows.Media.Colors.Pink);
+        
+        // Create list to store unlockable items
+        var unlockableItems = new System.Collections.Generic.List<uint>();
+        
+        // Check which items can be unlocked
+        for (uint itemId = 12244; itemId <= 12250; itemId++)
+        {
+            if (LlamaLibrary.Helpers.UIState.CanUnlockItem(itemId))
+            {
+                unlockableItems.Add(itemId);
+            }
+        }
+        
+        // If there are items to unlock, create and execute Lisbeth order
+        if (unlockableItems.Count > 0)
+        {
+            // Create order objects
+            var orders = new System.Collections.Generic.List<object>();
+            int id = 1;
+            foreach (var item in unlockableItems)
+            {
+                orders.Add(new
+                {
+                    Id = id++,
+                    Group = 1,
+                    Item = item,
+                    Amount = 1,
+                    Enabled = true,
+                    Type = "Exchange"
+                });
+            }
+            
+            // Convert to JSON
+            var json = Newtonsoft.Json.JsonConvert.SerializeObject(orders);
+            
+            // Get Lisbeth instance and execute orders
+            var lisbeth = BotManager.Bots.FirstOrDefault(c => c.Name == "Lisbeth");
+            if (lisbeth != null)
+            {
+                var lisbethObject = lisbeth.GetType().GetProperty("Lisbeth").GetValue(lisbeth);
+                if (lisbethObject != null)
+                {
+                    var orderMethod = lisbethObject.GetType().GetMethod("ExecuteOrders");
+                    await (System.Threading.Tasks.Task<bool>)orderMethod.Invoke(lisbethObject, new object[] { json, false });
+                }
+            }
+        }
+        else
+        {
+            log.Information("Master Books already acquired.");
+        }
+    ]]>
+</CodeChunk>
+
+<CodeChunk Name="SetLisbethJson2">
+<![CDATA[
+    // Try to get profile path and construct relative path from there
+    var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+    var profileDir = System.IO.Path.GetDirectoryName(profilePath);
+    var jsonPath = System.IO.Path.Combine(profileDir, "../Lisbeth/Quest Items/V2Part1.json");
+    
+    var json = System.IO.File.ReadAllText(jsonPath);
+    var lisbeth = BotManager.Bots.FirstOrDefault(c => c.Name == "Lisbeth");
+    if (lisbeth != null)
+    {
+        var lisbethObject = lisbeth.GetType().GetProperty("Lisbeth").GetValue(lisbeth);
+        if (lisbethObject != null)
+        {
+            var orderMethod = lisbethObject.GetType().GetMethod("ExecuteOrders");
+            await (Task<bool>)orderMethod.Invoke(lisbethObject, new object[] { json, false });
+        }
+    }
+]]>
+</CodeChunk>
+<CodeChunk Name="Logger">
+    <![CDATA[
+        try
+        {
+            string workingDirectory = Directory.GetCurrentDirectory();
+            string settingsPath = Path.Combine(workingDirectory, "Settings");
+            string logFilePath = Path.Combine(settingsPath, $"autocraft.txt");
+            
+            File.AppendAllText(logFilePath, "craft67" + Environment.NewLine);
+        }
+        catch (Exception ex)
+        {
+        }
+    ]]>
+</CodeChunk>
+
+
+</CodeChunks>
+</Profile>

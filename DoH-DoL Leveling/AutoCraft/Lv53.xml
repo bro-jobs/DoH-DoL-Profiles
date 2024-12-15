@@ -7,6 +7,8 @@
     <AutoInventoryEquip/>
     <WaitTimer WaitTime="5"/>
     <LLoadProfile Path="../Start.xml"/>
+	<RunCode Name="Logger" />
+	<WaitTimer WaitTime="5"/>
 </Order>
 <CodeChunks>
 <CodeChunk Name="SetLisbethJson">
@@ -28,6 +30,21 @@
         }
     }
 ]]>
+</CodeChunk>
+<CodeChunk Name="Logger">
+    <![CDATA[
+        try
+        {
+            string workingDirectory = Directory.GetCurrentDirectory();
+            string settingsPath = Path.Combine(workingDirectory, "Settings");
+            string logFilePath = Path.Combine(settingsPath, $"autocraft.txt");
+            
+            File.AppendAllText(logFilePath, "craft53" + Environment.NewLine);
+        }
+        catch (Exception ex)
+        {
+        }
+    ]]>
 </CodeChunk>
 </CodeChunks>
 </Profile>

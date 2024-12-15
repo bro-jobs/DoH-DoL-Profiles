@@ -1,14 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Profile>
-<Name>Crafting Lv63 Gear</Name>
+<Name>Crafting Second Wave of Crafting Quest Items</Name>
 <Order>
     <RunCode Name="SetLisbethJson" />
-    <LogMessage Message="Crafted Lv63 Gear!"/>
-    <AutoInventoryEquip/>
-    <WaitTimer WaitTime="5"/>
-    <LLoadProfile Path="../Start.xml"/>
+	
+	<!-- Player should usually have 3+ command I unless we're exceptionally unlucky... -->
+	
+	<AffixMateria EquipmentId="3784" MateriaId="5709" />
+	<AffixMateria EquipmentId="3039" MateriaId="5709" />
+	<AffixMateria EquipmentId="2149" MateriaId="5709" />
+	
+	<!-- Lv50 quest melds -->
+	
+	<AffixMateria EquipmentId="1003206" MateriaId="5696" />
+	<AffixMateria EquipmentId="1001987" MateriaId="5721" />
+	
+		<If Condition="not IsQuestCompleted(67969)">
+			<LLoadProfile Path="Quests/Weaver Class Quests.xml"/>
+		</If>
+		<If Condition="not IsQuestCompleted(67974)">
+			<LLoadProfile Path="Quests/Alchemist Class Quests.xml"/>
+		</If>
+		<If Condition="not IsQuestCompleted(68147)">
+			<LLoadProfile Path="Quests/Leatherworker Class Quests.xml"/>
+		</If>
+		
 	<RunCode Name="Logger" />
 	<WaitTimer WaitTime="5"/>
+		
+    <LLoadProfile Path="../Start.xml"/>
 </Order>
 <CodeChunks>
 <CodeChunk Name="SetLisbethJson">
@@ -16,7 +36,7 @@
     // Try to get profile path and construct relative path from there
     var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
     var profileDir = System.IO.Path.GetDirectoryName(profilePath);
-    var jsonPath = System.IO.Path.Combine(profileDir, "../Lisbeth/GearSets/GEAR63.json");
+    var jsonPath = System.IO.Path.Combine(profileDir, "../Lisbeth/Quest Items/V2Part2.json");
     
     var json = System.IO.File.ReadAllText(jsonPath);
     var lisbeth = BotManager.Bots.FirstOrDefault(c => c.Name == "Lisbeth");
@@ -39,7 +59,7 @@
             string settingsPath = Path.Combine(workingDirectory, "Settings");
             string logFilePath = Path.Combine(settingsPath, $"autocraft.txt");
             
-            File.AppendAllText(logFilePath, "craft63" + Environment.NewLine);
+            File.AppendAllText(logFilePath, "craft68" + Environment.NewLine);
         }
         catch (Exception ex)
         {

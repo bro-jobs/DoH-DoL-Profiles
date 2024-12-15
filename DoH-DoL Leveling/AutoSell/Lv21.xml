@@ -23,9 +23,27 @@
 		<LLSellItem ItemIds="5515, 1005515, 4595, 1004595, 4849, 1004849, 4856, 1004856" Armory="true"/>
 		<LLSellItem ItemIds="5518, 4660, 1004660, 4847, 1004847, 4640, 1004640, 4850, 1004850" Armory="true"/>
 		<LLSellItem ItemIds="4642, 1004642, 4853, 1004853, 12862" Armory="true"/>
+		
     <WaitTimer WaitTime="5"/>
+	<RunCode Name="Logger" />
+	<WaitTimer WaitTime="5"/>
     <LLoadProfile Path="../Start.xml"/>
 </Order>
 <CodeChunks>
+<CodeChunk Name="Logger">
+    <![CDATA[
+        try
+        {
+            string workingDirectory = Directory.GetCurrentDirectory();
+            string settingsPath = Path.Combine(workingDirectory, "Settings");
+            string logFilePath = Path.Combine(settingsPath, $"autosell.txt");
+            
+            File.AppendAllText(logFilePath, "sell21" + Environment.NewLine);
+        }
+        catch (Exception ex)
+        {
+        }
+    ]]>
+</CodeChunk>
 </CodeChunks>
 </Profile>

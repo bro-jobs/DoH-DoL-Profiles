@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Profile>
-<Name>Selling Lv63 Junk</Name>
+<Name>Selling Lv67 Junk</Name>
 <Order>
     <AutoInventoryEquip/>
 	
-		<LogMessage Message="Selling Lv1-63 junk..."/>
+		<LogMessage Message="Selling Lv1-67 junk..."/>
 		<LogMessage Message="CAUTION! This may sell HQ items that you'd rather put on the marketboard!"/>
 		
 		<!-- Lv1-21 Stuff -->
@@ -27,7 +27,7 @@
 		
 		<!-- Lv21-41 Stuff -->
 		<!-- We're selling some low level stuff now instead of prior because we want to prevent selling a gear piece that is still -->
-		<!-- part of an gearset before all DoH/DoL are fully updated. -->
+		<!-- part of a gearset before all DoH/DoL are fully updated. -->
 		<LLSellItem ItemIds="2315, 1002315, 2367, 1002367, 2392, 1002392, 2417, 1002417, 2443, 1002443, 2468, 1002468, 2494, 1002494" Armory="true"/>
 		<LLSellItem ItemIds="2520, 1002520, 2546, 1002546" Armory="true"/>
 		<LLSellItem ItemIds="2330, 1002330, 2357, 1002357, 2382, 1002382, 2407, 1002407, 2432, 1002432, 2458, 1002458, 2483, 1002483" Armory="true"/>
@@ -52,6 +52,10 @@
 		<LLSellItem ItemIds="32005, 31961, 32006, 31962, 32007, 31963, 32008, 31964, 32009, 31965, 32010, 31966, 32011, 31967, 32012, 31968, 32013, 31969, 32014, 31970" Armory="true"/>
 		<LLSellItem ItemIds="19910, 12579, 12891, 5158, 19950" Armory="true"/>
 		<LLSellItem ItemIds="7671, 21800, 5594, 12900, 19982, 5536, 19868, 4672, 13258, 5143" Armory="true"/>
+		
+		<!-- Lv63-67 Stuff -->
+		<LLSellItem ItemIds="19877, 12578, 5346, 12539, 5395, 12598, 19931, 19978, 12595, 12642, 4811, 1012595, 1019978, 5282, 1005282, 5296, 5300, 5526, 5111, 5303, 5316, 12568, 19999, 20000, 5320, 19923, 12604, 1012604, 5496, 12636" Armory="true"/>
+		<LLSellItem ItemIds="32015, 32016, 32017, 32018, 32019, 32020, 32021, 32022, 32023, 32024" Armory="true"/>
     <WaitTimer WaitTime="5"/>
 	<RunCode Name="Logger" />
 	<WaitTimer WaitTime="5"/>
@@ -66,7 +70,7 @@
             string settingsPath = Path.Combine(workingDirectory, "Settings");
             string logFilePath = Path.Combine(settingsPath, $"autosell.txt");
             
-            File.AppendAllText(logFilePath, "sell63" + Environment.NewLine);
+            File.AppendAllText(logFilePath, "sell67" + Environment.NewLine);
         }
         catch (Exception ex)
         {

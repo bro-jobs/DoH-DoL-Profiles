@@ -427,4 +427,7 @@ optimizer_53.generate_codechunk(target_level=63, turn_in_exp=359521, max_collect
 #optimizer_63 is for all classes and we can reach third collectability rating here.
 # Make sure to turn Suborder Mode to Quick Synth All on Lisbeth from here on!
 optimizer_63 = LevelOptimizer("levels.csv", "lv60collect.csv")
-optimizer_63.generate_codechunk(target_level=67, turn_in_exp=464875, max_collectables=12)
+optimizer_63.generate_codechunk(target_level=67, turn_in_exp=464875, max_collectables=14)
+
+optimizer_70 = LevelOptimizer("levels.csv", "lv70collect.csv")
+optimizer_70.generate_codechunk(target_level=80, turn_in_exp=755426, max_collectables=46)

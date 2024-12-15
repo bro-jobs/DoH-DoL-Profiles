@@ -6,6 +6,8 @@
     <LogMessage Message="Crafted Lv41 Gear!"/>
     <AutoInventoryEquip/>
     <WaitTimer WaitTime="5"/>
+	<RunCode Name="Logger" />
+	<WaitTimer WaitTime="5"/>
     <LLoadProfile Path="../Start.xml"/>
 </Order>
 <CodeChunks>
@@ -28,6 +30,21 @@
         }
     }
 ]]>
+</CodeChunk>
+<CodeChunk Name="Logger">
+    <![CDATA[
+        try
+        {
+            string workingDirectory = Directory.GetCurrentDirectory();
+            string settingsPath = Path.Combine(workingDirectory, "Settings");
+            string logFilePath = Path.Combine(settingsPath, $"autocraft.txt");
+            
+            File.AppendAllText(logFilePath, "craft41" + Environment.NewLine);
+        }
+        catch (Exception ex)
+        {
+        }
+    ]]>
 </CodeChunk>
 </CodeChunks>
 </Profile>

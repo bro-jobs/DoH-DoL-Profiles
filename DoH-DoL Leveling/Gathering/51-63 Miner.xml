@@ -424,12 +424,12 @@ Angles24
 		<!--End Level 62 Grind-->
 		
 		<!-- Level 62-63 -->
-		<While Condition="Core.Player.ClassLevel &lt; 64">
-			<LogMessage Message="Starting the Grind to Level 64."/>
-			<Lisbeth Json="[{'Group':0, 'Item':19950, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':64, 'ConditionalJob':'Miner'}]"/><!-- Koppranickel Sand -->
+		<While Condition="Core.Player.ClassLevel &lt; 63">
+			<LogMessage Message="Starting the Grind to Level 63."/>
+			<Lisbeth Json="[{'Group':0, 'Item':19950, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':63, 'ConditionalJob':'Miner'}]"/><!-- Koppranickel Sand -->
 		</While>
-		<If Condition="Core.Player.ClassLevel == 64">
-			<LogMessage Message="Congrats on Level 64, moving on."/>
+		<If Condition="Core.Player.ClassLevel == 63">
+			<LogMessage Message="Congrats on Level 63, moving on."/>
 			<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
 		<WaitTimer WaitTime="5"/>

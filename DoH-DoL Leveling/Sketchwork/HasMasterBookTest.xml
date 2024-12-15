@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Profile>
+<name>Test</name>
+<Order>
+    <RunCode Name="HasMaster"/>
+</Order>
+<CodeChunks>
+<CodeChunk Name="HasMaster">
+    <![CDATA[
+        // Settings
+        const string ChunkName = "ItemUsageCheck";
+        
+        // Logging setup
+        var log = new LlamaLibrary.Logging.LLogger(ChunkName, System.Windows.Media.Colors.Pink);
+        
+        // Create list to store unlockable items
+        var unlockableItems = new System.Collections.Generic.List<uint>();
+        
+        // Check which items can be unlocked
+        for (uint itemId = 12244; itemId <= 12250; itemId++)
+        {
+            if (LlamaLibrary.Helpers.UIState.CanUnlockItem(itemId))
+            {
+                unlockableItems.Add(itemId);
+            }
+        }
+        
+        // If there are items to unlock, create and execute Lisbeth order
+        if (unlockableItems.Count > 0)
+        {
+            // Create order objects
+            var orders = new System.Collections.Generic.List<object>();
+            int id = 1;
+            foreach (var item in unlockableItems)
+            {
+                orders.Add(new
+                {
+                    Id = id++,
+                    Group = 1,
+                    Item = item,
+                    Amount = 1,
+                    Enabled = true,
+                    Type = "Exchange"
+                });
+            }
+            
+            // Convert to JSON
+            var json = Newtonsoft.Json.JsonConvert.SerializeObject(orders);
+            
+            // Get Lisbeth instance and execute orders
+            var lisbeth = BotManager.Bots.FirstOrDefault(c => c.Name == "Lisbeth");
+            if (lisbeth != null)
+            {
+                var lisbethObject = lisbeth.GetType().GetProperty("Lisbeth").GetValue(lisbeth);
+                if (lisbethObject != null)
+                {
+                    var orderMethod = lisbethObject.GetType().GetMethod("ExecuteOrders");
+                    await (System.Threading.Tasks.Task<bool>)orderMethod.Invoke(lisbethObject, new object[] { json, false });
+                }
+            }
+        }
+        else
+        {
+            log.Information("No items available to unlock.");
+        }
+    ]]>
+</CodeChunk>
+</CodeChunks>
+</Profile>

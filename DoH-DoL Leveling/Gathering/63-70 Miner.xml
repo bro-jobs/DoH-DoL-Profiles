@@ -83,8 +83,7 @@ Angles24
 		<!-- Level 63-64 -->
 		<If Condition="Core.Player.ClassLevel &lt; 64">
 			<LogMessage Message="Starting the Grind to Level 64."/>
-			<Lisbeth Json="[{'Group':0, 'Item':19950, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':64, 'ConditionalJob':'Miner'}]"/><!-- Koppranickel Sand -->
-		</If>
+			<Lisbeth Json="[{'Group':0, 'Item':12669, 'Amount':30, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':64, 'ConditionalJob':'Miner'}]"/>		</If>
 		<If Condition="Core.Player.ClassLevel == 64">
 			<LogMessage Message="Congrats on Level 64, moving on."/>
 			<WaitTimer WaitTime="2"/>
@@ -96,7 +95,7 @@ Angles24
 		<!-- Level 64-65 -->
 		<If Condition="Core.Player.ClassLevel &lt; 65">
 			<LogMessage Message="Starting the Grind to Level 65."/>
-			<Lisbeth Json="[{'Group':0, 'Item':19953, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':65, 'ConditionalJob':'Miner'}]"/><!-- Doman Iron Ore -->
+			<Lisbeth Json="[{'Group':0, 'Item':12669, 'Amount':30, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':64, 'ConditionalJob':'Miner'}]"/>		</If>
 		</If>
 		<If Condition="Core.Player.ClassLevel == 65">
 			<LogMessage Message="Congrats on Level 65, moving on."/>
@@ -178,7 +177,7 @@ Angles24
 		<!-- Level 65-66 -->
 		<If Condition="Core.Player.ClassLevel &lt; 66">
 			<LogMessage Message="Starting the Grind to Level 66."/>
-			<Lisbeth Json="[{'Group':0, 'Item':19953, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':66, 'ConditionalJob':'Miner'}]"/><!-- Doman Iron Ore -->
+			<Lisbeth Json="[{'Group':0, 'Item':12669, 'Amount':30, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':64, 'ConditionalJob':'Miner'}]"/>		</If>
 		</If>
 		<If Condition="Core.Player.ClassLevel == 66">
 			<LogMessage Message="Congrats on Level 66, moving on."/>
@@ -191,7 +190,7 @@ Angles24
 		<!-- Level 66-68 -->
 		<If Condition="Core.Player.ClassLevel &lt; 68">
 			<LogMessage Message="Starting the Grind to Level 68."/>
-			<Lisbeth Json="[{'Group':0, 'Item':19954, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':68, 'ConditionalJob':'Miner'}]"/><!-- Durium Ore -->
+			<Lisbeth Json="[{'Group':0, 'Item':12669, 'Amount':30, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':64, 'ConditionalJob':'Miner'}]"/>		</If>
 		</If>
 		<If Condition="Core.Player.ClassLevel == 68">
 			<LogMessage Message="Congrats on Level 68, moving on."/>
@@ -266,7 +265,7 @@ Angles24
 		<!-- Level 68-70 -->
 		<If Condition="Core.Player.ClassLevel &lt; 70">
 			<LogMessage Message="Starting the Grind to Level 70."/>
-			<Lisbeth Json="[{'Group':0, 'Item':19954, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':70, 'ConditionalJob':'Miner'}]"/><!-- Durium Ore -->
+			<Lisbeth Json="[{'Group':0, 'Item':12669, 'Amount':30, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':64, 'ConditionalJob':'Miner'}]"/>		</If>
 		</If>
 		<If Condition="Core.Player.ClassLevel == 70">
 			<LogMessage Message="Congrats on Level 70, moving on."/>

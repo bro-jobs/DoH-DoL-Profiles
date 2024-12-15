@@ -29,12 +29,7 @@ Authors:  Kayla / Angles24
 		<If Condition="ClassName == ClassJobType.Armorer">
 			<AutoInventoryEquip/>
 			<WaitTimer WaitTime="5"/>
-			<If Condition="not Core.Me.HasAura(1411)">
-				<Lisbeth Json="[{'Group':1,'Item':31939,'Amount':25,'Enabled':true,'Type':'Armorer','Collectable':false}]"/>
-			</If>
-			<If Condition="Core.Me.HasAura(1411)">
-				<Lisbeth Json="[{'Group':1,'Item':31939,'Amount':10,'Enabled':true,'Type':'Armorer','Collectable':false}]"/>
-			</If>
+			<RunCode Name="SetLisbethJson" />
 		</If>
 	</If>
 
@@ -79,5 +74,92 @@ Authors:  Kayla / Angles24
 		await LlamaLibrary.Utilities.Ishgard.Handin();
 	]]>
 	</CodeChunk>
+	<CodeChunk Name="SetLisbethJson">
+	<![CDATA[
+		int amount = 46;
+		int level = Core.Me.Levels[ClassJobType.Armorer];
+		int exp = (int)Experience.CurrentExperience;
+
+		amount = (level, exp) switch
+		{
+		(79, > 4445573) => 1,
+		(79, >= 3635146) => 2,
+		(79, >= 2824719) => 3,
+		(79, >= 2014292) => 4,
+		(79, >= 1203865) => 5,
+		(79, >= 393438) => 6,
+		(79, >= 0) => 7,
+		(78, > 4327909) => 7,
+		(78, >= 3512896) => 8,
+		(78, >= 2697883) => 9,
+		(78, >= 1882870) => 10,
+		(78, >= 1067857) => 11,
+		(78, >= 252844) => 12,
+		(78, >= 0) => 13,
+		(77, > 3769011) => 13,
+		(77, >= 2935670) => 14,
+		(77, >= 2116075) => 15,
+		(77, >= 1296480) => 16,
+		(77, >= 476885) => 17,
+		(77, >= 0) => 18,
+		(76, > 3695774) => 18,
+		(76, >= 2816561) => 19,
+		(76, >= 1992380) => 20,
+		(76, >= 1168199) => 21,
+		(76, >= 344018) => 22,
+		(76, >= 0) => 23,
+		(75, > 3253781) => 23,
+		(75, >= 2379198) => 24,
+		(75, >= 1527525) => 25,
+		(75, >= 698762) => 26,
+		(75, >= 0) => 27,
+		(74, > 3394663) => 27,
+		(74, >= 2521884) => 28,
+		(74, >= 1652773) => 29,
+		(74, >= 805670) => 30,
+		(74, >= 0) => 31,
+		(73, > 3293572) => 31,
+		(73, >= 2420804) => 32,
+		(73, >= 1551703) => 33,
+		(73, >= 678935) => 34,
+		(73, >= 0) => 35,
+		(72, > 2981169) => 35,
+		(72, >= 2108401) => 36,
+		(72, >= 1235633) => 37,
+		(72, >= 359198) => 38,
+		(72, >= 0) => 39,
+		(71, > 2500757) => 39,
+		(71, >= 1624312) => 40,
+		(71, >= 747867) => 41,
+		(71, >= 0) => 42,
+		(70, > 2787088) => 42,
+		(70, >= 1884977) => 43,
+		(70, >= 1008541) => 44,
+		(70, >= 128438) => 45,
+		(70, >= 0) => 46,
+		(69, > 1798335) => 46,
+		(69, >= 0) => 46,
+		_ => amount
+		};
+
+		if (Core.Me.HasAura(1411)) {
+			amount = (int)Math.Ceiling((amount + 1) / 2.0);
+		}
+
+		ff14bot.Helpers.Logging.Write($"Estimated amount of collectables needed to level to next checkpoint: {amount}");
+
+		var lisbeth = BotManager.Bots.FirstOrDefault(c => c.Name == "Lisbeth");
+		if (lisbeth != null)
+		{
+			var lisbethObject = lisbeth.GetType().GetProperty("Lisbeth").GetValue(lisbeth);
+			if (lisbethObject != null)
+			{
+				var json = $"[{{'Group':1,'Item':31939,'Amount':{amount},'Enabled':true,'Type':'Armorer','Collectable':false}}]";
+				var orderMethod = lisbethObject.GetType().GetMethod("ExecuteOrders");
+				await (Task<bool>)orderMethod.Invoke(lisbethObject, new object[] { json, false });
+			}
+		}
+	]]>
+</CodeChunk>
 </CodeChunks>
 </Profile>

@@ -1,0 +1,194 @@
+Name: [Lv70] Grade 4 Skybuilder Lv70
+Type: Craft
+Enabled: True
+Conditions: (MaxDurability == 60 && MaxProgress == 580 && Craftsmanship >= 962 && Control >= 946 && CP >= 463 && RecipeLevel == 150 && PlayerLevel >= 63 && PlayerLevel <= 70)
+Cost: 0
+
+S1:
+- Reflect
+=> S34 (IsExcellent == true)
+=> S35
+
+S34:
+- Precise Touch
+- Manipulation
+- Innovation
+=> S37 (IsExcellent == true)
+=> S36
+
+S37:
+- Precise Touch
+- Great Strides
+- Advanced Touch
+=> S2 (IsExcellent == true)
+=> S3
+
+S35:
+- Manipulation
+=> S25 (IsExcellent == true)
+=> S26
+
+S25:
+- Precise Touch
+- Innovation
+=> S36
+
+S36:
+- Advanced Touch
+=> S27 (IsExcellent == true)
+=> S28
+
+S27:
+- Precise Touch
+=> S3
+
+S28:
+- Advanced Touch
+=> S2 (IsExcellent == true)
+=> S29
+
+S29:
+- Advanced Touch
+=> S2 (IsExcellent == true)
+=> S30
+
+S30:
+- Advanced Touch
+=> S2 (IsExcellent == true)
+=> S32
+
+S32:
+- Great Strides
+=> S2 (IsExcellent == true)
+=> S33
+
+S33:
+- Innovation
+=> S2
+
+S26:
+- Prudent Touch
+=> S20 (IsExcellent == true)
+=> S21
+
+S20:
+- Precise Touch
+- Innovation
+- Advanced Touch
+=> S2 (IsExcellent == true)
+=> S22
+
+S22:
+- Advanced Touch
+=> S2 (IsExcellent == true)
+=> S23
+
+S23:
+- Advanced Touch
+=> S2 (IsExcellent == true)
+=> S24
+
+S24:
+- Advanced Touch
+=> S2 (IsExcellent == true)
+=> S3
+
+S21:
+- Innovation
+=> S15 (IsExcellent == true)
+=> S16
+
+S15:
+- Precise Touch
+- Great Strides
+- Advanced Touch
+=> S2 (IsExcellent == true)
+=> S17
+
+S17:
+- Advanced Touch
+=> S2 (IsExcellent == true)
+=> S18
+
+S18:
+- Innovation
+=> S2 (IsExcellent == true)
+=> S19
+
+S19:
+- Advanced Touch
+=> S2
+
+S16:
+- Prudent Touch
+=> S12 (IsExcellent == true)
+=> S13
+
+S12:
+- Precise Touch
+- Innovation
+- Advanced Touch
+=> S2 (IsExcellent == true)
+=> S14
+
+S14:
+- Advanced Touch
+=> S2 (IsExcellent == true)
+=> S3
+
+S13:
+- Prudent Touch
+=> S10 (IsExcellent == true)
+=> S11
+
+S10:
+- Precise Touch
+- Innovation
+- Advanced Touch
+=> S2 (IsExcellent == true)
+=> S3
+
+S11:
+- Advanced Touch
+=> S8 (IsExcellent == true)
+=> S9
+
+S8:
+- Precise Touch
+- Innovation
+=> S3
+
+S9:
+- Advanced Touch
+=> S6 (IsExcellent == true)
+=> S7
+
+S6:
+- Precise Touch
+=> S3
+
+S7:
+- Innovation
+=> S2 (IsExcellent == true)
+=> S5
+
+S5:
+- Advanced Touch
+=> S2 (IsExcellent == true)
+=> S4
+
+S4:
+- Advanced Touch
+=> S2 (IsExcellent == true)
+=> S3
+
+S3:
+- Great Strides
+=> S2
+
+S2:
+- Byregot's Blessing
+- Veneration
+- Careful Synthesis
+- Careful Synthesis
+- Basic Synthesis
