@@ -3,6 +3,9 @@
 Start Profile
 At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 -->
+
+<!-- TODO: Shift unlock collectables earlier so we can get some commercial engineering manuals and grind cordials -->
+
 <!DOCTYPE Profile [
 <!-- Profile Settings -->
 <!-- Overrides: Set these to 0 to IGNORE that gear check as you level. -->
@@ -461,32 +464,14 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		
 		<!-- Sell all junk up to this point to give ourselves space to craft crafter quest items. -->
 		
+		
 		<If Condition="&autosell; == 1">
 			<RunCode Name="autosellcheck67" />
 		</If>
 		
-		<If Condition="&autocraft; == 1">
+		<!-- Class quests with automatic crafting/selling -->
+		<If Condition="(&autocraft; == 1) and (&autosell; == 1)">
 			<RunCode Name="autocraftcheck67" />
-		</If>
-		
-		<!-- Sell junk from the first wave of crafter quests. -->
-		
-		<If Condition="&autosell; == 1">
-			<RunCode Name="autosellcheck68" />
-		</If>
-		
-		<If Condition="&autocraft; == 1">
-			<RunCode Name="autocraftcheck68" />
-		</If>
-		
-		<!-- Sell junk from the second wave of crafter quests. -->
-		
-		<If Condition="&autosell; == 1">
-			<RunCode Name="autosellcheck69" />
-		</If>
-		
-		<If Condition="&autocraft; == 1">
-			<RunCode Name="autocraftcheck69" />
 		</If>
 		
 		<!-- Class Quest Profiles -->
@@ -596,7 +581,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 			<RunCode Name="autocraftcheck70" />
 		</If>
 		
-		<!-- Sell More Lv53-63 Junk -->
+		<!-- Sell More Lv70 Junk -->
 		
 		<If Condition="&craft70; == 1 and &autosell; == 1">
 			<RunCode Name="autosellcheck70" />
@@ -695,10 +680,20 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		</If>
 		
 		<!-- Craft Gathering and Crafting Gear 80 -->
-		<If Condition="&craft80; == 1 and ((&crp; == 1 and HighestILvl(ClassJobType.Carpenter) &lt; 489) or (&bsm; == 1 and HighestILvl(ClassJobType.Blacksmith) &lt; 489) or (&arm; == 1 and HighestILvl(ClassJobType.Armorer) &lt; 489) or (&gsm; == 1 and HighestILvl(ClassJobType.Goldsmith) &lt; 489) or (&ltw; == 1 and HighestILvl(ClassJobType.Leatherworker) &lt; 489) or (&wvr; == 1 and HighestILvl(ClassJobType.Weaver) &lt; 489) or (&alc; == 1 and HighestILvl(ClassJobType.Alchemist) &lt; 489) or (&cul; == 1 and HighestILvl(ClassJobType.Culinarian) &lt; 489) or (&min; == 1 and HighestILvl(ClassJobType.Miner) &lt; 489) or (&btn; == 1 and HighestILvl(ClassJobType.Botanist) &lt; 489))">
+		<If Condition="&craft80; == 1 and &autocraft; == 0 and ((&crp; == 1 and HighestILvl(ClassJobType.Carpenter) &lt; 489) or (&bsm; == 1 and HighestILvl(ClassJobType.Blacksmith) &lt; 489) or (&arm; == 1 and HighestILvl(ClassJobType.Armorer) &lt; 489) or (&gsm; == 1 and HighestILvl(ClassJobType.Goldsmith) &lt; 489) or (&ltw; == 1 and HighestILvl(ClassJobType.Leatherworker) &lt; 489) or (&wvr; == 1 and HighestILvl(ClassJobType.Weaver) &lt; 489) or (&alc; == 1 and HighestILvl(ClassJobType.Alchemist) &lt; 489) or (&cul; == 1 and HighestILvl(ClassJobType.Culinarian) &lt; 489) or (&min; == 1 and HighestILvl(ClassJobType.Miner) &lt; 489) or (&btn; == 1 and HighestILvl(ClassJobType.Botanist) &lt; 489))">
 			<LogMessage Message="Craft level 80 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and make sure your gearsets are updated with the new gear."/>
 			<UserDialog DialogText="Craft level 80 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and make sure your gearsets are updated with the new gear.\n\nIf you keep seeing this popup even though you have upgraded your gear edit the Start.xml profile and change 'craft80 1' to 'craft80 0', save and start thebot again."/>	
 		</If>
+		
+		<If Condition="&craft80; == 1 and &autocraft; == 1">
+			<RunCode Name="autocraftcheck80" />
+		</If>
+		
+		<!-- Sell More Lv70 Junk -->
+		
+		<If Condition="&craft80; == 1 and &autosell; == 1">
+			<RunCode Name="autosellcheck80" />
+		</If>	
 		
 		<!-- Endwalker MSQ Check -->
 		<If Condition="not IsQuestCompleted(69999)">
@@ -1131,18 +1126,6 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		]]>
 		</CodeChunk>
 
-		<CodeChunk Name="autocraftcheck68">
-		<![CDATA[
-			await CheckAutocraftLevel(68);
-		]]>
-		</CodeChunk>
-		
-		<CodeChunk Name="autocraftcheck69">
-		<![CDATA[
-			await CheckAutocraftLevel(69);
-		]]>
-		</CodeChunk>
-
 		<CodeChunk Name="autocraftcheck70">
 		<![CDATA[
 			await CheckAutocraftLevel(70);
@@ -1264,18 +1247,6 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		<CodeChunk Name="autosellcheck67">
 		<![CDATA[
 			await CheckAutosellLevel(67);
-		]]>
-		</CodeChunk>
-		
-		<CodeChunk Name="autosellcheck68">
-		<![CDATA[
-			await CheckAutosellLevel(68);
-		]]>
-		</CodeChunk>
-		
-		<CodeChunk Name="autosellcheck69">
-		<![CDATA[
-			await CheckAutosellLevel(69);
 		]]>
 		</CodeChunk>
 

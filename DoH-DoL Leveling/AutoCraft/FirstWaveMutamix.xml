@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Profile>
+<Name>Crafting First Wave of Crafting Quest Items</Name>
+<Order>
+	
+	<If Condition="not IsQuestCompleted(66176)">
+	
+	<LogMessage Message="Attempting to affix materia to quest items..."/>
+	<LogMessage Message="Traveling to Mutamix to finish the quest at the same time."/>
+	
+	<LisbethTravel Zone="141" Position="115.5356, 31, -390.4169"/>
+	
+	<AffixMateria EquipmentId="2344" MateriaId="5699" />
+	<AffixMateria EquipmentId="2236" MateriaId="5699" />
+	<AffixMateria EquipmentId="1663" MateriaId="5676" />
+	<AffixMateria EquipmentId="3203" MateriaId="5666" />
+	
+	</If>
+	
+	<RunCode Name="FirstWaveMutamixLogger" />
+	
+    <LLoadProfile Path="Lv67.xml"/>
+</Order>
+<CodeChunks>
+
+<CodeChunk Name="FirstWaveMutamixLogger">
+    <![CDATA[
+        try
+        {
+            string workingDirectory = Directory.GetCurrentDirectory();
+            string settingsPath = Path.Combine(workingDirectory, "Settings");
+            string logFilePath = Path.Combine(settingsPath, $"autocraft.txt");
+            
+            File.AppendAllText(logFilePath, "Mutamix1" + Environment.NewLine);
+        }
+        catch (Exception ex)
+        {
+        }
+    ]]>
+</CodeChunk>
+
+</CodeChunks>
+</Profile>

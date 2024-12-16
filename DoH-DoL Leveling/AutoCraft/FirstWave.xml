@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Profile>
+<Name>Crafting First Wave of Crafting Quest Items</Name>
+<Order>
+	
+	<!-- STRATEGY: We want to start by getting intermediate items done, because -->
+	<!-- in the process of crafting intermediates we will generate a lot of leftover -->
+	<!-- junk. We then want to sell off every raw gatherable that isn't used, -->
+	<!-- and flatten all these intermediates so that they are NQ (we don't need HQ). -->
+	<!-- Lisbeth will consolidate automatically. We want to do it in batches of three classes  -->
+	<!-- at a time because even with this kind of consolidation there simply isn't enough -->
+	<!-- inventory space to handle the main six classes altogether, even for only -->
+	<!-- intermediates. So we'll run two classes at a time, starting with BSM/ARM, then CRP/GSM -->
+	<!-- then finally LTW/WVR. -->
+	
+	<If Condition="(not IsQuestCompleted(68153)) and (not IsQuestCompleted(68132))">
+	<RunCode Name="SetLisbethJson" />
+    <AutoInventoryEquip/>
+    <WaitTimer WaitTime="5"/>
+	</If>
+	<RunCode Name="FirstWaveLogger" />	
+    <LLoadProfile Path="Lv67.xml"/>
+</Order>
+<CodeChunks>
+
+<CodeChunk Name="SetLisbethJson">
+<![CDATA[
+    // Try to get profile path and construct relative path from there
+    var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+    var profileDir = System.IO.Path.GetDirectoryName(profilePath);
+    var jsonPath = System.IO.Path.Combine(profileDir, "../Lisbeth/Quest Items/V2Part1Intermediates.json");
+    
+    var json = System.IO.File.ReadAllText(jsonPath);
+    var lisbeth = BotManager.Bots.FirstOrDefault(c => c.Name == "Lisbeth");
+    if (lisbeth != null)
+    {
+        var lisbethObject = lisbeth.GetType().GetProperty("Lisbeth").GetValue(lisbeth);
+        if (lisbethObject != null)
+        {
+            var orderMethod = lisbethObject.GetType().GetMethod("ExecuteOrders");
+            await (Task<bool>)orderMethod.Invoke(lisbethObject, new object[] { json, false });
+        }
+    }
+]]>
+</CodeChunk>
+
+<CodeChunk Name="FirstWaveLogger">
+    <![CDATA[
+        try
+        {
+            string workingDirectory = Directory.GetCurrentDirectory();
+            string settingsPath = Path.Combine(workingDirectory, "Settings");
+            string logFilePath = Path.Combine(settingsPath, $"autocraft.txt");
+            
+            File.AppendAllText(logFilePath, "firstwave" + Environment.NewLine);
+        }
+        catch (Exception ex)
+        {
+        }
+    ]]>
+</CodeChunk>
+
+</CodeChunks>
+</Profile>

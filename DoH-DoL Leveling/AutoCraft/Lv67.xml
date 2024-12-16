@@ -1,75 +1,119 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Profile>
-<Name>Crafting First Wave of Crafting Quest Items</Name>
+<Name>Crafter Quests</Name>
 <Order>
 
-	<!-- TODO: Modify Lisbeth JSON based on whether the character already learned Master III -->
+	<!-- Buy and use master books -->
 	
     <RunCode Name="MasterBooks" />
 	
-	<WaitTimer WaitTime="5"/>
-	<UseInventoryItem ItemID="12244"/>
-	<WaitTimer WaitTime="5"/>
-	<UseInventoryItem ItemID="12245"/>
-	<WaitTimer WaitTime="5"/>
-	<UseInventoryItem ItemID="12246"/>
-	<WaitTimer WaitTime="5"/>
-	<UseInventoryItem ItemID="12247"/>
-	<WaitTimer WaitTime="5"/>
-	<UseInventoryItem ItemID="12248"/>
-	<WaitTimer WaitTime="5"/>
-	<UseInventoryItem ItemID="12249"/>
-	<WaitTimer WaitTime="5"/>
-	<UseInventoryItem ItemID="12250"/>
-	<WaitTimer WaitTime="5"/>
+	<!-- STRATEGY: We want to start by getting intermediate items done, because -->
+	<!-- in the process of crafting intermediates we will generate a lot of leftover -->
+	<!-- junk. We then want to sell off every raw gatherable that isn't used, -->
+	<!-- and flatten all these intermediates so that they are NQ (we don't need HQ). -->
+	<!-- Lisbeth will consolidate automatically. We want to do it in batches of three classes  -->
+	<!-- at a time because even with this kind of consolidation there simply isn't enough -->
+	<!-- inventory space to handle the main six classes altogether, even for only -->
+	<!-- intermediates. So we'll run two classes at a time, starting with BSM/ARM, then CRP/GSM -->
+	<!-- then LTW/WVR, then ALC, CUL individually. -->
 	
-	<LogMessage Message="Master Books acquired!"/>
+	<!-- BSM, ARM -->
+	<If Condition="(not IsQuestCompleted(68153)) or (not IsQuestCompleted(68132))">
 	
-	<RunCode Name="SetLisbethJson2" />
+	<!-- Craft Intermediates for BSM, ARM -->
+	<RunCode Name="FirstWave" />
+	
+	<!-- Reduce HQ and merge -->
+	<RunCode Name="FirstWaveNQify" />
     <AutoInventoryEquip/>
-    <WaitTimer WaitTime="5"/>
 	
-	<LogMessage Message="Attempting to affix materia to quest items..."/>
+    <!-- Craft Final Product for BSM, ARM -->
+	<RunCode Name="SecondWave" />
 	
-	<LogMessage Message="Traveling to Mutamix to finish the quest at the same time."/>
+	<!-- Meld at Mutamix -->
+	<If Condition="not IsQuestCompleted(66176)">
+	<RunCode Name="FirstWaveMutamix" />
+	</If>
 	
-	<LisbethTravel Zone="141" Position="115.5356, 31, -390.4169"/>
+	<!-- BSM quests -->
+	<If Condition="not IsQuestCompleted(68153)">
+	<LLoadProfile Path="../Quests/Blacksmith Class Quests.xml"/>
+	</If>
 	
-	<!-- Player should usually have 4+ competence I unless we're exceptionally unlucky... -->
+	<!-- ARM quests -->
+	<If Condition="not IsQuestCompleted(68132)">
+	<LLoadProfile Path="../Quests/Armorer Class Quests.xml"/>
+	</If>
+	</If>
+	<!-- END BSM, ARM -->
 	
-	<AffixMateria EquipmentId="1827" MateriaId="5699" />
-	<AffixMateria EquipmentId="2344" MateriaId="5699" />
-	<AffixMateria EquipmentId="2236" MateriaId="5699" />
-	<AffixMateria EquipmentId="2111" MateriaId="5699" />
+	<!-- Sell all junk so far -->
+	<RunCode Name="SecondWaveSell" />
 	
-	<!-- Lv50 quest -->
+	<!-- CRP, GSM -->
+	<If Condition="(not IsQuestCompleted(68137)) or (not IsQuestCompleted(67979))">
 	
-	<AffixMateria EquipmentId="1001942" MateriaId="5671" />
-	<AffixMateria EquipmentId="1001663" MateriaId="5676" />
-	<AffixMateria EquipmentId="1003203" MateriaId="5666" />
-	<AffixMateria EquipmentId="1004514" MateriaId="5631" />
+	<!-- Craft Intermediates for BSM, ARM -->
+	<RunCode Name="ThirdWave" />
+	<RunCode Name="ThirdWaveNQify" />
+    <AutoInventoryEquip/>
+	<RunCode Name="FourthWave" />
 	
-	<TurnIn QuestId="66176" NpcId="1001425" XYZ="115.5356, 31, -390.4169"/>
+	<!-- Meld at Mutamix -->
+	<If Condition="not IsQuestCompleted(66176)">
+	<RunCode Name="ThirdWaveMutamix" />
+	</If>
 	
-	<WaitTimer WaitTime="5"/>
-	<AutoInventoryEquip/>
-    <WaitTimer WaitTime="5"/>
+	<If Condition="not IsQuestCompleted(67979)">
+	<LLoadProfile Path="../Quests/Carpenter Class Quests.xml"/>
+	</If>
 	
-		<If Condition="not IsQuestCompleted(67979)">
-			<LLoadProfile Path="Quests/Carpenter Class Quests.xml"/>
-		</If>
-		
-		<If Condition="not IsQuestCompleted(68153)">
-			<LLoadProfile Path="Quests/Blacksmith Class Quests.xml"/>
-		</If>
-		
-		<If Condition="not IsQuestCompleted(68132)">
-			<LLoadProfile Path="Quests/Armorer Class Quests.xml"/>
-		</If>
-		
-		<If Condition="not IsQuestCompleted(68137)">
-			<LLoadProfile Path="Quests/Goldsmith Class Quests.xml"/>
-		</If>
+	<If Condition="not IsQuestCompleted(68137)">
+	<LLoadProfile Path="../Quests/Goldsmith Class Quests.xml"/>
+	</If>
+	</If>
+	
+	<!-- Sell all junk so far -->
+	<RunCode Name="FourthWaveSell" />
+	<!-- END CRP, GSM -->
+	
+	<!-- LTW, WVR -->
+	<If Condition="(not IsQuestCompleted(68147)) or (not IsQuestCompleted(67969))">
+	<RunCode Name="FifthWave" />
+	<RunCode Name="FifthWaveNQify" />
+    <AutoInventoryEquip/>
+	<RunCode Name="SixthWave" />
+	
+	<If Condition="not IsQuestCompleted(68147)">
+	<LLoadProfile Path="../Quests/Leatherworker Class Quests.xml"/>
+	</If>
+	
+	<If Condition="not IsQuestCompleted(67969)">
+	<LLoadProfile Path="../Quests/Weaver Class Quests.xml"/>
+	</If>
+	</If>
+	
+	<!-- Sell all junk so far -->
+	<RunCode Name="SixthWaveSell" />
+	<!-- END LTW, WVR -->
+	
+	<!-- ALC, CUL -->
+	<If Condition="(not IsQuestCompleted(68142)) or (not IsQuestCompleted(67974))">
+	<RunCode Name="SeventhWave" />
+    <AutoInventoryEquip/>
+	
+	<If Condition="not IsQuestCompleted(67974)">
+	<LLoadProfile Path="../Quests/Alchemist Class Quests.xml"/>
+	</If>
+	
+	<If Condition="not IsQuestCompleted(68142)">
+	<LLoadProfile Path="../Quests/Culinarian Class Quests.xml"/>
+	</If>
+	</If>
+	
+	<!-- Sell all junk so far -->
+	<RunCode Name="EighthWaveSell" />
+	<!-- END ALC, CUL -->
 		
 	<RunCode Name="Logger" />
 	<WaitTimer WaitTime="5"/>
@@ -129,6 +173,15 @@
                     var orderMethod = lisbethObject.GetType().GetMethod("ExecuteOrders");
                     await (System.Threading.Tasks.Task<bool>)orderMethod.Invoke(lisbethObject, new object[] { json, false });
                 }
+				var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+				var profileDir = Path.GetDirectoryName(profilePath);
+				var autoCraftPath = Path.Combine(profileDir, $"Autocraft/MasterBooks.xml");
+				if (File.Exists(autoCraftPath))
+				{
+					await Coroutine.Sleep(500);
+					ff14bot.NeoProfiles.NeoProfileManager.Load(autoCraftPath);
+					await Coroutine.Sleep(1000);
+				}
             }
         }
         else
@@ -138,7 +191,7 @@
     ]]>
 </CodeChunk>
 
-<CodeChunk Name="SetLisbethJson2">
+<CodeChunk Name="SetLisbethJson1">
 <![CDATA[
     // Try to get profile path and construct relative path from there
     var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
@@ -174,6 +227,585 @@
     ]]>
 </CodeChunk>
 
+
+
+<CodeChunk Name="FirstWave">
+<![CDATA[
+	try 
+	{
+		string workingDirectory = Directory.GetCurrentDirectory();
+		string settingsPath = Path.Combine(workingDirectory, "Settings");
+		string logFilePath = Path.Combine(settingsPath, "autocraft.txt");
+		
+		// Create the file if it doesn't exist
+		if (!File.Exists(logFilePath))
+		{
+			File.WriteAllText(logFilePath, "");
+		}
+		
+		// Read content and check for craft{level}
+		string content = File.ReadAllText(logFilePath);
+		if (!content.Contains($"firstwave"))
+		{
+		// If we get here, we need to run the profile
+		var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+		var profileDir = Path.GetDirectoryName(profilePath);
+		var autoCraftPath = Path.Combine(profileDir, $"FirstWave.xml");
+		if (File.Exists(autoCraftPath))
+		{
+			await Coroutine.Sleep(500);
+			ff14bot.NeoProfiles.NeoProfileManager.Load(autoCraftPath);
+			await Coroutine.Sleep(1000);
+		}
+		}
+	}
+	catch
+	{
+	}
+]]>
+</CodeChunk>
+
+<CodeChunk Name="FirstWaveNQify">
+<![CDATA[
+	try 
+	{
+		string workingDirectory = Directory.GetCurrentDirectory();
+		string settingsPath = Path.Combine(workingDirectory, "Settings");
+		string logFilePath = Path.Combine(settingsPath, "autocraft.txt");
+		
+		// Create the file if it doesn't exist
+		if (!File.Exists(logFilePath))
+		{
+			File.WriteAllText(logFilePath, "");
+		}
+		
+		// Read content and check for craft{level}
+		string content = File.ReadAllText(logFilePath);
+		if (!content.Contains($"NQify1"))
+		{
+		// If we get here, we need to run the profile
+		var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+		var profileDir = Path.GetDirectoryName(profilePath);
+		var autoCraftPath = Path.Combine(profileDir, $"FirstWaveNQify.xml");
+		if (File.Exists(autoCraftPath))
+		{
+			await Coroutine.Sleep(500);
+			ff14bot.NeoProfiles.NeoProfileManager.Load(autoCraftPath);
+			await Coroutine.Sleep(1000);
+		}
+		}
+	}
+	catch
+	{
+	}
+]]>
+</CodeChunk>
+
+<CodeChunk Name="FirstWaveMutamix">
+<![CDATA[
+	try 
+	{
+		string workingDirectory = Directory.GetCurrentDirectory();
+		string settingsPath = Path.Combine(workingDirectory, "Settings");
+		string logFilePath = Path.Combine(settingsPath, "autocraft.txt");
+		
+		// Create the file if it doesn't exist
+		if (!File.Exists(logFilePath))
+		{
+			File.WriteAllText(logFilePath, "");
+		}
+		
+		// Read content and check for craft{level}
+		string content = File.ReadAllText(logFilePath);
+		if (!content.Contains($"Mutamix1"))
+		{
+		// If we get here, we need to run the profile
+		var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+		var profileDir = Path.GetDirectoryName(profilePath);
+		var autoCraftPath = Path.Combine(profileDir, $"FirstWaveMutamix.xml");
+		if (File.Exists(autoCraftPath))
+		{
+			await Coroutine.Sleep(500);
+			ff14bot.NeoProfiles.NeoProfileManager.Load(autoCraftPath);
+			await Coroutine.Sleep(1000);
+		}
+		}
+	}
+	catch
+	{
+	}
+]]>
+</CodeChunk>
+
+<CodeChunk Name="SecondWave">
+<![CDATA[
+	try 
+	{
+		string workingDirectory = Directory.GetCurrentDirectory();
+		string settingsPath = Path.Combine(workingDirectory, "Settings");
+		string logFilePath = Path.Combine(settingsPath, "autocraft.txt");
+		
+		// Create the file if it doesn't exist
+		if (!File.Exists(logFilePath))
+		{
+			File.WriteAllText(logFilePath, "");
+		}
+		
+		// Read content and check for craft{level}
+		string content = File.ReadAllText(logFilePath);
+		if (!content.Contains($"secondwave"))
+		{
+		
+		// If we get here, we need to run the profile
+		var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+		var profileDir = Path.GetDirectoryName(profilePath);
+		var autoCraftPath = Path.Combine(profileDir, $"SecondWave.xml");
+		if (File.Exists(autoCraftPath))
+		{
+			await Coroutine.Sleep(500);
+			ff14bot.NeoProfiles.NeoProfileManager.Load(autoCraftPath);
+			await Coroutine.Sleep(1000);
+		}
+		}
+	}
+	catch
+	{
+	}
+]]>
+</CodeChunk>
+
+<CodeChunk Name="SecondWaveSell">
+<![CDATA[
+	try 
+	{
+		string workingDirectory = Directory.GetCurrentDirectory();
+		string settingsPath = Path.Combine(workingDirectory, "Settings");
+		string logFilePath = Path.Combine(settingsPath, "autocraft.txt");
+		
+		// Create the file if it doesn't exist
+		if (!File.Exists(logFilePath))
+		{
+			File.WriteAllText(logFilePath, "");
+		}
+		
+		// Read content and check for craft{level}
+		string content = File.ReadAllText(logFilePath);
+		if (!content.Contains($"sell2"))
+		{
+		
+		// If we get here, we need to run the profile
+		var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+		var profileDir = Path.GetDirectoryName(profilePath);
+		var autoCraftPath = Path.Combine(profileDir, $"SecondWaveSell.xml");
+		if (File.Exists(autoCraftPath))
+		{
+			await Coroutine.Sleep(500);
+			ff14bot.NeoProfiles.NeoProfileManager.Load(autoCraftPath);
+			await Coroutine.Sleep(1000);
+		}
+		}
+	}
+	catch
+	{
+	}
+]]>
+</CodeChunk>
+
+<CodeChunk Name="ThirdWave">
+<![CDATA[
+	try 
+	{
+		string workingDirectory = Directory.GetCurrentDirectory();
+		string settingsPath = Path.Combine(workingDirectory, "Settings");
+		string logFilePath = Path.Combine(settingsPath, "autocraft.txt");
+		
+		// Create the file if it doesn't exist
+		if (!File.Exists(logFilePath))
+		{
+			File.WriteAllText(logFilePath, "");
+		}
+		
+		// Read content and check for craft{level}
+		string content = File.ReadAllText(logFilePath);
+		if (!content.Contains($"thirdwave"))
+		{
+		// If we get here, we need to run the profile
+		var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+		var profileDir = Path.GetDirectoryName(profilePath);
+		var autoCraftPath = Path.Combine(profileDir, $"ThirdWave.xml");
+		if (File.Exists(autoCraftPath))
+		{
+			await Coroutine.Sleep(500);
+			ff14bot.NeoProfiles.NeoProfileManager.Load(autoCraftPath);
+			await Coroutine.Sleep(1000);
+		}
+		}
+	}
+	catch
+	{
+	}
+]]>
+</CodeChunk>
+
+<CodeChunk Name="ThirdWaveNQify">
+<![CDATA[
+	try 
+	{
+		string workingDirectory = Directory.GetCurrentDirectory();
+		string settingsPath = Path.Combine(workingDirectory, "Settings");
+		string logFilePath = Path.Combine(settingsPath, "autocraft.txt");
+		
+		// Create the file if it doesn't exist
+		if (!File.Exists(logFilePath))
+		{
+			File.WriteAllText(logFilePath, "");
+		}
+		
+		// Read content and check for craft{level}
+		string content = File.ReadAllText(logFilePath);
+		if (!content.Contains($"NQify3"))
+		{
+		// If we get here, we need to run the profile
+		var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+		var profileDir = Path.GetDirectoryName(profilePath);
+		var autoCraftPath = Path.Combine(profileDir, $"ThirdWaveNQify.xml");
+		if (File.Exists(autoCraftPath))
+		{
+			await Coroutine.Sleep(500);
+			ff14bot.NeoProfiles.NeoProfileManager.Load(autoCraftPath);
+			await Coroutine.Sleep(1000);
+		}
+		}
+	}
+	catch
+	{
+	}
+]]>
+</CodeChunk>
+
+<CodeChunk Name="ThirdWaveMutamix">
+<![CDATA[
+	try 
+	{
+		string workingDirectory = Directory.GetCurrentDirectory();
+		string settingsPath = Path.Combine(workingDirectory, "Settings");
+		string logFilePath = Path.Combine(settingsPath, "autocraft.txt");
+		
+		// Create the file if it doesn't exist
+		if (!File.Exists(logFilePath))
+		{
+			File.WriteAllText(logFilePath, "");
+		}
+		
+		// Read content and check for craft{level}
+		string content = File.ReadAllText(logFilePath);
+		if (!content.Contains($"Mutamix3"))
+		{
+		// If we get here, we need to run the profile
+		var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+		var profileDir = Path.GetDirectoryName(profilePath);
+		var autoCraftPath = Path.Combine(profileDir, $"ThirdWaveMutamix.xml");
+		if (File.Exists(autoCraftPath))
+		{
+			await Coroutine.Sleep(500);
+			ff14bot.NeoProfiles.NeoProfileManager.Load(autoCraftPath);
+			await Coroutine.Sleep(1000);
+		}
+		}
+	}
+	catch
+	{
+	}
+]]>
+</CodeChunk>
+
+<CodeChunk Name="FourthWave">
+<![CDATA[
+	try 
+	{
+		string workingDirectory = Directory.GetCurrentDirectory();
+		string settingsPath = Path.Combine(workingDirectory, "Settings");
+		string logFilePath = Path.Combine(settingsPath, "autocraft.txt");
+		
+		// Create the file if it doesn't exist
+		if (!File.Exists(logFilePath))
+		{
+			File.WriteAllText(logFilePath, "");
+		}
+		
+		// Read content and check for craft{level}
+		string content = File.ReadAllText(logFilePath);
+		if (!content.Contains($"fourthwave"))
+		{
+		// If we get here, we need to run the profile
+		var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+		var profileDir = Path.GetDirectoryName(profilePath);
+		var autoCraftPath = Path.Combine(profileDir, $"FourthWave.xml");
+		if (File.Exists(autoCraftPath))
+		{
+			await Coroutine.Sleep(500);
+			ff14bot.NeoProfiles.NeoProfileManager.Load(autoCraftPath);
+			await Coroutine.Sleep(1000);
+		}
+		}
+	}
+	catch
+	{
+	}
+]]>
+</CodeChunk>
+
+<CodeChunk Name="FourthWaveSell">
+<![CDATA[
+	try 
+	{
+		string workingDirectory = Directory.GetCurrentDirectory();
+		string settingsPath = Path.Combine(workingDirectory, "Settings");
+		string logFilePath = Path.Combine(settingsPath, "autocraft.txt");
+		
+		// Create the file if it doesn't exist
+		if (!File.Exists(logFilePath))
+		{
+			File.WriteAllText(logFilePath, "");
+		}
+		
+		// Read content and check for craft{level}
+		string content = File.ReadAllText(logFilePath);
+		if (!content.Contains($"sell4"))
+		{
+		// If we get here, we need to run the profile
+		var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+		var profileDir = Path.GetDirectoryName(profilePath);
+		var autoCraftPath = Path.Combine(profileDir, $"FourthWaveSell.xml");
+		if (File.Exists(autoCraftPath))
+		{
+			await Coroutine.Sleep(500);
+			ff14bot.NeoProfiles.NeoProfileManager.Load(autoCraftPath);
+			await Coroutine.Sleep(1000);
+		}
+		}
+	}
+	catch
+	{
+	}
+]]>
+</CodeChunk>
+
+<CodeChunk Name="FifthWave">
+<![CDATA[
+	try 
+	{
+		string workingDirectory = Directory.GetCurrentDirectory();
+		string settingsPath = Path.Combine(workingDirectory, "Settings");
+		string logFilePath = Path.Combine(settingsPath, "autocraft.txt");
+		
+		// Create the file if it doesn't exist
+		if (!File.Exists(logFilePath))
+		{
+			File.WriteAllText(logFilePath, "");
+		}
+		
+		// Read content and check for craft{level}
+		string content = File.ReadAllText(logFilePath);
+		if (!content.Contains($"fifthwave"))
+		{
+		// If we get here, we need to run the profile
+		var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+		var profileDir = Path.GetDirectoryName(profilePath);
+		var autoCraftPath = Path.Combine(profileDir, $"FifthWave.xml");
+		if (File.Exists(autoCraftPath))
+		{
+			await Coroutine.Sleep(500);
+			ff14bot.NeoProfiles.NeoProfileManager.Load(autoCraftPath);
+			await Coroutine.Sleep(1000);
+		}
+		}
+	}
+	catch
+	{
+	}
+]]>
+</CodeChunk>
+
+<CodeChunk Name="FifthWaveNQify">
+<![CDATA[
+	try 
+	{
+		string workingDirectory = Directory.GetCurrentDirectory();
+		string settingsPath = Path.Combine(workingDirectory, "Settings");
+		string logFilePath = Path.Combine(settingsPath, "autocraft.txt");
+		
+		// Create the file if it doesn't exist
+		if (!File.Exists(logFilePath))
+		{
+			File.WriteAllText(logFilePath, "");
+		}
+		
+		// Read content and check for craft{level}
+		string content = File.ReadAllText(logFilePath);
+		if (!content.Contains($"NQify5"))
+		{
+		// If we get here, we need to run the profile
+		var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+		var profileDir = Path.GetDirectoryName(profilePath);
+		var autoCraftPath = Path.Combine(profileDir, $"FifthWaveNQify.xml");
+		if (File.Exists(autoCraftPath))
+		{
+			await Coroutine.Sleep(500);
+			ff14bot.NeoProfiles.NeoProfileManager.Load(autoCraftPath);
+			await Coroutine.Sleep(1000);
+		}
+		}
+	}
+	catch
+	{
+	}
+]]>
+</CodeChunk>
+
+<CodeChunk Name="SixthWave">
+<![CDATA[
+	try 
+	{
+		string workingDirectory = Directory.GetCurrentDirectory();
+		string settingsPath = Path.Combine(workingDirectory, "Settings");
+		string logFilePath = Path.Combine(settingsPath, "autocraft.txt");
+		
+		// Create the file if it doesn't exist
+		if (!File.Exists(logFilePath))
+		{
+			File.WriteAllText(logFilePath, "");
+		}
+		
+		// Read content and check for craft{level}
+		string content = File.ReadAllText(logFilePath);
+		if (!content.Contains($"sixthwave"))
+		{
+		// If we get here, we need to run the profile
+		var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+		var profileDir = Path.GetDirectoryName(profilePath);
+		var autoCraftPath = Path.Combine(profileDir, $"SixthWave.xml");
+		if (File.Exists(autoCraftPath))
+		{
+			await Coroutine.Sleep(500);
+			ff14bot.NeoProfiles.NeoProfileManager.Load(autoCraftPath);
+			await Coroutine.Sleep(1000);
+		}
+		}
+	}
+	catch
+	{
+	}
+]]>
+</CodeChunk>
+
+<CodeChunk Name="SixthWaveSell">
+<![CDATA[
+	try 
+	{
+		string workingDirectory = Directory.GetCurrentDirectory();
+		string settingsPath = Path.Combine(workingDirectory, "Settings");
+		string logFilePath = Path.Combine(settingsPath, "autocraft.txt");
+		
+		// Create the file if it doesn't exist
+		if (!File.Exists(logFilePath))
+		{
+			File.WriteAllText(logFilePath, "");
+		}
+		
+		// Read content and check for craft{level}
+		string content = File.ReadAllText(logFilePath);
+		if (!content.Contains($"sell6"))
+		{
+		// If we get here, we need to run the profile
+		var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+		var profileDir = Path.GetDirectoryName(profilePath);
+		var autoCraftPath = Path.Combine(profileDir, $"SixthWaveSell.xml");
+		if (File.Exists(autoCraftPath))
+		{
+			await Coroutine.Sleep(500);
+			ff14bot.NeoProfiles.NeoProfileManager.Load(autoCraftPath);
+			await Coroutine.Sleep(1000);
+		}
+		}
+	}
+	catch
+	{
+	}
+]]>
+</CodeChunk>
+
+<CodeChunk Name="SeventhWave">
+<![CDATA[
+	try 
+	{
+		string workingDirectory = Directory.GetCurrentDirectory();
+		string settingsPath = Path.Combine(workingDirectory, "Settings");
+		string logFilePath = Path.Combine(settingsPath, "autocraft.txt");
+		
+		// Create the file if it doesn't exist
+		if (!File.Exists(logFilePath))
+		{
+			File.WriteAllText(logFilePath, "");
+		}
+		
+		// Read content and check for craft{level}
+		string content = File.ReadAllText(logFilePath);
+		if (!content.Contains($"seventhwave"))
+		{
+		// If we get here, we need to run the profile
+		var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+		var profileDir = Path.GetDirectoryName(profilePath);
+		var autoCraftPath = Path.Combine(profileDir, $"SeventhWave.xml");
+		if (File.Exists(autoCraftPath))
+		{
+			await Coroutine.Sleep(500);
+			ff14bot.NeoProfiles.NeoProfileManager.Load(autoCraftPath);
+			await Coroutine.Sleep(1000);
+		}
+		}
+	}
+	catch
+	{
+	}
+]]>
+</CodeChunk>
+
+<CodeChunk Name="EighthWaveSell">
+<![CDATA[
+	try 
+	{
+		string workingDirectory = Directory.GetCurrentDirectory();
+		string settingsPath = Path.Combine(workingDirectory, "Settings");
+		string logFilePath = Path.Combine(settingsPath, "autocraft.txt");
+		
+		// Create the file if it doesn't exist
+		if (!File.Exists(logFilePath))
+		{
+			File.WriteAllText(logFilePath, "");
+		}
+		
+		// Read content and check for craft{level}
+		string content = File.ReadAllText(logFilePath);
+		if (!content.Contains($"sell8"))
+		{
+		// If we get here, we need to run the profile
+		var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+		var profileDir = Path.GetDirectoryName(profilePath);
+		var autoCraftPath = Path.Combine(profileDir, $"EighthWaveSell.xml");
+		if (File.Exists(autoCraftPath))
+		{
+			await Coroutine.Sleep(500);
+			ff14bot.NeoProfiles.NeoProfileManager.Load(autoCraftPath);
+			await Coroutine.Sleep(1000);
+		}
+		}
+	}
+	catch
+	{
+	}
+]]>
+</CodeChunk>
 
 </CodeChunks>
 </Profile>

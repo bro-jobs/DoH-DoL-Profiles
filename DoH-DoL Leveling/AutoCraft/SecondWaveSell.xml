@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Profile>
+<Name>Selling Junk...</Name>
+<Order>
+	<!-- Crafting Residue -->
+	<LLSellItem ItemIds="5385, 5107, 5106, 5465, 5306, 12629, 12635, 12636, 5367, 12582, 5485, 2349, 5056, 12525, 12529, 12530, 5079, 2802, 5057, 5072, 5073, 5083, 5084, 5089, 5068, 5284, 5506, 5507, 12614, 2344, 2551, 1778, 2350, 1723, 1796, 1659, 1663, 11877, 12528, 10588, 10591, 2236, 3096, 2502, 3149, 3861, 3868, 2830, 3203, 10721, 10756, 10667, 10682" Armory="true"/>
+	<!-- Quest Rewards -->
+	<LLSellItem ItemIds="2344, 2359, 2349, 2347, 2362, 2351, 11919, 11876, 11877, 19518, 19528, 2370, 2384, 2373, 2374, 2387, 2376, 11923, 11880, 11881, 19519, 19529"  Armory="true" />
+	<!-- Miscellaneous -->
+	<LLSellItem ItemIds="5824, 5825, 5826, 12874, 4766" />
+	<!-- Materias -->
+	<LLSellItem ItemIds="5700, 5701, 5702, 5703, 5710, 5711, 5712, 5713, 5684, 5685, 5686, 5687, 5688, 5694, 5695, 5697, 5698, 5689, 5690, 5691, 5692, 5693" />
+	<!-- Lv50 main hands -->
+	<LLDiscardItem ItemIds="2354, 2379" />
+	<RunCode Name="SecondWaveSellLogger" />	
+    <LLoadProfile Path="Lv67.xml"/>
+</Order>
+<CodeChunks>
+
+<CodeChunk Name="SecondWaveSellLogger">
+    <![CDATA[
+        try
+        {
+            string workingDirectory = Directory.GetCurrentDirectory();
+            string settingsPath = Path.Combine(workingDirectory, "Settings");
+            string logFilePath = Path.Combine(settingsPath, $"autocraft.txt");
+            
+            File.AppendAllText(logFilePath, "sell2" + Environment.NewLine);
+        }
+        catch (Exception ex)
+        {
+        }
+    ]]>
+</CodeChunk>
+
+</CodeChunks>
+</Profile>

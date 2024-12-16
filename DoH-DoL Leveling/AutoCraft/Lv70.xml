@@ -2,6 +2,12 @@
 <Profile>
 <Name>Crafting Lv70 Gear</Name>
 <Order>
+
+	<GetTo ZoneId="886" XYZ="-7.472548, -16, 162.5581"/>
+    <!-- Buy Command VII materia from Firmament Scrip Exchange -->
+    <BuyShopExchangeCurrency NpcId="1031680" ItemId="25195" Count="99" SelectString="2"/>
+
+	<!-- Craft Lv70 Gear -->
     <RunCode Name="SetLisbethJson" />
     <LogMessage Message="Crafted Lv70 Gear!"/>
     <AutoInventoryEquip/>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Profile>
+    <name>NQify</name>
+    <Order>
+        <RunCode Name="ReduceAndCombine"/>
+		<RunCode Name="NQify3Logger" />
+		<LLoadProfile Path="Lv67.xml"/>
+    </Order>
+    <CodeChunks>
+        <CodeChunk Name="ReduceAndCombine">
+            <![CDATA[
+				// Settings
+				const string ChunkName = "ItemQualityReducer";
+
+				// Logging setup
+				var log = new LlamaLibrary.Logging.LLogger(ChunkName, System.Windows.Media.Colors.Pink);
+
+				// List of item IDs to process
+				var itemIds = new System.Collections.Generic.List<int> { 5066, 12583, 12581, 12580, 1925, 5373, 5376, 5374, 5371, 12526, 12519, 5059, 5058, 12521, 12520, 12544, 12545, 12644, 12522, 5194, 5182, 5185, 5184, 5198, 5064, 5171, 5196, 12566, 12563, 5282, 12594, 5336, 12615, 5508, 12607 };
+
+				foreach (var itemId in itemIds) {
+					log.Information($"Processing item {itemId}");
+					await LlamaLibrary.Helpers.InventoryHelpers.LowerQualityAndCombine(itemId);
+				}
+
+				log.Information("Finished processing all items");
+            ]]>
+        </CodeChunk>
+		<CodeChunk Name="NQify3Logger">
+			<![CDATA[
+				try
+				{
+					string workingDirectory = Directory.GetCurrentDirectory();
+					string settingsPath = Path.Combine(workingDirectory, "Settings");
+					string logFilePath = Path.Combine(settingsPath, $"autocraft.txt");
+					
+					File.AppendAllText(logFilePath, "NQify3" + Environment.NewLine);
+				}
+				catch (Exception ex)
+				{
+				}
+			]]>
+		</CodeChunk>
+    </CodeChunks>
+</Profile>

@@ -1,0 +1,311 @@
+Item,iLevel,Yields,Needed,Purchase
+Fire Shard,1,1,272, gil
+Ice Shard,1,1,139, gil
+Wind Shard,1,1,359, gil
+Earth Shard,1,1,191, gil
+Lightning Shard,1,1,184, gil
+Water Shard,1,1,87, gil
+Fire Crystal,25,1,201, gil
+Ice Crystal,25,1,19, gil
+Wind Crystal,25,1,284, gil
+Earth Crystal,25,1,90, gil
+Lightning Crystal,25,1,86, gil
+Water Crystal,25,1,75, gil
+Fire Cluster,50,1,4,
+Ice Cluster,50,1,3,
+Wind Cluster,50,1,8,
+Earth Cluster,50,1,4, gil
+Lightning Cluster,50,1,4, gil
+Water Cluster,50,1,4, gil
+Adamantite Ore,148,1,50,
+Cotton Boll,12,1,22,10 gil
+Latex,5,1,3,7 gil
+Tin Ore,1,1,1,2 gil
+Rock Salt,1,1,18,3 gil
+Cloves,14,1,2,16 gil
+Copper Ore,1,1,4,2 gil
+Muddy Water,10,1,1,14 gil
+Darksteel Ore,55,1,10, gil
+Raw Zircon,40,1,1,
+Jade,40,1,1,
+Mythrite Ore,130,1,12, gil
+Raw Mormorion,133,1,3,
+Cedar Log,115,1,5,
+Cedar Branch,115,1,1,
+Coerthan Tea Leaves,125,1,3,1485 gil
+Mythrite Sand,115,1,24,
+Rainbow Cotton Boll,115,1,24,
+Rue,145,1,2,
+Mist Dill,125,1,2,
+Gil Bun,19,1,1,
+Silkworm Cocoon,55,1,2,
+Yew Branch,20,1,2,60 gil
+Rosewood Log,45,1,3,
+Rosewood Branch,45,1,2,
+Mandrake,31,1,1,
+Mahogany Log,39,1,6,
+Volcanic Rock Salt,70,1,10, gil
+Raw Malachite,13,1,2,68 gil
+Raw Amber,40,1,1,
+Alumen,17,1,18,
+Gold Ore,55,1,23, gil
+Ash Branch,13,1,2,33 gil
+Cobalt Ore,43,1,26, gil
+Basilisk Egg,40,1,7,
+Grenade Ash,40,1,17,216 gil
+Flax,32,1,20,
+Oak Log,32,1,36,
+Chocobo Feather,30,1,2,
+Silver Ore,23,1,20, gil
+Walnut Log,25,1,6,
+Effervescent Water,11,1,12,
+Matron's Mistletoe,24,1,1,
+Raw Spinel,40,1,1,
+Black Alumen,37,1,8,
+Mythril Ore,34,1,70,
+Bomb Ash,26,1,12,82 gil
+Hardsilver Sand,136,1,40,807 gil
+Cloud Mica,142,1,32,843 gil
+Dravanian Mistletoe,133,1,10,1893 gil
+Titanium Ore,136,1,80,
+Raw Star Ruby,136,1,9,
+Raw Star Sapphire,136,1,9,
+Stalk of Ramie,136,1,9,
+Dark Chestnut Log,136,1,26,
+Dark Chestnut Branch,136,1,1,
+Dravanian Spring Water,130,1,10,
+Hardsilver Ore,142,1,20, gil
+Raw Chrysolite,150,1,3,
+Furymint,145,1,2,
+Abalathian Rock Salt,139,1,1,1980 gil
+Aurum Regis Sand,148,1,89,879 gil
+Birch Log,148,1,10,
+Abalathian Spring Water,142,1,5,
+Abalathian Mistletoe,142,1,4,3370 gil
+Electrum Ore,42,1,64,
+Black Scorpion,42,1,1,
+Fire Rock,22,1,2,
+Sunrise Tellin,17,1,1,
+Iron Ore,13,1,59,18 gil
+Cinnabar,1,1,12,3 gil
+Aqueous Whetstone,70,1,1, gil
+Aldgoat Skin,17,1,4,
+Gigantoad Skin,26,1,4,
+Boar Hide,33,1,10,
+Peiste Skin,38,1,2,
+Raptor Skin,44,1,6,
+Beast Sinew,10,1,2,22 gil
+Diremite Sinew,25,1,1,
+Hippogryph Sinew,32,1,3,
+Raptor Sinew,40,1,2,
+Diremite Web,23,1,10,
+Fleece,38,1,40, gil
+Apkallu Down,42,1,1,
+Snurble Tufts,45,1,7,
+Aldgoat Horn,25,1,13,238 gil
+Bat Fang,10,1,1,25 gil
+Wolf Fang,25,1,2,
+Sandworm Fang,30,1,1,224 gil
+Biast Scales,136,1,4,
+Drake Scales,139,1,4,
+Blue Yarzon Leg,29,1,3,375 gil
+Green Megalocrab Shell,20,1,1,
+Red Coral,40,1,1,
+Blacklip Oyster,44,1,1,
+Spoken Blood,40,1,2,
+Blue Landtrap Leaf,30,1,1,128 gil
+Bat Wing,14,1,1,21 gil
+Ahriman Wing,43,1,4,
+Jellyfish Umbrella,15,1,1,24 gil
+Pudding Flesh,40,1,3, gil
+Fieldcraft Demimateria II,50,1,4,
+Wyvern Skin,130,1,9,
+Dhalmel Hide,136,1,15,
+Dragon Skin,142,1,3,
+Amphiptere Skin,148,1,15,
+Chimera Mane,148,1,20, gil
+Crawler Cocoon,145,1,3,
+Dragon Scale,145,1,6,
+Deepeye Tears,125,1,18, gil
+Dhalmel Saliva,139,1,2,
+Dragon Blood,145,1,4,
+Gelato Flesh,120,1,3,
+Wyvern Wing,130,1,5,
+Icetrap Leaf,120,1,9,
+Blue Cloud Coral,133,1,2,
+Mogpom,136,1,2,
+Duskborne Aethersand,139,1,1,
+Dawnborne Aethersand,150,1,4,
+Oak Lumber,33,1,12,470 gil
+Oak Composite Bow,40,1,1,7776 gil
+Walnut Lumber,25,1,2,219 gil
+Mahogany Lumber,39,1,2,
+Rosewood Lumber,45,1,1,
+Cedar Lumber,115,1,1,2448 gil
+Holy Water,130,3,15,2236 gil
+Holy Cedar Lumber,130,1,1,
+Dark Chestnut Lumber,136,1,3,2592 gil
+Hallowed Water,142,3,6,2408 gil
+Hallowed Chestnut Lumber,142,1,2,
+Birch Lumber,148,1,2,2784 gil
+Steel Ingot,26,1,12,258 gil
+Undyed Velveteen,24,1,3,169 gil
+Linseed Oil,30,1,1,
+Steel Crowsbeak Hammer,34,1,1,3869 gil
+Bronze Ingot,1,1,1,9 gil
+Iron Ingot,14,1,2,68 gil
+Cobalt Ingot,43,1,13,
+Cobalt Rivets,45,1,1,
+Mythrite Nugget,120,1,4,2376 gil
+Mythrite Ingot,130,1,3,
+Titanium Nugget,136,1,16,2692 gil
+Titanium Ingot,142,1,5,
+Titanium Rivets,139,1,2,
+Adamantite Nugget,148,1,10,2958 gil
+Adamantite Rivets,150,1,1,
+Mythril Plate,40,1,7,
+Mythril Ingot,34,1,22,514 gil
+Mythril Rivets,35,1,4,583 gil
+Boar Leather,33,1,10,
+Mythril Elmo,38,1,1,4679 gil
+Steel Plate,27,1,1,610 gil
+Steel Rings,28,1,3,389 gil
+Cobalt Rings,44,1,3,
+Mythril Rings,34,1,3,617 gil
+Silver Ingot,23,1,4,
+Electrum Ingot,40,1,16,
+Rose Gold Nugget,55,1,2,
+Malachite,15,1,2,
+Zircon,40,1,1,
+Amber,40,1,1,
+Spinel,40,1,1,
+Black Pearl,48,1,1,
+Jadeite,40,1,1,
+Eye of Fire,22,1,2,
+Hardsilver Nugget,136,1,8,2692 gil
+Hardsilver Ingot,142,1,5,
+Basilisk Whetstone,40,1,7,
+Star Ruby,139,1,3,
+Star Sapphire,136,1,3,
+Cloud Mica Whetstone,139,1,4,
+Chrysolite,150,1,1,
+Mormorion,133,1,1,
+Aurum Regis Nugget,148,1,17,2930 gil
+Aurum Regis Cylinder,148,1,2,
+Aldgoat Leather,18,1,4,
+Toad Leather,26,1,4,
+Peiste Leather,38,1,2,
+Raptor Leather,44,1,6,
+Wyvern Leather,130,1,3,3276 gil
+Dhalmel Leather,136,1,5,3402 gil
+Dragon Leather,142,1,1,3528 gil
+Amphiptere Leather,148,1,5,3654 gil
+Cotton Yarn,12,2,6,22 gil
+Undyed Cotton Cloth,13,1,1,52 gil
+Dew Thread,23,2,10,
+Linen Yarn,32,2,12,186 gil
+Undyed Linen,33,1,2,411 gil
+Woolen Yarn,39,2,22,
+Undyed Woolen Cloth,39,1,7,
+Natron,13,1,11,
+Undyed Felt,45,1,7,
+Rainbow Thread,120,2,16,
+Rainbow Cloth,120,1,6,3417 gil
+Holy Rainbow Cloth,130,1,6,
+Ramie Thread,136,2,6,
+Ramie Cloth,136,1,2,3618 gil
+Hallowed Ramie Cloth,142,1,1,
+Chimerical Felt,148,1,4,
+Crawler Silk,145,2,2,
+Mega-Potion of Mind,50,3,3,950 gil
+Clove Oil,10,3,3,7 gil
+Quicksilver,3,1,6,4 gil
+Growth Formula Beta,15,1,1,64 gil
+Growth Formula Gamma,30,1,1,
+Distilled Water,1,1,1,3 gil
+Horn Glue,30,1,3,
+Void Glue,120,1,1,
+Wing Glue,136,1,1,
+Scale Glue,148,1,2,
+Rubber,3,1,3,13 gil
+Enchanted Aurum Regis Ink,148,1,1,
+Growth Formula Epsilon,125,1,3,3213 gil
+Grade 1 Dexterity Dissolvent,133,3,3,
+Grade 1 Vitality Dissolvent,133,3,3,
+Grade 1 Intelligence Dissolvent,133,3,3,
+Grade 1 Mind Dissolvent,133,3,3,
+Walnut Cane,29,1,1,
+Oak Longbow,35,1,1,
+Oak Composite Bow,40,1,1,
+Cobalt Halberd,43,1,1,
+Jade Crook,45,1,1,
+Yew Longbow,46,1,1,
+Crab Bow,49,1,1,
+Holy Cedar Composite Bow,125,1,1,
+Dark Chestnut Rod,133,1,1,
+Adamantite Trident,150,1,1,
+Plumed Iron Hatchet,28,1,1,
+Steel Bhuj,34,1,1,
+Wrapped Crowsbeak Hammer,38,1,1,
+Cobalt Knuckles,43,1,1,
+Buccaneer's Bardiche,45,1,1,
+Cobalt Shamshir,46,1,1,
+Cobalt Winglet,49,1,1,
+Titanium Lump Hammer,120,1,1,
+Titanium Bastard Sword,133,1,1,
+Adamantite Winglet,150,1,1,
+Steel Chainmail,28,1,1,
+Steel Frypan,39,1,1,
+Mythril Cuirass,40,1,1,
+Mythril-plated Caligae,42,1,1,
+Mythril Sollerets,43,1,1,
+Reinforced Mythril Elmo,44,1,1,
+Cobalt Haubergeon,48,1,1,
+Titanium Mask of Striking,133,1,1,
+Titanium Cuirass of Maiming,133,1,1,
+Titanium Hoplon,139,1,1,
+Adamantite Lorica of Fending,150,1,1,
+Malachite Earrings,29,1,1,
+Fire Brand,36,1,1,
+Horn Staff,39,1,1,
+Electrum Circlet (Amber),48,1,1,
+Electrum Circlet (Spinel),48,1,1,
+Electrum Circlet (Zircon),48,1,1,
+Black Pearl Ring,49,1,1,
+Hardsilver Bangle of Casting,133,1,1,
+Aurum Regis Cylinder,148,1,1,
+Star Sapphire Music Box,150,1,1,
+Star Ruby Music Box,150,1,1,
+Toadskin Jacket,30,1,1,
+Boarskin Ringbands,36,1,1,
+Boarskin Smithy's Gloves,41,1,1,
+Raptorskin Targe,42,1,1,
+Raptorskin Choker,45,1,1,
+Fingerless Raptorskin Gloves,45,1,1,
+Raptorskin Jerkin,48,1,1,
+Wyvernskin Workboots,80,1,1,
+Dhalmelskin Leggings of Scouting,133,1,1,
+Dragonskin Choker,140,1,1,
+Chivalric Longcoat of Aiming,160,1,1,
+Velveteen Gaiters,28,1,1,
+Linen Shirt,35,1,1,
+Woolen Tights,41,1,1,
+Woolen Beret,43,1,1,
+Woolen Gown,43,1,1,
+Woolen Gaskins,44,1,1,
+Patrician's Coatee,50,1,1,
+Patrician's Bottoms,50,1,1,
+Patrician's Wedge Cap,50,1,1,
+Holy Rainbow Gloves,80,1,1,
+Holy Rainbow Hat of Healing,125,1,1,
+Chivalric Doublet of Healing,160,1,1,
+Weak Blinding Potion,20,3,3,
+Hi-Potion of Strength,35,3,3,
+Hi-Ether,35,3,3,
+Budding Rosewood Wand,49,1,1,
+Mega-Potion of Mind,50,3,3,
+Mega-Potion of Intelligence,50,3,3,
+Mega-Potion of Vitality,50,3,3,
+Enchanted Mythrite Ink,120,1,1,
+Draconian Potion of Strength,145,3,3,
+Noble Gold,150,1,1,

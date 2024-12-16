@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Profile>
+<Name>Crafting Lv80 Gear</Name>
+<Order>
+
+	<GetTo ZoneId="886" XYZ="-7.472548, -16, 162.5581"/>
+    <!-- Buy Command VII materia from Firmament Scrip Exchange -->
+    <BuyShopExchangeCurrency NpcId="1031680" ItemId="25195" Count="99" SelectString="2"/>
+
+	<!-- Craft Lv70 Gear -->
+    <RunCode Name="SetLisbethJson" />
+    <LogMessage Message="Crafted Lv80 Gear!"/>
+    <AutoInventoryEquip/>
+    <WaitTimer WaitTime="5"/>
+	<RunCode Name="Logger" />
+	<WaitTimer WaitTime="5"/>
+    <LLoadProfile Path="../Start.xml"/>
+</Order>
+<CodeChunks>
+<CodeChunk Name="SetLisbethJson">
+<![CDATA[
+    // Try to get profile path and construct relative path from there
+    var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+    var profileDir = System.IO.Path.GetDirectoryName(profilePath);
+    var jsonPath = System.IO.Path.Combine(profileDir, "../Lisbeth/GearSets/GEAR80.json");
+    
+    var json = System.IO.File.ReadAllText(jsonPath);
+    var lisbeth = BotManager.Bots.FirstOrDefault(c => c.Name == "Lisbeth");
+    if (lisbeth != null)
+    {
+        var lisbethObject = lisbeth.GetType().GetProperty("Lisbeth").GetValue(lisbeth);
+        if (lisbethObject != null)
+        {
+            var orderMethod = lisbethObject.GetType().GetMethod("ExecuteOrders");
+            await (Task<bool>)orderMethod.Invoke(lisbethObject, new object[] { json, false });
+        }
+    }
+]]>
+</CodeChunk>
+<CodeChunk Name="Logger">
+    <![CDATA[
+        try
+        {
+            string workingDirectory = Directory.GetCurrentDirectory();
+            string settingsPath = Path.Combine(workingDirectory, "Settings");
+            string logFilePath = Path.Combine(settingsPath, $"autocraft.txt");
+            
+            File.AppendAllText(logFilePath, "craft80" + Environment.NewLine);
+        }
+        catch (Exception ex)
+        {
+        }
+    ]]>
+</CodeChunk>
+</CodeChunks>
+</Profile>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Profile>
+    <Name>Purchase Command VII Materia with Skybuilders' Scrips</Name>
+    <Order>
+		<GetTo ZoneId="886" XYZ="-7.472548, -16, 162.5581"/>
+        <!-- Buy Command VII materia from Firmament Scrip Exchange -->
+        <BuyShopExchangeCurrency NpcId="1031680" ItemId="25195" Count="99" SelectString="2"/>
+    </Order>
+</Profile>
