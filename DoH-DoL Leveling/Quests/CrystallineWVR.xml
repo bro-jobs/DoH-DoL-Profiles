@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Profile: Crystalline Mean Quests
+  Authors: DomesticWarlord86
+-->
+
+<!DOCTYPE Profile [
+<!-- Which delivery quests to do? -->
+<!ENTITY CRP_LTW_WVR "1">
+<!ENTITY BSM_ARM_GSM "1">
+<!ENTITY ALC_CUL "1">
+<!ENTITY MIN_BTN "1">
+<!ENTITY FSH "0">
+
+<!-- Which class should I do the quest on? -->
+	<!-- Choose 1 of these three -->
+		<!ENTITY CRP "0">
+		<!ENTITY LTW "0">
+		<!ENTITY WVR "1">
+	<!-- Choose 1 of these three -->
+		<!ENTITY BSM "0">
+		<!ENTITY ARM "1">
+		<!ENTITY GSM "0">
+	<!-- Choose 1 of these two -->	
+		<!ENTITY ALC "1">
+		<!ENTITY CUL "0">	
+	<!-- Choose 1 of these two -->	
+		<!ENTITY MIN "1">
+		<!ENTITY BTN "0">
+
+<!-- Set this to what item you'd like to buy when you're near capped on Crafter White Scrips -->
+	<!-- For reference, here's the top three items with Crafter's Scrips -->
+	<!-- Craftsman's Competence Materia IX 		33925 -->
+	<!-- Craftsman's Cunning Materia IX 		33926 -->
+	<!-- Craftsman's Command Materia IX		33927 -->
+
+<!ENTITY BuyCraftItem "33926">	
+
+
+
+<!-- Set this to what item you'd like to buy when you're near capped on Gatherer White Scrips -->
+	<!-- For reference, here's the top three items with Gatherer's Scrips -->
+	<!-- Gatherer's Guerdon Materia IX 		33922 -->
+	<!-- Gatherer's Guile Materia IX 		33923 -->
+	<!-- Gatherer's Grasp Materia IX 		33924 -->
+
+<!ENTITY BuyGatherItem "12669">	   
+
+
+]>
+
+<Profile>
+  <Name>Crystalline Mean Quests</Name>
+  <BehaviorDirectory></BehaviorDirectory>
+  <Order>
+  
+    <!-- Lisbeth check -->
+		<LisbethCheck/>
+	  
+	<If condition="&CRP_LTW_WVR; == 0 and &BSM_ARM_GSM; == 0 and &ALC_CUL; == 0 and &MIN_BTN; == 0 and &FSH; == 0">
+	  <UserDialog DialogText="You do not have any Crystalline Mean quests set to 1.\nPlease open the profile and change at least one of the five to 1."/>	
+	</If>
+	
+	<If condition="&CRP_LTW_WVR; == 1 and &CRP; == 0 and &LTW; == 0 and &WVR; == 0">
+	  <UserDialog DialogText="You have Carpenter/Leatherworker/Weaver quest selected, but no class selected to do them on.\nPlease open the profile and change one of the three to 1."/>	
+	</If>		
+
+	<If condition="&BSM_ARM_GSM; == 1 and &BSM; == 0 and &ARM; == 0 and &GSM; == 0">
+	  <UserDialog DialogText="You have Blacksmith/Armorer/Goldsmith quest selected, but no class selected to do them on.\nPlease open the profile and change one of the three to 1."/>	
+	</If>
+
+	<If condition="&ALC_CUL; == 1 and &ALC; == 0 and &CUL; == 0">
+	  <UserDialog DialogText="You have Alchemist/Culinarian quest selected, but no class selected to do them on.\nPlease open the profile and change one of the two to 1."/>	
+	</If>	
+
+	<If condition="&MIN_BTN; == 1 and &MIN; == 0 and &BTN; == 0">
+	  <UserDialog DialogText="You have Alchemist/Culinarian quest selected, but no class selected to do them on.\nPlease open the profile and change one of the two to 1."/>	
+	</If>		
+
+
+	<!-- Profile start here -->	
+	
+	<If Condition="not IsQuestCompleted(68839)">
+		<LLToast message="Please complete MSQ 'The Crystarium's Resolve' to continue this profile."/>
+	</If>
+
+    <!-- The Crystalline Mean -->
+    <If Condition="not IsQuestCompleted(69191)">
+      <If Condition="not HasQuest(69191)">
+        <GetTo ZoneId="819" XYZ="-11.23132, 20.1973, -137.4246"/>  
+        <If Condition="IsQuestAcceptQualified(69191)">
+          <PickupQuest QuestId="69191" NpcId="1027232"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(69191) == 255">
+        <GetTo ZoneId="819" XYZ="-11.23132, 20.1973, -137.4246"/>  
+        <TurnIn QuestId="69191" NpcId="1027232" XYZ="-9.323303, 20.1973, -136.5225"/>
+      </If>			
+    </If>
+
+	<!-- Carpenter/Leatherworker/Weaver -->	
+	<If Condition="&CRP_LTW_WVR; == 1 and not IsQuestCompleted(68768)">
+		<While Condition="&WVR; == 1 and not ClassName == ClassJobType.Weaver">
+			<ChangeClass Job="Weaver" Force="True"/>
+			<WaitTimer WaitTime="3" />		
+		</While>
+		
+    <!-- Cherished Memories -->
+    <If Condition="IsQuestCompleted(69191) and not IsQuestCompleted(68766)">
+      <If Condition="not HasQuest(68766)">
+        <GetTo ZoneId="819" XYZ="7.952965, 20.186, -140.7126"/>  
+        <If Condition="IsQuestAcceptQualified(68766)">
+          <PickupQuest QuestId="68766" NpcId="1028326"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(68766) == 1">
+        <GetTo ZoneId="819" XYZ="-20.56396, 19.99979, -26.59221"/>  
+        <TalkTo NpcId="1028436" XYZ="-19.39423, 19.99979, -29.58728" QuestId="68766" StepId="1"/>
+      </If>	
+      <If Condition="GetQuestStep(68766) == 255">
+        <GetTo ZoneId="819" XYZ="8.348674, 20.186, -137.3086"/>  
+        <TurnIn QuestId="68766" NpcId="1027234" XYZ="10.23871, 20.186, -138.2315"/>
+      </If>			
+    </If>
+
+		<While Condition="&CRP; == 1 and not ClassName == ClassJobType.Carpenter">
+			<ChangeClass Job="Carpenter" Force="True"/>
+			<WaitTimer WaitTime="3" />		
+		</While>
+		<While Condition="&LTW; == 1 and not ClassName == ClassJobType.Leatherworker">
+			<ChangeClass Job="Leatherworker" Force="True"/>
+			<WaitTimer WaitTime="3" />		
+		</While>	
+		<While Condition="&WVR; == 1 and not ClassName == ClassJobType.Weaver">
+			<ChangeClass Job="Weaver" Force="True"/>
+			<WaitTimer WaitTime="3" />		
+		</While>
+
+    <While Condition="IsQuestCompleted(68766) and not IsQuestCompleted(68767) and (not HasQuest(68767) and not IsQuestAcceptQualified(68767))">
+			<GetTo ZoneId="819" XYZ="8.278764, 20.186, -137.385"/>  
+			<RunCode name="CraftItem"/>			
+		</While>
+		
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10" >
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- Check if we can buy Lv80 gear. -->
+			<If Condition="ItemCount(31772) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31772" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31773) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31773" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31774) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31774" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31775) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31775" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31776) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31776" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31777) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31777" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31778) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31778" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31779) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31779" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31784) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31784" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31785) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31785" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31786) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31786" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31783) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31783" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31787) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31787" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31788) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31788" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31789) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31789" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31790) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31790" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31793) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31793" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31794) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31794" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31795) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31795" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31796) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31796" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31797) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31797" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31804) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31804" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31805) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31805" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31806) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31806" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31807) &lt; 2" >
+				<BuyInclusionShopItem ItemId="31807" Count="1"/>
+				<BuyInclusionShopItem ItemId="31807" Count="1"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="33926" Count="0"/>
+		</While>	
+
+		
+    <!-- For Sentimental Reasons -->
+    <If Condition="not IsQuestCompleted(68767)">
+      <If Condition="not HasQuest(68767)">
+        <GetTo ZoneId="819" XYZ="8.278764, 20.186, -137.385"/>  
+        <If Condition="IsQuestAcceptQualified(68767)">
+          <PickupQuest QuestId="68767" NpcId="1027234"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(68767) == 1">
+        <GetTo ZoneId="819" XYZ="-53.49211, 3.999817, 199.8334"/>  
+        <TalkTo NpcId="1028438" XYZ="-55.83282, 3.999817, 198.6571" QuestId="68767" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(68767) == 2">
+        <GetTo ZoneId="819" XYZ="8.360099, 20.186, -137.2534"/>  
+        <LLTalkTo NpcId="1027234" DialogOption="1" XYZ="10.23871, 20.186, -138.2315" QuestId="68767" StepId="2"/>
+      </If>		
+			<If Condition="GetQuestStep(68767) == 255">
+				<If condition="not HasHqItem(27245)">
+					<If Condition="ClassName == ClassJobType.Carpenter">
+						<Lisbeth IgnoreHome="True" Json="[{'Group':1,'Item':27245,'Amount':1,'Enabled':true,'Type':'Carpenter','AmountMode':'Restock'}]"/>
+					</If>
+					<If Condition="ClassName == ClassJobType.Leatherworker">
+						<Lisbeth IgnoreHome="True" Json="[{'Group':1,'Item':27245,'Amount':1,'Enabled':true,'Type':'Leatherworker','AmountMode':'Restock'}]"/>
+					</If>
+					<If Condition="ClassName == ClassJobType.Weaver">
+						<Lisbeth IgnoreHome="True" Json="[{'Group':1,'Item':27245,'Amount':1,'Enabled':true,'Type':'Weaver','AmountMode':'Restock'}]"/>
+					</If>
+				</If>								
+				<If condition="HasHqItem(27245)">				
+					<GetTo ZoneId="819" XYZ="8.360099, 20.186, -137.2534"/>  
+					<TurnIn ItemId="27245" QuestId="68767" NpcId="1027234" XYZ="10.23871, 20.186, -138.2315"/>			
+				</If>
+			</If>			
+    </If>
+		
+		<While Condition="&CRP; == 1 and not ClassName == ClassJobType.Carpenter">
+			<ChangeClass Job="Carpenter" Force="True"/>
+			<WaitTimer WaitTime="3" />		
+		</While>
+		<While Condition="&LTW; == 1 and not ClassName == ClassJobType.Leatherworker">
+			<ChangeClass Job="Leatherworker" Force="True"/>
+			<WaitTimer WaitTime="3" />		
+		</While>	
+		<While Condition="&WVR; == 1 and not ClassName == ClassJobType.Weaver">
+			<ChangeClass Job="Weaver" Force="True"/>
+			<WaitTimer WaitTime="3" />		
+		</While>		
+		
+    <While Condition="IsQuestCompleted(68767) and (not HasQuest(68768) and not IsQuestAcceptQualified(68768))">
+			<GetTo ZoneId="819" XYZ="8.278764, 20.186, -137.385"/>  
+			<RunCode name="CraftItem"/>			
+		</While>
+
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10" >
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- Check if we can buy Lv80 gear. -->
+			<If Condition="ItemCount(31772) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31772" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31773) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31773" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31774) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31774" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31775) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31775" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31776) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31776" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31777) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31777" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31778) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31778" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31779) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31779" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31784) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31784" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31785) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31785" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31786) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31786" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31783) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31783" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31787) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31787" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31788) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31788" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31789) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31789" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31790) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31790" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31793) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31793" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31794) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31794" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31795) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31795" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31796) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31796" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31797) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31797" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31804) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31804" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31805) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31805" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31806) &lt; 1" >
+				<BuyInclusionShopItem ItemId="31806" Count="1"/>
+			</If>
+			<If Condition="ItemCount(31807) &lt; 2" >
+				<BuyInclusionShopItem ItemId="31807" Count="1"/>
+				<BuyInclusionShopItem ItemId="31807" Count="1"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="33926" Count="0"/>
+		</While>	
+
+		
+    <!-- The Notes of Bond Restoring -->
+    <!-- (doesn't give any EXP and gives outdated materia) -->	
+		
+	</If>	
+		
+	
+	<LLoadProfile Path="../Start.xml"/>
+	
+  </Order>
+  <GrindAreas>
+  </GrindAreas>
+  <CodeChunks>
+		<CodeChunk Name="CraftItem">
+			<![CDATA[	
+					await LlamaLibrary.Helpers.CrystallineMeanHelper.CraftItems();
+			]]> 
+		</CodeChunk>		
+  </CodeChunks>
+</Profile>  

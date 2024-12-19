@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Profile>
+<name>test2</name>
+<Order>
+	<BuyInclusionShopItem ItemId="31812" Count="2"/>
+</Order>
+<CodeChunks>
+</CodeChunks>
+</Profile>

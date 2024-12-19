@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Profile>
+<name>Test</name>
+<Order>
+    <!-- Unlocking Sharlayan Leves -->
+		<If Condition="ItemCount(42601) &lt; 1" >
+		<LLToast message="agoge horns not found when worn."/>
+		</If>
+</Order>
+<CodeChunks>
+<CodeChunk Name="SwitchDoHJob2">
+			<![CDATA[ 
+				var DoH = Enumerable.Range(8, 7);
+				var gearSets = GearsetManager.GearSets.Where(i => i.InUse && DoH.Contains((int)i.Class) && Core.Player.Levels[i.Class] > 79);
+
+				if (gearSets.Any())
+				{
+					gearSets.First().Activate();
+					await Coroutine.Sleep(2000);
+				}
+			]]>
+		</CodeChunk>
+</CodeChunks>
+</Profile>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Profile>
+<name>Test</name>
+<Order>
+    <!-- Unlocking Sharlayan Leves -->
+		<If Condition="not IsQuestCompleted(69706)">
+			<If Condition="not HasQuest(69706)">	
+				<WaitTimer WaitTime="2"/>
+				<RunCode Name="SwitchDoHJob2"/>
+				<WaitTimer WaitTime="2"/>
+				<GetTo ZoneID="962" XYZ="44.38018, -15.6469, 109.5599"/>
+				<If Condition="IsQuestAcceptQualified(69706)">
+					<LLTalkTo NpcId="1037263"/>
+					<LLSmallTalk/>
+				</If>
+			</If>
+			
+		</If>
+	<!-- Aztec region -->
+		<If Condition="not IsQuestCompleted(70539)">
+			<If Condition="not HasQuest(70539)">	
+				<WaitTimer WaitTime="2"/>
+				<RunCode Name="SwitchDoHJob2"/>
+				<WaitTimer WaitTime="2"/>
+				<TeleportTo Name="Tuliyollal" AetheryteId="216"/>
+				<If Condition="IsQuestAcceptQualified(70539)">
+					<LLTalkTo NpcId="1048390"/>
+					<LLSmallTalk/>
+				</If>
+			</If>
+		</If>
+</Order>
+<CodeChunks>
+<CodeChunk Name="SwitchDoHJob2">
+			<![CDATA[ 
+				var DoH = Enumerable.Range(8, 7);
+				var gearSets = GearsetManager.GearSets.Where(i => i.InUse && DoH.Contains((int)i.Class) && Core.Player.Levels[i.Class] > 79);
+
+				if (gearSets.Any())
+				{
+					gearSets.First().Activate();
+					await Coroutine.Sleep(2000);
+				}
+			]]>
+		</CodeChunk>
+</CodeChunks>
+</Profile>

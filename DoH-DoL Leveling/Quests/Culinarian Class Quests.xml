@@ -25,11 +25,6 @@ Angles24
 	<Name>Culinarian Class Quests</Name>
 	<Order>
 	
-	<If Condition="FreeItemSlots() &lt; 16">
-		<LogMessage Message="Make Sure there is at least 40 or more free slots in your inventory then hit start on the bot."/>
-		<LLStopBot/>
-	</If>
-	
 	<WaitTimer WaitTime="2"/>
 	<RunCode Name="Disable_Flight"/>
 	<WaitTimer WaitTime="2"/>

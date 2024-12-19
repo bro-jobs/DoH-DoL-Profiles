@@ -21,14 +21,53 @@
     var json = System.IO.File.ReadAllText(jsonPath);
     var lisbeth = BotManager.Bots.FirstOrDefault(c => c.Name == "Lisbeth");
     if (lisbeth != null)
-    {
-        var lisbethObject = lisbeth.GetType().GetProperty("Lisbeth").GetValue(lisbeth);
-        if (lisbethObject != null)
-        {
-            var orderMethod = lisbethObject.GetType().GetMethod("ExecuteOrders");
-            await (Task<bool>)orderMethod.Invoke(lisbethObject, new object[] { json, false });
-        }
-    }
+   {
+       var lisbethObject = lisbeth.GetType().GetProperty("Lisbeth").GetValue(lisbeth);
+       if (lisbethObject != null)
+       {
+           Func<Task> executeWithRetry = null;
+           executeWithRetry = async () => {
+               try 
+               {
+                   var orderMethod = lisbethObject.GetType().GetMethod("ExecuteOrders");
+                   await (Task<bool>)orderMethod.Invoke(lisbethObject, new object[] { json, false });
+               }
+               catch (Exception ex) when (
+                   ex.ToString().Contains("HttpRequestException") || 
+                   ex.ToString().Contains("No response from the server") ||
+                   ex.ToString().Contains("Max sessions reached")
+               )
+               {
+                   // Log and stop gently
+                   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Attempting to stop Lisbeth gently...");
+                   var stopGentlyMethod = lisbethObject.GetType().GetMethod("StopGently");
+                   await (Task)stopGentlyMethod.Invoke(lisbethObject, null);
+                   
+                   // Log and try to exit crafting
+                   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Attempting to exit crafting state...");
+                   try 
+                   {
+                       var exitCraftingMethod = lisbethObject.GetType().GetMethod("ExitCrafting");
+                       await (Task<bool>)exitCraftingMethod.Invoke(lisbethObject, null);
+                   }
+                   catch {}
+                   
+                   // Log waiting period
+                   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Waiting 5 minutes before attempting restart...");
+                   await Task.Delay(TimeSpan.FromMinutes(5));
+                   
+                   // Log and request restart
+                   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Requesting Lisbeth to restart orders...");
+                   var restartMethod = lisbethObject.GetType().GetMethod("RequestRestart");
+                   restartMethod.Invoke(lisbethObject, new object[] { json });
+                   
+                   await executeWithRetry();
+               }
+           };
+
+           await executeWithRetry();
+       }
+   }
 ]]>
 </CodeChunk>
 <CodeChunk Name="Logger">

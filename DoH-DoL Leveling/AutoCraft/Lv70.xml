@@ -8,7 +8,72 @@
     <BuyShopExchangeCurrency NpcId="1031680" ItemId="25195" Count="99" SelectString="2"/>
 
 	<!-- Craft Lv70 Gear -->
-    <RunCode Name="SetLisbethJson" />
+	
+		<Lisbeth Json="[{'Id':1,'Group':1,'Item':33914,'Amount':2000,'Enabled':true,'Type':'GatherMasterpiece','AmountMode':'Restock'},{'Id':2,'Group':1,'Item':31080,'Amount':84,'Enabled':true,'Type':'Culinarian','AmountMode':'Restock'}]"/>
+
+		<!-- Expanding House of Splendors -->
+		<If Condition="not IsQuestCompleted(69711)">
+			<If Condition="not HasQuest(69711)">	
+				<WaitTimer WaitTime="2"/>
+				<RunCode Name="SwitchDoHJob2"/>
+				<WaitTimer WaitTime="2"/>
+				<GetTo ZoneID="963" XYZ="25.21487, 0.5999998, -83.04614"/>
+				<If Condition="IsQuestAcceptQualified(69711)">
+					<LLTalkTo NpcId="1037323"/>
+					<LLSmallTalk/>
+				</If>
+			</If>
+		</If>
+		
+        <!-- Round 1 -->
+        <!-- Buy what we can with first batch -->
+		<BuyInclusionShopItem ItemId="23189" Count="1"/>
+		<BuyInclusionShopItem ItemId="23190" Count="1"/>
+		<BuyInclusionShopItem ItemId="23191" Count="1"/>
+		<BuyInclusionShopItem ItemId="23192" Count="1"/>
+		<BuyInclusionShopItem ItemId="23193" Count="1"/>
+		<BuyInclusionShopItem ItemId="23194" Count="1"/>
+		<BuyInclusionShopItem ItemId="23195" Count="1"/>
+		<BuyInclusionShopItem ItemId="23196" Count="1"/>
+
+        <!-- Round 2 -->
+        <Lisbeth Json="[{}]"/>
+
+        <!-- Buy what we can with second batch -->
+		<BuyInclusionShopItem ItemId="23076" Count="1"/>
+		<BuyInclusionShopItem ItemId="23077" Count="1"/>
+		<BuyInclusionShopItem ItemId="23078" Count="1"/>
+		<BuyInclusionShopItem ItemId="23079" Count="1"/>
+		<BuyInclusionShopItem ItemId="23080" Count="1"/>
+		<BuyInclusionShopItem ItemId="23081" Count="1"/>
+		<BuyInclusionShopItem ItemId="23082" Count="1"/>
+		<BuyInclusionShopItem ItemId="23083" Count="1"/>
+		<BuyInclusionShopItem ItemId="23087" Count="1"/>
+		<BuyInclusionShopItem ItemId="23088" Count="1"/>
+		<BuyInclusionShopItem ItemId="23089" Count="1"/>
+		<BuyInclusionShopItem ItemId="23090" Count="1"/>
+		<BuyInclusionShopItem ItemId="23091" Count="1"/>
+		<BuyInclusionShopItem ItemId="23200" Count="1"/>
+		<BuyInclusionShopItem ItemId="23201" Count="1"/>
+		<BuyInclusionShopItem ItemId="23202" Count="1"/>
+		<BuyInclusionShopItem ItemId="23203" Count="2"/>
+		
+		<!-- Gatherer gear -->
+		
+        <BuyInclusionShopItem ItemId="23084" Count="1"/>
+        <BuyInclusionShopItem ItemId="23085" Count="1"/>
+        <BuyInclusionShopItem ItemId="23197" Count="1"/>
+        <BuyInclusionShopItem ItemId="23198" Count="1"/>
+        <BuyInclusionShopItem ItemId="23092" Count="1"/>
+        <BuyInclusionShopItem ItemId="23093" Count="1"/>
+        <BuyInclusionShopItem ItemId="23094" Count="1"/>
+        <BuyInclusionShopItem ItemId="23095" Count="1"/>
+        <BuyInclusionShopItem ItemId="23096" Count="1"/>
+        <BuyInclusionShopItem ItemId="23205" Count="1"/>
+        <BuyInclusionShopItem ItemId="23206" Count="1"/>
+        <BuyInclusionShopItem ItemId="23207" Count="1"/>
+        <BuyInclusionShopItem ItemId="23208" Count="2"/>
+
     <LogMessage Message="Crafted Lv70 Gear!"/>
     <AutoInventoryEquip/>
     <WaitTimer WaitTime="5"/>
@@ -30,10 +95,49 @@
     {
         var lisbethObject = lisbeth.GetType().GetProperty("Lisbeth").GetValue(lisbeth);
         if (lisbethObject != null)
-        {
-            var orderMethod = lisbethObject.GetType().GetMethod("ExecuteOrders");
-            await (Task<bool>)orderMethod.Invoke(lisbethObject, new object[] { json, false });
-        }
+				   {
+					   Func<Task> executeWithRetry = null;
+					   executeWithRetry = async () => {
+						   try 
+						   {
+							   var orderMethod = lisbethObject.GetType().GetMethod("ExecuteOrders");
+							   await (Task<bool>)orderMethod.Invoke(lisbethObject, new object[] { json, false });
+						   }
+						   catch (Exception ex) when (
+							   ex.ToString().Contains("HttpRequestException") || 
+							   ex.ToString().Contains("No response from the server") ||
+							   ex.ToString().Contains("Max sessions reached")
+						   )
+						   {
+							   // Log and stop gently
+							   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Attempting to stop Lisbeth gently...");
+							   var stopGentlyMethod = lisbethObject.GetType().GetMethod("StopGently");
+							   await (Task)stopGentlyMethod.Invoke(lisbethObject, null);
+							   
+							   // Log and try to exit crafting
+							   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Attempting to exit crafting state...");
+							   try 
+							   {
+								   var exitCraftingMethod = lisbethObject.GetType().GetMethod("ExitCrafting");
+								   await (Task<bool>)exitCraftingMethod.Invoke(lisbethObject, null);
+							   }
+							   catch {}
+							   
+							   // Log waiting period
+							   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Waiting 5 minutes before attempting restart...");
+							   await Task.Delay(TimeSpan.FromMinutes(5));
+							   
+							   // Log and request restart
+							   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Requesting Lisbeth to restart orders...");
+							   var restartMethod = lisbethObject.GetType().GetMethod("RequestRestart");
+							   restartMethod.Invoke(lisbethObject, new object[] { json });
+							   
+							   await executeWithRetry();
+						   }
+					   };
+
+					   await executeWithRetry();
+				   }
     }
 ]]>
 </CodeChunk>
@@ -52,5 +156,17 @@
         }
     ]]>
 </CodeChunk>
+<CodeChunk Name="SwitchDoHJob2">
+			<![CDATA[ 
+				var DoH = Enumerable.Range(8, 7);
+				var gearSets = GearsetManager.GearSets.Where(i => i.InUse && DoH.Contains((int)i.Class) && Core.Player.Levels[i.Class] > 79);
+
+				if (gearSets.Any())
+				{
+					gearSets.First().Activate();
+					await Coroutine.Sleep(2000);
+				}
+			]]>
+		</CodeChunk>
 </CodeChunks>
 </Profile>

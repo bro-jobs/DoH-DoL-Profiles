@@ -581,6 +581,13 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 			<RunCode Name="autocraftcheck70" />
 		</If>
 		
+		
+		<!-- Endwalker MSQ Check (required for thavnair)  -->
+		<If Condition="not IsQuestCompleted(69999)">
+			<LogMessage Message="Please finish the MSQ quest 'You're Not Alone' before continuing."/>
+			<UserDialog DialogText="Please finish the Endwalker MSQ quest 'You're Not Alone' before continuing."/>	
+		</If>
+		
 		<!-- Sell More Lv70 Junk -->
 		
 		<If Condition="&craft70; == 1 and &autosell; == 1">
@@ -598,8 +605,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 			<If Condition="not IsQuestCompleted(68160) or Core.Me.Levels[ClassJobType.Botanist] &lt; 70">
 				<LLoadProfile Path="Gathering/63-70 Botanist.xml"/>
 			</If>
-		</If>		
-		
+		</If>
 		
 		<!-- 70-80 Ishgard Crafting -->
 		<If Condition="&crp; == 1">
@@ -613,7 +619,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 			</If>
 		</If>
 		<If Condition="&arm; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 80">
+			<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 77">
 				<LLoadProfile Path="Diadem/70-80 ArmorerD.xml"/>
 			</If>
 		</If>
@@ -628,12 +634,12 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 			</If>
 		</If>
 		<If Condition="&wvr; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 80">
+			<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 77">
 				<LLoadProfile Path="Diadem/70-80 WeaverD.xml"/>
 			</If>
 		</If>
 		<If Condition="&alc; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 80">
+			<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 77">
 		<LLoadProfile Path="Diadem/70-80 AlchemistD.xml"/>
 			</If>
 		</If>
@@ -641,8 +647,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 			<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 80">
 				<LLoadProfile Path="Diadem/70-80 CulinarianD.xml"/>
 			</If>
-		</If>	
-		
+		</If>
 		
 		<!-- Shadowbringer's Aether Currents -->
 		<If Condition="not (IsAetherCurrentCompleted(813,0) and IsAetherCurrentCompleted(813,1) and IsAetherCurrentCompleted(813,2)
@@ -664,19 +669,46 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 				and IsAetherCurrentCompleted(818,3) and IsAetherCurrentCompleted(818,4) and IsAetherCurrentCompleted(818,5)
 				and IsAetherCurrentCompleted(818,6)	and IsAetherCurrentCompleted(818,7) and IsAetherCurrentCompleted(818,8))">
 			<LLoadProfile Path="Aether Currents/Shadowbringers Aether Currents All.xml"/>
-		</If>	
+		</If>
 		
-			
-		<!-- Gatherer's to 80 -->
-		<If Condition="&min; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Miner] &lt; 80">
-				<LLoadProfile Path="Gathering/70-80 Miner.xml"/>
+		<!-- Facet Lv77-80 -->
+		
+		<If Condition="&arm; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 80">
+				<LLoadProfile Path="Quests/CrystallineARM.xml"/>
 			</If>
 		</If>
-		<If Condition="&btn; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Botanist] &lt; 80">
-				<LLoadProfile Path="Gathering/70-80 Botanist.xml"/>
+		
+		<If Condition="&wvr; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 80">
+				<LLoadProfile Path="Quests/CrystallineWVR.xml"/>
 			</If>
+		</If>
+		
+		<If Condition="&alc; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 80">
+				<LLoadProfile Path="Quests/CrystallineALC.xml"/>
+			</If>
+		</If>
+		
+		<!-- Gatherer's to 80, use Facet if possible -->
+		
+		<If Condition="&min; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Miner] &lt; 85">
+				<LLoadProfile Path="Quests/CrystallineMIN.xml"/>
+			</If>
+		</If>
+		
+		<If Condition="&btn; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Botanist] &lt; 85">
+				<LLoadProfile Path="Quests/CrystallineBTN.xml"/>
+			</If>
+		</If>
+		
+		<!-- Sell More Lv70 Junk -->
+		
+		<If Condition="&craft80; == 1 and &autosell; == 1">
+			<RunCode Name="autosellcheck80" />
 		</If>
 		
 		<!-- Craft Gathering and Crafting Gear 80 -->
@@ -685,20 +717,37 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 			<UserDialog DialogText="Craft level 80 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and make sure your gearsets are updated with the new gear.\n\nIf you keep seeing this popup even though you have upgraded your gear edit the Start.xml profile and change 'craft80 1' to 'craft80 0', save and start thebot again."/>	
 		</If>
 		
-		<If Condition="&craft80; == 1 and &autocraft; == 1">
-			<RunCode Name="autocraftcheck80" />
+		<!-- Expanding House of Splendors -->
+		<If Condition="not IsQuestCompleted(69711)">
+			<If Condition="not HasQuest(69711)">	
+				<WaitTimer WaitTime="2"/>
+				<RunCode Name="SwitchDoHJob2"/>
+				<WaitTimer WaitTime="2"/>
+				<GetTo ZoneID="963" XYZ="25.21487, 0.5999998, -83.04614"/>
+				<If Condition="IsQuestAcceptQualified(69711)">
+					<LLTalkTo NpcId="1037323"/>
+					<LLSmallTalk/>
+				</If>
+			</If>
 		</If>
 		
-		<!-- Sell More Lv70 Junk -->
+		<!-- Unlocking Sharlayan Leves -->
+		<If Condition="not IsQuestCompleted(69706)">
+			<If Condition="not HasQuest(69706)">	
+				<WaitTimer WaitTime="2"/>
+				<RunCode Name="SwitchDoHJob2"/>
+				<WaitTimer WaitTime="2"/>
+				<GetTo ZoneID="962" XYZ="44.38018, -15.6469, 109.5599"/>
+				<If Condition="IsQuestAcceptQualified(69706)">
+					<LLTalkTo NpcId="1037263"/>
+					<LLSmallTalk/>
+				</If>
+			</If>
+			
+		</If>
 		
-		<If Condition="&craft80; == 1 and &autosell; == 1">
-			<RunCode Name="autosellcheck80" />
-		</If>	
-		
-		<!-- Endwalker MSQ Check -->
-		<If Condition="not IsQuestCompleted(69999)">
-			<LogMessage Message="Please finish the MSQ quest 'You're Not Alone' before continuing."/>
-			<UserDialog DialogText="Please finish the Endwalker MSQ quest 'You're Not Alone' before continuing."/>	
+		<If Condition="&craft80; == 1 and &autocraft; == 1">
+			<RunCode Name="autocraftcheck80" />
 		</If>
 		
 		<!-- Endwalkers's Aether Currents -->
@@ -723,21 +772,9 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 			<LLoadProfile Path="Aether Currents/Endwalker Aether Currents All.xml"/>
 		</If>
 	
-		<!-- Expanding House of Splendors -->
-		<If Condition="not IsQuestCompleted(69711)">
-			<If Condition="not HasQuest(69711)">	
-				<WaitTimer WaitTime="2"/>
-				<RunCode Name="SwitchDoHJob2"/>
-				<WaitTimer WaitTime="2"/>
-				<GetTo ZoneID="963" XYZ="25.21487, 0.5999998, -83.04614"/>
-				<If Condition="IsQuestAcceptQualified(69711)">
-					<LLTalkTo NpcId="1037323"/>
-					<LLSmallTalk/>
-				</If>
-			</If>
-		</If>
+
 		
-		<!-- Gatherers to 85 -->
+		<!-- Gatherers to 85 (usually automatically fulfilled up to this point) -->
 		<If Condition="&min; == 1">
 			<If Condition="Core.Me.Levels[ClassJobType.Miner] &lt; 85">
 				<LLoadProfile Path="Gathering/80-85 Miner.xml"/>
@@ -749,89 +786,27 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 			</If>
 		</If>
 		
-		<!-- Crafters to 84 -->
-		<If Condition="&crp; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 84">
-				<LLoadProfile Path="Crafting/80-84 Carpenter.xml"/>
-			</If>
+		<!-- Crafters to 90 -->
+		<If Condition="(Core.Me.Levels[ClassJobType.Carpenter] &lt; 90) or (Core.Me.Levels[ClassJobType.Blacksmith] &lt; 90) or (Core.Me.Levels[ClassJobType.Goldsmith] &lt; 90) or (Core.Me.Levels[ClassJobType.Weaver] &lt; 90) or (Core.Me.Levels[ClassJobType.Culinarian] &lt; 90)">
+			<LLoadProfile Path="Crafting/80-90.xml"/>
 		</If>
-		<If Condition="&bsm; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 84">
-				<LLoadProfile Path="Crafting/80-84 Blacksmith.xml"/>
-			</If>
-		</If>
-		<If Condition="&arm; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 84">
-				<LLoadProfile Path="Crafting/80-84 Armorer.xml"/>
-			</If>
-		</If>
-		<If Condition="&gsm; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 84">
-				<LLoadProfile Path="Crafting/80-84 Goldsmith.xml"/>
-			</If>
-		</If>
-		<If Condition="&ltw; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 84">
-				<LLoadProfile Path="Crafting/80-84 Leatherworker.xml"/>
-			</If>
-		</If>
-		<If Condition="&wvr; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 84">
-				<LLoadProfile Path="Crafting/80-84 Weaver.xml"/>
-			</If>
-		</If>
-		<If Condition="&alc; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 84">
-				<LLoadProfile Path="Crafting/80-84 Alchemist.xml"/>
-			</If>
-		</If>
-		<If Condition="&cul; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 84">
-				<LLoadProfile Path="Crafting/80-84 Culinarian.xml"/>
+
+		<!-- Dawn of a New Deal -->
+		<If Condition="not IsQuestCompleted(70544)">
+			<If Condition="not HasQuest(70544)">	
+				<WaitTimer WaitTime="2"/>
+				<RunCode Name="SwitchDoHJob2"/>
+				<WaitTimer WaitTime="2"/>
+				<GetTo ZoneID="1186" XYZ="-159.46468, 0.9219525, -39.158237"/>
+				<If Condition="IsQuestAcceptQualified(70544)">
+					<LLTalkTo NpcId="1049088"/>
+					<LLSmallTalk/>
+				</If>
 			</If>
 		</If>
 		
-		<!-- Crafters to 90 -->
-		<If Condition="&crp; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 90">
-				<LLoadProfile Path="Crafting/84-90 Carpenter.xml"/>
-			</If>
-		</If>
-		<If Condition="&bsm; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 90">
-				<LLoadProfile Path="Crafting/84-90 Blacksmith.xml"/>
-			</If>
-		</If>
-		<If Condition="&arm; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 90">
-				<LLoadProfile Path="Crafting/84-90 Armorer.xml"/>
-			</If>
-		</If>
-		<If Condition="&gsm; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 90">
-				<LLoadProfile Path="Crafting/84-90 Goldsmith.xml"/>
-			</If>
-		</If>
-		<If Condition="&ltw; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 90">
-				<LLoadProfile Path="Crafting/84-90 Leatherworker.xml"/>
-			</If>
-		</If>
-		<If Condition="&wvr; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 90">
-				<LLoadProfile Path="Crafting/84-90 Weaver.xml"/>
-			</If>
-		</If>
-		<If Condition="&alc; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 90">
-				<LLoadProfile Path="Crafting/84-90 Alchemist.xml"/>
-			</If>
-		</If>
-		<If Condition="&cul; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 90">
-				<LLoadProfile Path="Crafting/84-90 Culinarian.xml"/>
-			</If>
-		</If>
+		<!-- Studium to 90 -->
+		<LLoadProfile Path="Quests/Studium.xml"/>
 		
 		<!-- Gatherers to 90 -->
 		<If Condition="&min; == 1">
@@ -845,10 +820,35 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 			</If>
 		</If>
 
+		<!-- Sell More Lv80 Junk -->
+		
+		<If Condition="&craft90; == 1 and &autosell; == 1">
+			<RunCode Name="autosellcheck90" />
+		</If>
+
 		<!-- Craft Gathering and Crafting Gear 90 -->
-		<If Condition="&craft90; == 1 and ((&crp; == 1 and HighestILvl(ClassJobType.Carpenter) &lt; 580) or (&bsm; == 1 and HighestILvl(ClassJobType.Blacksmith) &lt; 580) or (&arm; == 1 and HighestILvl(ClassJobType.Armorer) &lt; 580) or (&gsm; == 1 and HighestILvl(ClassJobType.Goldsmith) &lt; 580) or (&ltw; == 1 and HighestILvl(ClassJobType.Leatherworker) &lt; 580) or (&wvr; == 1 and HighestILvl(ClassJobType.Weaver) &lt; 580) or (&alc; == 1 and HighestILvl(ClassJobType.Alchemist) &lt; 580) or (&cul; == 1 and HighestILvl(ClassJobType.Culinarian) &lt; 580) or (&min; == 1 and HighestILvl(ClassJobType.Miner) &lt; 580) or (&btn; == 1 and HighestILvl(ClassJobType.Botanist) &lt; 580))">
+		<If Condition="&craft90; == 1 and &autocraft; == 0 and ((&crp; == 1 and HighestILvl(ClassJobType.Carpenter) &lt; 580) or (&bsm; == 1 and HighestILvl(ClassJobType.Blacksmith) &lt; 580) or (&arm; == 1 and HighestILvl(ClassJobType.Armorer) &lt; 580) or (&gsm; == 1 and HighestILvl(ClassJobType.Goldsmith) &lt; 580) or (&ltw; == 1 and HighestILvl(ClassJobType.Leatherworker) &lt; 580) or (&wvr; == 1 and HighestILvl(ClassJobType.Weaver) &lt; 580) or (&alc; == 1 and HighestILvl(ClassJobType.Alchemist) &lt; 580) or (&cul; == 1 and HighestILvl(ClassJobType.Culinarian) &lt; 580) or (&min; == 1 and HighestILvl(ClassJobType.Miner) &lt; 580) or (&btn; == 1 and HighestILvl(ClassJobType.Botanist) &lt; 580))">
 			<LogMessage Message="Craft level 90 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and make sure your gearsets are updated with the new gear."/>
 			<UserDialog DialogText="Craft level 90 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and make sure your gearsets are updated with the new gear.\n\nIf you keep seeing this popup even though you have upgraded your gear edit the Start.xml profile and change 'craft90 1' to 'craft90 0', save and start thebot again."/>	
+		</If>
+
+		<!-- Lv90 crafts -->
+
+		<If Condition="&craft90; == 1 and &autocraft; == 1">
+			<RunCode Name="autocraftcheck90" />
+		</If>
+
+		<If Condition="not IsQuestCompleted(70539)">
+			<If Condition="not HasQuest(70539)">	
+				<WaitTimer WaitTime="2"/>
+				<RunCode Name="SwitchDoHJob2"/>
+				<WaitTimer WaitTime="2"/>
+				<TeleportTo Name="Tuliyollal" AetheryteId="216"/>
+				<If Condition="IsQuestAcceptQualified(69706)">
+					<LLTalkTo NpcId="1048390"/>
+					<LLSmallTalk/>
+				</If>
+			</If>
 		</If>
 		
 		<!-- Dreamtrail MSQ Check -->
@@ -890,21 +890,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 				and IsAetherCurrentCompleted(1192,12) and IsAetherCurrentCompleted(1192,13) and IsAetherCurrentCompleted(1192,14))">
 			<LLoadProfile Path="Aether Currents/Dreamtrail Aether Currents All.xml"/>
 		</If>
-	
-		<!-- Dawn of a New Deal -->
-		<If Condition="not IsQuestCompleted(70544)">
-			<If Condition="not HasQuest(70544)">	
-				<WaitTimer WaitTime="2"/>
-				<RunCode Name="SwitchDoHJob2"/>
-				<WaitTimer WaitTime="2"/>
-				<GetTo ZoneID="1186" XYZ="-159.46468, 0.9219525, -39.158237"/>
-				<If Condition="IsQuestAcceptQualified(70544)">
-					<LLTalkTo NpcId="1049088"/>
-					<LLSmallTalk/>
-				</If>
-			</If>
-		</If>
-		
+
 		<!-- Gatherers to 95 -->
 		<If Condition="&min; == 1">
 			<If Condition="Core.Me.Levels[ClassJobType.Miner] &lt; 95">
@@ -916,6 +902,13 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 				<LLoadProfile Path="Gathering/90-95 Botanist.xml"/>
 			</If>
 		</If>
+		
+		<!-- To LV100 -->
+		<If Condition="(Core.Me.Levels[ClassJobType.Weaver] &lt; 100) or (Core.Me.Levels[ClassJobType.Leatherworker] &lt; 100)">
+			<LLoadProfile Path="Crafting/90-100.xml" />
+		</If>
+
+		
 		
 		<!-- Crafters to 94 -->
 		<If Condition="&crp; == 1">

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Profile: Crystalline Mean Quests
+  Authors: DomesticWarlord86
+-->
+
+<!DOCTYPE Profile [
+<!-- Which delivery quests to do? -->
+<!ENTITY CRP_LTW_WVR "1">
+<!ENTITY BSM_ARM_GSM "1">
+<!ENTITY ALC_CUL "1">
+<!ENTITY MIN_BTN "1">
+<!ENTITY FSH "0">
+
+<!-- Which class should I do the quest on? -->
+	<!-- Choose 1 of these three -->
+		<!ENTITY CRP "0">
+		<!ENTITY LTW "0">
+		<!ENTITY WVR "1">
+	<!-- Choose 1 of these three -->
+		<!ENTITY BSM "0">
+		<!ENTITY ARM "1">
+		<!ENTITY GSM "0">
+	<!-- Choose 1 of these two -->	
+		<!ENTITY ALC "1">
+		<!ENTITY CUL "0">	
+	<!-- Choose 1 of these two -->	
+		<!ENTITY MIN "0">
+		<!ENTITY BTN "1">
+
+<!-- Set this to what item you'd like to buy when you're near capped on Crafter White Scrips -->
+	<!-- For reference, here's the top three items with Crafter's Scrips -->
+	<!-- Craftsman's Competence Materia IX 		33925 -->
+	<!-- Craftsman's Cunning Materia IX 		33926 -->
+	<!-- Craftsman's Command Materia IX		33927 -->
+
+<!ENTITY BuyCraftItem "33926">	
+
+
+
+<!-- Set this to what item you'd like to buy when you're near capped on Gatherer White Scrips -->
+	<!-- For reference, here's the top three items with Gatherer's Scrips -->
+	<!-- Gatherer's Guerdon Materia IX 		33922 -->
+	<!-- Gatherer's Guile Materia IX 		33923 -->
+	<!-- Gatherer's Grasp Materia IX 		33924 -->
+
+<!ENTITY BuyGatherItem "12669">	   
+
+
+]>
+
+<Profile>
+  <Name>Crystalline Mean Quests</Name>
+  <BehaviorDirectory></BehaviorDirectory>
+  <Order>
+  
+    <!-- Lisbeth check -->
+		<LisbethCheck/>
+	  
+	<If condition="&CRP_LTW_WVR; == 0 and &BSM_ARM_GSM; == 0 and &ALC_CUL; == 0 and &MIN_BTN; == 0 and &FSH; == 0">
+	  <UserDialog DialogText="You do not have any Crystalline Mean quests set to 1.\nPlease open the profile and change at least one of the five to 1."/>	
+	</If>
+	
+	<If condition="&CRP_LTW_WVR; == 1 and &CRP; == 0 and &LTW; == 0 and &WVR; == 0">
+	  <UserDialog DialogText="You have Carpenter/Leatherworker/Weaver quest selected, but no class selected to do them on.\nPlease open the profile and change one of the three to 1."/>	
+	</If>		
+
+	<If condition="&BSM_ARM_GSM; == 1 and &BSM; == 0 and &ARM; == 0 and &GSM; == 0">
+	  <UserDialog DialogText="You have Blacksmith/Armorer/Goldsmith quest selected, but no class selected to do them on.\nPlease open the profile and change one of the three to 1."/>	
+	</If>
+
+	<If condition="&ALC_CUL; == 1 and &ALC; == 0 and &CUL; == 0">
+	  <UserDialog DialogText="You have Alchemist/Culinarian quest selected, but no class selected to do them on.\nPlease open the profile and change one of the two to 1."/>	
+	</If>	
+
+	<If condition="&MIN_BTN; == 1 and &MIN; == 0 and &BTN; == 0">
+	  <UserDialog DialogText="You have Alchemist/Culinarian quest selected, but no class selected to do them on.\nPlease open the profile and change one of the two to 1."/>	
+	</If>		
+
+
+	<!-- Profile start here -->	
+	
+	<If Condition="not IsQuestCompleted(68839)">
+		<LLToast message="Please complete MSQ 'The Crystarium's Resolve' to continue this profile."/>
+	</If>
+
+    <!-- The Crystalline Mean -->
+    <If Condition="not IsQuestCompleted(69191)">
+      <If Condition="not HasQuest(69191)">
+        <GetTo ZoneId="819" XYZ="-11.23132, 20.1973, -137.4246"/>  
+        <If Condition="IsQuestAcceptQualified(69191)">
+          <PickupQuest QuestId="69191" NpcId="1027232"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(69191) == 255">
+        <GetTo ZoneId="819" XYZ="-11.23132, 20.1973, -137.4246"/>  
+        <TurnIn QuestId="69191" NpcId="1027232" XYZ="-9.323303, 20.1973, -136.5225"/>
+      </If>			
+    </If>
+
+	<!-- Miner/Botanist -->	
+	<If Condition="&MIN_BTN; == 1 and not IsQuestCompleted(68774)">	
+		<While Condition="&MIN; == 1 and not ClassName == ClassJobType.Miner">
+			<ChangeClass Job="Miner" Force="True"/>
+			<WaitTimer WaitTime="3" />		
+		</While>
+		<While Condition="&BTN; == 1 and not ClassName == ClassJobType.Botanist">
+			<ChangeClass Job="Botanist" Force="True"/>
+			<WaitTimer WaitTime="3" />		
+		</While>
+		
+    <!-- On the Trail of a Myth -->
+    <If Condition="not IsQuestCompleted(68772)">
+      <If Condition="not HasQuest(68772)">
+        <GetTo ZoneId="819" XYZ="-3.720254, 20.186, -147.303"/>  
+        <If Condition="IsQuestAcceptQualified(68772)">
+          <PickupQuest QuestId="68772" NpcId="1027236"/>
+        </If>
+      </If>
+      <If Condition="GetQuestStep(68772) == 1">
+        <GetTo ZoneId="819" XYZ="49.96703, 36.19769, -160.1579"/>  
+        <TalkTo NpcId="1028494" XYZ="49.36292, 36.19769, -162.2493" QuestId="68772" StepId="1"/>
+      </If>
+			<If Condition="GetQuestStep(68772) == 2">
+        <GetTo ZoneId="819" XYZ="-137.9496, -47.6491, -199.7856"/>  
+        <TalkTo NpcId="1027834" XYZ="-139.2996, -47.64921, -201.4954" QuestId="68772" StepId="2"/>
+      </If>
+      <If Condition="GetQuestStep(68772) == 255">
+        <GetTo ZoneId="819" XYZ="-5.496928, 20.186, -148.0779"/>  
+        <TurnIn QuestId="68772" NpcId="1027236" XYZ="-3.158691, 20.186, -148.9128"/>
+      </If>			
+    </If>
+		
+		<While Condition="&MIN; == 1 and not ClassName == ClassJobType.Miner">
+			<ChangeClass Job="Miner" Force="True"/>
+			<WaitTimer WaitTime="3" />		
+		</While>
+		<While Condition="&BTN; == 1 and not ClassName == ClassJobType.Botanist">
+			<ChangeClass Job="Botanist" Force="True"/>
+			<WaitTimer WaitTime="3" />		
+		</While>		
+		
+    <While Condition="IsQuestCompleted(68772) and not IsQuestCompleted(68773) and not HasQuest(68773) and not IsQuestAcceptQualified(68773)">
+			<GetTo ZoneId="819" XYZ="-3.720254, 20.186, -147.303"/>  
+			<RunCode name="CraftItem"/>	
+			<LLSmallTalk/>
+		</While>	
+		
+    <!-- Shedding Light on the Myth -->
+    <If Condition="not IsQuestCompleted(68773)">
+      <If Condition="not HasQuest(68773)">
+        <GetTo ZoneId="819" XYZ="-3.720254, 20.186, -147.303"/>  
+        <If Condition="IsQuestAcceptQualified(68773)">
+          <PickupQuest QuestId="68773" NpcId="1027236"/>
+        </If>
+      </If>	
+      <If Condition="GetQuestStep(68773) == 1 and GetQuestById(68773).QuestI8A == 0">
+        <LisbethTravel ZoneId="816" XYZ="-399.1589, 56.67942, 453.844"/>  
+        <TalkTo NpcId="1028500" XYZ="-400.1069, 56.97806, 451.8959" QuestId="68773" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(68773) == 1 and GetQuestById(68773).QuestI8A == 1">
+        <LisbethTravel ZoneId="816" XYZ="-469.085, 69.96677, 483.5302"/>  
+        <TalkTo NpcId="1028499" XYZ="-470.0847, 70.15228, 481.9561" QuestId="68773" StepId="1"/>
+      </If>
+      <If Condition="GetQuestStep(68773) == 1 and GetQuestById(68773).QuestI8A == 2">
+        <LisbethTravel ZoneId="816" XYZ="-506.6004, 71.7847, 533.6262"/> 
+        <TalkTo NpcId="1028498" XYZ="-508.7816, 72.42643, 533.5621" QuestId="68773" StepId="1"/>
+      </If>	
+      <If Condition="GetQuestStep(68773) == 2 and GetQuestById(68773).QuestI8A == 0">
+        <LisbethTravel ZoneId="816" XYZ="-584.8791, 90.62288, 577.8788"/> 
+        <TalkTo NpcId="1028496" XYZ="-586.511, 90.98404, 579.6139" QuestId="68773" StepId="2"/>
+      </If>
+      <If Condition="GetQuestStep(68773) == 3 and GetQuestById(68773).QuestI8A == 0">
+        <LisbethTravel ZoneId="816" XYZ="-498.3378, 4.283281, -78.12839"/> 
+        <TalkTo NpcId="1028503" XYZ="-496.4218, 3.886272, -80.8576" QuestId="68773" StepId="3"/>
+      </If>		
+			<If Condition="GetQuestStep(68773) == 4">
+				<If condition="not HasAtLeast(26756,1)">
+					<Lisbeth IgnoreHome="True" Json="[{'Group':1,'Item':26756,'Amount':1,'Enabled':true,'Type':'Gather','AmountMode':'Restock'}]"/>
+				</If>
+				<If condition="HasAtLeast(26756,1)">
+					<LisbethTravel ZoneId="816" XYZ="-498.3378, 4.283282, -78.12839"/> 
+					<HandOver ItemId="2002023" NpcId="1028501" XYZ="-494.4076, 3.763135, -78.78235" QuestId="68773" StepId="4"/>		
+				</If>					
+			</If>			
+      <If Condition="GetQuestStep(68773) == 255">
+        <GetTo ZoneId="819" XYZ="-5.496928, 20.186, -148.0779"/>  
+        <TurnIn QuestId="68773" NpcId="1027236" XYZ="-3.158691, 20.186, -148.9128"/>
+      </If>
+		</If>	
+		
+		<While Condition="&MIN; == 1 and not ClassName == ClassJobType.Miner">
+			<ChangeClass Job="Miner" Force="True"/>
+			<WaitTimer WaitTime="3" />		
+		</While>
+		<While Condition="&BTN; == 1 and not ClassName == ClassJobType.Botanist">
+			<ChangeClass Job="Botanist" Force="True"/>
+			<WaitTimer WaitTime="3" />		
+		</While>		
+
+    <While Condition="IsQuestCompleted(68773) and not HasQuest(68774) and not IsQuestAcceptQualified(68774)">
+			<GetTo ZoneId="819" XYZ="-3.720254, 20.186, -147.303"/>  
+			<RunCode name="CraftItem"/>	
+			<LLSmallTalk/>
+		</While>
+
+    <!-- The Myth Takes Form -->
+    <!-- Doesn't give XP -->
+	
+	</If>
+
+	<LLoadProfile Path="../Gathering/CrystallineBTN.xml"/>
+	
+  </Order>
+  <GrindAreas>
+  </GrindAreas>
+  <CodeChunks>
+		<CodeChunk Name="CraftItem">
+			<![CDATA[	
+					await LlamaLibrary.Helpers.CrystallineMeanHelper.CraftItems();
+			]]> 
+		</CodeChunk>		
+  </CodeChunks>
+</Profile>  
