@@ -212,7 +212,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		
 		<!-- Note: CRP, WVR, CUL are directly leveled to 63 as this is more optimal -->
 		<If Condition="&crp; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 53">
+			<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 63">
 				<LLoadProfile Path="Diadem/41-63 CarpenterD.xml"/>
 			</If>
 		</If>
@@ -222,12 +222,12 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 			</If>
 		</If>
 		<If Condition="&cul; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 53">
+			<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 63">
 				<LLoadProfile Path="Diadem/41-63 CulinarianD.xml"/>
 			</If>
 		</If>
 		<If Condition="&wvr; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 53">
+			<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 63">
 				<LLoadProfile Path="Diadem/41-63 WeaverD.xml"/>
 			</If>
 		</If>
