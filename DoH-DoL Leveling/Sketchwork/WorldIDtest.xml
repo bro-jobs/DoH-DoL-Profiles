@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Profile>
+<name>autocraftloggingtest</name>
+<Order>
+	<RunCode Name="UpdateLisbethSimple"/>
+</Order>
+<CodeChunks>
+    <CodeChunk Name="UpdateLisbethSimple">
+      <![CDATA[
+        try {
+            // Find most recent settings file
+            var settingsPath = System.IO.Path.Combine("Settings");
+            var files = System.IO.Directory.GetFiles(settingsPath, "lisbethV4.json", System.IO.SearchOption.AllDirectories);
+            var mostRecent = files.OrderByDescending(f => System.IO.File.GetLastWriteTime(f)).First();
+            
+            ff14bot.Helpers.Logging.Write($"Found settings file: {mostRecent}");
+            
+            // Read and modify JSON
+            var json = System.IO.File.ReadAllText(mostRecent);
+            var settings = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, object>>(json);
+            
+            ff14bot.Helpers.Logging.Write("Updating settings...");
+            settings["CraftSuborderMode"] = "QuickSynthAll";
+            settings["UseGathererBoon"] = false;
+            
+            System.IO.File.WriteAllText(mostRecent, 
+                Newtonsoft.Json.JsonConvert.SerializeObject(settings, 
+                    Newtonsoft.Json.Formatting.Indented));
+            
+            ff14bot.Helpers.Logging.Write("Settings updated, waiting 10 seconds...");
+            await Coroutine.Sleep(10000);
+            ff14bot.Helpers.Logging.Write("Wait complete!");
+            
+        } catch (Exception ex) {
+            ff14bot.Helpers.Logging.Write($"Error: {ex.Message}");
+            ff14bot.Helpers.Logging.Write(ex.StackTrace);
+        }
+      ]]>
+    </CodeChunk>
+  </CodeChunks>
+</Profile>

@@ -233,7 +233,13 @@
 				<BuyInclusionShopItem ItemId="31807" Count="1"/>
 			</If>
 			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<WaitTimer WaitTime="1" />	
+			<!-- 41767 = Command XI. Very useful. -->
+			<WaitTimer WaitTime="1" />	
+			<!-- 41767 = Command XI. Very useful. -->
 			<BuyInclusionShopItem ItemId="33926" Count="0"/>
+			<WaitTimer WaitTime="1" />
+			<WaitTimer WaitTime="1" />
 		</While>	
 		
 
@@ -379,7 +385,13 @@
 				<BuyInclusionShopItem ItemId="31807" Count="1"/>
 			</If>
 			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<WaitTimer WaitTime="1" />	
+			<!-- 41767 = Command XI. Very useful. -->
+			<WaitTimer WaitTime="1" />	
+			<!-- 41767 = Command XI. Very useful. -->
 			<BuyInclusionShopItem ItemId="33926" Count="0"/>
+			<WaitTimer WaitTime="1" />
+			<WaitTimer WaitTime="1" />
 		</While>	
 		
 		
