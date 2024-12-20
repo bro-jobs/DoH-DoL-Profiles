@@ -6,8 +6,9 @@
     <LogMessage Message="Crafted Lv53 Gear!"/>
     <AutoInventoryEquip/>
     <WaitTimer WaitTime="5"/>
+    	<RunCode Name="Logger" />
     <LLoadProfile Path="../Start.xml"/>
-	<RunCode Name="Logger" />
+
 	<WaitTimer WaitTime="5"/>
 </Order>
 <CodeChunks>

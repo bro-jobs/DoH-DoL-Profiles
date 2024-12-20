@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Profile: Stadium Quests
+  Authors: DomesticWarlord86
+-->
+
+<!DOCTYPE Profile [
+<!-- Which delivery quests to do? -->
+<!ENTITY CRP_LTW_WVR "1">
+<!ENTITY BSM_ARM_GSM "1">
+<!ENTITY ALC_CUL "1">
+<!ENTITY MIN_BTN "1">
+<!ENTITY FSH "0">
+
+<!-- Which class should I do the quest on? -->
+	<!-- Choose 1 of these three -->
+		<!ENTITY CRP "0">
+		<!ENTITY LTW "1">
+		<!ENTITY WVR "0">
+	<!-- Choose 1 of these three -->
+		<!ENTITY BSM "0">
+		<!ENTITY ARM "1">
+		<!ENTITY GSM "0">
+	<!-- Choose 1 of these two -->	
+		<!ENTITY ALC "1">
+		<!ENTITY CUL "0">	
+	<!-- Choose 1 of these two -->	
+		<!ENTITY MIN "1">
+		<!ENTITY BTN "0">
+
+<!-- Set this to what item you'd like to buy when you're near capped on Crafter White Scrips -->
+	<!-- For reference, here's the top three items with Crafter's Scrips -->
+	<!-- Craftsman's Competence Materia IX 		33925 -->
+	<!-- Craftsman's Cunning Materia IX 		33926 -->
+	<!-- Craftsman's Command Materia IX		33927 -->
+
+<!ENTITY BuyCraftItem "33926">	
+<!ENTITY PurpleCraftersScrip "33913">	
+
+<!-- Set this to what item you'd like to buy when you're near capped on Gatherer White Scrips -->
+	<!-- For reference, here's the top three items with Gatherer's Scrips -->
+	<!-- Gatherer's Guerdon Materia IX 		33922 -->
+	<!-- Gatherer's Guile Materia IX 		33923 -->
+	<!-- Gatherer's Grasp Materia IX 		33924 -->
+	<!-- Hi-Cordial 12669 -->
+<!ENTITY BuyGatherItem "12669">	   
+<!ENTITY PurpleGathersScrip "33914">	
+
+]>
+
+<Profile>
+  <Name>Stadium Quests</Name>
+  <BehaviorDirectory></BehaviorDirectory>
+  <Order>
+  
+					<RunCode name="TurnIn"/>  
+  </Order>
+  <GrindAreas>
+  </GrindAreas>
+  <CodeChunks>
+		<CodeChunk Name="TurnIn">
+			<![CDATA[	
+        uint[] questNpcIds = { 1038525, 1039203, 1039220, 1038501, 1038551 };
+        var npcId = GameObjectManager.GameObjects.Where(r => r.IsTargetable && questNpcIds.Contains(r.NpcId)).OrderBy(r => r.Distance()).FirstOrDefault();
+
+        if (!npcId.IsWithinInteractRange)
+        {
+          var _target = npcId.Location;
+          Navigator.PlayerMover.MoveTowards(_target);
+          
+          while (_target.Distance2D(Core.Me.Location) >= 4)
+          {
+            Navigator.PlayerMover.MoveTowards(_target);
+            await Coroutine.Sleep(100);
+          }
+          
+          Navigator.PlayerMover.MoveStop();
+        }
+
+        npcId.Interact();
+				await Buddy.Coroutines.Coroutine.Wait(10000, () => LlamaLibrary.RemoteWindows.SharlayanCraftworksSupply.Instance.IsOpen || Talk.DialogOpen);
+				
+				if (Talk.DialogOpen)
+					{
+						while (Talk.DialogOpen)
+						{
+							Talk.Next();
+							await Coroutine.Wait(1000, () => !Talk.DialogOpen);
+							await Coroutine.Wait(1000, () => Talk.DialogOpen);
+							await Coroutine.Yield();
+						}
+					}
+					
+				if (LlamaLibrary.RemoteWindows.SharlayanCraftworksSupply.Instance.IsOpen)
+				{
+						ff14bot.Helpers.Logging.Write($"Attempting to hand over items to Studium Delivery.");
+						await LlamaLibrary.RemoteWindows.SharlayanCraftworksSupply.Instance.HandOverItems();
+				}
+			]]> 
+		</CodeChunk>	
+  </CodeChunks>
+</Profile>  

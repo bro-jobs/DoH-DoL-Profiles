@@ -805,8 +805,11 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 			</If>
 		</If>
 		
+		
+		<If Condition="(Core.Me.Levels[ClassJobType.Carpenter] &lt; 90) or (Core.Me.Levels[ClassJobType.Blacksmith] &lt; 90) or (Core.Me.Levels[ClassJobType.Goldsmith] &lt; 90) or (Core.Me.Levels[ClassJobType.Weaver] &lt; 90) or (Core.Me.Levels[ClassJobType.Culinarian] &lt; 90)">
 		<!-- Studium to 90 -->
 		<LLoadProfile Path="Quests/Studium.xml"/>
+		</If>
 		
 		<!-- Gatherers to 90 -->
 		<If Condition="&min; == 1">

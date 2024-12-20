@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Profile>
-<Name>Crafting Lv80 Gear</Name>
+<Name>Crafting Lv90 Gear</Name>
 <Order>
 
 	<GetTo ZoneId="886" XYZ="-7.472548, -16, 162.5581"/>
@@ -9,24 +9,24 @@
 
 	<!-- Craft Lv80 Gear -->
 	
-	<Lisbeth Json="[{'Id':1,'Group':1,'Item':33914,'Amount':1900,'Enabled':true,'Type':'GatherMasterpiece','AmountMode':'Restock'}]"/>
+	<Lisbeth Json="[{'Id':1,'Group':1,'Item':33914,'Amount':2600,'Enabled':true,'Type':'GatherMasterpiece','AmountMode':'Restock'}]"/>
 	
 	<!-- Gatherer gear -->
 	
-	<BuyInclusionShopItem ItemId="31780" Count="1"/>
-	<BuyInclusionShopItem ItemId="31781" Count="1"/>
-	<BuyInclusionShopItem ItemId="31791" Count="1"/>
-	<BuyInclusionShopItem ItemId="31792" Count="1"/>
-	<BuyInclusionShopItem ItemId="31798" Count="1"/>
-	<BuyInclusionShopItem ItemId="31799" Count="1"/>
-	<BuyInclusionShopItem ItemId="31800" Count="1"/>
-	<BuyInclusionShopItem ItemId="31801" Count="1"/>
-	<BuyInclusionShopItem ItemId="31802" Count="1"/>
-	<BuyInclusionShopItem ItemId="31809" Count="1"/>
-	<BuyInclusionShopItem ItemId="31810" Count="1"/>
-	<BuyInclusionShopItem ItemId="31811" Count="1"/>
-	<BuyInclusionShopItem ItemId="31812" Count="1"/>
-	<BuyInclusionShopItem ItemId="31812" Count="1"/>
+	<BuyInclusionShopItem ItemId="39833" Count="1"/>
+	<BuyInclusionShopItem ItemId="39834" Count="1"/>
+	<BuyInclusionShopItem ItemId="39844" Count="1"/>
+	<BuyInclusionShopItem ItemId="39845" Count="1"/>
+	<BuyInclusionShopItem ItemId="39851" Count="1"/>
+	<BuyInclusionShopItem ItemId="39852" Count="1"/>
+	<BuyInclusionShopItem ItemId="39853" Count="1"/>
+	<BuyInclusionShopItem ItemId="39854" Count="1"/>
+	<BuyInclusionShopItem ItemId="39855" Count="1"/>
+	<BuyInclusionShopItem ItemId="39860" Count="1"/>
+	<BuyInclusionShopItem ItemId="39861" Count="1"/>
+	<BuyInclusionShopItem ItemId="39862" Count="1"/>
+	<BuyInclusionShopItem ItemId="39863" Count="1"/>
+	<BuyInclusionShopItem ItemId="39863" Count="1"/>
 
     <LogMessage Message="Crafted Lv80 Gear!"/>
     <AutoInventoryEquip/>
@@ -103,7 +103,7 @@
             string settingsPath = Path.Combine(workingDirectory, "Settings");
             string logFilePath = Path.Combine(settingsPath, $"autocraft.txt");
             
-            File.AppendAllText(logFilePath, "craft80" + Environment.NewLine);
+            File.AppendAllText(logFilePath, "craft90" + Environment.NewLine);
         }
         catch (Exception ex)
         {

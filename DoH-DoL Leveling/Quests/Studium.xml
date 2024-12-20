@@ -102,7 +102,7 @@
     </If>
     <If Condition="GetQuestStep(70009) == 255">
       <GetTo ZoneId="962" XYZ="-355.8746, 21.84602, -93.05553"/> <!-- Area="Old Sharlayan" -->
-      <TurnIn QuestId="70009" NpcId="1038500" XYZ="-357.8394, 21.84602, -91.32526"/>
+      <LLTurnIn QuestId="70009" NpcId="1038500" XYZ="-357.8394, 21.84602, -91.32526"/>
       <LLSmallTalk/>
     </If>
 	</If>	
@@ -144,7 +144,7 @@
 			</If>
 			<If Condition="GetQuestStep(69675) == 255">
 				<GetTo ZoneId="962" XYZ="-298.1129, 21.84602, -159.9294"/>  
-				<TurnIn QuestId="69675" NpcId="1038525" XYZ="-296.5591, 21.84602, -162.1577"/>
+				<LLTurnIn QuestId="69675" NpcId="1038525" XYZ="-296.5591, 21.84602, -162.1577"/>
 				<LLSmallTalk/>
 			</If>			
     </If>
@@ -178,7 +178,7 @@
 			</If>
 			<If Condition="GetQuestStep(69689) == 255">
 				<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/>  
-				<TurnIn QuestId="69689" NpcId="1038501" XYZ="-367.3305, 21.84602, -102.9832"/>
+				<LLTurnIn QuestId="69689" NpcId="1038501" XYZ="-367.3305, 21.84602, -102.9832"/>
 				<LLSmallTalk/>
 			</If>			
     </If>
@@ -213,7 +213,7 @@
 			</If>
 			<If Condition="GetQuestStep(69668) == 255">
 				<GetTo ZoneId="962" XYZ="-279.287, 21.84602, -138.3546"/>  
-				<TurnIn QuestId="69668" NpcId="1039203" XYZ="-277.699, 21.84602, -139.0861"/>
+				<LLTurnIn QuestId="69668" NpcId="1039203" XYZ="-277.699, 21.84602, -139.0861"/>
 				<LLSmallTalk/>
 			</If>			
     </If>
@@ -248,16 +248,30 @@
 			</If>			
 			<If Condition="GetQuestStep(69682) == 255">
 				<GetTo ZoneId="962" XYZ="-289.2391, 21.84602, -149.1731"/>  
-				<TurnIn QuestId="69682" NpcId="1039220" XYZ="-287.1595, 21.84602, -150.7745"/>
+				<LLTurnIn QuestId="69682" NpcId="1039220" XYZ="-287.1595, 21.84602, -150.7745"/>
 				<LLSmallTalk/>
 			</If>			
     </If>
 	</If>
 	
 	<!-- Craft all studium items in one go -->
-	
-	<Lisbeth Json="[{'Group':1,'Item':35588,'Amount':6,'Enabled':true,'Type':'Armorer','Hq':true,'AmountMode':'Restock'},{'Id':1,'Group':1,'Item':35589,'Amount':6,'Enabled':true,'Type':'Armorer','Hq':true,'AmountMode':'Restock'},{'Id':2,'Group':1,'Item':35590,'Amount':6,'Enabled':true,'Type':'Armorer','Hq':true,'AmountMode':'Restock'},{'Id':3,'Group':1,'Item':35591,'Amount':6,'Enabled':true,'Type':'Armorer','Hq':true,'AmountMode':'Restock'},{'Id':4,'Group':1,'Item':35592,'Amount':6,'Enabled':true,'Type':'Leatherworker','Hq':true,'AmountMode':'Restock'},{'Id':5,'Group':1,'Item':35593,'Amount':6,'Enabled':true,'Type':'Leatherworker','Hq':true,'AmountMode':'Restock'},{'Id':6,'Group':1,'Item':35594,'Amount':6,'Enabled':true,'Type':'Leatherworker','Hq':true,'AmountMode':'Restock'},{'Id':7,'Group':1,'Item':35595,'Amount':6,'Enabled':true,'Type':'Leatherworker','Hq':true,'AmountMode':'Restock'},{'Id':8,'Group':1,'Item':35596,'Amount':6,'Enabled':true,'Type':'Alchemist','Hq':true,'AmountMode':'Restock'},{'Id':9,'Group':1,'Item':35597,'Amount':6,'Enabled':true,'Type':'Alchemist','Hq':true,'AmountMode':'Restock'},{'Id':10,'Group':1,'Item':35599,'Amount':6,'Enabled':true,'Type':'Alchemist','Hq':true,'AmountMode':'Restock'},{'Id':11,'Group':1,'Item':35598,'Amount':6,'Enabled':true,'Type':'Alchemist','Hq':true,'AmountMode':'Restock'}]" />
-		
+	<If Condition="IsQuestCompleted(69675) and ((not IsQuestCompleted(69676)) and (not IsQuestCompleted(69669)) and (not IsQuestCompleted(69683)))">
+	<Lisbeth Json="[{'Id':1,'Group':1,'Item':35588,'Amount':6,'Enabled':true,'Type':'Armorer','Collectable':true,'AmountMode':'Restock'},{'Id':2,'Group':1,'Item':35589,'Amount':6,'Enabled':true,'Type':'Armorer','Collectable':true,'AmountMode':'Restock'},{'Id':3,'Group':1,'Item':35590,'Amount':6,'Enabled':true,'Type':'Armorer','Collectable':true,'AmountMode':'Restock'},{'Id':4,'Group':1,'Item':35591,'Amount':6,'Enabled':true,'Type':'Armorer','Collectable':true,'AmountMode':'Restock'},{'Id':5,'Group':1,'Item':35592,'Amount':6,'Enabled':true,'Type':'Leatherworker','Collectable':true,'AmountMode':'Restock'},{'Id':6,'Group':1,'Item':35593,'Amount':6,'Enabled':true,'Type':'Leatherworker','Collectable':true,'AmountMode':'Restock'},{'Id':7,'Group':1,'Item':35594,'Amount':6,'Enabled':true,'Type':'Leatherworker','Collectable':true,'AmountMode':'Restock'},{'Id':8,'Group':1,'Item':35595,'Amount':6,'Enabled':true,'Type':'Leatherworker','Collectable':true,'AmountMode':'Restock'},{'Id':9,'Group':1,'Item':35596,'Amount':6,'Enabled':true,'Type':'Alchemist','Collectable':true,'AmountMode':'Restock'},{'Id':10,'Group':1,'Item':35597,'Amount':6,'Enabled':true,'Type':'Alchemist','Collectable':true,'AmountMode':'Restock'},{'Id':11,'Group':1,'Item':35599,'Amount':6,'Enabled':true,'Type':'Alchemist','Collectable':true,'AmountMode':'Restock'},{'Id':12,'Group':1,'Item':35598,'Amount':6,'Enabled':true,'Type':'Alchemist','Collectable':true,'AmountMode':'Restock'}]"/>
+	</If>
+
+	<While Condition="&CRP; == 1 and not ClassName == ClassJobType.Carpenter">
+			<ChangeClass Job="Carpenter" Force="True"/>
+			<WaitTimer WaitTime="2" />		
+		</While>
+		<While Condition="&LTW; == 1 and not ClassName == ClassJobType.Leatherworker">
+			<ChangeClass Job="Leatherworker" Force="True"/>
+			<WaitTimer WaitTime="2" />		
+		</While>	
+		<While Condition="&WVR; == 1 and not ClassName == ClassJobType.Weaver">
+			<ChangeClass Job="Weaver" Force="True"/>
+			<WaitTimer WaitTime="2" />		
+		</While>	
+
     <!-- The World without You -->
     <If Condition="IsQuestCompleted(69675) and not IsQuestCompleted(69676)">
       <If Condition="not HasQuest(69676)">
@@ -290,25 +304,25 @@
 			<If Condition="ItemCount(39825) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39825" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39286) &lt; 1" >
+			<If Condition="ItemCount(39826) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39286" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39287) &lt; 1" >
+			<If Condition="ItemCount(39827) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39287" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39288) &lt; 1" >
+			<If Condition="ItemCount(39828) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39288" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39289) &lt; 1" >
+			<If Condition="ItemCount(39829) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39289" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39290) &lt; 1" >
+			<If Condition="ItemCount(39830) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39290" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39291) &lt; 1" >
+			<If Condition="ItemCount(39831) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39291" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39292) &lt; 1" >
+			<If Condition="ItemCount(39832) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39292" Count="1"/>
 			</If>
 			<If Condition="ItemCount(39836) &lt; 1" >
@@ -363,13 +377,15 @@
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
+			<WaitTimer WaitTime="1" />	
 			<!-- 41767 = Command XI. Very useful. -->
 			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+			<WaitTimer WaitTime="1" />
 		</While>
 					</While>				
 					<GetTo ZoneId="962" XYZ="-299.9291, 21.68615, -159.1658"/> 
 					<RunCode name="TurnIn"/>  
-					<TurnIn QuestId="69676" NpcId="1038525" XYZ="-299.9291, 21.68615, -159.1658"/>
+					<LLTurnIn QuestId="69676" NpcId="1038525" XYZ="-299.9291, 21.68615, -159.1658"/>
 					<LLSmallTalk/>
 				</If>
 			</If>						
@@ -410,25 +426,25 @@
 			<If Condition="ItemCount(39825) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39825" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39286) &lt; 1" >
+			<If Condition="ItemCount(39826) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39286" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39287) &lt; 1" >
+			<If Condition="ItemCount(39827) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39287" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39288) &lt; 1" >
+			<If Condition="ItemCount(39828) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39288" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39289) &lt; 1" >
+			<If Condition="ItemCount(39829) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39289" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39290) &lt; 1" >
+			<If Condition="ItemCount(39830) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39290" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39291) &lt; 1" >
+			<If Condition="ItemCount(39831) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39291" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39292) &lt; 1" >
+			<If Condition="ItemCount(39832) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39292" Count="1"/>
 			</If>
 			<If Condition="ItemCount(39836) &lt; 1" >
@@ -484,12 +500,15 @@
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
 			<!-- 41767 = Command XI. Very useful. -->
+			<WaitTimer WaitTime="1" />	
+			<!-- 41767 = Command XI. Very useful. -->
 			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+			<WaitTimer WaitTime="1" />
 		</While>
 					</While>				
 					<GetTo ZoneId="962" XYZ="-299.9291, 21.68615, -159.1658"/> 
 					<RunCode name="TurnIn"/>  
-					<TurnIn QuestId="69677" NpcId="1038525" XYZ="-299.254, 21.84602, -160.175"/>
+					<LLTurnIn QuestId="69677" NpcId="1038525" XYZ="-299.254, 21.84602, -160.175"/>
 					<LLSmallTalk/>
 				</If>
 			</If>			
@@ -530,25 +549,25 @@
 			<If Condition="ItemCount(39825) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39825" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39286) &lt; 1" >
+			<If Condition="ItemCount(39826) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39286" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39287) &lt; 1" >
+			<If Condition="ItemCount(39827) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39287" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39288) &lt; 1" >
+			<If Condition="ItemCount(39828) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39288" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39289) &lt; 1" >
+			<If Condition="ItemCount(39829) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39289" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39290) &lt; 1" >
+			<If Condition="ItemCount(39830) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39290" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39291) &lt; 1" >
+			<If Condition="ItemCount(39831) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39291" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39292) &lt; 1" >
+			<If Condition="ItemCount(39832) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39292" Count="1"/>
 			</If>
 			<If Condition="ItemCount(39836) &lt; 1" >
@@ -604,12 +623,15 @@
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
 			<!-- 41767 = Command XI. Very useful. -->
+			<WaitTimer WaitTime="1" />	
+			<!-- 41767 = Command XI. Very useful. -->
 			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+			<WaitTimer WaitTime="1" />
 		</While>
 					</While>				
 					<GetTo ZoneId="962" XYZ="-299.9291, 21.68615, -159.1658"/> 
 					<RunCode name="TurnIn"/>  
-					<TurnIn QuestId="69678" NpcId="1038525" XYZ="-296.5591, 21.84602, -162.1577"/>
+					<LLTurnIn QuestId="69678" NpcId="1038525" XYZ="-296.5591, 21.84602, -162.1577"/>
 					<LLSmallTalk/>
 				</If>
 			</If>
@@ -705,25 +727,25 @@
 			<If Condition="ItemCount(39825) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39825" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39286) &lt; 1" >
+			<If Condition="ItemCount(39826) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39286" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39287) &lt; 1" >
+			<If Condition="ItemCount(39827) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39287" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39288) &lt; 1" >
+			<If Condition="ItemCount(39828) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39288" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39289) &lt; 1" >
+			<If Condition="ItemCount(39829) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39289" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39290) &lt; 1" >
+			<If Condition="ItemCount(39830) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39290" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39291) &lt; 1" >
+			<If Condition="ItemCount(39831) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39291" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39292) &lt; 1" >
+			<If Condition="ItemCount(39832) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39292" Count="1"/>
 			</If>
 			<If Condition="ItemCount(39836) &lt; 1" >
@@ -779,13 +801,15 @@
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
 			<!-- 41767 = Command XI. Very useful. -->
+			<WaitTimer WaitTime="1" />	
+			<!-- 41767 = Command XI. Very useful. -->
 			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+			<WaitTimer WaitTime="1" />
 		</While>
 					</While>				
 					<GetTo ZoneId="962" XYZ="-299.9291, 21.68615, -159.1658"/> 
 					<RunCode name="TurnIn"/>  
-					<TurnIn QuestId="69680" NpcId="1038525" XYZ="-296.5591, 21.84602, -162.1577"/>
-					<LLSmallTalk/>
+					<LLTurnIn QuestId="69680" NpcId="1038525" XYZ="-296.5591, 21.84602, -162.1577"/>
 				</If>
 			</If>			
     </If>
@@ -821,7 +845,7 @@
 			</If>
 			<If Condition="GetQuestStep(69668) == 255">
 				<GetTo ZoneId="962" XYZ="-279.287, 21.84602, -138.3546"/>  
-				<TurnIn QuestId="69668" NpcId="1039203" XYZ="-277.699, 21.84602, -139.0861"/>
+				<LLTurnIn QuestId="69668" NpcId="1039203" XYZ="-277.699, 21.84602, -139.0861"/>
 				<LLSmallTalk/>
 			</If>			
     </If>
@@ -858,25 +882,25 @@
 			<If Condition="ItemCount(39825) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39825" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39286) &lt; 1" >
+			<If Condition="ItemCount(39826) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39286" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39287) &lt; 1" >
+			<If Condition="ItemCount(39827) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39287" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39288) &lt; 1" >
+			<If Condition="ItemCount(39828) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39288" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39289) &lt; 1" >
+			<If Condition="ItemCount(39829) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39289" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39290) &lt; 1" >
+			<If Condition="ItemCount(39830) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39290" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39291) &lt; 1" >
+			<If Condition="ItemCount(39831) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39291" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39292) &lt; 1" >
+			<If Condition="ItemCount(39832) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39292" Count="1"/>
 			</If>
 			<If Condition="ItemCount(39836) &lt; 1" >
@@ -932,12 +956,15 @@
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
 			<!-- 41767 = Command XI. Very useful. -->
+			<WaitTimer WaitTime="1" />	
+			<!-- 41767 = Command XI. Very useful. -->
 			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+			<WaitTimer WaitTime="1" />
 		</While>
 					</While>				
 					<GetTo ZoneId="962" XYZ="-279.287, 21.84602, -138.3546"/>					
 					<RunCode name="TurnIn"/>  
-					<TurnIn QuestId="69669" NpcId="1039203" XYZ="-279.287, 21.84602, -138.3546"/>
+					<LLTurnIn QuestId="69669" NpcId="1039203" XYZ="-279.287, 21.84602, -138.3546"/>
 					<LLSmallTalk/>
 				</If>
 			</If>			
@@ -979,25 +1006,25 @@
 			<If Condition="ItemCount(39825) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39825" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39286) &lt; 1" >
+			<If Condition="ItemCount(39826) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39286" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39287) &lt; 1" >
+			<If Condition="ItemCount(39827) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39287" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39288) &lt; 1" >
+			<If Condition="ItemCount(39828) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39288" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39289) &lt; 1" >
+			<If Condition="ItemCount(39829) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39289" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39290) &lt; 1" >
+			<If Condition="ItemCount(39830) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39290" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39291) &lt; 1" >
+			<If Condition="ItemCount(39831) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39291" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39292) &lt; 1" >
+			<If Condition="ItemCount(39832) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39292" Count="1"/>
 			</If>
 			<If Condition="ItemCount(39836) &lt; 1" >
@@ -1053,12 +1080,15 @@
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
 			<!-- 41767 = Command XI. Very useful. -->
+			<WaitTimer WaitTime="1" />	
+			<!-- 41767 = Command XI. Very useful. -->
 			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+			<WaitTimer WaitTime="1" />
 		</While>
 					</While>				
 					<GetTo ZoneId="962" XYZ="-279.287, 21.84602, -138.3546"/>					
 					<RunCode name="TurnIn"/>  
-					<TurnIn QuestId="69670" NpcId="1039203" XYZ="-279.287, 21.84602, -138.3546"/>
+					<LLTurnIn QuestId="69670" NpcId="1039203" XYZ="-279.287, 21.84602, -138.3546"/>
 					<LLSmallTalk/>
 				</If>
 			</If>	
@@ -1099,25 +1129,25 @@
 			<If Condition="ItemCount(39825) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39825" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39286) &lt; 1" >
+			<If Condition="ItemCount(39826) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39286" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39287) &lt; 1" >
+			<If Condition="ItemCount(39827) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39287" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39288) &lt; 1" >
+			<If Condition="ItemCount(39828) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39288" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39289) &lt; 1" >
+			<If Condition="ItemCount(39829) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39289" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39290) &lt; 1" >
+			<If Condition="ItemCount(39830) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39290" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39291) &lt; 1" >
+			<If Condition="ItemCount(39831) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39291" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39292) &lt; 1" >
+			<If Condition="ItemCount(39832) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39292" Count="1"/>
 			</If>
 			<If Condition="ItemCount(39836) &lt; 1" >
@@ -1173,12 +1203,15 @@
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
 			<!-- 41767 = Command XI. Very useful. -->
+			<WaitTimer WaitTime="1" />	
+			<!-- 41767 = Command XI. Very useful. -->
 			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+			<WaitTimer WaitTime="1" />
 		</While>
 					</While>				
 					<GetTo ZoneId="962" XYZ="-279.287, 21.84602, -138.3546"/> 					
 					<RunCode name="TurnIn"/>  
-					<TurnIn QuestId="69671" NpcId="1039203" XYZ="-279.287, 21.84602, -138.3546"/>
+					<LLTurnIn QuestId="69671" NpcId="1039203" XYZ="-279.287, 21.84602, -138.3546"/>
 					<LLSmallTalk/>
 				</If>
 			</If>			
@@ -1265,25 +1298,25 @@
 			<If Condition="ItemCount(39825) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39825" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39286) &lt; 1" >
+			<If Condition="ItemCount(39826) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39286" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39287) &lt; 1" >
+			<If Condition="ItemCount(39827) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39287" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39288) &lt; 1" >
+			<If Condition="ItemCount(39828) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39288" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39289) &lt; 1" >
+			<If Condition="ItemCount(39829) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39289" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39290) &lt; 1" >
+			<If Condition="ItemCount(39830) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39290" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39291) &lt; 1" >
+			<If Condition="ItemCount(39831) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39291" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39292) &lt; 1" >
+			<If Condition="ItemCount(39832) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39292" Count="1"/>
 			</If>
 			<If Condition="ItemCount(39836) &lt; 1" >
@@ -1339,12 +1372,15 @@
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
 			<!-- 41767 = Command XI. Very useful. -->
+			<WaitTimer WaitTime="1" />	
+			<!-- 41767 = Command XI. Very useful. -->
 			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+			<WaitTimer WaitTime="1" />
 		</While>
 					</While>				
 					<GetTo ZoneId="962" XYZ="-279.287, 21.84602, -138.3546"/> 				
 					<RunCode name="TurnIn"/>  
-					<TurnIn QuestId="69673" NpcId="1039203" XYZ="-279.287, 21.84602, -138.3546"/>
+					<LLTurnIn QuestId="69673" NpcId="1039203" XYZ="-279.287, 21.84602, -138.3546"/>
 					<LLSmallTalk/>
 				</If>
 			</If>			
@@ -1383,7 +1419,7 @@
 			</If>			
 			<If Condition="GetQuestStep(69682) == 255">
 				<GetTo ZoneId="962" XYZ="-289.2391, 21.84602, -149.1731"/>  
-				<TurnIn QuestId="69682" NpcId="1039220" XYZ="-287.1595, 21.84602, -150.7745"/>
+				<LLTurnIn QuestId="69682" NpcId="1039220" XYZ="-287.1595, 21.84602, -150.7745"/>
 				<LLSmallTalk/>
 			</If>			
     </If>
@@ -1417,25 +1453,25 @@
 			<If Condition="ItemCount(39825) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39825" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39286) &lt; 1" >
+			<If Condition="ItemCount(39826) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39286" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39287) &lt; 1" >
+			<If Condition="ItemCount(39827) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39287" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39288) &lt; 1" >
+			<If Condition="ItemCount(39828) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39288" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39289) &lt; 1" >
+			<If Condition="ItemCount(39829) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39289" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39290) &lt; 1" >
+			<If Condition="ItemCount(39830) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39290" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39291) &lt; 1" >
+			<If Condition="ItemCount(39831) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39291" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39292) &lt; 1" >
+			<If Condition="ItemCount(39832) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39292" Count="1"/>
 			</If>
 			<If Condition="ItemCount(39836) &lt; 1" >
@@ -1491,12 +1527,15 @@
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
 			<!-- 41767 = Command XI. Very useful. -->
+			<WaitTimer WaitTime="1" />	
+			<!-- 41767 = Command XI. Very useful. -->
 			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+			<WaitTimer WaitTime="1" />
 		</While>
 					</While>				
 					<GetTo ZoneId="962" XYZ="-289.3946, 21.84602, -148.49"/>  				
 					<RunCode name="TurnIn"/>  
-					<TurnIn QuestId="69683" NpcId="1039220" XYZ="-289.3946, 21.84602, -148.49"/>
+					<LLTurnIn QuestId="69683" NpcId="1039220" XYZ="-289.3946, 21.84602, -148.49"/>
 					<LLSmallTalk/>
 				</If>
 			</If>			
@@ -1535,25 +1574,25 @@
 			<If Condition="ItemCount(39825) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39825" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39286) &lt; 1" >
+			<If Condition="ItemCount(39826) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39286" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39287) &lt; 1" >
+			<If Condition="ItemCount(39827) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39287" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39288) &lt; 1" >
+			<If Condition="ItemCount(39828) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39288" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39289) &lt; 1" >
+			<If Condition="ItemCount(39829) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39289" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39290) &lt; 1" >
+			<If Condition="ItemCount(39830) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39290" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39291) &lt; 1" >
+			<If Condition="ItemCount(39831) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39291" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39292) &lt; 1" >
+			<If Condition="ItemCount(39832) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39292" Count="1"/>
 			</If>
 			<If Condition="ItemCount(39836) &lt; 1" >
@@ -1609,12 +1648,15 @@
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
 			<!-- 41767 = Command XI. Very useful. -->
+			<WaitTimer WaitTime="1" />	
+			<!-- 41767 = Command XI. Very useful. -->
 			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+			<WaitTimer WaitTime="1" />
 		</While>
 					</While>
 					<GetTo ZoneId="962" XYZ="-289.3946, 21.84602, -148.49"/>  
 					<RunCode name="TurnIn"/>  
-					<TurnIn QuestId="69684" NpcId="1039220" XYZ="-289.3946, 21.84602, -148.49"/>
+					<LLTurnIn QuestId="69684" NpcId="1039220" XYZ="-289.3946, 21.84602, -148.49"/>
 					<LLSmallTalk/>
 				</If>
 			</If>			
@@ -1652,25 +1694,25 @@
 			<If Condition="ItemCount(39825) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39825" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39286) &lt; 1" >
+			<If Condition="ItemCount(39826) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39286" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39287) &lt; 1" >
+			<If Condition="ItemCount(39827) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39287" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39288) &lt; 1" >
+			<If Condition="ItemCount(39828) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39288" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39289) &lt; 1" >
+			<If Condition="ItemCount(39829) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39289" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39290) &lt; 1" >
+			<If Condition="ItemCount(39830) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39290" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39291) &lt; 1" >
+			<If Condition="ItemCount(39831) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39291" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39292) &lt; 1" >
+			<If Condition="ItemCount(39832) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39292" Count="1"/>
 			</If>
 			<If Condition="ItemCount(39836) &lt; 1" >
@@ -1726,12 +1768,15 @@
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
 			<!-- 41767 = Command XI. Very useful. -->
+			<WaitTimer WaitTime="1" />	
+			<!-- 41767 = Command XI. Very useful. -->
 			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+			<WaitTimer WaitTime="1" />
 		</While>
 					</While>				
 					<GetTo ZoneId="962" XYZ="-289.3946, 21.84602, -148.49"/>  
 					<RunCode name="TurnIn"/>  
-					<TurnIn QuestId="69685" NpcId="1039220" XYZ="-289.3946, 21.84602, -148.49"/>
+					<LLTurnIn QuestId="69685" NpcId="1039220" XYZ="-289.3946, 21.84602, -148.49"/>
 					<LLSmallTalk/>
 				</If>
 			</If>				
@@ -1791,7 +1836,7 @@
 			</If>
 			<If Condition="GetQuestStep(69686) == 255">
 				<GetTo ZoneId="962" XYZ="-289.9919, 21.81535, -148.3173"/>  
-				<TurnIn QuestId="69686" NpcId="1039220" XYZ="-287.1595, 21.84602, -150.7745"/>
+				<LLTurnIn QuestId="69686" NpcId="1039220" XYZ="-287.1595, 21.84602, -150.7745"/>
 				<LLSmallTalk/>
 			</If>			
     </If>
@@ -1829,25 +1874,25 @@
 			<If Condition="ItemCount(39825) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39825" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39286) &lt; 1" >
+			<If Condition="ItemCount(39826) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39286" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39287) &lt; 1" >
+			<If Condition="ItemCount(39827) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39287" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39288) &lt; 1" >
+			<If Condition="ItemCount(39828) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39288" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39289) &lt; 1" >
+			<If Condition="ItemCount(39829) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39289" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39290) &lt; 1" >
+			<If Condition="ItemCount(39830) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39290" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39291) &lt; 1" >
+			<If Condition="ItemCount(39831) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39291" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39292) &lt; 1" >
+			<If Condition="ItemCount(39832) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39292" Count="1"/>
 			</If>
 			<If Condition="ItemCount(39836) &lt; 1" >
@@ -1903,12 +1948,15 @@
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
 			<!-- 41767 = Command XI. Very useful. -->
+			<WaitTimer WaitTime="1" />	
+			<!-- 41767 = Command XI. Very useful. -->
 			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+			<WaitTimer WaitTime="1" />
 		</While>
 					</While>				
 					<GetTo ZoneId="962" XYZ="-289.3946, 21.84602, -148.49"/>  
 					<RunCode name="TurnIn"/>  
-					<TurnIn QuestId="69687" NpcId="1039220" XYZ="-289.3946, 21.84602, -148.49"/>
+					<LLTurnIn QuestId="69687" NpcId="1039220" XYZ="-289.3946, 21.84602, -148.49"/>
 					<LLSmallTalk/>
 				</If>
 			</If>			
@@ -1917,7 +1965,7 @@
     <!-- Sharlayan Cuisine (no xp) -->
 	</If>
 	
-	<If Condition="Core.Me.Levels[ClassJobType.Miner] &lt; 95 and not IsQuestCompleted(69693)">
+	<If Condition="Core.Me.Levels[ClassJobType.Miner] &lt; 95 and Core.Me.Levels[ClassJobType.Miner] &lt; Core.Me.Levels[ClassJobType.Botanist] and not IsQuestCompleted(69693)">
 	<!-- Miner/Botanist -->	
 	<If Condition="&MIN_BTN; == 1 and not IsQuestCompleted(69695)">	
 			<ChangeClass Job="Miner" Force="True"/>
@@ -1941,7 +1989,7 @@
 			</If>
 			<If Condition="GetQuestStep(69689) == 255">
 				<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/>  
-				<TurnIn QuestId="69689" NpcId="1038501" XYZ="-367.3305, 21.84602, -102.9832"/>
+				<LLTurnIn QuestId="69689" NpcId="1038501" XYZ="-367.3305, 21.84602, -102.9832"/>
 				<LLSmallTalk/>
 			</If>			
     </If>
@@ -1965,7 +2013,7 @@
 					</While>				
 					<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/> 
 					<RunCode name="TurnIn"/>  
-					<TurnIn QuestId="69690" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
+					<LLTurnIn QuestId="69690" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
 					<LLSmallTalk/>
 				</If>
 			</If>				
@@ -1993,7 +2041,7 @@
 					</While>				
 					<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/> 
 					<RunCode name="TurnIn"/>  
-					<TurnIn QuestId="69691" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
+					<LLTurnIn QuestId="69691" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
 					<LLSmallTalk/>
 				</If>
 			</If>				
@@ -2021,7 +2069,7 @@
 					</While>				
 					<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/> 
 					<RunCode name="TurnIn"/>  
-					<TurnIn QuestId="69692" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
+					<LLTurnIn QuestId="69692" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
 					<LLSmallTalk/>
 				</If>
 			</If>			
@@ -2070,7 +2118,7 @@
 			</If>
 			<If Condition="GetQuestStep(69693) == 255">
 				<GetTo ZoneId="962" XYZ="-365.2083, 21.84602, -104.4485"/>  
-				<TurnIn QuestId="69693" NpcId="1038501" XYZ="-367.3305, 21.84602, -102.9832"/>
+				<LLTurnIn QuestId="69693" NpcId="1038501" XYZ="-367.3305, 21.84602, -102.9832"/>
 				<LLSmallTalk/>
 			</If>			
     </If>		
@@ -2097,7 +2145,7 @@
 					</While>				
 					<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/> 
 					<RunCode name="TurnIn"/>  
-					<TurnIn QuestId="69694" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
+					<LLTurnIn QuestId="69694" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
 					<LLSmallTalk/>
 				</If>
 			</If>			
@@ -2131,7 +2179,7 @@
 			</If>
 			<If Condition="GetQuestStep(69689) == 255">
 				<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/>  
-				<TurnIn QuestId="69689" NpcId="1038501" XYZ="-367.3305, 21.84602, -102.9832"/>
+				<LLTurnIn QuestId="69689" NpcId="1038501" XYZ="-367.3305, 21.84602, -102.9832"/>
 				<LLSmallTalk/>
 			</If>			
     </If>
@@ -2155,7 +2203,7 @@
 					</While>				
 					<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/> 
 					<RunCode name="TurnIn"/>  
-					<TurnIn QuestId="69690" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
+					<LLTurnIn QuestId="69690" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
 					<LLSmallTalk/>
 				</If>
 			</If>				
@@ -2183,7 +2231,7 @@
 					</While>				
 					<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/> 
 					<RunCode name="TurnIn"/>  
-					<TurnIn QuestId="69691" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
+					<LLTurnIn QuestId="69691" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
 					<LLSmallTalk/>
 				</If>
 			</If>				
@@ -2211,7 +2259,7 @@
 					</While>				
 					<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/> 
 					<RunCode name="TurnIn"/>  
-					<TurnIn QuestId="69692" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
+					<LLTurnIn QuestId="69692" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
 					<LLSmallTalk/>
 				</If>
 			</If>			
@@ -2260,7 +2308,7 @@
 			</If>
 			<If Condition="GetQuestStep(69693) == 255">
 				<GetTo ZoneId="962" XYZ="-365.2083, 21.84602, -104.4485"/>  
-				<TurnIn QuestId="69693" NpcId="1038501" XYZ="-367.3305, 21.84602, -102.9832"/>
+				<LLTurnIn QuestId="69693" NpcId="1038501" XYZ="-367.3305, 21.84602, -102.9832"/>
 				<LLSmallTalk/>
 			</If>			
     </If>		
@@ -2287,7 +2335,7 @@
 					</While>				
 					<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/> 
 					<RunCode name="TurnIn"/>  
-					<TurnIn QuestId="69694" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
+					<LLTurnIn QuestId="69694" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
 					<LLSmallTalk/>
 				</If>
 			</If>			
@@ -2316,17 +2364,22 @@
           while (_target.Distance2D(Core.Me.Location) >= 4)
           {
             Navigator.PlayerMover.MoveTowards(_target);
-            await Coroutine.Sleep(100);
+            await Coroutine.Sleep(500);
           }
           
           Navigator.PlayerMover.MoveStop();
         }
 
         npcId.Interact();
-				await Buddy.Coroutines.Coroutine.Wait(10000, () => LlamaLibrary.RemoteWindows.SharlayanCraftworksSupply.Instance.IsOpen || Talk.DialogOpen);
+				await Coroutine.Sleep(3000);
+				await Buddy.Coroutines.Coroutine.Wait(20000, () => LlamaLibrary.RemoteWindows.SharlayanCraftworksSupply.Instance.IsOpen || Talk.DialogOpen);
 				
 				if (Talk.DialogOpen)
 					{
+
+						ff14bot.Helpers.Logging.Write($"In talk dialogue...");
+
+
 						while (Talk.DialogOpen)
 						{
 							Talk.Next();
@@ -2338,6 +2391,7 @@
 					
 				if (LlamaLibrary.RemoteWindows.SharlayanCraftworksSupply.Instance.IsOpen)
 				{
+						ff14bot.Helpers.Logging.Write($"Attempting to hand over items to Studium Delivery.");
 						await LlamaLibrary.RemoteWindows.SharlayanCraftworksSupply.Instance.HandOverItems();
 				}
 			]]> 
