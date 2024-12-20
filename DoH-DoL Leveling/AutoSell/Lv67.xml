@@ -52,6 +52,9 @@
 		<LLSellItem ItemIds="32005, 31961, 32006, 31962, 32007, 31963, 32008, 31964, 32009, 31965, 32010, 31966, 32011, 31967, 32012, 31968, 32013, 31969, 32014, 31970" Armory="true"/>
 		<LLSellItem ItemIds="19910, 12579, 12891, 5158, 19950" Armory="true"/>
 		<LLSellItem ItemIds="7671, 21800, 5594, 12900, 19982, 5536, 19868, 4672, 13258, 5143" Armory="true"/>
+
+		<!-- Muudhorn Ring of Slaying (from quest reward for the Shisui SB aether current) -->
+		<LLSellItem ItemIds="18263" Armory="true"/>
 		
 		<!-- Lv63-67 Stuff -->
 		<LLSellItem ItemIds="19877, 12578, 5346, 12539, 5395, 12598, 19931, 19978, 12595, 12642, 4811, 1012595, 1019978, 5282, 1005282, 5296, 5300, 5526, 5111, 5303, 5316, 12568, 19999, 20000, 5320, 19923, 12604, 1012604, 5496, 12636" Armory="true"/>
