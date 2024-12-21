@@ -375,11 +375,13 @@
 			</If>
 			<If Condition="ItemCount(39859) &lt; 2" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
+			</If>
+			<If Condition="ItemCount(39859) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
 			<WaitTimer WaitTime="1" />	
-			<!-- 41767 = Command XI. Very useful. -->
-			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+			<!-- 33926 = Command XI. Very useful. -->
+			<BuyInclusionShopItem ItemId="33926" Count="0"/>
 			<WaitTimer WaitTime="1" />
 		</While>
 					</While>				
@@ -497,12 +499,14 @@
 			</If>
 			<If Condition="ItemCount(39859) &lt; 2" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
+			</If>
+			<If Condition="ItemCount(39859) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
-			<!-- 41767 = Command XI. Very useful. -->
+			<!-- 33926 = Command XI. Very useful. -->
 			<WaitTimer WaitTime="1" />	
-			<!-- 41767 = Command XI. Very useful. -->
-			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+			<!-- 33926 = Command XI. Very useful. -->
+			<BuyInclusionShopItem ItemId="33926" Count="0"/>
 			<WaitTimer WaitTime="1" />
 		</While>
 					</While>				
@@ -620,12 +624,14 @@
 			</If>
 			<If Condition="ItemCount(39859) &lt; 2" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
+			</If>
+			<If Condition="ItemCount(39859) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
-			<!-- 41767 = Command XI. Very useful. -->
+			<!-- 33926 = Command XI. Very useful. -->
 			<WaitTimer WaitTime="1" />	
-			<!-- 41767 = Command XI. Very useful. -->
-			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+			<!-- 33926 = Command XI. Very useful. -->
+			<BuyInclusionShopItem ItemId="33926" Count="0"/>
 			<WaitTimer WaitTime="1" />
 		</While>
 					</While>				
@@ -798,12 +804,14 @@
 			</If>
 			<If Condition="ItemCount(39859) &lt; 2" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
+			</If>
+			<If Condition="ItemCount(39859) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
-			<!-- 41767 = Command XI. Very useful. -->
+			<!-- 33926 = Command XI. Very useful. -->
 			<WaitTimer WaitTime="1" />	
-			<!-- 41767 = Command XI. Very useful. -->
-			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+			<!-- 33926 = Command XI. Very useful. -->
+			<BuyInclusionShopItem ItemId="33926" Count="0"/>
 			<WaitTimer WaitTime="1" />
 		</While>
 					</While>				
@@ -953,12 +961,14 @@
 			</If>
 			<If Condition="ItemCount(39859) &lt; 2" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
+			</If>
+			<If Condition="ItemCount(39859) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
-			<!-- 41767 = Command XI. Very useful. -->
+			<!-- 33926 = Command XI. Very useful. -->
 			<WaitTimer WaitTime="1" />	
-			<!-- 41767 = Command XI. Very useful. -->
-			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+			<!-- 33926 = Command XI. Very useful. -->
+			<BuyInclusionShopItem ItemId="33926" Count="0"/>
 			<WaitTimer WaitTime="1" />
 		</While>
 					</While>				
@@ -1077,12 +1087,14 @@
 			</If>
 			<If Condition="ItemCount(39859) &lt; 2" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
+			</If>
+			<If Condition="ItemCount(39859) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
-			<!-- 41767 = Command XI. Very useful. -->
+			<!-- 33926 = Command XI. Very useful. -->
 			<WaitTimer WaitTime="1" />	
-			<!-- 41767 = Command XI. Very useful. -->
-			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+			<!-- 33926 = Command XI. Very useful. -->
+			<BuyInclusionShopItem ItemId="33926" Count="0"/>
 			<WaitTimer WaitTime="1" />
 		</While>
 					</While>				
@@ -1200,12 +1212,14 @@
 			</If>
 			<If Condition="ItemCount(39859) &lt; 2" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
+			</If>
+			<If Condition="ItemCount(39859) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
-			<!-- 41767 = Command XI. Very useful. -->
+			<!-- 33926 = Command XI. Very useful. -->
 			<WaitTimer WaitTime="1" />	
-			<!-- 41767 = Command XI. Very useful. -->
-			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+			<!-- 33926 = Command XI. Very useful. -->
+			<BuyInclusionShopItem ItemId="33926" Count="0"/>
 			<WaitTimer WaitTime="1" />
 		</While>
 					</While>				
@@ -1369,12 +1383,14 @@
 			</If>
 			<If Condition="ItemCount(39859) &lt; 2" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
+			</If>
+			<If Condition="ItemCount(39859) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
-			<!-- 41767 = Command XI. Very useful. -->
+			<!-- 33926 = Command XI. Very useful. -->
 			<WaitTimer WaitTime="1" />	
-			<!-- 41767 = Command XI. Very useful. -->
-			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+			<!-- 33926 = Command XI. Very useful. -->
+			<BuyInclusionShopItem ItemId="33926" Count="0"/>
 			<WaitTimer WaitTime="1" />
 		</While>
 					</While>				
@@ -1524,12 +1540,14 @@
 			</If>
 			<If Condition="ItemCount(39859) &lt; 2" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
+			</If>
+			<If Condition="ItemCount(39859) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
-			<!-- 41767 = Command XI. Very useful. -->
+			<!-- 33926 = Command XI. Very useful. -->
 			<WaitTimer WaitTime="1" />	
-			<!-- 41767 = Command XI. Very useful. -->
-			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+			<!-- 33926 = Command XI. Very useful. -->
+			<BuyInclusionShopItem ItemId="33926" Count="0"/>
 			<WaitTimer WaitTime="1" />
 		</While>
 					</While>				
@@ -1645,12 +1663,14 @@
 			</If>
 			<If Condition="ItemCount(39859) &lt; 2" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
+			</If>
+			<If Condition="ItemCount(39859) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
-			<!-- 41767 = Command XI. Very useful. -->
+			<!-- 33926 = Command XI. Very useful. -->
 			<WaitTimer WaitTime="1" />	
-			<!-- 41767 = Command XI. Very useful. -->
-			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+			<!-- 33926 = Command XI. Very useful. -->
+			<BuyInclusionShopItem ItemId="33926" Count="0"/>
 			<WaitTimer WaitTime="1" />
 		</While>
 					</While>
@@ -1765,12 +1785,14 @@
 			</If>
 			<If Condition="ItemCount(39859) &lt; 2" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
+			</If>
+			<If Condition="ItemCount(39859) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
-			<!-- 41767 = Command XI. Very useful. -->
+			<!-- 33926 = Command XI. Very useful. -->
 			<WaitTimer WaitTime="1" />	
-			<!-- 41767 = Command XI. Very useful. -->
-			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+			<!-- 33926 = Command XI. Very useful. -->
+			<BuyInclusionShopItem ItemId="33926" Count="0"/>
 			<WaitTimer WaitTime="1" />
 		</While>
 					</While>				
@@ -1945,12 +1967,14 @@
 			</If>
 			<If Condition="ItemCount(39859) &lt; 2" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
+			</If>
+			<If Condition="ItemCount(39859) &lt; 1" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
-			<!-- 41767 = Command XI. Very useful. -->
+			<!-- 33926 = Command XI. Very useful. -->
 			<WaitTimer WaitTime="1" />	
-			<!-- 41767 = Command XI. Very useful. -->
-			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+			<!-- 33926 = Command XI. Very useful. -->
+			<BuyInclusionShopItem ItemId="33926" Count="0"/>
 			<WaitTimer WaitTime="1" />
 		</While>
 					</While>				
