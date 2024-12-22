@@ -35,7 +35,7 @@ Authors:  Kayla / Angles24
 	
 	<!-- 80-84 -->
 	<!-- CRP: Rarefied Horse Chestnut Kasa -->
-	<If Condition="(Core.Me.Levels[ClassJobType.Carpenter] &gt; 79) and  (Core.Me.Levels[ClassJobType.Carpenter] &lt; 84)">
+	<While Condition="(Core.Me.Levels[ClassJobType.Carpenter] &gt; 79) and  (Core.Me.Levels[ClassJobType.Carpenter] &lt; 84)">
 		<If Condition="ClassName != ClassJobType.Carpenter">
 			<ChangeClass Job="Carpenter"/>
 		</If>
@@ -44,7 +44,7 @@ Authors:  Kayla / Angles24
 			<WaitTimer WaitTime="5"/>
 			<RunCode Name="SetLisbethJson1" />
 		</If>
-	</If>
+	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
 		<LLTurnInCollectables/>
@@ -59,7 +59,7 @@ Authors:  Kayla / Angles24
 	</While>
 	
 	<!-- BSM: Rarefied High Durium Pistol -->
-	<If Condition="(Core.Me.Levels[ClassJobType.Blacksmith] &gt; 79) and  (Core.Me.Levels[ClassJobType.Blacksmith] &lt; 88)">
+	<While Condition="(Core.Me.Levels[ClassJobType.Blacksmith] &gt; 79) and  (Core.Me.Levels[ClassJobType.Blacksmith] &lt; 88)">
 		<If Condition="ClassName != ClassJobType.Blacksmith">
 			<ChangeClass Job="Blacksmith"/>
 		</If>
@@ -68,7 +68,7 @@ Authors:  Kayla / Angles24
 			<WaitTimer WaitTime="5"/>
 			<RunCode Name="SetLisbethJson2" />
 		</If>
-	</If>
+	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
 		<LLTurnInCollectables/>
@@ -82,7 +82,7 @@ Authors:  Kayla / Angles24
 		</While>
 	</While>
 	<!-- ALC: Rarefied Dwarven Mythril Grimoire (Lv80) -->
-	<If Condition="(Core.Me.Levels[ClassJobType.Alchemist] &gt; 79) and  (Core.Me.Levels[ClassJobType.Alchemist] &lt; 87)">
+	<While Condition="(Core.Me.Levels[ClassJobType.Alchemist] &gt; 79) and  (Core.Me.Levels[ClassJobType.Alchemist] &lt; 87)">
 		<If Condition="ClassName != ClassJobType.Alchemist">
 			<ChangeClass Job="Alchemist"/>
 		</If>
@@ -91,7 +91,7 @@ Authors:  Kayla / Angles24
 			<WaitTimer WaitTime="5"/>
 			<RunCode Name="SetLisbethJson3" />
 		</If>
-	</If>
+	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
 		<LLTurnInCollectables/>
@@ -105,7 +105,7 @@ Authors:  Kayla / Angles24
 		</While>
 	</While>
 	<!-- GSM: Rarefied High Durium Milpreves -->
-	<If Condition="(Core.Me.Levels[ClassJobType.Goldsmith] &gt; 79) and  (Core.Me.Levels[ClassJobType.Goldsmith] &lt; 84)">
+	<While Condition="(Core.Me.Levels[ClassJobType.Goldsmith] &gt; 79) and  (Core.Me.Levels[ClassJobType.Goldsmith] &lt; 84)">
 		<If Condition="ClassName != ClassJobType.Goldsmith">
 			<ChangeClass Job="Goldsmith"/>
 		</If>
@@ -114,7 +114,7 @@ Authors:  Kayla / Angles24
 			<WaitTimer WaitTime="5"/>
 			<RunCode Name="SetLisbethJson4" />
 		</If>
-	</If>
+	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
 		<LLTurnInCollectables/>
@@ -128,7 +128,7 @@ Authors:  Kayla / Angles24
 		</While>
 	</While>
 	<!-- LTW: Leves to Lv82 (6 allowances) -->
-	<If Condition="(Core.Me.Levels[ClassJobType.Leatherworker] &gt; 79) and  (Core.Me.Levels[ClassJobType.Leatherworker] &lt; 82)">
+	<While Condition="(Core.Me.Levels[ClassJobType.Leatherworker] &gt; 79) and  (Core.Me.Levels[ClassJobType.Leatherworker] &lt; 82)">
 		<If Condition="ClassName != ClassJobType.Leatherworker">
 			<ChangeClass Job="Leatherworker"/>
 		</If>
@@ -137,7 +137,7 @@ Authors:  Kayla / Angles24
 			<WaitTimer WaitTime="5"/>
 			<RunCode Name="SetLisbethJson5" />
 		</If>
-	</If>
+	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
 		<LLTurnInCollectables/>
@@ -151,7 +151,7 @@ Authors:  Kayla / Angles24
 		</While>
 	</While>
 	<!-- LTW: Leves to Lv84 (5 allowances) -->
-	<If Condition="(Core.Me.Levels[ClassJobType.Leatherworker] &gt; 81) and  (Core.Me.Levels[ClassJobType.Leatherworker] &lt; 84)">
+	<While Condition="(Core.Me.Levels[ClassJobType.Leatherworker] &gt; 81) and  (Core.Me.Levels[ClassJobType.Leatherworker] &lt; 84)">
 		<If Condition="ClassName != ClassJobType.Leatherworker">
 			<ChangeClass Job="Leatherworker"/>
 		</If>
@@ -160,7 +160,7 @@ Authors:  Kayla / Angles24
 			<WaitTimer WaitTime="5"/>
 			<RunCode Name="SetLisbethJson6" />
 		</If>
-	</If>
+	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
 		<LLTurnInCollectables/>
@@ -174,7 +174,7 @@ Authors:  Kayla / Angles24
 		</While>
 	</While>
 	<!-- WVR: Leves to Lv82 (6 allowances) -->
-	<If Condition="(Core.Me.Levels[ClassJobType.Weaver] &gt; 79) and  (Core.Me.Levels[ClassJobType.Weaver] &lt; 82)">
+	<While Condition="(Core.Me.Levels[ClassJobType.Weaver] &gt; 79) and  (Core.Me.Levels[ClassJobType.Weaver] &lt; 82)">
 		<If Condition="ClassName != ClassJobType.Weaver">
 			<ChangeClass Job="Weaver"/>
 		</If>
@@ -183,7 +183,7 @@ Authors:  Kayla / Angles24
 			<WaitTimer WaitTime="5"/>
 			<RunCode Name="SetLisbethJson7" />
 		</If>
-	</If>
+	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
 		<LLTurnInCollectables/>
@@ -197,7 +197,7 @@ Authors:  Kayla / Angles24
 		</While>
 	</While>
 	<!-- WVR: Leves to Lv86 (9 allowances) -->
-	<If Condition="(Core.Me.Levels[ClassJobType.Weaver] &gt; 81) and  (Core.Me.Levels[ClassJobType.Weaver] &lt; 86)">
+	<While Condition="(Core.Me.Levels[ClassJobType.Weaver] &gt; 81) and  (Core.Me.Levels[ClassJobType.Weaver] &lt; 86)">
 		<If Condition="ClassName != ClassJobType.Weaver">
 			<ChangeClass Job="Weaver"/>
 		</If>
@@ -206,7 +206,7 @@ Authors:  Kayla / Angles24
 			<WaitTimer WaitTime="5"/>
 			<RunCode Name="SetLisbethJson8" />
 		</If>
-	</If>
+	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
 		<LLTurnInCollectables/>
@@ -220,7 +220,7 @@ Authors:  Kayla / Angles24
 		</While>
 	</While>
 	<!-- ARM: Leves to Lv82 (6 allowances) -->
-	<If Condition="(Core.Me.Levels[ClassJobType.Armorer] &gt; 79) and  (Core.Me.Levels[ClassJobType.Armorer] &lt; 82)">
+	<While Condition="(Core.Me.Levels[ClassJobType.Armorer] &gt; 79) and  (Core.Me.Levels[ClassJobType.Armorer] &lt; 82)">
 		<If Condition="ClassName != ClassJobType.Armorer">
 			<ChangeClass Job="Armorer"/>
 		</If>
@@ -229,7 +229,7 @@ Authors:  Kayla / Angles24
 			<WaitTimer WaitTime="5"/>
 			<RunCode Name="SetLisbethJson9" />
 		</If>
-	</If>
+	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
 		<LLTurnInCollectables/>
@@ -243,7 +243,7 @@ Authors:  Kayla / Angles24
 		</While>
 	</While>
 	<!-- ARM: Leves to Lv84 (5 allowances) -->
-	<If Condition="(Core.Me.Levels[ClassJobType.Armorer] &gt; 81) and  (Core.Me.Levels[ClassJobType.Armorer] &lt; 84)">
+	<While Condition="(Core.Me.Levels[ClassJobType.Armorer] &gt; 81) and  (Core.Me.Levels[ClassJobType.Armorer] &lt; 84)">
 		<If Condition="ClassName != ClassJobType.Armorer">
 			<ChangeClass Job="Armorer"/>
 		</If>
@@ -252,7 +252,7 @@ Authors:  Kayla / Angles24
 			<WaitTimer WaitTime="5"/>
 			<RunCode Name="SetLisbethJson10" />
 		</If>
-	</If>
+	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
 		<LLTurnInCollectables/>
@@ -266,7 +266,7 @@ Authors:  Kayla / Angles24
 		</While>
 	</While>
 	<!-- CUL: Rarefied Lemonade to Lv84 -->
-	<If Condition="(Core.Me.Levels[ClassJobType.Culinarian] &gt; 79) and  (Core.Me.Levels[ClassJobType.Culinarian] &lt; 84)">
+	<While Condition="(Core.Me.Levels[ClassJobType.Culinarian] &gt; 79) and  (Core.Me.Levels[ClassJobType.Culinarian] &lt; 84)">
 		<If Condition="ClassName != ClassJobType.Culinarian">
 			<ChangeClass Job="Culinarian"/>
 		</If>
@@ -275,7 +275,7 @@ Authors:  Kayla / Angles24
 			<WaitTimer WaitTime="5"/>
 			<RunCode Name="SetLisbethJson11" />
 		</If>
-	</If>
+	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
 		<LLTurnInCollectables/>
@@ -290,7 +290,7 @@ Authors:  Kayla / Angles24
 	</While>
 	
 	<!-- CRP 84-86 -->
-	<If Condition="(Core.Me.Levels[ClassJobType.Carpenter] &gt; 83) and  (Core.Me.Levels[ClassJobType.Carpenter] &lt; 86)">
+	<While Condition="(Core.Me.Levels[ClassJobType.Carpenter] &gt; 83) and  (Core.Me.Levels[ClassJobType.Carpenter] &lt; 86)">
 		<If Condition="ClassName != ClassJobType.Carpenter">
 			<ChangeClass Job="Carpenter"/>
 		</If>
@@ -299,7 +299,7 @@ Authors:  Kayla / Angles24
 			<WaitTimer WaitTime="5"/>
 			<RunCode Name="SetLisbethJson12" />
 		</If>
-	</If>
+	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
 		<LLTurnInCollectables/>
@@ -314,7 +314,7 @@ Authors:  Kayla / Angles24
 	</While>
 	
 	<!-- CRP 86-88 -->
-	<If Condition="(Core.Me.Levels[ClassJobType.Carpenter] &gt; 85) and  (Core.Me.Levels[ClassJobType.Carpenter] &lt; 88)">
+	<While Condition="(Core.Me.Levels[ClassJobType.Carpenter] &gt; 85) and  (Core.Me.Levels[ClassJobType.Carpenter] &lt; 88)">
 		<If Condition="ClassName != ClassJobType.Carpenter">
 			<ChangeClass Job="Carpenter"/>
 		</If>
@@ -323,7 +323,7 @@ Authors:  Kayla / Angles24
 			<WaitTimer WaitTime="5"/>
 			<RunCode Name="SetLisbethJson13" />
 		</If>
-	</If>
+	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
 		<LLTurnInCollectables/>
@@ -338,7 +338,7 @@ Authors:  Kayla / Angles24
 	</While>
 	
 	<!-- ARM 84-87 -->
-	<If Condition="(Core.Me.Levels[ClassJobType.Armorer] &gt; 83) and  (Core.Me.Levels[ClassJobType.Armorer] &lt; 87)">
+	<While Condition="(Core.Me.Levels[ClassJobType.Armorer] &gt; 83) and  (Core.Me.Levels[ClassJobType.Armorer] &lt; 87)">
 		<If Condition="ClassName != ClassJobType.Armorer">
 			<ChangeClass Job="Armorer"/>
 		</If>
@@ -347,7 +347,7 @@ Authors:  Kayla / Angles24
 			<WaitTimer WaitTime="5"/>
 			<RunCode Name="SetLisbethJson14" />
 		</If>
-	</If>
+	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
 		<LLTurnInCollectables/>
@@ -362,7 +362,7 @@ Authors:  Kayla / Angles24
 	</While>
 	
 	<!-- GSM 84-88 -->
-	<If Condition="(Core.Me.Levels[ClassJobType.Goldsmith] &gt; 83) and  (Core.Me.Levels[ClassJobType.Goldsmith] &lt; 88)">
+	<While Condition="(Core.Me.Levels[ClassJobType.Goldsmith] &gt; 83) and  (Core.Me.Levels[ClassJobType.Goldsmith] &lt; 88)">
 		<If Condition="ClassName != ClassJobType.Goldsmith">
 			<ChangeClass Job="Goldsmith"/>
 		</If>
@@ -371,7 +371,7 @@ Authors:  Kayla / Angles24
 			<WaitTimer WaitTime="5"/>
 			<RunCode Name="SetLisbethJson15" />
 		</If>
-	</If>
+	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
 		<LLTurnInCollectables/>
@@ -386,7 +386,7 @@ Authors:  Kayla / Angles24
 	</While>
 	
 	<!-- CUL 84-88 -->
-	<If Condition="(Core.Me.Levels[ClassJobType.Culinarian] &gt; 83) and  (Core.Me.Levels[ClassJobType.Culinarian] &lt; 88)">
+	<While Condition="(Core.Me.Levels[ClassJobType.Culinarian] &gt; 83) and  (Core.Me.Levels[ClassJobType.Culinarian] &lt; 88)">
 		<If Condition="ClassName != ClassJobType.Culinarian">
 			<ChangeClass Job="Culinarian"/>
 		</If>
@@ -395,7 +395,7 @@ Authors:  Kayla / Angles24
 			<WaitTimer WaitTime="5"/>
 			<RunCode Name="SetLisbethJson16" />
 		</If>
-	</If>
+	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
 		<LLTurnInCollectables/>
@@ -410,7 +410,7 @@ Authors:  Kayla / Angles24
 	</While>
 	
 	<!-- LTW: Leves to Lv87 (9 allowances) -->
-	<If Condition="(Core.Me.Levels[ClassJobType.Leatherworker] &gt; 83) and  (Core.Me.Levels[ClassJobType.Leatherworker] &lt; 87)">
+	<While Condition="(Core.Me.Levels[ClassJobType.Leatherworker] &gt; 83) and  (Core.Me.Levels[ClassJobType.Leatherworker] &lt; 87)">
 		<If Condition="ClassName != ClassJobType.Leatherworker">
 			<ChangeClass Job="Leatherworker"/>
 		</If>
@@ -419,7 +419,7 @@ Authors:  Kayla / Angles24
 			<WaitTimer WaitTime="5"/>
 			<RunCode Name="SetLisbethJson17" />
 		</If>
-	</If>
+	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
 		<LLTurnInCollectables/>
@@ -434,7 +434,7 @@ Authors:  Kayla / Angles24
 	</While>
 	
 	<!-- WVR: Leves to Lv88 (5 allowances) -->
-	<If Condition="(Core.Me.Levels[ClassJobType.Weaver] &gt; 85) and  (Core.Me.Levels[ClassJobType.Weaver] &lt; 88)">
+	<While Condition="(Core.Me.Levels[ClassJobType.Weaver] &gt; 85) and  (Core.Me.Levels[ClassJobType.Weaver] &lt; 88)">
 		<If Condition="ClassName != ClassJobType.Weaver">
 			<ChangeClass Job="Weaver"/>
 		</If>
@@ -443,7 +443,7 @@ Authors:  Kayla / Angles24
 			<WaitTimer WaitTime="5"/>
 			<RunCode Name="SetLisbethJson18" />
 		</If>
-	</If>
+	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
 		<LLTurnInCollectables/>
@@ -458,7 +458,7 @@ Authors:  Kayla / Angles24
 	</While>
 	
 	<!-- CRP 88-90 -->
-	<If Condition="(Core.Me.Levels[ClassJobType.Carpenter] &gt; 87) and  (Core.Me.Levels[ClassJobType.Carpenter] &lt; 90)">
+	<While Condition="(Core.Me.Levels[ClassJobType.Carpenter] &gt; 87) and  (Core.Me.Levels[ClassJobType.Carpenter] &lt; 90)">
 		<If Condition="ClassName != ClassJobType.Carpenter">
 			<ChangeClass Job="Carpenter"/>
 		</If>
@@ -467,7 +467,7 @@ Authors:  Kayla / Angles24
 			<WaitTimer WaitTime="5"/>
 			<RunCode Name="SetLisbethJson19" />
 		</If>
-	</If>
+	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
 		<LLTurnInCollectables/>
@@ -482,7 +482,7 @@ Authors:  Kayla / Angles24
 	</While>
 	
 	<!-- BSM 88-90 -->
-	<If Condition="(Core.Me.Levels[ClassJobType.Blacksmith] &gt; 87) and  (Core.Me.Levels[ClassJobType.Blacksmith] &lt; 90)">
+	<While Condition="(Core.Me.Levels[ClassJobType.Blacksmith] &gt; 87) and  (Core.Me.Levels[ClassJobType.Blacksmith] &lt; 90)">
 		<If Condition="ClassName != ClassJobType.Blacksmith">
 			<ChangeClass Job="Blacksmith"/>
 		</If>
@@ -491,7 +491,7 @@ Authors:  Kayla / Angles24
 			<WaitTimer WaitTime="5"/>
 			<RunCode Name="SetLisbethJson20" />
 		</If>
-	</If>
+	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
 		<LLTurnInCollectables/>
@@ -506,7 +506,7 @@ Authors:  Kayla / Angles24
 	</While>
 	
 	<!-- GSM 88-90 -->
-	<If Condition="(Core.Me.Levels[ClassJobType.Goldsmith] &gt; 87) and  (Core.Me.Levels[ClassJobType.Goldsmith] &lt; 90)">
+	<While Condition="(Core.Me.Levels[ClassJobType.Goldsmith] &gt; 87) and  (Core.Me.Levels[ClassJobType.Goldsmith] &lt; 90)">
 		<If Condition="ClassName != ClassJobType.Goldsmith">
 			<ChangeClass Job="Goldsmith"/>
 		</If>
@@ -515,7 +515,7 @@ Authors:  Kayla / Angles24
 			<WaitTimer WaitTime="5"/>
 			<RunCode Name="SetLisbethJson21" />
 		</If>
-	</If>
+	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
 		<LLTurnInCollectables/>
@@ -530,7 +530,7 @@ Authors:  Kayla / Angles24
 	</While>
 	
 	<!-- CUL 88-90 -->
-	<If Condition="(Core.Me.Levels[ClassJobType.Culinarian] &gt; 87) and  (Core.Me.Levels[ClassJobType.Culinarian] &lt; 90)">
+	<While Condition="(Core.Me.Levels[ClassJobType.Culinarian] &gt; 87) and  (Core.Me.Levels[ClassJobType.Culinarian] &lt; 90)">
 		<If Condition="ClassName != ClassJobType.Culinarian">
 			<ChangeClass Job="Culinarian"/>
 		</If>
@@ -539,7 +539,7 @@ Authors:  Kayla / Angles24
 			<WaitTimer WaitTime="5"/>
 			<RunCode Name="SetLisbethJson22" />
 		</If>
-	</If>
+	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
 		<LLTurnInCollectables/>
@@ -554,7 +554,7 @@ Authors:  Kayla / Angles24
 	</While>
 	
 	<!-- WVR: Leves to Lv90 (5 allowances) -->
-	<If Condition="(Core.Me.Levels[ClassJobType.Weaver] &gt; 87) and  (Core.Me.Levels[ClassJobType.Weaver] &lt; 90)">
+	<While Condition="(Core.Me.Levels[ClassJobType.Weaver] &gt; 87) and  (Core.Me.Levels[ClassJobType.Weaver] &lt; 90)">
 		<If Condition="ClassName != ClassJobType.Weaver">
 			<ChangeClass Job="Weaver"/>
 		</If>
@@ -563,7 +563,7 @@ Authors:  Kayla / Angles24
 			<WaitTimer WaitTime="5"/>
 			<RunCode Name="SetLisbethJson23" />
 		</If>
-	</If>
+	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
 		<LLTurnInCollectables/>

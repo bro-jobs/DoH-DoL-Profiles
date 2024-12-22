@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Profile [
+<!ENTITY crp "1">
+<!ENTITY bsm "1">
+<!ENTITY arm "1">
+<!ENTITY gsm "1">
+<!ENTITY ltw "1">
+<!ENTITY wvr "1">
+<!ENTITY alc "1">
+<!ENTITY cul "1">
+]>
 <!--
 Blank Profile
 CRP - 1 Maple Lumber 5361 // 10 Ash Lumber 5364 // 16 Elm Lumber 5367
@@ -17,12 +27,14 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 	<Order>
 	
 
-  <!-- FIRST SET OF ORDER -->
+  <!-- FIRST SET OF ORDERS (Levels all classes to 5) -->
 
+  <If Condition="not IsQuestCompleted(66071)">
   <RunCode Name="SetLisbethJson1" />
+  </If>
 
   <!-- Change Class WVR - 1 Hempen Yarn60 5333 // 5 Undyed Hempen Cloth 5324 // 12 Cotton Yarn60 5334 // 17 Undyed Cotton Cloth 5325 -->
-	<While Condition="ClassName != ClassJobType.Weaver">
+  <While Condition="ClassName != ClassJobType.Weaver">
 		<ChangeClass Job="Weaver"/>
 	</While>
 	<If Condition="ClassName == ClassJobType.Weaver">
@@ -44,7 +56,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
           <Lisbeth Json="[{'Item': 5333,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Weaver','Enabled': true,'Manual': 0,'Medicine': 0, 'AmountMode': 'Restock'}]"/>
         </While>
         <GetTo ZoneId="131" XYZ="157.3662, 7.792007, 98.92419"/>
-        <TurnIn QuestId="66071" ItemId="5333" NpcId="1003818" AllowHq="True" XYZ="157.3662, 7.792007, 98.92419"/>
+        <LLTurnIn QuestId="66071" ItemId="5333" NpcId="1003818" AllowHq="True" XYZ="157.3662, 7.792007, 98.92419"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
@@ -69,11 +81,12 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
           <Lisbeth Json="[{'Item': 3274,'Group': 0,'Amount': 3,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Weaver','Enabled': true,'Manual': 0,'Medicine': 0, 'AmountMode': 'Restock'}]"/>
         </While>
         <GetTo ZoneId="131" XYZ="157.3662, 7.792007, 98.92419"/>
-        <TurnIn QuestId="66123" ItemIds="3274, 3274, 3274" AllowHq="True" NpcId="1003818" XYZ="157.3662, 7.792007, 98.92419"/>
+        <LLTurnIn QuestId="66123" ItemIds="3274, 3274, 3274" AllowHq="True" NpcId="1003818" XYZ="157.3662, 7.792007, 98.92419"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
+    </If>
 
   <!-- Change Class LTW - 1 Leather 5257 // 8 Hard Leather 5276 // 17 Aldgoat Leather 5277 -->
 	<While Condition="ClassName != ClassJobType.Leatherworker">
@@ -121,11 +134,12 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
           <Lisbeth Json="[{'Item': 4304,'Group': 0,'Amount': 3,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0, 'AmountMode': 'Restock'}]"/>
         </While>
         <GetTo ZoneId="133" XYZ="71.97681, 8, -166.5217"/>
-        <LLTurnIn QuestId="65642" ItemIds="4304, 4304, 4304" NpcId="1000691" AllowHq="True" XYZ="71.97681, 8, -166.5217"/>
+        <LLTurnIn QuestId="65642" ItemIds="4304, 4304, 4304" NpcId="1000691" AllowHq="True" XYZ="71.97681, 8, -166.5217" RewardSlot="1"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
+    </If>
 
   <!-- Change Class GSM - 1 Copper Ingot 5062 // 5 Ragstone Whetstone 5258 // 14 Brass Ingot 5063 -->
 	<While Condition="ClassName != ClassJobType.Goldsmith">
@@ -148,11 +162,12 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
           <Lisbeth Json="[{'Item': 5062,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Goldsmith','Enabled': true,'Manual': 0,'Medicine': 0, 'AmountMode': 'Restock'}]"/>
         </While>
         <GetTo ZoneId="131" XYZ="-25.16223, 12.2, 110.7957"/>
-        <TurnIn QuestId="66146" ItemId="5062" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957"/>
+        <LLTurnIn QuestId="66146" ItemId="5062" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
+    
 
       	<!-- Grind to 5 -->
 			<While Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 5">
@@ -173,11 +188,12 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
           <Lisbeth Json="[{'Item': 4305,'Group': 0,'Amount': 3,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Goldsmith','Enabled': true,'Manual': 0,'Medicine': 0, 'AmountMode': 'Restock'}]"/>
         </While>
         <GetTo ZoneId="131" XYZ="-25.16223, 12.2, 110.7957"/>
-        <TurnIn QuestId="66147" ItemIds="4305, 4305, 4305" AllowHq="True, True, True" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957"/>
+        <LLTurnIn QuestId="66147" ItemIds="4305, 4305, 4305" AllowHq="True, True, True" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957" RewardSlot="2"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
+    </If>
 
   <!-- Change Class BSM - 1 Bronze Ingot 5056 // 5 Bronze Rivets 5091 // 16 Iron Ingot 5057-->
 	<While Condition="ClassName != ClassJobType.Blacksmith">
@@ -200,7 +216,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
           <Lisbeth Json="[{'Item': 5056,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Blacksmith','Enabled': true,'Manual': 0,'Medicine': 0, 'AmountMode': 'Restock'}]"/>
         </While>
         <GetTo ZoneId="128" XYZ="-31.26581, 44.49997, 185.5344"/>
-        <TurnIn QuestId="65828" ItemId="5056" AllowHq="True" NpcId="1000997" XYZ="-31.26581, 44.49997, 185.5344"/>
+        <LLTurnIn QuestId="65828" ItemId="5056" AllowHq="True" NpcId="1000997" XYZ="-31.26581, 44.49997, 185.5344"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
@@ -225,11 +241,12 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
           <Lisbeth Json="[{'Item': 2341,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Blacksmith','Enabled': true,'Manual': 0,'Medicine': 0, 'AmountMode': 'Restock'}]"/>
         </While>
         <GetTo ZoneId="128" XYZ="-31.26581, 44.49997, 185.5344"/>
-        <TurnIn QuestId="65829" ItemIds="2341, 2341, 2341" AllowHq="True" NpcId="1000997" XYZ="-31.26581, 44.49997, 185.5344"/>
+        <LLTurnIn QuestId="65829" ItemIds="2341, 2341, 2341" AllowHq="True" NpcId="1000997" XYZ="-31.26581, 44.49997, 185.5344" RewardSlot="3"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
+    </If>
 
   	<!-- Change Class CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 Gelatin150 4863-->
 	<While Condition="ClassName != ClassJobType.Culinarian">
@@ -252,7 +269,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
           <Lisbeth Json="[{'Item': 4849,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Culinarian','Enabled': true,'Manual': 0,'Medicine': 0, 'AmountMode': 'Restock'}]"/>
         </While>
         <GetTo ZoneId="128" XYZ="-54.64258, 43.99998, -151.2322"/>
-        <TurnIn QuestId="65790" ItemId="4849" NpcId="1000947" AllowHq="True" XYZ="-54.64258, 43.99998, -151.2322"/>
+        <LLTurnIn QuestId="65790" ItemId="4849" NpcId="1000947" AllowHq="True" XYZ="-54.64258, 43.99998, -151.2322"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
@@ -277,11 +294,12 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
           <Lisbeth Json="[{'Item': 4660,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Culinarian','Enabled': true,'Manual': 0,'Medicine': 0, 'AmountMode': 'Restock'}]"/>
         </While>
         <GetTo ZoneId="128" XYZ="-66.26996, 42.29999, -162.9207"/>
-        <TurnIn QuestId="65791" ItemId="4660" NpcId="1000950" AllowHq="True" XYZ="-66.26996, 42.29999, -162.9207"/>
+        <LLTurnIn QuestId="65791" ItemId="4660" NpcId="1000950" AllowHq="True" XYZ="-66.26996, 42.29999, -162.9207" RewardSlot="0"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
+    </If>
 
   <!-- Change Class CRP - 1 Maple Lumber 5361 // 10 Ash Lumber 5364 // 16 Elm Lumber 5367 -->
 	<While Condition="ClassName != ClassJobType.Carpenter">
@@ -304,7 +322,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
           <Lisbeth Json="[{'Item': 5361,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0, 'AmountMode': 'Restock'}]"/>
         </While>
         <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
-        <TurnIn QuestId="65741" ItemId="5361" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
+        <LLTurnIn QuestId="65741" ItemId="5361" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
@@ -329,11 +347,12 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
           <Lisbeth Json="[{'Item': 2219,'Group': 0,'Amount': 3,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0, 'AmountMode': 'Restock'}]"/>
         </While>
         <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
-        <TurnIn QuestId="65675" ItemIds="2219, 2219, 2219" AllowHq="True" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
+        <LLTurnIn QuestId="65675" ItemIds="2219, 2219, 2219" AllowHq="True" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
+    </If>
 
 	<!-- Change Class ALC - 1 Distilled Water 5487 // 5 Antidote90 4564 // 10 Beeswax 5515 // 15 Clove Oil90 4856 -->
 	<While Condition="ClassName != ClassJobType.Alchemist">
@@ -356,7 +375,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
           <Lisbeth Json="[{'Item': 5487,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Alchemist','Enabled': true,'Manual': 0,'Medicine': 0, 'AmountMode': 'Restock'}]"/>
         </While>
         <GetTo ZoneId="131" XYZ="-98.8938, 40.19999, 120.8362"/>
-        <TurnIn QuestId="66113" ItemId="5487" NpcId="1002299" AllowHq="True" XYZ="-98.8938, 40.19999, 120.8362"/>
+        <LLTurnIn QuestId="66113" ItemId="5487" NpcId="1002299" AllowHq="True" XYZ="-98.8938, 40.19999, 120.8362"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
@@ -381,11 +400,12 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
           <Lisbeth Json="[{'Item': 4564,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Alchemist','Enabled': true,'Manual': 0,'Medicine': 0, 'AmountMode': 'Restock'}]"/>
         </While>
         <GetTo ZoneId="131" XYZ="-98.8938, 40.19999, 120.8362"/>
-        <TurnIn QuestId="66114" ItemId="4564" NpcId="1002299" AllowHq="True" XYZ="-98.8938, 40.19999, 120.8362"/>
+        <LLTurnIn QuestId="66114" ItemId="4564" NpcId="1002299" AllowHq="True" XYZ="-98.8938, 40.19999, 120.8362"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
+    </If>
 
         	<!-- Change Class ARM - 1 Bronze Rivet 5091 // 14 Iron Rivets 5092 -->
 	<While Condition="ClassName != ClassJobType.Armorer">
@@ -408,7 +428,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
           <Lisbeth Json="[{'Item': 5056,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Armorer','Enabled': true,'Manual': 0,'Medicine': 0, 'AmountMode': 'Restock'}]"/>
 		</While>
         <GetTo ZoneId="128" XYZ="-32.23862, 41.49998, 207.5451"/>
-        <TurnIn QuestId="65810" ItemId="5056" NpcId="1001000" XYZ="-32.02869, 41.49999, 208.3923"/>
+        <LLTurnIn QuestId="65810" ItemId="5056" NpcId="1001000" XYZ="-32.02869, 41.49999, 208.3923"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
@@ -433,17 +453,902 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
           <Lisbeth Json="[{'Item': 2226,'Group': 0,'Amount': 3,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Armorer','Enabled': true,'Manual': 0,'Medicine': 0, 'AmountMode': 'Restock'}]"/>
         </While>
         <GetTo ZoneId="128" XYZ="-31.23862, 41.49998, 205.5451"/>
-        <TurnIn QuestId="65811" ItemIds="2226, 2226, 2226" NpcId="1001000" XYZ="-32.02869, 41.49999, 208.3923"/>
+        <LLTurnIn QuestId="65811" ItemIds="2226, 2226, 2226" NpcId="1001000" XYZ="-32.02869, 41.49999, 208.3923"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>
       </If>
+    </If>
+
+    <RunCode Name="autosellcheck5" />
+
+    <!-- SECOND SET OF ORDERS (Levels all classes to 10) -->
+<If Condition="not IsQuestCompleted(66116)">
+  <RunCode Name="SetLisbethJson2" />
+</If>
+   <!-- Lv 10 Quests -->
+
+   <While Condition="ClassName != ClassJobType.Alchemist">
+		<ChangeClass Job="Alchemist"/>
+	</While>
+	<If Condition="ClassName == ClassJobType.Alchemist">
+		<AutoInventoryEquip/>
+
+    <!-- Grind to 10 -->
+			<While Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 10">
+				<Lisbeth Json="[{'Item': 4564,'Group': 0,'Amount': 30,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Alchemist','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+			</While>
+	
+	<!-- Do Level 10 Quest -->
+	<!-- All of Your Beeswax (Level 10) -->
+      <If Condition="IsQuestCompleted(66114) and not HasQuest(66116) and not IsQuestCompleted(66116) and Core.Player.ClassLevel &gt; 9">
+        <GetTo ZoneId="131" XYZ="-98.8938, 40.19999, 120.8362"/>
+        <If Condition="IsQuestAcceptQualified(66116)">
+          <LLPickupQuest QuestId="66116" NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362"/>
+          <LLSmallTalk WaitTime="1500"/>
+        </If>
+      </If>
+      <If Condition="HasQuest(66116) and not IsQuestCompleted(66116) and GetQuestStep(66116) == 255">
+        <While Condition="not (HqHasAtLeast(5515, 12) or NqHasAtLeast(5515, 12))">
+          <Lisbeth Json="[{'Item': 5515,'Group': 0,'Amount': 12,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Alchemist','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </While>
+        <GetTo ZoneId="131" XYZ="-98.8938, 40.19999, 120.8362"/>
+        <LLTurnIn QuestId="66116" ItemId="5515" NpcId="1002299" Nq="True" XYZ="-98.8938, 40.19999, 120.8362"/>
+        <LLSmallTalk WaitTime="1500"/>
+		<WaitTimer WaitTime="2"/>
+		<AutoInventoryEquip/>
+      </If>
+    </If>
+
+  <While Condition="ClassName != ClassJobType.Armorer">
+		<ChangeClass Job="Armorer"/>
+	</While>
+	<If Condition="ClassName == ClassJobType.Armorer">
+		<AutoInventoryEquip/>
+
+    <!-- Grind to 10 -->
+			<While Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 10">
+				<Lisbeth Json="[{'Item': 5091,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Armorer','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+			</While>
+	
+	<!-- Do Level 10 Quest -->
+	<If Condition="IsQuestCompleted(65811) and not HasQuest(65812) and not IsQuestCompleted(65812) and Core.Player.ClassLevel &gt; 9">
+        <GetTo ZoneId="128" XYZ="-31.23862, 41.49998, 205.5451"/>
+        <If Condition="IsQuestAcceptQualified(65812)">
+          <LLPickupQuest QuestId="65812" NpcId="1001000" XYZ="-32.02869, 41.49999, 208.3923"/>
+          <LLSmallTalk WaitTime="1500"/>
+        </If>
+      </If>
+      <If Condition="HasQuest(65812) and not IsQuestCompleted(65812) and GetQuestStep(65812) == 255">
+        <While Condition="not (HqHasAtLeast(5071, 12) or NqHasAtLeast(5071, 12))">
+          <Lisbeth Json="[{'Item': 5071,'Group': 0,'Amount': 12,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Armorer','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </While>
+        <GetTo ZoneId="128" XYZ="-31.23862, 41.49998, 205.5451"/>
+        <LLTurnIn QuestId="65812" ItemId="5071" NpcId="1001009" XYZ="-29.71688, 41.5, 210.7288"/>
+        <LLSmallTalk WaitTime="1500"/>
+		<WaitTimer WaitTime="2"/>
+		<AutoInventoryEquip/>
+      </If>
+    </If>
+<!-- Change Class CRP - 1 Maple Lumber 5361 // 10 Ash Lumber 5364 // 16 Elm Lumber 5367 -->
+	<While Condition="ClassName != ClassJobType.Carpenter">
+		<ChangeClass Job="Carpenter"/>
+	</While>
+	<If Condition="ClassName == ClassJobType.Carpenter">
+		<AutoInventoryEquip/>
+
+    <!-- Grind to 10 -->
+			<While Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 10">
+				<Lisbeth Json="[{'Item': 5364,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+			</While>
+	
+	<!-- Do Level 10 Quest -->
+	<!-- Supplies for the Sick (Level 10) -->
+      <If Condition="IsQuestCompleted(65675) and not HasQuest(65676) and not IsQuestCompleted(65676) and Core.Player.ClassLevel &gt; 9">
+        <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
+        <If Condition="IsQuestAcceptQualified(65676)">
+          <LLPickupQuest QuestId="65676" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
+          <LLSmallTalk WaitTime="1500"/>
+        </If>
+      </If>
+      <If Condition="HasQuest(65676) and not IsQuestCompleted(65676) and GetQuestStep(65676) == 255">
+        <While Condition="not (HqHasAtLeast(5364, 12) or NqHasAtLeast(5364, 12))">
+          <Lisbeth Json="[{'Item': 5364,'Group': 0,'Amount': 12,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </While>
+        <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
+        <LLTurnIn QuestId="65676" ItemId="5364" AllowHq="True" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
+        <LLSmallTalk WaitTime="1500"/>
+		<WaitTimer WaitTime="2"/>
+		<AutoInventoryEquip/>
+      </If>
+    </If>
+
+    <!-- Change Class CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 Gelatin150 4863-->
+	<While Condition="ClassName != ClassJobType.Culinarian">
+		<ChangeClass Job="Culinarian"/>
+	</While>
+	<If Condition="ClassName == ClassJobType.Culinarian">
+		<AutoInventoryEquip/>
+
+      <!-- Grind to 10 -->
+			<While Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 10">
+				<Lisbeth Json="[{'Item': 4850,'Group': 0,'Amount': 30,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Culinarian','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+			</While>
+	
+	<!-- Do Level 10 Quest -->
+	<!-- Dodo it Yourself (Level 10) -->
+      <If Condition="IsQuestCompleted(65791) and not HasQuest(65793) and not IsQuestCompleted(65793) and Core.Player.ClassLevel &gt; 9">
+        <GetTo ZoneId="128" XYZ="-54.64258, 43.99998, -151.2322"/>
+        <If Condition="IsQuestAcceptQualified(65793)">
+          <LLPickupQuest QuestId="65793" NpcId="1000947" XYZ="-54.64258, 43.99998, -151.2322"/>
+          <LLSmallTalk WaitTime="1500"/>
+        </If>
+      </If>
+      <If Condition="HasQuest(65793) and not IsQuestCompleted(65793) and GetQuestStep(65793) == 255">
+        <While Condition="not (HqHasAtLeast(4640, 3) or NqHasAtLeast(4640, 3))">
+          <Lisbeth Json="[{'Item': 4640,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Culinarian','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </While>
+        <GetTo ZoneId="128" XYZ="-66.26996, 42.29999, -162.9207"/>
+        <LLTurnIn QuestId="65793" ItemId="4640" NpcId="1000950" AllowHq="True" XYZ="-66.26996, 42.29999, -162.9207"/>
+        <LLSmallTalk WaitTime="1500"/>
+		<WaitTimer WaitTime="2"/>
+		<AutoInventoryEquip/>
+      </If>
+    </If>
+
+    <!-- Change Class BSM - 1 Bronze Ingot 5056 // 5 Bronze Rivets 5091 // 16 Iron Ingot 5057-->
+	<While Condition="ClassName != ClassJobType.Blacksmith">
+		<ChangeClass Job="Blacksmith"/>
+	</While>
+	<If Condition="ClassName == ClassJobType.Blacksmith">
+		<AutoInventoryEquip/>
+
+    <!-- Grind to 10 -->
+			<While Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 10">
+				<Lisbeth Json="[{'Item': 5091,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Blacksmith','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+			</While>
+	
+	<!-- Do Level 10 Quest -->
+	<!-- Riveting Ramblings (Level 10) -->
+      <If Condition="IsQuestCompleted(65829) and not HasQuest(65830) and not IsQuestCompleted(65830) and Core.Player.ClassLevel &gt; 9">
+        <GetTo ZoneId="128" XYZ="-31.26581, 44.49997, 185.5344"/>
+        <If Condition="IsQuestAcceptQualified(65830)">
+          <LLPickupQuest QuestId="65830" NpcId="1000997" XYZ="-31.26581, 44.49997, 185.5344"/>
+          <LLSmallTalk WaitTime="1500"/>
+        </If>
+      </If>
+      <If Condition="HasQuest(65830) and not IsQuestCompleted(65830) and GetQuestStep(65830) == 255">
+        <While Condition="not (HqHasAtLeast(5091, 12) or NqHasAtLeast(5091, 12))">
+          <Lisbeth Json="[{'Item': 5091,'Group': 0,'Amount': 12,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Blacksmith','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </While>
+        <GetTo ZoneId="128" XYZ="-31.26581, 44.49997, 185.5344"/>
+        <LLTurnIn QuestId="65830" ItemId="5091" AllowHq="True" NpcId="1000997" XYZ="-31.26581, 44.49997, 185.5344"/>
+        <LLSmallTalk WaitTime="1500"/>
+		<WaitTimer WaitTime="2"/>
+		<AutoInventoryEquip/>
+      </If>
+    </If>
+
+<While Condition="ClassName != ClassJobType.Goldsmith">
+		<ChangeClass Job="Goldsmith"/>
+	</While>
+	<If Condition="ClassName == ClassJobType.Goldsmith">
+		<AutoInventoryEquip/>
+
+    	<!-- Grind to 10 -->
+			<While Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 10">
+				<Lisbeth Json="[{'Item': 5258,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Goldsmith','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+			</While>
+	
+	<!-- Do Level 10 Quest -->
+	<!-- Throw Some Rings on It (Level 10) -->
+      <If Condition="IsQuestCompleted(66147) and not HasQuest(66149) and not IsQuestCompleted(66149) and Core.Player.ClassLevel &gt; 9">
+        <GetTo ZoneId="131" XYZ="-25.16223, 12.2, 110.7957"/>
+        <If Condition="IsQuestAcceptQualified(66149)">
+          <LLPickupQuest QuestId="66149" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957"/>
+          <LLSmallTalk WaitTime="1500"/>
+        </If>
+      </If>
+      <If Condition="HasQuest(66149) and not IsQuestCompleted(66149) and GetQuestStep(66149) == 1">
+        <While Condition="not (HqHasAtLeast(5086, 12) or NqHasAtLeast(5086, 12))">
+          <Lisbeth Json="[{'Item': 5086,'Group': 0,'Amount': 12,'Collectable': false,'QuickSynth': true,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Goldsmith','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </While>
+        <GetTo ZoneId="131" XYZ="-25.16223, 12.2, 110.7957"/>
+        <LLHandOver ItemId="5086" AllowHq="True" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957" QuestId="66149" StepId="1"/>
+        <LLSmallTalk WaitTime="1500"/>
+      </If>
+      <If Condition="HasQuest(66149) and not IsQuestCompleted(66149) and GetQuestStep(66149) == 2">
+        <GetTo ZoneId="131" XYZ="-22.17145, 14, 73.28906"/>
+        <LLHandOver ItemId="5086" AllowHq="True" NpcId="1004097" XYZ="-22.17145, 14, 73.28906" QuestId="66149" StepId="2"/>
+        <LLSmallTalk WaitTime="1500"/>
+      </If>
+      <If Condition="HasQuest(66149) and not IsQuestCompleted(66149) and GetQuestStep(66149) == 255">
+        <GetTo ZoneId="131" XYZ="-25.16223, 12.2, 110.7957"/>
+        <LLTurnIn QuestId="66149" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957"/>
+        <LLSmallTalk WaitTime="1500"/>
+		<WaitTimer WaitTime="2"/>
+		<AutoInventoryEquip/>
+      </If>
+    </If>
+
+<!-- Change Class LTW - 1 Leather 5257 // 8 Hard Leather 5276 // 17 Aldgoat Leather 5277 -->
+	<While Condition="ClassName != ClassJobType.Leatherworker">
+		<ChangeClass Job="Leatherworker"/>
+	</While>
+	<If Condition="ClassName == ClassJobType.Leatherworker">
+		<AutoInventoryEquip/>
+    	<!-- Grind to 10 -->
+			<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 8">
+				<Lisbeth Json="[{'Item': 5275,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+			</If>
+			<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 10">
+				<Lisbeth Json="[{'Item': 5276,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+			</If>
+	
+	<!-- Do Level 10 Quest -->
+	<!-- Geva's Gambit (Level 10) -->
+      <If Condition="IsQuestCompleted(65642) and not HasQuest(65671) and not IsQuestCompleted(65671) and Core.Player.ClassLevel &gt; 9">
+        <GetTo ZoneId="133" XYZ="71.97681, 8, -166.5217"/>
+        <If Condition="IsQuestAcceptQualified(65671)">
+          <LLPickupQuest QuestId="65671" NpcId="1000691" XYZ="71.97681, 8, -166.5217"/>
+          <LLSmallTalk WaitTime="1500"/>
+        </If>
+      </If>
+      <If Condition="HasQuest(65671) and not IsQuestCompleted(65671) and GetQuestStep(65671) == 255">
+        <While Condition="not (HqHasAtLeast(5276, 12) or NqHasAtLeast(5276, 12))">
+          <Lisbeth Json="[{'Item': 5276,'Group': 0,'Amount': 12,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </While>
+        <GetTo ZoneId="133" XYZ="71.97681, 8, -166.5217"/>
+        <LLTurnIn QuestId="65671" ItemId="5276" NpcId="1000691" AllowHq="True" XYZ="71.97681, 8, -166.5217"/>
+        <LLSmallTalk WaitTime="1500"/>
+		<WaitTimer WaitTime="2"/>
+		<AutoInventoryEquip/>
+      </If>
+    </If>
+
+  <!-- Change Class WVR - 1 Hempen Yarn60 5333 // 5 Undyed Hempen Cloth 5324 // 12 Cotton Yarn60 5334 // 17 Undyed Cotton Cloth 5325 -->
+	<While Condition="ClassName != ClassJobType.Weaver">
+		<ChangeClass Job="Weaver"/>
+	</While>
+	<If Condition="ClassName == ClassJobType.Weaver">
+		<AutoInventoryEquip/>
+
+    	<!-- Grind to 10 -->
+			<While Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 10">
+				<Lisbeth Json="[{'Item': 5324,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Weaver','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+			</While>
+	
+	<!-- Do Level 10 Quest -->
+	<!-- Alternative Applications (Level 10) -->
+      <If Condition="IsQuestCompleted(66123) and not HasQuest(66125) and not IsQuestCompleted(66125) and Core.Player.ClassLevel &gt; 9">
+        <GetTo ZoneId="131" XYZ="157.3662, 7.792007, 98.92419"/>
+        <If Condition="IsQuestAcceptQualified(66125)">
+          <LLPickupQuest QuestId="66125" NpcId="1003818" XYZ="157.3662, 7.792007, 98.92419"/>
+          <LLSmallTalk WaitTime="1500"/>
+        </If>
+      </If>
+      <If Condition="HasQuest(66125) and not IsQuestCompleted(66125) and GetQuestStep(66125) == 255">
+        <While Condition="not (HqHasAtLeast(5324, 12) or NqHasAtLeast(5324, 12))">
+          <Lisbeth Json="[{'Item': 5324,'Group': 0,'Amount': 12,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Weaver','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </While>
+        <GetTo ZoneId="131" XYZ="157.3662, 7.792007, 98.92419"/>
+        <LLTurnIn QuestId="66125" ItemId="5324" NpcId="1003818" AllowHq="True" XYZ="157.3662, 7.792007, 98.92419"/>
+        <LLSmallTalk WaitTime="1500"/>
+		<WaitTimer WaitTime="2"/>
+		<AutoInventoryEquip/>
+      </If>
+    </If>
+
+      <!-- THIRD SET OF ORDERS (Levels all classes to 15) -->
+<If Condition="not IsQuestCompleted(66117)">
+  <RunCode Name="SetLisbethJson3" />
+</If>
+  <!-- Change Class ALC - 1 Distilled Water 5487 // 5 Antidote90 4564 // 10 Beeswax 5515 // 15 Clove Oil90 4856 -->
+	<While Condition="ClassName != ClassJobType.Alchemist">
+		<ChangeClass Job="Alchemist"/>
+	</While>
+	<If Condition="ClassName == ClassJobType.Alchemist">
+		<AutoInventoryEquip/>
+
+  	<!-- Grind to 15 -->
+			<While Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 15">
+				<Lisbeth Json="[{'Item': 5515,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Alchemist','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+			</While>
+	
+	<!-- Do Level 15 Quest -->
+	<!-- For Fair Love (Level 15) -->
+      <If Condition="IsQuestCompleted(66116) and not HasQuest(66117) and not IsQuestCompleted(66117) and Core.Player.ClassLevel &gt; 14">
+        <GetTo ZoneId="131" XYZ="-98.8938, 40.19999, 120.8362"/>
+        <If Condition="IsQuestAcceptQualified(66117)">
+          <LLPickupQuest QuestId="66117" NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362"/>
+          <LLSmallTalk WaitTime="1500"/>
+        </If>
+      </If>
+      <If Condition="HasQuest(66117) and not IsQuestCompleted(66117) and GetQuestStep(66117) == 1">
+        <While Condition="not HasItem(4597)">
+          <Lisbeth Json="[{'Item': 4597,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Alchemist','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </While>
+        <While Condition="not HasItem(4595)">
+          <Lisbeth Json="[{'Item': 4595,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Alchemist','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </While>
+        <GetTo ZoneId="131" XYZ="-98.8938, 40.19999, 120.8362"/>
+        <LLHandOver ItemIds="4597,4595" AllowHq="True" QuestId="66117" StepId="1" NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362"/>
+        <LLSmallTalk WaitTime="1500"/>
+      </If>
+      <If Condition="HasQuest(66117) and not IsQuestCompleted(66117) and GetQuestStep(66117) == 2">
+        <GetTo ZoneId="131" XYZ="-80.1557, 7.014143, -5.142395"/>
+        <LLHandOver ItemIds="4597,4595" AllowHq="True" QuestId="66117" StepId="2" NpcId="1003926" XYZ="-80.1557, 7.014143, -5.142395"/>
+        <LLSmallTalk WaitTime="1500"/>
+      </If>
+      <If Condition="HasQuest(66117) and not IsQuestCompleted(66117) and GetQuestStep(66117) == 255">
+        <GetTo ZoneId="131" XYZ="-98.8938, 40.19999, 120.8362"/>
+        <LLTurnIn QuestId="66117" NpcId="1002299" XYZ="-98.8938, 40.19999, 120.8362"/>
+        <LLSmallTalk WaitTime="1500"/>
+		<WaitTimer WaitTime="2"/>
+		<AutoInventoryEquip/>
+      </If>
+    </If>
+
+    <While Condition="ClassName != ClassJobType.Armorer">
+		<ChangeClass Job="Armorer"/>
+	</While>
+	<If Condition="ClassName == ClassJobType.Armorer">
+		<AutoInventoryEquip/>
+
+    <!-- Grind to 15 -->
+			<While Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 14">
+				<Lisbeth Json="[{'Item': 5091,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Armorer','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+			</While>
+			<While Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 15">
+				<Lisbeth Json="[{'Item': 5057,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Armorer','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+			</While>
+	
+	<!-- Do Level 15 Quest -->
+	<!-- One's Own Worst Critic (Level 15) -->
+      <If Condition="IsQuestCompleted(65812) and not HasQuest(65813) and not IsQuestCompleted(65813) and Core.Player.ClassLevel &gt; 14">
+        <GetTo ZoneId="128" XYZ="-31.23862, 41.49998, 205.5451"/>
+        <If Condition="IsQuestAcceptQualified(65813)">
+          <LLPickupQuest QuestId="65813" NpcId="1001000" XYZ="-32.02869, 41.49999, 208.3923"/>
+          <LLSmallTalk WaitTime="1500"/>
+        </If>
+      </If>
+      <If Condition="HasQuest(65813) and not IsQuestCompleted(65813) and GetQuestStep(65813) == 1">
+        <GetTo ZoneId="128" XYZ="-61.99744, 42.49878, 201.8616"/>
+        <LLTalkTo NpcId="1001011" XYZ="-61.99744, 42.49878, 201.8616" QuestId="65813" StepId="1"/>
+        <LLSmallTalk WaitTime="1500"/>
+      </If>
+      <If Condition="HasQuest(65813) and not IsQuestCompleted(65813) and GetQuestStep(65813) == 2">
+        <GetTo ZoneId="128" XYZ="-56.44318, 39.97361, 178.7289"/>
+        <LLTalkTo NpcId="1001001" XYZ="-56.44318, 39.97361, 178.7289" QuestId="65813" StepId="2"/>
+        <LLSmallTalk WaitTime="1500"/>
+      </If>
+      <If Condition="HasQuest(65813) and not IsQuestCompleted(65813) and GetQuestStep(65813) == 3">
+        <While Condition="not HasItem(2680)">
+          <Lisbeth Json="[{'Item': 2680,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Armorer','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </While>
+        <While Condition="not HasItem(2231)">
+          <Lisbeth Json="[{'Item': 2231,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Armorer','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </While>
+        <GetTo ZoneId="128" XYZ="-56.44318, 39.97361, 178.7289"/>
+        <LLHandOver ItemIds="2680, 2231" NpcId="1001001" XYZ="-56.44318, 39.97361, 178.7289" QuestId="65813" StepId="3"/>
+        <LLSmallTalk WaitTime="1500"/>
+      </If>
+      <If Condition="HasQuest(65813) and not IsQuestCompleted(65813) and GetQuestStep(65813) == 4">
+        <GetTo ZoneId="128" XYZ="-61.99744, 42.49878, 201.8616"/>
+        <LLTalkTo NpcId="1001011" XYZ="-61.99744, 42.49878, 201.8616" QuestId="65813" StepId="4"/>
+        <LLSmallTalk WaitTime="1500"/>
+      </If>
+      <If Condition="HasQuest(65813) and not IsQuestCompleted(65813) and GetQuestStep(65813) == 255">
+        <GetTo ZoneId="128" XYZ="-32.02869, 41.49999, 208.3923"/>
+        <LLTurnIn NpcId="1001000" XYZ="-32.02869, 41.49999, 208.3923" QuestId="65813"/>
+        <LLSmallTalk WaitTime="1500"/>
+		<WaitTimer WaitTime="2"/>
+		<AutoInventoryEquip/>
+      </If>
+	</If>
+
+  <!-- Change Class CRP - 1 Maple Lumber 5361 // 10 Ash Lumber 5364 // 16 Elm Lumber 5367 -->
+	<While Condition="ClassName != ClassJobType.Carpenter">
+		<ChangeClass Job="Carpenter"/>
+	</While>
+	<If Condition="ClassName == ClassJobType.Carpenter">
+		<AutoInventoryEquip/>
+
+    <!-- Grind to 15 -->
+			<While Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 15">
+				<Lisbeth Json="[{'Item': 5364,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+			</While>
+	
+	<!-- Do Level 15 Quest -->
+	<!-- A Carpenter in Need (Level 15) -->
+      <If Condition="IsQuestCompleted(65676) and not HasQuest(65677) and not IsQuestCompleted(65677) and Core.Player.ClassLevel &gt; 14">
+        <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
+        <If Condition="IsQuestAcceptQualified(65677)">
+          <LLPickupQuest QuestId="65677" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
+          <LLSmallTalk WaitTime="1500"/>
+        </If>
+      </If>
+      <If Condition="HasQuest(65677) and not IsQuestCompleted(65677) and GetQuestStep(65677) == 1">
+        <GetTo ZoneId="132" XYZ="-9.720032, -3.25, 52.47571"/>
+        <LLTalkTo NpcId="1000149" XYZ="-9.720032, -3.25, 52.47571" QuestId="65677" StepId="1"/>
+        <LLSmallTalk WaitTime="1500"/>
+      </If>
+      <If Condition="HasQuest(65677) and not IsQuestCompleted(65677) and GetQuestStep(65677) == 2 and not IsTodoChecked(65677, 2, 1)">
+        <While Condition="not HasItem(1895)">
+          <Lisbeth Json="[{'Item': 1895,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </While>
+        <GetTo ZoneId="132" XYZ="209.5521, 0.9999819, 35.01941"/>
+        <LLHandOver ItemId="1895" AllowHq="True" NpcId="1000200" XYZ="209.5521, 0.9999819, 35.01941" QuestId="65677"/>
+        <LLSmallTalk WaitTime="1500"/>
+      </If>
+      <If Condition="HasQuest(65677) and not IsQuestCompleted(65677) and GetQuestStep(65677) == 2 and not IsTodoChecked(65677, 2, 0)">
+        <While Condition="not HasItem(1823)">
+          <Lisbeth Json="[{'Item': 1823,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Carpenter','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </While>
+        <GetTo ZoneId="133" XYZ="157.7019, 15.90038, -270.3442"/>
+        <LLHandOver ItemId="1823" AllowHq="True" NpcId="1000254" XYZ="157.7019, 15.90038, -270.3442" QuestId="65677"/>
+        <LLSmallTalk WaitTime="1500"/>
+      </If>
+      <If Condition="HasQuest(65677) and not IsQuestCompleted(65677) and GetQuestStep(65677) == 255">
+        <GetTo ZoneId="132" XYZ="-44.87683, -1.250002, 56.83984"/>
+        <LLTurnIn QuestId="65677" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984"/>
+        <LLSmallTalk WaitTime="1500"/>
+		<WaitTimer WaitTime="2"/>
+		<AutoInventoryEquip/>
+      </If>
+      </If>
+
+      <!-- Change Class CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 Gelatin150 4863-->
+	<While Condition="ClassName != ClassJobType.Culinarian">
+		<ChangeClass Job="Culinarian"/>
+	</While>
+	<If Condition="ClassName == ClassJobType.Culinarian">
+		<AutoInventoryEquip/>
+
+    	<!-- Grind to 15 -->
+			<While Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 15">
+				<Lisbeth Json="[{'Item': 4853,'Group': 0,'Amount': 50,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Culinarian','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+			</While>
+	
+	<!-- Do Level 15 Quest -->
+	<!-- On a Skewer Tip (Level 15) -->
+      <If Condition="IsQuestCompleted(65793) and not HasQuest(65794) and not IsQuestCompleted(65794) and Core.Player.ClassLevel &gt; 14">
+        <GetTo ZoneId="128" XYZ="-54.64258, 43.99998, -151.2322"/>
+        <If Condition="IsQuestAcceptQualified(65794)">
+          <LLPickupQuest QuestId="65794" NpcId="1000947" XYZ="-54.64258, 43.99998, -151.2322"/>
+          <LLSmallTalk WaitTime="1500"/>
+        </If>
+      </If>
+      <If Condition="HasQuest(65794) and not IsQuestCompleted(65794) and GetQuestStep(65794) == 1">
+        <GetTo ZoneId="128" XYZ="-66.26996, 42.29999, -162.9207"/>
+        <LLTalkTo NpcId="1000950" XYZ="-66.26996, 42.29999, -162.9207" QuestId="65794" StepId="1"/>
+        <LLSmallTalk WaitTime="1500"/>
+      </If>
+      <If Condition="HasQuest(65794) and not IsQuestCompleted(65794) and GetQuestStep(65794) == 2">
+        <GetTo ZoneId="128" XYZ="-76.98181, 40.99999, -136.2173"/>
+        <LLTalkTo NpcId="1000965" XYZ="-76.98181, 40.99999, -136.2173" QuestId="65794" StepId="2"/>
+        <LLSmallTalk WaitTime="1500"/>
+      </If>
+      <If Condition="HasQuest(65794) and not IsQuestCompleted(65794) and GetQuestStep(65794) == 3">
+        <While Condition="not HasItem(4642)">
+          <Lisbeth Json="[{'Item': 4642,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Culinarian','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </While>
+        <GetTo ZoneId="128" XYZ="-76.98181, 40.99999, -136.2173"/>
+        <LLHandOver ItemId="4642" NpcId="1000965" AllowHq="True" XYZ="-76.98181, 40.99999, -136.2173" QuestId="65794" StepId="3"/>
+        <LLSmallTalk WaitTime="1500"/>
+      </If>
+      <If Condition="HasQuest(65794) and not IsQuestCompleted(65794) and GetQuestStep(65794) == 255">
+        <GetTo ZoneId="128" XYZ="-54.64258, 43.99998, -151.2322"/>
+        <LLTurnIn QuestId="65794" NpcId="1000947" XYZ="-54.64258, 43.99998, -151.2322"/>
+        <LLSmallTalk WaitTime="1500"/>
+		<WaitTimer WaitTime="2"/>
+		<AutoInventoryEquip/>
+      </If>
+	</If>
+
+  <!-- Change Class BSM - 1 Bronze Ingot 5056 // 5 Bronze Rivets 5091 // 16 Iron Ingot 5057-->
+	<While Condition="ClassName != ClassJobType.Blacksmith">
+		<ChangeClass Job="Blacksmith"/>
+	</While>
+	<If Condition="ClassName == ClassJobType.Blacksmith">
+		<AutoInventoryEquip/>
+
+    	<!-- Grind to 15 -->
+			<While Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 15">
+				<Lisbeth Json="[{'Item': 5091,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Blacksmith','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+			</While>
+	
+	<!-- Do Level 15 Quest -->
+	<!-- The Business of Blacksmithing (Level 15) -->
+      <If Condition="IsQuestCompleted(65830) and not HasQuest(65831) and not IsQuestCompleted(65831) and Core.Player.ClassLevel &gt; 14">
+        <GetTo ZoneId="128" XYZ="-31.26581, 44.49997, 185.5344"/>
+        <If Condition="IsQuestAcceptQualified(65831)">
+          <LLPickupQuest QuestId="65831" NpcId="1000997" XYZ="-31.26581, 44.49997, 185.5344"/>
+          <LLSmallTalk WaitTime="1500"/>
+        </If>
+      </If>
+      <If Condition="HasQuest(65831) and not IsQuestCompleted(65831) and GetQuestStep(65831) == 1">
+        <GetTo ZoneId="128" XYZ="-52.35376, 42.49961, 211.5968"/>
+        <LLTalkTo NpcId="1001005" XYZ="-52.35376, 42.49961, 211.5968" QuestId="65831" StepId="1"/>
+        <LLSmallTalk WaitTime="1500"/>
+      </If>
+      <If Condition="HasQuest(65831) and not IsQuestCompleted(65831) and GetQuestStep(65831) == 255">
+        <While Condition="not HasItem(1605)">
+          <Lisbeth Json="[{'Item': 1605,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Blacksmith','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </While>
+        <While Condition="not HasItem(1753)">
+          <Lisbeth Json="[{'Item': 1753,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Blacksmith','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </While>
+        <GetTo ZoneId="128" XYZ="-31.26581, 44.49997, 185.5344"/>
+        <LLTurnIn QuestId="65831" ItemIds="1605,1753" AllowHq="True" NpcId="1001005" XYZ="-52.35376, 42.49961, 211.5968"/>
+        <LLSmallTalk WaitTime="1500"/>
+		<WaitTimer WaitTime="2"/>
+		<AutoInventoryEquip/>
+      </If>
+    </If>
+
+    <While Condition="ClassName != ClassJobType.Goldsmith">
+		<ChangeClass Job="Goldsmith"/>
+	</While>
+	<If Condition="ClassName == ClassJobType.Goldsmith">
+		<AutoInventoryEquip/>
+
+    
+	<!-- Grind to 15 -->
+			<While Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 14">
+				<Lisbeth Json="[{'Item': 5258,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Goldsmith','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+			</While>
+			<While Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 15">
+				<Lisbeth Json="[{'Item': 5063,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Goldsmith','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+			</While>
+	
+	<!-- Do Level 15 Quest -->
+	<!-- Objectively Speaking (Level 15) -->
+      <If Condition="IsQuestCompleted(66149) and not HasQuest(66150) and not IsQuestCompleted(66150) and Core.Player.ClassLevel &gt; 14">
+        <GetTo ZoneId="131" XYZ="-25.16223, 12.2, 110.7957"/>
+        <If Condition="IsQuestAcceptQualified(66150)">
+          <LLPickupQuest QuestId="66150" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957"/>
+          <LLSmallTalk WaitTime="1500"/>
+        </If>
+      </If>
+      <If Condition="HasQuest(66150) and not IsQuestCompleted(66150) and GetQuestStep(66150) == 1">
+        <While Condition="InventoryManager.ItemCount(DataManager.GetItem(4204)) &lt; 1">
+          <Lisbeth Json="[{'Item': 4204,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Goldsmith','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </While>
+        <While Condition="InventoryManager.ItemCount(DataManager.GetItem(4309)) &lt; 1">
+          <Lisbeth Json="[{'Item': 4309,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Goldsmith','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </While>
+        <GetTo ZoneId="131" XYZ="-25.16223, 12.2, 110.7957"/>
+        <LLHandOver ItemIds="4204, 4309" AllowHq="True" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957" QuestId="66150" StepId="1"/>
+        <LLSmallTalk WaitTime="1500"/>
+      </If>
+      <If Condition="HasQuest(66150) and not IsQuestCompleted(66150) and GetQuestStep(66150) == 2">
+        <GetTo ZoneId="131" XYZ="-22.17145, 14, 73.28906"/>
+        <LLHandOver ItemIds="4204, 4309" AllowHq="True" NpcId="1004097" XYZ="-22.17145, 14, 73.28906" QuestId="66150" StepId="2"/>
+        <LLSmallTalk WaitTime="1500"/>
+      </If>
+      <If Condition="HasQuest(66150) and not IsQuestCompleted(66150) and GetQuestStep(66150) == 255">
+        <GetTo ZoneId="131" XYZ="-25.16223, 12.2, 110.7957"/>
+        <LLTurnIn QuestId="66150" NpcId="1004093" XYZ="-25.16223, 12.2, 110.7957"/>
+        <LLSmallTalk WaitTime="1500"/>
+		<WaitTimer WaitTime="2"/>
+		<AutoInventoryEquip/>
+      </If>
+    </If>
+
+    <!-- Change Class LTW - 1 Leather 5257 // 8 Hard Leather 5276 // 17 Aldgoat Leather 5277 -->
+	<While Condition="ClassName != ClassJobType.Leatherworker">
+		<ChangeClass Job="Leatherworker"/>
+	</While>
+	<If Condition="ClassName == ClassJobType.Leatherworker">
+		<AutoInventoryEquip/>
+    <!-- Grind to 15 -->
+			<While Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 15">
+				<Lisbeth Json="[{'Item': 5276,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+			</While>
+	
+	<!-- Do Level 15 Quest -->
+	<!-- Working Hells for Leather (Level 15) -->
+      <If Condition="IsQuestCompleted(65671) and not HasQuest(65672) and not IsQuestCompleted(65672) and Core.Player.ClassLevel &gt; 14">
+        <GetTo ZoneId="133" XYZ="71.97681, 8, -166.5217"/>
+        <If Condition="IsQuestAcceptQualified(65672)">
+          <LLPickupQuest QuestId="65672" NpcId="1000691" XYZ="71.97681, 8, -166.5217"/>
+          <LLSmallTalk WaitTime="1500"/>
+        </If>
+      </If>
+      <If Condition="HasQuest(65672) and not IsQuestCompleted(65672) and GetQuestStep(65672) == 1">
+        <While Condition="not HasItem(3772)">
+          <Lisbeth Json="[{'Item': 3772,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </While>
+        <While Condition="not HasItem(4308)">
+          <Lisbeth Json="[{'Item': 4308,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Leatherworker','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </While>
+        <GetTo ZoneId="133" XYZ="71.97681, 8, -166.5217"/>
+        <LLTurnIn ItemIds="3772, 4308" AllowHq="True" NpcId="1000691" XYZ="71.97681, 8, -166.5217" QuestId="65672" StepId="1"/>
+        <LLSmallTalk WaitTime="1500"/>
+      </If>
+      <If Condition="HasQuest(65672) and not IsQuestCompleted(65672) and GetQuestStep(65672) == 255">
+        <GetTo ZoneId="133" XYZ="59.30462, 8, -141.0205"/>
+        <LLTurnIn QuestId="65672" NpcId="1000681" XYZ="58.73193, 7.980469, -138.5672" Emote="kneel"/>
+        <LLSmallTalk WaitTime="1500"/>
+		<WaitTimer WaitTime="2"/>
+		<AutoInventoryEquip/>
+      </If>
+    </If>
+
+    <!-- Change Class WVR - 1 Hempen Yarn60 5333 // 5 Undyed Hempen Cloth 5324 // 12 Cotton Yarn60 5334 // 17 Undyed Cotton Cloth 5325 -->
+	<While Condition="ClassName != ClassJobType.Weaver">
+		<ChangeClass Job="Weaver"/>
+	</While>
+	<If Condition="ClassName == ClassJobType.Weaver">
+		<AutoInventoryEquip/>
+    <!-- Grind to 15 -->
+			<While Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 12">
+				<Lisbeth Json="[{'Item': 5324,'Group': 0,'Amount': 10,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Weaver','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+			</While>
+			<While Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 15">
+				<Lisbeth Json="[{'Item': 5334,'Group': 0,'Amount': 20,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Weaver','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+			</While>
+	
+	<!-- Do Level 15 Quest -->
+	<!-- Practical Needs (Level 15) -->
+      <If Condition="IsQuestCompleted(66125) and not HasQuest(66126) and not IsQuestCompleted(66126) and Core.Player.ClassLevel &gt; 14">
+        <GetTo ZoneId="131" XYZ="157.3662, 7.792007, 98.92419"/>
+        <If Condition="IsQuestAcceptQualified(66126)">
+          <LLPickupQuest QuestId="66126" NpcId="1003818" XYZ="157.3662, 7.792007, 98.92419"/>
+          <LLSmallTalk WaitTime="1500"/>
+        </If>
+      </If>
+      <If Condition="HasQuest(66126) and not IsQuestCompleted(66126) and GetQuestStep(66126) == 1">
+        <GetTo ZoneId="131" XYZ="17.74622, 12.27927, 108.2017"/>
+        <LLTalkTo NpcId="1003819" XYZ="17.74622, 12.27927, 108.2017"/>
+        <LLSmallTalk WaitTime="1500"/>
+      </If>
+      <If Condition="HasQuest(66126) and not IsQuestCompleted(66126) and GetQuestStep(66126) == 255">
+        <While Condition="not HasAtLeast(2670,2)">
+          <Lisbeth Json="[{'Item': 2670,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Weaver','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </While>
+        <While Condition="not HasItem(3322)">
+          <Lisbeth Json="[{'Item': 3322,'Group': 0,'Amount': 1,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Weaver','Enabled': true,'Manual': 0,'Medicine': 0}]"/>
+        </While>
+        <GetTo ZoneId="131" XYZ="157.3662, 7.792007, 98.92419"/>
+        <LLTurnIn ItemIds="2670,3322" AllowHq="True" QuestId="66126" NpcId="1003818" XYZ="157.3662, 7.792007, 98.92419"/>
+        <LLSmallTalk WaitTime="1500"/>
+		<WaitTimer WaitTime="2"/>
+		<AutoInventoryEquip/>
+      </If>
+    </If>
+
+  <!-- Check to see if we have Crafting at level 21 -->
+		<If Condition="&crp; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 21 or not IsQuestCompleted(65677)">
+				<LLoadProfile Path="1-21 Carpenter.xml"/>
+			</If>
+		</If>
+		<If Condition="&bsm; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 21 or not IsQuestCompleted(65831)">
+				<LLoadProfile Path="1-21 Blacksmith.xml"/>
+			</If>
+		</If>
+		<If Condition="&arm; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 21 or not IsQuestCompleted(65813)">
+				<LLoadProfile Path="1-21 Armorer.xml"/>
+			</If>
+		</If>
+		<If Condition="&gsm; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 21 or not IsQuestCompleted(66150)">
+				<LLoadProfile Path="1-21 Goldsmith.xml"/>
+			</If>
+		</If>
+		<If Condition="&ltw; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 21 or not IsQuestCompleted(65672)">
+				<LLoadProfile Path="1-21 Leatherworker.xml"/>
+			</If>
+		</If>
+		<If Condition="&wvr; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 21 or not IsQuestCompleted(66126)">
+				<LLoadProfile Path="1-21 Weaver.xml"/>
+			</If>
+		</If>
+		<If Condition="&alc; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 21 or not IsQuestCompleted(66117)">
+				<LLoadProfile Path="1-21 Alchemist.xml"/>
+			</If>
+		</If>
+		<If Condition="&cul; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 21 or not IsQuestCompleted(65794)">
+				<LLoadProfile Path="1-21 Culinarian.xml"/>
+			</If>
+		</If>
+
+  <RunCode Name="SetLisbethJson4" />
+  <RunCode Name="LoggerCraft19" />
+  <RunCode Name="SetLisbethJson5" />
+  <RunCode Name="LoggerCraft20" />
+	
 	
 	<LLoadProfile Path="../Start.xml"/>
 	
 	</Order>
 
 <CodeChunks>
+
+<CodeChunk Type="Definition" Name="AutosellCheck">
+		<![CDATA[
+			public static async Task<bool> CheckAutosellLevel(int level)
+			{
+				try 
+				{
+					string workingDirectory = Directory.GetCurrentDirectory();
+					string settingsPath = Path.Combine(workingDirectory, "Settings");
+					string logFilePath = Path.Combine(settingsPath, "autosell.txt");
+					
+					// Create the file if it doesn't exist
+					if (!File.Exists(logFilePath))
+					{
+						File.WriteAllText(logFilePath, "");
+					}
+					
+					// Read content and check for sell{level}
+					string content = File.ReadAllText(logFilePath);
+					if (content.Contains($"sell{level}"))
+					{
+						return true;
+					}
+					
+					// If we get here, we need to run the profile
+					var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+					var profileDir = Path.GetDirectoryName(profilePath);
+					var autosellPath = Path.Combine(profileDir, $"../AutoSell/Lv{level}.xml");
+					
+					if (File.Exists(autosellPath))
+					{
+						await Coroutine.Sleep(500);
+						ff14bot.NeoProfiles.NeoProfileManager.Load(autosellPath);
+						await Coroutine.Sleep(1000);
+					}
+					
+					return true;
+				}
+				catch
+				{
+					return true;
+				}
+			}
+		]]>
+		</CodeChunk>
+    <CodeChunk Name="autosellcheck5">
+		<![CDATA[
+			await CheckAutosellLevel(5);
+		]]>
+		</CodeChunk>
+
+		<CodeChunk Name="autosellcheck10">
+		<![CDATA[
+			await CheckAutosellLevel(10);
+		]]>
+		</CodeChunk>
+
+		<CodeChunk Name="autosellcheck15">
+		<![CDATA[
+			await CheckAutosellLevel(15);
+		]]>
+		</CodeChunk>
+    <CodeChunk Name="autosellcheck19">
+		<![CDATA[
+			await CheckAutosellLevel(19);
+		]]>
+		</CodeChunk>
+    <CodeChunk Name="autosellcheck20">
+		<![CDATA[
+			await CheckAutosellLevel(20);
+		]]>
+		</CodeChunk>
+    <CodeChunk Name="Logger19">
+    <![CDATA[
+        try
+        {
+            string workingDirectory = Directory.GetCurrentDirectory();
+            string settingsPath = Path.Combine(workingDirectory, "Settings");
+            string logFilePath = Path.Combine(settingsPath, $"autosell.txt");
+            
+            File.AppendAllText(logFilePath, "sell19" + Environment.NewLine);
+        }
+        catch (Exception ex)
+        {
+        }
+    ]]>
+</CodeChunk>
+<CodeChunk Name="Logger5">
+    <![CDATA[
+        try
+        {
+            string workingDirectory = Directory.GetCurrentDirectory();
+            string settingsPath = Path.Combine(workingDirectory, "Settings");
+            string logFilePath = Path.Combine(settingsPath, $"autosell.txt");
+            
+            File.AppendAllText(logFilePath, "sell5" + Environment.NewLine);
+        }
+        catch (Exception ex)
+        {
+        }
+    ]]>
+</CodeChunk>
+<CodeChunk Name="Logger10">
+    <![CDATA[
+        try
+        {
+            string workingDirectory = Directory.GetCurrentDirectory();
+            string settingsPath = Path.Combine(workingDirectory, "Settings");
+            string logFilePath = Path.Combine(settingsPath, $"autosell.txt");
+            
+            File.AppendAllText(logFilePath, "sell10" + Environment.NewLine);
+        }
+        catch (Exception ex)
+        {
+        }
+    ]]>
+</CodeChunk>
+<CodeChunk Name="Logger15">
+    <![CDATA[
+        try
+        {
+            string workingDirectory = Directory.GetCurrentDirectory();
+            string settingsPath = Path.Combine(workingDirectory, "Settings");
+            string logFilePath = Path.Combine(settingsPath, $"autosell.txt");
+            
+            File.AppendAllText(logFilePath, "sell15" + Environment.NewLine);
+        }
+        catch (Exception ex)
+        {
+        }
+    ]]>
+</CodeChunk>
+<CodeChunk Name="Logger20">
+    <![CDATA[
+        try
+        {
+            string workingDirectory = Directory.GetCurrentDirectory();
+            string settingsPath = Path.Combine(workingDirectory, "Settings");
+            string logFilePath = Path.Combine(settingsPath, $"autosell.txt");
+            
+            File.AppendAllText(logFilePath, "sell20" + Environment.NewLine);
+        }
+        catch (Exception ex)
+        {
+        }
+    ]]>
+</CodeChunk>
+<CodeChunk Name="LoggerCraft19">
+    <![CDATA[
+        try
+        {
+            string workingDirectory = Directory.GetCurrentDirectory();
+            string settingsPath = Path.Combine(workingDirectory, "Settings");
+            string logFilePath = Path.Combine(settingsPath, $"autocraft.txt");
+            
+            File.AppendAllText(logFilePath, "craft19" + Environment.NewLine);
+        }
+        catch (Exception ex)
+        {
+        }
+    ]]>
+</CodeChunk>
+<CodeChunk Name="LoggerCraft20">
+    <![CDATA[
+        try
+        {
+            string workingDirectory = Directory.GetCurrentDirectory();
+            string settingsPath = Path.Combine(workingDirectory, "Settings");
+            string logFilePath = Path.Combine(settingsPath, $"autocraft.txt");
+            
+            File.AppendAllText(logFilePath, "craft20" + Environment.NewLine);
+        }
+        catch (Exception ex)
+        {
+        }
+    ]]>
+</CodeChunk>
 <CodeChunk Name="SetLisbethJson1">
 <![CDATA[
     // Try to get profile path and construct relative path from there
@@ -454,6 +1359,272 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
     var json = System.IO.File.ReadAllText(jsonPath);
     var lisbeth = BotManager.Bots.FirstOrDefault(c => c.Name == "Lisbeth");
     if (lisbeth != null)
+   {
+       var lisbethObject = lisbeth.GetType().GetProperty("Lisbeth").GetValue(lisbeth);
+       if (lisbethObject != null)
+       {
+           Func<Task> executeWithRetry = null;
+           executeWithRetry = async () => {
+               try 
+               {
+                   var orderMethod = lisbethObject.GetType().GetMethod("ExecuteOrders");
+                   await (Task<bool>)orderMethod.Invoke(lisbethObject, new object[] { json, false });
+               }
+               catch (Exception ex) when (
+                   ex.ToString().Contains("HttpRequestException") || 
+                   ex.ToString().Contains("No response from the server") ||
+                   ex.ToString().Contains("Max sessions reached")
+               )
+               {
+                   // Log and stop gently
+                   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Attempting to stop Lisbeth gently...");
+                   var stopGentlyMethod = lisbethObject.GetType().GetMethod("StopGently");
+                   await (Task)stopGentlyMethod.Invoke(lisbethObject, null);
+                   
+                   // Log and try to exit crafting
+                   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Attempting to exit crafting state...");
+                   try 
+                   {
+                       var exitCraftingMethod = lisbethObject.GetType().GetMethod("ExitCrafting");
+                       await (Task<bool>)exitCraftingMethod.Invoke(lisbethObject, null);
+                   }
+                   catch {}
+                   
+                   // Log waiting period
+                   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Waiting 5 minutes before attempting restart...");
+                   await Task.Delay(TimeSpan.FromMinutes(5));
+                   
+                   // Log and request restart
+                   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Requesting Lisbeth to restart orders...");
+                   var restartMethod = lisbethObject.GetType().GetMethod("RequestRestart");
+                   restartMethod.Invoke(lisbethObject, new object[] { json });
+                   
+                   await executeWithRetry();
+               }
+           };
+
+           await executeWithRetry();
+       }
+   }
+]]>
+</CodeChunk>
+
+<CodeChunk Name="SetLisbethJson2">
+<![CDATA[
+    // Try to get profile path and construct relative path from there
+    var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+    var profileDir = System.IO.Path.GetDirectoryName(profilePath);
+    var jsonPath = System.IO.Path.Combine(profileDir, "../Lisbeth/1-21/5-10.json");
+    
+    var json = System.IO.File.ReadAllText(jsonPath);
+    var lisbeth = BotManager.Bots.FirstOrDefault(c => c.Name == "Lisbeth");
+    if (lisbeth != null)
+   {
+       var lisbethObject = lisbeth.GetType().GetProperty("Lisbeth").GetValue(lisbeth);
+       if (lisbethObject != null)
+       {
+           Func<Task> executeWithRetry = null;
+           executeWithRetry = async () => {
+               try 
+               {
+                   var orderMethod = lisbethObject.GetType().GetMethod("ExecuteOrders");
+                   await (Task<bool>)orderMethod.Invoke(lisbethObject, new object[] { json, false });
+               }
+               catch (Exception ex) when (
+                   ex.ToString().Contains("HttpRequestException") || 
+                   ex.ToString().Contains("No response from the server") ||
+                   ex.ToString().Contains("Max sessions reached")
+               )
+               {
+                   // Log and stop gently
+                   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Attempting to stop Lisbeth gently...");
+                   var stopGentlyMethod = lisbethObject.GetType().GetMethod("StopGently");
+                   await (Task)stopGentlyMethod.Invoke(lisbethObject, null);
+                   
+                   // Log and try to exit crafting
+                   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Attempting to exit crafting state...");
+                   try 
+                   {
+                       var exitCraftingMethod = lisbethObject.GetType().GetMethod("ExitCrafting");
+                       await (Task<bool>)exitCraftingMethod.Invoke(lisbethObject, null);
+                   }
+                   catch {}
+                   
+                   // Log waiting period
+                   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Waiting 5 minutes before attempting restart...");
+                   await Task.Delay(TimeSpan.FromMinutes(5));
+                   
+                   // Log and request restart
+                   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Requesting Lisbeth to restart orders...");
+                   var restartMethod = lisbethObject.GetType().GetMethod("RequestRestart");
+                   restartMethod.Invoke(lisbethObject, new object[] { json });
+                   
+                   await executeWithRetry();
+               }
+           };
+
+           await executeWithRetry();
+       }
+   }
+]]>
+</CodeChunk>
+
+<CodeChunk Name="SetLisbethJson3">
+<![CDATA[
+    // Try to get profile path and construct relative path from there
+    var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+    var profileDir = System.IO.Path.GetDirectoryName(profilePath);
+    var jsonPath = System.IO.Path.Combine(profileDir, "../Lisbeth/1-21/10-15.json");
+    
+    var json = System.IO.File.ReadAllText(jsonPath);
+    var lisbeth = BotManager.Bots.FirstOrDefault(c => c.Name == "Lisbeth");
+    if (lisbeth != null)
+   {
+       var lisbethObject = lisbeth.GetType().GetProperty("Lisbeth").GetValue(lisbeth);
+       if (lisbethObject != null)
+       {
+           Func<Task> executeWithRetry = null;
+           executeWithRetry = async () => {
+               try 
+               {
+                   var orderMethod = lisbethObject.GetType().GetMethod("ExecuteOrders");
+                   await (Task<bool>)orderMethod.Invoke(lisbethObject, new object[] { json, false });
+               }
+               catch (Exception ex) when (
+                   ex.ToString().Contains("HttpRequestException") || 
+                   ex.ToString().Contains("No response from the server") ||
+                   ex.ToString().Contains("Max sessions reached")
+               )
+               {
+                   // Log and stop gently
+                   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Attempting to stop Lisbeth gently...");
+                   var stopGentlyMethod = lisbethObject.GetType().GetMethod("StopGently");
+                   await (Task)stopGentlyMethod.Invoke(lisbethObject, null);
+                   
+                   // Log and try to exit crafting
+                   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Attempting to exit crafting state...");
+                   try 
+                   {
+                       var exitCraftingMethod = lisbethObject.GetType().GetMethod("ExitCrafting");
+                       await (Task<bool>)exitCraftingMethod.Invoke(lisbethObject, null);
+                   }
+                   catch {}
+                   
+                   // Log waiting period
+                   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Waiting 5 minutes before attempting restart...");
+                   await Task.Delay(TimeSpan.FromMinutes(5));
+                   
+                   // Log and request restart
+                   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Requesting Lisbeth to restart orders...");
+                   var restartMethod = lisbethObject.GetType().GetMethod("RequestRestart");
+                   restartMethod.Invoke(lisbethObject, new object[] { json });
+                   
+                   await executeWithRetry();
+               }
+           };
+
+           await executeWithRetry();
+       }
+   }
+]]>
+</CodeChunk>
+
+<CodeChunk Name="SetLisbethJson4">
+<![CDATA[
+    // Try to get profile path and construct relative path from there
+    var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+    var profileDir = System.IO.Path.GetDirectoryName(profilePath);
+    var jsonPath = System.IO.Path.Combine(profileDir, "../Lisbeth/1-21/15-20Part1.json");
+    
+    var json = System.IO.File.ReadAllText(jsonPath);
+    var lisbeth = BotManager.Bots.FirstOrDefault(c => c.Name == "Lisbeth");
+
+    string workingDirectory = Directory.GetCurrentDirectory();
+					string settingsPath = Path.Combine(workingDirectory, "Settings");
+					string logFilePath = Path.Combine(settingsPath, "autocraft.txt");
+					
+					// Create the file if it doesn't exist
+					if (!File.Exists(logFilePath))
+					{
+						File.WriteAllText(logFilePath, "");
+					}
+
+          string content = File.ReadAllText(logFilePath);
+          
+    if ((lisbeth != null) && content.Contains("craft19"))
+   {
+       var lisbethObject = lisbeth.GetType().GetProperty("Lisbeth").GetValue(lisbeth);
+       if (lisbethObject != null)
+       {
+           Func<Task> executeWithRetry = null;
+           executeWithRetry = async () => {
+               try 
+               {
+                   var orderMethod = lisbethObject.GetType().GetMethod("ExecuteOrders");
+                   await (Task<bool>)orderMethod.Invoke(lisbethObject, new object[] { json, false });
+               }
+               catch (Exception ex) when (
+                   ex.ToString().Contains("HttpRequestException") || 
+                   ex.ToString().Contains("No response from the server") ||
+                   ex.ToString().Contains("Max sessions reached")
+               )
+               {
+                   // Log and stop gently
+                   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Attempting to stop Lisbeth gently...");
+                   var stopGentlyMethod = lisbethObject.GetType().GetMethod("StopGently");
+                   await (Task)stopGentlyMethod.Invoke(lisbethObject, null);
+                   
+                   // Log and try to exit crafting
+                   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Attempting to exit crafting state...");
+                   try 
+                   {
+                       var exitCraftingMethod = lisbethObject.GetType().GetMethod("ExitCrafting");
+                       await (Task<bool>)exitCraftingMethod.Invoke(lisbethObject, null);
+                   }
+                   catch {}
+                   
+                   // Log waiting period
+                   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Waiting 5 minutes before attempting restart...");
+                   await Task.Delay(TimeSpan.FromMinutes(5));
+                   
+                   // Log and request restart
+                   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Requesting Lisbeth to restart orders...");
+                   var restartMethod = lisbethObject.GetType().GetMethod("RequestRestart");
+                   restartMethod.Invoke(lisbethObject, new object[] { json });
+                   
+                   await executeWithRetry();
+               }
+           };
+
+           await executeWithRetry();
+       }
+   }
+]]>
+</CodeChunk>
+
+<CodeChunk Name="SetLisbethJson5">
+<![CDATA[
+    // Try to get profile path and construct relative path from there
+    var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+    var profileDir = System.IO.Path.GetDirectoryName(profilePath);
+    var jsonPath = System.IO.Path.Combine(profileDir, "../Lisbeth/1-21/15-20Part2.json");
+    
+    var json = System.IO.File.ReadAllText(jsonPath);
+    var lisbeth = BotManager.Bots.FirstOrDefault(c => c.Name == "Lisbeth");
+
+    string workingDirectory = Directory.GetCurrentDirectory();
+					string settingsPath = Path.Combine(workingDirectory, "Settings");
+					string logFilePath = Path.Combine(settingsPath, "autocraft.txt");
+					
+					// Create the file if it doesn't exist
+					if (!File.Exists(logFilePath))
+					{
+						File.WriteAllText(logFilePath, "");
+					}
+
+          string content = File.ReadAllText(logFilePath);
+          
+    if ((lisbeth != null) && content.Contains("craft20"))
    {
        var lisbethObject = lisbeth.GetType().GetProperty("Lisbeth").GetValue(lisbeth);
        if (lisbethObject != null)

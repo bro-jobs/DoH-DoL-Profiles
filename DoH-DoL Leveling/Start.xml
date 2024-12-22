@@ -75,6 +75,12 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 				<LLoadProfile Path="Gathering/1-21 Botanist.xml"/>
 			</If>
 		</If>
+
+		<If Condition="&autosell; == 1">
+			<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 21 and Core.Me.Levels[ClassJobType.Blacksmith] &lt; 21 and Core.Me.Levels[ClassJobType.Armorer] &lt; 21 and Core.Me.Levels[ClassJobType.Goldsmith] &lt; 21 and Core.Me.Levels[ClassJobType.Leatherworker] &lt; 21 and Core.Me.Levels[ClassJobType.Weaver] &lt; 21 and Core.Me.Levels[ClassJobType.Alchemist] &lt; 21 and Core.Me.Levels[ClassJobType.Culinarian] &lt; 21">
+				<LLoadProfile Path="Crafting/1-21.xml"/>
+			</If>
+		</If>
 	
 	
 		<!-- Check to see if we have Crafting at level 21 -->
@@ -806,7 +812,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		</If>
 		
 		
-		<If Condition="(Core.Me.Levels[ClassJobType.Carpenter] &lt; 90) or (Core.Me.Levels[ClassJobType.Blacksmith] &lt; 90) or (Core.Me.Levels[ClassJobType.Goldsmith] &lt; 90) or (Core.Me.Levels[ClassJobType.Weaver] &lt; 90) or (Core.Me.Levels[ClassJobType.Culinarian] &lt; 90)">
+		<If Condition="(Core.Me.Levels[ClassJobType.Armorer] &lt; 90) or (Core.Me.Levels[ClassJobType.Leatherworker] &lt; 90) or (Core.Me.Levels[ClassJobType.Alchemist] &lt; 90)">
 		<!-- Studium to 90 -->
 		<LLoadProfile Path="Quests/Studium.xml"/>
 		</If>

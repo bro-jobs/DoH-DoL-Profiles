@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Profile>
+<Name>Selling Lv5 Junk</Name>
+<Order>
+    <AutoInventoryEquip/>
+	
+		<LogMessage Message="Selling Lv1-5 junk..."/>
+		<LogMessage Message="CAUTION! This may sell HQ items that you'd rather put on the marketboard!"/>
+		
+		<LLSellItem ItemIds="5380, 5107, 4834, 5509, 5488, 5534, 5130, 5433, 5518, 5106, 5432, 5498, 4823, 5268, 5341, 5560, 4751, 4930, 5197, 5291, 5318, 5492, 5361, 5056, 5091, 5071, 5062, 5275, 5333, 5324, 5475, 4825, 4847, 5361, 2219, 2456, 5056, 2341, 2226, 2494, 5062, 2106, 4305, 5275, 4304, 3274, 5333, 3309, 2143, 4564, 4849, 4696, 4660" Armory="true"/>
+		<LLSellItem ItemIds="2658, 2652, 3023, 2959, 2961, 3310"/>
+		<LLDiscardItem ItemIds="2585" />
+
+		
+    <WaitTimer WaitTime="5"/>
+	<RunCode Name="Logger" />
+	<WaitTimer WaitTime="5"/>
+    <LLoadProfile Path="../Crafting/1-21.xml"/>
+</Order>
+<CodeChunks>
+<CodeChunk Name="Logger">
+    <![CDATA[
+        try
+        {
+            string workingDirectory = Directory.GetCurrentDirectory();
+            string settingsPath = Path.Combine(workingDirectory, "Settings");
+            string logFilePath = Path.Combine(settingsPath, $"autosell.txt");
+            
+            File.AppendAllText(logFilePath, "sell5" + Environment.NewLine);
+        }
+        catch (Exception ex)
+        {
+        }
+    ]]>
+</CodeChunk>
+</CodeChunks>
+</Profile>

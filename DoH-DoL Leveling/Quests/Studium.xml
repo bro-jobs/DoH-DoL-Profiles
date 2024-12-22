@@ -301,89 +301,91 @@
 				<BuyInclusionShopItem ItemId="12667" Count="10"/>
 			</If>
 			<!-- Check if we can buy Lv80 gear. -->
-			<If Condition="ItemCount(39825) &lt; 1" >
+			<If Condition="ItemCount(39825) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39825" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39826) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39286" Count="1"/>
+			<If Condition="ItemCount(39826) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39826" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39827) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39287" Count="1"/>
+			<If Condition="ItemCount(39827) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39827" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39828) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39288" Count="1"/>
+			<If Condition="ItemCount(39828) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39828" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39829) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39289" Count="1"/>
+			<If Condition="ItemCount(39829) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39829" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39830) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39290" Count="1"/>
+			<If Condition="ItemCount(39830) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39830" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39831) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39291" Count="1"/>
+			<If Condition="ItemCount(39831) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39831" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39832) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39292" Count="1"/>
+			<If Condition="ItemCount(39832) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39832" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39836) &lt; 1" >
+			<If Condition="ItemCount(39836) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39836" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39837) &lt; 1" >
+			<If Condition="ItemCount(39837) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39837" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39838) &lt; 1" >
+			<If Condition="ItemCount(39838) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39838" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39839) &lt; 1" >
+			<If Condition="ItemCount(39839) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39839" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39840) &lt; 1" >
+			<If Condition="ItemCount(39840) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39840" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39841) &lt; 1" >
+			<If Condition="ItemCount(39841) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39841" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39842) &lt; 1" >
+			<If Condition="ItemCount(39842) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39842" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39843) &lt; 1" >
+			<If Condition="ItemCount(39843) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39843" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39846) &lt; 1" >
+			<If Condition="ItemCount(39846) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39846" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39847) &lt; 1" >
+			<If Condition="ItemCount(39847) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 299" >
 				<BuyInclusionShopItem ItemId="39847" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39848) &lt; 1" >
+			<If Condition="ItemCount(39848) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39848" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39849) &lt; 1" >
+			<If Condition="ItemCount(39849) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39849" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39850) &lt; 1" >
+			<If Condition="ItemCount(39850) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39850" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39856) &lt; 1" >
+			<If Condition="ItemCount(39856) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39856" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39857) &lt; 1" >
+			<If Condition="ItemCount(39857) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39857" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39858) &lt; 1" >
+			<If Condition="ItemCount(39858) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39858" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39859) &lt; 2" >
+			<If Condition="ItemCount(39859) &lt; 2 and ItemCount(&PurpleCraftersScrip;) &gt; 74" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39859) &lt; 1" >
+			<If Condition="ItemCount(39859) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 74" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
 			<WaitTimer WaitTime="1" />	
 			<!-- 33926 = Command XI. Very useful. -->
+			<If Condition="ItemCount(&PurpleCraftersScrip;) &gt; 250">
 			<BuyInclusionShopItem ItemId="33926" Count="0"/>
-			<WaitTimer WaitTime="1" />
-		</While>
+			</If>
+			<WaitTimer WaitTime="5" />
+			</While>
 					</While>				
 					<GetTo ZoneId="962" XYZ="-299.9291, 21.68615, -159.1658"/> 
 					<RunCode name="TurnIn"/>  
@@ -425,88 +427,91 @@
 				<BuyInclusionShopItem ItemId="12667" Count="10"/>
 			</If>
 			<!-- Check if we can buy Lv80 gear. -->
-			<If Condition="ItemCount(39825) &lt; 1" >
+			<If Condition="ItemCount(39825) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39825" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39826) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39286" Count="1"/>
+			<If Condition="ItemCount(39826) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39826" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39827) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39287" Count="1"/>
+			<If Condition="ItemCount(39827) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39827" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39828) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39288" Count="1"/>
+			<If Condition="ItemCount(39828) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39828" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39829) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39289" Count="1"/>
+			<If Condition="ItemCount(39829) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39829" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39830) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39290" Count="1"/>
+			<If Condition="ItemCount(39830) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39830" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39831) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39291" Count="1"/>
+			<If Condition="ItemCount(39831) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39831" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39832) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39292" Count="1"/>
+			<If Condition="ItemCount(39832) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39832" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39836) &lt; 1" >
+			<If Condition="ItemCount(39836) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39836" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39837) &lt; 1" >
+			<If Condition="ItemCount(39837) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39837" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39838) &lt; 1" >
+			<If Condition="ItemCount(39838) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39838" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39839) &lt; 1" >
+			<If Condition="ItemCount(39839) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39839" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39840) &lt; 1" >
+			<If Condition="ItemCount(39840) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39840" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39841) &lt; 1" >
+			<If Condition="ItemCount(39841) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39841" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39842) &lt; 1" >
+			<If Condition="ItemCount(39842) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39842" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39843) &lt; 1" >
+			<If Condition="ItemCount(39843) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39843" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39846) &lt; 1" >
+			<If Condition="ItemCount(39846) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39846" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39847) &lt; 1" >
+			<If Condition="ItemCount(39847) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 299" >
 				<BuyInclusionShopItem ItemId="39847" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39848) &lt; 1" >
+			<If Condition="ItemCount(39848) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39848" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39849) &lt; 1" >
+			<If Condition="ItemCount(39849) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39849" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39850) &lt; 1" >
+			<If Condition="ItemCount(39850) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39850" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39856) &lt; 1" >
+			<If Condition="ItemCount(39856) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39856" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39857) &lt; 1" >
+			<If Condition="ItemCount(39857) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39857" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39858) &lt; 1" >
+			<If Condition="ItemCount(39858) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39858" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39859) &lt; 2" >
+			<If Condition="ItemCount(39859) &lt; 2 and ItemCount(&PurpleCraftersScrip;) &gt; 74" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39859) &lt; 1" >
+			<If Condition="ItemCount(39859) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 74" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
 			<!-- 33926 = Command XI. Very useful. -->
 			<WaitTimer WaitTime="1" />	
 			<!-- 33926 = Command XI. Very useful. -->
+			<If Condition="ItemCount(&PurpleCraftersScrip;) &gt; 250">
 			<BuyInclusionShopItem ItemId="33926" Count="0"/>
+			</If>
+			<WaitTimer WaitTime="5" />
 			<WaitTimer WaitTime="1" />
 		</While>
 					</While>				
@@ -550,88 +555,91 @@
 				<BuyInclusionShopItem ItemId="12667" Count="10"/>
 			</If>
 			<!-- Check if we can buy Lv80 gear. -->
-			<If Condition="ItemCount(39825) &lt; 1" >
+			<If Condition="ItemCount(39825) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39825" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39826) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39286" Count="1"/>
+			<If Condition="ItemCount(39826) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39826" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39827) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39287" Count="1"/>
+			<If Condition="ItemCount(39827) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39827" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39828) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39288" Count="1"/>
+			<If Condition="ItemCount(39828) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39828" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39829) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39289" Count="1"/>
+			<If Condition="ItemCount(39829) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39829" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39830) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39290" Count="1"/>
+			<If Condition="ItemCount(39830) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39830" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39831) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39291" Count="1"/>
+			<If Condition="ItemCount(39831) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39831" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39832) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39292" Count="1"/>
+			<If Condition="ItemCount(39832) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39832" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39836) &lt; 1" >
+			<If Condition="ItemCount(39836) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39836" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39837) &lt; 1" >
+			<If Condition="ItemCount(39837) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39837" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39838) &lt; 1" >
+			<If Condition="ItemCount(39838) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39838" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39839) &lt; 1" >
+			<If Condition="ItemCount(39839) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39839" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39840) &lt; 1" >
+			<If Condition="ItemCount(39840) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39840" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39841) &lt; 1" >
+			<If Condition="ItemCount(39841) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39841" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39842) &lt; 1" >
+			<If Condition="ItemCount(39842) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39842" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39843) &lt; 1" >
+			<If Condition="ItemCount(39843) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39843" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39846) &lt; 1" >
+			<If Condition="ItemCount(39846) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39846" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39847) &lt; 1" >
+			<If Condition="ItemCount(39847) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 299" >
 				<BuyInclusionShopItem ItemId="39847" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39848) &lt; 1" >
+			<If Condition="ItemCount(39848) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39848" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39849) &lt; 1" >
+			<If Condition="ItemCount(39849) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39849" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39850) &lt; 1" >
+			<If Condition="ItemCount(39850) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39850" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39856) &lt; 1" >
+			<If Condition="ItemCount(39856) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39856" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39857) &lt; 1" >
+			<If Condition="ItemCount(39857) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39857" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39858) &lt; 1" >
+			<If Condition="ItemCount(39858) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39858" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39859) &lt; 2" >
+			<If Condition="ItemCount(39859) &lt; 2 and ItemCount(&PurpleCraftersScrip;) &gt; 74" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39859) &lt; 1" >
+			<If Condition="ItemCount(39859) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 74" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
 			<!-- 33926 = Command XI. Very useful. -->
 			<WaitTimer WaitTime="1" />	
 			<!-- 33926 = Command XI. Very useful. -->
+			<If Condition="ItemCount(&PurpleCraftersScrip;) &gt; 250">
 			<BuyInclusionShopItem ItemId="33926" Count="0"/>
+			</If>
+			<WaitTimer WaitTime="5" />
 			<WaitTimer WaitTime="1" />
 		</While>
 					</While>				
@@ -730,94 +738,96 @@
 				<BuyInclusionShopItem ItemId="12667" Count="10"/>
 			</If>
 			<!-- Check if we can buy Lv80 gear. -->
-			<If Condition="ItemCount(39825) &lt; 1" >
+			<If Condition="ItemCount(39825) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39825" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39826) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39286" Count="1"/>
+			<If Condition="ItemCount(39826) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39826" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39827) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39287" Count="1"/>
+			<If Condition="ItemCount(39827) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39827" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39828) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39288" Count="1"/>
+			<If Condition="ItemCount(39828) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39828" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39829) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39289" Count="1"/>
+			<If Condition="ItemCount(39829) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39829" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39830) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39290" Count="1"/>
+			<If Condition="ItemCount(39830) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39830" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39831) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39291" Count="1"/>
+			<If Condition="ItemCount(39831) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39831" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39832) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39292" Count="1"/>
+			<If Condition="ItemCount(39832) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39832" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39836) &lt; 1" >
+			<If Condition="ItemCount(39836) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39836" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39837) &lt; 1" >
+			<If Condition="ItemCount(39837) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39837" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39838) &lt; 1" >
+			<If Condition="ItemCount(39838) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39838" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39839) &lt; 1" >
+			<If Condition="ItemCount(39839) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39839" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39840) &lt; 1" >
+			<If Condition="ItemCount(39840) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39840" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39841) &lt; 1" >
+			<If Condition="ItemCount(39841) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39841" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39842) &lt; 1" >
+			<If Condition="ItemCount(39842) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39842" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39843) &lt; 1" >
+			<If Condition="ItemCount(39843) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39843" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39846) &lt; 1" >
+			<If Condition="ItemCount(39846) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39846" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39847) &lt; 1" >
+			<If Condition="ItemCount(39847) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 299" >
 				<BuyInclusionShopItem ItemId="39847" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39848) &lt; 1" >
+			<If Condition="ItemCount(39848) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39848" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39849) &lt; 1" >
+			<If Condition="ItemCount(39849) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39849" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39850) &lt; 1" >
+			<If Condition="ItemCount(39850) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39850" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39856) &lt; 1" >
+			<If Condition="ItemCount(39856) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39856" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39857) &lt; 1" >
+			<If Condition="ItemCount(39857) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39857" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39858) &lt; 1" >
+			<If Condition="ItemCount(39858) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39858" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39859) &lt; 2" >
+			<If Condition="ItemCount(39859) &lt; 2 and ItemCount(&PurpleCraftersScrip;) &gt; 74" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39859) &lt; 1" >
+			<If Condition="ItemCount(39859) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 74" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
-			<!-- 33926 = Command XI. Very useful. -->
 			<WaitTimer WaitTime="1" />	
 			<!-- 33926 = Command XI. Very useful. -->
+			<If Condition="ItemCount(&PurpleCraftersScrip;) &gt; 250">
 			<BuyInclusionShopItem ItemId="33926" Count="0"/>
+			</If>
 			<WaitTimer WaitTime="1" />
 		</While>
 					</While>				
 					<GetTo ZoneId="962" XYZ="-299.9291, 21.68615, -159.1658"/> 
 					<RunCode name="TurnIn"/>  
 					<LLTurnIn QuestId="69680" NpcId="1038525" XYZ="-296.5591, 21.84602, -162.1577"/>
+					<LLSmallTalk/>
 				</If>
 			</If>			
     </If>
@@ -887,88 +897,91 @@
 				<BuyInclusionShopItem ItemId="12667" Count="10"/>
 			</If>
 			<!-- Check if we can buy Lv80 gear. -->
-			<If Condition="ItemCount(39825) &lt; 1" >
+			<If Condition="ItemCount(39825) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39825" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39826) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39286" Count="1"/>
+			<If Condition="ItemCount(39826) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39826" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39827) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39287" Count="1"/>
+			<If Condition="ItemCount(39827) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39827" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39828) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39288" Count="1"/>
+			<If Condition="ItemCount(39828) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39828" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39829) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39289" Count="1"/>
+			<If Condition="ItemCount(39829) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39829" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39830) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39290" Count="1"/>
+			<If Condition="ItemCount(39830) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39830" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39831) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39291" Count="1"/>
+			<If Condition="ItemCount(39831) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39831" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39832) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39292" Count="1"/>
+			<If Condition="ItemCount(39832) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39832" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39836) &lt; 1" >
+			<If Condition="ItemCount(39836) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39836" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39837) &lt; 1" >
+			<If Condition="ItemCount(39837) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39837" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39838) &lt; 1" >
+			<If Condition="ItemCount(39838) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39838" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39839) &lt; 1" >
+			<If Condition="ItemCount(39839) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39839" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39840) &lt; 1" >
+			<If Condition="ItemCount(39840) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39840" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39841) &lt; 1" >
+			<If Condition="ItemCount(39841) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39841" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39842) &lt; 1" >
+			<If Condition="ItemCount(39842) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39842" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39843) &lt; 1" >
+			<If Condition="ItemCount(39843) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39843" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39846) &lt; 1" >
+			<If Condition="ItemCount(39846) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39846" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39847) &lt; 1" >
+			<If Condition="ItemCount(39847) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 299" >
 				<BuyInclusionShopItem ItemId="39847" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39848) &lt; 1" >
+			<If Condition="ItemCount(39848) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39848" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39849) &lt; 1" >
+			<If Condition="ItemCount(39849) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39849" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39850) &lt; 1" >
+			<If Condition="ItemCount(39850) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39850" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39856) &lt; 1" >
+			<If Condition="ItemCount(39856) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39856" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39857) &lt; 1" >
+			<If Condition="ItemCount(39857) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39857" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39858) &lt; 1" >
+			<If Condition="ItemCount(39858) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39858" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39859) &lt; 2" >
+			<If Condition="ItemCount(39859) &lt; 2 and ItemCount(&PurpleCraftersScrip;) &gt; 74" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39859) &lt; 1" >
+			<If Condition="ItemCount(39859) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 74" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
 			<!-- 33926 = Command XI. Very useful. -->
 			<WaitTimer WaitTime="1" />	
 			<!-- 33926 = Command XI. Very useful. -->
+			<If Condition="ItemCount(&PurpleCraftersScrip;) &gt; 250">
 			<BuyInclusionShopItem ItemId="33926" Count="0"/>
+			</If>
+			<WaitTimer WaitTime="5" />
 			<WaitTimer WaitTime="1" />
 		</While>
 					</While>				
@@ -1013,88 +1026,91 @@
 				<BuyInclusionShopItem ItemId="12667" Count="10"/>
 			</If>
 			<!-- Check if we can buy Lv80 gear. -->
-			<If Condition="ItemCount(39825) &lt; 1" >
+			<If Condition="ItemCount(39825) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39825" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39826) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39286" Count="1"/>
+			<If Condition="ItemCount(39826) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39826" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39827) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39287" Count="1"/>
+			<If Condition="ItemCount(39827) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39827" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39828) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39288" Count="1"/>
+			<If Condition="ItemCount(39828) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39828" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39829) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39289" Count="1"/>
+			<If Condition="ItemCount(39829) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39829" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39830) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39290" Count="1"/>
+			<If Condition="ItemCount(39830) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39830" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39831) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39291" Count="1"/>
+			<If Condition="ItemCount(39831) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39831" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39832) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39292" Count="1"/>
+			<If Condition="ItemCount(39832) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39832" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39836) &lt; 1" >
+			<If Condition="ItemCount(39836) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39836" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39837) &lt; 1" >
+			<If Condition="ItemCount(39837) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39837" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39838) &lt; 1" >
+			<If Condition="ItemCount(39838) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39838" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39839) &lt; 1" >
+			<If Condition="ItemCount(39839) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39839" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39840) &lt; 1" >
+			<If Condition="ItemCount(39840) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39840" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39841) &lt; 1" >
+			<If Condition="ItemCount(39841) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39841" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39842) &lt; 1" >
+			<If Condition="ItemCount(39842) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39842" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39843) &lt; 1" >
+			<If Condition="ItemCount(39843) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39843" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39846) &lt; 1" >
+			<If Condition="ItemCount(39846) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39846" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39847) &lt; 1" >
+			<If Condition="ItemCount(39847) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 299" >
 				<BuyInclusionShopItem ItemId="39847" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39848) &lt; 1" >
+			<If Condition="ItemCount(39848) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39848" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39849) &lt; 1" >
+			<If Condition="ItemCount(39849) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39849" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39850) &lt; 1" >
+			<If Condition="ItemCount(39850) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39850" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39856) &lt; 1" >
+			<If Condition="ItemCount(39856) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39856" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39857) &lt; 1" >
+			<If Condition="ItemCount(39857) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39857" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39858) &lt; 1" >
+			<If Condition="ItemCount(39858) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39858" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39859) &lt; 2" >
+			<If Condition="ItemCount(39859) &lt; 2 and ItemCount(&PurpleCraftersScrip;) &gt; 74" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39859) &lt; 1" >
+			<If Condition="ItemCount(39859) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 74" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
 			<!-- 33926 = Command XI. Very useful. -->
 			<WaitTimer WaitTime="1" />	
 			<!-- 33926 = Command XI. Very useful. -->
+			<If Condition="ItemCount(&PurpleCraftersScrip;) &gt; 250">
 			<BuyInclusionShopItem ItemId="33926" Count="0"/>
+			</If>
+			<WaitTimer WaitTime="5" />
 			<WaitTimer WaitTime="1" />
 		</While>
 					</While>				
@@ -1138,88 +1154,91 @@
 				<BuyInclusionShopItem ItemId="12667" Count="10"/>
 			</If>
 			<!-- Check if we can buy Lv80 gear. -->
-			<If Condition="ItemCount(39825) &lt; 1" >
+			<If Condition="ItemCount(39825) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39825" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39826) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39286" Count="1"/>
+			<If Condition="ItemCount(39826) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39826" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39827) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39287" Count="1"/>
+			<If Condition="ItemCount(39827) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39827" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39828) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39288" Count="1"/>
+			<If Condition="ItemCount(39828) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39828" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39829) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39289" Count="1"/>
+			<If Condition="ItemCount(39829) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39829" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39830) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39290" Count="1"/>
+			<If Condition="ItemCount(39830) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39830" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39831) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39291" Count="1"/>
+			<If Condition="ItemCount(39831) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39831" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39832) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39292" Count="1"/>
+			<If Condition="ItemCount(39832) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39832" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39836) &lt; 1" >
+			<If Condition="ItemCount(39836) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39836" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39837) &lt; 1" >
+			<If Condition="ItemCount(39837) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39837" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39838) &lt; 1" >
+			<If Condition="ItemCount(39838) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39838" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39839) &lt; 1" >
+			<If Condition="ItemCount(39839) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39839" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39840) &lt; 1" >
+			<If Condition="ItemCount(39840) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39840" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39841) &lt; 1" >
+			<If Condition="ItemCount(39841) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39841" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39842) &lt; 1" >
+			<If Condition="ItemCount(39842) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39842" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39843) &lt; 1" >
+			<If Condition="ItemCount(39843) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39843" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39846) &lt; 1" >
+			<If Condition="ItemCount(39846) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39846" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39847) &lt; 1" >
+			<If Condition="ItemCount(39847) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 299" >
 				<BuyInclusionShopItem ItemId="39847" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39848) &lt; 1" >
+			<If Condition="ItemCount(39848) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39848" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39849) &lt; 1" >
+			<If Condition="ItemCount(39849) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39849" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39850) &lt; 1" >
+			<If Condition="ItemCount(39850) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39850" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39856) &lt; 1" >
+			<If Condition="ItemCount(39856) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39856" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39857) &lt; 1" >
+			<If Condition="ItemCount(39857) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39857" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39858) &lt; 1" >
+			<If Condition="ItemCount(39858) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39858" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39859) &lt; 2" >
+			<If Condition="ItemCount(39859) &lt; 2 and ItemCount(&PurpleCraftersScrip;) &gt; 74" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39859) &lt; 1" >
+			<If Condition="ItemCount(39859) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 74" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
 			<!-- 33926 = Command XI. Very useful. -->
 			<WaitTimer WaitTime="1" />	
 			<!-- 33926 = Command XI. Very useful. -->
+			<If Condition="ItemCount(&PurpleCraftersScrip;) &gt; 250">
 			<BuyInclusionShopItem ItemId="33926" Count="0"/>
+			</If>
+			<WaitTimer WaitTime="5" />
 			<WaitTimer WaitTime="1" />
 		</While>
 					</While>				
@@ -1309,88 +1328,91 @@
 				<BuyInclusionShopItem ItemId="12667" Count="10"/>
 			</If>
 			<!-- Check if we can buy Lv80 gear. -->
-			<If Condition="ItemCount(39825) &lt; 1" >
+			<If Condition="ItemCount(39825) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39825" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39826) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39286" Count="1"/>
+			<If Condition="ItemCount(39826) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39826" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39827) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39287" Count="1"/>
+			<If Condition="ItemCount(39827) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39827" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39828) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39288" Count="1"/>
+			<If Condition="ItemCount(39828) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39828" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39829) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39289" Count="1"/>
+			<If Condition="ItemCount(39829) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39829" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39830) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39290" Count="1"/>
+			<If Condition="ItemCount(39830) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39830" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39831) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39291" Count="1"/>
+			<If Condition="ItemCount(39831) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39831" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39832) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39292" Count="1"/>
+			<If Condition="ItemCount(39832) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39832" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39836) &lt; 1" >
+			<If Condition="ItemCount(39836) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39836" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39837) &lt; 1" >
+			<If Condition="ItemCount(39837) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39837" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39838) &lt; 1" >
+			<If Condition="ItemCount(39838) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39838" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39839) &lt; 1" >
+			<If Condition="ItemCount(39839) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39839" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39840) &lt; 1" >
+			<If Condition="ItemCount(39840) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39840" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39841) &lt; 1" >
+			<If Condition="ItemCount(39841) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39841" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39842) &lt; 1" >
+			<If Condition="ItemCount(39842) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39842" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39843) &lt; 1" >
+			<If Condition="ItemCount(39843) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39843" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39846) &lt; 1" >
+			<If Condition="ItemCount(39846) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39846" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39847) &lt; 1" >
+			<If Condition="ItemCount(39847) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 299" >
 				<BuyInclusionShopItem ItemId="39847" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39848) &lt; 1" >
+			<If Condition="ItemCount(39848) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39848" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39849) &lt; 1" >
+			<If Condition="ItemCount(39849) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39849" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39850) &lt; 1" >
+			<If Condition="ItemCount(39850) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39850" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39856) &lt; 1" >
+			<If Condition="ItemCount(39856) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39856" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39857) &lt; 1" >
+			<If Condition="ItemCount(39857) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39857" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39858) &lt; 1" >
+			<If Condition="ItemCount(39858) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39858" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39859) &lt; 2" >
+			<If Condition="ItemCount(39859) &lt; 2 and ItemCount(&PurpleCraftersScrip;) &gt; 74" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39859) &lt; 1" >
+			<If Condition="ItemCount(39859) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 74" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
 			<!-- 33926 = Command XI. Very useful. -->
 			<WaitTimer WaitTime="1" />	
 			<!-- 33926 = Command XI. Very useful. -->
+			<If Condition="ItemCount(&PurpleCraftersScrip;) &gt; 250">
 			<BuyInclusionShopItem ItemId="33926" Count="0"/>
+			</If>
+			<WaitTimer WaitTime="5" />
 			<WaitTimer WaitTime="1" />
 		</While>
 					</While>				
@@ -1466,88 +1488,91 @@
 				<BuyInclusionShopItem ItemId="12667" Count="10"/>
 			</If>
 			<!-- Check if we can buy Lv80 gear. -->
-			<If Condition="ItemCount(39825) &lt; 1" >
+			<If Condition="ItemCount(39825) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39825" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39826) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39286" Count="1"/>
+			<If Condition="ItemCount(39826) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39826" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39827) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39287" Count="1"/>
+			<If Condition="ItemCount(39827) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39827" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39828) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39288" Count="1"/>
+			<If Condition="ItemCount(39828) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39828" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39829) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39289" Count="1"/>
+			<If Condition="ItemCount(39829) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39829" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39830) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39290" Count="1"/>
+			<If Condition="ItemCount(39830) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39830" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39831) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39291" Count="1"/>
+			<If Condition="ItemCount(39831) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39831" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39832) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39292" Count="1"/>
+			<If Condition="ItemCount(39832) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39832" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39836) &lt; 1" >
+			<If Condition="ItemCount(39836) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39836" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39837) &lt; 1" >
+			<If Condition="ItemCount(39837) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39837" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39838) &lt; 1" >
+			<If Condition="ItemCount(39838) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39838" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39839) &lt; 1" >
+			<If Condition="ItemCount(39839) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39839" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39840) &lt; 1" >
+			<If Condition="ItemCount(39840) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39840" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39841) &lt; 1" >
+			<If Condition="ItemCount(39841) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39841" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39842) &lt; 1" >
+			<If Condition="ItemCount(39842) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39842" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39843) &lt; 1" >
+			<If Condition="ItemCount(39843) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39843" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39846) &lt; 1" >
+			<If Condition="ItemCount(39846) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39846" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39847) &lt; 1" >
+			<If Condition="ItemCount(39847) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 299" >
 				<BuyInclusionShopItem ItemId="39847" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39848) &lt; 1" >
+			<If Condition="ItemCount(39848) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39848" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39849) &lt; 1" >
+			<If Condition="ItemCount(39849) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39849" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39850) &lt; 1" >
+			<If Condition="ItemCount(39850) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39850" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39856) &lt; 1" >
+			<If Condition="ItemCount(39856) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39856" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39857) &lt; 1" >
+			<If Condition="ItemCount(39857) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39857" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39858) &lt; 1" >
+			<If Condition="ItemCount(39858) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39858" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39859) &lt; 2" >
+			<If Condition="ItemCount(39859) &lt; 2 and ItemCount(&PurpleCraftersScrip;) &gt; 74" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39859) &lt; 1" >
+			<If Condition="ItemCount(39859) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 74" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
 			<!-- 33926 = Command XI. Very useful. -->
 			<WaitTimer WaitTime="1" />	
 			<!-- 33926 = Command XI. Very useful. -->
+			<If Condition="ItemCount(&PurpleCraftersScrip;) &gt; 250">
 			<BuyInclusionShopItem ItemId="33926" Count="0"/>
+			</If>
+			<WaitTimer WaitTime="5" />
 			<WaitTimer WaitTime="1" />
 		</While>
 					</While>				
@@ -1589,88 +1614,91 @@
 				<BuyInclusionShopItem ItemId="12667" Count="10"/>
 			</If>
 			<!-- Check if we can buy Lv80 gear. -->
-			<If Condition="ItemCount(39825) &lt; 1" >
+			<If Condition="ItemCount(39825) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39825" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39826) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39286" Count="1"/>
+			<If Condition="ItemCount(39826) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39826" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39827) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39287" Count="1"/>
+			<If Condition="ItemCount(39827) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39827" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39828) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39288" Count="1"/>
+			<If Condition="ItemCount(39828) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39828" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39829) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39289" Count="1"/>
+			<If Condition="ItemCount(39829) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39829" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39830) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39290" Count="1"/>
+			<If Condition="ItemCount(39830) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39830" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39831) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39291" Count="1"/>
+			<If Condition="ItemCount(39831) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39831" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39832) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39292" Count="1"/>
+			<If Condition="ItemCount(39832) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39832" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39836) &lt; 1" >
+			<If Condition="ItemCount(39836) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39836" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39837) &lt; 1" >
+			<If Condition="ItemCount(39837) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39837" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39838) &lt; 1" >
+			<If Condition="ItemCount(39838) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39838" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39839) &lt; 1" >
+			<If Condition="ItemCount(39839) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39839" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39840) &lt; 1" >
+			<If Condition="ItemCount(39840) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39840" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39841) &lt; 1" >
+			<If Condition="ItemCount(39841) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39841" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39842) &lt; 1" >
+			<If Condition="ItemCount(39842) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39842" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39843) &lt; 1" >
+			<If Condition="ItemCount(39843) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39843" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39846) &lt; 1" >
+			<If Condition="ItemCount(39846) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39846" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39847) &lt; 1" >
+			<If Condition="ItemCount(39847) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 299" >
 				<BuyInclusionShopItem ItemId="39847" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39848) &lt; 1" >
+			<If Condition="ItemCount(39848) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39848" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39849) &lt; 1" >
+			<If Condition="ItemCount(39849) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39849" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39850) &lt; 1" >
+			<If Condition="ItemCount(39850) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39850" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39856) &lt; 1" >
+			<If Condition="ItemCount(39856) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39856" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39857) &lt; 1" >
+			<If Condition="ItemCount(39857) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39857" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39858) &lt; 1" >
+			<If Condition="ItemCount(39858) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39858" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39859) &lt; 2" >
+			<If Condition="ItemCount(39859) &lt; 2 and ItemCount(&PurpleCraftersScrip;) &gt; 74" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39859) &lt; 1" >
+			<If Condition="ItemCount(39859) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 74" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
 			<!-- 33926 = Command XI. Very useful. -->
 			<WaitTimer WaitTime="1" />	
 			<!-- 33926 = Command XI. Very useful. -->
+			<If Condition="ItemCount(&PurpleCraftersScrip;) &gt; 250">
 			<BuyInclusionShopItem ItemId="33926" Count="0"/>
+			</If>
+			<WaitTimer WaitTime="5" />
 			<WaitTimer WaitTime="1" />
 		</While>
 					</While>
@@ -1711,88 +1739,91 @@
 				<BuyInclusionShopItem ItemId="12667" Count="10"/>
 			</If>
 			<!-- Check if we can buy Lv80 gear. -->
-			<If Condition="ItemCount(39825) &lt; 1" >
+			<If Condition="ItemCount(39825) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39825" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39826) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39286" Count="1"/>
+			<If Condition="ItemCount(39826) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39826" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39827) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39287" Count="1"/>
+			<If Condition="ItemCount(39827) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39827" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39828) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39288" Count="1"/>
+			<If Condition="ItemCount(39828) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39828" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39829) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39289" Count="1"/>
+			<If Condition="ItemCount(39829) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39829" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39830) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39290" Count="1"/>
+			<If Condition="ItemCount(39830) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39830" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39831) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39291" Count="1"/>
+			<If Condition="ItemCount(39831) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39831" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39832) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39292" Count="1"/>
+			<If Condition="ItemCount(39832) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39832" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39836) &lt; 1" >
+			<If Condition="ItemCount(39836) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39836" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39837) &lt; 1" >
+			<If Condition="ItemCount(39837) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39837" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39838) &lt; 1" >
+			<If Condition="ItemCount(39838) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39838" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39839) &lt; 1" >
+			<If Condition="ItemCount(39839) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39839" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39840) &lt; 1" >
+			<If Condition="ItemCount(39840) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39840" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39841) &lt; 1" >
+			<If Condition="ItemCount(39841) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39841" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39842) &lt; 1" >
+			<If Condition="ItemCount(39842) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39842" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39843) &lt; 1" >
+			<If Condition="ItemCount(39843) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39843" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39846) &lt; 1" >
+			<If Condition="ItemCount(39846) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39846" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39847) &lt; 1" >
+			<If Condition="ItemCount(39847) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 299" >
 				<BuyInclusionShopItem ItemId="39847" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39848) &lt; 1" >
+			<If Condition="ItemCount(39848) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39848" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39849) &lt; 1" >
+			<If Condition="ItemCount(39849) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39849" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39850) &lt; 1" >
+			<If Condition="ItemCount(39850) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39850" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39856) &lt; 1" >
+			<If Condition="ItemCount(39856) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39856" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39857) &lt; 1" >
+			<If Condition="ItemCount(39857) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39857" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39858) &lt; 1" >
+			<If Condition="ItemCount(39858) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39858" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39859) &lt; 2" >
+			<If Condition="ItemCount(39859) &lt; 2 and ItemCount(&PurpleCraftersScrip;) &gt; 74" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39859) &lt; 1" >
+			<If Condition="ItemCount(39859) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 74" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
 			<!-- 33926 = Command XI. Very useful. -->
 			<WaitTimer WaitTime="1" />	
 			<!-- 33926 = Command XI. Very useful. -->
+			<If Condition="ItemCount(&PurpleCraftersScrip;) &gt; 250">
 			<BuyInclusionShopItem ItemId="33926" Count="0"/>
+			</If>
+			<WaitTimer WaitTime="5" />
 			<WaitTimer WaitTime="1" />
 		</While>
 					</While>				
@@ -1893,88 +1924,91 @@
 				<BuyInclusionShopItem ItemId="12667" Count="10"/>
 			</If>
 			<!-- Check if we can buy Lv80 gear. -->
-			<If Condition="ItemCount(39825) &lt; 1" >
+			<If Condition="ItemCount(39825) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39825" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39826) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39286" Count="1"/>
+			<If Condition="ItemCount(39826) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39826" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39827) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39287" Count="1"/>
+			<If Condition="ItemCount(39827) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39827" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39828) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39288" Count="1"/>
+			<If Condition="ItemCount(39828) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39828" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39829) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39289" Count="1"/>
+			<If Condition="ItemCount(39829) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39829" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39830) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39290" Count="1"/>
+			<If Condition="ItemCount(39830) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39830" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39831) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39291" Count="1"/>
+			<If Condition="ItemCount(39831) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39831" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39832) &lt; 1" >
-				<BuyInclusionShopItem ItemId="39292" Count="1"/>
+			<If Condition="ItemCount(39832) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
+				<BuyInclusionShopItem ItemId="39832" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39836) &lt; 1" >
+			<If Condition="ItemCount(39836) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39836" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39837) &lt; 1" >
+			<If Condition="ItemCount(39837) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39837" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39838) &lt; 1" >
+			<If Condition="ItemCount(39838) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39838" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39839) &lt; 1" >
+			<If Condition="ItemCount(39839) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39839" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39840) &lt; 1" >
+			<If Condition="ItemCount(39840) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39840" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39841) &lt; 1" >
+			<If Condition="ItemCount(39841) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39841" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39842) &lt; 1" >
+			<If Condition="ItemCount(39842) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39842" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39843) &lt; 1" >
+			<If Condition="ItemCount(39843) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 349" >
 				<BuyInclusionShopItem ItemId="39843" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39846) &lt; 1" >
+			<If Condition="ItemCount(39846) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39846" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39847) &lt; 1" >
+			<If Condition="ItemCount(39847) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 299" >
 				<BuyInclusionShopItem ItemId="39847" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39848) &lt; 1" >
+			<If Condition="ItemCount(39848) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39848" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39849) &lt; 1" >
+			<If Condition="ItemCount(39849) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39849" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39850) &lt; 1" >
+			<If Condition="ItemCount(39850) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39850" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39856) &lt; 1" >
+			<If Condition="ItemCount(39856) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39856" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39857) &lt; 1" >
+			<If Condition="ItemCount(39857) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39857" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39858) &lt; 1" >
+			<If Condition="ItemCount(39858) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39858" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39859) &lt; 2" >
+			<If Condition="ItemCount(39859) &lt; 2 and ItemCount(&PurpleCraftersScrip;) &gt; 74" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
-			<If Condition="ItemCount(39859) &lt; 1" >
+			<If Condition="ItemCount(39859) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 74" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
 			</If>
 			<!-- 33926 = Command XI. Very useful. -->
 			<WaitTimer WaitTime="1" />	
 			<!-- 33926 = Command XI. Very useful. -->
+			<If Condition="ItemCount(&PurpleCraftersScrip;) &gt; 250">
 			<BuyInclusionShopItem ItemId="33926" Count="0"/>
+			</If>
+			<WaitTimer WaitTime="5" />
 			<WaitTimer WaitTime="1" />
 		</While>
 					</While>				
@@ -1989,384 +2023,415 @@
     <!-- Sharlayan Cuisine (no xp) -->
 	</If>
 	
-	<If Condition="Core.Me.Levels[ClassJobType.Miner] &lt; 95 and Core.Me.Levels[ClassJobType.Miner] &lt; Core.Me.Levels[ClassJobType.Botanist] and not IsQuestCompleted(69693)">
-	<!-- Miner/Botanist -->	
-	<If Condition="&MIN_BTN; == 1 and not IsQuestCompleted(69695)">	
+	<If Condition="(Core.Me.Levels[ClassJobType.Miner] &lt; 95 or Core.Me.Levels[ClassJobType.Botanist] &lt; 95) and not IsQuestCompleted(69694)">
+		<If Condition="Core.Me.Levels[ClassJobType.Miner] &lt; Core.Me.Levels[ClassJobType.Botanist]">	
+				<ChangeClass Job="Miner" Force="True"/>
+				<WaitTimer WaitTime="3" />
+		<!-- Cultured Pursuits -->
+			<If Condition="IsQuestCompleted(69916) and not IsQuestCompleted(69689)">
+				<If Condition="not HasQuest(69689)">
+					<GetTo ZoneId="962" XYZ="-356.373, 21.64856, -96.78683"/>  
+					<If Condition="IsQuestAcceptQualified(69689)">
+					<LLPickupQuest QuestId="69689" NpcId="1038504"/>
+					<LLSmallTalk/>
+					</If>
+				</If>
+				<If Condition="GetQuestStep(69689) == 1">
+					<GetTo ZoneId="962" XYZ="-374.7939, 19, 38.69832"/>  
+					<LLTalkTo NpcId="1038505" XYZ="-376.4554, 19, 37.00305" QuestId="69689" StepId="1"/>
+				</If>
+				<If Condition="GetQuestStep(69689) == 2">
+					<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/>  
+					<LLTalkTo NpcId="1038503" XYZ="-367.0863, 21.84602, -101.7014" QuestId="69689" StepId="2"/>
+				</If>
+				<If Condition="GetQuestStep(69689) == 255">
+					<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/>  
+					<LLTurnIn QuestId="69689" NpcId="1038501" XYZ="-367.3305, 21.84602, -102.9832"/>
+					<LLSmallTalk/>
+				</If>			
+			</If>
+		</If>
+		<If Condition="Core.Me.Levels[ClassJobType.Botanist] ≤ Core.Me.Levels[ClassJobType.Miner]">	
+				<ChangeClass Job="Botanist" Force="True"/>
+				<WaitTimer WaitTime="3" />
+		<!-- Cultured Pursuits -->
+			<If Condition="IsQuestCompleted(69916) and not IsQuestCompleted(69689)">
+				<If Condition="not HasQuest(69689)">
+					<GetTo ZoneId="962" XYZ="-356.373, 21.64856, -96.78683"/>  
+					<If Condition="IsQuestAcceptQualified(69689)">
+					<LLPickupQuest QuestId="69689" NpcId="1038504"/>
+					<LLSmallTalk/>
+					</If>
+				</If>
+				<If Condition="GetQuestStep(69689) == 1">
+					<GetTo ZoneId="962" XYZ="-374.7939, 19, 38.69832"/>  
+					<LLTalkTo NpcId="1038505" XYZ="-376.4554, 19, 37.00305" QuestId="69689" StepId="1"/>
+				</If>
+				<If Condition="GetQuestStep(69689) == 2">
+					<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/>  
+					<LLTalkTo NpcId="1038503" XYZ="-367.0863, 21.84602, -101.7014" QuestId="69689" StepId="2"/>
+				</If>
+				<If Condition="GetQuestStep(69689) == 255">
+					<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/>  
+					<LLTurnIn QuestId="69689" NpcId="1038501" XYZ="-367.3305, 21.84602, -102.9832"/>
+					<LLSmallTalk/>
+				</If>			
+			</If>
+		</If>
+
+
+		<If Condition="Core.Me.Levels[ClassJobType.Miner] &lt; Core.Me.Levels[ClassJobType.Botanist]">	
 			<ChangeClass Job="Miner" Force="True"/>
 			<WaitTimer WaitTime="3" />
-    <!-- Cultured Pursuits -->
-    <If Condition="IsQuestCompleted(69916) and not IsQuestCompleted(69689)">
-      <If Condition="not HasQuest(69689)">
-      <GetTo ZoneId="962" XYZ="-356.373, 21.64856, -96.78683"/>  
-        <If Condition="IsQuestAcceptQualified(69689)">
-          <LLPickupQuest QuestId="69689" NpcId="1038504"/>
-          <LLSmallTalk/>
-        </If>
-      </If>
-			<If Condition="GetQuestStep(69689) == 1">
-				<GetTo ZoneId="962" XYZ="-374.7939, 19, 38.69832"/>  
-				<LLTalkTo NpcId="1038505" XYZ="-376.4554, 19, 37.00305" QuestId="69689" StepId="1"/>
-			</If>
-			<If Condition="GetQuestStep(69689) == 2">
-				<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/>  
-				<LLTalkTo NpcId="1038503" XYZ="-367.0863, 21.84602, -101.7014" QuestId="69689" StepId="2"/>
-			</If>
-			<If Condition="GetQuestStep(69689) == 255">
-				<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/>  
-				<LLTurnIn QuestId="69689" NpcId="1038501" XYZ="-367.3305, 21.84602, -102.9832"/>
-				<LLSmallTalk/>
-			</If>			
-    </If>
-
-    <!-- Cooking Up a Culture -->
-    <If Condition="IsQuestCompleted(69689) and not IsQuestCompleted(69690)">
-      <If Condition="not HasQuest(69690)">
-      <GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/>  
-        <If Condition="IsQuestAcceptQualified(69690)">
-          <LLPickupQuest QuestId="69690" NpcId="1038501"/>
-          <LLSmallTalk/>
-        </If>
-      </If>
-			<If Condition="GetQuestStep(69690) == 255">
-				<If condition="LLItemCollectableCount(35600) &lt; 6">
-					<Lisbeth Json="[{'Group':1,'Item':35600,'Amount':6,'Enabled':true,'Type':'Gather','AmountMode':'Restock','Collectable':true}]"/>				
+			<!-- Cooking Up a Culture -->
+			<If Condition="IsQuestCompleted(69689) and not IsQuestCompleted(69690)">
+				<If Condition="not HasQuest(69690)">
+					<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/>  
+					<If Condition="IsQuestAcceptQualified(69690)">
+						<LLPickupQuest QuestId="69690" NpcId="1038501"/>
+						<LLSmallTalk/>
+					</If>
 				</If>
-				<If condition="LLItemCollectableCount(35600) &gt; 5">
-					<While Condition="ItemCount(&PurpleGathersScrip;) &gt; 1000"> <!-- 25199 = White Gatherers' Scrip Scrip -->
-						<BuyInclusionShopItem ItemId="&BuyGatherItem;" Count="0"/>
-					</While>				
-					<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/> 
-					<RunCode name="TurnIn"/>  
-					<LLTurnIn QuestId="69690" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
-					<LLSmallTalk/>
-				</If>
-			</If>				
-    </If>
-
-    <!-- The Culture of Ceruleum -->
-		<If Condition="Core.Me.ClassLevel &lt; 83">
-			<LLToast message="You must be 83 to accept the next quest in Miner/Botanist deliveries."/>
-		</If>			
-    <If Condition="IsQuestCompleted(69690) and not IsQuestCompleted(69691) and Core.Me.ClassLevel &gt; 82">
-      <If Condition="not HasQuest(69691)">
-      <GetTo ZoneId="962" XYZ="-365.2883, 21.84602, -104.4202"/>  
-        <If Condition="IsQuestAcceptQualified(69691)">
-          <LLPickupQuest QuestId="69691" NpcId="1038501"/>
-          <LLSmallTalk/>
-        </If>
-      </If>
-			<If Condition="GetQuestStep(69691) == 255">
-				<If condition="LLItemCollectableCount(35601) &lt; 6">
-					<Lisbeth Json="[{'Group':1,'Item':35601,'Amount':6,'Enabled':true,'Type':'Gather','AmountMode':'Restock','Collectable':true}]"/>				
-				</If>
-				<If condition="LLItemCollectableCount(35601) &gt; 5">
-					<While Condition="ItemCount(&PurpleGathersScrip;) &gt; 1000"> <!-- 25199 = White Gatherers' Scrip Scrip -->
-						<BuyInclusionShopItem ItemId="&BuyGatherItem;" Count="0"/>
-					</While>				
-					<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/> 
-					<RunCode name="TurnIn"/>  
-					<LLTurnIn QuestId="69691" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
-					<LLSmallTalk/>
-				</If>
-			</If>				
-    </If>
-
-    <!-- The Culture of Carrots -->
-		<If Condition="Core.Me.ClassLevel &lt; 85">
-			<LLToast message="You must be 85 to accept the next quest in Miner/Botanist deliveries."/>
-		</If>				
-    <If Condition="IsQuestCompleted(69691) and not IsQuestCompleted(69692) and Core.Me.ClassLevel &gt; 84">
-      <If Condition="not HasQuest(69692)">
-      <GetTo ZoneId="962" XYZ="-365.0681, 21.84602, -104.4311"/>  
-        <If Condition="IsQuestAcceptQualified(69692)">
-          <LLPickupQuest QuestId="69692" NpcId="1038501"/>
-          <LLSmallTalk/>
-        </If>
-      </If>
-			<If Condition="GetQuestStep(69692) == 255">
-				<If condition="LLItemCollectableCount(35602) &lt; 6">
-					<Lisbeth Json="[{'Group':1,'Item':35602,'Amount':6,'Enabled':true,'Type':'Gather','AmountMode':'Restock','Collectable':true}]"/>				
-				</If>
-				<If condition="LLItemCollectableCount(35602) &gt; 5">
-					<While Condition="ItemCount(&PurpleGathersScrip;) &gt; 1000"> <!-- 25199 = White Gatherers' Scrip Scrip -->
-						<BuyInclusionShopItem ItemId="&BuyGatherItem;" Count="0"/>
-					</While>				
-					<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/> 
-					<RunCode name="TurnIn"/>  
-					<LLTurnIn QuestId="69692" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
-					<LLSmallTalk/>
-				</If>
-			</If>			
-    </If>
-
-    <!-- Hinageshi in Hingashi -->
-		<If Condition="Core.Me.ClassLevel &lt; 85">
-			<LLToast message="You must be 85 to accept the next quest in Miner/Botanist deliveries."/>
-		</If>			
-    <If Condition="IsQuestCompleted(69692) and not IsQuestCompleted(69693) and Core.Me.ClassLevel &gt; 84">
-      <If Condition="not HasQuest(69693)">
-      <GetTo ZoneId="962" XYZ="-365.0164, 21.84602, -104.5061"/>  
-        <If Condition="IsQuestAcceptQualified(69693)">
-          <LLPickupQuest QuestId="69693" NpcId="1038501"/>
-          <LLSmallTalk/>
-        </If>
-      </If>
-			<If Condition="GetQuestStep(69693) == 1">
-				<GetTo ZoneId="628" XYZ="-100.5188, -6.999997, -59.81035"/>  
-				<UseObject NpcId="2011719" XYZ="-102.1897, -7.003906, -59.92218" QuestId="69693" StepId="1"/>
-			</If>
-			<If Condition="GetQuestStep(69693) == 2">
-				<GetTo ZoneId="628" XYZ="-141.4001, -4.750006, 197.3334"/>  
-				<LLTalkTo NpcId="1038506" XYZ="-142.2904, -4.750006, 199.6643" QuestId="69693" StepId="2"/>
-			</If>
-			<If Condition="GetQuestStep(69693) == 3">
-				<GetTo ZoneId="628" XYZ="53.35528, 8.02, 150.9843"/>  
-				<LLTalkTo NpcId="1038507" XYZ="52.75037, 8.02, 152.8191" QuestId="69693" StepId="3"/>
-			</If>	
-			<If Condition="GetQuestStep(69693) == 4">
-				<GetTo ZoneId="628" XYZ="131.1852, 25, 14.85016"/>  
-				<UseObject NpcId="2011720" XYZ="129.5033, 24.979, 15.70148" QuestId="69693" StepId="4"/>
-			</If>
-			<If Condition="GetQuestStep(69693) == 5">
-				<If condition="not HasAtLeast(35847,1)">
-					<Lisbeth Json="[{'Group':1,'Item':35847,'Amount':1,'Enabled':true,'Type':'Gather','AmountMode':'Restock'}]"/>				
-				</If>
-				<If condition="HasAtLeast(35847,1)">
-					<GetTo ZoneId="628" XYZ="117.7482, 12, 37.22629"/>  
-					<LLHandOver ItemId="35847" NpcId="1038508" XYZ="114.702, 12, 35.96545" QuestId="69693" StepId="5"/>
+				<If Condition="GetQuestStep(69690) == 255">
+					<If condition="LLItemCollectableCount(35600) &lt; 6">
+						<Lisbeth Json="[{'Group':1,'Item':35600,'Amount':6,'Enabled':true,'Type':'Gather','AmountMode':'Restock','Collectable':true}]"/>				
+					</If>
+					<If condition="LLItemCollectableCount(35600) &gt; 5">
+						<While Condition="ItemCount(&PurpleGathersScrip;) &gt; 1000"> <!-- 25199 = White Gatherers' Scrip Scrip -->
+							<BuyInclusionShopItem ItemId="&BuyGatherItem;" Count="0"/>
+						</While>				
+						<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/> 
+						<RunCode name="TurnIn"/>  
+						<LLTurnIn QuestId="69690" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
+						<LLSmallTalk/>
+					</If>
 				</If>				
 			</If>
-			<If Condition="GetQuestStep(69693) == 6">
-				<GetTo ZoneId="628" XYZ="-89.76025, 11.8, -155.192"/>  
-				<LLTalkTo NpcId="1038510" XYZ="-92.24078, 11.8, -156.0541" QuestId="69693" StepId="6"/>
-			</If>
-			<If Condition="GetQuestStep(69693) == 255">
-				<GetTo ZoneId="962" XYZ="-365.2083, 21.84602, -104.4485"/>  
-				<LLTurnIn QuestId="69693" NpcId="1038501" XYZ="-367.3305, 21.84602, -102.9832"/>
-				<LLSmallTalk/>
-			</If>			
-    </If>		
-		
-    <!-- The Culture of the Past -->
-		<If Condition="Core.Me.ClassLevel &lt; 87">
-			<LLToast message="You must be 87 to accept the next quest in Miner/Botanist deliveries."/>
-		</If>			
-    <If Condition="IsQuestCompleted(69693) and not IsQuestCompleted(69694) and Core.Me.ClassLevel &gt; 86">
-      <If Condition="not HasQuest(69694)">
-      <GetTo ZoneId="962" XYZ="-365.2083, 21.84602, -104.4485"/>  
-        <If Condition="IsQuestAcceptQualified(69694)">
-          <LLPickupQuest QuestId="69694" NpcId="1038501"/>
-          <LLSmallTalk/>
-        </If>
-      </If>
-			<If Condition="GetQuestStep(69694) == 255">
-				<If condition="LLItemCollectableCount(35603) &lt; 6">
-					<Lisbeth Json="[{'Group':1,'Item':35603,'Amount':6,'Enabled':true,'Type':'Gather','AmountMode':'Restock','Collectable':true}]"/>				
-				</If>
-				<If condition="LLItemCollectableCount(35603) &gt; 5">
-					<While Condition="ItemCount(&PurpleGathersScrip;) &gt; 1000"> <!-- 25199 = White Gatherers' Scrip Scrip -->
-						<BuyInclusionShopItem ItemId="&BuyGatherItem;" Count="0"/>
-					</While>				
-					<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/> 
-					<RunCode name="TurnIn"/>  
-					<LLTurnIn QuestId="69694" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
-					<LLSmallTalk/>
-				</If>
-			</If>			
-    </If>
-
-    <!-- The Culture of Love -->
-	</If>
-	</If>
-	
-	<If Condition="Core.Me.Levels[ClassJobType.Botanist] &lt; 95 and not IsQuestCompleted(69693)">
-	<!-- Miner/Botanist -->	
-	<If Condition="&MIN_BTN; == 1 and not IsQuestCompleted(69695)">	
+		</If>
+		<If Condition="Core.Me.Levels[ClassJobType.Botanist] ≤ Core.Me.Levels[ClassJobType.Miner]">	
 			<ChangeClass Job="Botanist" Force="True"/>
 			<WaitTimer WaitTime="3" />
-    <!-- Cultured Pursuits -->
-    <If Condition="IsQuestCompleted(69916) and not IsQuestCompleted(69689)">
-      <If Condition="not HasQuest(69689)">
-      <GetTo ZoneId="962" XYZ="-356.373, 21.64856, -96.78683"/>  
-        <If Condition="IsQuestAcceptQualified(69689)">
-          <LLPickupQuest QuestId="69689" NpcId="1038504"/>
-          <LLSmallTalk/>
-        </If>
-      </If>
-			<If Condition="GetQuestStep(69689) == 1">
-				<GetTo ZoneId="962" XYZ="-374.7939, 19, 38.69832"/>  
-				<LLTalkTo NpcId="1038505" XYZ="-376.4554, 19, 37.00305" QuestId="69689" StepId="1"/>
-			</If>
-			<If Condition="GetQuestStep(69689) == 2">
-				<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/>  
-				<LLTalkTo NpcId="1038503" XYZ="-367.0863, 21.84602, -101.7014" QuestId="69689" StepId="2"/>
-			</If>
-			<If Condition="GetQuestStep(69689) == 255">
-				<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/>  
-				<LLTurnIn QuestId="69689" NpcId="1038501" XYZ="-367.3305, 21.84602, -102.9832"/>
-				<LLSmallTalk/>
-			</If>			
-    </If>
-
-    <!-- Cooking Up a Culture -->
-    <If Condition="IsQuestCompleted(69689) and not IsQuestCompleted(69690)">
-      <If Condition="not HasQuest(69690)">
-      <GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/>  
-        <If Condition="IsQuestAcceptQualified(69690)">
-          <LLPickupQuest QuestId="69690" NpcId="1038501"/>
-          <LLSmallTalk/>
-        </If>
-      </If>
-			<If Condition="GetQuestStep(69690) == 255">
-				<If condition="LLItemCollectableCount(35600) &lt; 6">
-					<Lisbeth Json="[{'Group':1,'Item':35600,'Amount':6,'Enabled':true,'Type':'Gather','AmountMode':'Restock','Collectable':true}]"/>				
+			<!-- Cooking Up a Culture -->
+			<If Condition="IsQuestCompleted(69689) and not IsQuestCompleted(69690)">
+				<If Condition="not HasQuest(69690)">
+					<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/>  
+					<If Condition="IsQuestAcceptQualified(69690)">
+						<LLPickupQuest QuestId="69690" NpcId="1038501"/>
+						<LLSmallTalk/>
+					</If>
 				</If>
-				<If condition="LLItemCollectableCount(35600) &gt; 5">
-					<While Condition="ItemCount(&PurpleGathersScrip;) &gt; 1000"> <!-- 25199 = White Gatherers' Scrip Scrip -->
-						<BuyInclusionShopItem ItemId="&BuyGatherItem;" Count="0"/>
-					</While>				
-					<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/> 
-					<RunCode name="TurnIn"/>  
-					<LLTurnIn QuestId="69690" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
-					<LLSmallTalk/>
-				</If>
-			</If>				
-    </If>
-
-    <!-- The Culture of Ceruleum -->
-		<If Condition="Core.Me.ClassLevel &lt; 83">
-			<LLToast message="You must be 83 to accept the next quest in Miner/Botanist deliveries."/>
-		</If>			
-    <If Condition="IsQuestCompleted(69690) and not IsQuestCompleted(69691) and Core.Me.ClassLevel &gt; 82">
-      <If Condition="not HasQuest(69691)">
-      <GetTo ZoneId="962" XYZ="-365.2883, 21.84602, -104.4202"/>  
-        <If Condition="IsQuestAcceptQualified(69691)">
-          <LLPickupQuest QuestId="69691" NpcId="1038501"/>
-          <LLSmallTalk/>
-        </If>
-      </If>
-			<If Condition="GetQuestStep(69691) == 255">
-				<If condition="LLItemCollectableCount(35601) &lt; 6">
-					<Lisbeth Json="[{'Group':1,'Item':35601,'Amount':6,'Enabled':true,'Type':'Gather','AmountMode':'Restock','Collectable':true}]"/>				
-				</If>
-				<If condition="LLItemCollectableCount(35601) &gt; 5">
-					<While Condition="ItemCount(&PurpleGathersScrip;) &gt; 1000"> <!-- 25199 = White Gatherers' Scrip Scrip -->
-						<BuyInclusionShopItem ItemId="&BuyGatherItem;" Count="0"/>
-					</While>				
-					<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/> 
-					<RunCode name="TurnIn"/>  
-					<LLTurnIn QuestId="69691" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
-					<LLSmallTalk/>
-				</If>
-			</If>				
-    </If>
-
-    <!-- The Culture of Carrots -->
-		<If Condition="Core.Me.ClassLevel &lt; 85">
-			<LLToast message="You must be 85 to accept the next quest in Miner/Botanist deliveries."/>
-		</If>				
-    <If Condition="IsQuestCompleted(69691) and not IsQuestCompleted(69692) and Core.Me.ClassLevel &gt; 84">
-      <If Condition="not HasQuest(69692)">
-      <GetTo ZoneId="962" XYZ="-365.0681, 21.84602, -104.4311"/>  
-        <If Condition="IsQuestAcceptQualified(69692)">
-          <LLPickupQuest QuestId="69692" NpcId="1038501"/>
-          <LLSmallTalk/>
-        </If>
-      </If>
-			<If Condition="GetQuestStep(69692) == 255">
-				<If condition="LLItemCollectableCount(35602) &lt; 6">
-					<Lisbeth Json="[{'Group':1,'Item':35602,'Amount':6,'Enabled':true,'Type':'Gather','AmountMode':'Restock','Collectable':true}]"/>				
-				</If>
-				<If condition="LLItemCollectableCount(35602) &gt; 5">
-					<While Condition="ItemCount(&PurpleGathersScrip;) &gt; 1000"> <!-- 25199 = White Gatherers' Scrip Scrip -->
-						<BuyInclusionShopItem ItemId="&BuyGatherItem;" Count="0"/>
-					</While>				
-					<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/> 
-					<RunCode name="TurnIn"/>  
-					<LLTurnIn QuestId="69692" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
-					<LLSmallTalk/>
-				</If>
-			</If>			
-    </If>
-
-    <!-- Hinageshi in Hingashi -->
-		<If Condition="Core.Me.ClassLevel &lt; 85">
-			<LLToast message="You must be 85 to accept the next quest in Miner/Botanist deliveries."/>
-		</If>			
-    <If Condition="IsQuestCompleted(69692) and not IsQuestCompleted(69693) and Core.Me.ClassLevel &gt; 84">
-      <If Condition="not HasQuest(69693)">
-      <GetTo ZoneId="962" XYZ="-365.0164, 21.84602, -104.5061"/>  
-        <If Condition="IsQuestAcceptQualified(69693)">
-          <LLPickupQuest QuestId="69693" NpcId="1038501"/>
-          <LLSmallTalk/>
-        </If>
-      </If>
-			<If Condition="GetQuestStep(69693) == 1">
-				<GetTo ZoneId="628" XYZ="-100.5188, -6.999997, -59.81035"/>  
-				<UseObject NpcId="2011719" XYZ="-102.1897, -7.003906, -59.92218" QuestId="69693" StepId="1"/>
-			</If>
-			<If Condition="GetQuestStep(69693) == 2">
-				<GetTo ZoneId="628" XYZ="-141.4001, -4.750006, 197.3334"/>  
-				<LLTalkTo NpcId="1038506" XYZ="-142.2904, -4.750006, 199.6643" QuestId="69693" StepId="2"/>
-			</If>
-			<If Condition="GetQuestStep(69693) == 3">
-				<GetTo ZoneId="628" XYZ="53.35528, 8.02, 150.9843"/>  
-				<LLTalkTo NpcId="1038507" XYZ="52.75037, 8.02, 152.8191" QuestId="69693" StepId="3"/>
-			</If>	
-			<If Condition="GetQuestStep(69693) == 4">
-				<GetTo ZoneId="628" XYZ="131.1852, 25, 14.85016"/>  
-				<UseObject NpcId="2011720" XYZ="129.5033, 24.979, 15.70148" QuestId="69693" StepId="4"/>
-			</If>
-			<If Condition="GetQuestStep(69693) == 5">
-				<If condition="not HasAtLeast(35847,1)">
-					<Lisbeth Json="[{'Group':1,'Item':35847,'Amount':1,'Enabled':true,'Type':'Gather','AmountMode':'Restock'}]"/>				
-				</If>
-				<If condition="HasAtLeast(35847,1)">
-					<GetTo ZoneId="628" XYZ="117.7482, 12, 37.22629"/>  
-					<LLHandOver ItemId="35847" NpcId="1038508" XYZ="114.702, 12, 35.96545" QuestId="69693" StepId="5"/>
+				<If Condition="GetQuestStep(69690) == 255">
+					<If condition="LLItemCollectableCount(35600) &lt; 6">
+						<Lisbeth Json="[{'Group':1,'Item':35600,'Amount':6,'Enabled':true,'Type':'Gather','AmountMode':'Restock','Collectable':true}]"/>				
+					</If>
+					<If condition="LLItemCollectableCount(35600) &gt; 5">
+						<While Condition="ItemCount(&PurpleGathersScrip;) &gt; 1000"> <!-- 25199 = White Gatherers' Scrip Scrip -->
+							<BuyInclusionShopItem ItemId="&BuyGatherItem;" Count="0"/>
+						</While>				
+						<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/> 
+						<RunCode name="TurnIn"/>  
+						<LLTurnIn QuestId="69690" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
+						<LLSmallTalk/>
+					</If>
 				</If>				
 			</If>
-			<If Condition="GetQuestStep(69693) == 6">
-				<GetTo ZoneId="628" XYZ="-89.76025, 11.8, -155.192"/>  
-				<LLTalkTo NpcId="1038510" XYZ="-92.24078, 11.8, -156.0541" QuestId="69693" StepId="6"/>
-			</If>
-			<If Condition="GetQuestStep(69693) == 255">
-				<GetTo ZoneId="962" XYZ="-365.2083, 21.84602, -104.4485"/>  
-				<LLTurnIn QuestId="69693" NpcId="1038501" XYZ="-367.3305, 21.84602, -102.9832"/>
-				<LLSmallTalk/>
+		</If>
+
+		<If Condition="Core.Me.Levels[ClassJobType.Miner] &lt; Core.Me.Levels[ClassJobType.Botanist]">	
+			<ChangeClass Job="Miner" Force="True"/>
+			<WaitTimer WaitTime="3" />
+			<!-- The Culture of Ceruleum -->
+			<If Condition="Core.Me.ClassLevel &lt; 83">
+				<LLToast message="You must be 83 to accept the next quest in Miner/Botanist deliveries."/>
 			</If>			
-    </If>		
-		
-    <!-- The Culture of the Past -->
-		<If Condition="Core.Me.ClassLevel &lt; 87">
-			<LLToast message="You must be 87 to accept the next quest in Miner/Botanist deliveries."/>
-		</If>			
-    <If Condition="IsQuestCompleted(69693) and not IsQuestCompleted(69694) and Core.Me.ClassLevel &gt; 86">
-      <If Condition="not HasQuest(69694)">
-      <GetTo ZoneId="962" XYZ="-365.2083, 21.84602, -104.4485"/>  
-        <If Condition="IsQuestAcceptQualified(69694)">
-          <LLPickupQuest QuestId="69694" NpcId="1038501"/>
-          <LLSmallTalk/>
-        </If>
-      </If>
-			<If Condition="GetQuestStep(69694) == 255">
-				<If condition="LLItemCollectableCount(35603) &lt; 6">
-					<Lisbeth Json="[{'Group':1,'Item':35603,'Amount':6,'Enabled':true,'Type':'Gather','AmountMode':'Restock','Collectable':true}]"/>				
-				</If>
-				<If condition="LLItemCollectableCount(35603) &gt; 5">
-					<While Condition="ItemCount(&PurpleGathersScrip;) &gt; 1000"> <!-- 25199 = White Gatherers' Scrip Scrip -->
-						<BuyInclusionShopItem ItemId="&BuyGatherItem;" Count="0"/>
-					</While>				
-					<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/> 
-					<RunCode name="TurnIn"/>  
-					<LLTurnIn QuestId="69694" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
+    		<If Condition="IsQuestCompleted(69690) and not IsQuestCompleted(69691) and Core.Me.ClassLevel &gt; 82">
+      			<If Condition="not HasQuest(69691)">
+      				<GetTo ZoneId="962" XYZ="-365.2883, 21.84602, -104.4202"/>  
+        			<If Condition="IsQuestAcceptQualified(69691)">
+          				<LLPickupQuest QuestId="69691" NpcId="1038501"/>
+          				<LLSmallTalk/>
+        			</If>
+      			</If>
+				<If Condition="GetQuestStep(69691) == 255">
+					<If condition="LLItemCollectableCount(35601) &lt; 6">
+						<Lisbeth Json="[{'Group':1,'Item':35601,'Amount':6,'Enabled':true,'Type':'Gather','AmountMode':'Restock','Collectable':true}]"/>				
+					</If>
+					<If condition="LLItemCollectableCount(35601) &gt; 5">
+						<While Condition="ItemCount(&PurpleGathersScrip;) &gt; 1000"> <!-- 25199 = White Gatherers' Scrip Scrip -->
+							<BuyInclusionShopItem ItemId="&BuyGatherItem;" Count="0"/>
+						</While>				
+						<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/> 
+						<RunCode name="TurnIn"/>  
+						<LLTurnIn QuestId="69691" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
+						<LLSmallTalk/>
+					</If>
+				</If>				
+    		</If>
+		</If>
+		<If Condition="Core.Me.Levels[ClassJobType.Botanist] ≤ Core.Me.Levels[ClassJobType.Miner]">	
+			<ChangeClass Job="Botanist" Force="True"/>
+			<WaitTimer WaitTime="3" />
+			<!-- The Culture of Ceruleum -->
+			<If Condition="Core.Me.ClassLevel &lt; 83">
+				<LLToast message="You must be 83 to accept the next quest in Miner/Botanist deliveries."/>
+			</If>			
+    		<If Condition="IsQuestCompleted(69690) and not IsQuestCompleted(69691) and Core.Me.ClassLevel &gt; 82">
+      			<If Condition="not HasQuest(69691)">
+      				<GetTo ZoneId="962" XYZ="-365.2883, 21.84602, -104.4202"/>  
+        			<If Condition="IsQuestAcceptQualified(69691)">
+          				<LLPickupQuest QuestId="69691" NpcId="1038501"/>
+          				<LLSmallTalk/>
+        			</If>
+      			</If>
+				<If Condition="GetQuestStep(69691) == 255">
+					<If condition="LLItemCollectableCount(35601) &lt; 6">
+						<Lisbeth Json="[{'Group':1,'Item':35601,'Amount':6,'Enabled':true,'Type':'Gather','AmountMode':'Restock','Collectable':true}]"/>				
+					</If>
+					<If condition="LLItemCollectableCount(35601) &gt; 5">
+						<While Condition="ItemCount(&PurpleGathersScrip;) &gt; 1000"> <!-- 25199 = White Gatherers' Scrip Scrip -->
+							<BuyInclusionShopItem ItemId="&BuyGatherItem;" Count="0"/>
+						</While>				
+						<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/> 
+						<RunCode name="TurnIn"/>  
+						<LLTurnIn QuestId="69691" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
+						<LLSmallTalk/>
+					</If>
+				</If>				
+    		</If>
+		</If>
+
+
+		<If Condition="Core.Me.Levels[ClassJobType.Miner] &lt; Core.Me.Levels[ClassJobType.Botanist]">	
+			<ChangeClass Job="Miner" Force="True"/>
+			<WaitTimer WaitTime="3" />
+			<!-- The Culture of Carrots -->
+			<If Condition="Core.Me.ClassLevel &lt; 85">
+				<LLToast message="You must be 85 to accept the next quest in Miner/Botanist deliveries."/>
+			</If>				
+    		<If Condition="IsQuestCompleted(69691) and not IsQuestCompleted(69692) and Core.Me.ClassLevel &gt; 84">
+      			<If Condition="not HasQuest(69692)">
+      				<GetTo ZoneId="962" XYZ="-365.0681, 21.84602, -104.4311"/>  
+        			<If Condition="IsQuestAcceptQualified(69692)">
+					<LLPickupQuest QuestId="69692" NpcId="1038501"/>
 					<LLSmallTalk/>
+					</If>
 				</If>
+				<If Condition="GetQuestStep(69692) == 255">
+					<If condition="LLItemCollectableCount(35602) &lt; 6">
+						<Lisbeth Json="[{'Group':1,'Item':35602,'Amount':6,'Enabled':true,'Type':'Gather','AmountMode':'Restock','Collectable':true}]"/>				
+					</If>
+					<If condition="LLItemCollectableCount(35602) &gt; 5">
+						<While Condition="ItemCount(&PurpleGathersScrip;) &gt; 1000"> <!-- 25199 = White Gatherers' Scrip Scrip -->
+							<BuyInclusionShopItem ItemId="&BuyGatherItem;" Count="0"/>
+						</While>				
+						<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/> 
+						<RunCode name="TurnIn"/>  
+						<LLTurnIn QuestId="69692" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
+						<LLSmallTalk/>
+					</If>
+				</If>			
+    		</If>
+		</If>
+		<If Condition="Core.Me.Levels[ClassJobType.Botanist] ≤ Core.Me.Levels[ClassJobType.Miner]">	
+			<ChangeClass Job="Botanist" Force="True"/>
+			<WaitTimer WaitTime="3" />
+			<!-- The Culture of Carrots -->
+			<If Condition="Core.Me.ClassLevel &lt; 85">
+				<LLToast message="You must be 85 to accept the next quest in Miner/Botanist deliveries."/>
+			</If>				
+    		<If Condition="IsQuestCompleted(69691) and not IsQuestCompleted(69692) and Core.Me.ClassLevel &gt; 84">
+      			<If Condition="not HasQuest(69692)">
+      				<GetTo ZoneId="962" XYZ="-365.0681, 21.84602, -104.4311"/>  
+        			<If Condition="IsQuestAcceptQualified(69692)">
+					<LLPickupQuest QuestId="69692" NpcId="1038501"/>
+					<LLSmallTalk/>
+					</If>
+				</If>
+				<If Condition="GetQuestStep(69692) == 255">
+					<If condition="LLItemCollectableCount(35602) &lt; 6">
+						<Lisbeth Json="[{'Group':1,'Item':35602,'Amount':6,'Enabled':true,'Type':'Gather','AmountMode':'Restock','Collectable':true}]"/>				
+					</If>
+					<If condition="LLItemCollectableCount(35602) &gt; 5">
+						<While Condition="ItemCount(&PurpleGathersScrip;) &gt; 1000"> <!-- 25199 = White Gatherers' Scrip Scrip -->
+							<BuyInclusionShopItem ItemId="&BuyGatherItem;" Count="0"/>
+						</While>				
+						<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/> 
+						<RunCode name="TurnIn"/>  
+						<LLTurnIn QuestId="69692" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
+						<LLSmallTalk/>
+					</If>
+				</If>			
+    		</If>
+		</If>
+
+
+		<If Condition="Core.Me.Levels[ClassJobType.Miner] &lt; Core.Me.Levels[ClassJobType.Botanist]">	
+			<ChangeClass Job="Miner" Force="True"/>
+			<WaitTimer WaitTime="3" />
+			<!-- Hinageshi in Hingashi -->
+			<If Condition="Core.Me.ClassLevel &lt; 85">
+				<LLToast message="You must be 85 to accept the next quest in Miner/Botanist deliveries."/>
 			</If>			
-    </If>
+			<If Condition="IsQuestCompleted(69692) and not IsQuestCompleted(69693) and Core.Me.ClassLevel &gt; 84">
+				<If Condition="not HasQuest(69693)">
+					<GetTo ZoneId="962" XYZ="-365.0164, 21.84602, -104.5061"/>  
+					<If Condition="IsQuestAcceptQualified(69693)">
+						<LLPickupQuest QuestId="69693" NpcId="1038501"/>
+						<LLSmallTalk/>
+					</If>
+				</If>
+				<If Condition="GetQuestStep(69693) == 1">
+					<GetTo ZoneId="628" XYZ="-100.5188, -6.999997, -59.81035"/>  
+					<UseObject NpcId="2011719" XYZ="-102.1897, -7.003906, -59.92218" QuestId="69693" StepId="1"/>
+				</If>
+				<If Condition="GetQuestStep(69693) == 2">
+					<GetTo ZoneId="628" XYZ="-141.4001, -4.750006, 197.3334"/>  
+					<LLTalkTo NpcId="1038506" XYZ="-142.2904, -4.750006, 199.6643" QuestId="69693" StepId="2"/>
+				</If>
+				<If Condition="GetQuestStep(69693) == 3">
+					<GetTo ZoneId="628" XYZ="53.35528, 8.02, 150.9843"/>  
+					<LLTalkTo NpcId="1038507" XYZ="52.75037, 8.02, 152.8191" QuestId="69693" StepId="3"/>
+				</If>	
+				<If Condition="GetQuestStep(69693) == 4">
+					<GetTo ZoneId="628" XYZ="131.1852, 25, 14.85016"/>  
+					<UseObject NpcId="2011720" XYZ="129.5033, 24.979, 15.70148" QuestId="69693" StepId="4"/>
+				</If>
+				<If Condition="GetQuestStep(69693) == 5">
+					<If condition="not HasAtLeast(35847,1)">
+						<Lisbeth Json="[{'Group':1,'Item':35847,'Amount':1,'Enabled':true,'Type':'Gather','AmountMode':'Restock'}]"/>				
+					</If>
+					<If condition="HasAtLeast(35847,1)">
+						<GetTo ZoneId="628" XYZ="117.7482, 12, 37.22629"/>  
+						<LLHandOver ItemId="35847" NpcId="1038508" XYZ="114.702, 12, 35.96545" QuestId="69693" StepId="5"/>
+					</If>				
+				</If>
+				<If Condition="GetQuestStep(69693) == 6">
+					<GetTo ZoneId="628" XYZ="-89.76025, 11.8, -155.192"/>  
+					<LLTalkTo NpcId="1038510" XYZ="-92.24078, 11.8, -156.0541" QuestId="69693" StepId="6"/>
+				</If>
+				<If Condition="GetQuestStep(69693) == 255">
+					<GetTo ZoneId="962" XYZ="-365.2083, 21.84602, -104.4485"/>  
+					<LLTurnIn QuestId="69693" NpcId="1038501" XYZ="-367.3305, 21.84602, -102.9832"/>
+					<LLSmallTalk/>
+				</If>			
+			</If>		
+		</If>
+		<If Condition="Core.Me.Levels[ClassJobType.Botanist] ≤ Core.Me.Levels[ClassJobType.Miner]">	
+			<ChangeClass Job="Botanist" Force="True"/>
+			<WaitTimer WaitTime="3" />
+			<!-- Hinageshi in Hingashi -->
+			<If Condition="Core.Me.ClassLevel &lt; 85">
+				<LLToast message="You must be 85 to accept the next quest in Miner/Botanist deliveries."/>
+			</If>			
+			<If Condition="IsQuestCompleted(69692) and not IsQuestCompleted(69693) and Core.Me.ClassLevel &gt; 84">
+				<If Condition="not HasQuest(69693)">
+					<GetTo ZoneId="962" XYZ="-365.0164, 21.84602, -104.5061"/>  
+					<If Condition="IsQuestAcceptQualified(69693)">
+						<LLPickupQuest QuestId="69693" NpcId="1038501"/>
+						<LLSmallTalk/>
+					</If>
+				</If>
+				<If Condition="GetQuestStep(69693) == 1">
+					<GetTo ZoneId="628" XYZ="-100.5188, -6.999997, -59.81035"/>  
+					<UseObject NpcId="2011719" XYZ="-102.1897, -7.003906, -59.92218" QuestId="69693" StepId="1"/>
+				</If>
+				<If Condition="GetQuestStep(69693) == 2">
+					<GetTo ZoneId="628" XYZ="-141.4001, -4.750006, 197.3334"/>  
+					<LLTalkTo NpcId="1038506" XYZ="-142.2904, -4.750006, 199.6643" QuestId="69693" StepId="2"/>
+				</If>
+				<If Condition="GetQuestStep(69693) == 3">
+					<GetTo ZoneId="628" XYZ="53.35528, 8.02, 150.9843"/>  
+					<LLTalkTo NpcId="1038507" XYZ="52.75037, 8.02, 152.8191" QuestId="69693" StepId="3"/>
+				</If>	
+				<If Condition="GetQuestStep(69693) == 4">
+					<GetTo ZoneId="628" XYZ="131.1852, 25, 14.85016"/>  
+					<UseObject NpcId="2011720" XYZ="129.5033, 24.979, 15.70148" QuestId="69693" StepId="4"/>
+				</If>
+				<If Condition="GetQuestStep(69693) == 5">
+					<If condition="not HasAtLeast(35847,1)">
+						<Lisbeth Json="[{'Group':1,'Item':35847,'Amount':1,'Enabled':true,'Type':'Gather','AmountMode':'Restock'}]"/>				
+					</If>
+					<If condition="HasAtLeast(35847,1)">
+						<GetTo ZoneId="628" XYZ="117.7482, 12, 37.22629"/>  
+						<LLHandOver ItemId="35847" NpcId="1038508" XYZ="114.702, 12, 35.96545" QuestId="69693" StepId="5"/>
+					</If>				
+				</If>
+				<If Condition="GetQuestStep(69693) == 6">
+					<GetTo ZoneId="628" XYZ="-89.76025, 11.8, -155.192"/>  
+					<LLTalkTo NpcId="1038510" XYZ="-92.24078, 11.8, -156.0541" QuestId="69693" StepId="6"/>
+				</If>
+				<If Condition="GetQuestStep(69693) == 255">
+					<GetTo ZoneId="962" XYZ="-365.2083, 21.84602, -104.4485"/>  
+					<LLTurnIn QuestId="69693" NpcId="1038501" XYZ="-367.3305, 21.84602, -102.9832"/>
+					<LLSmallTalk/>
+				</If>			
+			</If>	
+		</If>
+
+		<If Condition="Core.Me.Levels[ClassJobType.Miner] &lt; Core.Me.Levels[ClassJobType.Botanist]">	
+			<ChangeClass Job="Miner" Force="True"/>
+			<WaitTimer WaitTime="3" />
+			<!-- The Culture of the Past -->
+			<If Condition="Core.Me.ClassLevel &lt; 87">
+				<LLToast message="You must be 87 to accept the next quest in Miner/Botanist deliveries."/>
+			</If>			
+			<If Condition="IsQuestCompleted(69693) and not IsQuestCompleted(69694) and Core.Me.ClassLevel &gt; 86">
+				<If Condition="not HasQuest(69694)">
+					<GetTo ZoneId="962" XYZ="-365.2083, 21.84602, -104.4485"/>  
+					<If Condition="IsQuestAcceptQualified(69694)">
+						<LLPickupQuest QuestId="69694" NpcId="1038501"/>
+						<LLSmallTalk/>
+					</If>
+				</If>
+				<If Condition="GetQuestStep(69694) == 255">
+					<If condition="LLItemCollectableCount(35603) &lt; 6">
+						<Lisbeth Json="[{'Group':1,'Item':35603,'Amount':6,'Enabled':true,'Type':'Gather','AmountMode':'Restock','Collectable':true}]"/>				
+					</If>
+					<If condition="LLItemCollectableCount(35603) &gt; 5">
+						<While Condition="ItemCount(&PurpleGathersScrip;) &gt; 1000"> <!-- 25199 = White Gatherers' Scrip Scrip -->
+							<BuyInclusionShopItem ItemId="&BuyGatherItem;" Count="0"/>
+						</While>				
+						<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/> 
+						<RunCode name="TurnIn"/>  
+						<LLTurnIn QuestId="69694" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
+						<LLSmallTalk/>
+					</If>
+				</If>			
+			</If>
+		</If>
+		<If Condition="Core.Me.Levels[ClassJobType.Botanist] ≤ Core.Me.Levels[ClassJobType.Miner]">	
+			<ChangeClass Job="Botanist" Force="True"/>
+			<WaitTimer WaitTime="3" />
+			<!-- The Culture of the Past -->
+			<If Condition="Core.Me.ClassLevel &lt; 87">
+				<LLToast message="You must be 87 to accept the next quest in Miner/Botanist deliveries."/>
+			</If>			
+			<If Condition="IsQuestCompleted(69693) and not IsQuestCompleted(69694) and Core.Me.ClassLevel &gt; 86">
+				<If Condition="not HasQuest(69694)">
+					<GetTo ZoneId="962" XYZ="-365.2083, 21.84602, -104.4485"/>  
+					<If Condition="IsQuestAcceptQualified(69694)">
+						<LLPickupQuest QuestId="69694" NpcId="1038501"/>
+						<LLSmallTalk/>
+					</If>
+				</If>
+				<If Condition="GetQuestStep(69694) == 255">
+					<If condition="LLItemCollectableCount(35603) &lt; 6">
+						<Lisbeth Json="[{'Group':1,'Item':35603,'Amount':6,'Enabled':true,'Type':'Gather','AmountMode':'Restock','Collectable':true}]"/>				
+					</If>
+					<If condition="LLItemCollectableCount(35603) &gt; 5">
+						<While Condition="ItemCount(&PurpleGathersScrip;) &gt; 1000"> <!-- 25199 = White Gatherers' Scrip Scrip -->
+							<BuyInclusionShopItem ItemId="&BuyGatherItem;" Count="0"/>
+						</While>				
+						<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/> 
+						<RunCode name="TurnIn"/>  
+						<LLTurnIn QuestId="69694" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
+						<LLSmallTalk/>
+					</If>
+				</If>			
+			</If>
+		</If>
 
     <!-- The Culture of Love -->
-	</If>
 	</If>
 	
 

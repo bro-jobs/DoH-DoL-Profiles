@@ -1,0 +1,43 @@
+7917 xp after 12 ash lumber
+
+lv10: guess: 1259 exp from hq | 1437 exp from recipe completion
+
+13758 xp after 12 bronze rivets
+
+12654 xp (gsm)
+
+CRP to Lv15: 29004
+
+lv15: 4526
+lv14: 4198
+lv13: 4017
+lv12: 3612
+lv11: 3331
+
+remember decorated bronze barbut
+potion of int
+potion of dex
+meat miqabob
+
+98540
+
+lv24: 8343
+lv23: 7920
+lv22: 7516
+lv21: 7033
+lv20: 6590
+lv19: 6264
+lv18: 5790
+lv17: 5331
+lv16: 4842
+
+CRP: 53388 breakpoint
+BSM: 60304 breakpoint
+ARM: 60600 breakpoint
+GSM: 58007 breakpoint
+LTW: 57111 breakpoint
+WVR: 59652 breakpoint
+ALC: 55580 breakpoint
+CUL: 57787 breakpoint
+
+elm pattens

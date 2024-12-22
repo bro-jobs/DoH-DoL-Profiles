@@ -280,83 +280,83 @@
 				<BuyInclusionShopItem ItemId="12667" Count="10"/>
 			</If>
 			<!-- Check if we can buy Lv80 gear. -->
-			<If Condition="ItemCount(31772) &lt; 1" >
+			<If Condition="ItemCount(31772) &lt; 1 and ItemCount(33913) &gt; 224" >
 				<BuyInclusionShopItem ItemId="31772" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31773) &lt; 1" >
+			<If Condition="ItemCount(31773) &lt; 1 and ItemCount(33913) &gt; 224" >
 				<BuyInclusionShopItem ItemId="31773" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31774) &lt; 1" >
+			<If Condition="ItemCount(31774) &lt; 1 and ItemCount(33913) &gt; 224" >
 				<BuyInclusionShopItem ItemId="31774" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31775) &lt; 1" >
+			<If Condition="ItemCount(31775) &lt; 1 and ItemCount(33913) &gt; 224" >
 				<BuyInclusionShopItem ItemId="31775" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31776) &lt; 1" >
+			<If Condition="ItemCount(31776) &lt; 1 and ItemCount(33913) &gt; 224" >
 				<BuyInclusionShopItem ItemId="31776" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31777) &lt; 1" >
+			<If Condition="ItemCount(31777) &lt; 1 and ItemCount(33913) &gt; 224" >
 				<BuyInclusionShopItem ItemId="31777" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31778) &lt; 1" >
+			<If Condition="ItemCount(31778) &lt; 1 and ItemCount(33913) &gt; 224" >
 				<BuyInclusionShopItem ItemId="31778" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31779) &lt; 1" >
+			<If Condition="ItemCount(31779) &lt; 1 and ItemCount(33913) &gt; 224" >
 				<BuyInclusionShopItem ItemId="31779" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31784) &lt; 1" >
+			<If Condition="ItemCount(31784) &lt; 1 and ItemCount(33913) &gt; 224" >
 				<BuyInclusionShopItem ItemId="31784" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31785) &lt; 1" >
+			<If Condition="ItemCount(31785) &lt; 1 and ItemCount(33913) &gt; 224" >
 				<BuyInclusionShopItem ItemId="31785" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31786) &lt; 1" >
+			<If Condition="ItemCount(31786) &lt; 1 and ItemCount(33913) &gt; 224" >
 				<BuyInclusionShopItem ItemId="31786" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31783) &lt; 1" >
+			<If Condition="ItemCount(31783) &lt; 1 and ItemCount(33913) &gt; 224" >
 				<BuyInclusionShopItem ItemId="31783" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31787) &lt; 1" >
+			<If Condition="ItemCount(31787) &lt; 1 and ItemCount(33913) &gt; 224" >
 				<BuyInclusionShopItem ItemId="31787" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31788) &lt; 1" >
+			<If Condition="ItemCount(31788) &lt; 1 and ItemCount(33913) &gt; 224" >
 				<BuyInclusionShopItem ItemId="31788" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31789) &lt; 1" >
+			<If Condition="ItemCount(31789) &lt; 1 and ItemCount(33913) &gt; 224" >
 				<BuyInclusionShopItem ItemId="31789" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31790) &lt; 1" >
+			<If Condition="ItemCount(31790) &lt; 1 and ItemCount(33913) &gt; 224" >
 				<BuyInclusionShopItem ItemId="31790" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31793) &lt; 1" >
+			<If Condition="ItemCount(31793) &lt; 1 and ItemCount(33913) &gt; 74" >
 				<BuyInclusionShopItem ItemId="31793" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31794) &lt; 1" >
+			<If Condition="ItemCount(31794) &lt; 1 and ItemCount(33913) &gt; 224" >
 				<BuyInclusionShopItem ItemId="31794" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31795) &lt; 1" >
+			<If Condition="ItemCount(31795) &lt; 1 and ItemCount(33913) &gt; 74" >
 				<BuyInclusionShopItem ItemId="31795" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31796) &lt; 1" >
+			<If Condition="ItemCount(31796) &lt; 1 and ItemCount(33913) &gt; 74" >
 				<BuyInclusionShopItem ItemId="31796" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31797) &lt; 1" >
+			<If Condition="ItemCount(31797) &lt; 1 and ItemCount(33913) &gt; 74" >
 				<BuyInclusionShopItem ItemId="31797" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31804) &lt; 1" >
+			<If Condition="ItemCount(31804) &lt; 1 and ItemCount(33913) &gt; 74" >
 				<BuyInclusionShopItem ItemId="31804" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31805) &lt; 1" >
+			<If Condition="ItemCount(31805) &lt; 1 and ItemCount(33913) &gt; 74" >
 				<BuyInclusionShopItem ItemId="31805" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31806) &lt; 1" >
+			<If Condition="ItemCount(31806) &lt; 1 and ItemCount(33913) &gt; 74" >
 				<BuyInclusionShopItem ItemId="31806" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31807) &lt;1" >
+			<If Condition="ItemCount(31807) &lt; 1 and ItemCount(33913) &gt; 49" >
 				<BuyInclusionShopItem ItemId="31807" Count="1"/>
 				<WaitTimer WaitTime="1"/>
-				</If>
-			<If Condition="ItemCount(31807) &lt;1">
+			</If>
+			<If Condition="ItemCount(31807) &lt; 2 and ItemCount(33913) &gt; 49">
 				<BuyInclusionShopItem ItemId="31807" Count="1"/>
 			</If>
 			<!-- 25195 = Cunning IX. Used for tool melds -->
@@ -364,7 +364,9 @@
 			<!-- 41767 = Command XI. Very useful. -->
 			<WaitTimer WaitTime="1" />	
 			<!-- 41767 = Command XI. Very useful. -->
+			<While Condition="ItemCount(33913) &gt; 249">
 			<BuyInclusionShopItem ItemId="25195" Count="0"/>
+			</While>
 			<WaitTimer WaitTime="1" />
 			<WaitTimer WaitTime="1" />
 		</While>	
@@ -436,83 +438,83 @@
 				<BuyInclusionShopItem ItemId="12667" Count="10"/>
 			</If>
 			<!-- Check if we can buy Lv80 gear. -->
-			<If Condition="ItemCount(31772) &lt; 1" >
+			<If Condition="ItemCount(31772) &lt; 1 and ItemCount(33913) &gt; 224" >
 				<BuyInclusionShopItem ItemId="31772" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31773) &lt; 1" >
+			<If Condition="ItemCount(31773) &lt; 1 and ItemCount(33913) &gt; 224" >
 				<BuyInclusionShopItem ItemId="31773" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31774) &lt; 1" >
+			<If Condition="ItemCount(31774) &lt; 1 and ItemCount(33913) &gt; 224" >
 				<BuyInclusionShopItem ItemId="31774" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31775) &lt; 1" >
+			<If Condition="ItemCount(31775) &lt; 1 and ItemCount(33913) &gt; 224" >
 				<BuyInclusionShopItem ItemId="31775" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31776) &lt; 1" >
+			<If Condition="ItemCount(31776) &lt; 1 and ItemCount(33913) &gt; 224" >
 				<BuyInclusionShopItem ItemId="31776" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31777) &lt; 1" >
+			<If Condition="ItemCount(31777) &lt; 1 and ItemCount(33913) &gt; 224" >
 				<BuyInclusionShopItem ItemId="31777" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31778) &lt; 1" >
+			<If Condition="ItemCount(31778) &lt; 1 and ItemCount(33913) &gt; 224" >
 				<BuyInclusionShopItem ItemId="31778" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31779) &lt; 1" >
+			<If Condition="ItemCount(31779) &lt; 1 and ItemCount(33913) &gt; 224" >
 				<BuyInclusionShopItem ItemId="31779" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31784) &lt; 1" >
+			<If Condition="ItemCount(31784) &lt; 1 and ItemCount(33913) &gt; 224" >
 				<BuyInclusionShopItem ItemId="31784" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31785) &lt; 1" >
+			<If Condition="ItemCount(31785) &lt; 1 and ItemCount(33913) &gt; 224" >
 				<BuyInclusionShopItem ItemId="31785" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31786) &lt; 1" >
+			<If Condition="ItemCount(31786) &lt; 1 and ItemCount(33913) &gt; 224" >
 				<BuyInclusionShopItem ItemId="31786" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31783) &lt; 1" >
+			<If Condition="ItemCount(31783) &lt; 1 and ItemCount(33913) &gt; 224" >
 				<BuyInclusionShopItem ItemId="31783" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31787) &lt; 1" >
+			<If Condition="ItemCount(31787) &lt; 1 and ItemCount(33913) &gt; 224" >
 				<BuyInclusionShopItem ItemId="31787" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31788) &lt; 1" >
+			<If Condition="ItemCount(31788) &lt; 1 and ItemCount(33913) &gt; 224" >
 				<BuyInclusionShopItem ItemId="31788" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31789) &lt; 1" >
+			<If Condition="ItemCount(31789) &lt; 1 and ItemCount(33913) &gt; 224" >
 				<BuyInclusionShopItem ItemId="31789" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31790) &lt; 1" >
+			<If Condition="ItemCount(31790) &lt; 1 and ItemCount(33913) &gt; 224" >
 				<BuyInclusionShopItem ItemId="31790" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31793) &lt; 1" >
+			<If Condition="ItemCount(31793) &lt; 1 and ItemCount(33913) &gt; 74" >
 				<BuyInclusionShopItem ItemId="31793" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31794) &lt; 1" >
+			<If Condition="ItemCount(31794) &lt; 1 and ItemCount(33913) &gt; 224" >
 				<BuyInclusionShopItem ItemId="31794" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31795) &lt; 1" >
+			<If Condition="ItemCount(31795) &lt; 1 and ItemCount(33913) &gt; 74" >
 				<BuyInclusionShopItem ItemId="31795" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31796) &lt; 1" >
+			<If Condition="ItemCount(31796) &lt; 1 and ItemCount(33913) &gt; 74" >
 				<BuyInclusionShopItem ItemId="31796" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31797) &lt; 1" >
+			<If Condition="ItemCount(31797) &lt; 1 and ItemCount(33913) &gt; 74" >
 				<BuyInclusionShopItem ItemId="31797" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31804) &lt; 1" >
+			<If Condition="ItemCount(31804) &lt; 1 and ItemCount(33913) &gt; 74" >
 				<BuyInclusionShopItem ItemId="31804" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31805) &lt; 1" >
+			<If Condition="ItemCount(31805) &lt; 1 and ItemCount(33913) &gt; 74" >
 				<BuyInclusionShopItem ItemId="31805" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31806) &lt; 1" >
+			<If Condition="ItemCount(31806) &lt; 1 and ItemCount(33913) &gt; 74" >
 				<BuyInclusionShopItem ItemId="31806" Count="1"/>
 			</If>
-			<If Condition="ItemCount(31807) &lt;1" >
+			<If Condition="ItemCount(31807) &lt; 1 and ItemCount(33913) &gt; 49" >
 				<BuyInclusionShopItem ItemId="31807" Count="1"/>
 				<WaitTimer WaitTime="1"/>
 			</If>
-			<If Condition="ItemCount(31807) &lt;1">
+			<If Condition="ItemCount(31807) &lt; 2 and ItemCount(33913) &gt; 49">
 				<BuyInclusionShopItem ItemId="31807" Count="1"/>
 			</If>
 			<!-- 25195 = Cunning IX. Used for tool melds -->
@@ -520,7 +522,9 @@
 			<!-- 41767 = Command XI. Very useful. -->
 			<WaitTimer WaitTime="1" />	
 			<!-- 41767 = Command XI. Very useful. -->
+			<While Condition="ItemCount(33913) &gt; 249">
 			<BuyInclusionShopItem ItemId="25195" Count="0"/>
+			</While>
 			<WaitTimer WaitTime="1" />
 			<WaitTimer WaitTime="1" />
 		</While>	
@@ -530,6 +534,8 @@
     <!-- (doesn't give any EXP and gives outdated materia) -->			
 		
 	</If>
+
+
 	
 	<LLoadProfile Path="../Start.xml"/>
 	
