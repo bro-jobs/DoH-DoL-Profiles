@@ -27,7 +27,7 @@
 			</If>
 		</If>
 
-	<LLoadProfile Name="../Start.xml" />
+	<LLoadProfile Path="../Start.xml" />
 
     </Order>
    <CodeChunks>
