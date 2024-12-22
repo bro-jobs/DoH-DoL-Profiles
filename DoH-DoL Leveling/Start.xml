@@ -736,6 +736,12 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 				</If>
 			</If>
 		</If>
+
+
+		<!-- Mislaid Plans -->
+		<If Condition="not IsQuestCompleted(69384)">
+			<LLoadProfile Name="Quests/Mislaid Plans.xml" />
+		</If>
 		
 		<!-- Unlocking Sharlayan Leves -->
 		<If Condition="not IsQuestCompleted(69706)">
