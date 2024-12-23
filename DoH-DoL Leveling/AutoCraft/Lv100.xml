@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Profile>
+<Name>Crafting Lv100 Gear</Name>
+<Order>
+    <RunCode Name="SetLisbethJson" />
+    <LogMessage Message="Crafted Lv100 Gear!"/>
+    <AutoInventoryEquip/>
+
+    <RunCode Name="Logger" />
+
+    <AffixMateria EquipmentId="43314" MateriaId="41780"/>
+    <AffixMateria EquipmentId="43314" MateriaId="41780"/>
+    <AffixMateria EquipmentId="43315" MateriaId="41780"/>
+    <AffixMateria EquipmentId="43315" MateriaId="41780"/>
+    <AffixMateria EquipmentId="43316" MateriaId="41780"/>
+    <AffixMateria EquipmentId="43316" MateriaId="41780"/>
+    <AffixMateria EquipmentId="43317" MateriaId="41780"/>
+    <AffixMateria EquipmentId="43317" MateriaId="41780"/>
+    <AffixMateria EquipmentId="43318" MateriaId="41780"/>
+    <AffixMateria EquipmentId="43318" MateriaId="41780"/>
+
+    <AffixMateria EquipmentId="43340" MateriaId="41779"/>
+    <AffixMateria EquipmentId="43341" MateriaId="41779"/>
+    <AffixMateria EquipmentId="43342" MateriaId="41779"/>
+
+    <AffixMateria EquipmentId="43343" MateriaId="41778"/>
+
+    <AffixMateria EquipmentId="43344" MateriaId="41776"/>
+
+    <WaitTimer WaitTime="5"/>
+    <LLoadProfile Path="../Start.xml"/>
+	<WaitTimer WaitTime="5"/>
+</Order>
+<CodeChunks>
+<CodeChunk Name="SetLisbethJson">
+<![CDATA[
+    // Try to get profile path and construct relative path from there
+    var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+    var profileDir = System.IO.Path.GetDirectoryName(profilePath);
+    var jsonPath = System.IO.Path.Combine(profileDir, "../Lisbeth/GearSets/GEAR100.json");
+    
+    var json = System.IO.File.ReadAllText(jsonPath);
+    var lisbeth = BotManager.Bots.FirstOrDefault(c => c.Name == "Lisbeth");
+    if (lisbeth != null)
+   {
+       var lisbethObject = lisbeth.GetType().GetProperty("Lisbeth").GetValue(lisbeth);
+       if (lisbethObject != null)
+       {
+           Func<Task> executeWithRetry = null;
+           executeWithRetry = async () => {
+               try 
+               {
+                   var orderMethod = lisbethObject.GetType().GetMethod("ExecuteOrders");
+                   await (Task<bool>)orderMethod.Invoke(lisbethObject, new object[] { json, false });
+               }
+               catch (Exception ex) when (
+                   ex.ToString().Contains("HttpRequestException") || 
+                   ex.ToString().Contains("No response from the server") ||
+                   ex.ToString().Contains("Max sessions reached")
+               )
+               {
+                   // Log and stop gently
+                   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Attempting to stop Lisbeth gently...");
+                   var stopGentlyMethod = lisbethObject.GetType().GetMethod("StopGently");
+                   await (Task)stopGentlyMethod.Invoke(lisbethObject, null);
+                   
+                   // Log and try to exit crafting
+                   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Attempting to exit crafting state...");
+                   try 
+                   {
+                       var exitCraftingMethod = lisbethObject.GetType().GetMethod("ExitCrafting");
+                       await (Task<bool>)exitCraftingMethod.Invoke(lisbethObject, null);
+                   }
+                   catch {}
+                   
+                   // Log waiting period
+                   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Waiting 5 minutes before attempting restart...");
+                   await Task.Delay(TimeSpan.FromMinutes(5));
+                   
+                   // Log and request restart
+                   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Requesting Lisbeth to restart orders...");
+                   var restartMethod = lisbethObject.GetType().GetMethod("RequestRestart");
+                   restartMethod.Invoke(lisbethObject, new object[] { json });
+                   
+                   await executeWithRetry();
+               }
+           };
+
+           await executeWithRetry();
+       }
+   }
+]]>
+</CodeChunk>
+<CodeChunk Name="Logger">
+    <![CDATA[
+        try
+        {
+            string workingDirectory = Directory.GetCurrentDirectory();
+            string settingsPath = Path.Combine(workingDirectory, "Settings");
+            string logFilePath = Path.Combine(settingsPath, $"autocraft.txt");
+            
+            File.AppendAllText(logFilePath, "craft100" + Environment.NewLine);
+        }
+        catch (Exception ex)
+        {
+        }
+    ]]>
+</CodeChunk>
+</CodeChunks>
+</Profile>

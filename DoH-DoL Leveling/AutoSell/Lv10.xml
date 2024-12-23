@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Profile>
+<Name>Selling Lv5 Junk</Name>
+<Order>
+    <AutoInventoryEquip/>
+	
+		<LogMessage Message="Selling Lv1-10 junk..."/>
+		<LogMessage Message="CAUTION! This may sell HQ items that you'd rather put on the marketboard!"/>
+		
+		<LLSellItem ItemIds="5380, 5107, 4834, 5509, 5488, 5534, 5130, 5433, 5518, 5106, 5432, 5498, 4823, 5268, 5341, 5560, 4751, 4930, 5197, 5291, 5318, 5492, 5361, 5056, 5091, 5071, 5062, 5275, 5333, 5324, 5475, 4825, 4847, 5361, 2219, 2456, 5056, 2341, 2226, 2494, 5062, 2106, 4305, 5275, 4304, 3274, 5333, 3309, 2143, 4564, 4849, 4696, 4660" Armory="true"/>
+		<LLSellItem ItemIds="2658, 2652, 3023, 2959, 2961, 3310"/>
+		<LLDiscardItem ItemIds="2585" />
+
+        <LLSellItem ItemIds="5380, 5107, 5433, 5518, 4831, 5106, 5351, 4834, 4803, 5383, 5498, 5516, 5124, 4823, 5268, 5341, 4779, 4829, 4751, 4752, 4760, 4876, 4930, 4931, 5197, 5291, 5292, 5318, 5319, 5434, 5492, 5361, 5364, 5056, 5091, 5071, 5062, 5276, 5333, 5324, 5475, 5275, 2143, 4856, 5515, 4825, 4847, 4849, 1604, 1822, 2228, 5071, 2662, 2664, 3540, 2230, 5086, 2057, 4093, 1683, 5276, 3016, 3769, 3537, 5324, 3316, 3318, 3315, 3015, 5482, 2145, 5504, 5515, 4681, 4726, 4854, 2589, 4640" Armory="true"/>
+		<LLSellItem ItemIds="3014"/>
+
+    <WaitTimer WaitTime="5"/>
+	<RunCode Name="Logger" />
+	<WaitTimer WaitTime="5"/>
+    <LLoadProfile Path="../Crafting/1-21.xml"/>
+</Order>
+<CodeChunks>
+<CodeChunk Name="Logger">
+    <![CDATA[
+        try
+        {
+            string workingDirectory = Directory.GetCurrentDirectory();
+            string settingsPath = Path.Combine(workingDirectory, "Settings");
+            string logFilePath = Path.Combine(settingsPath, $"autosell.txt");
+            
+            File.AppendAllText(logFilePath, "sell10" + Environment.NewLine);
+        }
+        catch (Exception ex)
+        {
+        }
+    ]]>
+</CodeChunk>
+</CodeChunks>
+</Profile>

@@ -465,6 +465,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
     <!-- SECOND SET OF ORDERS (Levels all classes to 10) -->
 <If Condition="not IsQuestCompleted(66116)">
   <RunCode Name="SetLisbethJson2" />
+  <LLQualityLower ItemIds="5364, 5091, 5071, 5086, 5276, 5324, 5515" />
 </If>
    <!-- Lv 10 Quests -->
 
@@ -739,9 +740,13 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
       </If>
     </If>
 
+    <RunCode Name="autosellcheck10" />
+
       <!-- THIRD SET OF ORDERS (Levels all classes to 15) -->
 <If Condition="not IsQuestCompleted(66117)">
-  <RunCode Name="SetLisbethJson3" />
+  <RunCode Name="SetLisbethJson3a" />
+
+  <RunCode Name="SetLisbethJson3b" />
 </If>
   <!-- Change Class ALC - 1 Distilled Water 5487 // 5 Antidote90 4564 // 10 Beeswax 5515 // 15 Clove Oil90 4856 -->
 	<While Condition="ClassName != ClassJobType.Alchemist">
@@ -1119,6 +1124,85 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
       </If>
     </If>
 
+  <RunCode Name="autosellcheck15" />
+  <While Condition="ClassName != ClassJobType.Miner">
+		<ChangeClass Job="Miner"/>
+    <AutoInventoryEquip/>
+    <WaitTimer WaitTime="2"/>
+	</While>
+  <While Condition="ClassName != ClassJobType.Botanist">
+		<ChangeClass Job="Botanist"/>
+    <AutoInventoryEquip/>
+    <WaitTimer WaitTime="2"/>
+	</While>
+  <RunCode Name="SetLisbethJson4" />
+  <RunCode Name="LoggerCraft19" />
+  <RunCode Name="autosellcheck19" />
+  <While Condition="ClassName != ClassJobType.Miner">
+		<ChangeClass Job="Miner"/>
+    <AutoInventoryEquip/>
+    <WaitTimer WaitTime="2"/>
+	</While>
+  <While Condition="ClassName != ClassJobType.Botanist">
+		<ChangeClass Job="Botanist"/>
+    <AutoInventoryEquip/>
+    <WaitTimer WaitTime="2"/>
+	</While>
+  <RunCode Name="SetLisbethJson5" />
+  <RunCode Name="LoggerCraft20" />
+  <While Condition="ClassName != ClassJobType.Weaver">
+		<ChangeClass Job="Weaver"/>
+    <AutoInventoryEquip/>
+    <WaitTimer WaitTime="2"/>
+	</While>
+  <While Condition="ClassName != ClassJobType.Carpenter">
+		<ChangeClass Job="Carpenter"/>
+    <AutoInventoryEquip/>
+    <WaitTimer WaitTime="2"/>
+	</While>
+  <While Condition="ClassName != ClassJobType.Blacksmith">
+		<ChangeClass Job="Blacksmith"/>
+    <AutoInventoryEquip/>
+    <WaitTimer WaitTime="2"/>
+	</While>
+  <While Condition="ClassName != ClassJobType.Armorer">
+		<ChangeClass Job="Armorer"/>
+    <AutoInventoryEquip/>
+    <WaitTimer WaitTime="2"/>
+	</While>
+  <While Condition="ClassName != ClassJobType.Leatherworker">
+		<ChangeClass Job="Leatherworker"/>
+    <AutoInventoryEquip/>
+    <WaitTimer WaitTime="2"/>
+	</While>
+  <While Condition="ClassName != ClassJobType.Alchemist">
+		<ChangeClass Job="Alchemist"/>
+    <AutoInventoryEquip/>
+    <WaitTimer WaitTime="2"/>
+	</While>
+  <While Condition="ClassName != ClassJobType.Culinarian">
+		<ChangeClass Job="Culinarian"/>
+    <AutoInventoryEquip/>
+    <WaitTimer WaitTime="2"/>
+	</While>
+  <While Condition="ClassName != ClassJobType.Miner">
+		<ChangeClass Job="Miner"/>
+    <AutoInventoryEquip/>
+    <WaitTimer WaitTime="2"/>
+	</While>
+  <While Condition="ClassName != ClassJobType.Botanist">
+		<ChangeClass Job="Botanist"/>
+    <AutoInventoryEquip/>
+    <WaitTimer WaitTime="2"/>
+	</While>
+  <While Condition="ClassName != ClassJobType.Goldsmith">
+		<ChangeClass Job="Goldsmith"/>
+    <AutoInventoryEquip/>
+    <WaitTimer WaitTime="2"/>
+	</While>
+  <RunCode Name="autosellcheck20" />
+	
+
   <!-- Check to see if we have Crafting at level 21 -->
 		<If Condition="&crp; == 1">
 			<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 21 or not IsQuestCompleted(65677)">
@@ -1161,11 +1245,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 			</If>
 		</If>
 
-  <RunCode Name="SetLisbethJson4" />
-  <RunCode Name="LoggerCraft19" />
-  <RunCode Name="SetLisbethJson5" />
-  <RunCode Name="LoggerCraft20" />
-	
+ 
 	
 	<LLoadProfile Path="../Start.xml"/>
 	
@@ -1469,12 +1549,72 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 ]]>
 </CodeChunk>
 
-<CodeChunk Name="SetLisbethJson3">
+<CodeChunk Name="SetLisbethJson3a">
 <![CDATA[
     // Try to get profile path and construct relative path from there
     var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
     var profileDir = System.IO.Path.GetDirectoryName(profilePath);
-    var jsonPath = System.IO.Path.Combine(profileDir, "../Lisbeth/1-21/10-15.json");
+    var jsonPath = System.IO.Path.Combine(profileDir, "../Lisbeth/1-21/10-15Part1.json");
+    
+    var json = System.IO.File.ReadAllText(jsonPath);
+    var lisbeth = BotManager.Bots.FirstOrDefault(c => c.Name == "Lisbeth");
+    if (lisbeth != null)
+   {
+       var lisbethObject = lisbeth.GetType().GetProperty("Lisbeth").GetValue(lisbeth);
+       if (lisbethObject != null)
+       {
+           Func<Task> executeWithRetry = null;
+           executeWithRetry = async () => {
+               try 
+               {
+                   var orderMethod = lisbethObject.GetType().GetMethod("ExecuteOrders");
+                   await (Task<bool>)orderMethod.Invoke(lisbethObject, new object[] { json, false });
+               }
+               catch (Exception ex) when (
+                   ex.ToString().Contains("HttpRequestException") || 
+                   ex.ToString().Contains("No response from the server") ||
+                   ex.ToString().Contains("Max sessions reached")
+               )
+               {
+                   // Log and stop gently
+                   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Attempting to stop Lisbeth gently...");
+                   var stopGentlyMethod = lisbethObject.GetType().GetMethod("StopGently");
+                   await (Task)stopGentlyMethod.Invoke(lisbethObject, null);
+                   
+                   // Log and try to exit crafting
+                   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Attempting to exit crafting state...");
+                   try 
+                   {
+                       var exitCraftingMethod = lisbethObject.GetType().GetMethod("ExitCrafting");
+                       await (Task<bool>)exitCraftingMethod.Invoke(lisbethObject, null);
+                   }
+                   catch {}
+                   
+                   // Log waiting period
+                   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Waiting 5 minutes before attempting restart...");
+                   await Task.Delay(TimeSpan.FromMinutes(5));
+                   
+                   // Log and request restart
+                   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Requesting Lisbeth to restart orders...");
+                   var restartMethod = lisbethObject.GetType().GetMethod("RequestRestart");
+                   restartMethod.Invoke(lisbethObject, new object[] { json });
+                   
+                   await executeWithRetry();
+               }
+           };
+
+           await executeWithRetry();
+       }
+   }
+]]>
+</CodeChunk>
+
+<CodeChunk Name="SetLisbethJson3b">
+<![CDATA[
+    // Try to get profile path and construct relative path from there
+    var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+    var profileDir = System.IO.Path.GetDirectoryName(profilePath);
+    var jsonPath = System.IO.Path.Combine(profileDir, "../Lisbeth/1-21/10-15Part2.json");
     
     var json = System.IO.File.ReadAllText(jsonPath);
     var lisbeth = BotManager.Bots.FirstOrDefault(c => c.Name == "Lisbeth");
@@ -1551,7 +1691,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 
           string content = File.ReadAllText(logFilePath);
           
-    if ((lisbeth != null) && content.Contains("craft19"))
+    if ((lisbeth != null) && !content.Contains("craft19"))
    {
        var lisbethObject = lisbeth.GetType().GetProperty("Lisbeth").GetValue(lisbeth);
        if (lisbethObject != null)
@@ -1624,7 +1764,7 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
 
           string content = File.ReadAllText(logFilePath);
           
-    if ((lisbeth != null) && content.Contains("craft20"))
+    if ((lisbeth != null) && !content.Contains("craft20"))
    {
        var lisbethObject = lisbeth.GetType().GetProperty("Lisbeth").GetValue(lisbeth);
        if (lisbethObject != null)

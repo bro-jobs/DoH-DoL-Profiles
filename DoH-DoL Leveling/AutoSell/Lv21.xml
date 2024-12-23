@@ -7,7 +7,7 @@
 		<LogMessage Message="Selling Lv1-21 junk..."/>
 		<LogMessage Message="CAUTION! This may sell HQ items that you'd rather put on the marketboard!"/>
 		
-		<LLSellItem ItemIds="2669, 1002669, 2341, 1002341, 2219, 1002219, 2658, 1002658" Armory="true"/>
+		<LLSellItem ItemIds="2669, 2392， 1002669, 2341, 1002341, 2219, 1002219, 2658, 1002658" Armory="true"/>
 		<LLSellItem ItemIds="2652, 1002652, 3023, 1003023, 3019, 1003019, 3014, 1003014" Armory="true"/>
 		<LLSellItem ItemIds="2959, 1002959, 2961, 1002961, 3310, 1003310, 4834, 5107" Armory="true"/>
 		<LLSellItem ItemIds="5824, 5823, 5258, 1005258, 5057, 1005057, 5063, 1005063" Armory="true"/>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Profile>
+<Name>Using Master Books...</Name>
+<Order>
+	
+	<UseInventoryItem ItemID="44123"/>
+	<WaitTimer WaitTime="5"/>
+	<UseInventoryItem ItemID="44124"/>
+	<WaitTimer WaitTime="5"/>
+	<UseInventoryItem ItemID="44125"/>
+	<WaitTimer WaitTime="5"/>
+	<UseInventoryItem ItemID="44126"/>
+	<WaitTimer WaitTime="5"/>
+	<UseInventoryItem ItemID="44127"/>
+	<WaitTimer WaitTime="5"/>
+	<UseInventoryItem ItemID="44128"/>
+	<WaitTimer WaitTime="5"/>
+	<UseInventoryItem ItemID="44129"/>
+	<WaitTimer WaitTime="5"/>
+	
+	<LogMessage Message="Master Books acquired!"/>
+	
+    <LLoadProfile Path="../Lv101.xml"/>
+</Order>
+<CodeChunks>
+
+</CodeChunks>
+</Profile>

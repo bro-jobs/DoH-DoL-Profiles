@@ -77,7 +77,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		</If>
 
 		<If Condition="&autosell; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 21 and Core.Me.Levels[ClassJobType.Blacksmith] &lt; 21 and Core.Me.Levels[ClassJobType.Armorer] &lt; 21 and Core.Me.Levels[ClassJobType.Goldsmith] &lt; 21 and Core.Me.Levels[ClassJobType.Leatherworker] &lt; 21 and Core.Me.Levels[ClassJobType.Weaver] &lt; 21 and Core.Me.Levels[ClassJobType.Alchemist] &lt; 21 and Core.Me.Levels[ClassJobType.Culinarian] &lt; 21">
+			<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 21 or Core.Me.Levels[ClassJobType.Blacksmith] &lt; 21 or Core.Me.Levels[ClassJobType.Armorer] &lt; 21 or Core.Me.Levels[ClassJobType.Goldsmith] &lt; 21 or Core.Me.Levels[ClassJobType.Leatherworker] &lt; 21 or Core.Me.Levels[ClassJobType.Weaver] &lt; 21 or Core.Me.Levels[ClassJobType.Alchemist] &lt; 21 or Core.Me.Levels[ClassJobType.Culinarian] &lt; 21">
 				<LLoadProfile Path="Crafting/1-21.xml"/>
 			</If>
 		</If>
@@ -1020,12 +1020,19 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 				<LLoadProfile Path="Gathering/95-100 Botanist.xml"/>
 			</If>
 		</If>
+
+		
+
+		<If Condition="&autosell; == 1">
+			<RunCode Name="autosellcheck100" />
+		</If>
+
 	
 		<If Condition="not IsOnMap(129)">
 			<GetTo ZoneId="129" XYZ="-84.08636, 18.60033, -12.41393"/><!-- Limsa Lominsa Lower Decks -->
 		</If>
-		<LogMessage Message="Congrats on level 100 on BTN/MIN and all Crafters."/>
-		<UserDialog DialogText="Congrats on level 100 on BTN/MIN and all Crafters."/>
+		<LogMessage Message="Congrats on level 100 on BTN/MIN and all Crafters. You can craft Everseeker gear by buying 15 Ceviche HQs + 15 Cloudsail Menuniere HQs, and provide the relevant tome mats. Set these to both order and suborder in Lisbeth. Ensure that you change from Quick Synth All to normal. Then run Lv101.xml.\n Tome mats needed: 12 Xbr'aal Varnish, 12 Purussaurus Skin, 14 Potsworn's Abrasive, 28 Pelupelu Yarn, 102 Airbright Coolant"/>
+		<UserDialog DialogText="Congrats on level 100 on BTN/MIN and all Crafters. You can craft Everseeker gear by buying 15 Ceviche HQs + 15 Cloudsail Menuniere HQs, and provide the relevant tome mats. Set these to both order and suborder in Lisbeth. Ensure that you change from Quick Synth All to normal. Then run Lv101.xml"/>
 	
 	</Order>
 	<CodeChunks>
@@ -1151,6 +1158,12 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 			await CheckAutocraftLevel(90);
 		]]>
 		</CodeChunk>
+
+		<CodeChunk Name="autocraftcheck100">
+		<![CDATA[
+			await CheckAutocraftLevel(100);
+		]]>
+		</CodeChunk>
 		
 		<CodeChunk Type="Definition" Name="AutosellLogging">
 		<![CDATA[
@@ -1273,6 +1286,12 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		<CodeChunk Name="autosellcheck90">
 		<![CDATA[
 			await CheckAutosellLevel(90);
+		]]>
+		</CodeChunk>
+
+		<CodeChunk Name="autosellcheck100">
+		<![CDATA[
+			await CheckAutosellLevel(100);
 		]]>
 		</CodeChunk>
 	</CodeChunks>

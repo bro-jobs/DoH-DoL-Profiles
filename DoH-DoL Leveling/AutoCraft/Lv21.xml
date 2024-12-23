@@ -2,6 +2,7 @@
 <Profile>
 <Name>Crafting Lv21 Gear</Name>
 <Order>
+    <RunCode Name="SwitchCombatJob"/>
     <RunCode Name="SetLisbethJson" />
     <LogMessage Message="Crafted Lv21 Gear!"/>
     <AutoInventoryEquip/>
@@ -11,6 +12,18 @@
     <LLoadProfile Path="../Start.xml"/>
 </Order>
 <CodeChunks>
+<CodeChunk Name="SwitchCombatJob">
+            <![CDATA[ 
+            var Combat = Enumerable.Range(8, 11).Append(0).Append(36);
+            var gearSets = GearsetManager.GearSets.Where(i => i.InUse && !Combat.Contains((int)i.Class)).ToList().OrderByDescending(i=> i.Gear.First().Item.ItemLevel);
+
+            if (gearSets.Any())
+            {
+                gearSets.First().Activate();
+                await Coroutine.Sleep(2000);
+            }
+            ]]>
+        </CodeChunk>
 <CodeChunk Name="SetLisbethJson">
 <![CDATA[
     // Try to get profile path and construct relative path from there
@@ -20,7 +33,21 @@
     
     var json = System.IO.File.ReadAllText(jsonPath);
     var lisbeth = BotManager.Bots.FirstOrDefault(c => c.Name == "Lisbeth");
-    if (lisbeth != null)
+
+    string workingDirectory = Directory.GetCurrentDirectory();
+					string settingsPath = Path.Combine(workingDirectory, "Settings");
+					string logFilePath = Path.Combine(settingsPath, "autocraft.txt");
+					
+					// Create the file if it doesn't exist
+					if (!File.Exists(logFilePath))
+					{
+						File.WriteAllText(logFilePath, "");
+					}
+
+          string content = File.ReadAllText(logFilePath);
+
+
+    if ((lisbeth != null) && !content.Contains("craft20"))
    {
        var lisbethObject = lisbeth.GetType().GetProperty("Lisbeth").GetValue(lisbeth);
        if (lisbethObject != null)
