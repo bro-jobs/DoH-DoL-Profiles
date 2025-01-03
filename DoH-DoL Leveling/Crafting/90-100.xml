@@ -45,6 +45,14 @@ Authors:  Kayla / Angles24
 	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
 		<LLTurnInCollectables/>
 		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
 			<!-- Check if we need more commercial engineering manuals -->
@@ -69,6 +77,14 @@ Authors:  Kayla / Angles24
 	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
 		<LLTurnInCollectables/>
 		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
 			<!-- Check if we need more commercial engineering manuals -->
@@ -93,6 +109,14 @@ Authors:  Kayla / Angles24
 	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
 		<LLTurnInCollectables/>
 		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
 			<!-- Check if we need more commercial engineering manuals -->
@@ -117,6 +141,14 @@ Authors:  Kayla / Angles24
 	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
 		<LLTurnInCollectables/>
 		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
 			<!-- Check if we need more commercial engineering manuals -->
@@ -141,6 +173,14 @@ Authors:  Kayla / Angles24
 	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
 		<LLTurnInCollectables/>
 		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
 			<!-- Check if we need more commercial engineering manuals -->
@@ -165,6 +205,14 @@ Authors:  Kayla / Angles24
 	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
 		<LLTurnInCollectables/>
 		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
 			<!-- Check if we need more commercial engineering manuals -->
@@ -189,6 +237,14 @@ Authors:  Kayla / Angles24
 	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
 		<LLTurnInCollectables/>
 		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
 			<!-- Check if we need more commercial engineering manuals -->
@@ -213,6 +269,14 @@ Authors:  Kayla / Angles24
 	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
 		<LLTurnInCollectables/>
 		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
 			<!-- Check if we need more commercial engineering manuals -->
@@ -237,6 +301,14 @@ Authors:  Kayla / Angles24
 	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
 		<LLTurnInCollectables/>
 		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
 			<!-- Check if we need more commercial engineering manuals -->
@@ -261,6 +333,14 @@ Authors:  Kayla / Angles24
 	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
 		<LLTurnInCollectables/>
 		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
 			<!-- Check if we need more commercial engineering manuals -->
@@ -285,6 +365,14 @@ Authors:  Kayla / Angles24
 	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
 		<LLTurnInCollectables/>
 		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
 			<!-- Check if we need more commercial engineering manuals -->
@@ -309,6 +397,14 @@ Authors:  Kayla / Angles24
 	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
 		<LLTurnInCollectables/>
 		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
 			<!-- Check if we need more commercial engineering manuals -->
@@ -333,6 +429,14 @@ Authors:  Kayla / Angles24
 	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
 		<LLTurnInCollectables/>
 		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
 			<!-- Check if we need more commercial engineering manuals -->
@@ -357,6 +461,14 @@ Authors:  Kayla / Angles24
 	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
 		<LLTurnInCollectables/>
 		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
 			<!-- Check if we need more commercial engineering manuals -->
@@ -381,6 +493,14 @@ Authors:  Kayla / Angles24
 	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
 		<LLTurnInCollectables/>
 		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
 			<!-- Check if we need more commercial engineering manuals -->
@@ -405,6 +525,14 @@ Authors:  Kayla / Angles24
 	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
 		<LLTurnInCollectables/>
 		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
 			<!-- Check if we need more commercial engineering manuals -->
@@ -429,6 +557,14 @@ Authors:  Kayla / Angles24
 	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
 		<LLTurnInCollectables/>
 		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
 			<!-- Check if we need more commercial engineering manuals -->
@@ -453,6 +589,14 @@ Authors:  Kayla / Angles24
 	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
 		<LLTurnInCollectables/>
 		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
 			<!-- Check if we need more commercial engineering manuals -->
@@ -477,6 +621,14 @@ Authors:  Kayla / Angles24
 	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
 		<LLTurnInCollectables/>
 		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
 			<!-- Check if we need more commercial engineering manuals -->
@@ -501,6 +653,14 @@ Authors:  Kayla / Angles24
 	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
 		<LLTurnInCollectables/>
 		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
 			<!-- Check if we need more commercial engineering manuals -->
@@ -525,6 +685,14 @@ Authors:  Kayla / Angles24
 	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
 		<LLTurnInCollectables/>
 		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
 			<!-- Check if we need more commercial engineering manuals -->
@@ -549,6 +717,14 @@ Authors:  Kayla / Angles24
 	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
 		<LLTurnInCollectables/>
 		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
 			<!-- Check if we need more commercial engineering manuals -->
@@ -573,6 +749,14 @@ Authors:  Kayla / Angles24
 	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
 		<LLTurnInCollectables/>
 		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
 			<!-- Check if we need more commercial engineering manuals -->
@@ -597,6 +781,14 @@ Authors:  Kayla / Angles24
 	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
 		<LLTurnInCollectables/>
 		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
 			<!-- Check if we need more commercial engineering manuals -->
@@ -621,6 +813,14 @@ Authors:  Kayla / Angles24
 	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
 		<LLTurnInCollectables/>
 		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
 			<!-- Check if we need more commercial engineering manuals -->
@@ -645,6 +845,14 @@ Authors:  Kayla / Angles24
 	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
 		<LLTurnInCollectables/>
 		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
 			<!-- Check if we need more commercial engineering manuals -->
@@ -669,6 +877,14 @@ Authors:  Kayla / Angles24
 	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
 		<LLTurnInCollectables/>
 		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
 			<!-- Check if we need more commercial engineering manuals -->
@@ -693,6 +909,14 @@ Authors:  Kayla / Angles24
 	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
 		<LLTurnInCollectables/>
 		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
 			<!-- Check if we need more commercial engineering manuals -->
@@ -717,6 +941,14 @@ Authors:  Kayla / Angles24
 	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
 		<LLTurnInCollectables/>
 		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
 			<!-- Check if we need more commercial engineering manuals -->
@@ -741,6 +973,14 @@ Authors:  Kayla / Angles24
 	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
 		<LLTurnInCollectables/>
 		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
 			<!-- Check if we need more commercial engineering manuals -->
@@ -765,6 +1005,14 @@ Authors:  Kayla / Angles24
 	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
 		<LLTurnInCollectables/>
 		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
 			<!-- Check if we need more commercial engineering manuals -->
@@ -789,6 +1037,14 @@ Authors:  Kayla / Angles24
 	</While>
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
 		<LLTurnInCollectables/>
 		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
 			<!-- Check if we need more commercial engineering manuals -->

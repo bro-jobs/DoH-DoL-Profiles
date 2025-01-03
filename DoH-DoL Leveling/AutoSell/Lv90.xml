@@ -69,6 +69,8 @@
 		<LLSellItem ItemIds="19628, 19526, 19536, 19568, 19535, 19638, 19546, 19525" Armory="true"/>
 		<!-- Miscellaneous leftovers -->
 		<LLSellItem ItemIds="12880, 12576, 5460"/>
+		<!-- Discarding Lv50 MIN/BTN weaps -->
+        <LLDiscardItem ItemIds="2532, 2558" Armory="true" />
 		
 		<!-- Lv70-80 Stuff -->
 		<!-- Selling Lv60-70 Skybuilder mats... -->
@@ -82,6 +84,8 @@
 		<LLSellItem ItemIds="12893, 19909, 27864, 23187, 19873, 27852, 19878, 12871, 12889, 27829, 12895, 5116, 5118, 5232, 27730, 19933, 27685, 27687, 27750, 27756, 20003, 27733, 27734, 27736, 19920, 19921, 5491, 27968, 19907, 19870, 27240"/>
 		<!-- Grade 6 Materias -->
 		<LLSellItem ItemIds="18022, 18023, 18024, 18025, 18026, 18027"/>
+		<!-- Grade 1 competence, cunning, and command -->
+        <LLSellItem ItemIds="5699, 5704, 5709"/>
 
 		<!-- Lv80-90 Stuff Stuff -->
 		<!-- Selling misc junk food -->

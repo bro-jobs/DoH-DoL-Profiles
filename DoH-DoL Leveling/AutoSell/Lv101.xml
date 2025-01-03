@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Profile>
+<Name>Selling Junk before Everseeker Crafting</Name>
+<Order>
+    <AutoInventoryEquip/>
+	
+		<LogMessage Message="Selling junk..."/>
+		<LogMessage Message="CAUTION! This may sell HQ items that you'd rather put on the marketboard!"/>
+		
+		<!-- Lv1-21 Stuff -->
+		<LLSellItem ItemIds="2669, 1002669, 2341, 1002341, 2219, 1002219, 2658, 1002658, 5492" Armory="true"/>
+		<LLSellItem ItemIds="2652, 1002652, 3023, 1003023, 3019, 1003019, 3014, 1003014" Armory="true"/>
+		<LLSellItem ItemIds="2959, 1002959, 2961, 1002961, 3310, 1003310, 4834, 5107" Armory="true"/>
+		<LLSellItem ItemIds="5824, 5823, 5258, 1005258, 5057, 1005057, 5063, 1005063" Armory="true"/>
+		<LLSellItem ItemIds="5091, 1005091, 5364, 1005364, 5367, 1005367, 5385" Armory="true"/>
+		<LLSellItem ItemIds="5324, 1005324, 5325, 1005325, 5334, 1005334, 5341" Armory="true"/>
+		<LLSellItem ItemIds="2652, 1002652, 3023, 1003023, 3019, 1003019, 3014, 1003014" Armory="true"/>
+		<LLSellItem ItemIds="5343, 5275, 1005275, 5432, 5509, 5534, 4863, 1004863" Armory="true"/>
+		<LLSellItem ItemIds="2314, 2340, 2366, 2391, 2416, 2442, 2467, 2493" Armory="true"/>
+		<LLSellItem ItemIds="2519, 2545" Armory="true"/>
+		<LLSellItem ItemIds="2328, 2355, 2380, 2405, 2430, 2456, 2481, 2507" Armory="true"/>
+		<LLSellItem ItemIds="2534, 2560, 5519, 5130, 4832, 5383, 5086, 1005086" Armory="true"/>
+		<LLSellItem ItemIds="4766, 5487, 1005487, 4597, 1004597, 4564, 1004564" Armory="true"/>
+		<LLSellItem ItemIds="5515, 1005515, 4595, 1004595, 4849, 1004849, 4856, 1004856" Armory="true"/>
+		<LLSellItem ItemIds="5518, 4660, 1004660, 4847, 1004847, 4640, 1004640, 4850, 1004850" Armory="true"/>
+		<LLSellItem ItemIds="4642, 1004642, 4853, 1004853, 12862" Armory="true"/>
+		
+		<!-- Lv21-41 Stuff -->
+		<!-- We're selling some low level stuff now instead of prior because we want to prevent selling a gear piece that is still -->
+		<!-- part of a gearset before all DoH/DoL are fully updated. -->
+		<LLSellItem ItemIds="2315, 1002315, 2367, 1002367, 2392, 1002392, 2417, 1002417, 2443, 1002443, 2468, 1002468, 2494, 1002494" Armory="true"/>
+		<LLSellItem ItemIds="2520, 1002520, 2546, 1002546" Armory="true"/>
+		<LLSellItem ItemIds="2330, 1002330, 2357, 1002357, 2382, 1002382, 2407, 1002407, 2432, 1002432, 2458, 1002458, 2483, 1002483" Armory="true"/>
+		<LLSellItem ItemIds="2509, 1002509, 2535, 1002535, 2561, 1002561, 2670, 1002670" Armory="true"/>
+		<LLSellItem ItemIds="4766, 4849, 1004849, 5155, 5201, 1005201, 5260, 1005260, 5336, 1005336, 5327, 1005327" Armory="true"/>
+		<LLSellItem ItemIds="5499, 5524, 5551, 5322, 5310, 5436, 5456, 5346, 5386" Armory="true"/>
+		
+		<!-- Lv41-53 Stuff -->
+		<LLSellItem ItemIds="2529, 2714, 2564, 2541, 2527, 1002527, 2526, 5145, 1002526, 2523, 1002523, 2538, 2555, 2553, 1002553, 2552, 1002552, 2549, 1002549" Armory="true"/>
+		<LLSellItem ItemIds="2819, 2758, 2700, 1002700, 3188, 1003188, 3129, 1003129, 3092, 1003092" Armory="true"/>
+		<LLSellItem ItemIds="4767, 4792, 2396, 1002396, 4308, 1004308, 2408, 1002408, 4813, 4839, 5114, 12534, 5168, 5138, 5143, 12531, 5384, 5335, 1005335, 5342, 5345, 12575, 5504, 1005504" Armory="true"/>
+		<LLSellItem ItemIds="2318, 1002318, 2433, 1002433, 2345, 1002345, 2371, 1002371, 2420, 1002420, 2446, 1002446, 2471, 1002471, 2497, 1002497, 2524, 1002524, 2549, 1002549" Armory="true"/>
+		<LLSellItem ItemIds="2331, 1002331, 2358, 1002358, 2383, 1002383, 2459, 1002459, 2484, 1002484, 2510, 1002510, 2537, 1002537, 2567, 1002567, 2562, 1002562" Armory="true"/>
+		<LLSellItem ItemIds="3052, 1003052, 3053, 1003053, 3562, 1003562, 3561, 1003561, 3336, 1003336, 3341, 1003341, 3795, 1003795, 3790, 1003790, 4204, 1004204" Armory="true"/>
+		<LLSellItem ItemIds="4205, 1004205, 4313, 1004313, 4309, 1004309, 4304, 1004304, 4095, 1004095, 4099, 1004099, 4431, 1004431, 4435, 1004435" Armory="true"/>
+		
+		<!-- Lv53-63 Stuff -->
+		<LLSellItem ItemIds="2361, 2540, 2566, 2400, 2425, 2514, 1002361, 2323, 1002323, 2375, 1002375, 2396, 1002396, 2451, 1002451, 2476, 1002476, 2528, 1002528, 2554, 1002554" Armory="true"/>
+		<LLSellItem ItemIds="2335, 1002335, 2386, 1002386, 2411, 1002411, 2437, 1002437, 2464, 1002464, 2488, 1002488, 2539, 1002539, 2565, 1002565, 2928, 2929" Armory="true"/>
+		<LLSellItem ItemIds="2785, 1002785, 3137, 1003137, 3691, 1003691, 3415, 1003415, 3911, 1003911, 4232, 1004232, 4231, 1004231, 4379, 1004379, 4333, 1004333, 4353, 1004353, 4126, 1004126, 4132, 1004132, 4467, 1004467, 4482, 1004482" Armory="true"/>
+		<LLSellItem ItemIds="11904, 11905, 11908, 11909, 11947, 11951, 11990, 11989, 18263, 1018263" Armory="true"/>
+		<LLSellItem ItemIds="32005, 31961, 32006, 31962, 32007, 31963, 32008, 31964, 32009, 31965, 32010, 31966, 32011, 31967, 32012, 31968, 32013, 31969, 32014, 31970" Armory="true"/>
+		<LLSellItem ItemIds="19910, 12579, 12891, 5158, 19950" Armory="true"/>
+		<LLSellItem ItemIds="7671, 21800, 5594, 12900, 19982, 5536, 19868, 4672, 13258, 5143" Armory="true"/>
+
+		<!-- Muudhorn Ring of Slaying (from quest reward for the Shisui SB aether current) -->
+		<LLSellItem ItemIds="18263" Armory="true"/>
+		
+		<!-- Lv63-67 Stuff -->
+		<LLSellItem ItemIds="19877, 5461, 12872, 12578, 5346, 12539, 5395, 12598, 19931, 19978, 12595, 12642, 4811, 1012595, 1019978, 5282, 1005282, 5296, 5300, 5526, 5111, 5303, 5316, 12568, 19999, 20000, 5320, 19923, 12604, 1012604, 5496, 12636" Armory="true"/>
+		<LLSellItem ItemIds="32015, 32016, 32017, 32018, 32019, 32020, 32021, 32022, 32023, 32024, 18262, 1018262, 12878, 12885, 12881, 12880, 4852, 1004852, 5231, 5528, 5125, 5403, 19976" Armory="true"/>
+		
+		<!-- Lv67-70 Stuff -->
+		<!-- Selling Lv53 gear... -->
+		<LLSellItem ItemIds="11871, 11875, 11879, 11883, 11907, 11903, 11887, 12011, 12032, 12014, 12020, 12026, 12023, 12017, 12029, 12002, 11895, 11979, 11956, 11974, 11994, 11984, 11961, 11891, 11915, 11919, 11923, 11927, 11931, 11935, 11939, 19517, 19518, 19519, 19520, 19521, 19522, 19523, 19524" Armory="true"/>
+		<!-- Selling leftover materias used in class quests... -->
+		<LLSellItem ItemIds="5631, 5696, 5721, 5671, 5676, 5666, 5688, 5693, 5698" />
+		<!-- Selling Gatherer Lv63-70 quest junk -->
+		<LLSellItem ItemIds="19628, 19526, 19536, 19568, 19535, 19638, 19546, 19525" Armory="true"/>
+		<!-- Miscellaneous leftovers -->
+		<LLSellItem ItemIds="12880, 12576, 5460"/>
+        <!-- Discarding Lv50 MIN/BTN weaps -->
+        <LLDiscardItem ItemIds="2532, 2558" Armory="true" />
+		
+		<!-- Lv70-80 Stuff -->
+		<!-- Selling Lv60-70 Skybuilder mats... -->
+		<LLSellItem ItemIds="31977, 31976, 31979, 31972, 31980, 31978, 31971, 31975, 31973, 31974, 32041, 32021, 32023, 32016, 32024, 32013, 32015, 32019, 32017, 32018"/>
+		<!-- Selling other junk mats from crafting Lv70 skybuilder collectables -->
+		<LLSellItem ItemIds="19943, 19953, 5372, 5389, 19995, 20001, 19910, 20007, 20008, 19978, 19979, 19980, 19981, 19982, 12609, 19917" />
+		<!-- Selling Lv63 gear... -->
+		<LLSellItem ItemIds="19506, 19507, 19508, 19509, 19510, 19511, 19512, 19513, 19514, 19515, 19559, 19560, 19561, 19562, 19563, 19564, 19565, 19566, 19567" Armory="true"/>
+		<LLSellItem ItemIds="19622, 19623, 19624, 19625, 19626, 19627, 19628, 19629, 19630, 19631, 19728, 19729, 19730, 19731, 19733, 19734, 19735, 19736" Armory="true" />
+		<!-- Miscellaneous leftovers -->
+		<LLSellItem ItemIds="12893, 19909, 27864, 23187, 19873, 27852, 19878, 12871, 12889, 27829, 12895, 5116, 5118, 5232, 27730, 19933, 27685, 27687, 27750, 27756, 20003, 27733, 27734, 27736, 19920, 19921, 5491, 27968, 19907, 19870, 27240"/>
+		<!-- Grade 6 Materias -->
+		<LLSellItem ItemIds="18022, 18023, 18024, 18025, 18026, 18027"/>
+        <!-- Grade 1 competence, cunning, and command -->
+        <LLSellItem ItemIds="5699, 5704, 5709"/>
+
+		<!-- Lv80-90 Stuff Stuff -->
+		<!-- Selling misc junk food -->
+		<LLSellItem ItemIds="27876, 27871, 30481, 30482, 36061, 36054, 36047" />
+		<!-- Selling unwanted Lv7/8 materias -->
+		<LLSellItem ItemIds="25194, 25196, 26735, 26736, 26737, 25191, 25192, 25193, 26732, 26733, 26734" />
+		<!-- Discarding Lv70 gear -->
+		<LLDiscardItem ItemIds="23076,23077,23078,23079,23080,23081,23082,23083,23084,23085,23087,23088,23089,23090,23091,23092,23093,23094,23095,23096,23189,23190,23191,23192,23193,23194,23195,23196,23197,23198,23200,23201,23202,23203,23205,23206,23207,23208" Armory="true" />
+		<!-- Miscellaneous leftovers -->
+		<LLSellItem ItemIds="36088, 27835, 36264, 27832, 27842, 36095, 19957, 27697, 36163, 36164, 36165, 27696, 27702, 36191, 36211, 27759, 36203, 36204, 36205, 36245, 27782, 36261, 27817, 27784, 36227, 36229"/>
+		
+		<!-- Lv90-100 junk -->
+		<LLSellItem ItemIds="12597, 4834, 4838, 36181, 36263, 36165, 36241, 43996, 44005, 44006, 44018, 44028, 27697, 27832, 27835, 27696, 44014, 43979, 44003, 44015, 36162, 27785, 5116, 43995, 44007, 43993, 44017, 44052, 43984, 36163, 19957, 27779, 27780, 36206, 36178, 43992, 44024, 44025, 44002, 44004, 44043, 43990, 44016, 43978, 44034, 43981, 44026, 43994, 36246, 36256, 36257, 36258, 36260, 44027, 44053, 44054, 44055, 44056, 44057, 44063, 44067, 44069, 44070, 44071, 44019, 44020, 44021, 44022, 44023, 43997, 43998, 43999, 44000, 44001, 36189, 36186, 44008, 44009, 44010, 44011, 44013, 44012, 36251, 44058, 44059, 44060, 44061, 44062, 36212, 44029, 44030, 44031, 44032, 44033, 36238, 36239, 44044, 44045, 44047, 44050, 27841, 43972, 43973, 43974, 43976, 44185, 44186, 44188, 44189, 44191, 44192, 44193, 44195, 44197, 44198, 44199, 41854, 44204, 44205, 44206, 44209, 44210, 44211, 43310, 42487, 43285, 42043, 42184, 43312, 42505, 41856, 41997, 42164, 44224, 44227, 44228, 44231" Armory="true"/>
+
+		<!-- Discarding Lv80 gear -->
+		<LLDiscardItem ItemIds="31772, 31773, 31774, 31775, 31776, 31777, 31778, 31779, 31780, 31781, 31783, 31784, 31785, 31786, 31787, 31788, 31789, 31790, 31791, 31792, 31793, 31794, 31795, 31796, 31797, 31798, 31799, 31800, 31801, 31802, 31803, 31804, 31805, 31806, 31807, 31808, 31809, 31810, 31811, 31812" Armory="true" />
+
+        <!-- Discarding Lv90 gear and junk Lv100 0* gear by going through all classes one by one... -->
+        <If Condition="ClassName != ClassJobType.Miner">
+		<ChangeClass Job="Miner"/>
+	    </If>
+				
+        <If Condition="ClassName == ClassJobType.Miner">
+		<WaitTimer WaitTime="2"/>
+		<AutoInventoryEquip/>
+        <WaitTimer WaitTime="2"/>
+		<LLDiscardItem ItemIds="39833, 39844" Armory="true" />
+        <LLSellItem ItemIds="43271, 43282"/> <!-- No Armory to ensure we don't sell our equipped items. -->
+        </If>
+
+        <If Condition="ClassName != ClassJobType.Botanist">
+		<ChangeClass Job="Botanist"/>
+	    </If>
+				
+        <If Condition="ClassName == ClassJobType.Botanist">
+		<WaitTimer WaitTime="2"/>
+		<AutoInventoryEquip/>
+        <WaitTimer WaitTime="2"/>
+		<LLDiscardItem ItemIds="39834, 39845" Armory="true" />
+        <LLSellItem ItemIds="43272, 43283"/>
+        </If>
+
+        <!-- Discarding Natural Afflatus -->
+        <LLDiscardItem ItemIds="39851, 39852, 39853, 39854, 39855, 39860, 39861, 39862, 39863" Armory="true" />
+        <!-- Selling Lv100 gatherer gear in inventory (likely failed NQs) -->
+        <LLSellItem ItemIds="43344, 43345, 43346, 43347"/>
+
+        <If Condition="ClassName != ClassJobType.Carpenter">
+		<ChangeClass Job="Carpenter"/>
+	    </If>
+				
+        <If Condition="ClassName == ClassJobType.Carpenter">
+		<WaitTimer WaitTime="2"/>
+		<AutoInventoryEquip/>
+        <WaitTimer WaitTime="2"/>
+		<LLDiscardItem ItemIds="39825, 39836" Armory="true" />
+        <LLSellItem ItemIds="43263, 43274"/>
+        </If>
+
+        <If Condition="ClassName != ClassJobType.Blacksmith">
+		<ChangeClass Job="Blacksmith"/>
+	    </If>
+				
+        <If Condition="ClassName == ClassJobType.Blacksmith">
+		<WaitTimer WaitTime="2"/>
+		<AutoInventoryEquip/>
+        <WaitTimer WaitTime="2"/>
+		<LLDiscardItem ItemIds="39826, 39837" Armory="true" />
+        <LLSellItem ItemIds="43264, 43275"/>
+        </If>
+
+        <If Condition="ClassName != ClassJobType.Armorer">
+		<ChangeClass Job="Armorer"/>
+	    </If>
+				
+        <If Condition="ClassName == ClassJobType.Armorer">
+		<WaitTimer WaitTime="2"/>
+		<AutoInventoryEquip/>
+        <WaitTimer WaitTime="2"/>
+		<LLDiscardItem ItemIds="39827, 39838" Armory="true" />
+        <LLSellItem ItemIds="43265, 43276"/>
+        </If>
+
+        <If Condition="ClassName != ClassJobType.Goldsmith">
+		<ChangeClass Job="Goldsmith"/>
+	    </If>
+				
+        <If Condition="ClassName == ClassJobType.Goldsmith">
+		<WaitTimer WaitTime="2"/>
+		<AutoInventoryEquip/>
+        <WaitTimer WaitTime="2"/>
+		<LLDiscardItem ItemIds="39828, 39839" Armory="true" />
+        <LLSellItem ItemIds="43266, 43277"/>
+        </If>
+
+        <If Condition="ClassName != ClassJobType.Leatherworker">
+		<ChangeClass Job="Leatherworker"/>
+	    </If>
+				
+        <If Condition="ClassName == ClassJobType.Leatherworker">
+		<WaitTimer WaitTime="2"/>
+		<AutoInventoryEquip/>
+        <WaitTimer WaitTime="2"/>
+		<LLDiscardItem ItemIds="39829, 39840" Armory="true" />
+        <LLSellItem ItemIds="43267, 43278"/>
+        </If>
+
+        <If Condition="ClassName != ClassJobType.Weaver">
+		<ChangeClass Job="Weaver"/>
+	    </If>
+				
+        <If Condition="ClassName == ClassJobType.Weaver">
+		<WaitTimer WaitTime="2"/>
+		<AutoInventoryEquip/>
+        <WaitTimer WaitTime="2"/>
+		<LLDiscardItem ItemIds="39830, 39841" Armory="true" />
+        <LLSellItem ItemIds="43268, 43279"/>
+        </If>
+
+        <If Condition="ClassName != ClassJobType.Alchemist">
+		<ChangeClass Job="Alchemist"/>
+	    </If>
+				
+        <If Condition="ClassName == ClassJobType.Alchemist">
+		<WaitTimer WaitTime="2"/>
+		<AutoInventoryEquip/>
+        <WaitTimer WaitTime="2"/>
+		<LLDiscardItem ItemIds="39831, 39842" Armory="true" />
+        <LLSellItem ItemIds="43269, 43280"/>
+        </If>
+
+        <If Condition="ClassName != ClassJobType.Culinarian">
+		<ChangeClass Job="Culinarian"/>
+	    </If>
+				
+        <If Condition="ClassName == ClassJobType.Culinarian">
+		<WaitTimer WaitTime="2"/>
+		<AutoInventoryEquip/>
+        <WaitTimer WaitTime="2"/>
+		<LLDiscardItem ItemIds="39832, 39843" Armory="true" />
+        <LLSellItem ItemIds="43270, 43281"/>
+        </If>
+
+        <!-- Discarding Artful Afflatus -->
+        <LLDiscardItem ItemIds="39846, 39847, 39848, 39849, 39850, 39856, 39857, 39858, 39859" Armory="true" />
+        <!-- Selling Lv100 crafter gear in inventory (likely failed NQs) -->
+        <LLSellItem ItemIds="43314, 43315, 43316, 43317, 43318, 43340, 43341, 43342, 43343"/>
+
+        <!-- Selling Materia 9s and 10s (except Cunning) -->
+        <LLSellItem ItemIds="33922, 33923, 33924, 33925, 33927, 33935, 33936, 33937, 33938, 33940"/>
+
+	<WaitTimer WaitTime="5"/>
+	<RunCode Name="Logger" />
+	<WaitTimer WaitTime="5"/>
+    <LLoadProfile Path="../Lv101.xml"/>
+</Order>
+<CodeChunks>
+<CodeChunk Name="Logger">
+    <![CDATA[
+        try
+        {
+            string workingDirectory = Directory.GetCurrentDirectory();
+            string settingsPath = Path.Combine(workingDirectory, "Settings");
+            string logFilePath = Path.Combine(settingsPath, $"autosell.txt");
+            
+            File.AppendAllText(logFilePath, "sell101" + Environment.NewLine);
+        }
+        catch (Exception ex)
+        {
+        }
+    ]]>
+</CodeChunk>
+</CodeChunks>
+</Profile>

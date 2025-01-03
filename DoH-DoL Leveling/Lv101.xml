@@ -3,7 +3,7 @@
 <Name>Crafting Everseeker Gear + Melds</Name>
 <Order>
 
-    <RunCode Name="autocraftcheck100" />
+    <RunCode Name="autosellcheck101" />
 
     <!-- Buy and use master books -->
     <RunCode Name="MasterBooks" />
@@ -170,6 +170,58 @@
 		<CodeChunk Name="autocraftcheck100">
 		<![CDATA[
 			await CheckAutocraftLevel(100);
+		]]>
+		</CodeChunk>
+
+
+<CodeChunk Type="Definition" Name="AutosellCheck">
+		<![CDATA[
+			public static async Task<bool> CheckAutosellLevel(int level)
+			{
+				try 
+				{
+					string workingDirectory = Directory.GetCurrentDirectory();
+					string settingsPath = Path.Combine(workingDirectory, "Settings");
+					string logFilePath = Path.Combine(settingsPath, "autosell.txt");
+					
+					// Create the file if it doesn't exist
+					if (!File.Exists(logFilePath))
+					{
+						File.WriteAllText(logFilePath, "");
+					}
+					
+					// Read content and check for sell{level}
+					string content = File.ReadAllText(logFilePath);
+					if (content.Contains($"sell{level}"))
+					{
+						return true;
+					}
+					
+					// If we get here, we need to run the profile
+					var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+					var profileDir = Path.GetDirectoryName(profilePath);
+					var autoSellPath = Path.Combine(profileDir, $"Autosell/Lv{level}.xml");
+					
+					if (File.Exists(autoSellPath))
+					{
+						await Coroutine.Sleep(500);
+						ff14bot.NeoProfiles.NeoProfileManager.Load(autoSellPath);
+						await Coroutine.Sleep(1000);
+					}
+					
+					return true;
+				}
+				catch
+				{
+					return true;
+				}
+			}
+		]]>
+		</CodeChunk>
+
+		<CodeChunk Name="autosellcheck101">
+		<![CDATA[
+			await CheckAutosellLevel(101);
 		]]>
 		</CodeChunk>
 <CodeChunk Name="SetLisbethJson">

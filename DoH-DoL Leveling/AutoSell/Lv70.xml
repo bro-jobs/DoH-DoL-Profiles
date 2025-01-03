@@ -69,6 +69,8 @@
 		<LLSellItem ItemIds="19628, 19526, 19536, 19568, 19535, 19638, 19546, 19525" Armory="true"/>
 		<!-- Miscellaneous leftovers -->
 		<LLSellItem ItemIds="12880, 12576, 5460"/>
+		<!-- Discarding Lv50 MIN/BTN weaps -->
+        <LLDiscardItem ItemIds="2532, 2558" Armory="true" />
 	
 	<WaitTimer WaitTime="5"/>
 	<RunCode Name="Logger" />

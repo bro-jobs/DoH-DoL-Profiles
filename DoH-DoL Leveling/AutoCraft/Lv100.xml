@@ -8,25 +8,6 @@
 
     <RunCode Name="Logger" />
 
-    <AffixMateria EquipmentId="43314" MateriaId="41780"/>
-    <AffixMateria EquipmentId="43314" MateriaId="41780"/>
-    <AffixMateria EquipmentId="43315" MateriaId="41780"/>
-    <AffixMateria EquipmentId="43315" MateriaId="41780"/>
-    <AffixMateria EquipmentId="43316" MateriaId="41780"/>
-    <AffixMateria EquipmentId="43316" MateriaId="41780"/>
-    <AffixMateria EquipmentId="43317" MateriaId="41780"/>
-    <AffixMateria EquipmentId="43317" MateriaId="41780"/>
-    <AffixMateria EquipmentId="43318" MateriaId="41780"/>
-    <AffixMateria EquipmentId="43318" MateriaId="41780"/>
-
-    <AffixMateria EquipmentId="43340" MateriaId="41779"/>
-    <AffixMateria EquipmentId="43341" MateriaId="41779"/>
-    <AffixMateria EquipmentId="43342" MateriaId="41779"/>
-
-    <AffixMateria EquipmentId="43343" MateriaId="41778"/>
-
-    <AffixMateria EquipmentId="43344" MateriaId="41776"/>
-
     <WaitTimer WaitTime="5"/>
     <LLoadProfile Path="../Start.xml"/>
 	<WaitTimer WaitTime="5"/>
