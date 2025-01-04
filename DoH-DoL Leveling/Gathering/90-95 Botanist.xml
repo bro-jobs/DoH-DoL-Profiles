@@ -22,7 +22,7 @@ Angles24
 		<!-- Level 90-95 -->
 		<While Condition="Core.Me.Levels[ClassJobType.Botanist] &lt; 95">
 			<LogMessage Message="Starting the Grind to Level 95."/>
-			<Lisbeth Json="[{'Group':1,'Item':12669,'Amount':30,'Enabled':true,'Type':'Exchange'}]"/>
+			<RunCode Name="DTFolklore"/>
 		</While>
 		<!--End Level 95-->
 		
@@ -87,5 +87,127 @@ Angles24
         }
       ]]>
     </CodeChunk>
+	<CodeChunk Name="DTFolklore">
+    <![CDATA[
+
+        // Settings
+        const string ChunkName = "FolkloreMiniCheck";
+        
+        // Logging setup
+        var log = new LlamaLibrary.Logging.LLogger(ChunkName, System.Windows.Media.Colors.Pink);
+        
+        // Create list to store unlockable items
+        var unlockableItems = new System.Collections.Generic.List<uint>();
+
+		// Define potentially unlockable items
+		var potentialItems = new System.Collections.Generic.List<uint>()
+		{
+			43878, 43879, 43880, 43881, 43882, 43883,
+			12238, 12239, 12240, 12698, 12699, 12700,
+			17838, 17839, 17840, 17841,
+			26808, 26809,
+			36598, 36600, 36601, 36602, 36604, 36605
+		};
+        
+        // Check which items can be unlocked
+        foreach(var itemId in potentialItems)
+        {
+            if (LlamaLibrary.Helpers.UIState.CanUnlockItem(itemId))
+            {
+                unlockableItems.Add(itemId);
+            }
+        }
+
+		// Get Lisbeth instance
+        var lisbeth = BotManager.Bots.FirstOrDefault(c => c.Name == "Lisbeth");
+        
+        // If there are items to unlock, create and execute Lisbeth order
+        if (unlockableItems.Count > 0)
+        {
+            // Create order objects
+            var orders = new System.Collections.Generic.List<object>();
+            int id = 1;
+            foreach (var item in unlockableItems)
+            {	
+				orders.Add(new
+				{
+					Id = id++,
+					Group = 1,
+					Item = item,
+					Amount = 1,
+					Enabled = true,
+					Type = "Exchange",
+					AmountMode = "Restock"
+				});
+
+            }
+
+			orders.Add(new
+				{
+					Id = id++,
+					Group = 2,
+					Item = 12669,
+					Amount = 30,
+					Enabled = true,
+					Type = "Exchange",
+					AmountMode = "Absolute"
+				});
+            
+            // Convert to JSON
+            var json = Newtonsoft.Json.JsonConvert.SerializeObject(orders);
+            
+            
+            if (lisbeth != null)
+            {
+                var lisbethObject = lisbeth.GetType().GetProperty("Lisbeth").GetValue(lisbeth);
+                if (lisbethObject != null)
+				   {
+					   Func<Task> executeWithRetry = null;
+					   executeWithRetry = async () => {
+						   try 
+						   {
+							   var orderMethod = lisbethObject.GetType().GetMethod("ExecuteOrders");
+							   await (Task<bool>)orderMethod.Invoke(lisbethObject, new object[] { json, false });
+						   }
+						   catch (Exception ex) when (
+							   ex.ToString().Contains("HttpRequestException") || 
+							   ex.ToString().Contains("No response from the server") ||
+							   ex.ToString().Contains("Max sessions reached")
+						   )
+						   {
+							   // Log and stop gently
+							   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Attempting to stop Lisbeth gently...");
+							   var stopGentlyMethod = lisbethObject.GetType().GetMethod("StopGently");
+							   await (Task)stopGentlyMethod.Invoke(lisbethObject, null);
+							   
+							   // Log and try to exit crafting
+							   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Attempting to exit crafting state...");
+							   try 
+							   {
+								   var exitCraftingMethod = lisbethObject.GetType().GetMethod("ExitCrafting");
+								   await (Task<bool>)exitCraftingMethod.Invoke(lisbethObject, null);
+							   }
+							   catch {}
+							   
+							   // Log waiting period
+							   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Waiting 5 minutes before attempting restart...");
+							   await Task.Delay(TimeSpan.FromMinutes(5));
+							   
+							   // Log and request restart
+							   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Requesting Lisbeth to restart orders...");
+							   var restartMethod = lisbethObject.GetType().GetMethod("RequestRestart");
+							   restartMethod.Invoke(lisbethObject, new object[] { json });
+							   
+							   await executeWithRetry();
+						   }
+					   };
+
+					   await executeWithRetry();
+				   }
+				
+            }
+        }
+    ]]>
+	</CodeChunk>
 	</CodeChunks>
 </Profile>

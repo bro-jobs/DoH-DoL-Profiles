@@ -17,10 +17,12 @@
 	<WaitTimer WaitTime="5"/>
 	<UseInventoryItem ItemID="44129"/>
 	<WaitTimer WaitTime="5"/>
+	<UseInventoryItem ItemID="44130"/>
+	<WaitTimer WaitTime="5"/>
 	
 	<LogMessage Message="Master Books acquired!"/>
 	
-    <LLoadProfile Path="../Lv101.xml"/>
+    <LLoadProfile Path="Lv100.xml"/>
 </Order>
 <CodeChunks>
 

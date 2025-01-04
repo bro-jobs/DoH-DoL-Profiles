@@ -3,8 +3,14 @@
 <Name>Crafting Lv100 Gear</Name>
 <Order>
     <RunCode Name="SetLisbethJson" />
-    <LogMessage Message="Crafted Lv100 Gear!"/>
+    <LogMessage Message="Crafted Lv100 Gear! Unlocking Master Books now..."/>
     <AutoInventoryEquip/>
+
+    <!-- Buy and use master books -->
+    <RunCode Name="MasterBooks" />
+
+    <!-- Try it twice since for some reason UIState can bug out. -->
+    <RunCode Name="MasterBooks" />
 
     <RunCode Name="Logger" />
 
@@ -13,6 +19,114 @@
 	<WaitTimer WaitTime="5"/>
 </Order>
 <CodeChunks>
+<CodeChunk Name="MasterBooks">
+    <![CDATA[
+        // Settings
+        const string ChunkName = "MasterBookMiniCheck";
+        
+        // Logging setup
+        var log = new LlamaLibrary.Logging.LLogger(ChunkName, System.Windows.Media.Colors.Pink);
+        
+        // Create list to store unlockable items
+        var unlockableItems = new System.Collections.Generic.List<uint>();
+        
+        // Check which items can be unlocked (Master 11s)
+        for (uint itemId = 44123; itemId <= 44130; itemId++)
+        {
+            if (LlamaLibrary.Helpers.UIState.CanUnlockItem(itemId))
+            {
+                unlockableItems.Add(itemId);
+            }
+        }
+        
+        // If there are items to unlock, create and execute Lisbeth order
+        if (unlockableItems.Count > 0)
+        {
+            // Create order objects
+            var orders = new System.Collections.Generic.List<object>();
+            int id = 1;
+            foreach (var item in unlockableItems)
+            {
+                orders.Add(new
+                {
+                    Id = id++,
+                    Group = 1,
+                    Item = item,
+                    Amount = 1,
+                    Enabled = true,
+                    Type = "Exchange"
+                });
+            }
+            
+            // Convert to JSON
+            var json = Newtonsoft.Json.JsonConvert.SerializeObject(orders);
+            
+            // Get Lisbeth instance and execute orders
+            var lisbeth = BotManager.Bots.FirstOrDefault(c => c.Name == "Lisbeth");
+            if (lisbeth != null)
+            {
+                var lisbethObject = lisbeth.GetType().GetProperty("Lisbeth").GetValue(lisbeth);
+                if (lisbethObject != null)
+				   {
+					   Func<Task> executeWithRetry = null;
+					   executeWithRetry = async () => {
+						   try 
+						   {
+							   var orderMethod = lisbethObject.GetType().GetMethod("ExecuteOrders");
+							   await (Task<bool>)orderMethod.Invoke(lisbethObject, new object[] { json, false });
+						   }
+						   catch (Exception ex) when (
+							   ex.ToString().Contains("HttpRequestException") || 
+							   ex.ToString().Contains("No response from the server") ||
+							   ex.ToString().Contains("Max sessions reached")
+						   )
+						   {
+							   // Log and stop gently
+							   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Attempting to stop Lisbeth gently...");
+							   var stopGentlyMethod = lisbethObject.GetType().GetMethod("StopGently");
+							   await (Task)stopGentlyMethod.Invoke(lisbethObject, null);
+							   
+							   // Log and try to exit crafting
+							   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Attempting to exit crafting state...");
+							   try 
+							   {
+								   var exitCraftingMethod = lisbethObject.GetType().GetMethod("ExitCrafting");
+								   await (Task<bool>)exitCraftingMethod.Invoke(lisbethObject, null);
+							   }
+							   catch {}
+							   
+							   // Log waiting period
+							   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Waiting 5 minutes before attempting restart...");
+							   await Task.Delay(TimeSpan.FromMinutes(5));
+							   
+							   // Log and request restart
+							   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Requesting Lisbeth to restart orders...");
+							   var restartMethod = lisbethObject.GetType().GetMethod("RequestRestart");
+							   restartMethod.Invoke(lisbethObject, new object[] { json });
+							   
+							   await executeWithRetry();
+						   }
+					   };
+
+					   await executeWithRetry();
+				   }
+				var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+				var profileDir = Path.GetDirectoryName(profilePath);
+				var autoCraftPath = Path.Combine(profileDir, $"Autocraft/MasterBooksXI.xml");
+				if (File.Exists(autoCraftPath))
+				{
+					await Coroutine.Sleep(500);
+					ff14bot.NeoProfiles.NeoProfileManager.Load(autoCraftPath);
+					await Coroutine.Sleep(1000);
+				}
+            }
+        }
+        else
+        {
+            log.Information("Master Books already acquired.");
+        }
+    ]]>
+</CodeChunk>
 <CodeChunk Name="SetLisbethJson">
 <![CDATA[
     // Try to get profile path and construct relative path from there
