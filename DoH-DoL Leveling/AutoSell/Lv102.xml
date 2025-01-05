@@ -245,7 +245,6 @@
 	<WaitTimer WaitTime="5"/>
 	<RunCode Name="Logger" />
 	<WaitTimer WaitTime="5"/>
-    <LLoadProfile Path="../Lv101.xml"/>
 </Order>
 <CodeChunks>
 <CodeChunk Name="Logger">
@@ -256,7 +255,7 @@
             string settingsPath = Path.Combine(workingDirectory, "Settings");
             string logFilePath = Path.Combine(settingsPath, $"autosell.txt");
             
-            File.AppendAllText(logFilePath, "sell101" + Environment.NewLine);
+            File.AppendAllText(logFilePath, "sell102" + Environment.NewLine);
         }
         catch (Exception ex)
         {
