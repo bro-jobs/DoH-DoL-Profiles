@@ -54,7 +54,8 @@
                     Item = item,
                     Amount = 1,
                     Enabled = true,
-                    Type = "Exchange"
+                    Type = "Exchange",
+                    AmountMode = "Restock"
                 });
             }
             

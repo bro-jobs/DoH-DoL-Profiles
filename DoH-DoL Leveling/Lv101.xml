@@ -11,6 +11,7 @@
     <RunCode Name="DTFolklore" />
 
 	<!-- Use folklore books... -->
+	<WaitTimer WaitTime="5"/>
 	<UseInventoryItem ItemID="43878"/>
 	<WaitTimer WaitTime="5"/>
 	<UseInventoryItem ItemID="43879"/>
