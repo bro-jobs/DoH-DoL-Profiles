@@ -105,7 +105,11 @@
 	<If Condition="not IsQuestCompleted(67974)">
 	<LLoadProfile Path="../Quests/Alchemist Class Quests.xml"/>
 	</If>
-	
+
+	<!-- Sell off quest rewards to make some space... -->
+	<LLSellItem ItemIds="2471, 2485, 2473, 2475, 2489, 2477, 11939, 11896, 11897, 19523, 19533, 2497, 2511, 2499, 2501, 2515, 2503, 11943, 11900, 11901, 19524, 19534" Armory="true" />
+	<LLDiscardItem ItemIds="2480, 2506" />
+
 	<If Condition="not IsQuestCompleted(68142)">
 	<LLoadProfile Path="../Quests/Culinarian Class Quests.xml"/>
 	</If>
