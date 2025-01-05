@@ -22,7 +22,7 @@ Angles24
 		<!-- Level 95-96 -->
 		<If Condition="Core.Player.ClassLevel &lt; 96">
 			<LogMessage Message="Starting the Grind to Level 96."/>
-			<Lisbeth Json="[{'Group':0, 'Item':44026, 'Amount':15, 'Enabled':true, 'Type':'Gather', 'Manual':26553, 'ConditionalLevel':96, 'ConditionalJob':'Botanist'}]"/> <!-- Sarcenet -->
+			<Lisbeth Json="[{'Group':0, 'Item':44017, 'Amount':15, 'Enabled':true, 'Type':'Gather', 'Manual':26553, 'ConditionalLevel':96, 'ConditionalJob':'Botanist'}]"/> <!-- Sarcenet -->
 		</If>
 		<If Condition="Core.Player.ClassLevel == 96">
 			<LogMessage Message="Congrats on Level 96, moving on."/>
@@ -35,7 +35,7 @@ Angles24
 		<!-- Level 96-97 -->
 		<If Condition="Core.Player.ClassLevel &lt; 97">
 			<LogMessage Message="Starting the Grind to Level 97."/>
-			<Lisbeth Json="[{'Group':0, 'Item':43988, 'Amount':15, 'Enabled':true, 'Type':'Gather', 'Manual':26553, 'ConditionalLevel':97, 'ConditionalJob':'Botanist'}]"/> <!-- Turali Pineapple -->
+			<Lisbeth Json="[{'Group':0, 'Item':44018, 'Amount':15, 'Enabled':true, 'Type':'Gather', 'Manual':26553, 'ConditionalLevel':97, 'ConditionalJob':'Botanist'}]"/> <!-- Turali Pineapple -->
 		</If>
 		<If Condition="Core.Player.ClassLevel == 97">
 			<LogMessage Message="Congrats on Level 97, moving on."/>
@@ -48,7 +48,7 @@ Angles24
 		<!-- Level 97-98 -->
 		<If Condition="Core.Player.ClassLevel &lt; 98">
 			<LogMessage Message="Starting the Grind to Level 98."/>
-			<Lisbeth Json="[{'Group':0, 'Item':43980, 'Amount':15, 'Enabled':true, 'Type':'Gather', 'Manual':26553, 'ConditionalLevel':98, 'ConditionalJob':'Botanist'}]"/> <!-- Shaaloani Oilseeds -->
+			<Lisbeth Json="[{'Group':0, 'Item':44018, 'Amount':15, 'Enabled':true, 'Type':'Gather', 'Manual':26553, 'ConditionalLevel':98, 'ConditionalJob':'Botanist'}]"/> <!-- Shaaloani Oilseeds -->
 		</If>
 		<If Condition="Core.Player.ClassLevel == 98">
 			<LogMessage Message="Congrats on Level 98, moving on."/>
@@ -61,7 +61,8 @@ Angles24
 		<!-- Level 98-99 -->
 		<If Condition="Core.Player.ClassLevel &lt; 99">
 			<LogMessage Message="Starting the Grind to Level 99."/>
-			<Lisbeth Json="[{'Group':0, 'Item':44016, 'Amount':15, 'Enabled':true, 'Type':'Gather', 'Manual':26553, 'ConditionalLevel':99, 'ConditionalJob':'Botanist'}]"/> <!-- Dark Mahogany Log -->
+			<!-- Levinsilk -->
+			<Lisbeth Json="[{'Group':0, 'Item':44028, 'Amount':15, 'Enabled':true, 'Type':'Gather', 'Manual':26553, 'ConditionalLevel':99, 'ConditionalJob':'Botanist'}]"/> <!-- Dark Mahogany Log -->
 		</If>
 		<If Condition="Core.Player.ClassLevel == 99">
 			<LogMessage Message="Congrats on Level 99, moving on."/>
@@ -74,7 +75,8 @@ Angles24
 		<!-- Level 99-100 -->
 		<If Condition="Core.Player.ClassLevel &lt; 100">
 			<LogMessage Message="Starting the Grind to Level 100."/>
-			<Lisbeth Json="[{'Group':0, 'Item':44052, 'Amount':15, 'Enabled':true, 'Type':'Gather', 'Manual':26553, 'ConditionalLevel':100, 'ConditionalJob':'Botanist'},{'Group':0, 'Item':44017, 'Amount':15, 'Enabled':true, 'Type':'Gather', 'Manual':26553, 'ConditionalLevel':100, 'ConditionalJob':'Botanist'}]"/> <!-- Acacia Bark, Acacia Log -->
+			<!-- Claro Walnut Log -->
+			<Lisbeth Json="[{'Group':0, 'Item':44018, 'Amount':15, 'Enabled':true, 'Type':'Gather', 'Manual':26553, 'ConditionalLevel':100, 'ConditionalJob':'Botanist'},{'Group':0, 'Item':44017, 'Amount':15, 'Enabled':true, 'Type':'Gather', 'Manual':26553, 'ConditionalLevel':100, 'ConditionalJob':'Botanist'}]"/> <!-- Acacia Bark, Acacia Log -->
 		</If>
 		<If Condition="Core.Player.ClassLevel == 100">
 			<LogMessage Message="Congrats on Level 100, moving on."/>
