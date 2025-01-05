@@ -13,20 +13,45 @@
 	
 	<!-- Gatherer gear -->
 	
+	<While Condition="not HasItem(31780)">
 	<BuyInclusionShopItem ItemId="31780" Count="1"/>
+	</While>
+	<While Condition="not HasItem(31781)">
 	<BuyInclusionShopItem ItemId="31781" Count="1"/>
+	</While>
+	<While Condition="not HasItem(31791)">
 	<BuyInclusionShopItem ItemId="31791" Count="1"/>
+	</While>
+	<While Condition="not HasItem(31792)">
 	<BuyInclusionShopItem ItemId="31792" Count="1"/>
+	</While>
+	<While Condition="not HasItem(31798)">
 	<BuyInclusionShopItem ItemId="31798" Count="1"/>
+	</While>
+	<While Condition="not HasItem(31799)">
 	<BuyInclusionShopItem ItemId="31799" Count="1"/>
+	</While>
+	<While Condition="not HasItem(31800)">
 	<BuyInclusionShopItem ItemId="31800" Count="1"/>
+	</While>
+	<While Condition="not HasItem(31801)">
 	<BuyInclusionShopItem ItemId="31801" Count="1"/>
+	</While>
+	<While Condition="not HasItem(31802)">
 	<BuyInclusionShopItem ItemId="31802" Count="1"/>
+	</While>
+	<While Condition="not HasItem(31809)">
 	<BuyInclusionShopItem ItemId="31809" Count="1"/>
+	</While>
+	<While Condition="not HasItem(31810)">
 	<BuyInclusionShopItem ItemId="31810" Count="1"/>
+	</While>
+	<While Condition="not HasItem(31811)">
 	<BuyInclusionShopItem ItemId="31811" Count="1"/>
+	</While>
+	<While Condition="not NqHasAtLeast(31812, 2)">
 	<BuyInclusionShopItem ItemId="31812" Count="1"/>
-	<BuyInclusionShopItem ItemId="31812" Count="1"/>
+	</While>
 
     <LogMessage Message="Crafted Lv80 Gear!"/>
     <AutoInventoryEquip/>

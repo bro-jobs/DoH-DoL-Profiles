@@ -27,52 +27,126 @@
 		
         <!-- Round 1 -->
         <!-- Buy what we can with first batch -->
-		<BuyInclusionShopItem ItemId="23189" Count="1"/>
+		<While Condition="not HasItem(23189)">
+			<BuyInclusionShopItem ItemId="23189" Count="1"/>
+		</While>
+		<While Condition="not HasItem(23190)">
 		<BuyInclusionShopItem ItemId="23190" Count="1"/>
+		</While>
+		<While Condition="not HasItem(23191)">
 		<BuyInclusionShopItem ItemId="23191" Count="1"/>
+		</While>
+		<While Condition="not HasItem(23192)">
 		<BuyInclusionShopItem ItemId="23192" Count="1"/>
+		</While>
+		<While Condition="not HasItem(23193)">
 		<BuyInclusionShopItem ItemId="23193" Count="1"/>
+		</While>
+		<While Condition="not HasItem(23194)">
 		<BuyInclusionShopItem ItemId="23194" Count="1"/>
+		</While>
+		<While Condition="not HasItem(23195)">
 		<BuyInclusionShopItem ItemId="23195" Count="1"/>
+		</While>
+		<While Condition="not HasItem(23196)">
 		<BuyInclusionShopItem ItemId="23196" Count="1"/>
+		</While>
 
-        <!-- Round 2 -->
-        <Lisbeth Json="[{}]"/>
-
-        <!-- Buy what we can with second batch -->
+		<!-- Round 2 -->
+		<Lisbeth Json="[{}]"/>
+		<!-- Buy what we can with second batch -->
+		<While Condition="not HasItem(23076)">
 		<BuyInclusionShopItem ItemId="23076" Count="1"/>
+		</While>
+		<While Condition="not HasItem(23077)">
 		<BuyInclusionShopItem ItemId="23077" Count="1"/>
+		</While>
+		<While Condition="not HasItem(23078)">
 		<BuyInclusionShopItem ItemId="23078" Count="1"/>
+		</While>
+		<While Condition="not HasItem(23079)">
 		<BuyInclusionShopItem ItemId="23079" Count="1"/>
+		</While>
+		<While Condition="not HasItem(23080)">
 		<BuyInclusionShopItem ItemId="23080" Count="1"/>
+		</While>
+		<While Condition="not HasItem(23081)">
 		<BuyInclusionShopItem ItemId="23081" Count="1"/>
+		</While>
+		<While Condition="not HasItem(23082)">
 		<BuyInclusionShopItem ItemId="23082" Count="1"/>
+		</While>
+		<While Condition="not HasItem(23083)">
 		<BuyInclusionShopItem ItemId="23083" Count="1"/>
+		</While>
+		<While Condition="not HasItem(23087)">
 		<BuyInclusionShopItem ItemId="23087" Count="1"/>
+		</While>
+		<While Condition="not HasItem(23088)">
 		<BuyInclusionShopItem ItemId="23088" Count="1"/>
+		</While>
+		<While Condition="not HasItem(23089)">
 		<BuyInclusionShopItem ItemId="23089" Count="1"/>
+		</While>
+		<While Condition="not HasItem(23090)">
 		<BuyInclusionShopItem ItemId="23090" Count="1"/>
+		</While>
+		<While Condition="not HasItem(23091)">
 		<BuyInclusionShopItem ItemId="23091" Count="1"/>
+		</While>
+		<While Condition="not HasItem(23200)">
 		<BuyInclusionShopItem ItemId="23200" Count="1"/>
+		</While>
+		<While Condition="not HasItem(23201)">
 		<BuyInclusionShopItem ItemId="23201" Count="1"/>
+		</While>
+		<While Condition="not HasItem(23202)">
 		<BuyInclusionShopItem ItemId="23202" Count="1"/>
-		<BuyInclusionShopItem ItemId="23203" Count="2"/>
-		
+		</While>
+		<While Condition="not NqHasAtLeast(23203, 2)">
+		<BuyInclusionShopItem ItemId="23203" Count="1"/>
+		</While>
+
 		<!-- Gatherer gear -->
-		
-        <BuyInclusionShopItem ItemId="23084" Count="1"/>
-        <BuyInclusionShopItem ItemId="23085" Count="1"/>
-        <BuyInclusionShopItem ItemId="23197" Count="1"/>
-        <BuyInclusionShopItem ItemId="23198" Count="1"/>
-        <BuyInclusionShopItem ItemId="23092" Count="1"/>
-        <BuyInclusionShopItem ItemId="23093" Count="1"/>
-        <BuyInclusionShopItem ItemId="23094" Count="1"/>
-        <BuyInclusionShopItem ItemId="23095" Count="1"/>
-        <BuyInclusionShopItem ItemId="23096" Count="1"/>
-        <BuyInclusionShopItem ItemId="23205" Count="1"/>
-        <BuyInclusionShopItem ItemId="23206" Count="1"/>
-        <BuyInclusionShopItem ItemId="23207" Count="1"/>
-        <BuyInclusionShopItem ItemId="23208" Count="2"/>
+		<While Condition="not HasItem(23084)">
+		<BuyInclusionShopItem ItemId="23084" Count="1"/>
+		</While>
+		<While Condition="not HasItem(23085)">
+		<BuyInclusionShopItem ItemId="23085" Count="1"/>
+		</While>
+		<While Condition="not HasItem(23197)">
+		<BuyInclusionShopItem ItemId="23197" Count="1"/>
+		</While>
+		<While Condition="not HasItem(23198)">
+		<BuyInclusionShopItem ItemId="23198" Count="1"/>
+		</While>
+		<While Condition="not HasItem(23092)">
+		<BuyInclusionShopItem ItemId="23092" Count="1"/>
+		</While>
+		<While Condition="not HasItem(23093)">
+		<BuyInclusionShopItem ItemId="23093" Count="1"/>
+		</While>
+		<While Condition="not HasItem(23094)">
+		<BuyInclusionShopItem ItemId="23094" Count="1"/>
+		</While>
+		<While Condition="not HasItem(23095)">
+		<BuyInclusionShopItem ItemId="23095" Count="1"/>
+		</While>
+		<While Condition="not HasItem(23096)">
+		<BuyInclusionShopItem ItemId="23096" Count="1"/>
+		</While>
+		<While Condition="not HasItem(23205)">
+		<BuyInclusionShopItem ItemId="23205" Count="1"/>
+		</While>
+		<While Condition="not HasItem(23206)">
+		<BuyInclusionShopItem ItemId="23206" Count="1"/>
+		</While>
+		<While Condition="not HasItem(23207)">
+		<BuyInclusionShopItem ItemId="23207" Count="1"/>
+		</While>
+		<While Condition="not NqHasAtLeast(23208, 2)">
+		<BuyInclusionShopItem ItemId="23208" Count="1"/>
+		</While>
 
     <LogMessage Message="Crafted Lv70 Gear!"/>
     <AutoInventoryEquip/>
