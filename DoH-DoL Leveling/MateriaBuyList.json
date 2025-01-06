@@ -1,0 +1,42 @@
+[
+  {
+    "BuyAmount": 192,
+    "Enabled": true,
+    "HQ": true,
+    "ItemId": 41780,
+    "MaxPrice": 23000,
+    "NQ": true
+  },
+  {
+    "BuyAmount": 568,
+    "Enabled": true,
+    "HQ": true,
+    "ItemId": 41767,
+    "MaxPrice": 7500,
+    "NQ": true
+  },
+  {
+    "BuyAmount": 474,
+    "Enabled": true,
+    "HQ": true,
+    "ItemId": 41766,
+    "MaxPrice": 4500,
+    "NQ": true
+  },
+  {
+    "BuyAmount": 43,
+    "Enabled": true,
+    "HQ": true,
+    "ItemId": 41778,
+    "MaxPrice": 9500,
+    "NQ": true
+  },
+  {
+    "BuyAmount": 183,
+    "Enabled": true,
+    "HQ": true,
+    "ItemId": 41765,
+    "MaxPrice": 7500,
+    "NQ": true
+  }
+]

@@ -2,13 +2,13 @@
 <Profile>
 <Name>Crafting Lv90 Gear</Name>
 <Order>
-
+<RunCode Name="SwitchCombatJob"/>
 	<GetTo ZoneId="886" XYZ="-7.472548, -16, 162.5581"/>
     <!-- Buy Command VII materia from Firmament Scrip Exchange -->
     <BuyShopExchangeCurrency NpcId="1031680" ItemId="25195" Count="99" SelectString="2"/>
 
 	<!-- Craft Lv80 Gear -->
-	
+	<RunCode Name="SwitchCombatJob"/>
 	<Lisbeth Json="[{'Id':1,'Group':1,'Item':33914,'Amount':2600,'Enabled':true,'Type':'GatherMasterpiece','AmountMode':'Restock'}]"/>
 	
 	<!-- Gatherer gear -->
@@ -28,7 +28,7 @@
 	<BuyInclusionShopItem ItemId="39863" Count="1"/>
 	<BuyInclusionShopItem ItemId="39863" Count="1"/>
 
-    <LogMessage Message="Crafted Lv80 Gear!"/>
+    <LogMessage Message="Crafted Lv90 Gear!"/>
     <AutoInventoryEquip/>
     <WaitTimer WaitTime="5"/>
 	<RunCode Name="Logger" />
@@ -36,6 +36,18 @@
     <LLoadProfile Path="../Start.xml"/>
 </Order>
 <CodeChunks>
+<CodeChunk Name="SwitchCombatJob">
+            <![CDATA[ 
+            var Combat = Enumerable.Range(8, 11).Append(0).Append(36);
+            var gearSets = GearsetManager.GearSets.Where(i => i.InUse && !Combat.Contains((int)i.Class)).ToList().OrderByDescending(i=> i.Gear.First().Item.ItemLevel);
+
+            if (gearSets.Any())
+            {
+                gearSets.First().Activate();
+                await Coroutine.Sleep(2000);
+            }
+            ]]>
+        </CodeChunk>
 <CodeChunk Name="SetLisbethJson">
 <![CDATA[
     // Try to get profile path and construct relative path from there
