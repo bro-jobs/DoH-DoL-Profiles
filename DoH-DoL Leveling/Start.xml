@@ -918,95 +918,9 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 			</If>
 		</If>
 		
-		<!-- To LV100 -->
-		<If Condition="(Core.Me.Levels[ClassJobType.Weaver] &lt; 100) or (Core.Me.Levels[ClassJobType.Leatherworker] &lt; 100)">
+		<!-- Crafters to LV100 -->
+		<If Condition="(Core.Me.Levels[ClassJobType.Carpenter] &lt; 100) or (Core.Me.Levels[ClassJobType.Blacksmith] &lt; 100) or (Core.Me.Levels[ClassJobType.Armorer] &lt; 100) or (Core.Me.Levels[ClassJobType.Goldsmith] &lt; 100) or (Core.Me.Levels[ClassJobType.Weaver] &lt; 100) or (Core.Me.Levels[ClassJobType.Alchemist] &lt; 100) or (Core.Me.Levels[ClassJobType.Culinarian] &lt; 100) or (Core.Me.Levels[ClassJobType.Leatherworker] &lt; 100)">
 			<LLoadProfile Path="Crafting/90-100.xml" />
-		</If>
-
-		
-		
-		<!-- Crafters to 94 -->
-		<If Condition="&crp; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 94">
-				<LLoadProfile Path="Crafting/90-94 Carpenter.xml"/>
-			</If>
-		</If>
-		<If Condition="&bsm; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 94">
-				<LLoadProfile Path="Crafting/90-94 Blacksmith.xml"/>
-			</If>
-		</If>
-		<If Condition="&arm; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 94">
-				<LLoadProfile Path="Crafting/90-94 Armorer.xml"/>
-			</If>
-		</If>
-		<If Condition="&gsm; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 94">
-				<LLoadProfile Path="Crafting/90-94 Goldsmith.xml"/>
-			</If>
-		</If>
-		<If Condition="&ltw; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 94">
-				<LLoadProfile Path="Crafting/90-94 Leatherworker.xml"/>
-			</If>
-		</If>
-		<If Condition="&wvr; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 94">
-				<LLoadProfile Path="Crafting/90-94 Weaver.xml"/>
-			</If>
-		</If>
-		<If Condition="&alc; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 94">
-				<LLoadProfile Path="Crafting/90-94 Alchemist.xml"/>
-			</If>
-		</If>
-		<If Condition="&cul; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 94">
-				<LLoadProfile Path="Crafting/90-94 Culinarian.xml"/>
-			</If>
-		</If>
-		
-		<!-- Crafters to 100 -->
-		<If Condition="&crp; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Carpenter] &lt; 100">
-				<LLoadProfile Path="Crafting/94-100 Carpenter.xml"/>
-			</If>
-		</If>
-		<If Condition="&bsm; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Blacksmith] &lt; 100">
-				<LLoadProfile Path="Crafting/94-100 Blacksmith.xml"/>
-			</If>
-		</If>
-		<If Condition="&arm; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Armorer] &lt; 100">
-				<LLoadProfile Path="Crafting/94-100 Armorer.xml"/>
-			</If>
-		</If>
-		<If Condition="&gsm; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Goldsmith] &lt; 100">
-				<LLoadProfile Path="Crafting/94-100 Goldsmith.xml"/>
-			</If>
-		</If>
-		<If Condition="&ltw; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Leatherworker] &lt; 100">
-				<LLoadProfile Path="Crafting/94-100 Leatherworker.xml"/>
-			</If>
-		</If>
-		<If Condition="&wvr; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Weaver] &lt; 100">
-				<LLoadProfile Path="Crafting/94-100 Weaver.xml"/>
-			</If>
-		</If>
-		<If Condition="&alc; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Alchemist] &lt; 100">
-				<LLoadProfile Path="Crafting/94-100 Alchemist.xml"/>
-			</If>
-		</If>
-		<If Condition="&cul; == 1">
-			<If Condition="Core.Me.Levels[ClassJobType.Culinarian] &lt; 100">
-				<LLoadProfile Path="Crafting/94-100 Culinarian.xml"/>
-			</If>
 		</If>
 		
 		<!-- Gatherers to 100 -->

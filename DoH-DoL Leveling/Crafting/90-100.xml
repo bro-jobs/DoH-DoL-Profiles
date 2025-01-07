@@ -20,14 +20,14 @@ Authors:  Kayla / Angles24
 	</While>
 	
 	<!-- STRATEGY -->
-	<!-- CRP: Lv91 collectable to Lv92, Lv93 collectable to Lv96, Lv97 collectable to Lv98, Lv99 collectable to Lv100 -->
-	<!-- BSM: Lv91 collectable to Lv92, Lv93 collectable to Lv94, Lv95 collectable to Lv98, Lv99 collectable to Lv100 -->
-	<!-- ARM: Lv91 collectable to Lv92, Lv93 collectable to Lv94, Lv95 collectable to Lv100 -->
-	<!-- GSM: Lv90 leve (lv91 craft) to Lv92 [5], Lv93 collectable to Lv94, Lv95 collectable to Lv96, Lv97 collectable to Lv100 -->
-	<!-- LTW: Lv91 collectable to Lv92, Lv93 collectable to Lv94, Lv95 collectable to lv96, lv96 leve (lv97 craft) to lv98 [5], lv98 leve (lv99 craft) to lv100  -->
-	<!-- WVR: Lv90 leve (lv91 craft) to Lv92 [5], Lv92 leve (lv93 craft) to Lv94 [5], Lv94 leve (lv95 craft) to Lv96 [5], lv96 leve (lv97 craft) to lv98 [5], lv98 leve (lv99 craft) to lv100 -->
-	<!-- ALC: Lv90 leve (lv91 craft) to Lv92 [5], Lv92 leve (lv93 craft) to Lv94 [5], Lv94 leve (lv95 craft) to Lv96 [5], lv97 collectable to lv100 -->
-	<!-- CUL: Lv91 collectable to Lv92, Lv93 collectable to Lv98, Lv99 collectable to lv100 -->
+	<!-- CRP: Lv91 collectable to Lv92, Lv93 collectable to Lv96, Lv97 collectable to Lv98, Lv98 collectable to Lv99.3, Lv100 gear to Lv100 -->
+	<!-- BSM: Lv91 collectable to Lv92, Lv93 collectable to Lv94, Lv95 collectable to Lv98, Lv99 collectable to Lv99.5 -->
+	<!-- ARM: Lv91 collectable to Lv92, Lv93 collectable to Lv94, Lv95 collectable to Lv98.5, Ra'kaznar Ingot to Lv100 -->
+	<!-- GSM: Lv90 leve (lv91 craft) to Lv92 [5], Lv93 collectable to Lv94, Lv95 collectable to Lv96, Lv97 collectable to Lv99, Lv100 gear to Lv100 -->
+	<!-- LTW: Lv91 collectable to Lv92, Lv93 collectable to Lv94, Lv95 collectable to lv96, lv96 leve (lv97 craft) to lv98 [5], lv98 leve (lv99 craft) to lv99.7 [4], Lv100 gear to Lv100  -->
+	<!-- WVR: Lv90 leve (lv91 craft) to Lv92 [5], Lv92 leve (lv93 craft) to Lv94 [5], Lv94 leve (lv95 craft) to Lv96 [5], lv96 leve (lv97 craft) to lv98 [5], lv98 leve (lv99 craft) to lv99.5 [4], Lv100 gear to Lv100 -->
+	<!-- ALC: Lv90 leve (lv91 craft) to Lv92 [5], Lv92 leve (lv93 craft) to Lv94 [5], Lv94 leve (lv95 craft) to Lv95 [5], lv97 collectable to lv99.2, lv100 gear to Lv100 -->
+	<!-- CUL: Lv91 collectable to Lv92, Lv93 collectable to Lv98, Lv99 collectable to lv99.5 -->
 	
 	<!-- Total leve allowances used: 51 -->
 	
@@ -640,8 +640,8 @@ Authors:  Kayla / Angles24
 		</While>
 	</While>
 
-    <!-- ARM to Lv100 -->
-	<While Condition="(Core.Me.Levels[ClassJobType.Armorer] &gt; 93) and  (Core.Me.Levels[ClassJobType.Armorer] &lt; 100)">
+    <!-- ARM to Lv98.5 -->
+	<While Condition="(Core.Me.Levels[ClassJobType.Armorer] &gt; 93) and  (Core.Me.Levels[ClassJobType.Armorer] &lt; 98)">
 		<If Condition="ClassName != ClassJobType.Armorer">
 			<ChangeClass Job="Armorer"/>
 		</If>
@@ -672,8 +672,40 @@ Authors:  Kayla / Angles24
 		</While>
 	</While>
 
-    <!-- CUL to Lv100 -->
-	<While Condition="(Core.Me.Levels[ClassJobType.Culinarian] &gt; 97) and  (Core.Me.Levels[ClassJobType.Culinarian] &lt; 100)">
+	<!-- ARM to Lv100 -->
+	<If Condition="(Core.Me.Levels[ClassJobType.Armorer] &gt; 97) and  (Core.Me.Levels[ClassJobType.Armorer] &lt; 100)">
+		<If Condition="ClassName != ClassJobType.Armorer">
+			<ChangeClass Job="Armorer"/>
+		</If>
+		<If Condition="ClassName == ClassJobType.Armorer">
+			<AutoInventoryEquip/>
+			<WaitTimer WaitTime="5"/>
+			<Lisbeth Json="[{{'Group':1,'Item':44001,'Amount':46,'Enabled':true,'Type':'Armorer','AmountMode':'Restock'}}]" />
+		</If>
+	</If>
+	<!-- Check to see if have collectables -->
+	<While Condition="HasRarefiedItem() &gt; 0">
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
+		<LLTurnInCollectables/>
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
+	</While>
+
+    <!-- CUL to Lv99.5 -->
+	<While Condition="(Core.Me.Levels[ClassJobType.Culinarian] &gt; 97) and  (Core.Me.Levels[ClassJobType.Culinarian] &lt; 99)">
 		<If Condition="ClassName != ClassJobType.Culinarian">
 			<ChangeClass Job="Culinarian"/>
 		</If>
@@ -736,8 +768,8 @@ Authors:  Kayla / Angles24
 		</While>
 	</While>
 
-    <!-- ALC to Lv96 -->
-	<While Condition="(Core.Me.Levels[ClassJobType.Alchemist] &gt; 93) and  (Core.Me.Levels[ClassJobType.Alchemist] &lt; 96)">
+    <!-- ALC to Lv95 -->
+	<While Condition="(Core.Me.Levels[ClassJobType.Alchemist] &gt; 93) and  (Core.Me.Levels[ClassJobType.Alchemist] &lt; 95)">
 		<If Condition="ClassName != ClassJobType.Alchemist">
 			<ChangeClass Job="Alchemist"/>
 		</If>
@@ -745,6 +777,38 @@ Authors:  Kayla / Angles24
 			<AutoInventoryEquip/>
 			<WaitTimer WaitTime="5"/>
 			<RunCode Name="SetLisbethJsonALC94" />
+		</If>
+	</While>
+	<!-- Check to see if have collectables -->
+	<While Condition="HasRarefiedItem() &gt; 0">
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
+		<LLTurnInCollectables/>
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
+	</While>
+
+	<!-- ALC to Lv96 -->
+	<While Condition="(Core.Me.Levels[ClassJobType.Alchemist] &gt; 94) and  (Core.Me.Levels[ClassJobType.Alchemist] &lt; 96)">
+		<If Condition="ClassName != ClassJobType.Alchemist">
+			<ChangeClass Job="Alchemist"/>
+		</If>
+		<If Condition="ClassName == ClassJobType.Alchemist">
+			<AutoInventoryEquip/>
+			<WaitTimer WaitTime="5"/>
+			<RunCode Name="SetLisbethJsonALC95" />
 		</If>
 	</While>
 	<!-- Check to see if have collectables -->
@@ -832,72 +896,8 @@ Authors:  Kayla / Angles24
 		</While>
 	</While>
 
-    <!-- BSM to Lv100 -->
-	<While Condition="(Core.Me.Levels[ClassJobType.Blacksmith] &gt; 97) and  (Core.Me.Levels[ClassJobType.Blacksmith] &lt; 100)">
-		<If Condition="ClassName != ClassJobType.Blacksmith">
-			<ChangeClass Job="Blacksmith"/>
-		</If>
-		<If Condition="ClassName == ClassJobType.Blacksmith">
-			<AutoInventoryEquip/>
-			<WaitTimer WaitTime="5"/>
-			<RunCode Name="SetLisbethJsonBSM98" />
-		</If>
-	</While>
-	<!-- Check to see if have collectables -->
-	<While Condition="HasRarefiedItem() &gt; 0">
-		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
-			<!-- Check if we need more commercial engineering manuals -->
-			<If Condition="ItemCount(12667) &lt; 10">
-				<BuyInclusionShopItem ItemId="12667" Count="10"/>
-			</If>
-			<!-- 33926 = Cunning IX. Used for tool melds -->
-			<BuyInclusionShopItem ItemId="41767" Count="0"/>
-		</While>
-		<LLTurnInCollectables/>
-		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
-			<!-- Check if we need more commercial engineering manuals -->
-			<If Condition="ItemCount(12667) &lt; 10">
-				<BuyInclusionShopItem ItemId="12667" Count="10"/>
-			</If>
-			<!-- 33926 = Cunning IX. Used for tool melds -->
-			<BuyInclusionShopItem ItemId="41767" Count="0"/>
-		</While>
-	</While>
-
-    <!-- CRP to Lv100 -->
-	<While Condition="(Core.Me.Levels[ClassJobType.Carpenter] &gt; 97) and  (Core.Me.Levels[ClassJobType.Carpenter] &lt; 100)">
-		<If Condition="ClassName != ClassJobType.Carpenter">
-			<ChangeClass Job="Carpenter"/>
-		</If>
-		<If Condition="ClassName == ClassJobType.Carpenter">
-			<AutoInventoryEquip/>
-			<WaitTimer WaitTime="5"/>
-			<RunCode Name="SetLisbethJsonCRP98" />
-		</If>
-	</While>
-	<!-- Check to see if have collectables -->
-	<While Condition="HasRarefiedItem() &gt; 0">
-		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
-			<!-- Check if we need more commercial engineering manuals -->
-			<If Condition="ItemCount(12667) &lt; 10">
-				<BuyInclusionShopItem ItemId="12667" Count="10"/>
-			</If>
-			<!-- 33926 = Cunning IX. Used for tool melds -->
-			<BuyInclusionShopItem ItemId="41767" Count="0"/>
-		</While>
-		<LLTurnInCollectables/>
-		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
-			<!-- Check if we need more commercial engineering manuals -->
-			<If Condition="ItemCount(12667) &lt; 10">
-				<BuyInclusionShopItem ItemId="12667" Count="10"/>
-			</If>
-			<!-- 33926 = Cunning IX. Used for tool melds -->
-			<BuyInclusionShopItem ItemId="41767" Count="0"/>
-		</While>
-	</While>
-
-    <!-- ALC to Lv100 -->
-	<While Condition="(Core.Me.Levels[ClassJobType.Alchemist] &gt; 95) and  (Core.Me.Levels[ClassJobType.Alchemist] &lt; 100)">
+	<!-- ALC to Lv99.5 -->
+	<While Condition="(Core.Me.Levels[ClassJobType.Alchemist] &gt; 95) and  (Core.Me.Levels[ClassJobType.Alchemist] &lt; 99)">
 		<If Condition="ClassName != ClassJobType.Alchemist">
 			<ChangeClass Job="Alchemist"/>
 		</If>
@@ -928,7 +928,7 @@ Authors:  Kayla / Angles24
 		</While>
 	</While>
 
-    <!-- LTW to Lv98 -->
+	<!-- LTW to Lv98 -->
 	<While Condition="(Core.Me.Levels[ClassJobType.Leatherworker] &gt; 95) and  (Core.Me.Levels[ClassJobType.Leatherworker] &lt; 98)">
 		<If Condition="ClassName != ClassJobType.Leatherworker">
 			<ChangeClass Job="Leatherworker"/>
@@ -960,8 +960,72 @@ Authors:  Kayla / Angles24
 		</While>
 	</While>
 
-    <!-- GSM to Lv100 -->
-	<While Condition="(Core.Me.Levels[ClassJobType.Goldsmith] &gt; 95) and  (Core.Me.Levels[ClassJobType.Goldsmith] &lt; 100)">
+    <!-- BSM to Lv99.5 -->
+	<While Condition="(Core.Me.Levels[ClassJobType.Blacksmith] &gt; 97) and  (Core.Me.Levels[ClassJobType.Blacksmith] &lt; 99)">
+		<If Condition="ClassName != ClassJobType.Blacksmith">
+			<ChangeClass Job="Blacksmith"/>
+		</If>
+		<If Condition="ClassName == ClassJobType.Blacksmith">
+			<AutoInventoryEquip/>
+			<WaitTimer WaitTime="5"/>
+			<RunCode Name="SetLisbethJsonBSM98" />
+		</If>
+	</While>
+	<!-- Check to see if have collectables -->
+	<While Condition="HasRarefiedItem() &gt; 0">
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
+		<LLTurnInCollectables/>
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
+	</While>
+
+	<!-- CRP to Lv99 -->
+	<If Condition="(Core.Me.Levels[ClassJobType.Carpenter] &gt; 97) and  (Core.Me.Levels[ClassJobType.Carpenter] &lt; 99)">
+		<If Condition="ClassName != ClassJobType.Carpenter">
+			<ChangeClass Job="Carpenter"/>
+		</If>
+		<If Condition="ClassName == ClassJobType.Carpenter">
+			<AutoInventoryEquip/>
+			<WaitTimer WaitTime="5"/>
+			<RunCode Name="SetLisbethJsonCRP98" />
+		</If>
+	</If>
+	<!-- Check to see if have collectables -->
+	<While Condition="HasRarefiedItem() &gt; 0">
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
+		<LLTurnInCollectables/>
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
+	</While>
+
+    <!-- GSM to Lv99 -->
+	<While Condition="(Core.Me.Levels[ClassJobType.Goldsmith] &gt; 95) and  (Core.Me.Levels[ClassJobType.Goldsmith] &lt; 99)">
 		<If Condition="ClassName != ClassJobType.Goldsmith">
 			<ChangeClass Job="Goldsmith"/>
 		</If>
@@ -992,8 +1056,8 @@ Authors:  Kayla / Angles24
 		</While>
 	</While>
 
-    <!-- LTW to Lv100 -->
-	<While Condition="(Core.Me.Levels[ClassJobType.Leatherworker] &gt; 97) and  (Core.Me.Levels[ClassJobType.Leatherworker] &lt; 100)">
+    <!-- LTW to Lv99.7 -->
+	<While Condition="(Core.Me.Levels[ClassJobType.Leatherworker] &gt; 97) and  (Core.Me.Levels[ClassJobType.Leatherworker] &lt; 99)">
 		<If Condition="ClassName != ClassJobType.Leatherworker">
 			<ChangeClass Job="Leatherworker"/>
 		</If>
@@ -1024,8 +1088,8 @@ Authors:  Kayla / Angles24
 		</While>
 	</While>
 
-    <!-- WVR to Lv100 -->
-	<While Condition="(Core.Me.Levels[ClassJobType.Weaver] &gt; 97) and  (Core.Me.Levels[ClassJobType.Weaver] &lt; 100)">
+    <!-- WVR to Lv99.5 -->
+	<While Condition="(Core.Me.Levels[ClassJobType.Weaver] &gt; 97) and  (Core.Me.Levels[ClassJobType.Weaver] &lt; 99)">
 		<If Condition="ClassName != ClassJobType.Weaver">
 			<ChangeClass Job="Weaver"/>
 		</If>
@@ -1055,6 +1119,263 @@ Authors:  Kayla / Angles24
 			<BuyInclusionShopItem ItemId="41767" Count="0"/>
 		</While>
 	</While>
+
+	<!-- Craft Lv100 gear -->
+	<If Condition="(Core.Me.Levels[ClassJobType.Blacksmith] &lt; 100) or (Core.Me.Levels[ClassJobType.Armorer] &lt; 100) or (Core.Me.Levels[ClassJobType.Goldsmith] &lt; 100) or (Core.Me.Levels[ClassJobType.Leatherworker] &lt; 100) or (Core.Me.Levels[ClassJobType.Weaver] &lt; 100)">
+		<RunCode Name="autocraftcheck100" />
+	</If>
+
+	<!-- CLEANUPS, in case levels don't reach Lv100 -->
+
+	<!-- CUL to Lv100 -->
+	<While Condition="(Core.Me.Levels[ClassJobType.Culinarian] &gt; 97) and  (Core.Me.Levels[ClassJobType.Culinarian] &lt; 100)">
+		<If Condition="ClassName != ClassJobType.Culinarian">
+			<ChangeClass Job="Culinarian"/>
+		</If>
+		<If Condition="ClassName == ClassJobType.Culinarian">
+			<AutoInventoryEquip/>
+			<WaitTimer WaitTime="5"/>
+			<RunCode Name="SetLisbethJsonCUL98A" />
+		</If>
+	</While>
+	<!-- Check to see if have collectables -->
+	<While Condition="HasRarefiedItem() &gt; 0">
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
+		<LLTurnInCollectables/>
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
+	</While>
+	<!-- ALC to Lv100 -->
+	<While Condition="(Core.Me.Levels[ClassJobType.Alchemist] &gt; 95) and  (Core.Me.Levels[ClassJobType.Alchemist] &lt; 100)">
+		<If Condition="ClassName != ClassJobType.Alchemist">
+			<ChangeClass Job="Alchemist"/>
+		</If>
+		<If Condition="ClassName == ClassJobType.Alchemist">
+			<AutoInventoryEquip/>
+			<WaitTimer WaitTime="5"/>
+			<RunCode Name="SetLisbethJsonALC96A" />
+		</If>
+	</While>
+	<!-- Check to see if have collectables -->
+	<While Condition="HasRarefiedItem() &gt; 0">
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
+		<LLTurnInCollectables/>
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
+	</While>
+	<!-- ARM to Lv100 -->
+	<While Condition="(Core.Me.Levels[ClassJobType.Armorer] &gt; 93) and  (Core.Me.Levels[ClassJobType.Armorer] &lt; 100)">
+		<If Condition="ClassName != ClassJobType.Armorer">
+			<ChangeClass Job="Armorer"/>
+		</If>
+		<If Condition="ClassName == ClassJobType.Armorer">
+			<AutoInventoryEquip/>
+			<WaitTimer WaitTime="5"/>
+			<RunCode Name="SetLisbethJsonARM94A" />
+		</If>
+	</While>
+	<!-- Check to see if have collectables -->
+	<While Condition="HasRarefiedItem() &gt; 0">
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
+		<LLTurnInCollectables/>
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
+	</While>
+	<!-- CRP to Lv100 -->
+	<If Condition="(Core.Me.Levels[ClassJobType.Carpenter] &gt; 97) and  (Core.Me.Levels[ClassJobType.Carpenter] &lt; 100)">
+		<If Condition="ClassName != ClassJobType.Carpenter">
+			<ChangeClass Job="Carpenter"/>
+		</If>
+		<If Condition="ClassName == ClassJobType.Carpenter">
+			<AutoInventoryEquip/>
+			<WaitTimer WaitTime="5"/>
+			<RunCode Name="SetLisbethJsonCRP98A" />
+		</If>
+	</If>
+	<!-- Check to see if have collectables -->
+	<While Condition="HasRarefiedItem() &gt; 0">
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
+		<LLTurnInCollectables/>
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
+	</While>
+	<!-- WVR to Lv100 -->
+	<While Condition="(Core.Me.Levels[ClassJobType.Weaver] &gt; 97) and  (Core.Me.Levels[ClassJobType.Weaver] &lt; 100)">
+		<If Condition="ClassName != ClassJobType.Weaver">
+			<ChangeClass Job="Weaver"/>
+		</If>
+		<If Condition="ClassName == ClassJobType.Weaver">
+			<AutoInventoryEquip/>
+			<WaitTimer WaitTime="5"/>
+			<RunCode Name="SetLisbethJsonWVR98A" />
+		</If>
+	</While>
+	<!-- Check to see if have collectables -->
+	<While Condition="HasRarefiedItem() &gt; 0">
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
+		<LLTurnInCollectables/>
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
+	</While>
+	<!-- LTW to Lv100 -->
+	<While Condition="(Core.Me.Levels[ClassJobType.Leatherworker] &gt; 97) and  (Core.Me.Levels[ClassJobType.Leatherworker] &lt; 100)">
+		<If Condition="ClassName != ClassJobType.Leatherworker">
+			<ChangeClass Job="Leatherworker"/>
+		</If>
+		<If Condition="ClassName == ClassJobType.Leatherworker">
+			<AutoInventoryEquip/>
+			<WaitTimer WaitTime="5"/>
+			<RunCode Name="SetLisbethJsonLTW98A" />
+		</If>
+	</While>
+	<!-- Check to see if have collectables -->
+	<While Condition="HasRarefiedItem() &gt; 0">
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
+		<LLTurnInCollectables/>
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
+	</While>
+	<!-- GSM to Lv100 -->
+	<While Condition="(Core.Me.Levels[ClassJobType.Goldsmith] &gt; 95) and  (Core.Me.Levels[ClassJobType.Goldsmith] &lt; 100)">
+		<If Condition="ClassName != ClassJobType.Goldsmith">
+			<ChangeClass Job="Goldsmith"/>
+		</If>
+		<If Condition="ClassName == ClassJobType.Goldsmith">
+			<AutoInventoryEquip/>
+			<WaitTimer WaitTime="5"/>
+			<RunCode Name="SetLisbethJsonGSM96A" />
+		</If>
+	</While>
+	<!-- Check to see if have collectables -->
+	<While Condition="HasRarefiedItem() &gt; 0">
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
+		<LLTurnInCollectables/>
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
+	</While>
+	<!-- BSM to Lv100 -->
+	<While Condition="(Core.Me.Levels[ClassJobType.Blacksmith] &gt; 97) and  (Core.Me.Levels[ClassJobType.Blacksmith] &lt; 100)">
+		<If Condition="ClassName != ClassJobType.Blacksmith">
+			<ChangeClass Job="Blacksmith"/>
+		</If>
+		<If Condition="ClassName == ClassJobType.Blacksmith">
+			<AutoInventoryEquip/>
+			<WaitTimer WaitTime="5"/>
+			<RunCode Name="SetLisbethJsonBSM98A" />
+		</If>
+	</While>
+	<!-- Check to see if have collectables -->
+	<While Condition="HasRarefiedItem() &gt; 0">
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
+		<LLTurnInCollectables/>
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="41767" Count="0"/>
+		</While>
+	</While>
+	
 
 	<!-- Load Start -->
 	<LogMessage Message="Congrats on Level 100s, moving on."/>
@@ -1128,6 +1449,55 @@ Authors:  Kayla / Angles24
 		}
 	]]>
 </CodeChunk>
+<CodeChunk Type="Definition" Name="AutocraftCheck">
+		<![CDATA[
+			public static async Task<bool> CheckAutocraftLevel(int level)
+			{
+				try 
+				{
+					string workingDirectory = Directory.GetCurrentDirectory();
+					string settingsPath = Path.Combine(workingDirectory, "Settings");
+					string logFilePath = Path.Combine(settingsPath, "autocraft.txt");
+					
+					// Create the file if it doesn't exist
+					if (!File.Exists(logFilePath))
+					{
+						File.WriteAllText(logFilePath, "");
+					}
+					
+					// Read content and check for craft{level}
+					string content = File.ReadAllText(logFilePath);
+					if (content.Contains($"craft{level}"))
+					{
+						return true;
+					}
+					
+					// If we get here, we need to run the profile
+					var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+					var profileDir = Path.GetDirectoryName(profilePath);
+					var autoCraftPath = Path.Combine(profileDir, $"../Autocraft/Lv{level}.xml");
+					
+					if (File.Exists(autoCraftPath))
+					{
+						await Coroutine.Sleep(500);
+						ff14bot.NeoProfiles.NeoProfileManager.Load(autoCraftPath);
+						await Coroutine.Sleep(1000);
+					}
+					
+					return true;
+				}
+				catch
+				{
+					return true;
+				}
+			}
+		]]>
+		</CodeChunk>
+<CodeChunk Name="autocraftcheck100">
+		<![CDATA[
+			await CheckAutocraftLevel(100);
+		]]>
+		</CodeChunk>
 <CodeChunk Name="SetLisbethJsonBSM90">
 	<![CDATA[
 		int amount = 10;
@@ -1935,6 +2305,63 @@ Authors:  Kayla / Angles24
 </CodeChunk>
 <CodeChunk Name="SetLisbethJsonARM94">
 	<![CDATA[
+		int amount = 25;
+		int level = Core.Me.Levels[ClassJobType.Armorer];
+		int exp = (int)Experience.CurrentExperience;
+
+		amount = (level, exp) switch
+		{
+		(97, > 19841690) => 4,
+		(97, >= 16093751) => 5,
+		(97, >= 12395816) => 6,
+		(97, >= 8697881) => 7,
+		(97, >= 4999946) => 8,
+		(97, >= 1302011) => 9,
+		(97, >= 0) => 10,
+		(96, > 17801091) => 10,
+		(96, >= 13953174) => 11,
+		(96, >= 10230242) => 12,
+		(96, >= 6507310) => 13,
+		(96, >= 2784378) => 14,
+		(96, >= 0) => 15,
+		(95, > 17274452) => 15,
+		(95, >= 13401538) => 16,
+		(95, >= 9528624) => 17,
+		(95, >= 5705704) => 18,
+		(95, >= 1957775) => 19,
+		(95, >= 0) => 20,
+		(94, > 15743846) => 20,
+		(94, >= 11995917) => 21,
+		(94, >= 8247988) => 22,
+		(94, >= 4500059) => 23,
+		(94, >= 752130) => 24,
+		(94, >= 0) => 25,
+		(93, > 12916201) => 25,
+		(93, >= 0) => 25,
+		_ => amount
+		};
+
+		if (Core.Me.HasAura(1411)) {
+			amount = (int)Math.Ceiling((amount + 1) / 2.0);
+		}
+
+		ff14bot.Helpers.Logging.Write($"Estimated amount of collectables needed to level to next checkpoint: {amount}");
+
+		var lisbeth = BotManager.Bots.FirstOrDefault(c => c.Name == "Lisbeth");
+		if (lisbeth != null)
+		{
+			var lisbethObject = lisbeth.GetType().GetProperty("Lisbeth").GetValue(lisbeth);
+			if (lisbethObject != null)
+			{
+				var json = $"[{{'Group':1,'Item':44199,'Amount':{amount},'Enabled':true,'Type':'Armorer','Collectable':true}}]";
+				var orderMethod = lisbethObject.GetType().GetMethod("ExecuteOrders");
+				await (Task<bool>)orderMethod.Invoke(lisbethObject, new object[] { json, false });
+			}
+		}
+	]]>
+</CodeChunk>
+<CodeChunk Name="SetLisbethJsonARM94A">
+	<![CDATA[
 		int amount = 34;
 		int level = Core.Me.Levels[ClassJobType.Armorer];
 		int exp = (int)Experience.CurrentExperience;
@@ -2005,6 +2432,46 @@ Authors:  Kayla / Angles24
 	]]>
 </CodeChunk>
 <CodeChunk Name="SetLisbethJsonCUL98">
+	<![CDATA[
+		int amount = 7;
+		int level = Core.Me.Levels[ClassJobType.Culinarian];
+		int exp = (int)Experience.CurrentExperience;
+
+		amount = (level, exp) switch
+		{
+		(99, > 4400000) => 1,
+		(99, >= 0) => 2,
+		(98, > 21740086) => 2,
+		(98, >= 16886179) => 3,
+		(98, >= 12032272) => 4,
+		(98, >= 7178365) => 5,
+		(98, >= 2324458) => 6,
+		(98, >= 0) => 7,
+		(97, > 18427551) => 7,
+		(97, >= 0) => 7,
+		_ => amount
+		};
+
+		if (Core.Me.HasAura(1411)) {
+			amount = (int)Math.Ceiling((amount + 1) / 2.0);
+		}
+
+		ff14bot.Helpers.Logging.Write($"Estimated amount of collectables needed to level to next checkpoint: {amount}");
+
+		var lisbeth = BotManager.Bots.FirstOrDefault(c => c.Name == "Lisbeth");
+		if (lisbeth != null)
+		{
+			var lisbethObject = lisbeth.GetType().GetProperty("Lisbeth").GetValue(lisbeth);
+			if (lisbethObject != null)
+			{
+				var json = $"[{{'Group':1,'Item':44231,'Amount':{amount},'Enabled':true,'Type':'Culinarian','Collectable':true}}]";
+				var orderMethod = lisbethObject.GetType().GetMethod("ExecuteOrders");
+				await (Task<bool>)orderMethod.Invoke(lisbethObject, new object[] { json, false });
+			}
+		}
+	]]>
+</CodeChunk>
+<CodeChunk Name="SetLisbethJsonCUL98A">
 	<![CDATA[
 		int amount = 10;
 		int level = Core.Me.Levels[ClassJobType.Culinarian];
@@ -2087,20 +2554,17 @@ Authors:  Kayla / Angles24
 </CodeChunk>
 <CodeChunk Name="SetLisbethJsonALC94">
 	<![CDATA[
-		int amount = 5;
+		int amount = 3;
 		int level = Core.Me.Levels[ClassJobType.Alchemist];
 		int exp = (int)Experience.CurrentExperience;
 
 		amount = (level, exp) switch
 		{
-		(95, > 10519244) => 1,
-		(95, >= 2775488) => 2,
-		(95, >= 0) => 3,
-		(94, > 12565732) => 3,
-		(94, >= 4821976) => 4,
-		(94, >= 0) => 5,
-		(93, > 12990220) => 5,
-		(93, >= 0) => 5,
+		(94, > 9790244) => 1,
+		(94, >= 2046488) => 2,
+		(94, >= 0) => 3,
+		(93, > 10214732) => 3,
+		(93, >= 0) => 3,
 		_ => amount
 		};
 
@@ -2117,6 +2581,68 @@ Authors:  Kayla / Angles24
 			if (lisbethObject != null)
 			{
 				var json = $"[{{'Group':1,'Amount':{amount},'Enabled':true,'Type':'Leve','Hq':true,'LeveId':1752}}]";
+				var orderMethod = lisbethObject.GetType().GetMethod("ExecuteOrders");
+				await (Task<bool>)orderMethod.Invoke(lisbethObject, new object[] { json, false });
+			}
+		}
+	]]>
+</CodeChunk>
+<CodeChunk Name="SetLisbethJsonALC95">
+	<![CDATA[
+		int amount = 30;
+		int level = Core.Me.Levels[ClassJobType.Alchemist];
+		int exp = (int)Experience.CurrentExperience;
+
+		amount = (level, exp) switch
+		{
+		(95, > 17638044) => 1,
+		(95, >= 17013088) => 2,
+		(95, >= 16388132) => 3,
+		(95, >= 15763176) => 4,
+		(95, >= 15138220) => 5,
+		(95, >= 14513264) => 6,
+		(95, >= 13888308) => 7,
+		(95, >= 13263352) => 8,
+		(95, >= 12638396) => 9,
+		(95, >= 12013440) => 10,
+		(95, >= 11388484) => 11,
+		(95, >= 10763528) => 12,
+		(95, >= 10138572) => 13,
+		(95, >= 9513616) => 14,
+		(95, >= 8888660) => 15,
+		(95, >= 8263704) => 16,
+		(95, >= 7638748) => 17,
+		(95, >= 7013792) => 18,
+		(95, >= 6388836) => 19,
+		(95, >= 5763880) => 20,
+		(95, >= 5138924) => 21,
+		(95, >= 4513968) => 22,
+		(95, >= 3889012) => 23,
+		(95, >= 3264056) => 24,
+		(95, >= 2639100) => 25,
+		(95, >= 2014144) => 26,
+		(95, >= 1389188) => 27,
+		(95, >= 764232) => 28,
+		(95, >= 139276) => 29,
+		(95, >= 0) => 30,
+		(94, > 17048320) => 30,
+		(94, >= 0) => 30,
+		_ => amount
+		};
+
+		if (Core.Me.HasAura(1411)) {
+			amount = (int)Math.Ceiling((amount + 1) / 2.0);
+		}
+
+		ff14bot.Helpers.Logging.Write($"Estimated amount of leves needed to level to next checkpoint: {amount}");
+
+		var lisbeth = BotManager.Bots.FirstOrDefault(c => c.Name == "Lisbeth");
+		if (lisbeth != null)
+		{
+			var lisbethObject = lisbeth.GetType().GetProperty("Lisbeth").GetValue(lisbeth);
+			if (lisbethObject != null)
+			{
+				var json = $"[{{'Group':1,'Item':44013,'Amount':{amount},'Enabled':true,'Type':'Alchemist'}}]";
 				var orderMethod = lisbethObject.GetType().GetMethod("ExecuteOrders");
 				await (Task<bool>)orderMethod.Invoke(lisbethObject, new object[] { json, false });
 			}
@@ -2206,7 +2732,59 @@ Authors:  Kayla / Angles24
 </CodeChunk>
 <CodeChunk Name="SetLisbethJsonALC96">
 	<![CDATA[
-		int amount = 5;
+		int amount = 17;
+		int level = Core.Me.Levels[ClassJobType.Alchemist];
+		int exp = (int)Experience.CurrentExperience;
+
+		amount = (level, exp) switch
+		{
+		(99, > 1200000) => 1,
+		(99, >= 0) => 2,
+		(98, > 19218822) => 2,
+		(98, >= 14956213) => 3,
+		(98, >= 10693604) => 4,
+		(98, >= 6430995) => 5,
+		(98, >= 2168386) => 6,
+		(98, >= 0) => 7,
+		(97, > 18749609) => 7,
+		(97, >= 14373832) => 8,
+		(97, >= 10082931) => 9,
+		(97, >= 5792030) => 10,
+		(97, >= 1501129) => 11,
+		(97, >= 0) => 12,
+		(96, > 17532228) => 12,
+		(96, >= 13241327) => 13,
+		(96, >= 8950426) => 14,
+		(96, >= 4659525) => 15,
+		(96, >= 368624) => 16,
+		(96, >= 0) => 17,
+		(95, > 14340723) => 17,
+		(95, >= 0) => 17,
+		_ => amount
+		};
+
+		if (Core.Me.HasAura(1411)) {
+			amount = (int)Math.Ceiling((amount + 1) / 2.0);
+		}
+
+		ff14bot.Helpers.Logging.Write($"Estimated amount of leves needed to level to next checkpoint: {amount}");
+
+		var lisbeth = BotManager.Bots.FirstOrDefault(c => c.Name == "Lisbeth");
+		if (lisbeth != null)
+		{
+			var lisbethObject = lisbeth.GetType().GetProperty("Lisbeth").GetValue(lisbeth);
+			if (lisbethObject != null)
+			{
+				var json = $"[{{'Group':1,'Item':44224,'Amount':{amount},'Enabled':true,'Type':'Alchemist','Collectable':true}}]";
+				var orderMethod = lisbethObject.GetType().GetMethod("ExecuteOrders");
+				await (Task<bool>)orderMethod.Invoke(lisbethObject, new object[] { json, false });
+			}
+		}
+	]]>
+</CodeChunk>
+<CodeChunk Name="SetLisbethJsonALC96A">
+	<![CDATA[
+		int amount = 21;
 		int level = Core.Me.Levels[ClassJobType.Alchemist];
 		int exp = (int)Experience.CurrentExperience;
 
@@ -2300,6 +2878,55 @@ Authors:  Kayla / Angles24
 </CodeChunk>
 <CodeChunk Name="SetLisbethJsonGSM96">
 	<![CDATA[
+		int amount = 15;
+		int level = Core.Me.Levels[ClassJobType.Goldsmith];
+		int exp = (int)Experience.CurrentExperience;
+
+		amount = (level, exp) switch
+		{
+		(98, > 18716391) => 1,
+		(98, >= 14453782) => 2,
+		(98, >= 10191173) => 3,
+		(98, >= 5928564) => 4,
+		(98, >= 1665955) => 5,
+		(98, >= 0) => 6,
+		(97, > 18247178) => 6,
+		(97, >= 13899693) => 7,
+		(97, >= 9608792) => 8,
+		(97, >= 5317891) => 9,
+		(97, >= 1026990) => 10,
+		(97, >= 0) => 11,
+		(96, > 17058089) => 11,
+		(96, >= 12767188) => 12,
+		(96, >= 8476287) => 13,
+		(96, >= 4185386) => 14,
+		(96, >= 0) => 15,
+		(95, > 18157485) => 15,
+		(95, >= 0) => 15,
+		_ => amount
+		};
+
+		if (Core.Me.HasAura(1411)) {
+			amount = (int)Math.Ceiling((amount + 1) / 2.0);
+		}
+
+		ff14bot.Helpers.Logging.Write($"Estimated amount of collectables needed to level to next checkpoint: {amount}");
+
+		var lisbeth = BotManager.Bots.FirstOrDefault(c => c.Name == "Lisbeth");
+		if (lisbeth != null)
+		{
+			var lisbethObject = lisbeth.GetType().GetProperty("Lisbeth").GetValue(lisbeth);
+			if (lisbethObject != null)
+			{
+				var json = $"[{{'Group':1,'Item':44206,'Amount':{amount},'Enabled':true,'Type':'Goldsmith','Collectable':true}}]";
+				var orderMethod = lisbethObject.GetType().GetMethod("ExecuteOrders");
+				await (Task<bool>)orderMethod.Invoke(lisbethObject, new object[] { json, false });
+			}
+		}
+	]]>
+</CodeChunk>
+<CodeChunk Name="SetLisbethJsonGSM96A">
+	<![CDATA[
 		int amount = 21;
 		int level = Core.Me.Levels[ClassJobType.Goldsmith];
 		int exp = (int)Experience.CurrentExperience;
@@ -2356,7 +2983,48 @@ Authors:  Kayla / Angles24
 </CodeChunk>
 <CodeChunk Name="SetLisbethJsonBSM98">
 	<![CDATA[
-		int amount = 21;
+		int amount = 7;
+		int level = Core.Me.Levels[ClassJobType.Blacksmith];
+		int exp = (int)Experience.CurrentExperience;
+
+		amount = (level, exp) switch
+		{
+		(99, >= 6000000) => 1,
+		(99, >= 2000000) => 2,
+		(99, >= 0) => 3,
+		(98, > 18694144) => 3,
+		(98, >= 13840237) => 4,
+		(98, >= 8986330) => 5,
+		(98, >= 4132423) => 6,
+		(98, >= 0) => 7,
+		(97, > 20235516) => 7,
+		(97, >= 0) => 7,
+		_ => amount
+		};
+
+
+		if (Core.Me.HasAura(1411)) {
+			amount = (int)Math.Ceiling((amount + 1) / 2.0);
+		}
+
+		ff14bot.Helpers.Logging.Write($"Estimated amount of collectables needed to level to next checkpoint: {amount}");
+
+		var lisbeth = BotManager.Bots.FirstOrDefault(c => c.Name == "Lisbeth");
+		if (lisbeth != null)
+		{
+			var lisbethObject = lisbeth.GetType().GetProperty("Lisbeth").GetValue(lisbeth);
+			if (lisbethObject != null)
+			{
+				var json = $"[{{'Group':1,'Item':44195,'Amount':{amount},'Enabled':true,'Type':'Blacksmith','Collectable':true}}]";
+				var orderMethod = lisbethObject.GetType().GetMethod("ExecuteOrders");
+				await (Task<bool>)orderMethod.Invoke(lisbethObject, new object[] { json, false });
+			}
+		}
+	]]>
+</CodeChunk>
+<CodeChunk Name="SetLisbethJsonBSM98A">
+	<![CDATA[
+		int amount = 10;
 		int level = Core.Me.Levels[ClassJobType.Blacksmith];
 		int exp = (int)Experience.CurrentExperience;
 
@@ -2399,6 +3067,45 @@ Authors:  Kayla / Angles24
 	]]>
 </CodeChunk>
 <CodeChunk Name="SetLisbethJsonCRP98">
+	<![CDATA[
+		int amount = 6;
+		int level = Core.Me.Levels[ClassJobType.Carpenter];
+		int exp = (int)Experience.CurrentExperience;
+
+		amount = (level, exp) switch
+		{
+		(99, >= 0) => 1,
+		(98, > 21740961) => 1,
+		(98, >= 16887054) => 2,
+		(98, >= 12033147) => 3,
+		(98, >= 7179240) => 4,
+		(98, >= 2325333) => 5,
+		(98, >= 0) => 6,
+		(97, > 18428426) => 6,
+		(97, >= 0) => 6,
+		_ => amount
+		};
+
+		if (Core.Me.HasAura(1411)) {
+			amount = (int)Math.Ceiling((amount + 1) / 2.0);
+		}
+
+		ff14bot.Helpers.Logging.Write($"Estimated amount of collectables needed to level to next checkpoint: {amount}");
+
+		var lisbeth = BotManager.Bots.FirstOrDefault(c => c.Name == "Lisbeth");
+		if (lisbeth != null)
+		{
+			var lisbethObject = lisbeth.GetType().GetProperty("Lisbeth").GetValue(lisbeth);
+			if (lisbethObject != null)
+			{
+				var json = $"[{{'Group':1,'Item':44189,'Amount':{amount},'Enabled':true,'Type':'Carpenter','Collectable':true}}]";
+				var orderMethod = lisbethObject.GetType().GetMethod("ExecuteOrders");
+				await (Task<bool>)orderMethod.Invoke(lisbethObject, new object[] { json, false });
+			}
+		}
+	]]>
+</CodeChunk>
+<CodeChunk Name="SetLisbethJsonCRP98A">
 	<![CDATA[
 		int amount = 10;
 		int level = Core.Me.Levels[ClassJobType.Carpenter];
@@ -2443,6 +3150,43 @@ Authors:  Kayla / Angles24
 </CodeChunk>
 <CodeChunk Name="SetLisbethJsonLTW98">
 	<![CDATA[
+		int amount = 4;
+		int level = Core.Me.Levels[ClassJobType.Leatherworker];
+		int exp = (int)Experience.CurrentExperience;
+
+		amount = (level, exp) switch
+		{
+		(99, > 4981248) => 1,
+		(99, >= 0) => 2,
+		(98, > 16094272) => 2,
+		(98, >= 5014284) => 3,
+		(98, >= 0) => 4,
+		(97, > 14891296) => 4,
+		(97, >= 0) => 4,
+		_ => amount
+		};
+
+		if (Core.Me.HasAura(1411)) {
+			amount = (int)Math.Ceiling((amount + 1) / 2.0);
+		}
+
+		ff14bot.Helpers.Logging.Write($"Estimated amount of leves needed to level to next checkpoint: {amount}");
+
+		var lisbeth = BotManager.Bots.FirstOrDefault(c => c.Name == "Lisbeth");
+		if (lisbeth != null)
+		{
+			var lisbethObject = lisbeth.GetType().GetProperty("Lisbeth").GetValue(lisbeth);
+			if (lisbethObject != null)
+			{
+				var json = $"[{{'Group':1,'Amount':{amount},'Enabled':true,'Type':'Leve','Hq':true,'LeveId':1737}}]";
+				var orderMethod = lisbethObject.GetType().GetMethod("ExecuteOrders");
+				await (Task<bool>)orderMethod.Invoke(lisbethObject, new object[] { json, false });
+			}
+		}
+	]]>
+</CodeChunk>
+<CodeChunk Name="SetLisbethJsonLTW98A">
+	<![CDATA[
 		int amount = 5;
 		int level = Core.Me.Levels[ClassJobType.Leatherworker];
 		int exp = (int)Experience.CurrentExperience;
@@ -2480,6 +3224,43 @@ Authors:  Kayla / Angles24
 	]]>
 </CodeChunk>
 <CodeChunk Name="SetLisbethJsonWVR98">
+	<![CDATA[
+		int amount = 4;
+		int level = Core.Me.Levels[ClassJobType.Weaver];
+		int exp = (int)Experience.CurrentExperience;
+
+		amount = (level, exp) switch
+		{
+		(99, >= 0) => 1,
+		(98, > 22943196) => 1,
+		(98, >= 11863208) => 2,
+		(98, >= 783220) => 3,
+		(98, >= 0) => 4,
+		(97, > 10660232) => 4,
+		(97, >= 0) => 4,
+		_ => amount
+		};
+
+		if (Core.Me.HasAura(1411)) {
+			amount = (int)Math.Ceiling((amount + 1) / 2.0);
+		}
+
+		ff14bot.Helpers.Logging.Write($"Estimated amount of leves needed to level to next checkpoint: {amount}");
+
+		var lisbeth = BotManager.Bots.FirstOrDefault(c => c.Name == "Lisbeth");
+		if (lisbeth != null)
+		{
+			var lisbethObject = lisbeth.GetType().GetProperty("Lisbeth").GetValue(lisbeth);
+			if (lisbethObject != null)
+			{
+				var json = $"[{{'Group':1,'Amount':{amount},'Enabled':true,'Type':'Leve','Hq':true,'LeveId':1747}}]";
+				var orderMethod = lisbethObject.GetType().GetMethod("ExecuteOrders");
+				await (Task<bool>)orderMethod.Invoke(lisbethObject, new object[] { json, false });
+			}
+		}
+	]]>
+</CodeChunk>
+<CodeChunk Name="SetLisbethJsonWVR98A">
 	<![CDATA[
 		int amount = 5;
 		int level = Core.Me.Levels[ClassJobType.Weaver];

@@ -2,7 +2,7 @@
 <Profile>
 <Name>Crafting Lv100 Gear</Name>
 <Order>
-<RunCode Name="SwitchCombatJob"/>
+    <RunCode Name="SwitchCombatJob"/>
     <RunCode Name="SetLisbethJson" />
     <LogMessage Message="Crafted Lv100 Gear! Unlocking Master Books now..."/>
     <AutoInventoryEquip/>
@@ -200,6 +200,7 @@
    }
 ]]>
 </CodeChunk>
+
 <CodeChunk Name="Logger">
     <![CDATA[
         try
