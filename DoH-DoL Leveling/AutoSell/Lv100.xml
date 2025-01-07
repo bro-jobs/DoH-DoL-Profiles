@@ -91,6 +91,10 @@
 		<LLSellItem ItemIds="18022, 18023, 18024, 18025, 18026, 18027"/>
 		<!-- Grade 1 competence, cunning, and command -->
         <LLSellItem ItemIds="5699, 5704, 5709"/>
+		<!-- Selling random junk food -->
+		<LLSellItem ItemIds="27871, 27876" />
+		<!-- Discarding Skysteel prototype -->
+		<LLDiscardItem ItemIds="29679" />
 
 		<!-- Lv80-90 Stuff Stuff -->
 		<!-- Selling misc junk food -->
