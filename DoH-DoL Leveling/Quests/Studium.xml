@@ -2023,7 +2023,7 @@
 	</If>
 	
 	<If Condition="(Core.Me.Levels[ClassJobType.Miner] &lt; 95 or Core.Me.Levels[ClassJobType.Botanist] &lt; 95) and not IsQuestCompleted(69694)">
-		<If Condition="Core.Me.Levels[ClassJobType.Miner] &lt; Core.Me.Levels[ClassJobType.Botanist]">	
+		<If Condition="Core.Me.Levels[ClassJobType.Miner] &lt;= Core.Me.Levels[ClassJobType.Botanist]">	
 				<ChangeClass Job="Miner" Force="True"/>
 				<WaitTimer WaitTime="3" />
 		<!-- Cultured Pursuits -->
@@ -2079,7 +2079,7 @@
 		</If>
 
 
-		<If Condition="Core.Me.Levels[ClassJobType.Miner] &lt; Core.Me.Levels[ClassJobType.Botanist]">	
+		<If Condition="Core.Me.Levels[ClassJobType.Miner] &lt;= Core.Me.Levels[ClassJobType.Botanist]">	
 			<ChangeClass Job="Miner" Force="True"/>
 			<WaitTimer WaitTime="3" />
 			<!-- Cooking Up a Culture -->
@@ -2136,7 +2136,7 @@
 			</If>
 		</If>
 
-		<If Condition="Core.Me.Levels[ClassJobType.Miner] &lt; Core.Me.Levels[ClassJobType.Botanist]">	
+		<If Condition="Core.Me.Levels[ClassJobType.Miner] &lt;= Core.Me.Levels[ClassJobType.Botanist]">	
 			<ChangeClass Job="Miner" Force="True"/>
 			<WaitTimer WaitTime="3" />
 			<!-- The Culture of Ceruleum -->
@@ -2200,7 +2200,7 @@
 		</If>
 
 
-		<If Condition="Core.Me.Levels[ClassJobType.Miner] &lt; Core.Me.Levels[ClassJobType.Botanist]">	
+		<If Condition="Core.Me.Levels[ClassJobType.Miner] &lt;= Core.Me.Levels[ClassJobType.Botanist]">	
 			<ChangeClass Job="Miner" Force="True"/>
 			<WaitTimer WaitTime="3" />
 			<!-- The Culture of Carrots -->
@@ -2264,7 +2264,7 @@
 		</If>
 
 
-		<If Condition="Core.Me.Levels[ClassJobType.Miner] &lt; Core.Me.Levels[ClassJobType.Botanist]">	
+		<If Condition="Core.Me.Levels[ClassJobType.Miner] &lt;= Core.Me.Levels[ClassJobType.Botanist]">	
 			<ChangeClass Job="Miner" Force="True"/>
 			<WaitTimer WaitTime="3" />
 			<!-- Hinageshi in Hingashi -->
@@ -2367,7 +2367,7 @@
 			</If>	
 		</If>
 
-		<If Condition="Core.Me.Levels[ClassJobType.Miner] &lt; Core.Me.Levels[ClassJobType.Botanist]">	
+		<If Condition="Core.Me.Levels[ClassJobType.Miner] &lt;= Core.Me.Levels[ClassJobType.Botanist]">	
 			<ChangeClass Job="Miner" Force="True"/>
 			<WaitTimer WaitTime="3" />
 			<!-- The Culture of the Past -->
