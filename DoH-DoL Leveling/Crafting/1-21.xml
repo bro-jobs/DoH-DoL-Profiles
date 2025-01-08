@@ -450,7 +450,10 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
       </If>
       <If Condition="HasQuest(65811) and not IsQuestCompleted(65811) and GetQuestStep(65811) == 255">
         <While Condition="not (HqHasAtLeast(2226, 3) or NqHasAtLeast(2226, 3))">
+          
           <Lisbeth Json="[{'Item': 2226,'Group': 0,'Amount': 3,'Collectable': false,'QuickSynth': false,'SuborderQuickSynth': false,'Hq': false,'Food': 0,'Primary': true,'Type': 'Armorer','Enabled': true,'Manual': 0,'Medicine': 0, 'AmountMode': 'Restock'}]"/>
+          <LLQualityLower ItemIds="2226" />
+
         </While>
         <GetTo ZoneId="128" XYZ="-31.23862, 41.49998, 205.5451"/>
         <LLTurnIn QuestId="65811" ItemIds="2226, 2226, 2226" NpcId="1001000" XYZ="-32.02869, 41.49999, 208.3923"/>
