@@ -2102,7 +2102,7 @@
 						<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/> 
 						<RunCode name="TurnIn"/>  
 						<LLTurnIn QuestId="69690" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
-						<LLSmallTalk/>
+						<WaitTimer WaitTime="3" />
 					</If>
 				</If>				
 			</If>
@@ -2130,7 +2130,7 @@
 						<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/> 
 						<RunCode name="TurnIn"/>  
 						<LLTurnIn QuestId="69690" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
-						<LLSmallTalk/>
+						<WaitTimer WaitTime="3" />
 					</If>
 				</If>				
 			</If>
