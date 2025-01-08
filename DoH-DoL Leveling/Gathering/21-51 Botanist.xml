@@ -357,6 +357,8 @@ Angles24
 		</If>
 		<!--End Grind to Level 51-->
 	</If>
+
+	<LLSellItem ItemIds="2553, 2552, 2549, 2564, 2819, 2758, 3188, 3129, 3092, 5542, 4813, 4839, 4792, 5536, 5395" />
 	
 	<LLoadProfile Path="../Start.xml"/>
 	
