@@ -827,6 +827,9 @@
 					<GetTo ZoneId="962" XYZ="-299.9291, 21.68615, -159.1658"/> 
 					<RunCode name="TurnIn"/>  
 					<LLTurnIn QuestId="69680" NpcId="1038525" XYZ="-296.5591, 21.84602, -162.1577"/>
+					<StopBusy />
+					<WaitTimer WaitTime="3" />
+					<StopBusy />
 				</If>
 			</If>			
     </If>
