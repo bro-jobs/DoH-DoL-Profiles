@@ -11,7 +11,8 @@
     <RunCode Name="DTFolklore" />
 
 	<!-- Use folklore books... -->
-	<WaitTimer WaitTime="5"/>
+	<!-- For some reason, it seems like you need to wait a while before UseInventoryItem works. -->
+	<WaitTimer WaitTime="150"/>
 	<UseInventoryItem ItemID="43878"/>
 	<WaitTimer WaitTime="5"/>
 	<UseInventoryItem ItemID="43879"/>
