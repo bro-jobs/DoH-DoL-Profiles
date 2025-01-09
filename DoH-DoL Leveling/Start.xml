@@ -866,7 +866,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 				<RunCode Name="SwitchDoHJob2"/>
 				<WaitTimer WaitTime="2"/>
 				<TeleportTo Name="Tuliyollal" AetheryteId="216"/>
-				<If Condition="IsQuestAcceptQualified(69706)">
+				<If Condition="IsQuestAcceptQualified(70539)">
 					<LLTalkTo NpcId="1048390"/>
 					<LLSmallTalk/>
 				</If>
