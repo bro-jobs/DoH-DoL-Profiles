@@ -50,9 +50,12 @@ Angles24
 		<!--End Call From The Clouds-->
 
 		<!-- Level 50-51 -->
-		<If Condition="Core.Player.ClassLevel &lt; 51">
+		<While Condition="Core.Me.Levels[ClassJobType.Botanist] &lt; 51">
 			<LogMessage Message="Starting the Grind to Level 51."/>
-			<Lisbeth Json="[{'Group':0, 'Item':5393, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':51, 'ConditionalJob':'Botanist'}]"/><!-- Rosewood Log -->
+			<Lisbeth Json="[{'Group':1,'Item':12669,'Amount':30,'Enabled':true,'Type':'Exchange'}]"/>
+		</While>
+		<If Condition="ClassName != ClassJobType.Botanist">
+			<ChangeClass Job="Botanist"/>
 		</If>
 		<If Condition="Core.Player.ClassLevel == 51">
 			<LogMessage Message="Congrats on Level 51, moving on."/>
@@ -63,9 +66,12 @@ Angles24
 		<!--End Level 51-->
 		
 		<!-- Level 51-52 -->
-		<If Condition="Core.Player.ClassLevel &lt; 52">
+		<While Condition="Core.Me.Levels[ClassJobType.Botanist] &lt; 52">
 			<LogMessage Message="Starting the Grind to Level 52."/>
-			<Lisbeth Json="[{'Group':0, 'Item':12597, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':52, 'ConditionalJob':'Botanist'}]"/><!-- Ruby Cotton Boll -->
+			<Lisbeth Json="[{'Group':1,'Item':12669,'Amount':30,'Enabled':true,'Type':'Exchange'}]"/>
+		</While>
+		<If Condition="ClassName != ClassJobType.Botanist">
+			<ChangeClass Job="Botanist"/>
 		</If>
 		<If Condition="Core.Player.ClassLevel == 52">
 			<LogMessage Message="Congrats on Level 52, moving on."/>
@@ -76,9 +82,12 @@ Angles24
 		<!--End Level 52-->
 		
 		<!-- Level 52-54 -->
-		<If Condition="Core.Player.ClassLevel &lt; 54">
+		<While Condition="Core.Me.Levels[ClassJobType.Botanist] &lt; 54">
 			<LogMessage Message="Starting the Grind to Level 54."/>
-			<Lisbeth Json="[{'Group':0, 'Item':12880, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':54, 'ConditionalJob':'Botanist'}]"/><!-- Highland Wheat -->
+			<Lisbeth Json="[{'Group':1,'Item':12669,'Amount':30,'Enabled':true,'Type':'Exchange'}]"/>
+		</While>
+		<If Condition="ClassName != ClassJobType.Botanist">
+			<ChangeClass Job="Botanist"/>
 		</If>
 		<If Condition="Core.Player.ClassLevel == 54">
 			<LogMessage Message="Congrats on Level 54, moving on."/>
@@ -137,9 +146,12 @@ Angles24
 		<!--End Onion of Life Bestowing-->
 		
 		<!-- Level 54-55 -->
-		<If Condition="Core.Player.ClassLevel &lt; 55">
+		<While Condition="Core.Me.Levels[ClassJobType.Botanist] &lt; 55">
 			<LogMessage Message="Starting the Grind to Level 55."/>
-			<Lisbeth Json="[{'Group':0, 'Item':12578, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':55, 'ConditionalJob':'Botanist'}]"/><!-- Dark Chestnut Log -->
+			<Lisbeth Json="[{'Group':1,'Item':12669,'Amount':30,'Enabled':true,'Type':'Exchange'}]"/>
+		</While>
+		<If Condition="ClassName != ClassJobType.Botanist">
+			<ChangeClass Job="Botanist"/>
 		</If>
 		<If Condition="Core.Player.ClassLevel == 55">
 			<LogMessage Message="Congrats on Level 55, moving on."/>
@@ -212,9 +224,12 @@ Angles24
 		<!--End Two Nations, One Seed-->
 		
 		<!-- Level 55-58 -->
-		<If Condition="Core.Player.ClassLevel &lt; 58">
+		<While Condition="Core.Me.Levels[ClassJobType.Botanist] &lt; 58">
 			<LogMessage Message="Starting the Grind to Level 58."/>
-			<Lisbeth Json="[{'Group':0, 'Item':12885, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':58, 'ConditionalJob':'Botanist'}]"/><!-- Magma Beet -->
+			<Lisbeth Json="[{'Group':1,'Item':12669,'Amount':30,'Enabled':true,'Type':'Exchange'}]"/>
+		</While>
+		<If Condition="ClassName != ClassJobType.Botanist">
+			<ChangeClass Job="Botanist"/>
 		</If>
 		<If Condition="Core.Player.ClassLevel == 58">
 			<LogMessage Message="Congrats on Level 58, moving on."/>
@@ -277,9 +292,12 @@ Angles24
 		<!--End Love For Harmony-->
 		
 		<!--Level 58-60-->
-		<If Condition="Core.Player.ClassLevel &lt; 60">
+		<While Condition="Core.Me.Levels[ClassJobType.Botanist] &lt; 60">
 			<LogMessage Message="Starting the Grind to Level 60."/>
-			<Lisbeth Json="[{'Group':0, 'Item':12891, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':60, 'ConditionalJob':'Botanist'}]"/><!-- Birch Sap -->
+			<Lisbeth Json="[{'Group':1,'Item':12669,'Amount':30,'Enabled':true,'Type':'Exchange'}]"/>
+		</While>
+		<If Condition="ClassName != ClassJobType.Botanist">
+			<ChangeClass Job="Botanist"/>
 		</If>
 		<If Condition="Core.Player.ClassLevel == 60">
 			<LogMessage Message="Congrats on Level 60, moving on."/>
@@ -381,9 +399,12 @@ Angles24
 		<!--End Never Meet Your Heroes-->
    
 		<!-- Level 60-62 -->
-		<If Condition="Core.Player.ClassLevel &lt; 62">
+		<While Condition="Core.Me.Levels[ClassJobType.Botanist] &lt; 62">
 			<LogMessage Message="Starting the Grind to Level 62."/>
-			<Lisbeth Json="[{'Group':0, 'Item':19868, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':62, 'ConditionalJob':'Botanist'}]"/><!-- Gyr Abanian Wheat -->
+			<Lisbeth Json="[{'Group':1,'Item':12669,'Amount':30,'Enabled':true,'Type':'Exchange'}]"/>
+		</While>
+		<If Condition="ClassName != ClassJobType.Botanist">
+			<ChangeClass Job="Botanist"/>
 		</If>
 		<If Condition="Core.Player.ClassLevel == 62">
 			<LogMessage Message="Congrats on Level 62, moving on."/>
@@ -394,9 +415,12 @@ Angles24
 		<!--End Level 62-->
 		
 		<!-- Level 62-63 -->
-		<If Condition="Core.Player.ClassLevel &lt; 63">
+		<While Condition="Core.Me.Levels[ClassJobType.Botanist] &lt; 63">
 			<LogMessage Message="Starting the Grind to Level 63."/>
-			<Lisbeth Json="[{'Group':0, 'Item':19982, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':63, 'ConditionalJob':'Botanist'}]"/><!-- Kudzu Vine -->
+			<Lisbeth Json="[{'Group':1,'Item':12669,'Amount':30,'Enabled':true,'Type':'Exchange'}]"/>
+		</While>
+		<If Condition="ClassName != ClassJobType.Botanist">
+			<ChangeClass Job="Botanist"/>
 		</If>
 		<If Condition="Core.Player.ClassLevel == 63">
 			<LogMessage Message="Congrats on Level 63, moving on."/>

@@ -2,7 +2,7 @@
 <Profile>
 <Name>Crafting Lv53 Gear</Name>
 <Order>
-<RunCode Name="SwitchCombatJob"/>
+    <RunCode Name="SwitchCombatJob"/>
     <RunCode Name="SetLisbethJson" />
     <LogMessage Message="Crafted Lv53 Gear!"/>
     <AutoInventoryEquip/>

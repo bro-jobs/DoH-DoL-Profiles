@@ -164,7 +164,7 @@ Kayla / Angles24
 		<RunCode Name="SwitchDoLJob"/>
 		<WaitTimer WaitTime="2"/>
 		
-	<If Condition="ClassName == (ClassJobType.Miner) or (ClassJobType.Botanist) or (ClassJobType.Fisher)">
+	<If Condition="(ClassName == (ClassJobType.Miner) or (ClassJobType.Botanist) or (ClassJobType.Fisher)) and (Core.Me.Levels[ClassJobType.Miner] &gt; 55 and Core.Me.Levels[ClassJobType.Botanist] &gt; 55)">
 		<!-- 56 No Longer a Collectable -->
 		<If Condition=" not IsQuestCompleted(67633) and not HasQuest(67633)">
 			<LogMessage Message="Picking Up - No Longer a Collectable!"/>
@@ -178,8 +178,9 @@ Kayla / Angles24
 			<LLSmallTalk WaitTime="1500"/>
 			<LogMessage Message="Completed Quest - No Longer a Collectable!"/>
 		</If>
+	</If>
 		<!-- End - No Longer a Collectable -->
-		
+	<If Condition="ClassName == (ClassJobType.Miner) or (ClassJobType.Botanist) or (ClassJobType.Fisher)">	
 		<!-- Marvelously Mutable Materia -->
 		<If Condition="not IsQuestCompleted(66999) and not HasQuest(66999)">
 			<LogMessage Message="Picking Up - Marvelously Mutable Materia!"/>

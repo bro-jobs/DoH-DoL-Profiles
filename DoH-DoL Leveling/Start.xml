@@ -369,7 +369,16 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 				and IsAetherCurrentCompleted(621,6)	and IsAetherCurrentCompleted(621,7) and IsAetherCurrentCompleted(621,8))">
 			<LLoadProfile Path="Aether Currents/Stormblood Aether Currents All.xml"/>
 		</If>
-				
+		
+		<!-- Check to see if we have unlocked Collectables and More -->
+		<If Condition="not (IsQuestCompleted(67631) and IsQuestCompleted(66959)
+						and IsQuestCompleted(67632)
+						and IsQuestCompleted(66174) and IsQuestCompleted(66175)
+						and IsQuestCompleted(66999) and IsQuestCompleted(67634)
+						and IsQuestCompleted(68477))">
+			<LogMessage Message="Going to learn Collectables and More!"/>
+			<LLoadProfile Path="Quests/Unlock Collectables and More.xml"/>
+		</If>
 		
 		<!-- Gatherer's to 63 -->
 		<If Condition="&min; == 1">
@@ -383,7 +392,6 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 			</If>
 		</If>		
 		
-		
 		<!-- Check to see if we have unlocked Collectables and More -->
 		<If Condition="not (IsQuestCompleted(67631) and IsQuestCompleted(66959)
 						and IsQuestCompleted(67632) and IsQuestCompleted(67633)
@@ -393,7 +401,6 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 			<LogMessage Message="Going to learn Collectables and More!"/>
 			<LLoadProfile Path="Quests/Unlock Collectables and More.xml"/>
 		</If>
-
 		
 		<!-- Craft Gathering and Crafting Gear 63 -->
 		<If Condition="&craft63; == 1 and &autocraft; == 0 and ((&crp; == 1 and HighestILvl(ClassJobType.Carpenter) &lt; 190) or (&bsm; == 1 and HighestILvl(ClassJobType.Blacksmith) &lt; 190) or (&arm; == 1 and HighestILvl(ClassJobType.Armorer) &lt; 190) or (&gsm; == 1 and HighestILvl(ClassJobType.Goldsmith) &lt; 190) or (&ltw; == 1 and HighestILvl(ClassJobType.Leatherworker) &lt; 190) or (&wvr; == 1 and HighestILvl(ClassJobType.Weaver) &lt; 190) or (&alc; == 1 and HighestILvl(ClassJobType.Alchemist) &lt; 190) or (&cul; == 1 and HighestILvl(ClassJobType.Culinarian) &lt; 190) or (&min; == 1 and HighestILvl(ClassJobType.Miner) &lt; 190) or (&btn; == 1 and HighestILvl(ClassJobType.Botanist) &lt; 190))">

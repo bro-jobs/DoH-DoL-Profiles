@@ -57,9 +57,12 @@ Angles24
 		<!--End Breaking New Ground-->
 
 		<!-- Level 50-51 -->
-		<If Condition="Core.Player.ClassLevel &lt; 51">
+		<While Condition="Core.Me.Levels[ClassJobType.Miner] &lt; 51">
 			<LogMessage Message="Starting the Grind to Level 51."/>
-			<Lisbeth Json="[{'Group':0, 'Item':5115, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':51, 'ConditionalJob':'Miner'}]"/><!-- Electrum Ore -->
+			<Lisbeth Json="[{'Group':1,'Item':12669,'Amount':30,'Enabled':true,'Type':'Exchange'}]"/>
+		</While>
+		<If Condition="ClassName != ClassJobType.Miner">
+			<ChangeClass Job="Miner"/>
 		</If>
 		<If Condition="Core.Player.ClassLevel == 51">
 			<LogMessage Message="Congrats on Level 51, moving on."/>
@@ -83,9 +86,12 @@ Angles24
 		<!--End Level 52 Grind-->
 
 		<!-- Level 52-54 -->
-		<If Condition="Core.Player.ClassLevel &lt; 54">
+		<While Condition="Core.Me.Levels[ClassJobType.Miner] &lt; 54">
 			<LogMessage Message="Starting the Grind to Level 54."/>
-			<Lisbeth Json="[{'Group':0, 'Item':12551, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':54, 'ConditionalJob':'Miner'}]"/><!-- Raw Larimar -->
+			<Lisbeth Json="[{'Group':1,'Item':12669,'Amount':30,'Enabled':true,'Type':'Exchange'}]"/>
+		</While>
+		<If Condition="ClassName != ClassJobType.Miner">
+			<ChangeClass Job="Miner"/>
 		</If>
 		<If Condition="Core.Player.ClassLevel == 54">
 			<LogMessage Message="Congrats on Level 54, moving on."/>
@@ -140,9 +146,12 @@ Angles24
 		<!--End Sellspade-->
 
       	<!-- Level 54-56 -->
-		<If Condition="Core.Player.ClassLevel &lt; 56">
+		<While Condition="Core.Me.Levels[ClassJobType.Miner] &lt; 56">
 			<LogMessage Message="Starting the Grind to Level 56."/>
-			<Lisbeth Json="[{'Group':0, 'Item':12554, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':56, 'ConditionalJob':'Miner'}]"/><!-- Raw Star Ruby -->
+			<Lisbeth Json="[{'Group':1,'Item':12669,'Amount':30,'Enabled':true,'Type':'Exchange'}]"/>
+		</While>
+		<If Condition="ClassName != ClassJobType.Miner">
+			<ChangeClass Job="Miner"/>
 		</If>
 		<If Condition="Core.Player.ClassLevel == 56">
 			<LogMessage Message="Congrats on Level 56, moving on."/>
@@ -207,9 +216,12 @@ Angles24
 		<!--End The Same Vein-->
 
 		<!-- Level 56-58 -->
-		<If Condition="Core.Player.ClassLevel &lt; 58">
+		<While Condition="Core.Me.Levels[ClassJobType.Miner] &lt; 58">
 			<LogMessage Message="Starting the Grind to Level 58."/>
-			<Lisbeth Json="[{'Group':0, 'Item':12556, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':58, 'ConditionalJob':'Miner'}]"/><!-- Raw Opal -->
+			<Lisbeth Json="[{'Group':1,'Item':12669,'Amount':30,'Enabled':true,'Type':'Exchange'}]"/>
+		</While>
+		<If Condition="ClassName != ClassJobType.Miner">
+			<ChangeClass Job="Miner"/>
 		</If>
 		<If Condition="Core.Player.ClassLevel == 58">
 			<LogMessage Message="Congrats on Level 58, moving on."/>
@@ -295,9 +307,12 @@ Angles24
 		<!--End Digging Deeper-->
 
 		<!-- Level 58-60 -->
-		<If Condition="Core.Player.ClassLevel &lt; 60">
+		<While Condition="Core.Me.Levels[ClassJobType.Miner] &lt; 60">
 			<LogMessage Message="Starting the Grind to Level 60."/>
-			<Lisbeth Json="[{'Group':0, 'Item':13760, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':60, 'ConditionalJob':'Miner'}]"/><!-- Eventide Jade -->
+			<Lisbeth Json="[{'Group':1,'Item':12669,'Amount':30,'Enabled':true,'Type':'Exchange'}]"/>
+		</While>
+		<If Condition="ClassName != ClassJobType.Miner">
+			<ChangeClass Job="Miner"/>
 		</If>
 		<If Condition="Core.Player.ClassLevel == 60">
 			<LogMessage Message="Congrats on Level 60, moving on."/>
@@ -411,9 +426,12 @@ Angles24
 		<!--End Gift of the Gob-->
 
 		<!-- Level 60-62 -->
-		<If Condition="Core.Player.ClassLevel &lt; 62">
+		<While Condition="Core.Me.Levels[ClassJobType.Miner] &lt; 62">
 			<LogMessage Message="Starting the Grind to Level 62."/>
-			<Lisbeth Json="[{'Group':0, 'Item':19910, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':62, 'ConditionalJob':'Miner'}]"/><!-- Gyr Abanian Alumen -->
+			<Lisbeth Json="[{'Group':1,'Item':12669,'Amount':30,'Enabled':true,'Type':'Exchange'}]"/>
+		</While>
+		<If Condition="ClassName != ClassJobType.Miner">
+			<ChangeClass Job="Miner"/>
 		</If>
 		<If Condition="Core.Player.ClassLevel == 62">
 			<LogMessage Message="Congrats on Level 62, moving on."/>
@@ -424,10 +442,13 @@ Angles24
 		<!--End Level 62 Grind-->
 		
 		<!-- Level 62-63 -->
-		<While Condition="Core.Player.ClassLevel &lt; 63">
+		<While Condition="Core.Me.Levels[ClassJobType.Miner] &lt; 63">
 			<LogMessage Message="Starting the Grind to Level 63."/>
-			<Lisbeth Json="[{'Group':0, 'Item':19950, 'Amount':10, 'Enabled':true, 'Type':'Gather', 'Manual':12668, 'ConditionalLevel':63, 'ConditionalJob':'Miner'}]"/><!-- Koppranickel Sand -->
+			<Lisbeth Json="[{'Group':1,'Item':12669,'Amount':30,'Enabled':true,'Type':'Exchange'}]"/>
 		</While>
+		<If Condition="ClassName != ClassJobType.Miner">
+			<ChangeClass Job="Miner"/>
+		</If>
 		<If Condition="Core.Player.ClassLevel == 63">
 			<LogMessage Message="Congrats on Level 63, moving on."/>
 			<WaitTimer WaitTime="2"/>
