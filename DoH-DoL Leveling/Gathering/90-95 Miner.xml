@@ -195,7 +195,7 @@ Angles24
 				Id = id++,
 				Group = 2,
 				Item = 12669,
-				Amount = 30,
+				Amount = 100,
 				Enabled = true,
 				Type = "Exchange",
 				AmountMode = "Absolute"
