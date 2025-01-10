@@ -9,8 +9,11 @@
     <WaitTimer WaitTime="5"/>
 	</If>
 	<AffixMateria EquipmentId="3206" MateriaId="5696" />
+    <WaitTimer WaitTime="3"/>
 	<AffixMateria EquipmentId="3039" MateriaId="5709" />
+    <WaitTimer WaitTime="3"/>
 	<AffixMateria EquipmentId="3784" MateriaId="5709" />
+    <WaitTimer WaitTime="3"/>
 	<RunCode Name="SixthWaveLogger" />	
     <LLoadProfile Path="Lv67.xml"/>
 </Order>

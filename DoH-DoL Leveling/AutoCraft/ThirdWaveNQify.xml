@@ -3,6 +3,7 @@
     <name>NQify</name>
     <Order>
         <RunCode Name="ReduceAndCombine"/>
+		<LLSellItem ItemIds="5113, 5114, 5115, 5116, 12534, 12537, 5141, 5143, 5144, 12554, 12555" />
 		<RunCode Name="NQify3Logger" />
 		<LLoadProfile Path="Lv67.xml"/>
     </Order>
