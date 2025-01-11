@@ -24,58 +24,12 @@ Angles24
 			<LogMessage Message="Starting the Grind to Level 95."/>
 			<If Condition="not Core.Me.HasAura(46)">
 				<UseInventoryItem ItemID="12668"/>
+				<WaitTimer WaitTime="2"/>
 			</If>
 			<WaitTimer WaitTime="2"/>
 			<RunCode Name="DTFolklore"/>
 			<WaitTimer WaitTime="5"/>
-			<UseInventoryItem ItemID="43878"/>
-			<WaitTimer WaitTime="5"/>
-			<UseInventoryItem ItemID="43879"/>
-			<WaitTimer WaitTime="5"/>
-			<UseInventoryItem ItemID="43880"/>
-			<WaitTimer WaitTime="5"/>
-			<UseInventoryItem ItemID="43881"/>
-			<WaitTimer WaitTime="5"/>
-			<UseInventoryItem ItemID="43882"/>
-			<WaitTimer WaitTime="5"/>
-			<UseInventoryItem ItemID="43883"/>
-			<WaitTimer WaitTime="5"/>
-			<UseInventoryItem ItemID="12238"/>
-			<WaitTimer WaitTime="5"/>
-			<UseInventoryItem ItemID="12239"/>
-			<WaitTimer WaitTime="5"/>
-			<UseInventoryItem ItemID="12240"/>
-			<WaitTimer WaitTime="5"/>
-			<UseInventoryItem ItemID="12698"/>
-			<WaitTimer WaitTime="5"/>
-			<UseInventoryItem ItemID="12699"/>
-			<WaitTimer WaitTime="5"/>
-			<UseInventoryItem ItemID="12700"/>
-			<WaitTimer WaitTime="5"/>
-			<UseInventoryItem ItemID="17838"/>
-			<WaitTimer WaitTime="5"/>
-			<UseInventoryItem ItemID="17839"/>
-			<WaitTimer WaitTime="5"/>
-			<UseInventoryItem ItemID="17840"/>
-			<WaitTimer WaitTime="5"/>
-			<UseInventoryItem ItemID="17841"/>
-			<WaitTimer WaitTime="5"/>
-			<UseInventoryItem ItemID="26808"/>
-			<WaitTimer WaitTime="5"/>
-			<UseInventoryItem ItemID="26809"/>
-			<WaitTimer WaitTime="5"/>
-			<UseInventoryItem ItemID="36598"/>
-			<WaitTimer WaitTime="5"/>
-			<UseInventoryItem ItemID="36600"/>
-			<WaitTimer WaitTime="5"/>
-			<UseInventoryItem ItemID="36601"/>
-			<WaitTimer WaitTime="5"/>
-			<UseInventoryItem ItemID="36602"/>
-			<WaitTimer WaitTime="5"/>
-			<UseInventoryItem ItemID="36604"/>
-			<WaitTimer WaitTime="5"/>
-			<UseInventoryItem ItemID="36605"/>
-			<WaitTimer WaitTime="5"/>
+			<UseUnlockables />
 		</While>
 		<!--End Level 95-->
 		
