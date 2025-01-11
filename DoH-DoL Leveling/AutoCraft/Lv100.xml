@@ -146,7 +146,7 @@
     // Try to get profile path and construct relative path from there
     var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
     var profileDir = System.IO.Path.GetDirectoryName(profilePath);
-    var jsonPath = System.IO.Path.Combine(profileDir, "../Lisbeth/GearSets/GEAR100.json");
+    var jsonPath = System.IO.Path.Combine(profileDir, "../Lisbeth/GearSets/GEAR100-Combined.json");
     
     var json = System.IO.File.ReadAllText(jsonPath);
     var lisbeth = BotManager.Bots.FirstOrDefault(c => c.Name == "Lisbeth");

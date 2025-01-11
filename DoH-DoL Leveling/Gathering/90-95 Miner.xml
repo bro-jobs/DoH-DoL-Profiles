@@ -22,6 +22,10 @@ Angles24
 		<!-- Level 90-91 -->
 		<While Condition="Core.Me.Levels[ClassJobType.Miner] &lt; 95">
 			<LogMessage Message="Starting the Grind to Level 95."/>
+			<If Condition="not Core.Me.HasAura(46)">
+				<UseInventoryItem ItemID="12668"/>
+			</If>
+			<WaitTimer WaitTime="2"/>
 			<RunCode Name="DTFolklore"/>
 			<WaitTimer WaitTime="5"/>
 			<UseInventoryItem ItemID="43878"/>
