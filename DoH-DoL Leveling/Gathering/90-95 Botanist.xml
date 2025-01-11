@@ -195,7 +195,9 @@ Angles24
 			}
 		}
 
-		orders.Add(new
+		else
+		{
+			orders.Add(new
 			{
 				Id = id++,
 				Group = 2,
@@ -205,7 +207,7 @@ Angles24
 				Type = "Exchange",
 				AmountMode = "Absolute"
 			});
-		
+		}
 		// Convert to JSON
 		var json = Newtonsoft.Json.JsonConvert.SerializeObject(orders);
 		
