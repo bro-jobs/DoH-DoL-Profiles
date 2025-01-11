@@ -23,6 +23,7 @@ Angles24
 		<While Condition="Core.Me.Levels[ClassJobType.Botanist] &lt; 95">
 			<LogMessage Message="Starting the Grind to Level 95."/>
 			<RunCode Name="DTFolklore"/>
+			<WaitTimer WaitTime="5"/>
 			<UseInventoryItem ItemID="43878"/>
 			<WaitTimer WaitTime="5"/>
 			<UseInventoryItem ItemID="43879"/>
