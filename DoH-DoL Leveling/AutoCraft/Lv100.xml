@@ -10,9 +10,6 @@
     <!-- Buy and use master books -->
     <RunCode Name="MasterBooks" />
 
-    <!-- Try it twice since for some reason UIState can bug out. -->
-    <RunCode Name="MasterBooks" />
-
     <RunCode Name="Logger" />
 
     <WaitTimer WaitTime="5"/>

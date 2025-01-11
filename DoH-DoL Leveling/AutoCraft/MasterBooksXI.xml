@@ -3,22 +3,7 @@
 <Name>Using Master Books...</Name>
 <Order>
 	
-	<UseInventoryItem ItemID="44123"/>
-	<WaitTimer WaitTime="5"/>
-	<UseInventoryItem ItemID="44124"/>
-	<WaitTimer WaitTime="5"/>
-	<UseInventoryItem ItemID="44125"/>
-	<WaitTimer WaitTime="5"/>
-	<UseInventoryItem ItemID="44126"/>
-	<WaitTimer WaitTime="5"/>
-	<UseInventoryItem ItemID="44127"/>
-	<WaitTimer WaitTime="5"/>
-	<UseInventoryItem ItemID="44128"/>
-	<WaitTimer WaitTime="5"/>
-	<UseInventoryItem ItemID="44129"/>
-	<WaitTimer WaitTime="5"/>
-	<UseInventoryItem ItemID="44130"/>
-	<WaitTimer WaitTime="5"/>
+	<UseUnlockables />
 	
 	<LogMessage Message="Master Books acquired!"/>
 	
