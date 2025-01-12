@@ -642,18 +642,26 @@ optimizer_99.generate_codechunk_with_target_exp(99, target_exp=3615868, turn_in_
 # wvr leve to lv99.5
 optimizer_99.generate_codechunk_with_target_exp(99, target_exp=11044184, turn_in_exp=10294000, max_collectables=4)
 
-# ltw leve to lv99.7
-optimizer_99.generate_codechunk_with_target_exp(99, target_exp=15275248, turn_in_exp=10294000, max_collectables=4)
-
 # gsm collectable to lv99
 optimizer_97.generate_codechunk(99, turn_in_exp=3583647, max_collectables=15)
 
 # bsm collectable to lv99.5
 optimizer_99.generate_codechunk_with_target_exp(99, target_exp=10276865, turn_in_exp=4067919, max_collectables=7)
 
-# alc collectable to lv99.2
 
-optimizer_97.generate_codechunk_with_target_exp(99, target_exp=4765040, turn_in_exp=3583647, max_collectables=17)
 
 # cul to lv99.5
 optimizer_99.generate_codechunk_with_target_exp(99, target_exp=8468900, turn_in_exp=4067919, max_collectables=7)
+
+# ltw leve to lv99.7
+optimizer_99.generate_codechunk_with_target_exp(99, target_exp=16275248, turn_in_exp=10294000, max_collectables=4)
+
+# ltw leve to lv96
+optimizer_95.generate_codechunk(96, turn_in_exp=4909520, max_collectables=7)
+
+# alc leve to lv100
+optimizer_99.generate_codechunk(100, turn_in_exp=8366760, max_collectables=6)
+
+# alc collectable to lv98
+
+optimizer_97.generate_codechunk_with_target_exp(98, target_exp=0, turn_in_exp=3583647, max_collectables=10)

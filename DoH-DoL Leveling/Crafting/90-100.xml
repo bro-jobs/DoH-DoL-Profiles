@@ -24,12 +24,12 @@ Authors:  Kayla / Angles24
 	<!-- BSM: Lv91 collectable to Lv92, Lv93 collectable to Lv94, Lv95 collectable to Lv98, Lv99 collectable to Lv99.5 -->
 	<!-- ARM: Lv91 collectable to Lv92, Lv93 collectable to Lv94, Lv95 collectable to Lv98.5, Ra'kaznar Ingot to Lv100 -->
 	<!-- GSM: Lv90 leve (lv91 craft) to Lv92 [5], Lv93 collectable to Lv94, Lv95 collectable to Lv96, Lv97 collectable to Lv99, Lv100 gear to Lv100 -->
-	<!-- LTW: Lv91 collectable to Lv92, Lv93 collectable to Lv94, Lv95 collectable to lv96, lv96 leve (lv97 craft) to lv98 [5], lv98 leve (lv99 craft) to lv99.7 [4], Lv100 gear to Lv100  -->
+	<!-- LTW: Lv91 collectable to Lv92, Lv93 collectable to Lv94, Lv94 leve (lv95 craft) to lv96 [7], lv96 leve (lv97 craft) to lv98 [5], lv98 leve (lv99 craft) to lv99.7 [4], Lv100 gear to Lv100  -->
 	<!-- WVR: Lv90 leve (lv91 craft) to Lv92 [5], Lv92 leve (lv93 craft) to Lv94 [5], Lv94 leve (lv95 craft) to Lv96 [5], lv96 leve (lv97 craft) to lv98 [5], lv98 leve (lv99 craft) to lv99.5 [4], Lv100 gear to Lv100 -->
-	<!-- ALC: Lv90 leve (lv91 craft) to Lv92 [5], Lv92 leve (lv93 craft) to Lv94 [5], Lv94 leve (lv95 craft) to Lv95 [5], lv97 collectable to lv99.2, lv100 gear to Lv100 -->
+	<!-- ALC: Lv90 leve (lv91 craft) to Lv92 [5], Lv92 leve (lv93 craft) to Lv94 [5], Lv94 leve (lv95 craft) to Lv95 [3], lv97 collectable to lv98, lv100 gear to Lv98.5, lv98 leve (lv98 craft) to lv100 [4] -->
 	<!-- CUL: Lv91 collectable to Lv92, Lv93 collectable to Lv98, Lv99 collectable to lv99.5 -->
 	
-	<!-- Total leve allowances used: 53 -->
+	<!-- Total leve allowances used: 64 -->
 	
 	<!-- All classes to Lv94 first -->
 	<!-- CRP to Lv92 -->
@@ -3388,6 +3388,7 @@ Authors:  Kayla / Angles24
 
 		amount = (level, exp) switch
 		{
+		(95, >= 0) => 1,
 		(94, > 9790244) => 1,
 		(94, >= 2046488) => 2,
 		(94, >= 0) => 3,
@@ -3479,25 +3480,22 @@ Authors:  Kayla / Angles24
 </CodeChunk>
 <CodeChunk Name="SetLisbethJsonLTW94">
 	<![CDATA[
-		int amount = 10;
+		int amount = 7;
 		int level = Core.Me.Levels[ClassJobType.Leatherworker];
 		int exp = (int)Experience.CurrentExperience;
 
 		amount = (level, exp) switch
 		{
-		(95, > 14515071) => 1,
-		(95, >= 10767142) => 2,
-		(95, >= 7019213) => 3,
-		(95, >= 3271284) => 4,
-		(95, >= 0) => 5,
-		(94, > 17057355) => 5,
-		(94, >= 13309426) => 6,
-		(94, >= 9561497) => 7,
-		(94, >= 5813568) => 8,
-		(94, >= 2065639) => 9,
-		(94, >= 0) => 10,
-		(93, > 14229710) => 10,
-		(93, >= 0) => 10,
+		(95, > 12728524) => 1,
+		(95, >= 7194048) => 2,
+		(95, >= 1659572) => 3,
+		(95, >= 0) => 4,
+		(94, > 13659096) => 4,
+		(94, >= 8124620) => 5,
+		(94, >= 2590144) => 6,
+		(94, >= 0) => 7,
+		(93, > 12967668) => 7,
+		(93, >= 0) => 7,
 		_ => amount
 		};
 
@@ -3513,7 +3511,7 @@ Authors:  Kayla / Angles24
 			var lisbethObject = lisbeth.GetType().GetProperty("Lisbeth").GetValue(lisbeth);
 			if (lisbethObject != null)
 			{
-				var json = $"[{{'Group':1,'Item':44211,'Amount':{amount},'Enabled':true,'Type':'Leatherworker','Collectable':true}}]";
+				var json = $"[{{'Group':1,'Amount':{amount},'Enabled':true,'Type':'Leve','Hq':true,'LeveId':1733}}]";
 				var orderMethod = lisbethObject.GetType().GetMethod("ExecuteOrders");
 				await (Task<bool>)orderMethod.Invoke(lisbethObject, new object[] { json, false });
 			}
@@ -3560,34 +3558,25 @@ Authors:  Kayla / Angles24
 </CodeChunk>
 <CodeChunk Name="SetLisbethJsonALC96">
 	<![CDATA[
-		int amount = 17;
+		int amount = 10;
 		int level = Core.Me.Levels[ClassJobType.Alchemist];
 		int exp = (int)Experience.CurrentExperience;
 
 		amount = (level, exp) switch
 		{
-		(99, > 1200000) => 1,
-		(99, >= 0) => 2,
-		(98, > 19218822) => 2,
-		(98, >= 14956213) => 3,
-		(98, >= 10693604) => 4,
-		(98, >= 6430995) => 5,
-		(98, >= 2168386) => 6,
-		(98, >= 0) => 7,
-		(97, > 18749609) => 7,
-		(97, >= 14373832) => 8,
-		(97, >= 10082931) => 9,
-		(97, >= 5792030) => 10,
-		(97, >= 1501129) => 11,
-		(97, >= 0) => 12,
-		(96, > 17532228) => 12,
-		(96, >= 13241327) => 13,
-		(96, >= 8950426) => 14,
-		(96, >= 4659525) => 15,
-		(96, >= 368624) => 16,
-		(96, >= 0) => 17,
-		(95, > 14340723) => 17,
-		(95, >= 0) => 17,
+		(97, > 16666099) => 1,
+		(97, >= 12375198) => 2,
+		(97, >= 8084297) => 3,
+		(97, >= 3793396) => 4,
+		(97, >= 0) => 5,
+		(96, > 19824495) => 5,
+		(96, >= 15533594) => 6,
+		(96, >= 11242693) => 7,
+		(96, >= 6951792) => 8,
+		(96, >= 2660891) => 9,
+		(96, >= 0) => 10,
+		(95, > 16632990) => 10,
+		(95, >= 0) => 10,
 		_ => amount
 		};
 
@@ -3612,38 +3601,21 @@ Authors:  Kayla / Angles24
 </CodeChunk>
 <CodeChunk Name="SetLisbethJsonALC96A">
 	<![CDATA[
-		int amount = 21;
+		int amount = 6;
 		int level = Core.Me.Levels[ClassJobType.Alchemist];
 		int exp = (int)Experience.CurrentExperience;
 
 		amount = (level, exp) switch
 		{
-		(99, > 19554678) => 1,
-		(99, >= 15320356) => 2,
-		(99, >= 11086034) => 3,
-		(99, >= 6851712) => 4,
-		(99, >= 2617390) => 5,
-		(99, >= 0) => 6,
-		(98, > 21277207) => 6,
-		(98, >= 16929737) => 7,
-		(98, >= 12667128) => 8,
-		(98, >= 8404519) => 9,
-		(98, >= 4141910) => 10,
-		(98, >= 0) => 11,
-		(97, > 20808009) => 11,
-		(97, >= 16375648) => 12,
-		(97, >= 11943287) => 13,
-		(97, >= 7652386) => 14,
-		(97, >= 3361485) => 15,
-		(97, >= 0) => 16,
-		(96, > 19392584) => 16,
-		(96, >= 15101683) => 17,
-		(96, >= 10810782) => 18,
-		(96, >= 6519881) => 19,
-		(96, >= 2228980) => 20,
-		(96, >= 0) => 21,
-		(95, > 16201079) => 21,
-		(95, >= 0) => 21,
+		(99, > 14636252) => 1,
+		(99, >= 5483504) => 2,
+		(99, >= 0) => 3,
+		(98, > 19309756) => 3,
+		(98, >= 10157008) => 4,
+		(98, >= 1004260) => 5,
+		(98, >= 0) => 6,
+		(97, > 12808512) => 6,
+		(97, >= 0) => 6,
 		_ => amount
 		};
 
@@ -3659,7 +3631,7 @@ Authors:  Kayla / Angles24
 			var lisbethObject = lisbeth.GetType().GetProperty("Lisbeth").GetValue(lisbeth);
 			if (lisbethObject != null)
 			{
-				var json = $"[{{'Group':1,'Item':44224,'Amount':{amount},'Enabled':true,'Type':'Alchemist','Collectable':true}}]";
+				var json = $"[{{'Group':1,'Amount':{amount},'Enabled':true,'Type':'Leve','Hq':true,'LeveId':1756}}]";
 				var orderMethod = lisbethObject.GetType().GetMethod("ExecuteOrders");
 				await (Task<bool>)orderMethod.Invoke(lisbethObject, new object[] { json, false });
 			}
@@ -3984,12 +3956,12 @@ Authors:  Kayla / Angles24
 
 		amount = (level, exp) switch
 		{
-		(99, > 4981248) => 1,
+		(99, > 6981248) => 1,
 		(99, >= 0) => 2,
-		(98, > 16094272) => 2,
-		(98, >= 5014284) => 3,
+		(98, > 18094272) => 2,
+		(98, >= 8014284) => 3,
 		(98, >= 0) => 4,
-		(97, > 14891296) => 4,
+		(97, > 17891296) => 4,
 		(97, >= 0) => 4,
 		_ => amount
 		};
@@ -4060,11 +4032,11 @@ Authors:  Kayla / Angles24
 		amount = (level, exp) switch
 		{
 		(99, >= 0) => 1,
-		(98, > 22943196) => 1,
-		(98, >= 11863208) => 2,
-		(98, >= 783220) => 3,
+		(98, > 23943196) => 1,
+		(98, >= 12863208) => 2,
+		(98, >= 1783220) => 3,
 		(98, >= 0) => 4,
-		(97, > 10660232) => 4,
+		(97, > 11660232) => 4,
 		(97, >= 0) => 4,
 		_ => amount
 		};
