@@ -97,6 +97,7 @@
         <If Condition="IsQuestAcceptQualified(70009)">
           <LLPickupQuest QuestId="70009" NpcId="1038500"/>
           <LLSmallTalk/>
+	  <StopBusy />
         </If>
       </If>
     </If>
@@ -104,6 +105,8 @@
       <GetTo ZoneId="962" XYZ="-355.8746, 21.84602, -93.05553"/> <!-- Area="Old Sharlayan" -->
       <LLTurnIn QuestId="70009" NpcId="1038500" XYZ="-357.8394, 21.84602, -91.32526"/>
       <LLSmallTalk/>
+	  <StopBusy />
+	  <StopBusy />
     </If>
 	</If>	
 	<!-- Unlock first! -->	
@@ -128,6 +131,7 @@
         <If Condition="IsQuestAcceptQualified(69675)">
           <LLPickupQuest QuestId="69675" NpcId="1038562"/>
           <LLSmallTalk/>
+	  <StopBusy />
         </If>
       </If>
 			<If Condition="GetQuestStep(69675) == 1">
@@ -146,6 +150,7 @@
 				<GetTo ZoneId="962" XYZ="-298.1129, 21.84602, -159.9294"/>  
 				<LLTurnIn QuestId="69675" NpcId="1038525" XYZ="-296.5591, 21.84602, -162.1577"/>
 				<LLSmallTalk/>
+	  <StopBusy />
 			</If>			
     </If>
 	</If>
@@ -166,6 +171,7 @@
         <If Condition="IsQuestAcceptQualified(69689)">
           <LLPickupQuest QuestId="69689" NpcId="1038504"/>
           <LLSmallTalk/>
+	  <StopBusy />
         </If>
       </If>
 			<If Condition="GetQuestStep(69689) == 1">
@@ -180,6 +186,7 @@
 				<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/>  
 				<LLTurnIn QuestId="69689" NpcId="1038501" XYZ="-367.3305, 21.84602, -102.9832"/>
 				<LLSmallTalk/>
+	  <StopBusy />
 			</If>			
     </If>
 	</If>
@@ -205,6 +212,7 @@
         <If Condition="IsQuestAcceptQualified(69668)">
           <LLPickupQuest QuestId="69668" NpcId="1039211"/>
           <LLSmallTalk/>
+	  <StopBusy />
         </If>
       </If>
 			<If Condition="GetQuestStep(69668) == 1">
@@ -215,6 +223,7 @@
 				<GetTo ZoneId="962" XYZ="-279.287, 21.84602, -138.3546"/>  
 				<LLTurnIn QuestId="69668" NpcId="1039203" XYZ="-277.699, 21.84602, -139.0861"/>
 				<LLSmallTalk/>
+	  <StopBusy />
 			</If>			
     </If>
 	</If>
@@ -236,6 +245,7 @@
         <If Condition="IsQuestAcceptQualified(69682)">
           <LLPickupQuest QuestId="69682" NpcId="1039227"/>
           <LLSmallTalk/>
+	  <StopBusy />
         </If>
       </If>
 			<If Condition="GetQuestStep(69682) == 1">
@@ -250,6 +260,7 @@
 				<GetTo ZoneId="962" XYZ="-289.2391, 21.84602, -149.1731"/>  
 				<LLTurnIn QuestId="69682" NpcId="1039220" XYZ="-287.1595, 21.84602, -150.7745"/>
 				<LLSmallTalk/>
+	  <StopBusy />
 			</If>			
     </If>
 	</If>
@@ -279,6 +290,7 @@
         <If Condition="IsQuestAcceptQualified(69676)">
           <LLPickupQuest QuestId="69676" NpcId="1038525"/>
           <LLSmallTalk/>
+	  <StopBusy />
         </If>
       </If>
 			<If Condition="GetQuestStep(69676) == 255">
@@ -423,6 +435,7 @@
 					<RunCode name="TurnIn"/>  
 					<LLTurnIn QuestId="69676" NpcId="1038525" XYZ="-299.9291, 21.68615, -159.1658"/>
 					<LLSmallTalk/>
+	  <StopBusy />
 				</If>
 			</If>						
     </If>
@@ -437,6 +450,7 @@
         <If Condition="IsQuestAcceptQualified(69677)">
           <LLPickupQuest QuestId="69677" NpcId="1038525"/>
           <LLSmallTalk/>
+	  <StopBusy />
         </If>
       </If>
 			<If Condition="GetQuestStep(69677) == 255">
@@ -584,6 +598,7 @@
 					<RunCode name="TurnIn"/>  
 					<LLTurnIn QuestId="69677" NpcId="1038525" XYZ="-299.254, 21.84602, -160.175"/>
 					<LLSmallTalk/>
+	  <StopBusy />
 				</If>
 			</If>			
     </If>
@@ -598,6 +613,7 @@
         <If Condition="IsQuestAcceptQualified(69678)">
           <LLPickupQuest QuestId="69678" NpcId="1038525"/>
           <LLSmallTalk/>
+	  <StopBusy />
         </If>
       </If>
 			<If Condition="GetQuestStep(69678) == 255">
@@ -745,6 +761,7 @@
 					<RunCode name="TurnIn"/>  
 					<LLTurnIn QuestId="69678" NpcId="1038525" XYZ="-296.5591, 21.84602, -162.1577"/>
 					<LLSmallTalk/>
+	  <StopBusy />
 				</If>
 			</If>
     </If>
@@ -760,6 +777,7 @@
         <If Condition="IsQuestAcceptQualified(69679)">
           <LLPickupQuest QuestId="69679" NpcId="1038525"/>
           <LLSmallTalk/>
+	  <StopBusy />
         </If>
       </If>
 			<If Condition="GetQuestStep(69679) == 1">
@@ -801,6 +819,7 @@
 				<GetTo ZoneId="962" XYZ="-299.1556, 21.84602, -160.6533"/>  
 				<LLTurnIn DialogOption="0" QuestId="69679" NpcId="1038525" XYZ="-296.5591, 21.84602, -162.1577"/>
 				<LLSmallTalk/>
+	  <StopBusy />
 			</If>			
     </If>
 
@@ -814,6 +833,7 @@
         <If Condition="IsQuestAcceptQualified(69680)">
           <LLPickupQuest QuestId="69680" NpcId="1038525"/>
           <LLSmallTalk/>
+	  <StopBusy />
         </If>
       </If>
 			<If Condition="GetQuestStep(69680) == 255">
@@ -988,6 +1008,7 @@
         <If Condition="IsQuestAcceptQualified(69668)">
           <LLPickupQuest QuestId="69668" NpcId="1039211"/>
           <LLSmallTalk/>
+	  <StopBusy />
         </If>
       </If>
 			<If Condition="GetQuestStep(69668) == 1">
@@ -998,6 +1019,7 @@
 				<GetTo ZoneId="962" XYZ="-279.287, 21.84602, -138.3546"/>  
 				<LLTurnIn QuestId="69668" NpcId="1039203" XYZ="-277.699, 21.84602, -139.0861"/>
 				<LLSmallTalk/>
+	  <StopBusy />
 			</If>			
     </If>
 	
@@ -1008,6 +1030,7 @@
         <If Condition="IsQuestAcceptQualified(69669)">
           <LLPickupQuest QuestId="69669" NpcId="1039203"/>
           <LLSmallTalk/>
+	  <StopBusy />
         </If>
       </If>
 			<If Condition="GetQuestStep(69669) == 255">
@@ -1155,6 +1178,7 @@
 					<RunCode name="TurnIn"/>  
 					<LLTurnIn QuestId="69669" NpcId="1039203" XYZ="-279.287, 21.84602, -138.3546"/>
 					<LLSmallTalk/>
+	  <StopBusy />
 				</If>
 			</If>			
     </If>
@@ -1170,6 +1194,7 @@
         <If Condition="IsQuestAcceptQualified(69670)">
           <LLPickupQuest QuestId="69670" NpcId="1039203"/>
           <LLSmallTalk/>
+	  <StopBusy />
         </If>
       </If>
 			<If Condition="GetQuestStep(69670) == 255">
@@ -1317,6 +1342,7 @@
 					<RunCode name="TurnIn"/>  
 					<LLTurnIn QuestId="69670" NpcId="1039203" XYZ="-279.287, 21.84602, -138.3546"/>
 					<LLSmallTalk/>
+	  <StopBusy />
 				</If>
 			</If>	
     </If>
@@ -1331,6 +1357,7 @@
         <If Condition="IsQuestAcceptQualified(69671)">
           <LLPickupQuest QuestId="69671" NpcId="1039203"/>
           <LLSmallTalk/>
+	  <StopBusy />
         </If>
       </If>
 			<If Condition="GetQuestStep(69671) == 255">
@@ -1478,6 +1505,7 @@
 					<RunCode name="TurnIn"/>  
 					<LLTurnIn QuestId="69671" NpcId="1039203" XYZ="-279.287, 21.84602, -138.3546"/>
 					<LLSmallTalk/>
+	  <StopBusy />
 				</If>
 			</If>			
     </If>	
@@ -1492,6 +1520,7 @@
         <If Condition="IsQuestAcceptQualified(69672)">
           <LLPickupQuest QuestId="69672" NpcId="1039203"/>
           <LLSmallTalk/>
+	  <StopBusy />
         </If>
       </If>
 			<If Condition="GetQuestStep(69672) == 1">
@@ -1524,6 +1553,7 @@
 					<GetTo ZoneId="962" XYZ="-279.287, 21.84602, -138.3546"/> 				
 					<TurnIn ItemId="35836" QuestId="69672" NpcId="1039203" XYZ="-279.287, 21.84602, -138.3546"/>
 					<LLSmallTalk/>
+	  <StopBusy />
 				</If>
 			</If>			
     </If>
@@ -1538,6 +1568,7 @@
         <If Condition="IsQuestAcceptQualified(69673)">
           <LLPickupQuest QuestId="69673" NpcId="1039203"/>
           <LLSmallTalk/>
+	  <StopBusy />
         </If>
       </If>
 			<If Condition="GetQuestStep(69673) == 255">
@@ -1685,6 +1716,7 @@
 					<RunCode name="TurnIn"/>  
 					<LLTurnIn QuestId="69673" NpcId="1039203" XYZ="-279.287, 21.84602, -138.3546"/>
 					<LLSmallTalk/>
+	  <StopBusy />
 				</If>
 			</If>			
     </If>
@@ -1710,6 +1742,7 @@
         <If Condition="IsQuestAcceptQualified(69682)">
           <LLPickupQuest QuestId="69682" NpcId="1039227"/>
           <LLSmallTalk/>
+	  <StopBusy />
         </If>
       </If>
 			<If Condition="GetQuestStep(69682) == 1">
@@ -1724,6 +1757,7 @@
 				<GetTo ZoneId="962" XYZ="-289.2391, 21.84602, -149.1731"/>  
 				<LLTurnIn QuestId="69682" NpcId="1039220" XYZ="-287.1595, 21.84602, -150.7745"/>
 				<LLSmallTalk/>
+	  <StopBusy />
 			</If>			
     </If>
 		
@@ -1734,6 +1768,7 @@
         <If Condition="IsQuestAcceptQualified(69683)">
           <LLPickupQuest QuestId="69683" NpcId="1039220"/>
           <LLSmallTalk/>
+	  <StopBusy />
         </If>
       </If>
 			<If Condition="GetQuestStep(69683) == 255">
@@ -1878,6 +1913,7 @@
 					<RunCode name="TurnIn"/>  
 					<LLTurnIn QuestId="69683" NpcId="1039220" XYZ="-289.3946, 21.84602, -148.49"/>
 					<LLSmallTalk/>
+	  <StopBusy />
 				</If>
 			</If>			
     </If>
@@ -1893,6 +1929,7 @@
         <If Condition="IsQuestAcceptQualified(69684)">
           <LLPickupQuest QuestId="69684" NpcId="1039220"/>
           <LLSmallTalk/>
+	  <StopBusy />
         </If>
       </If>
 			<If Condition="GetQuestStep(69684) == 255">
@@ -2037,6 +2074,7 @@
 					<RunCode name="TurnIn"/>  
 					<LLTurnIn QuestId="69684" NpcId="1039220" XYZ="-289.3946, 21.84602, -148.49"/>
 					<LLSmallTalk/>
+	  <StopBusy />
 				</If>
 			</If>			
     </If>
@@ -2051,6 +2089,7 @@
         <If Condition="IsQuestAcceptQualified(69685)">
           <LLPickupQuest QuestId="69685" NpcId="1039220"/>
           <LLSmallTalk/>
+	  <StopBusy />
         </If>
       </If>
 			<If Condition="GetQuestStep(69685) == 255">
@@ -2195,6 +2234,7 @@
 					<RunCode name="TurnIn"/>  
 					<LLTurnIn QuestId="69685" NpcId="1039220" XYZ="-289.3946, 21.84602, -148.49"/>
 					<LLSmallTalk/>
+	  <StopBusy />
 				</If>
 			</If>				
     </If>
@@ -2209,6 +2249,7 @@
         <If Condition="IsQuestAcceptQualified(69686)">
           <LLPickupQuest QuestId="69686" NpcId="1039220"/>
           <LLSmallTalk/>
+	  <StopBusy />
         </If>
       </If>
 			<If Condition="GetQuestStep(69686) == 1">
@@ -2255,6 +2296,7 @@
 				<GetTo ZoneId="962" XYZ="-289.9919, 21.81535, -148.3173"/>  
 				<LLTurnIn QuestId="69686" NpcId="1039220" XYZ="-287.1595, 21.84602, -150.7745"/>
 				<LLSmallTalk/>
+	  <StopBusy />
 			</If>			
     </If>
 
@@ -2269,6 +2311,7 @@
         <If Condition="IsQuestAcceptQualified(69687)">
           <LLPickupQuest QuestId="69687" NpcId="1039220"/>
           <LLSmallTalk/>
+	  <StopBusy />
         </If>
       </If>
 			<If Condition="GetQuestStep(69687) == 255">
@@ -2413,6 +2456,7 @@
 					<RunCode name="TurnIn"/>  
 					<LLTurnIn QuestId="69687" NpcId="1039220" XYZ="-289.3946, 21.84602, -148.49"/>
 					<LLSmallTalk/>
+	  <StopBusy />
 				</If>
 			</If>			
     </If>
@@ -2431,6 +2475,7 @@
 					<If Condition="IsQuestAcceptQualified(69689)">
 					<LLPickupQuest QuestId="69689" NpcId="1038504"/>
 					<LLSmallTalk/>
+	  <StopBusy />
 					</If>
 				</If>
 				<If Condition="GetQuestStep(69689) == 1">
@@ -2445,6 +2490,7 @@
 					<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/>  
 					<LLTurnIn QuestId="69689" NpcId="1038501" XYZ="-367.3305, 21.84602, -102.9832"/>
 					<LLSmallTalk/>
+	  <StopBusy />
 				</If>			
 			</If>
 		</If>
@@ -2458,6 +2504,7 @@
 					<If Condition="IsQuestAcceptQualified(69689)">
 					<LLPickupQuest QuestId="69689" NpcId="1038504"/>
 					<LLSmallTalk/>
+	  <StopBusy />
 					</If>
 				</If>
 				<If Condition="GetQuestStep(69689) == 1">
@@ -2472,6 +2519,7 @@
 					<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/>  
 					<LLTurnIn QuestId="69689" NpcId="1038501" XYZ="-367.3305, 21.84602, -102.9832"/>
 					<LLSmallTalk/>
+	  <StopBusy />
 				</If>			
 			</If>
 		</If>
@@ -2487,6 +2535,7 @@
 					<If Condition="IsQuestAcceptQualified(69690)">
 						<LLPickupQuest QuestId="69690" NpcId="1038501"/>
 						<LLSmallTalk/>
+	  <StopBusy />
 					</If>
 				</If>
 				<If Condition="GetQuestStep(69690) == 255">
@@ -2515,6 +2564,7 @@
 					<If Condition="IsQuestAcceptQualified(69690)">
 						<LLPickupQuest QuestId="69690" NpcId="1038501"/>
 						<LLSmallTalk/>
+	  <StopBusy />
 					</If>
 				</If>
 				<If Condition="GetQuestStep(69690) == 255">
@@ -2547,6 +2597,7 @@
         			<If Condition="IsQuestAcceptQualified(69691)">
           				<LLPickupQuest QuestId="69691" NpcId="1038501"/>
           				<LLSmallTalk/>
+	  <StopBusy />
         			</If>
       			</If>
 				<If Condition="GetQuestStep(69691) == 255">
@@ -2561,6 +2612,7 @@
 						<RunCode name="TurnIn"/>  
 						<LLTurnIn QuestId="69691" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
 						<LLSmallTalk/>
+	  <StopBusy />
 					</If>
 				</If>				
     		</If>
@@ -2578,6 +2630,7 @@
         			<If Condition="IsQuestAcceptQualified(69691)">
           				<LLPickupQuest QuestId="69691" NpcId="1038501"/>
           				<LLSmallTalk/>
+	  <StopBusy />
         			</If>
       			</If>
 				<If Condition="GetQuestStep(69691) == 255">
@@ -2592,6 +2645,7 @@
 						<RunCode name="TurnIn"/>  
 						<LLTurnIn QuestId="69691" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
 						<LLSmallTalk/>
+	  <StopBusy />
 					</If>
 				</If>				
     		</If>
@@ -2611,6 +2665,7 @@
         			<If Condition="IsQuestAcceptQualified(69692)">
 					<LLPickupQuest QuestId="69692" NpcId="1038501"/>
 					<LLSmallTalk/>
+	  <StopBusy />
 					</If>
 				</If>
 				<If Condition="GetQuestStep(69692) == 255">
@@ -2625,6 +2680,7 @@
 						<RunCode name="TurnIn"/>  
 						<LLTurnIn QuestId="69692" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
 						<LLSmallTalk/>
+	  <StopBusy />
 					</If>
 				</If>			
     		</If>
@@ -2642,6 +2698,7 @@
         			<If Condition="IsQuestAcceptQualified(69692)">
 					<LLPickupQuest QuestId="69692" NpcId="1038501"/>
 					<LLSmallTalk/>
+	  <StopBusy />
 					</If>
 				</If>
 				<If Condition="GetQuestStep(69692) == 255">
@@ -2656,6 +2713,7 @@
 						<RunCode name="TurnIn"/>  
 						<LLTurnIn QuestId="69692" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
 						<LLSmallTalk/>
+	  <StopBusy />
 					</If>
 				</If>			
     		</If>
@@ -2675,6 +2733,7 @@
 					<If Condition="IsQuestAcceptQualified(69693)">
 						<LLPickupQuest QuestId="69693" NpcId="1038501"/>
 						<LLSmallTalk/>
+	  <StopBusy />
 					</If>
 				</If>
 				<If Condition="GetQuestStep(69693) == 1">
@@ -2710,6 +2769,7 @@
 					<GetTo ZoneId="962" XYZ="-365.2083, 21.84602, -104.4485"/>  
 					<LLTurnIn QuestId="69693" NpcId="1038501" XYZ="-367.3305, 21.84602, -102.9832"/>
 					<LLSmallTalk/>
+	  <StopBusy />
 				</If>			
 			</If>		
 		</If>
@@ -2726,6 +2786,7 @@
 					<If Condition="IsQuestAcceptQualified(69693)">
 						<LLPickupQuest QuestId="69693" NpcId="1038501"/>
 						<LLSmallTalk/>
+	  <StopBusy />
 					</If>
 				</If>
 				<If Condition="GetQuestStep(69693) == 1">
@@ -2761,6 +2822,7 @@
 					<GetTo ZoneId="962" XYZ="-365.2083, 21.84602, -104.4485"/>  
 					<LLTurnIn QuestId="69693" NpcId="1038501" XYZ="-367.3305, 21.84602, -102.9832"/>
 					<LLSmallTalk/>
+	  <StopBusy />
 				</If>			
 			</If>	
 		</If>
@@ -2778,6 +2840,7 @@
 					<If Condition="IsQuestAcceptQualified(69694)">
 						<LLPickupQuest QuestId="69694" NpcId="1038501"/>
 						<LLSmallTalk/>
+	  <StopBusy />
 					</If>
 				</If>
 				<If Condition="GetQuestStep(69694) == 255">
@@ -2792,6 +2855,7 @@
 						<RunCode name="TurnIn"/>  
 						<LLTurnIn QuestId="69694" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
 						<LLSmallTalk/>
+	  <StopBusy />
 					</If>
 				</If>			
 			</If>
@@ -2809,6 +2873,7 @@
 					<If Condition="IsQuestAcceptQualified(69694)">
 						<LLPickupQuest QuestId="69694" NpcId="1038501"/>
 						<LLSmallTalk/>
+	  <StopBusy />
 					</If>
 				</If>
 				<If Condition="GetQuestStep(69694) == 255">
@@ -2823,6 +2888,7 @@
 						<RunCode name="TurnIn"/>  
 						<LLTurnIn QuestId="69694" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
 						<LLSmallTalk/>
+	  <StopBusy />
 					</If>
 				</If>			
 			</If>
