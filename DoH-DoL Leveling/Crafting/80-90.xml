@@ -21,7 +21,7 @@ Authors:  Kayla / Angles24
 	
 	<!-- STRATEGY -->
 	<!-- CRP: Lv81 collectable to Lv84, Lv85 collectable to Lv86, Lv87 collectable to Lv88, Lv89 collectable to Lv90 -->
-	<!-- BSM: Lv81 collectable to Lv88, Lv89 collectable to Lv90 -->
+	<!-- BSM: Lv81 collectable to Lv82, Lv82 leve to Lv88 [15], Lv89 collectable to Lv90 -->
 	<!-- ARM: Lv80 leve to Lv82 [6], Lv82 leve to Lv84 [5], Lv85 collectable to Lv87, Studium to Lv90 -->
 	<!-- GSM: Lv81 collectable to Lv84, Lv85 collectable to Lv88, Lv89 collectable to Lv90 -->
 	<!-- LTW: Lv80 leve to Lv82 [6], Lv82 leve to Lv84 [5], Lv84 leve to Lv87 [9], Studium to Lv90 -->
@@ -31,7 +31,7 @@ Authors:  Kayla / Angles24
 	
 	<!-- Studium classes need to get to Lv87, 5681564 XP -->
 	
-	<!-- Total leve allowances used: 56 -->
+	<!-- Total leve allowances used: 71 -->
 	
 	<!-- 80-84 -->
 	<!-- CRP: Rarefied Horse Chestnut Kasa -->
@@ -60,7 +60,7 @@ Authors:  Kayla / Angles24
 	
 	
 	<!-- BSM: Rarefied High Durium Pistol -->
-	<While Condition="(Core.Me.Levels[ClassJobType.Blacksmith] &gt; 79) and  (Core.Me.Levels[ClassJobType.Blacksmith] &lt; 88)">
+	<While Condition="(Core.Me.Levels[ClassJobType.Blacksmith] &gt; 79) and  (Core.Me.Levels[ClassJobType.Blacksmith] &lt; 82)">
 		<If Condition="ClassName != ClassJobType.Blacksmith">
 			<ChangeClass Job="Blacksmith"/>
 		</If>
@@ -188,6 +188,32 @@ Authors:  Kayla / Angles24
 			<AutoInventoryEquip/>
 			<WaitTimer WaitTime="5"/>
 			<RunCode Name="SetLisbethJson7" />
+		</If>
+		<!-- Check to see if have collectables -->
+	<While Condition="HasRarefiedItem() &gt; 0">
+		<LLTurnInCollectables/>
+		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="33926" Count="0"/>
+		</While>
+	</While>
+	</While>
+
+	
+
+	<!-- BSM: Leves to Lv86 (10 allowances) -->
+	<While Condition="(Core.Me.Levels[ClassJobType.Blacksmith] &gt; 81) and  (Core.Me.Levels[ClassJobType.Blacksmith] &lt; 88)">
+		<If Condition="ClassName != ClassJobType.Blacksmith">
+			<ChangeClass Job="Blacksmith"/>
+		</If>
+		<If Condition="ClassName == ClassJobType.Blacksmith">
+			<AutoInventoryEquip/>
+			<WaitTimer WaitTime="5"/>
+			<RunCode Name="SetLisbethJsonBSM82" />
 		</If>
 		<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
@@ -1064,6 +1090,58 @@ Authors:  Kayla / Angles24
 			if (lisbethObject != null)
 			{
 				var json = $"[{{'Group':1,'Amount':{amount},'Enabled':true,'Type':'Leve','Hq':true,'LeveId':1621}}]";
+				var orderMethod = lisbethObject.GetType().GetMethod("ExecuteOrders");
+				await (Task<bool>)orderMethod.Invoke(lisbethObject, new object[] { json, false });
+			}
+		}
+	]]>
+</CodeChunk>
+<CodeChunk Name="SetLisbethJsonBSM82">
+	<![CDATA[
+		int amount = 15;
+		int level = Core.Me.Levels[ClassJobType.Blacksmith];
+		int exp = (int)Experience.CurrentExperience;
+
+		amount = (level, exp) switch
+		{
+		(87, > 6270905) => 1,
+		(87, >= 3012810) => 2,
+		(87, >= 0) => 3,
+		(86, > 8965929) => 3,
+		(86, >= 5688048) => 4,
+		(86, >= 2420060) => 5,
+		(86, >= 0) => 6,
+		(85, > 7399480) => 6,
+		(85, >= 4101798) => 7,
+		(85, >= 823912) => 8,
+		(85, >= 0) => 9,
+		(84, > 5404944) => 9,
+		(84, >= 2117160) => 10,
+		(84, >= 0) => 11,
+		(83, > 5984886) => 11,
+		(83, >= 2627816) => 12,
+		(83, >= 0) => 13,
+		(82, > 6272134) => 13,
+		(82, >= 2974452) => 14,
+		(82, >= 0) => 15,
+		(81, > 5847770) => 15,
+		(81, >= 0) => 15,
+		_ => amount
+		};
+
+		if (Core.Me.HasAura(1411)) {
+			amount = (int)Math.Ceiling((amount + 1) / 2.0);
+		}
+
+		ff14bot.Helpers.Logging.Write($"Estimated amount of leves needed to level to next checkpoint: {amount}");
+
+		var lisbeth = BotManager.Bots.FirstOrDefault(c => c.Name == "Lisbeth");
+		if (lisbeth != null)
+		{
+			var lisbethObject = lisbeth.GetType().GetProperty("Lisbeth").GetValue(lisbeth);
+			if (lisbethObject != null)
+			{
+				var json = $"[{{'Group':1,'Amount':{amount},'Enabled':true,'Type':'Leve','Hq':true,'LeveId':1580}}]";
 				var orderMethod = lisbethObject.GetType().GetMethod("ExecuteOrders");
 				await (Task<bool>)orderMethod.Invoke(lisbethObject, new object[] { json, false });
 			}

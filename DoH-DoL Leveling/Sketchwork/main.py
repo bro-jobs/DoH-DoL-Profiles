@@ -665,3 +665,7 @@ optimizer_99.generate_codechunk(100, turn_in_exp=8366760, max_collectables=6)
 # alc collectable to lv98
 
 optimizer_97.generate_codechunk_with_target_exp(98, target_exp=0, turn_in_exp=3583647, max_collectables=10)
+
+# BSM leve to lv84
+
+optimizer_83.generate_codechunk(88, turn_in_exp=3050260, max_collectables=15)
