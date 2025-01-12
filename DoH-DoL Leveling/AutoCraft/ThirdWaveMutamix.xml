@@ -10,6 +10,8 @@
 	
 	<LisbethTravel Zone="141" Position="115.5356, 31, -390.4169"/>
 	<WaitTimer WaitTime="3"/>
+    <StopBusy />
+    <WaitTimer WaitTime="3"/>
 	<AffixMateria EquipmentId="1827" MateriaId="5699" />
     <WaitTimer WaitTime="3"/>
 	<AffixMateria EquipmentId="2111" MateriaId="5699" />
