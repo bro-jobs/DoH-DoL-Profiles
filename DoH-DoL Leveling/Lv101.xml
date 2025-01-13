@@ -62,11 +62,30 @@
 	<UseInventoryItem ItemID="36605"/>
 	<WaitTimer WaitTime="5"/>
 	
-    <RunCode Name="SetLisbethJson1" />
+	<While Condition="(not HasItem(44432)) or (not HasItem(44433)) or (not HasItem(44434)) or (not HasItem(44435)) or (not HasItem(44436)) or (not HasItem(44437)) or (not HasItem(44438)) or (not HasItem(44439)) or (not HasItem(44440)) or (not HasItem(44441)) or (not HasItem(44411)) or (not HasItem(44412)) or (not HasItem(44413)) or (not HasItem(44414)) or (not HasItem(44415)) or (not HasItem(44416)) or (not HasItem(44417)) or (not HasItem(44418)) or (not HasItem(44419)) or (not HasItem(44420)) or (not HasItem(44422)) or (not HasItem(44423)) or (not HasItem(44424)) or (not HasItem(44425)) or (not HasItem(44426)) or (not HasItem(44427)) or (not HasItem(44428)) or (not HasItem(44429)) or (not HasItem(44430)) or (not HasItem(44431))">
+    	<RunCode Name="SwitchCombatJob"/>
+		<RunCode Name="SetLisbethJson1" />
+	</While>
 
-	<RunCode Name="autosellcheck102" />
+	<RunCode Name="SwitchCombatJob"/>
+
+	<If Condition="HasItem(44432) and HasItem(44433) and HasItem(44434) and HasItem(44435) and HasItem(44436) and HasItem(44437) and HasItem(44438) and HasItem(44439) and HasItem(44440) and HasItem(44441) and HasItem(44411)" >
+		<RunCode Name="autosellcheck102" />
+	</If>
 </Order>
 <CodeChunks>
+<CodeChunk Name="SwitchCombatJob">
+            <![CDATA[ 
+            var Combat = Enumerable.Range(8, 11).Append(0).Append(36);
+            var gearSets = GearsetManager.GearSets.Where(i => i.InUse && !Combat.Contains((int)i.Class)).ToList().OrderByDescending(i=> i.Gear.First().Item.ItemLevel);
+
+            if (gearSets.Any())
+            {
+                gearSets.First().Activate();
+                await Coroutine.Sleep(2000);
+            }
+            ]]>
+        </CodeChunk>
 <CodeChunk Name="MasterBooks">
     <![CDATA[
         // Settings
