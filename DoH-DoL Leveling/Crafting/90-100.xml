@@ -1061,7 +1061,7 @@ Authors:  Kayla / Angles24
 		<If Condition="ClassName == ClassJobType.Armorer">
 			<AutoInventoryEquip/>
 			<WaitTimer WaitTime="5"/>
-			<Lisbeth Json="[{{'Group':1,'Item':44001,'Amount':46,'Enabled':true,'Type':'Armorer','AmountMode':'Restock'}}]" />
+			<Lisbeth Json="[{'Group':1,'Item':44001,'Amount':46,'Enabled':true,'Type':'Armorer','AmountMode':'Restock'}]" />
 		</If>
 		<!-- Check to see if have collectables -->
 		<While Condition="HasRarefiedItem() &gt; 0">
