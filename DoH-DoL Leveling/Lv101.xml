@@ -12,55 +12,8 @@
 
 	<!-- Use folklore books... -->
 	<!-- For some reason, it seems like you need to wait a while before UseInventoryItem works. -->
-	<WaitTimer WaitTime="150"/>
-	<UseInventoryItem ItemID="43878"/>
 	<WaitTimer WaitTime="5"/>
-	<UseInventoryItem ItemID="43879"/>
-	<WaitTimer WaitTime="5"/>
-	<UseInventoryItem ItemID="43880"/>
-	<WaitTimer WaitTime="5"/>
-	<UseInventoryItem ItemID="43881"/>
-	<WaitTimer WaitTime="5"/>
-	<UseInventoryItem ItemID="43882"/>
-	<WaitTimer WaitTime="5"/>
-	<UseInventoryItem ItemID="43883"/>
-	<WaitTimer WaitTime="5"/>
-	<UseInventoryItem ItemID="12238"/>
-	<WaitTimer WaitTime="5"/>
-	<UseInventoryItem ItemID="12239"/>
-	<WaitTimer WaitTime="5"/>
-	<UseInventoryItem ItemID="12240"/>
-	<WaitTimer WaitTime="5"/>
-	<UseInventoryItem ItemID="12698"/>
-	<WaitTimer WaitTime="5"/>
-	<UseInventoryItem ItemID="12699"/>
-	<WaitTimer WaitTime="5"/>
-	<UseInventoryItem ItemID="12700"/>
-	<WaitTimer WaitTime="5"/>
-	<UseInventoryItem ItemID="17838"/>
-	<WaitTimer WaitTime="5"/>
-	<UseInventoryItem ItemID="17839"/>
-	<WaitTimer WaitTime="5"/>
-	<UseInventoryItem ItemID="17840"/>
-	<WaitTimer WaitTime="5"/>
-	<UseInventoryItem ItemID="17841"/>
-	<WaitTimer WaitTime="5"/>
-	<UseInventoryItem ItemID="26808"/>
-	<WaitTimer WaitTime="5"/>
-	<UseInventoryItem ItemID="26809"/>
-	<WaitTimer WaitTime="5"/>
-	<UseInventoryItem ItemID="36598"/>
-	<WaitTimer WaitTime="5"/>
-	<UseInventoryItem ItemID="36600"/>
-	<WaitTimer WaitTime="5"/>
-	<UseInventoryItem ItemID="36601"/>
-	<WaitTimer WaitTime="5"/>
-	<UseInventoryItem ItemID="36602"/>
-	<WaitTimer WaitTime="5"/>
-	<UseInventoryItem ItemID="36604"/>
-	<WaitTimer WaitTime="5"/>
-	<UseInventoryItem ItemID="36605"/>
-	<WaitTimer WaitTime="5"/>
+	<UseUnlockables />
 	
 	<While Condition="(not HasItem(44432)) or (not HasItem(44433)) or (not HasItem(44434)) or (not HasItem(44435)) or (not HasItem(44436)) or (not HasItem(44437)) or (not HasItem(44438)) or (not HasItem(44439)) or (not HasItem(44440)) or (not HasItem(44441)) or (not HasItem(44411)) or (not HasItem(44412)) or (not HasItem(44413)) or (not HasItem(44414)) or (not HasItem(44415)) or (not HasItem(44416)) or (not HasItem(44417)) or (not HasItem(44418)) or (not HasItem(44419)) or (not HasItem(44420)) or (not HasItem(44422)) or (not HasItem(44423)) or (not HasItem(44424)) or (not HasItem(44425)) or (not HasItem(44426)) or (not HasItem(44427)) or (not HasItem(44428)) or (not HasItem(44429)) or (not HasItem(44430)) or (not HasItem(44431))">
     	<RunCode Name="SwitchCombatJob"/>
