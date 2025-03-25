@@ -25,7 +25,7 @@ Angles24
 	<Name>Goldsmith Class Quests</Name>
 	<Order>
 	
-	<If Condition="FreeItemSlots() &lt; 16">
+	<If Condition="FreeItemSlots() &lt; 10">
 		<LogMessage Message="Make Sure there is at least 25 or more free slots in your inventory then hit start on the bot."/>
 		<LLStopBot/>
 	</If>
@@ -59,7 +59,7 @@ Angles24
           <WaitWhile Condition="GetQuestStep(66151) == 255"/>
         </If>
 		</If>
-        <TurnIn QuestId="66151" ItemId="2111" NpcId="1004093" AllowHq="True" XYZ="-25.16223, 12.2, 110.7957" RewardSlot="3"/>
+        <LLTurnIn QuestId="66151" ItemId="2111" NpcId="1004093" AllowHq="True" XYZ="-25.16223, 12.2, 110.7957" RewardSlot="3"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>

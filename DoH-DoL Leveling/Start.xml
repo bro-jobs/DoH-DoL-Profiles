@@ -140,10 +140,6 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 			<UserDialog DialogText="Craft level 21 craft and gather gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and make sure your gearsets are updated with the new gear.\n\nIf you keep seeing this popup even though you have upgraded your gear edit the Start.xml profile and change craft21 1 to craft21 0, save and start the bot again."/>	
 		</If>
 		
-		<If Condition="&craft21; == 1 and &autocraft; == 1">
-			<RunCode Name="autocraftcheck21" />
-		</If>
-		
 		<!-- Sell More Lv1-21 Junk -->
 		
 		<If Condition="&craft21; == 1 and &autosell; == 1">

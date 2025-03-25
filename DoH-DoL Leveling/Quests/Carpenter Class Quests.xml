@@ -25,7 +25,7 @@ Angles24
 	<Name>Carpenter Class Quests</Name>
 	<Order>
 	
-	<If Condition="FreeItemSlots() &lt; 16">
+	<If Condition="FreeItemSlots() &lt; 10">
 		<LogMessage Message="Make Sure there is at least 25 or more free slots in your inventory then hit start on the bot."/>
 		<LLStopBot/>
 	</If>
@@ -59,7 +59,7 @@ Angles24
           <WaitWhile Condition="GetQuestStep(65678) == 255"/>
         </If>
 		</If>
-        <TurnIn QuestId="65678" ItemId="1827" AllowHq="True" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984" RewardSlot="3"/>
+        <LLTurnIn QuestId="65678" ItemId="1827" AllowHq="True" NpcId="1000153" XYZ="-44.87683, -1.250002, 56.83984" RewardSlot="3"/>
         <LLSmallTalk WaitTime="1500"/>
 		<WaitTimer WaitTime="2"/>
 		<AutoInventoryEquip/>

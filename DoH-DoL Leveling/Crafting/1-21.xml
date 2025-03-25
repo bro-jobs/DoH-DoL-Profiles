@@ -34,9 +34,11 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
   </If>
 
   <!-- Change Class WVR - 1 Hempen Yarn60 5333 // 5 Undyed Hempen Cloth 5324 // 12 Cotton Yarn60 5334 // 17 Undyed Cotton Cloth 5325 -->
+  <If Condition="not IsQuestCompleted(66071)">
   <While Condition="ClassName != ClassJobType.Weaver">
 		<ChangeClass Job="Weaver"/>
 	</While>
+  </If>
 	<If Condition="ClassName == ClassJobType.Weaver">
 		<AutoInventoryEquip/>
 
@@ -749,7 +751,6 @@ CUL - 1 Maple Syrup90 4849 // 5 Honey90 4850 // 10 Smooth Butter150 4853 // 15 G
       <!-- THIRD SET OF ORDERS (Levels all classes to 15) -->
 <If Condition="not IsQuestCompleted(66117)">
   <RunCode Name="SetLisbethJson3a" />
-
   <RunCode Name="SetLisbethJson3b" />
 </If>
   <!-- Change Class ALC - 1 Distilled Water 5487 // 5 Antidote90 4564 // 10 Beeswax 5515 // 15 Clove Oil90 4856 -->

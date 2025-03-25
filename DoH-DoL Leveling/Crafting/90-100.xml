@@ -1781,16 +1781,18 @@ Authors:  Kayla / Angles24
 		</While>
 	</While>
 
+	
+
+	<!-- Craft Lv100 gear -->
+	<If Condition="(Core.Me.Levels[ClassJobType.Blacksmith] &lt; 100) or (Core.Me.Levels[ClassJobType.Armorer] &lt; 100) or (Core.Me.Levels[ClassJobType.Goldsmith] &lt; 100) or (Core.Me.Levels[ClassJobType.Leatherworker] &lt; 100) or (Core.Me.Levels[ClassJobType.Weaver] &lt; 100)">
+		<RunCode Name="autocraftcheck100" />
+	</If>
+	
 	<If Condition="(Core.Me.Levels[ClassJobType.Miner] &lt; 100)">
 		<LLoadProfile Path="../Gathering/95-100 Miner.xml"/>
 	</If>
 	<If Condition="(Core.Me.Levels[ClassJobType.Botanist] &lt; 100)">
 		<LLoadProfile Path="../Gathering/95-100 Botanist.xml"/>
-	</If>
-
-	<!-- Craft Lv100 gear -->
-	<If Condition="(Core.Me.Levels[ClassJobType.Blacksmith] &lt; 100) or (Core.Me.Levels[ClassJobType.Armorer] &lt; 100) or (Core.Me.Levels[ClassJobType.Goldsmith] &lt; 100) or (Core.Me.Levels[ClassJobType.Leatherworker] &lt; 100) or (Core.Me.Levels[ClassJobType.Weaver] &lt; 100)">
-		<RunCode Name="autocraftcheck100" />
 	</If>
 
 	<!-- CLEANUPS, in case levels don't reach Lv100 -->

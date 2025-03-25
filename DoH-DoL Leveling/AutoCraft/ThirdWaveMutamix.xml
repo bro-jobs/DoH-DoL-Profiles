@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Profile>
-<Name>Crafting First Wave of Crafting Quest Items</Name>
+<Name>Melding Wave of Crafting Quest Items</Name>
 <Order>
 	
-	<If Condition="not IsQuestCompleted(66176)">
+	
 	
 	<LogMessage Message="Attempting to affix materia to quest items..."/>
 	<LogMessage Message="Traveling to Mutamix to finish the quest at the same time."/>
-	
+	<WaitTimer WaitTime="3"/>
 	<LisbethTravel Zone="141" Position="115.5356, 31, -390.4169"/>
 	<WaitTimer WaitTime="3"/>
     <StopBusy />
@@ -20,7 +20,7 @@
     <WaitTimer WaitTime="3"/>
 	<AffixMateria EquipmentId="4514" MateriaId="5631" />
     <WaitTimer WaitTime="3"/>
-	
+	<If Condition="not IsQuestCompleted(66176)">
 	<TurnIn QuestId="66176" NpcId="1001425" XYZ="115.5356, 31, -390.4169"/>
 	
 	</If>

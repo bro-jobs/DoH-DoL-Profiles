@@ -97,25 +97,44 @@
 	<RunCode Name="SixthWaveSell" />
 	<!-- END LTW, WVR -->
 	
-	<!-- ALC, CUL -->
-	<If Condition="(not IsQuestCompleted(68142)) or (not IsQuestCompleted(67974))">
+	<!-- ALC -->
+	<If Condition="not IsQuestCompleted(67976)">
 	<RunCode Name="SeventhWave" />
     <AutoInventoryEquip/>
 	
-	<If Condition="not IsQuestCompleted(67974)">
+	<If Condition="not IsQuestCompleted(67976)">
 	<LLoadProfile Path="../Quests/Alchemist Class Quests.xml"/>
+	</If>
+	</If>
+
+	<!-- Sell all junk so far -->
+	<RunCode Name="SeventhWaveSell" />
+
+	<!-- Sell off quest rewards to make some space... -->
+	<LLSellItem ItemIds="2471, 2485, 2473, 2475, 2489, 2477, 11939, 11896, 11897, 19523, 19533, 2497, 2511, 2499, 2501, 2515, 2503, 11943, 11900, 11901, 19524, 19534" Armory="true" />
+	<LLDiscardItem ItemIds="2480, 2506" />
+	
+
+	<!-- CUL -->
+	<If Condition="(not IsQuestCompleted(68144))">
+	<RunCode Name="EighthWave" />
+    <AutoInventoryEquip/>
+
+	
+
+	<If Condition="not IsQuestCompleted(68144)">
+	<LLoadProfile Path="../Quests/Culinarian Class Quests.xml"/>
 	</If>
 
 	<!-- Sell off quest rewards to make some space... -->
 	<LLSellItem ItemIds="2471, 2485, 2473, 2475, 2489, 2477, 11939, 11896, 11897, 19523, 19533, 2497, 2511, 2499, 2501, 2515, 2503, 11943, 11900, 11901, 19524, 19534" Armory="true" />
 	<LLDiscardItem ItemIds="2480, 2506" />
-
-	<If Condition="not IsQuestCompleted(68142)">
-	<LLoadProfile Path="../Quests/Culinarian Class Quests.xml"/>
-	</If>
 	</If>
 	
 	<!-- Sell all junk so far -->
+	<!-- Sell off quest rewards to make some space... -->
+	<LLSellItem ItemIds="2471, 2485, 2473, 2475, 2489, 2477, 11939, 11896, 11897, 19523, 19533, 2497, 2511, 2499, 2501, 2515, 2503, 11943, 11900, 11901, 19524, 19534" Armory="true" />
+	<LLDiscardItem ItemIds="2480, 2506" />
 	<RunCode Name="EighthWaveSell" />
 	<!-- END ALC, CUL -->
 		
@@ -506,6 +525,43 @@
 ]]>
 </CodeChunk>
 
+<CodeChunk Name="SeventhWaveSell">
+<![CDATA[
+	try 
+	{
+		string workingDirectory = Directory.GetCurrentDirectory();
+		string settingsPath = Path.Combine(workingDirectory, "Settings");
+		string logFilePath = Path.Combine(settingsPath, "autocraft.txt");
+		
+		// Create the file if it doesn't exist
+		if (!File.Exists(logFilePath))
+		{
+			File.WriteAllText(logFilePath, "");
+		}
+		
+		// Read content and check for craft{level}
+		string content = File.ReadAllText(logFilePath);
+		if (!content.Contains($"sell7"))
+		{
+		
+		// If we get here, we need to run the profile
+		var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+		var profileDir = Path.GetDirectoryName(profilePath);
+		var autoCraftPath = Path.Combine(profileDir, $"SeventhWaveSell.xml");
+		if (File.Exists(autoCraftPath))
+		{
+			await Coroutine.Sleep(500);
+			ff14bot.NeoProfiles.NeoProfileManager.Load(autoCraftPath);
+			await Coroutine.Sleep(1000);
+		}
+		}
+	}
+	catch
+	{
+	}
+]]>
+</CodeChunk>
+
 <CodeChunk Name="ThirdWave">
 <![CDATA[
 	try 
@@ -865,6 +921,43 @@
 	}
 ]]>
 </CodeChunk>
+
+<CodeChunk Name="EighthWave">
+<![CDATA[
+	try 
+	{
+		string workingDirectory = Directory.GetCurrentDirectory();
+		string settingsPath = Path.Combine(workingDirectory, "Settings");
+		string logFilePath = Path.Combine(settingsPath, "autocraft.txt");
+		
+		// Create the file if it doesn't exist
+		if (!File.Exists(logFilePath))
+		{
+			File.WriteAllText(logFilePath, "");
+		}
+		
+		// Read content and check for craft{level}
+		string content = File.ReadAllText(logFilePath);
+		if (!content.Contains($"eighthwave"))
+		{
+		// If we get here, we need to run the profile
+		var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+		var profileDir = Path.GetDirectoryName(profilePath);
+		var autoCraftPath = Path.Combine(profileDir, $"EighthWave.xml");
+		if (File.Exists(autoCraftPath))
+		{
+			await Coroutine.Sleep(500);
+			ff14bot.NeoProfiles.NeoProfileManager.Load(autoCraftPath);
+			await Coroutine.Sleep(1000);
+		}
+		}
+	}
+	catch
+	{
+	}
+]]>
+</CodeChunk>
+
 
 <CodeChunk Name="EighthWaveSell">
 <![CDATA[

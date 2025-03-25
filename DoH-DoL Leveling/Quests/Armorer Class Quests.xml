@@ -25,7 +25,7 @@ Angles24
 	<Name>Armorer Class Quests</Name>
 	<Order>
 	
-	<If Condition="FreeItemSlots() &lt; 16">
+	<If Condition="FreeItemSlots() &lt; 10">
 		<LogMessage Message="Make Sure there is at least 25 or more free slots in your inventory then hit start on the bot."/>
 		<LLStopBot/>
 	</If>
@@ -74,7 +74,7 @@ Angles24
         </If>
       </If>
       <If Condition="HasQuest(65815) and not IsQuestCompleted(65815) and GetQuestStep(65815) == 255">
-        <While Condition="not HasItem(5058)">
+        <While Condition="not HasHqItem(5058)">
           <Lisbeth Json="[{'Id':1,'Group':1,'Item':5058,'Amount':1,'Enabled':true,'Type':'Armorer','Hq':true}]"/>
         </While>
         <GetTo ZoneId="128" XYZ="-56.44318, 39.97361, 178.7289"/>

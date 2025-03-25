@@ -2516,7 +2516,9 @@
 					<LLTalkTo NpcId="1038503" XYZ="-367.0863, 21.84602, -101.7014" QuestId="69689" StepId="2"/>
 				</If>
 				<If Condition="GetQuestStep(69689) == 255">
-					<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/>  
+					<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/> 
+					<ChangeClass Job="Botanist" Force="True"/>
+						<WaitTimer WaitTime="3" />	
 					<LLTurnIn QuestId="69689" NpcId="1038501" XYZ="-367.3305, 21.84602, -102.9832"/>
 					<LLSmallTalk/>
 	  <StopBusy />
@@ -2575,7 +2577,9 @@
 						<While Condition="ItemCount(&PurpleGathersScrip;) &gt; 1000"> <!-- 25199 = White Gatherers' Scrip Scrip -->
 							<BuyInclusionShopItem ItemId="&BuyGatherItem;" Count="0"/>
 						</While>				
-						<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/> 
+						<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/>
+						<ChangeClass Job="Botanist" Force="True"/>
+						<WaitTimer WaitTime="3" />	
 						<RunCode name="TurnIn"/>  
 						<LLTurnIn QuestId="69690" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
 						<WaitTimer WaitTime="3" />
@@ -2641,7 +2645,9 @@
 						<While Condition="ItemCount(&PurpleGathersScrip;) &gt; 1000"> <!-- 25199 = White Gatherers' Scrip Scrip -->
 							<BuyInclusionShopItem ItemId="&BuyGatherItem;" Count="0"/>
 						</While>				
-						<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/> 
+						<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/>
+						<ChangeClass Job="Botanist" Force="True"/>
+						<WaitTimer WaitTime="3" />	
 						<RunCode name="TurnIn"/>  
 						<LLTurnIn QuestId="69691" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
 						<LLSmallTalk/>
@@ -2709,7 +2715,9 @@
 						<While Condition="ItemCount(&PurpleGathersScrip;) &gt; 1000"> <!-- 25199 = White Gatherers' Scrip Scrip -->
 							<BuyInclusionShopItem ItemId="&BuyGatherItem;" Count="0"/>
 						</While>				
-						<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/> 
+						<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/>
+						<ChangeClass Job="Botanist" Force="True"/>
+						<WaitTimer WaitTime="3" />	
 						<RunCode name="TurnIn"/>  
 						<LLTurnIn QuestId="69692" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
 						<LLSmallTalk/>
@@ -2819,7 +2827,9 @@
 					<LLTalkTo NpcId="1038510" XYZ="-92.24078, 11.8, -156.0541" QuestId="69693" StepId="6"/>
 				</If>
 				<If Condition="GetQuestStep(69693) == 255">
-					<GetTo ZoneId="962" XYZ="-365.2083, 21.84602, -104.4485"/>  
+					<GetTo ZoneId="962" XYZ="-365.2083, 21.84602, -104.4485"/>
+					<ChangeClass Job="Botanist" Force="True"/>
+					<WaitTimer WaitTime="3" />	
 					<LLTurnIn QuestId="69693" NpcId="1038501" XYZ="-367.3305, 21.84602, -102.9832"/>
 					<LLSmallTalk/>
 	  <StopBusy />
@@ -2883,7 +2893,9 @@
 					<If condition="LLItemCollectableCount(35603) &gt; 5">
 						<While Condition="ItemCount(&PurpleGathersScrip;) &gt; 1000"> <!-- 25199 = White Gatherers' Scrip Scrip -->
 							<BuyInclusionShopItem ItemId="&BuyGatherItem;" Count="0"/>
-						</While>				
+						</While>
+						<ChangeClass Job="Botanist" Force="True"/>
+						<WaitTimer WaitTime="3" />				
 						<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/> 
 						<RunCode name="TurnIn"/>  
 						<LLTurnIn QuestId="69694" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>

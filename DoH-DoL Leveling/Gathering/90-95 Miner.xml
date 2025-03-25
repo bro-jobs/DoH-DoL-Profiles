@@ -33,6 +33,8 @@ Angles24
 		<!--End Level 95-->
 		
 	</If>
+
+	<UseUnlockables />
 	
 	<LLoadProfile Path="../Start.xml"/>	
 	

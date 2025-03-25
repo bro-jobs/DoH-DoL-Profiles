@@ -25,7 +25,7 @@ Angles24
 	<Name>Blacksmith Class Quests</Name>
 	<Order>
 	
-	<If Condition="FreeItemSlots() &lt; 16">
+	<If Condition="FreeItemSlots() &lt; 10">
 		<LogMessage Message="Make Sure there is at least 25 or more free slots in your inventory then hit start on the bot."/>
 		<LLStopBot/>
 	</If>
