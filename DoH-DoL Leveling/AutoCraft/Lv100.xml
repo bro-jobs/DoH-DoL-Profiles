@@ -186,6 +186,15 @@
                 unlockableItems.Add(itemId);
             }
         }
+
+        // Master XII
+        for (uint itemId = 46314; itemId <= 46321; itemId++)
+        {
+            if (LlamaLibrary.Helpers.UIState.CanUnlockItem(itemId))
+            {
+                unlockableItems.Add(itemId);
+            }
+        }
         
         // If there are items to unlock, create and execute Lisbeth order
         if (unlockableItems.Count > 0)
