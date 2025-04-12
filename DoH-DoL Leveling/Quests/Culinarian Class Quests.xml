@@ -512,7 +512,8 @@ Angles24
             <Lisbeth IgnoreHome="true" Json="[{'Id':1,'Group':1,'Item':17934,'Amount':1,'Enabled':true,'Type':'Culinarian'}]"/>
         </If>
         </While>
-        <LisbethTravel Zone="156" Position="68.3251, 33.06653, -702.5699"/>
+        <LisbethTravel Zone="156"/>
+        <GetTo ZoneId="156" XYZ="68.3251, 33.06653, -702.5699"/>
         <LLHandOver ItemIds="17934" NpcId="1020149" XYZ="69.13855, 33.06653, -701.8082" QuestId="68141" StepId="3"/>
         <LLSmallTalk WaitTime="1500"/>
       </If>
