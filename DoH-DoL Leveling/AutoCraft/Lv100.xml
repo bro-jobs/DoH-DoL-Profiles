@@ -20,6 +20,7 @@
 		</While>
 
 
+    <RunCode Name="SwitchCombatJob"/>
     <RunCode Name="SetLisbethJson2" />
     <LogMessage Message="Crafted Lv100 Gear! Unlocking Master Books now..."/>
     <AutoInventoryEquip/>
