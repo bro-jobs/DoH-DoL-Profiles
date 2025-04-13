@@ -245,9 +245,6 @@
         <!-- Selling Lv100 crafter gear in inventory (likely failed NQs) -->
         <LLSellItem ItemIds="43314, 43315, 43316, 43317, 43318, 43340, 43341, 43342, 43343"/>
 
-        <!-- Selling Materia 9s and 10s (except Cunning) -->
-        <LLSellItem ItemIds="33922, 33923, 33924, 33925, 33927, 33935, 33936, 33937, 33938, 33940"/>
-
 	<WaitTimer WaitTime="5"/>
 	<RunCode Name="Logger" />
 	<WaitTimer WaitTime="5"/>
