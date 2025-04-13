@@ -23,6 +23,9 @@
 		<LLSellItem ItemIds="5515, 1005515, 4595, 1004595, 4849, 1004849, 4856, 1004856" Armory="true"/>
 		<LLSellItem ItemIds="5518, 4660, 1004660, 4847, 1004847, 4640, 1004640, 4850, 1004850" Armory="true"/>
 		<LLSellItem ItemIds="4642, 1004642, 4853, 1004853, 12862" Armory="true"/>
+
+		<!-- Miscellaneous gear from lv1-21 crafting -->
+		<LLSellItem ItemIds="2472, 2342, 2498, 2419, 2469, 2496, 2547, 2343, 2393, 2356, 2381, 2482, 2536, 3543, 3322, 3317, 3324, 3763, 3779, 4307" Armory="true"/>
 		
     <WaitTimer WaitTime="5"/>
 	<RunCode Name="Logger" />
