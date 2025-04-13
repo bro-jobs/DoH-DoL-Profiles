@@ -49,6 +49,9 @@
 		<LLSellItem ItemIds="4205, 1004205, 4313, 1004313, 4309, 1004309, 4304, 1004304, 4095, 1004095, 4099, 1004099, 4431, 1004431, 4435, 1004435" Armory="true"/>
     
 
+		<!-- Lv41 gatherer gear (for some reason it was missed) -->
+		<LLSellItem ItemIds="2808, 3163, 3627, 3410, 3853" Armory="true" />
+
 		<!-- Lv2-5 Materia (except Competence/Command 1, Grasp 3, and Cunning 2-5) -->
 		<LLSellItem ItemIds="5684, 5685, 5686, 5687, 5688, 5689, 5690, 5691, 5692, 5693, 5694, 5695, 5697, 5698, 5700, 5701, 5702, 5703, 5704, 5710, 5711, 5712, 5713" />
 
