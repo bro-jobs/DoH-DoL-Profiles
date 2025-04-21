@@ -85,6 +85,14 @@ Authors:  Kayla / Angles24
 	
 	<!-- ALC: Rarefied Dwarven Mythril Grimoire (Lv80) -->
 	<While Condition="(Core.Me.Levels[ClassJobType.Alchemist] &gt; 79) and  (Core.Me.Levels[ClassJobType.Alchemist] &lt; 87)">
+	<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
+			<!-- Check if we need more commercial engineering manuals -->
+			<If Condition="ItemCount(12667) &lt; 10">
+				<BuyInclusionShopItem ItemId="12667" Count="10"/>
+			</If>
+			<!-- 33926 = Cunning IX. Used for tool melds -->
+			<BuyInclusionShopItem ItemId="33926" Count="0"/>
+		</While>
 	<While Condition="HasRarefiedItem() &gt; 0">
 		<LLTurnInCollectables/>
 		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
