@@ -300,6 +300,16 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 				and IsAetherCurrentCompleted(399,6) and IsAetherCurrentCompleted(399,7) and IsAetherCurrentCompleted(399,8))">
 			<LLoadProfile Path="Aether Currents/Heavensward Aether Currents All.xml"/>
 		</If>
+
+		<!-- Check to see if we have unlocked Collectables and More -->
+		<If Condition="not (IsQuestCompleted(67631) and IsQuestCompleted(66959)
+						and IsQuestCompleted(67632)
+						and IsQuestCompleted(66174) and IsQuestCompleted(66175)
+						and IsQuestCompleted(66999) and IsQuestCompleted(67634)
+						and IsQuestCompleted(68477))">
+			<LogMessage Message="Going to learn Collectables and More!"/>
+			<LLoadProfile Path="Quests/Unlock Collectables and More.xml"/>
+		</If>
 		
 		
 		<!-- Craft Gathering and Crafting Gear 53 -->
@@ -769,8 +779,8 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		<If Condition="not IsOnMap(129)">
 			<GetTo ZoneId="129" XYZ="-84.08636, 18.60033, -12.41393"/><!-- Limsa Lominsa Lower Decks -->
 		</If>
-		<LogMessage Message="Continue Lv80+ with Lisbeth Leveling. PURCHASE 5 RAINCALLERS."/>
-		<UserDialog DialogText="Continue Lv80+ with Lisbeth Leveling. PURCHASE 5 RAINCALLERS."/>
+		<LogMessage Message="Continue Lv80+ with Lisbeth Leveling. PURCHASE 5 RAINCALLERS. Use a Survival Manual before you start."/>
+		<UserDialog DialogText="Continue Lv80+ with Lisbeth Leveling. PURCHASE 5 RAINCALLERS. Use a Survival Manual before you start."/>
 	
 	</Order>
 	<CodeChunks>
