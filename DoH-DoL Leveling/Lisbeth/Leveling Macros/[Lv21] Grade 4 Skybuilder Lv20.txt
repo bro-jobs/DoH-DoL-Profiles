@@ -1,73 +1,3788 @@
 Name: [Lv21] Grade 4 Skybuilder Lv20
 Type: Craft
 Enabled: True
-Conditions: (MaxDurability == 60 && MaxProgress == 74 && Craftsmanship >= 140 && Craftsmanship <= 190 && Control >= 147 && CP >= 325 && RecipeLevel == 20)
+Conditions: (MaxDurability == 60 && MaxProgress == 74 && Craftsmanship >= 145 && Craftsmanship <= 190 && Control >= 152 && CP >= 326 && RecipeLevel == 20)
 Cost: 0
 
-S1:
-- Basic Touch
-- Basic Touch
-- Standard Touch
-=> S12 (IsExcellent == true)
-=> S13
+BASESELECT:
+=> BaseH (Craftsmanship >= 149 && Control >= 156 && CP >= 326 && PlayerLevel >= 32)
+=> BaseG (Craftsmanship >= 146 && Control >= 153 && CP >= 326 && PlayerLevel >= 32)
+=> BaseI (Craftsmanship >= 145 && Control >= 152 && CP >= 326 && PlayerLevel >= 32)
+=> BaseE (Craftsmanship >= 149 && Control >= 156 && CP >= 326 && PlayerLevel >= 26)
+=> BaseD (Craftsmanship >= 146 && Control >= 153 && CP >= 326 && PlayerLevel >= 26)
+=> BaseF (Craftsmanship >= 145 && Control >= 152 && CP >= 326 && PlayerLevel >= 26)
+=> BaseB (Craftsmanship >= 149 && Control >= 156 && CP >= 326 && PlayerLevel >= 21)
+=> BaseA (Craftsmanship >= 146 && Control >= 153 && CP >= 326 && PlayerLevel >= 21)
+=> BaseC (Craftsmanship >= 145 && Control >= 152 && CP >= 326 && PlayerLevel >= 21)
 
-S12:
+BaseI:
+- Standard Touch
+=> I1 (IsGood == true)
+=> I106 (IsExcellent == true)
+=> BaseIC
+
+BaseIC:
+- Basic Synthesis
+=> I123 (IsGood == true)
+=> IMERGE19 (IsExcellent == true)
+=> BaseIC2
+
+BaseIC2:
+- Waste Not
+=> I193 (IsGood == true)
+=> IMERGE19 (IsExcellent == true)
+=> BaseIC3
+
+BaseIC3:
+- Innovation
+=> I245 (IsGood == true)
+=> I264 (IsExcellent == true)
+=> BaseIC4
+
+BaseIC4:
+- Standard Touch
+=> I269 (IsGood == true)
+=> IMERGE3 (IsExcellent == true)
+=> BaseIC5
+
+BaseIC5:
+- Standard Touch
+=> IMERGE15 (IsGood == true)
+=> IMERGE2 (IsExcellent == true)
+=> IMERGE20
+
+I1:
+- Standard Touch
+- Basic Synthesis
+=> I2 (IsGood == true)
+=> I39 (IsExcellent == true)
+=> I1C
+
+I1C:
+- Great Strides
+=> IMERGE22 (IsGood == true)
+=> IMERGE2 (IsExcellent == true)
+=> IMERGE23
+
+I2:
+- Standard Touch
+- Great Strides
+=> I3 (IsGood == true)
+=> IMERGE2 (IsExcellent == true)
+=> I2C
+
+I2C:
+- Waste Not
+=> IMERGE12 (IsGood == true)
+=> IMERGE2 (IsExcellent == true)
+=> I2C2
+
+I2C2:
+- Innovation
+=> IMERGE5 (IsGood == true)
+=> IMERGE2 (IsExcellent == true)
+=> IMERGE14
+
+I3:
+- Standard Touch
+- Great Strides
+=> I4 (IsGood == true)
+=> I9 (IsExcellent == true)
+=> I3C
+
+I3C:
+- Waste Not
+=> IMERGE2 (IsGood == true)
+=> IMERGE2 (IsExcellent == true)
+=> IMERGE7
+
+I4:
+- Waste Not
+- Innovation
+=> IMERGE2 (IsGood == true)
+=> IMERGE2 (IsExcellent == true)
+=> IMERGE4
+
+I9:
+- Waste Not
+- Innovation
+- Standard Touch
+=> IMERGE1 (IsGood == true)
+=> IMERGE1 (IsExcellent == true)
+=> IMERGE1
+
+I39:
+- Standard Touch
+- Waste Not
+- Standard Touch
+=> IMERGE6 (IsGood == true)
+=> IMERGE2 (IsExcellent == true)
+=> IMERGE10
+
+I106:
+- Standard Touch
+- Basic Synthesis
+- Great Strides
+=> IMERGE9 (IsGood == true)
+=> IMERGE2 (IsExcellent == true)
+=> I106C
+
+I106C:
+- Innovation
+=> IMERGE5 (IsGood == true)
+=> IMERGE2 (IsExcellent == true)
+=> IMERGE13
+
+I123:
+- Standard Touch
+- Great Strides
+=> IMERGE22 (IsGood == true)
+=> IMERGE2 (IsExcellent == true)
+=> IMERGE23
+
+I193:
+- Standard Touch
+- Standard Touch
+=> I194 (IsGood == true)
+=> IMERGE3 (IsExcellent == true)
+=> I193C
+
+I193C:
+- Innovation
+=> IMERGE15 (IsGood == true)
+=> IMERGE2 (IsExcellent == true)
+=> IMERGE20
+
+I194:
+- Standard Touch
+- Innovation
+=> IMERGE9 (IsGood == true)
+=> IMERGE2 (IsExcellent == true)
+=> IMERGE11
+
+I245:
+- Standard Touch
+- Standard Touch
+=> I246 (IsGood == true)
+=> IMERGE2 (IsExcellent == true)
+=> I245C
+
+I245C:
+- Great Strides
+=> IMERGE5 (IsGood == true)
+=> IMERGE2 (IsExcellent == true)
+=> IMERGE11
+
+I246:
+- Standard Touch
+- Standard Touch
+=> IMERGE2 (IsGood == true)
+=> IMERGE2 (IsExcellent == true)
+=> IMERGE4
+
+I264:
+- Standard Touch
+- Great Strides
+- Standard Touch
+=> IMERGE2 (IsGood == true)
+=> IMERGE2 (IsExcellent == true)
+=> IMERGE4
+
+I269:
+- Standard Touch
+- Great Strides
+=> IMERGE5 (IsGood == true)
+=> IMERGE2 (IsExcellent == true)
+=> IMERGE11
+
+IMERGE1:
+- Basic Synthesis
+
+IMERGE2:
+- Standard Touch
+- Basic Synthesis
+
+IMERGE3:
+- Standard Touch
+- Great Strides
+- Standard Touch
+=> IMERGE1 (IsGood == true)
+=> IMERGE1 (IsExcellent == true)
+=> IMERGE1
+
+IMERGE4:
+- Standard Touch
+=> IMERGE1 (IsGood == true)
+=> IMERGE1 (IsExcellent == true)
+=> IMERGE1
+
+IMERGE5:
+- Standard Touch
+- Standard Touch
+=> IMERGE1 (IsGood == true)
+=> IMERGE1 (IsExcellent == true)
+=> IMERGE1
+
+IMERGE6:
+- Great Strides
+- Standard Touch
+=> IMERGE1 (IsGood == true)
+=> IMERGE1 (IsExcellent == true)
+=> IMERGE1
+
+IMERGE7:
+- Innovation
+=> IMERGE2 (IsGood == true)
+=> IMERGE2 (IsExcellent == true)
+=> IMERGE4
+
+IMERGE8:
+- Standard Touch
+=> IMERGE2 (IsGood == true)
+=> IMERGE2 (IsExcellent == true)
+=> IMERGE4
+
+IMERGE9:
+- Standard Touch
+- Great Strides
+=> IMERGE2 (IsGood == true)
+=> IMERGE2 (IsExcellent == true)
+=> IMERGE4
+
+IMERGE10:
+- Great Strides
+=> IMERGE2 (IsGood == true)
+=> IMERGE2 (IsExcellent == true)
+=> IMERGE4
+
+IMERGE11:
+- Standard Touch
+=> IMERGE6 (IsGood == true)
+=> IMERGE2 (IsExcellent == true)
+=> IMERGE10
+
+IMERGE12:
+- Standard Touch
+- Great Strides
+=> IMERGE2 (IsGood == true)
+=> IMERGE2 (IsExcellent == true)
+=> IMERGE7
+
+IMERGE13:
+- Standard Touch
+=> IMERGE2 (IsGood == true)
+=> IMERGE2 (IsExcellent == true)
+=> IMERGE10
+
+IMERGE14:
+- Standard Touch
+=> IMERGE5 (IsGood == true)
+=> IMERGE2 (IsExcellent == true)
+=> IMERGE8
+
+IMERGE15:
+- Standard Touch
+- Standard Touch
+=> IMERGE2 (IsGood == true)
+=> IMERGE2 (IsExcellent == true)
+=> IMERGE10
+
+IMERGE16:
+- Standard Touch
+- Innovation
+=> IMERGE9 (IsGood == true)
+=> IMERGE2 (IsExcellent == true)
+=> IMERGE13
+
+IMERGE17:
+- Standard Touch
+=> IMERGE9 (IsGood == true)
+=> IMERGE2 (IsExcellent == true)
+=> IMERGE14
+
+IMERGE18:
+- Innovation
+=> IMERGE9 (IsGood == true)
+=> IMERGE2 (IsExcellent == true)
+=> IMERGE13
+
+IMERGE19:
+- Standard Touch
+- Great Strides
+- Innovation
+=> IMERGE5 (IsGood == true)
+=> IMERGE2 (IsExcellent == true)
+=> IMERGE13
+
+IMERGE20:
+- Standard Touch
+=> IMERGE9 (IsGood == true)
+=> IMERGE2 (IsExcellent == true)
+=> IMERGE11
+
+IMERGE21:
+- Innovation
+=> IMERGE15 (IsGood == true)
+=> IMERGE2 (IsExcellent == true)
+=> IMERGE17
+
+IMERGE22:
+- Standard Touch
+- Waste Not
+=> IMERGE12 (IsGood == true)
+=> IMERGE2 (IsExcellent == true)
+=> IMERGE18
+
+IMERGE23:
+- Waste Not
+=> IMERGE16 (IsGood == true)
+=> IMERGE2 (IsExcellent == true)
+=> IMERGE21
+
+
+
+BaseG:
+- Standard Touch
+=> G1 (IsGood == true)
+=> G92 (IsExcellent == true)
+=> BaseGC
+
+BaseGC:
+- Basic Synthesis
+=> G109 (IsGood == true)
+=> G162 (IsExcellent == true)
+=> BaseGC2
+
+BaseGC2:
+- Waste Not
+=> G173 (IsGood == true)
+=> G206 (IsExcellent == true)
+=> BaseGC3
+
+BaseGC3:
+- Innovation
+=> G215 (IsGood == true)
+=> G234 (IsExcellent == true)
+=> BaseGC4
+
+BaseGC4:
+- Standard Touch
+=> G239 (IsGood == true)
+=> GMERGE5 (IsExcellent == true)
+=> BaseGC5
+
+BaseGC5:
+- Standard Touch
+=> GMERGE14 (IsGood == true)
+=> GMERGE1 (IsExcellent == true)
+=> BaseGC6
+
+BaseGC6:
+- Standard Touch
+=> GMERGE10 (IsGood == true)
+=> GMERGE1 (IsExcellent == true)
+=> GMERGE16
+
+G1:
+- Standard Touch
+- Basic Synthesis
+=> G2 (IsGood == true)
+=> G31 (IsExcellent == true)
+=> G1C
+
+G1C:
+- Great Strides
+=> GMERGE20 (IsGood == true)
+=> GMERGE1 (IsExcellent == true)
+=> GMERGE22
+
+G2:
+- Standard Touch
+- Great Strides
+=> G3 (IsGood == true)
+=> GMERGE1 (IsExcellent == true)
+=> G2C
+
+G2C:
+- Waste Not
+=> GMERGE11 (IsGood == true)
+=> GMERGE1 (IsExcellent == true)
+=> G2C2
+
+G2C2:
+- Innovation
+=> GMERGE4 (IsGood == true)
+=> GMERGE1 (IsExcellent == true)
+=> GMERGE16
+
+G3:
 - Standard Touch
 - Master's Mend
-- Standard Touch
-=> S2 (IsExcellent == true)
-=> S3
+=> GMERGE4 (IsGood == true)
+=> GMERGE1 (IsExcellent == true)
+=> GMERGE9
 
-S13:
+G31:
+- Standard Touch
+- Waste Not
+- Standard Touch
+=> GMERGE3 (IsGood == true)
+=> GMERGE1 (IsExcellent == true)
+=> GMERGE8
+
+G92:
+- Standard Touch
+- Basic Synthesis
+- Great Strides
+=> GMERGE10 (IsGood == true)
+=> GMERGE1 (IsExcellent == true)
+=> GMERGE18
+
+G109:
+- Standard Touch
+- Great Strides
+=> GMERGE20 (IsGood == true)
+=> GMERGE1 (IsExcellent == true)
+=> GMERGE22
+
+G162:
+- Standard Touch
+- Great Strides
+- Innovation
+=> GMERGE4 (IsGood == true)
+=> GMERGE1 (IsExcellent == true)
+=> GMERGE15
+
+G173:
+- Standard Touch
+- Standard Touch
+=> GMERGE19 (IsGood == true)
+=> GMERGE5 (IsExcellent == true)
+=> G173C
+
+G173C:
+- Innovation
+=> GMERGE14 (IsGood == true)
+=> GMERGE1 (IsExcellent == true)
+=> G173C2
+
+G173C2:
+- Standard Touch
+=> GMERGE4 (IsGood == true)
+=> GMERGE1 (IsExcellent == true)
+=> GMERGE15
+
+G206:
+- Standard Touch
+- Innovation
+- Standard Touch
+=> GMERGE4 (IsGood == true)
+=> GMERGE1 (IsExcellent == true)
+=> GMERGE9
+
+G215:
+- Standard Touch
+- Standard Touch
+=> GMERGE11 (IsGood == true)
+=> GMERGE1 (IsExcellent == true)
+=> G215C
+
+G215C:
+- Great Strides
+=> GMERGE4 (IsGood == true)
+=> GMERGE1 (IsExcellent == true)
+=> GMERGE16
+
+G234:
+- Standard Touch
+- Great Strides
+- Standard Touch
+=> GMERGE1 (IsGood == true)
+=> GMERGE1 (IsExcellent == true)
+=> GMERGE6
+
+G239:
+- Standard Touch
+- Great Strides
+=> GMERGE4 (IsGood == true)
+=> GMERGE1 (IsExcellent == true)
+=> GMERGE16
+
+GMERGE1:
+- Standard Touch
+- Basic Synthesis
+
+GMERGE2:
+- Basic Synthesis
+
+GMERGE3:
+- Great Strides
+- Standard Touch
+=> GMERGE2 (IsGood == true)
+=> GMERGE2 (IsExcellent == true)
+=> GMERGE2
+
+GMERGE4:
+- Standard Touch
+- Standard Touch
+=> GMERGE2 (IsGood == true)
+=> GMERGE2 (IsExcellent == true)
+=> GMERGE2
+
+GMERGE5:
+- Standard Touch
+- Great Strides
+- Standard Touch
+=> GMERGE2 (IsGood == true)
+=> GMERGE2 (IsExcellent == true)
+=> GMERGE2
+
+GMERGE6:
+- Standard Touch
+=> GMERGE2 (IsGood == true)
+=> GMERGE2 (IsExcellent == true)
+=> GMERGE2
+
+GMERGE7:
+- Innovation
+=> GMERGE1 (IsGood == true)
+=> GMERGE1 (IsExcellent == true)
+=> GMERGE6
+
+GMERGE8:
+- Great Strides
+=> GMERGE1 (IsGood == true)
+=> GMERGE1 (IsExcellent == true)
+=> GMERGE6
+
+GMERGE9:
+- Standard Touch
+=> GMERGE1 (IsGood == true)
+=> GMERGE1 (IsExcellent == true)
+=> GMERGE6
+
+GMERGE10:
+- Standard Touch
+- Great Strides
+=> GMERGE1 (IsGood == true)
+=> GMERGE1 (IsExcellent == true)
+=> GMERGE6
+
+GMERGE11:
+- Standard Touch
+- Standard Touch
+=> GMERGE1 (IsGood == true)
+=> GMERGE1 (IsExcellent == true)
+=> GMERGE6
+
+GMERGE12:
+- Standard Touch
+- Great Strides
+=> GMERGE1 (IsGood == true)
+=> GMERGE1 (IsExcellent == true)
+=> GMERGE7
+
+GMERGE13:
+- Standard Touch
+=> GMERGE4 (IsGood == true)
+=> GMERGE1 (IsExcellent == true)
+=> GMERGE9
+
+GMERGE14:
+- Standard Touch
+- Standard Touch
+=> GMERGE1 (IsGood == true)
+=> GMERGE1 (IsExcellent == true)
+=> GMERGE8
+
+GMERGE15:
+- Standard Touch
+=> GMERGE1 (IsGood == true)
+=> GMERGE1 (IsExcellent == true)
+=> GMERGE8
+
+GMERGE16:
+- Standard Touch
+=> GMERGE3 (IsGood == true)
+=> GMERGE1 (IsExcellent == true)
+=> GMERGE8
+
+GMERGE17:
+- Standard Touch
+=> GMERGE10 (IsGood == true)
+=> GMERGE1 (IsExcellent == true)
+=> GMERGE13
+
+GMERGE18:
+- Innovation
+=> GMERGE4 (IsGood == true)
+=> GMERGE1 (IsExcellent == true)
+=> GMERGE15
+
+GMERGE19:
+- Standard Touch
+- Innovation
+=> GMERGE4 (IsGood == true)
+=> GMERGE1 (IsExcellent == true)
+=> GMERGE15
+
+GMERGE20:
+- Standard Touch
+- Waste Not
+=> GMERGE12 (IsGood == true)
+=> GMERGE1 (IsExcellent == true)
+=> GMERGE18
+
+GMERGE21:
+- Innovation
+=> GMERGE11 (IsGood == true)
+=> GMERGE1 (IsExcellent == true)
+=> GMERGE17
+
+GMERGE22:
+- Waste Not
+=> GMERGE19 (IsGood == true)
+=> GMERGE1 (IsExcellent == true)
+=> GMERGE21
+
+
+
+BaseH:
+- Standard Touch
+=> H1 (IsGood == true)
+=> H94 (IsExcellent == true)
+=> BaseHC
+
+BaseHC:
+- Basic Synthesis
+=> H111 (IsGood == true)
+=> H162 (IsExcellent == true)
+=> BaseHC2
+
+BaseHC2:
+- Waste Not
+=> H173 (IsGood == true)
+=> H206 (IsExcellent == true)
+=> BaseHC3
+
+BaseHC3:
+- Innovation
+=> H215 (IsGood == true)
+=> H234 (IsExcellent == true)
+=> BaseHC4
+
+BaseHC4:
+- Standard Touch
+=> H239 (IsGood == true)
+=> H252 (IsExcellent == true)
+=> BaseHC5
+
+BaseHC5:
+- Standard Touch
+=> H255 (IsGood == true)
+=> HMERGE1 (IsExcellent == true)
+=> BaseHC6
+
+BaseHC6:
+- Standard Touch
+=> HMERGE11 (IsGood == true)
+=> HMERGE1 (IsExcellent == true)
+=> HMERGE19
+
+H1:
+- Standard Touch
+- Great Strides
+=> H2 (IsGood == true)
+=> HMERGE3 (IsExcellent == true)
+=> H1C
+
+H1C:
+- Innovation
+=> H30 (IsGood == true)
+=> HMERGE3 (IsExcellent == true)
+=> H1C2
+
+H1C2:
+- Standard Touch
+=> H48 (IsGood == true)
+=> HMERGE3 (IsExcellent == true)
+=> H1C3
+
+H1C3:
+- Standard Touch
+=> H66 (IsGood == true)
+=> HMERGE9 (IsExcellent == true)
+=> H1C4
+
+H1C4:
+- Great Strides
+=> HMERGE13 (IsGood == true)
+=> HMERGE9 (IsExcellent == true)
+=> HMERGE17
+
+H2:
+- Standard Touch
+- Waste Not
+=> H3 (IsGood == true)
+=> HMERGE3 (IsExcellent == true)
+=> H2C
+
+H2C:
+- Basic Synthesis
+=> HMERGE16 (IsGood == true)
+=> HMERGE1 (IsExcellent == true)
+=> HMERGE20
+
+H3:
+- Standard Touch
+- Standard Touch
+=> H4 (IsGood == true)
+=> HMERGE3 (IsExcellent == true)
+=> H3C
+
+H3C:
+- Standard Touch
+=> HMERGE2 (IsGood == true)
+=> HMERGE2 (IsExcellent == true)
+=> HMERGE10
+
+H4:
+- Standard Touch
+- Basic Synthesis
+=> HMERGE5 (IsGood == true)
+=> HMERGE5 (IsExcellent == true)
+=> HMERGE5
+
+H30:
+- Standard Touch
+- Standard Touch
+=> HMERGE13 (IsGood == true)
+=> HMERGE9 (IsExcellent == true)
+=> HMERGE17
+
+H48:
+- Standard Touch
+- Great Strides
+=> HMERGE13 (IsGood == true)
+=> HMERGE9 (IsExcellent == true)
+=> HMERGE17
+
+H66:
+- Great Strides
+- Standard Touch
+=> HMERGE7 (IsGood == true)
+=> HMERGE4 (IsExcellent == true)
+=> HMERGE14
+
+H94:
+- Standard Touch
+- Basic Synthesis
+- Great Strides
+=> HMERGE12 (IsGood == true)
+=> HMERGE1 (IsExcellent == true)
+=> HMERGE20
+
+H111:
+- Standard Touch
+- Great Strides
+=> H112 (IsGood == true)
+=> HMERGE1 (IsExcellent == true)
+=> H111C
+
+H111C:
+- Waste Not
+=> HMERGE21 (IsGood == true)
+=> HMERGE1 (IsExcellent == true)
+=> HMERGE23
+
+H112:
+- Standard Touch
+- Waste Not
+=> HMERGE16 (IsGood == true)
+=> HMERGE1 (IsExcellent == true)
+=> HMERGE20
+
+H162:
+- Standard Touch
+- Great Strides
+- Innovation
+=> HMERGE11 (IsGood == true)
+=> HMERGE1 (IsExcellent == true)
+=> HMERGE18
+
+H173:
+- Standard Touch
+- Great Strides
+=> HMERGE21 (IsGood == true)
+=> HMERGE1 (IsExcellent == true)
+=> HMERGE23
+
+H206:
+- Standard Touch
+- Innovation
+- Standard Touch
+=> HMERGE11 (IsGood == true)
+=> HMERGE1 (IsExcellent == true)
+=> H206C
+
+H206C:
+- Standard Touch
+=> HMERGE1 (IsGood == true)
+=> HMERGE1 (IsExcellent == true)
+=> HMERGE8
+
+H215:
+- Standard Touch
+- Standard Touch
+=> HMERGE16 (IsGood == true)
+=> HMERGE1 (IsExcellent == true)
+=> H215C
+
+H215C:
+- Great Strides
+=> HMERGE11 (IsGood == true)
+=> HMERGE1 (IsExcellent == true)
+=> HMERGE19
+
+H234:
+- Standard Touch
+- Great Strides
+- Standard Touch
+=> HMERGE1 (IsGood == true)
+=> HMERGE1 (IsExcellent == true)
+=> HMERGE8
+
+H239:
+- Standard Touch
+- Great Strides
+=> HMERGE11 (IsGood == true)
+=> HMERGE1 (IsExcellent == true)
+=> HMERGE19
+
+H252:
+- Standard Touch
+- Great Strides
+- Standard Touch
+=> HMERGE5 (IsGood == true)
+=> HMERGE5 (IsExcellent == true)
+=> HMERGE5
+
+H255:
+- Standard Touch
+- Standard Touch
+=> HMERGE1 (IsGood == true)
+=> HMERGE1 (IsExcellent == true)
+=> HMERGE15
+
+HMERGE1:
+- Standard Touch
+- Basic Synthesis
+
+HMERGE2:
+- Basic Synthesis
+- Basic Synthesis
+
+HMERGE3:
+- Standard Touch
+- Basic Synthesis
+- Basic Synthesis
+
+HMERGE4:
+- Waste Not
+- Basic Synthesis
+- Basic Synthesis
+
+HMERGE5:
+- Basic Synthesis
+
+HMERGE6:
+- Great Strides
+- Standard Touch
+=> HMERGE5 (IsGood == true)
+=> HMERGE5 (IsExcellent == true)
+=> HMERGE5
+
+HMERGE7:
+- Waste Not
+- Basic Synthesis
+=> HMERGE5 (IsGood == true)
+=> HMERGE5 (IsExcellent == true)
+=> HMERGE5
+
+HMERGE8:
+- Standard Touch
+=> HMERGE5 (IsGood == true)
+=> HMERGE5 (IsExcellent == true)
+=> HMERGE5
+
+HMERGE9:
+- Standard Touch
+- Waste Not
+- Basic Synthesis
+=> HMERGE5 (IsGood == true)
+=> HMERGE5 (IsExcellent == true)
+=> HMERGE5
+
+HMERGE10:
+- Basic Synthesis
+=> HMERGE5 (IsGood == true)
+=> HMERGE5 (IsExcellent == true)
+=> HMERGE5
+
+HMERGE11:
+- Standard Touch
+- Standard Touch
+=> HMERGE5 (IsGood == true)
+=> HMERGE5 (IsExcellent == true)
+=> HMERGE5
+
+HMERGE12:
+- Standard Touch
+- Great Strides
+=> HMERGE1 (IsGood == true)
+=> HMERGE1 (IsExcellent == true)
+=> HMERGE8
+
+HMERGE13:
+- Standard Touch
+- Waste Not
+=> HMERGE2 (IsGood == true)
+=> HMERGE2 (IsExcellent == true)
+=> HMERGE10
+
+HMERGE14:
+- Waste Not
+=> HMERGE2 (IsGood == true)
+=> HMERGE2 (IsExcellent == true)
+=> HMERGE10
+
+HMERGE15:
+- Great Strides
+=> HMERGE1 (IsGood == true)
+=> HMERGE1 (IsExcellent == true)
+=> HMERGE8
+
+HMERGE16:
+- Standard Touch
+- Standard Touch
+=> HMERGE1 (IsGood == true)
+=> HMERGE1 (IsExcellent == true)
+=> HMERGE8
+
+HMERGE17:
+- Standard Touch
+=> HMERGE7 (IsGood == true)
+=> HMERGE4 (IsExcellent == true)
+=> HMERGE14
+
+HMERGE18:
+- Standard Touch
+=> HMERGE1 (IsGood == true)
+=> HMERGE1 (IsExcellent == true)
+=> HMERGE15
+
+HMERGE19:
+- Standard Touch
+=> HMERGE6 (IsGood == true)
+=> HMERGE1 (IsExcellent == true)
+=> HMERGE15
+
+HMERGE20:
+- Innovation
+=> HMERGE11 (IsGood == true)
+=> HMERGE1 (IsExcellent == true)
+=> HMERGE18
+
+HMERGE21:
+- Standard Touch
+- Innovation
+=> HMERGE11 (IsGood == true)
+=> HMERGE1 (IsExcellent == true)
+=> HMERGE18
+
+HMERGE22:
+- Standard Touch
+=> HMERGE12 (IsGood == true)
+=> HMERGE1 (IsExcellent == true)
+=> HMERGE19
+
+HMERGE23:
+- Innovation
+=> HMERGE16 (IsGood == true)
+=> HMERGE1 (IsExcellent == true)
+=> HMERGE22
+
+
+
+BaseD:
+- Standard Touch
+=> D1 (IsGood == true)
+=> D182 (IsExcellent == true)
+=> BaseDC
+
+BaseDC:
+- Waste Not
+=> D211 (IsGood == true)
+=> D310 (IsExcellent == true)
+=> BaseDC2
+
+BaseDC2:
+- Innovation
+=> D335 (IsGood == true)
+=> D394 (IsExcellent == true)
+=> BaseDC3
+
+BaseDC3:
+- Standard Touch
+=> D403 (IsGood == true)
+=> D442 (IsExcellent == true)
+=> BaseDC4
+
+BaseDC4:
+- Standard Touch
+=> D447 (IsGood == true)
+=> DMERGE10 (IsExcellent == true)
+=> BaseDC5
+
+BaseDC5:
+- Standard Touch
+=> D471 (IsGood == true)
+=> DMERGE10 (IsExcellent == true)
+=> BaseDC6
+
+BaseDC6:
+- Standard Touch
+=> DMERGE22 (IsGood == true)
+=> DMERGE10 (IsExcellent == true)
+=> BaseDC7
+
+BaseDC7:
+- Great Strides
+=> DMERGE16 (IsGood == true)
+=> DMERGE10 (IsExcellent == true)
+=> DMERGE25
+
+D1:
+- Standard Touch
+- Basic Synthesis
+=> D2 (IsGood == true)
+=> D65 (IsExcellent == true)
+=> D1C
+
+D1C:
+- Great Strides
+=> D80 (IsGood == true)
+=> DMERGE3 (IsExcellent == true)
+=> D1C2
+
+D1C2:
+- Waste Not
+=> DMERGE38 (IsGood == true)
+=> DMERGE3 (IsExcellent == true)
+=> D1C3
+
+D1C3:
+- Innovation
+=> D148 (IsGood == true)
+=> DMERGE3 (IsExcellent == true)
+=> D1C4
+
+D1C4:
+- Standard Touch
+=> DMERGE24 (IsGood == true)
+=> DMERGE3 (IsExcellent == true)
+=> DMERGE33
+
+D2:
+- Standard Touch
+- Great Strides
+=> D3 (IsGood == true)
+=> DMERGE3 (IsExcellent == true)
+=> D2C
+
+D2C:
+- Innovation
+=> DMERGE29 (IsGood == true)
+=> DMERGE3 (IsExcellent == true)
+=> DMERGE35
+
+D3:
+- Standard Touch
 - Master's Mend
-=> S10 (IsExcellent == true)
-=> S11
+=> D4 (IsGood == true)
+=> DMERGE3 (IsExcellent == true)
+=> D3C
 
-S10:
+D3C:
 - Standard Touch
-- Great Strides
-- Standard Touch
-- Basic Touch
-=> S7
+=> D10 (IsGood == true)
+=> D13 (IsExcellent == true)
+=> DMERGE13
 
-S11:
-- Basic Touch
-=> S8 (IsExcellent == true)
-=> S9
-
-S8:
-- Standard Touch
-=> S3
-
-S9:
-- Standard Touch
-=> S5 (IsExcellent == true)
-=> S6
-
-S5:
+D4:
 - Standard Touch
 - Basic Touch
-=> S7
+=> DMERGE6 (IsGood == true)
+=> DMERGE6 (IsExcellent == true)
+=> DMERGE12
 
-S6:
-- Great Strides
-=> S2 (IsExcellent == true)
-=> S4
+D10:
+- Basic Touch
+- Veneration
+=> DMERGE5 (IsGood == true)
+=> DMERGE5 (IsExcellent == true)
+=> DMERGE5
 
-S4:
-- Standard Touch
-=> S2 (IsExcellent == true)
-=> S3
-
-S3:
-- Great Strides
-=> S2
-
-S2:
-- Standard Touch
-=> S7
-
-S7:
+D13:
+- Basic Touch
 - Veneration
 - Basic Synthesis
+
+D65:
+- Standard Touch
+- Waste Not
+- Standard Touch
+=> DMERGE15 (IsGood == true)
+=> DMERGE3 (IsExcellent == true)
+=> DMERGE30
+
+D80:
+- Standard Touch
+- Innovation
+=> DMERGE29 (IsGood == true)
+=> DMERGE3 (IsExcellent == true)
+=> DMERGE35
+
+D148:
+- Standard Touch
+- Standard Touch
+=> DMERGE9 (IsGood == true)
+=> DMERGE3 (IsExcellent == true)
+=> DMERGE18
+
+D182:
+- Standard Touch
 - Basic Synthesis
+- Great Strides
+=> DMERGE24 (IsGood == true)
+=> DMERGE3 (IsExcellent == true)
+=> DMERGE37
+
+D211:
+- Standard Touch
+- Standard Touch
+=> D212 (IsGood == true)
+=> D245 (IsExcellent == true)
+=> D211C
+
+D211C:
+- Basic Synthesis
+=> DMERGE38 (IsGood == true)
+=> D273 (IsExcellent == true)
+=> D211C2
+
+D211C2:
+- Innovation
+=> D278 (IsGood == true)
+=> DMERGE3 (IsExcellent == true)
+=> D211C3
+
+D211C3:
+- Standard Touch
+=> DMERGE14 (IsGood == true)
+=> DMERGE3 (IsExcellent == true)
+=> DMERGE34
+
+D212:
+- Standard Touch
+- Basic Synthesis
+=> D213 (IsGood == true)
+=> DMERGE3 (IsExcellent == true)
+=> DMERGE37
+
+D213:
+- Standard Touch
+- Great Strides
+=> DMERGE9 (IsGood == true)
+=> DMERGE3 (IsExcellent == true)
+=> D213C
+
+D213C:
+- Innovation
+=> DMERGE9 (IsGood == true)
+=> DMERGE3 (IsExcellent == true)
+=> DMERGE18
+
+D245:
+- Standard Touch
+- Basic Synthesis
+- Great Strides
+=> DMERGE9 (IsGood == true)
+=> DMERGE3 (IsExcellent == true)
+=> DMERGE18
+
+D273:
+- Standard Touch
+- Great Strides
+- Standard Touch
+=> DMERGE6 (IsGood == true)
+=> DMERGE6 (IsExcellent == true)
+=> DMERGE12
+
+D278:
+- Standard Touch
+- Standard Touch
+=> DMERGE9 (IsGood == true)
+=> DMERGE3 (IsExcellent == true)
+=> DMERGE30
+
+D310:
+- Standard Touch
+- Basic Synthesis
+- Innovation
+=> DMERGE24 (IsGood == true)
+=> DMERGE3 (IsExcellent == true)
+=> DMERGE33
+
+D335:
+- Standard Touch
+- Standard Touch
+=> D336 (IsGood == true)
+=> DMERGE10 (IsExcellent == true)
+=> D335C
+
+D335C:
+- Great Strides
+=> DMERGE27 (IsGood == true)
+=> DMERGE10 (IsExcellent == true)
+=> DMERGE36
+
+D336:
+- Standard Touch
+- Standard Touch
+=> DMERGE16 (IsGood == true)
+=> DMERGE10 (IsExcellent == true)
+=> DMERGE25
+
+D394:
+- Standard Touch
+- Basic Synthesis
+- Standard Touch
+=> DMERGE9 (IsGood == true)
+=> DMERGE3 (IsExcellent == true)
+=> DMERGE18
+
+D403:
+- Standard Touch
+- Great Strides
+=> DMERGE27 (IsGood == true)
+=> DMERGE10 (IsExcellent == true)
+=> DMERGE36
+
+D442:
+- Standard Touch
+- Basic Synthesis
+- Standard Touch
+=> DMERGE6 (IsGood == true)
+=> DMERGE6 (IsExcellent == true)
+=> DMERGE12
+
+D447:
+- Standard Touch
+- Standard Touch
+=> DMERGE16 (IsGood == true)
+=> DMERGE10 (IsExcellent == true)
+=> D447C
+
+D447C:
+- Basic Synthesis
+=> DMERGE9 (IsGood == true)
+=> DMERGE3 (IsExcellent == true)
+=> DMERGE30
+
+D471:
+- Standard Touch
+- Basic Synthesis
+=> DMERGE9 (IsGood == true)
+=> DMERGE3 (IsExcellent == true)
+=> DMERGE30
+
+DMERGE1:
+- Basic Synthesis
+- Veneration
+- Basic Synthesis
+
+DMERGE2:
+- Basic Synthesis
+- Basic Synthesis
+
+DMERGE3:
+- Standard Touch
+- Veneration
+- Basic Synthesis
+
+DMERGE4:
+- Standard Touch
+- Basic Synthesis
+- Basic Synthesis
+
+DMERGE5:
+- Basic Synthesis
+
+DMERGE6:
+- Veneration
+- Basic Synthesis
+
+DMERGE7:
+- Basic Synthesis
+=> DMERGE5 (IsGood == true)
+=> DMERGE5 (IsExcellent == true)
+=> DMERGE5
+
+DMERGE8:
+- Basic Synthesis
+- Veneration
+=> DMERGE5 (IsGood == true)
+=> DMERGE5 (IsExcellent == true)
+=> DMERGE5
+
+DMERGE9:
+- Standard Touch
+- Veneration
+=> DMERGE5 (IsGood == true)
+=> DMERGE5 (IsExcellent == true)
+=> DMERGE5
+
+DMERGE10:
+- Standard Touch
+- Basic Synthesis
+- Veneration
+=> DMERGE5 (IsGood == true)
+=> DMERGE5 (IsExcellent == true)
+=> DMERGE5
+
+DMERGE11:
+- Standard Touch
+- Basic Synthesis
+=> DMERGE5 (IsGood == true)
+=> DMERGE5 (IsExcellent == true)
+=> DMERGE5
+
+DMERGE12:
+- Veneration
+=> DMERGE5 (IsGood == true)
+=> DMERGE5 (IsExcellent == true)
+=> DMERGE5
+
+DMERGE13:
+- Standard Touch
+=> DMERGE2 (IsGood == true)
+=> DMERGE2 (IsExcellent == true)
+=> DMERGE7
+
+DMERGE14:
+- Standard Touch
+- Standard Touch
+=> DMERGE6 (IsGood == true)
+=> DMERGE6 (IsExcellent == true)
+=> DMERGE12
+
+DMERGE15:
+- Great Strides
+- Standard Touch
+=> DMERGE6 (IsGood == true)
+=> DMERGE6 (IsExcellent == true)
+=> DMERGE12
+
+DMERGE16:
+- Standard Touch
+- Basic Synthesis
+=> DMERGE6 (IsGood == true)
+=> DMERGE6 (IsExcellent == true)
+=> DMERGE12
+
+DMERGE17:
+- Waste Not
+- Standard Touch
+=> DMERGE6 (IsGood == true)
+=> DMERGE6 (IsExcellent == true)
+=> DMERGE12
+
+DMERGE18:
+- Standard Touch
+=> DMERGE6 (IsGood == true)
+=> DMERGE6 (IsExcellent == true)
+=> DMERGE12
+
+DMERGE19:
+- Basic Synthesis
+=> DMERGE6 (IsGood == true)
+=> DMERGE6 (IsExcellent == true)
+=> DMERGE12
+
+DMERGE20:
+- Great Strides
+- Waste Not
+- Standard Touch
+=> DMERGE6 (IsGood == true)
+=> DMERGE6 (IsExcellent == true)
+=> DMERGE12
+
+DMERGE21:
+- Tricks Of The Trade
+- Master's Mend
+- Basic Touch
+=> DMERGE11 (IsGood == true)
+=> DMERGE4 (IsExcellent == true)
+=> DMERGE13
+
+DMERGE22:
+- Basic Synthesis
+- Great Strides
+=> DMERGE9 (IsGood == true)
+=> DMERGE3 (IsExcellent == true)
+=> DMERGE18
+
+DMERGE23:
+- Great Strides
+- Waste Not
+=> DMERGE9 (IsGood == true)
+=> DMERGE3 (IsExcellent == true)
+=> DMERGE18
+
+DMERGE24:
+- Standard Touch
+- Great Strides
+=> DMERGE9 (IsGood == true)
+=> DMERGE3 (IsExcellent == true)
+=> DMERGE18
+
+DMERGE25:
+- Standard Touch
+=> DMERGE8 (IsGood == true)
+=> DMERGE1 (IsExcellent == true)
+=> DMERGE19
+
+DMERGE26:
+- Waste Not
+=> DMERGE9 (IsGood == true)
+=> DMERGE3 (IsExcellent == true)
+=> DMERGE18
+
+DMERGE27:
+- Standard Touch
+- Standard Touch
+=> DMERGE8 (IsGood == true)
+=> DMERGE1 (IsExcellent == true)
+=> DMERGE19
+
+DMERGE28:
+- Standard Touch
+=> DMERGE9 (IsGood == true)
+=> DMERGE3 (IsExcellent == true)
+=> DMERGE18
+
+DMERGE29:
+- Standard Touch
+- Waste Not
+=> DMERGE9 (IsGood == true)
+=> DMERGE3 (IsExcellent == true)
+=> DMERGE18
+
+DMERGE30:
+- Great Strides
+=> DMERGE9 (IsGood == true)
+=> DMERGE3 (IsExcellent == true)
+=> DMERGE18
+
+DMERGE31:
+- Great Strides
+=> DMERGE17 (IsGood == true)
+=> DMERGE21 (IsExcellent == true)
+=> DMERGE26
+
+DMERGE32:
+- Basic Synthesis
+=> DMERGE15 (IsGood == true)
+=> DMERGE3 (IsExcellent == true)
+=> DMERGE30
+
+DMERGE33:
+- Standard Touch
+=> DMERGE14 (IsGood == true)
+=> DMERGE3 (IsExcellent == true)
+=> DMERGE28
+
+DMERGE34:
+- Standard Touch
+=> DMERGE9 (IsGood == true)
+=> DMERGE3 (IsExcellent == true)
+=> DMERGE30
+
+DMERGE35:
+- Standard Touch
+=> DMERGE23 (IsGood == true)
+=> DMERGE20 (IsExcellent == true)
+=> DMERGE31
+
+DMERGE36:
+- Standard Touch
+=> DMERGE22 (IsGood == true)
+=> DMERGE10 (IsExcellent == true)
+=> DMERGE32
+
+DMERGE37:
+- Innovation
+=> DMERGE14 (IsGood == true)
+=> DMERGE3 (IsExcellent == true)
+=> DMERGE34
+
+DMERGE38:
+- Standard Touch
+- Innovation
+=> DMERGE14 (IsGood == true)
+=> DMERGE3 (IsExcellent == true)
+=> DMERGE34
+
+BaseE:
+- Standard Touch
+=> E1 (IsGood == true)
+=> E190 (IsExcellent == true)
+=> BaseEC
+
+BaseEC:
+- Waste Not
+=> E219 (IsGood == true)
+=> E314 (IsExcellent == true)
+=> BaseEC2
+
+BaseEC2:
+- Innovation
+=> E339 (IsGood == true)
+=> E400 (IsExcellent == true)
+=> BaseEC3
+
+BaseEC3:
+- Standard Touch
+=> E409 (IsGood == true)
+=> E450 (IsExcellent == true)
+=> BaseEC4
+
+BaseEC4:
+- Standard Touch
+=> E455 (IsGood == true)
+=> EMERGE8 (IsExcellent == true)
+=> BaseEC5
+
+BaseEC5:
+- Standard Touch
+=> EMERGE20 (IsGood == true)
+=> EMERGE8 (IsExcellent == true)
+=> EMERGE30
+
+E1:
+- Standard Touch
+- Great Strides
+=> E2 (IsGood == true)
+=> EMERGE8 (IsExcellent == true)
+=> E1C
+
+E1C:
+- Innovation
+=> E70 (IsGood == true)
+=> EMERGE8 (IsExcellent == true)
+=> E1C2
+
+E1C2:
+- Standard Touch
+=> E104 (IsGood == true)
+=> EMERGE8 (IsExcellent == true)
+=> E1C3
+
+E1C3:
+- Standard Touch
+=> E138 (IsGood == true)
+=> EMERGE13 (IsExcellent == true)
+=> EMERGE29
+
+E2:
+- Standard Touch
+- Innovation
+=> E3 (IsGood == true)
+=> EMERGE8 (IsExcellent == true)
+=> E2C
+
+E2C:
+- Standard Touch
+=> EMERGE19 (IsGood == true)
+=> EMERGE13 (IsExcellent == true)
+=> EMERGE29
+
+E3:
+- Standard Touch
+- Standard Touch
+=> EMERGE14 (IsGood == true)
+=> EMERGE9 (IsExcellent == true)
+=> EMERGE18
+
+E70:
+- Standard Touch
+- Standard Touch
+=> EMERGE19 (IsGood == true)
+=> EMERGE13 (IsExcellent == true)
+=> EMERGE25
+
+E104:
+- Standard Touch
+- Great Strides
+=> EMERGE19 (IsGood == true)
+=> EMERGE13 (IsExcellent == true)
+=> EMERGE25
+
+E138:
+- Great Strides
+- Standard Touch
+=> EMERGE14 (IsGood == true)
+=> EMERGE9 (IsExcellent == true)
+=> EMERGE18
+
+E190:
+- Standard Touch
+- Basic Synthesis
+- Great Strides
+=> EMERGE24 (IsGood == true)
+=> EMERGE3 (IsExcellent == true)
+=> E190C
+
+E190C:
+- Innovation
+=> EMERGE12 (IsGood == true)
+=> EMERGE3 (IsExcellent == true)
+=> EMERGE27
+
+E219:
+- Standard Touch
+- Basic Synthesis
+=> E220 (IsGood == true)
+=> E251 (IsExcellent == true)
+=> E219C
+
+E219C:
+- Great Strides
+=> E260 (IsGood == true)
+=> EMERGE3 (IsExcellent == true)
+=> E219C2
+
+E219C2:
+- Innovation
+=> E280 (IsGood == true)
+=> EMERGE3 (IsExcellent == true)
+=> E219C3
+
+E219C3:
+- Standard Touch
+=> EMERGE24 (IsGood == true)
+=> EMERGE3 (IsExcellent == true)
+=> EMERGE28
+
+E220:
+- Standard Touch
+- Great Strides
+=> EMERGE24 (IsGood == true)
+=> EMERGE3 (IsExcellent == true)
+=> E220C
+
+E220C:
+- Innovation
+=> EMERGE12 (IsGood == true)
+=> EMERGE3 (IsExcellent == true)
+=> EMERGE28
+
+E251:
+- Standard Touch
+- Veneration
+- Standard Touch
+=> E252 (IsGood == true)
+=> EMERGE1 (IsExcellent == true)
+=> E251C
+
+E251C:
+- Great Strides
+=> EMERGE1 (IsGood == true)
+=> EMERGE1 (IsExcellent == true)
+=> E251C2
+
+E251C2:
+- Standard Touch
+=> EMERGE2 (IsGood == true)
+=> EMERGE2 (IsExcellent == true)
+=> EMERGE2
+
+E252:
+- Great Strides
+- Standard Touch
+=> EMERGE2 (IsGood == true)
+=> EMERGE2 (IsExcellent == true)
+=> EMERGE2
+
+E260:
+- Standard Touch
+- Innovation
+=> EMERGE12 (IsGood == true)
+=> EMERGE3 (IsExcellent == true)
+=> EMERGE27
+
+E280:
+- Standard Touch
+- Standard Touch
+=> EMERGE6 (IsGood == true)
+=> EMERGE3 (IsExcellent == true)
+=> EMERGE15
+
+E314:
+- Standard Touch
+- Basic Synthesis
+- Innovation
+=> EMERGE24 (IsGood == true)
+=> EMERGE3 (IsExcellent == true)
+=> E314C
+
+E314C:
+- Standard Touch
+=> EMERGE12 (IsGood == true)
+=> EMERGE3 (IsExcellent == true)
+=> E314C2
+
+E314C2:
+- Standard Touch
+=> EMERGE6 (IsGood == true)
+=> EMERGE3 (IsExcellent == true)
+=> EMERGE15
+
+E339:
+- Standard Touch
+- Standard Touch
+=> E340 (IsGood == true)
+=> EMERGE8 (IsExcellent == true)
+=> E339C
+
+E339C:
+- Great Strides
+=> EMERGE20 (IsGood == true)
+=> EMERGE8 (IsExcellent == true)
+=> EMERGE30
+
+E340:
+- Standard Touch
+- Standard Touch
+=> EMERGE17 (IsGood == true)
+=> EMERGE8 (IsExcellent == true)
+=> EMERGE23
+
+E400:
+- Standard Touch
+- Basic Synthesis
+- Standard Touch
+=> EMERGE6 (IsGood == true)
+=> EMERGE3 (IsExcellent == true)
+=> EMERGE15
+
+E409:
+- Standard Touch
+- Great Strides
+=> EMERGE20 (IsGood == true)
+=> EMERGE8 (IsExcellent == true)
+=> EMERGE30
+
+E450:
+- Standard Touch
+- Basic Synthesis
+- Standard Touch
+=> EMERGE5 (IsGood == true)
+=> EMERGE5 (IsExcellent == true)
+=> EMERGE7
+
+E455:
+- Standard Touch
+- Standard Touch
+=> EMERGE17 (IsGood == true)
+=> EMERGE8 (IsExcellent == true)
+=> E455C
+
+E455C:
+- Basic Synthesis
+=> EMERGE6 (IsGood == true)
+=> EMERGE3 (IsExcellent == true)
+=> EMERGE22
+
+EMERGE1:
+- Standard Touch
+- Basic Synthesis
+
+EMERGE2:
+- Basic Synthesis
+
+EMERGE3:
+- Standard Touch
+- Veneration
+- Basic Synthesis
+
+EMERGE4:
+- Basic Synthesis
+- Veneration
+- Basic Synthesis
+
+EMERGE5:
+- Veneration
+- Basic Synthesis
+
+EMERGE6:
+- Standard Touch
+- Veneration
+=> EMERGE2 (IsGood == true)
+=> EMERGE2 (IsExcellent == true)
+=> EMERGE2
+
+EMERGE7:
+- Veneration
+=> EMERGE2 (IsGood == true)
+=> EMERGE2 (IsExcellent == true)
+=> EMERGE2
+
+EMERGE8:
+- Standard Touch
+- Basic Synthesis
+- Veneration
+=> EMERGE2 (IsGood == true)
+=> EMERGE2 (IsExcellent == true)
+=> EMERGE2
+
+EMERGE9:
+- Waste Not
+- Basic Synthesis
+- Veneration
+=> EMERGE2 (IsGood == true)
+=> EMERGE2 (IsExcellent == true)
+=> EMERGE2
+
+EMERGE10:
+- Basic Synthesis
+- Veneration
+=> EMERGE2 (IsGood == true)
+=> EMERGE2 (IsExcellent == true)
+=> EMERGE2
+
+EMERGE11:
+- Great Strides
+- Standard Touch
+=> EMERGE5 (IsGood == true)
+=> EMERGE5 (IsExcellent == true)
+=> EMERGE7
+
+EMERGE12:
+- Standard Touch
+- Standard Touch
+=> EMERGE5 (IsGood == true)
+=> EMERGE5 (IsExcellent == true)
+=> EMERGE7
+
+EMERGE13:
+- Standard Touch
+- Waste Not
+- Basic Synthesis
+=> EMERGE5 (IsGood == true)
+=> EMERGE5 (IsExcellent == true)
+=> EMERGE7
+
+EMERGE14:
+- Waste Not
+- Basic Synthesis
+=> EMERGE5 (IsGood == true)
+=> EMERGE5 (IsExcellent == true)
+=> EMERGE7
+
+EMERGE15:
+- Standard Touch
+=> EMERGE5 (IsGood == true)
+=> EMERGE5 (IsExcellent == true)
+=> EMERGE7
+
+EMERGE16:
+- Basic Synthesis
+=> EMERGE5 (IsGood == true)
+=> EMERGE5 (IsExcellent == true)
+=> EMERGE7
+
+EMERGE17:
+- Standard Touch
+- Basic Synthesis
+=> EMERGE5 (IsGood == true)
+=> EMERGE5 (IsExcellent == true)
+=> EMERGE7
+
+EMERGE18:
+- Waste Not
+=> EMERGE10 (IsGood == true)
+=> EMERGE4 (IsExcellent == true)
+=> EMERGE16
+
+EMERGE19:
+- Standard Touch
+- Waste Not
+=> EMERGE10 (IsGood == true)
+=> EMERGE4 (IsExcellent == true)
+=> EMERGE16
+
+EMERGE20:
+- Standard Touch
+- Standard Touch
+=> EMERGE10 (IsGood == true)
+=> EMERGE4 (IsExcellent == true)
+=> EMERGE16
+
+EMERGE21:
+- Basic Synthesis
+- Great Strides
+=> EMERGE6 (IsGood == true)
+=> EMERGE3 (IsExcellent == true)
+=> EMERGE15
+
+EMERGE22:
+- Great Strides
+=> EMERGE6 (IsGood == true)
+=> EMERGE3 (IsExcellent == true)
+=> EMERGE15
+
+EMERGE23:
+- Standard Touch
+=> EMERGE10 (IsGood == true)
+=> EMERGE4 (IsExcellent == true)
+=> EMERGE16
+
+EMERGE24:
+- Standard Touch
+- Great Strides
+=> EMERGE6 (IsGood == true)
+=> EMERGE3 (IsExcellent == true)
+=> EMERGE15
+
+EMERGE25:
+- Standard Touch
+=> EMERGE14 (IsGood == true)
+=> EMERGE9 (IsExcellent == true)
+=> EMERGE18
+
+EMERGE26:
+- Great Strides
+=> EMERGE17 (IsGood == true)
+=> EMERGE8 (IsExcellent == true)
+=> EMERGE23
+
+EMERGE27:
+- Standard Touch
+=> EMERGE6 (IsGood == true)
+=> EMERGE3 (IsExcellent == true)
+=> EMERGE22
+
+EMERGE28:
+- Standard Touch
+=> EMERGE11 (IsGood == true)
+=> EMERGE3 (IsExcellent == true)
+=> EMERGE22
+
+EMERGE29:
+- Great Strides
+=> EMERGE19 (IsGood == true)
+=> EMERGE13 (IsExcellent == true)
+=> EMERGE25
+
+EMERGE30:
+- Standard Touch
+=> EMERGE21 (IsGood == true)
+=> EMERGE8 (IsExcellent == true)
+=> EMERGE26
+
+
+
+BaseF:
+- Standard Touch
+=> F1 (IsGood == true)
+=> F198 (IsExcellent == true)
+=> BaseFC
+
+BaseFC:
+- Basic Synthesis
+=> F227 (IsGood == true)
+=> FMERGE34 (IsExcellent == true)
+=> BaseFC2
+
+BaseFC2:
+- Waste Not
+=> F365 (IsGood == true)
+=> FMERGE34 (IsExcellent == true)
+=> BaseFC3
+
+BaseFC3:
+- Innovation
+=> F453 (IsGood == true)
+=> F484 (IsExcellent == true)
+=> BaseFC4
+
+BaseFC4:
+- Standard Touch
+=> F489 (IsGood == true)
+=> F510 (IsExcellent == true)
+=> BaseFC5
+
+BaseFC5:
+- Standard Touch
+=> FMERGE30 (IsGood == true)
+=> FMERGE6 (IsExcellent == true)
+=> FMERGE31
+
+F1:
+- Standard Touch
+- Basic Synthesis
+=> F2 (IsGood == true)
+=> F65 (IsExcellent == true)
+=> F1C
+
+F1C:
+- Great Strides
+=> FMERGE37 (IsGood == true)
+=> FMERGE6 (IsExcellent == true)
+=> FMERGE38
+
+F2:
+- Standard Touch
+- Great Strides
+=> F3 (IsGood == true)
+=> FMERGE6 (IsExcellent == true)
+=> F2C
+
+F2C:
+- Waste Not
+=> F31 (IsGood == true)
+=> FMERGE6 (IsExcellent == true)
+=> F2C2
+
+F2C2:
+- Innovation
+=> FMERGE17 (IsGood == true)
+=> FMERGE6 (IsExcellent == true)
+=> FMERGE27
+
+F3:
+- Standard Touch
+- Great Strides
+=> F4 (IsGood == true)
+=> F13 (IsExcellent == true)
+=> F3C
+
+F3C:
+- Waste Not
+=> FMERGE11 (IsGood == true)
+=> FMERGE6 (IsExcellent == true)
+=> FMERGE23
+
+F4:
+- Waste Not
+- Innovation
+=> FMERGE11 (IsGood == true)
+=> FMERGE6 (IsExcellent == true)
+=> FMERGE14
+
+F13:
+- Waste Not
+- Innovation
+- Standard Touch
+=> FMERGE4 (IsGood == true)
+=> FMERGE4 (IsExcellent == true)
+=> FMERGE9
+
+F31:
+- Standard Touch
+- Great Strides
+=> FMERGE11 (IsGood == true)
+=> FMERGE6 (IsExcellent == true)
+=> FMERGE23
+
+F65:
+- Standard Touch
+- Waste Not
+- Standard Touch
+=> FMERGE13 (IsGood == true)
+=> FMERGE6 (IsExcellent == true)
+=> FMERGE21
+
+F198:
+- Standard Touch
+- Basic Synthesis
+- Great Strides
+=> FMERGE20 (IsGood == true)
+=> FMERGE6 (IsExcellent == true)
+=> F198C
+
+F198C:
+- Innovation
+=> FMERGE17 (IsGood == true)
+=> FMERGE6 (IsExcellent == true)
+=> FMERGE26
+
+F227:
+- Standard Touch
+- Great Strides
+=> FMERGE37 (IsGood == true)
+=> FMERGE6 (IsExcellent == true)
+=> FMERGE38
+
+F365:
+- Standard Touch
+- Standard Touch
+=> F366 (IsGood == true)
+=> F391 (IsExcellent == true)
+=> F365C
+
+F365C:
+- Innovation
+=> FMERGE30 (IsGood == true)
+=> FMERGE6 (IsExcellent == true)
+=> FMERGE31
+
+F366:
+- Standard Touch
+- Innovation
+=> FMERGE20 (IsGood == true)
+=> FMERGE6 (IsExcellent == true)
+=> FMERGE29
+
+F391:
+- Standard Touch
+- Great Strides
+- Standard Touch
+=> FMERGE4 (IsGood == true)
+=> FMERGE4 (IsExcellent == true)
+=> FMERGE9
+
+F453:
+- Standard Touch
+- Standard Touch
+=> F454 (IsGood == true)
+=> FMERGE6 (IsExcellent == true)
+=> F453C
+
+F453C:
+- Great Strides
+=> FMERGE17 (IsGood == true)
+=> FMERGE6 (IsExcellent == true)
+=> FMERGE29
+
+F454:
+- Standard Touch
+- Standard Touch
+=> FMERGE11 (IsGood == true)
+=> FMERGE6 (IsExcellent == true)
+=> FMERGE14
+
+F484:
+- Standard Touch
+- Veneration
+- Standard Touch
+=> FMERGE3 (IsGood == true)
+=> FMERGE3 (IsExcellent == true)
+=> F484C
+
+F484C:
+- Standard Touch
+=> FMERGE2 (IsGood == true)
+=> FMERGE2 (IsExcellent == true)
+=> FMERGE2
+
+F489:
+- Standard Touch
+- Great Strides
+=> FMERGE17 (IsGood == true)
+=> FMERGE6 (IsExcellent == true)
+=> FMERGE29
+
+F510:
+- Standard Touch
+- Veneration
+- Standard Touch
+=> FMERGE2 (IsGood == true)
+=> FMERGE2 (IsExcellent == true)
+=> FMERGE2
+
+FMERGE1:
+- Basic Synthesis
+- Basic Synthesis
+
+FMERGE2:
+- Basic Synthesis
+
+FMERGE3:
+- Standard Touch
+- Basic Synthesis
+
+FMERGE4:
+- Veneration
+- Basic Synthesis
+
+FMERGE5:
+- Standard Touch
+- Basic Synthesis
+- Basic Synthesis
+
+FMERGE6:
+- Standard Touch
+- Veneration
+- Basic Synthesis
+
+FMERGE7:
+- Basic Synthesis
+=> FMERGE2 (IsGood == true)
+=> FMERGE2 (IsExcellent == true)
+=> FMERGE2
+
+FMERGE8:
+- Waste Not
+- Veneration
+- Standard Touch
+=> FMERGE2 (IsGood == true)
+=> FMERGE2 (IsExcellent == true)
+=> FMERGE2
+
+FMERGE9:
+- Veneration
+=> FMERGE2 (IsGood == true)
+=> FMERGE2 (IsExcellent == true)
+=> FMERGE2
+
+FMERGE10:
+- Standard Touch
+- Basic Synthesis
+=> FMERGE2 (IsGood == true)
+=> FMERGE2 (IsExcellent == true)
+=> FMERGE2
+
+FMERGE11:
+- Standard Touch
+- Veneration
+=> FMERGE2 (IsGood == true)
+=> FMERGE2 (IsExcellent == true)
+=> FMERGE2
+
+FMERGE12:
+- Great Strides
+- Waste Not
+- Standard Touch
+=> FMERGE4 (IsGood == true)
+=> FMERGE4 (IsExcellent == true)
+=> FMERGE9
+
+FMERGE13:
+- Great Strides
+- Standard Touch
+=> FMERGE4 (IsGood == true)
+=> FMERGE4 (IsExcellent == true)
+=> FMERGE9
+
+FMERGE14:
+- Standard Touch
+=> FMERGE4 (IsGood == true)
+=> FMERGE4 (IsExcellent == true)
+=> FMERGE9
+
+FMERGE15:
+- Waste Not
+- Standard Touch
+=> FMERGE4 (IsGood == true)
+=> FMERGE4 (IsExcellent == true)
+=> FMERGE9
+
+FMERGE16:
+- Standard Touch
+=> FMERGE1 (IsGood == true)
+=> FMERGE1 (IsExcellent == true)
+=> FMERGE7
+
+FMERGE17:
+- Standard Touch
+- Standard Touch
+=> FMERGE4 (IsGood == true)
+=> FMERGE4 (IsExcellent == true)
+=> FMERGE9
+
+FMERGE18:
+- Standard Touch
+=> FMERGE11 (IsGood == true)
+=> FMERGE6 (IsExcellent == true)
+=> FMERGE14
+
+FMERGE19:
+- Great Strides
+- Waste Not
+=> FMERGE11 (IsGood == true)
+=> FMERGE6 (IsExcellent == true)
+=> FMERGE14
+
+FMERGE20:
+- Standard Touch
+- Great Strides
+=> FMERGE11 (IsGood == true)
+=> FMERGE6 (IsExcellent == true)
+=> FMERGE14
+
+FMERGE21:
+- Great Strides
+=> FMERGE11 (IsGood == true)
+=> FMERGE6 (IsExcellent == true)
+=> FMERGE14
+
+FMERGE22:
+- Waste Not
+=> FMERGE11 (IsGood == true)
+=> FMERGE6 (IsExcellent == true)
+=> FMERGE14
+
+FMERGE23:
+- Innovation
+=> FMERGE11 (IsGood == true)
+=> FMERGE6 (IsExcellent == true)
+=> FMERGE14
+
+FMERGE24:
+- Tricks Of The Trade
+- Master's Mend
+- Basic Touch
+=> FMERGE10 (IsGood == true)
+=> FMERGE5 (IsExcellent == true)
+=> FMERGE16
+
+FMERGE25:
+- Standard Touch
+- Great Strides
+=> FMERGE15 (IsGood == true)
+=> FMERGE8 (IsExcellent == true)
+=> FMERGE22
+
+FMERGE26:
+- Standard Touch
+=> FMERGE11 (IsGood == true)
+=> FMERGE6 (IsExcellent == true)
+=> FMERGE21
+
+FMERGE27:
+- Standard Touch
+=> FMERGE17 (IsGood == true)
+=> FMERGE6 (IsExcellent == true)
+=> FMERGE18
+
+FMERGE28:
+- Great Strides
+=> FMERGE15 (IsGood == true)
+=> FMERGE24 (IsExcellent == true)
+=> FMERGE22
+
+FMERGE29:
+- Standard Touch
+=> FMERGE13 (IsGood == true)
+=> FMERGE6 (IsExcellent == true)
+=> FMERGE21
+
+FMERGE30:
+- Standard Touch
+- Standard Touch
+=> FMERGE11 (IsGood == true)
+=> FMERGE6 (IsExcellent == true)
+=> FMERGE21
+
+FMERGE31:
+- Standard Touch
+=> FMERGE20 (IsGood == true)
+=> FMERGE6 (IsExcellent == true)
+=> FMERGE29
+
+FMERGE32:
+- Standard Touch
+=> FMERGE19 (IsGood == true)
+=> FMERGE12 (IsExcellent == true)
+=> FMERGE28
+
+FMERGE33:
+- Standard Touch
+=> FMERGE20 (IsGood == true)
+=> FMERGE6 (IsExcellent == true)
+=> FMERGE27
+
+FMERGE34:
+- Standard Touch
+- Great Strides
+- Innovation
+=> FMERGE17 (IsGood == true)
+=> FMERGE6 (IsExcellent == true)
+=> FMERGE26
+
+FMERGE35:
+- Standard Touch
+- Innovation
+=> FMERGE20 (IsGood == true)
+=> FMERGE6 (IsExcellent == true)
+=> FMERGE26
+
+FMERGE36:
+- Innovation
+=> FMERGE30 (IsGood == true)
+=> FMERGE6 (IsExcellent == true)
+=> FMERGE33
+
+FMERGE37:
+- Standard Touch
+- Innovation
+=> FMERGE25 (IsGood == true)
+=> FMERGE6 (IsExcellent == true)
+=> FMERGE32
+
+FMERGE38:
+- Waste Not
+=> FMERGE35 (IsGood == true)
+=> FMERGE6 (IsExcellent == true)
+=> FMERGE36
+
+
+
+BaseC:
+- Basic Touch
+=> C1 (IsGood == true)
+=> C256 (IsExcellent == true)
+=> BaseCC
+
+BaseCC:
+- Basic Synthesis
+=> C329 (IsGood == true)
+=> C456 (IsExcellent == true)
+=> BaseCC2
+
+BaseCC2:
+- Basic Touch
+=> C493 (IsGood == true)
+=> C570 (IsExcellent == true)
+=> BaseCC3
+
+BaseCC3:
+- Standard Touch
+=> C601 (IsGood == true)
+=> C654 (IsExcellent == true)
+=> BaseCC4
+
+BaseCC4:
+- Master's Mend
+=> C667 (IsGood == true)
+=> C704 (IsExcellent == true)
+=> BaseCC5
+
+BaseCC5:
+- Basic Touch
+=> CMERGE38 (IsGood == true)
+=> CMERGE19 (IsExcellent == true)
+=> BaseCC6
+
+BaseCC6:
+- Standard Touch
+=> CMERGE29 (IsGood == true)
+=> CMERGE2 (IsExcellent == true)
+=> CMERGE36
+
+C1:
+- Standard Touch
+- Basic Touch
+=> C2 (IsGood == true)
+=> C99 (IsExcellent == true)
+=> C1C
+
+C1C:
+- Great Strides
+=> C116 (IsGood == true)
+=> CMERGE6 (IsExcellent == true)
+=> C1C2
+
+C1C2:
+- Standard Touch
+=> C164 (IsGood == true)
+=> CMERGE12 (IsExcellent == true)
+=> C1C3
+
+C1C3:
+- Great Strides
+=> C202 (IsGood == true)
+=> CMERGE12 (IsExcellent == true)
+=> C1C4
+
+C1C4:
+- Waste Not
+=> CMERGE27 (IsGood == true)
+=> CMERGE6 (IsExcellent == true)
+=> CMERGE39
+
+C2:
+- Standard Touch
+- Standard Touch
+=> C3 (IsGood == true)
+=> C30 (IsExcellent == true)
+=> C2C
+
+C2C:
+- Master's Mend
+=> CMERGE35 (IsGood == true)
+=> CMERGE6 (IsExcellent == true)
+=> C2C2
+
+C2C2:
+- Standard Touch
+=> CMERGE28 (IsGood == true)
+=> CMERGE6 (IsExcellent == true)
+=> CMERGE30
+
+C3:
+- Master's Mend
+- Standard Touch
+=> CMERGE28 (IsGood == true)
+=> CMERGE6 (IsExcellent == true)
+=> CMERGE30
+
+C30:
+- Tricks Of The Trade
+- Master's Mend
+- Standard Touch
+=> CMERGE28 (IsGood == true)
+=> CMERGE6 (IsExcellent == true)
+=> CMERGE30
+
+C99:
+- Standard Touch
+- Basic Synthesis
+- Great Strides
+=> CMERGE14 (IsGood == true)
+=> CMERGE10 (IsExcellent == true)
+=> CMERGE21
+
+C116:
+- Standard Touch
+- Waste Not
+=> CMERGE35 (IsGood == true)
+=> CMERGE6 (IsExcellent == true)
+=> C116C
+
+C116C:
+- Standard Touch
+=> CMERGE28 (IsGood == true)
+=> CMERGE6 (IsExcellent == true)
+=> C116C2
+
+C116C2:
+- Great Strides
+=> CMERGE20 (IsGood == true)
+=> CMERGE6 (IsExcellent == true)
+=> CMERGE26
+
+C164:
+- Great Strides
+- Waste Not
+=> CMERGE27 (IsGood == true)
+=> CMERGE6 (IsExcellent == true)
+=> CMERGE39
+
+C202:
+- Standard Touch
+- Master's Mend
+=> CMERGE20 (IsGood == true)
+=> CMERGE6 (IsExcellent == true)
+=> CMERGE26
+
+C256:
+- Standard Touch
+- Basic Synthesis
+- Standard Touch
+=> C257 (IsGood == true)
+=> CMERGE2 (IsExcellent == true)
+=> C256C
+
+C256C:
+- Great Strides
+=> CMERGE23 (IsGood == true)
+=> CMERGE2 (IsExcellent == true)
+=> CMERGE37
+
+C257:
+- Great Strides
+- Standard Touch
+=> CMERGE25 (IsGood == true)
+=> CMERGE18 (IsExcellent == true)
+=> CMERGE34
+
+C329:
+- Standard Touch
+- Great Strides
+=> C330 (IsGood == true)
+=> CMERGE2 (IsExcellent == true)
+=> C329C
+
+C329C:
+- Waste Not
+=> C372 (IsGood == true)
+=> CMERGE2 (IsExcellent == true)
+=> C329C2
+
+C329C2:
+- Basic Touch
+=> CMERGE38 (IsGood == true)
+=> CMERGE19 (IsExcellent == true)
+=> C329C3
+
+C329C3:
+- Standard Touch
+=> CMERGE29 (IsGood == true)
+=> CMERGE11 (IsExcellent == true)
+=> CMERGE36
+
+C330:
+- Standard Touch
+- Great Strides
+=> CMERGE23 (IsGood == true)
+=> CMERGE2 (IsExcellent == true)
+=> CMERGE37
+
+C372:
+- Standard Touch
+- Great Strides
+=> CMERGE15 (IsGood == true)
+=> CMERGE2 (IsExcellent == true)
+=> CMERGE32
+
+C456:
+- Standard Touch
+- Waste Not
+- Standard Touch
+=> CMERGE29 (IsGood == true)
+=> CMERGE2 (IsExcellent == true)
+=> CMERGE36
+
+C493:
+- Standard Touch
+- Master's Mend
+=> C494 (IsGood == true)
+=> CMERGE19 (IsExcellent == true)
+=> C493C
+
+C493C:
+- Basic Touch
+=> CMERGE33 (IsGood == true)
+=> CMERGE11 (IsExcellent == true)
+=> C493C2
+
+C493C2:
+- Standard Touch
+=> CMERGE24 (IsGood == true)
+=> CMERGE2 (IsExcellent == true)
+=> C493C3
+
+C493C3:
+- Great Strides
+=> CMERGE15 (IsGood == true)
+=> CMERGE2 (IsExcellent == true)
+=> CMERGE31
+
+C494:
+- Standard Touch
+- Standard Touch
+=> CMERGE24 (IsGood == true)
+=> CMERGE2 (IsExcellent == true)
+=> CMERGE32
+
+C570:
+- Standard Touch
+- Great Strides
+- Standard Touch
+=> CMERGE25 (IsGood == true)
+=> CMERGE18 (IsExcellent == true)
+=> CMERGE34
+
+C601:
+- Standard Touch
+- Master's Mend
+=> CMERGE33 (IsGood == true)
+=> CMERGE11 (IsExcellent == true)
+=> C601C
+
+C601C:
+- Great Strides
+=> CMERGE24 (IsGood == true)
+=> CMERGE2 (IsExcellent == true)
+=> C601C2
+
+C601C2:
+- Basic Touch
+=> CMERGE24 (IsGood == true)
+=> CMERGE2 (IsExcellent == true)
+=> CMERGE32
+
+C654:
+- Standard Touch
+- Master's Mend
+- Standard Touch
+=> CMERGE9 (IsGood == true)
+=> CMERGE2 (IsExcellent == true)
+=> CMERGE22
+
+C667:
+- Basic Touch
+- Standard Touch
+=> CMERGE29 (IsGood == true)
+=> CMERGE2 (IsExcellent == true)
+=> CMERGE36
+
+C704:
+- Standard Touch
+- Veneration
+- Standard Touch
+=> CMERGE5 (IsGood == true)
+=> CMERGE5 (IsExcellent == true)
+=> C704C
+
+C704C:
+- Great Strides
+=> CMERGE5 (IsGood == true)
+=> CMERGE5 (IsExcellent == true)
+=> C704C2
+
+C704C2:
+- Standard Touch
+=> CMERGE1 (IsGood == true)
+=> CMERGE1 (IsExcellent == true)
+=> CMERGE1
+
+CMERGE1:
+- Basic Synthesis
+
+CMERGE2:
+- Standard Touch
+- Veneration
+- Basic Synthesis
+
+CMERGE3:
+- Basic Synthesis
+- Veneration
+- Basic Synthesis
+
+CMERGE4:
+- Veneration
+- Basic Synthesis
+
+CMERGE5:
+- Standard Touch
+- Basic Synthesis
+
+CMERGE6:
+- Standard Touch
+- Basic Synthesis
+- Veneration
+=> CMERGE1 (IsGood == true)
+=> CMERGE1 (IsExcellent == true)
+=> CMERGE1
+
+CMERGE7:
+- Basic Synthesis
+- Veneration
+=> CMERGE1 (IsGood == true)
+=> CMERGE1 (IsExcellent == true)
+=> CMERGE1
+
+CMERGE8:
+- Veneration
+=> CMERGE1 (IsGood == true)
+=> CMERGE1 (IsExcellent == true)
+=> CMERGE1
+
+CMERGE9:
+- Standard Touch
+- Veneration
+=> CMERGE1 (IsGood == true)
+=> CMERGE1 (IsExcellent == true)
+=> CMERGE1
+
+CMERGE10:
+- Waste Not
+- Veneration
+- Standard Touch
+=> CMERGE1 (IsGood == true)
+=> CMERGE1 (IsExcellent == true)
+=> CMERGE1
+
+CMERGE11:
+- Standard Touch
+- Veneration
+- Standard Touch
+=> CMERGE1 (IsGood == true)
+=> CMERGE1 (IsExcellent == true)
+=> CMERGE1
+
+CMERGE12:
+- Standard Touch
+- Waste Not
+- Basic Synthesis
+=> CMERGE4 (IsGood == true)
+=> CMERGE4 (IsExcellent == true)
+=> CMERGE8
+
+CMERGE13:
+- Standard Touch
+=> CMERGE4 (IsGood == true)
+=> CMERGE4 (IsExcellent == true)
+=> CMERGE8
+
+CMERGE14:
+- Waste Not
+- Standard Touch
+=> CMERGE4 (IsGood == true)
+=> CMERGE4 (IsExcellent == true)
+=> CMERGE8
+
+CMERGE15:
+- Standard Touch
+- Standard Touch
+=> CMERGE4 (IsGood == true)
+=> CMERGE4 (IsExcellent == true)
+=> CMERGE8
+
+CMERGE16:
+- Great Strides
+- Standard Touch
+=> CMERGE4 (IsGood == true)
+=> CMERGE4 (IsExcellent == true)
+=> CMERGE8
+
+CMERGE17:
+- Basic Synthesis
+=> CMERGE4 (IsGood == true)
+=> CMERGE4 (IsExcellent == true)
+=> CMERGE8
+
+CMERGE18:
+- Great Strides
+- Waste Not
+- Standard Touch
+=> CMERGE4 (IsGood == true)
+=> CMERGE4 (IsExcellent == true)
+=> CMERGE8
+
+CMERGE19:
+- Standard Touch
+- Great Strides
+- Standard Touch
+=> CMERGE4 (IsGood == true)
+=> CMERGE4 (IsExcellent == true)
+=> CMERGE8
+
+CMERGE20:
+- Standard Touch
+- Basic Synthesis
+=> CMERGE4 (IsGood == true)
+=> CMERGE4 (IsExcellent == true)
+=> CMERGE8
+
+CMERGE21:
+- Waste Not
+=> CMERGE9 (IsGood == true)
+=> CMERGE2 (IsExcellent == true)
+=> CMERGE13
+
+CMERGE22:
+- Great Strides
+=> CMERGE9 (IsGood == true)
+=> CMERGE2 (IsExcellent == true)
+=> CMERGE13
+
+CMERGE23:
+- Standard Touch
+- Waste Not
+=> CMERGE9 (IsGood == true)
+=> CMERGE2 (IsExcellent == true)
+=> CMERGE13
+
+CMERGE24:
+- Standard Touch
+- Great Strides
+=> CMERGE9 (IsGood == true)
+=> CMERGE2 (IsExcellent == true)
+=> CMERGE13
+
+CMERGE25:
+- Great Strides
+- Waste Not
+=> CMERGE9 (IsGood == true)
+=> CMERGE2 (IsExcellent == true)
+=> CMERGE13
+
+CMERGE26:
+- Standard Touch
+=> CMERGE7 (IsGood == true)
+=> CMERGE3 (IsExcellent == true)
+=> CMERGE17
+
+CMERGE27:
+- Standard Touch
+- Standard Touch
+=> CMERGE7 (IsGood == true)
+=> CMERGE3 (IsExcellent == true)
+=> CMERGE17
+
+CMERGE28:
+- Basic Synthesis
+- Great Strides
+=> CMERGE9 (IsGood == true)
+=> CMERGE2 (IsExcellent == true)
+=> CMERGE13
+
+CMERGE29:
+- Great Strides
+- Standard Touch
+=> CMERGE16 (IsGood == true)
+=> CMERGE2 (IsExcellent == true)
+=> CMERGE22
+
+CMERGE30:
+- Basic Synthesis
+=> CMERGE16 (IsGood == true)
+=> CMERGE2 (IsExcellent == true)
+=> CMERGE22
+
+CMERGE31:
+- Standard Touch
+=> CMERGE9 (IsGood == true)
+=> CMERGE2 (IsExcellent == true)
+=> CMERGE22
+
+CMERGE32:
+- Standard Touch
+=> CMERGE16 (IsGood == true)
+=> CMERGE2 (IsExcellent == true)
+=> CMERGE22
+
+CMERGE33:
+- Standard Touch
+- Standard Touch
+=> CMERGE16 (IsGood == true)
+=> CMERGE2 (IsExcellent == true)
+=> CMERGE22
+
+CMERGE34:
+- Great Strides
+=> CMERGE14 (IsGood == true)
+=> CMERGE10 (IsExcellent == true)
+=> CMERGE21
+
+CMERGE35:
+- Standard Touch
+- Basic Synthesis
+=> CMERGE9 (IsGood == true)
+=> CMERGE2 (IsExcellent == true)
+=> CMERGE22
+
+CMERGE36:
+- Great Strides
+=> CMERGE15 (IsGood == true)
+=> CMERGE2 (IsExcellent == true)
+=> CMERGE32
+
+CMERGE37:
+- Standard Touch
+=> CMERGE25 (IsGood == true)
+=> CMERGE18 (IsExcellent == true)
+=> CMERGE34
+
+CMERGE38:
+- Standard Touch
+- Great Strides
+=> CMERGE15 (IsGood == true)
+=> CMERGE2 (IsExcellent == true)
+=> CMERGE31
+
+CMERGE39:
+- Basic Synthesis
+=> CMERGE15 (IsGood == true)
+=> CMERGE2 (IsExcellent == true)
+=> CMERGE32
+
+
+
+BaseA:
+- Waste Not
+=> A1 (IsGood == true)
+=> A240 (IsExcellent == true)
+=> BaseAC
+
+BaseAC:
+- Basic Touch
+=> A299 (IsGood == true)
+=> A434 (IsExcellent == true)
+=> BaseAC2
+
+BaseAC2:
+- Basic Touch
+=> A465 (IsGood == true)
+=> A542 (IsExcellent == true)
+=> BaseAC3
+
+BaseAC3:
+- Standard Touch
+=> A561 (IsGood == true)
+=> A616 (IsExcellent == true)
+=> BaseAC4
+
+BaseAC4:
+- Basic Synthesis
+=> A629 (IsGood == true)
+=> A668 (IsExcellent == true)
+=> BaseAC5
+
+BaseAC5:
+- Great Strides
+=> AMERGE14 (IsGood == true)
+=> AMERGE2 (IsExcellent == true)
+=> AMERGE23
+
+A1:
+- Basic Touch
+- Basic Synthesis
+=> A2 (IsGood == true)
+=> A71 (IsExcellent == true)
+=> A1C
+
+A1C:
+- Basic Touch
+=> A90 (IsGood == true)
+=> A133 (IsExcellent == true)
+=> A1C2
+
+A1C2:
+- Standard Touch
+=> A146 (IsGood == true)
+=> AMERGE9 (IsExcellent == true)
+=> AMERGE26
+
+A2:
+- Basic Touch
+- Standard Touch
+=> A3 (IsGood == true)
+=> AMERGE9 (IsExcellent == true)
+=> A2C
+
+A2C:
+- Great Strides
+=> AMERGE17 (IsGood == true)
+=> AMERGE2 (IsExcellent == true)
+=> AMERGE24
+
+A3:
+- Standard Touch
+- Great Strides
+=> AMERGE10 (IsGood == true)
+=> AMERGE2 (IsExcellent == true)
+=> AMERGE15
+
+A71:
+- Standard Touch
+- Great Strides
+- Standard Touch
+=> AMERGE10 (IsGood == true)
+=> AMERGE2 (IsExcellent == true)
+=> AMERGE18
+
+A90:
+- Standard Touch
+- Great Strides
+=> AMERGE17 (IsGood == true)
+=> AMERGE2 (IsExcellent == true)
+=> AMERGE24
+
+A133:
+- Standard Touch
+- Great Strides
+- Standard Touch
+=> AMERGE7 (IsGood == true)
+=> AMERGE2 (IsExcellent == true)
+=> AMERGE12
+
+A146:
+- Great Strides
+- Standard Touch
+=> AMERGE16 (IsGood == true)
+=> AMERGE2 (IsExcellent == true)
+=> AMERGE20
+
+A240:
+- Standard Touch
+- Basic Synthesis
+- Great Strides
+=> A241 (IsGood == true)
+=> AMERGE2 (IsExcellent == true)
+=> A240C
+
+A240C:
+- Standard Touch
+=> AMERGE16 (IsGood == true)
+=> AMERGE6 (IsExcellent == true)
+=> AMERGE19
+
+A241:
+- Standard Touch
+- Standard Touch
+=> AMERGE10 (IsGood == true)
+=> AMERGE2 (IsExcellent == true)
+=> A241C
+
+A241C:
+- Standard Touch
+=> AMERGE7 (IsGood == true)
+=> AMERGE2 (IsExcellent == true)
+=> AMERGE8
+
+A299:
+- Standard Touch
+- Basic Touch
+=> A300 (IsGood == true)
+=> A343 (IsExcellent == true)
+=> A299C
+
+A299C:
+- Basic Synthesis
+=> AMERGE22 (IsGood == true)
+=> AMERGE9 (IsExcellent == true)
+=> AMERGE26
+
+A300:
+- Standard Touch
+- Basic Synthesis
+=> AMERGE16 (IsGood == true)
+=> AMERGE6 (IsExcellent == true)
+=> AMERGE19
+
+A343:
+- Standard Touch
+- Basic Synthesis
+- Great Strides
+=> AMERGE7 (IsGood == true)
+=> AMERGE2 (IsExcellent == true)
+=> AMERGE8
+
+A434:
+- Standard Touch
+- Basic Synthesis
+- Standard Touch
+=> AMERGE13 (IsGood == true)
+=> AMERGE2 (IsExcellent == true)
+=> AMERGE20
+
+A465:
+- Standard Touch
+- Basic Synthesis
+=> AMERGE22 (IsGood == true)
+=> AMERGE9 (IsExcellent == true)
+=> A465C
+
+A465C:
+- Great Strides
+=> AMERGE14 (IsGood == true)
+=> AMERGE2 (IsExcellent == true)
+=> A465C2
+
+A465C2:
+- Standard Touch
+=> AMERGE13 (IsGood == true)
+=> AMERGE2 (IsExcellent == true)
+=> AMERGE20
+
+A542:
+- Standard Touch
+- Basic Synthesis
+- Great Strides
+=> AMERGE10 (IsGood == true)
+=> AMERGE2 (IsExcellent == true)
+=> AMERGE18
+
+A561:
+- Basic Synthesis
+- Great Strides
+=> AMERGE14 (IsGood == true)
+=> AMERGE2 (IsExcellent == true)
+=> AMERGE23
+
+A616:
+- Standard Touch
+- Basic Synthesis
+- Standard Touch
+=> AMERGE7 (IsGood == true)
+=> AMERGE2 (IsExcellent == true)
+=> AMERGE12
+
+A629:
+- Great Strides
+- Standard Touch
+=> AMERGE16 (IsGood == true)
+=> AMERGE6 (IsExcellent == true)
+=> AMERGE20
+
+A668:
+- Standard Touch
+- Veneration
+- Standard Touch
+=> AMERGE4 (IsGood == true)
+=> AMERGE4 (IsExcellent == true)
+=> A668C
+
+A668C:
+- Great Strides
+=> AMERGE4 (IsGood == true)
+=> AMERGE4 (IsExcellent == true)
+=> A668C2
+
+A668C2:
+- Standard Touch
+=> AMERGE3 (IsGood == true)
+=> AMERGE3 (IsExcellent == true)
+=> AMERGE3
+
+AMERGE1:
+- Veneration
+- Basic Synthesis
+
+AMERGE2:
+- Standard Touch
+- Veneration
+- Basic Synthesis
+
+AMERGE3:
+- Basic Synthesis
+
+AMERGE4:
+- Standard Touch
+- Basic Synthesis
+
+AMERGE5:
+- Veneration
+=> AMERGE3 (IsGood == true)
+=> AMERGE3 (IsExcellent == true)
+=> AMERGE3
+
+AMERGE6:
+- Standard Touch
+- Veneration
+- Standard Touch
+=> AMERGE3 (IsGood == true)
+=> AMERGE3 (IsExcellent == true)
+=> AMERGE3
+
+AMERGE7:
+- Standard Touch
+- Veneration
+=> AMERGE3 (IsGood == true)
+=> AMERGE3 (IsExcellent == true)
+=> AMERGE3
+
+AMERGE8:
+- Standard Touch
+=> AMERGE1 (IsGood == true)
+=> AMERGE1 (IsExcellent == true)
+=> AMERGE5
+
+AMERGE9:
+- Standard Touch
+- Great Strides
+- Standard Touch
+=> AMERGE1 (IsGood == true)
+=> AMERGE1 (IsExcellent == true)
+=> AMERGE5
+
+AMERGE10:
+- Standard Touch
+- Standard Touch
+=> AMERGE1 (IsGood == true)
+=> AMERGE1 (IsExcellent == true)
+=> AMERGE5
+
+AMERGE11:
+- Great Strides
+- Standard Touch
+=> AMERGE1 (IsGood == true)
+=> AMERGE1 (IsExcellent == true)
+=> AMERGE5
+
+AMERGE12:
+- Great Strides
+=> AMERGE7 (IsGood == true)
+=> AMERGE2 (IsExcellent == true)
+=> AMERGE8
+
+AMERGE13:
+- Standard Touch
+- Great Strides
+=> AMERGE7 (IsGood == true)
+=> AMERGE2 (IsExcellent == true)
+=> AMERGE8
+
+AMERGE14:
+- Standard Touch
+- Standard Touch
+=> AMERGE11 (IsGood == true)
+=> AMERGE2 (IsExcellent == true)
+=> AMERGE12
+
+AMERGE15:
+- Standard Touch
+=> AMERGE11 (IsGood == true)
+=> AMERGE2 (IsExcellent == true)
+=> AMERGE12
+
+AMERGE16:
+- Great Strides
+- Standard Touch
+=> AMERGE11 (IsGood == true)
+=> AMERGE2 (IsExcellent == true)
+=> AMERGE12
+
+AMERGE17:
+- Standard Touch
+- Standard Touch
+=> AMERGE7 (IsGood == true)
+=> AMERGE2 (IsExcellent == true)
+=> AMERGE12
+
+AMERGE18:
+- Standard Touch
+=> AMERGE7 (IsGood == true)
+=> AMERGE2 (IsExcellent == true)
+=> AMERGE12
+
+AMERGE19:
+- Great Strides
+=> AMERGE13 (IsGood == true)
+=> AMERGE2 (IsExcellent == true)
+=> AMERGE15
+
+AMERGE20:
+- Great Strides
+=> AMERGE10 (IsGood == true)
+=> AMERGE2 (IsExcellent == true)
+=> AMERGE15
+
+AMERGE21:
+- Great Strides
+=> AMERGE10 (IsGood == true)
+=> AMERGE2 (IsExcellent == true)
+=> AMERGE18
+
+AMERGE22:
+- Standard Touch
+- Great Strides
+=> AMERGE13 (IsGood == true)
+=> AMERGE2 (IsExcellent == true)
+=> AMERGE15
+
+AMERGE23:
+- Standard Touch
+=> AMERGE16 (IsGood == true)
+=> AMERGE6 (IsExcellent == true)
+=> AMERGE20
+
+AMERGE24:
+- Standard Touch
+=> AMERGE13 (IsGood == true)
+=> AMERGE2 (IsExcellent == true)
+=> AMERGE21
+
+AMERGE25:
+- Standard Touch
+=> AMERGE16 (IsGood == true)
+=> AMERGE2 (IsExcellent == true)
+=> AMERGE20
+
+AMERGE26:
+- Great Strides
+=> AMERGE14 (IsGood == true)
+=> AMERGE2 (IsExcellent == true)
+=> AMERGE25
+
+BaseB:
+- Waste Not
+=> B1 (IsGood == true)
+=> B230 (IsExcellent == true)
+=> BaseBC
+
+BaseBC:
+- Basic Touch
+=> B285 (IsGood == true)
+=> B402 (IsExcellent == true)
+=> BaseBC2
+
+BaseBC2:
+- Basic Synthesis
+=> B431 (IsGood == true)
+=> B514 (IsExcellent == true)
+=> BaseBC3
+
+BaseBC3:
+- Basic Touch
+=> B539 (IsGood == true)
+=> B584 (IsExcellent == true)
+=> BaseBC4
+
+BaseBC4:
+- Standard Touch
+=> BMERGE22 (IsGood == true)
+=> B634 (IsExcellent == true)
+=> BMERGE26
+
+B1:
+- Basic Touch
+- Basic Synthesis
+=> B2 (IsGood == true)
+=> B65 (IsExcellent == true)
+=> B1C
+
+B1C:
+- Basic Touch
+=> B84 (IsGood == true)
+=> B127 (IsExcellent == true)
+=> B1C2
+
+B1C2:
+- Standard Touch
+=> BMERGE22 (IsGood == true)
+=> BMERGE10 (IsExcellent == true)
+=> BMERGE26
+
+B2:
+- Standard Touch
+- Standard Touch
+=> B3 (IsGood == true)
+=> BMERGE10 (IsExcellent == true)
+=> BMERGE25
+
+B3:
+- Standard Touch
+- Great Strides
+=> BMERGE13 (IsGood == true)
+=> BMERGE4 (IsExcellent == true)
+=> BMERGE16
+
+B65:
+- Standard Touch
+- Great Strides
+- Standard Touch
+=> BMERGE13 (IsGood == true)
+=> BMERGE4 (IsExcellent == true)
+=> BMERGE16
+
+B84:
+- Standard Touch
+- Great Strides
+=> B85 (IsGood == true)
+=> BMERGE4 (IsExcellent == true)
+=> BMERGE24
+
+B85:
+- Standard Touch
+- Standard Touch
+=> BMERGE7 (IsGood == true)
+=> BMERGE4 (IsExcellent == true)
+=> BMERGE15
+
+B127:
+- Standard Touch
+- Veneration
+- Standard Touch
+=> B128 (IsGood == true)
+=> BMERGE3 (IsExcellent == true)
+=> B127C
+
+B127C:
+- Standard Touch
+=> BMERGE3 (IsGood == true)
+=> BMERGE3 (IsExcellent == true)
+=> BMERGE8
+
+B128:
+- Standard Touch
+- Standard Touch
+=> BMERGE2 (IsGood == true)
+=> BMERGE2 (IsExcellent == true)
+=> BMERGE2
+
+B230:
+- Standard Touch
+- Basic Synthesis
+- Great Strides
+=> BMERGE18 (IsGood == true)
+=> BMERGE4 (IsExcellent == true)
+=> BMERGE25
+
+B285:
+- Standard Touch
+- Basic Synthesis
+=> B286 (IsGood == true)
+=> B323 (IsExcellent == true)
+=> B285C
+
+B285C:
+- Basic Touch
+=> B332 (IsGood == true)
+=> BMERGE10 (IsExcellent == true)
+=> B285C2
+
+B285C2:
+- Great Strides
+=> BMERGE18 (IsGood == true)
+=> BMERGE4 (IsExcellent == true)
+=> BMERGE24
+
+B286:
+- Standard Touch
+- Standard Touch
+=> BMERGE19 (IsGood == true)
+=> BMERGE4 (IsExcellent == true)
+=> BMERGE20
+
+B323:
+- Standard Touch
+- Veneration
+- Standard Touch
+=> B324 (IsGood == true)
+=> BMERGE3 (IsExcellent == true)
+=> BMERGE11
+
+B324:
+- Great Strides
+- Standard Touch
+=> BMERGE2 (IsGood == true)
+=> BMERGE2 (IsExcellent == true)
+=> BMERGE2
+
+B332:
+- Standard Touch
+- Great Strides
+=> BMERGE13 (IsGood == true)
+=> BMERGE4 (IsExcellent == true)
+=> BMERGE17
+
+B402:
+- Standard Touch
+- Basic Synthesis
+- Standard Touch
+=> BMERGE14 (IsGood == true)
+=> BMERGE4 (IsExcellent == true)
+=> BMERGE21
+
+B431:
+- Basic Touch
+- Standard Touch
+=> B432 (IsGood == true)
+=> BMERGE10 (IsExcellent == true)
+=> BMERGE26
+
+B432:
+- Standard Touch
+- Great Strides
+=> BMERGE14 (IsGood == true)
+=> BMERGE4 (IsExcellent == true)
+=> BMERGE17
+
+B514:
+- Standard Touch
+- Great Strides
+- Standard Touch
+=> BMERGE14 (IsGood == true)
+=> BMERGE4 (IsExcellent == true)
+=> BMERGE17
+
+B539:
+- Standard Touch
+- Great Strides
+=> BMERGE18 (IsGood == true)
+=> BMERGE4 (IsExcellent == true)
+=> BMERGE24
+
+B584:
+- Standard Touch
+- Great Strides
+- Standard Touch
+=> BMERGE7 (IsGood == true)
+=> BMERGE4 (IsExcellent == true)
+=> BMERGE15
+
+B634:
+- Standard Touch
+- Veneration
+- Standard Touch
+=> BMERGE3 (IsGood == true)
+=> BMERGE3 (IsExcellent == true)
+=> BMERGE11
+
+BMERGE1:
+- Veneration
+- Basic Synthesis
+
+BMERGE2:
+- Basic Synthesis
+
+BMERGE3:
+- Standard Touch
+- Basic Synthesis
+
+BMERGE4:
+- Standard Touch
+- Veneration
+- Basic Synthesis
+
+BMERGE5:
+- Veneration
+=> BMERGE2 (IsGood == true)
+=> BMERGE2 (IsExcellent == true)
+=> BMERGE2
+
+BMERGE6:
+- Standard Touch
+- Veneration
+- Standard Touch
+=> BMERGE2 (IsGood == true)
+=> BMERGE2 (IsExcellent == true)
+=> BMERGE2
+
+BMERGE7:
+- Standard Touch
+- Veneration
+=> BMERGE2 (IsGood == true)
+=> BMERGE2 (IsExcellent == true)
+=> BMERGE2
+
+BMERGE8:
+- Standard Touch
+=> BMERGE2 (IsGood == true)
+=> BMERGE2 (IsExcellent == true)
+=> BMERGE2
+
+BMERGE9:
+- Standard Touch
+=> BMERGE1 (IsGood == true)
+=> BMERGE1 (IsExcellent == true)
+=> BMERGE5
+
+BMERGE10:
+- Standard Touch
+- Great Strides
+- Standard Touch
+=> BMERGE1 (IsGood == true)
+=> BMERGE1 (IsExcellent == true)
+=> BMERGE5
+
+BMERGE11:
+- Great Strides
+=> BMERGE3 (IsGood == true)
+=> BMERGE3 (IsExcellent == true)
+=> BMERGE8
+
+BMERGE12:
+- Great Strides
+- Standard Touch
+=> BMERGE1 (IsGood == true)
+=> BMERGE1 (IsExcellent == true)
+=> BMERGE5
+
+BMERGE13:
+- Standard Touch
+- Standard Touch
+=> BMERGE1 (IsGood == true)
+=> BMERGE1 (IsExcellent == true)
+=> BMERGE5
+
+BMERGE14:
+- Standard Touch
+- Great Strides
+=> BMERGE7 (IsGood == true)
+=> BMERGE4 (IsExcellent == true)
+=> BMERGE9
+
+BMERGE15:
+- Great Strides
+=> BMERGE7 (IsGood == true)
+=> BMERGE4 (IsExcellent == true)
+=> BMERGE9
+
+BMERGE16:
+- Standard Touch
+=> BMERGE7 (IsGood == true)
+=> BMERGE4 (IsExcellent == true)
+=> BMERGE15
+
+BMERGE17:
+- Standard Touch
+=> BMERGE12 (IsGood == true)
+=> BMERGE4 (IsExcellent == true)
+=> BMERGE15
+
+BMERGE18:
+- Standard Touch
+- Standard Touch
+=> BMERGE12 (IsGood == true)
+=> BMERGE4 (IsExcellent == true)
+=> BMERGE15
+
+BMERGE19:
+- Great Strides
+- Standard Touch
+=> BMERGE12 (IsGood == true)
+=> BMERGE4 (IsExcellent == true)
+=> BMERGE15
+
+BMERGE20:
+- Great Strides
+=> BMERGE13 (IsGood == true)
+=> BMERGE4 (IsExcellent == true)
+=> BMERGE17
+
+BMERGE21:
+- Great Strides
+=> BMERGE13 (IsGood == true)
+=> BMERGE4 (IsExcellent == true)
+=> BMERGE16
+
+BMERGE22:
+- Great Strides
+- Standard Touch
+=> BMERGE19 (IsGood == true)
+=> BMERGE4 (IsExcellent == true)
+=> BMERGE20
+
+BMERGE23:
+- Standard Touch
+=> BMERGE19 (IsGood == true)
+=> BMERGE4 (IsExcellent == true)
+=> BMERGE20
+
+BMERGE24:
+- Standard Touch
+=> BMERGE14 (IsGood == true)
+=> BMERGE4 (IsExcellent == true)
+=> BMERGE21
+
+BMERGE25:
+- Standard Touch
+=> BMERGE19 (IsGood == true)
+=> BMERGE6 (IsExcellent == true)
+=> BMERGE20
+
+BMERGE26:
+- Great Strides
+=> BMERGE18 (IsGood == true)
+=> BMERGE4 (IsExcellent == true)
+=> BMERGE23
+
