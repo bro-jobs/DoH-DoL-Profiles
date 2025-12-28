@@ -1,0 +1,1529 @@
+Name: [Lv90] Lv91 Items
+Type: Craft
+Enabled: True
+Conditions: (MaxDurability == 80 && MaxProgress == 4000 && MaxQuality == 8200 && Craftsmanship >= 3796 && Control >= 3544 && CP >= 646 && RecipeLevel == 650 && PlayerLevel >= 90)
+Cost: 0
+
+BASESELECT:
+=> BaseG (Craftsmanship == 3796 && PlayerLevel >= 96)
+=> BaseF (Craftsmanship == 3796 && PlayerLevel >= 95)
+=> BaseE (Craftsmanship == 3796 && PlayerLevel >= 94)
+=> BaseD (PlayerLevel >= 93)
+=> BaseC (PlayerLevel >= 92)
+=> BaseB (PlayerLevel >= 91)
+=> BaseA
+
+BaseA:
+- Reflect
+=> A1 (IsExcellent == true)
+=> BaseAC
+
+BaseAC:
+- Waste Not
+=> A16 (IsExcellent == true)
+=> BaseAC2
+
+BaseAC2:
+- Preparatory Touch
+=> A33 (IsExcellent == true)
+=> BaseAC3
+
+BaseAC3:
+- Innovation
+=> A46 (IsExcellent == true)
+=> BaseAC4
+
+BaseAC4:
+- Preparatory Touch
+=> AMERGE9 (IsExcellent == true)
+=> BaseAC5
+
+BaseAC5:
+- Preparatory Touch
+=> AMERGE8 (IsExcellent == true)
+=> BaseAC6
+
+BaseAC6:
+- Great Strides
+=> AMERGE8 (IsExcellent == true)
+=> BaseAC7
+
+BaseAC7:
+- Byregots Blessing
+=> A64 (IsExcellent == true)
+=> BaseAC8
+
+BaseAC8:
+- Waste Not II
+=> AMERGE4 (IsExcellent == true)
+=> AMERGE10
+
+A1:
+- Preparatory Touch
+- Innovation
+- Waste Not II
+=> A2 (IsExcellent == true)
+=> A1C
+
+A1C:
+- Preparatory Touch
+=> AMERGE6 (IsExcellent == true)
+=> A1C2
+
+A1C2:
+- Great Strides
+=> AMERGE6 (IsExcellent == true)
+=> AMERGE11
+
+A2:
+- Preparatory Touch
+- Veneration
+- Groundwork
+=> AMERGE2 (IsExcellent == true)
+=> AMERGE5
+
+A16:
+- Preparatory Touch
+- Innovation
+- Preparatory Touch
+=> AMERGE9 (IsExcellent == true)
+=> A16C
+
+A16C:
+- Great Strides
+=> AMERGE8 (IsExcellent == true)
+=> AMERGE12
+
+A33:
+- Preparatory Touch
+- Great Strides
+- Innovation
+=> AMERGE8 (IsExcellent == true)
+=> AMERGE12
+
+A46:
+- Preparatory Touch
+- Manipulation
+- Byregots Blessing
+=> AMERGE4 (IsExcellent == true)
+=> AMERGE10
+
+A64:
+- Waste Not II
+- Veneration
+- Groundwork
+=> AMERGE2 (IsExcellent == true)
+=> AMERGE5
+
+AMERGE1:
+- Groundwork
+
+AMERGE2:
+- Groundwork
+- Groundwork
+
+AMERGE3:
+- Groundwork
+- Groundwork
+- Groundwork
+
+AMERGE4:
+- Veneration
+- Groundwork
+- Groundwork
+=> AMERGE1 (IsExcellent == true)
+=> AMERGE1
+
+AMERGE5:
+- Groundwork
+=> AMERGE1 (IsExcellent == true)
+=> AMERGE1
+
+AMERGE6:
+- Byregots Blessing
+- Veneration
+- Groundwork
+=> AMERGE2 (IsExcellent == true)
+=> AMERGE5
+
+AMERGE7:
+- Groundwork
+=> AMERGE2 (IsExcellent == true)
+=> AMERGE5
+
+AMERGE8:
+- Byregots Blessing
+- Waste Not II
+- Veneration
+=> AMERGE3 (IsExcellent == true)
+=> AMERGE7
+
+AMERGE9:
+- Byregots Blessing
+- Manipulation
+- Veneration
+=> AMERGE3 (IsExcellent == true)
+=> AMERGE7
+
+AMERGE10:
+- Veneration
+=> AMERGE3 (IsExcellent == true)
+=> AMERGE7
+
+AMERGE11:
+- Byregots Blessing
+=> AMERGE4 (IsExcellent == true)
+=> AMERGE10
+
+AMERGE12:
+- Manipulation
+=> AMERGE6 (IsExcellent == true)
+=> AMERGE11
+
+BaseB:
+- Reflect
+=> B1 (IsExcellent == true)
+=> BaseBC
+
+BaseBC:
+- Waste Not
+=> B16 (IsExcellent == true)
+=> BaseBC2
+
+BaseBC2:
+- Preparatory Touch
+=> B33 (IsExcellent == true)
+=> BaseBC3
+
+BaseBC3:
+- Innovation
+=> B46 (IsExcellent == true)
+=> BaseBC4
+
+BaseBC4:
+- Preparatory Touch
+=> BMERGE10 (IsExcellent == true)
+=> BaseBC5
+
+BaseBC5:
+- Preparatory Touch
+=> BMERGE8 (IsExcellent == true)
+=> BaseBC6
+
+BaseBC6:
+- Great Strides
+=> BMERGE8 (IsExcellent == true)
+=> BaseBC7
+
+BaseBC7:
+- Byregots Blessing
+=> B64 (IsExcellent == true)
+=> BaseBC8
+
+BaseBC8:
+- Waste Not II
+=> BMERGE5 (IsExcellent == true)
+=> BMERGE9
+
+B1:
+- Preparatory Touch
+- Innovation
+- Waste Not II
+=> B2 (IsExcellent == true)
+=> B1C
+
+B1C:
+- Preparatory Touch
+=> BMERGE6 (IsExcellent == true)
+=> B1C2
+
+B1C2:
+- Great Strides
+=> BMERGE6 (IsExcellent == true)
+=> BMERGE11
+
+B2:
+- Preparatory Touch
+- Veneration
+- Groundwork
+=> BMERGE3 (IsExcellent == true)
+=> BMERGE4
+
+B16:
+- Preparatory Touch
+- Innovation
+- Preparatory Touch
+=> BMERGE10 (IsExcellent == true)
+=> B16C
+
+B16C:
+- Great Strides
+=> BMERGE8 (IsExcellent == true)
+=> BMERGE12
+
+B33:
+- Preparatory Touch
+- Great Strides
+- Innovation
+=> BMERGE8 (IsExcellent == true)
+=> BMERGE12
+
+B46:
+- Preparatory Touch
+- Manipulation
+- Byregots Blessing
+=> BMERGE5 (IsExcellent == true)
+=> BMERGE9
+
+B64:
+- Waste Not II
+- Veneration
+- Groundwork
+=> BMERGE3 (IsExcellent == true)
+=> BMERGE4
+
+BMERGE1:
+- Groundwork
+- Groundwork
+- Groundwork
+
+BMERGE2:
+- Groundwork
+
+BMERGE3:
+- Groundwork
+- Groundwork
+
+BMERGE4:
+- Groundwork
+=> BMERGE2 (IsExcellent == true)
+=> BMERGE2
+
+BMERGE5:
+- Veneration
+- Groundwork
+- Groundwork
+=> BMERGE2 (IsExcellent == true)
+=> BMERGE2
+
+BMERGE6:
+- Byregots Blessing
+- Veneration
+- Groundwork
+=> BMERGE3 (IsExcellent == true)
+=> BMERGE4
+
+BMERGE7:
+- Groundwork
+=> BMERGE3 (IsExcellent == true)
+=> BMERGE4
+
+BMERGE8:
+- Byregots Blessing
+- Waste Not II
+- Veneration
+=> BMERGE1 (IsExcellent == true)
+=> BMERGE7
+
+BMERGE9:
+- Veneration
+=> BMERGE1 (IsExcellent == true)
+=> BMERGE7
+
+BMERGE10:
+- Byregots Blessing
+- Manipulation
+- Veneration
+=> BMERGE1 (IsExcellent == true)
+=> BMERGE7
+
+BMERGE11:
+- Byregots Blessing
+=> BMERGE5 (IsExcellent == true)
+=> BMERGE9
+
+BMERGE12:
+- Manipulation
+=> BMERGE6 (IsExcellent == true)
+=> BMERGE11
+
+BaseC:
+- Reflect
+=> C1 (IsExcellent == true)
+=> BaseCC
+
+BaseCC:
+- Waste Not
+=> C16 (IsExcellent == true)
+=> BaseCC2
+
+BaseCC2:
+- Preparatory Touch
+=> C33 (IsExcellent == true)
+=> BaseCC3
+
+BaseCC3:
+- Innovation
+=> C46 (IsExcellent == true)
+=> BaseCC4
+
+BaseCC4:
+- Preparatory Touch
+=> CMERGE8 (IsExcellent == true)
+=> BaseCC5
+
+BaseCC5:
+- Preparatory Touch
+=> CMERGE10 (IsExcellent == true)
+=> BaseCC6
+
+BaseCC6:
+- Great Strides
+=> CMERGE10 (IsExcellent == true)
+=> BaseCC7
+
+BaseCC7:
+- Byregots Blessing
+=> C64 (IsExcellent == true)
+=> BaseCC8
+
+BaseCC8:
+- Waste Not II
+=> CMERGE5 (IsExcellent == true)
+=> CMERGE9
+
+C1:
+- Preparatory Touch
+- Innovation
+- Waste Not II
+=> C2 (IsExcellent == true)
+=> C1C
+
+C1C:
+- Preparatory Touch
+=> CMERGE6 (IsExcellent == true)
+=> C1C2
+
+C1C2:
+- Great Strides
+=> CMERGE6 (IsExcellent == true)
+=> CMERGE11
+
+C2:
+- Preparatory Touch
+- Veneration
+- Groundwork
+=> CMERGE2 (IsExcellent == true)
+=> CMERGE4
+
+C16:
+- Preparatory Touch
+- Innovation
+- Preparatory Touch
+=> CMERGE8 (IsExcellent == true)
+=> C16C
+
+C16C:
+- Great Strides
+=> CMERGE10 (IsExcellent == true)
+=> CMERGE12
+
+C33:
+- Preparatory Touch
+- Great Strides
+- Innovation
+=> CMERGE10 (IsExcellent == true)
+=> CMERGE12
+
+C46:
+- Preparatory Touch
+- Manipulation
+- Byregots Blessing
+=> CMERGE5 (IsExcellent == true)
+=> CMERGE9
+
+C64:
+- Waste Not II
+- Veneration
+- Groundwork
+=> CMERGE2 (IsExcellent == true)
+=> CMERGE4
+
+CMERGE1:
+- Groundwork
+- Groundwork
+- Groundwork
+
+CMERGE2:
+- Groundwork
+- Groundwork
+
+CMERGE3:
+- Groundwork
+
+CMERGE4:
+- Groundwork
+=> CMERGE3 (IsExcellent == true)
+=> CMERGE3
+
+CMERGE5:
+- Veneration
+- Groundwork
+- Groundwork
+=> CMERGE3 (IsExcellent == true)
+=> CMERGE3
+
+CMERGE6:
+- Byregots Blessing
+- Veneration
+- Groundwork
+=> CMERGE2 (IsExcellent == true)
+=> CMERGE4
+
+CMERGE7:
+- Groundwork
+=> CMERGE2 (IsExcellent == true)
+=> CMERGE4
+
+CMERGE8:
+- Byregots Blessing
+- Manipulation
+- Veneration
+=> CMERGE1 (IsExcellent == true)
+=> CMERGE7
+
+CMERGE9:
+- Veneration
+=> CMERGE1 (IsExcellent == true)
+=> CMERGE7
+
+CMERGE10:
+- Byregots Blessing
+- Waste Not II
+- Veneration
+=> CMERGE1 (IsExcellent == true)
+=> CMERGE7
+
+CMERGE11:
+- Byregots Blessing
+=> CMERGE5 (IsExcellent == true)
+=> CMERGE9
+
+CMERGE12:
+- Manipulation
+=> CMERGE6 (IsExcellent == true)
+=> CMERGE11
+
+BaseD:
+- Reflect
+=> D1 (IsExcellent == true)
+=> BaseDC
+
+BaseDC:
+- Waste Not
+=> D16 (IsExcellent == true)
+=> BaseDC2
+
+BaseDC2:
+- Preparatory Touch
+=> D33 (IsExcellent == true)
+=> BaseDC3
+
+BaseDC3:
+- Innovation
+=> D46 (IsExcellent == true)
+=> BaseDC4
+
+BaseDC4:
+- Preparatory Touch
+=> DMERGE8 (IsExcellent == true)
+=> BaseDC5
+
+BaseDC5:
+- Preparatory Touch
+=> DMERGE9 (IsExcellent == true)
+=> BaseDC6
+
+BaseDC6:
+- Great Strides
+=> DMERGE9 (IsExcellent == true)
+=> BaseDC7
+
+BaseDC7:
+- Byregots Blessing
+=> D64 (IsExcellent == true)
+=> BaseDC8
+
+BaseDC8:
+- Waste Not II
+=> DMERGE5 (IsExcellent == true)
+=> DMERGE10
+
+D1:
+- Preparatory Touch
+- Innovation
+- Waste Not II
+=> D2 (IsExcellent == true)
+=> D1C
+
+D1C:
+- Preparatory Touch
+=> DMERGE6 (IsExcellent == true)
+=> D1C2
+
+D1C2:
+- Great Strides
+=> DMERGE6 (IsExcellent == true)
+=> DMERGE11
+
+D2:
+- Preparatory Touch
+- Veneration
+- Groundwork
+=> DMERGE2 (IsExcellent == true)
+=> DMERGE4
+
+D16:
+- Preparatory Touch
+- Innovation
+- Preparatory Touch
+=> DMERGE8 (IsExcellent == true)
+=> D16C
+
+D16C:
+- Great Strides
+=> DMERGE9 (IsExcellent == true)
+=> DMERGE12
+
+D33:
+- Preparatory Touch
+- Great Strides
+- Innovation
+=> DMERGE9 (IsExcellent == true)
+=> DMERGE12
+
+D46:
+- Preparatory Touch
+- Manipulation
+- Byregots Blessing
+=> DMERGE5 (IsExcellent == true)
+=> DMERGE10
+
+D64:
+- Waste Not II
+- Veneration
+- Groundwork
+=> DMERGE2 (IsExcellent == true)
+=> DMERGE4
+
+DMERGE1:
+- Groundwork
+- Groundwork
+- Groundwork
+
+DMERGE2:
+- Groundwork
+- Groundwork
+
+DMERGE3:
+- Groundwork
+
+DMERGE4:
+- Groundwork
+=> DMERGE3 (IsExcellent == true)
+=> DMERGE3
+
+DMERGE5:
+- Veneration
+- Groundwork
+- Groundwork
+=> DMERGE3 (IsExcellent == true)
+=> DMERGE3
+
+DMERGE6:
+- Byregots Blessing
+- Veneration
+- Groundwork
+=> DMERGE2 (IsExcellent == true)
+=> DMERGE4
+
+DMERGE7:
+- Groundwork
+=> DMERGE2 (IsExcellent == true)
+=> DMERGE4
+
+DMERGE8:
+- Byregots Blessing
+- Manipulation
+- Veneration
+=> DMERGE1 (IsExcellent == true)
+=> DMERGE7
+
+DMERGE9:
+- Byregots Blessing
+- Waste Not II
+- Veneration
+=> DMERGE1 (IsExcellent == true)
+=> DMERGE7
+
+DMERGE10:
+- Veneration
+=> DMERGE1 (IsExcellent == true)
+=> DMERGE7
+
+DMERGE11:
+- Byregots Blessing
+=> DMERGE5 (IsExcellent == true)
+=> DMERGE10
+
+DMERGE12:
+- Manipulation
+=> DMERGE6 (IsExcellent == true)
+=> DMERGE11
+
+BaseE:
+- Reflect
+=> E1 (IsExcellent == true)
+=> BaseEC
+
+BaseEC:
+- Delicate Synthesis
+=> E16 (IsExcellent == true)
+=> BaseEC2
+
+BaseEC2:
+- Waste Not II
+=> E28 (IsExcellent == true)
+=> BaseEC3
+
+BaseEC3:
+- Innovation
+=> E35 (IsExcellent == true)
+=> BaseEC4
+
+BaseEC4:
+- Preparatory Touch
+=> EMERGE9 (IsExcellent == true)
+=> BaseEC5
+
+BaseEC5:
+- Preparatory Touch
+=> EMERGE9 (IsExcellent == true)
+=> BaseEC6
+
+BaseEC6:
+- Preparatory Touch
+=> E47 (IsExcellent == true)
+=> BaseEC7
+
+BaseEC7:
+- Byregots Blessing
+=> E50 (IsExcellent == true)
+=> BaseEC8
+
+BaseEC8:
+- Veneration
+=> E52 (IsExcellent == true)
+=> BaseEC9
+
+BaseEC9:
+- Groundwork
+=> EMERGE6 (IsExcellent == true)
+=> EMERGE8
+
+E1:
+- Preparatory Touch
+- Innovation
+- Waste Not II
+=> E2 (IsExcellent == true)
+=> E1C
+
+E1C:
+- Preparatory Touch
+=> EMERGE11 (IsExcellent == true)
+=> E1C2
+
+E1C2:
+- Great Strides
+=> EMERGE11 (IsExcellent == true)
+=> E1C3
+
+E1C3:
+- Byregots Blessing
+=> E11 (IsExcellent == true)
+=> E1C4
+
+E1C4:
+- Veneration
+=> E13 (IsExcellent == true)
+=> E1C5
+
+E1C5:
+- Groundwork
+=> EMERGE2 (IsExcellent == true)
+=> EMERGE7
+
+E2:
+- Preparatory Touch
+- Veneration
+- Groundwork
+=> EMERGE2 (IsExcellent == true)
+=> EMERGE7
+
+E11:
+- Veneration
+- Groundwork
+- Groundwork
+=> EMERGE1 (IsExcellent == true)
+=> EMERGE1
+
+E13:
+- Groundwork
+- Groundwork
+- Groundwork
+
+E16:
+- Preparatory Touch
+- Manipulation
+- Delicate Synthesis
+=> E17 (IsExcellent == true)
+=> E16C
+
+E16C:
+- Delicate Synthesis
+=> E20 (IsExcellent == true)
+=> E16C2
+
+E16C2:
+- Great Strides
+=> E23 (IsExcellent == true)
+=> E16C3
+
+E16C3:
+- Byregots Blessing
+=> EMERGE5 (IsExcellent == true)
+=> EMERGE10
+
+E17:
+- Byregots Blessing
+- Prudent Synthesis
+- Veneration
+=> EMERGE2 (IsExcellent == true)
+=> EMERGE7
+
+E20:
+- Byregots Blessing
+- Veneration
+- Groundwork
+=> E21 (IsExcellent == true)
+=> E20C
+
+E20C:
+- Great Strides
+=> EMERGE1 (IsExcellent == true)
+=> EMERGE1
+
+E21:
+- Great Strides
+- Groundwork
+
+E23:
+- Byregots Blessing
+- Veneration
+- Groundwork
+=> EMERGE1 (IsExcellent == true)
+=> EMERGE1
+
+E28:
+- Preparatory Touch
+- Veneration
+- Delicate Synthesis
+=> E29 (IsExcellent == true)
+=> E28C
+
+E28C:
+- Delicate Synthesis
+=> E31 (IsExcellent == true)
+=> E28C2
+
+E28C2:
+- Groundwork
+=> EMERGE3 (IsExcellent == true)
+=> E28C3
+
+E28C3:
+- Great Strides
+=> EMERGE3 (IsExcellent == true)
+=> E28C4
+
+E28C4:
+- Byregots Blessing
+=> EMERGE1 (IsExcellent == true)
+=> EMERGE1
+
+E29:
+- Byregots Blessing
+- Groundwork
+- Delicate Synthesis
+=> EMERGE1 (IsExcellent == true)
+=> EMERGE1
+
+E31:
+- Byregots Blessing
+- Groundwork
+- Groundwork
+
+E35:
+- Preparatory Touch
+- Great Strides
+- Byregots Blessing
+=> E36 (IsExcellent == true)
+=> E35C
+
+E35C:
+- Groundwork
+=> EMERGE5 (IsExcellent == true)
+=> EMERGE10
+
+E36:
+- Groundwork
+- Veneration
+- Groundwork
+=> EMERGE1 (IsExcellent == true)
+=> EMERGE1
+
+E47:
+- Byregots Blessing
+- Veneration
+- Groundwork
+=> EMERGE6 (IsExcellent == true)
+=> EMERGE8
+
+E50:
+- Veneration
+- Groundwork
+- Groundwork
+=> EMERGE4 (IsExcellent == true)
+=> EMERGE4
+
+E52:
+- Groundwork
+- Groundwork
+- Careful Synthesis
+
+EMERGE1:
+- Groundwork
+
+EMERGE2:
+- Groundwork
+- Groundwork
+
+EMERGE3:
+- Byregots Blessing
+- Groundwork
+
+EMERGE4:
+- Careful Synthesis
+
+EMERGE5:
+- Veneration
+- Groundwork
+- Groundwork
+
+EMERGE6:
+- Groundwork
+- Careful Synthesis
+
+EMERGE7:
+- Groundwork
+=> EMERGE1 (IsExcellent == true)
+=> EMERGE1
+
+EMERGE8:
+- Groundwork
+=> EMERGE4 (IsExcellent == true)
+=> EMERGE4
+
+EMERGE9:
+- Byregots Blessing
+- Groundwork
+- Veneration
+=> EMERGE2 (IsExcellent == true)
+=> EMERGE7
+
+EMERGE10:
+- Veneration
+=> EMERGE2 (IsExcellent == true)
+=> EMERGE7
+
+EMERGE11:
+- Byregots Blessing
+- Veneration
+- Groundwork
+=> EMERGE2 (IsExcellent == true)
+=> EMERGE7
+
+BaseF:
+- Reflect
+=> F1 (IsExcellent == true)
+=> BaseFC
+
+BaseFC:
+- Delicate Synthesis
+=> F16 (IsExcellent == true)
+=> BaseFC2
+
+BaseFC2:
+- Waste Not II
+=> F28 (IsExcellent == true)
+=> BaseFC3
+
+BaseFC3:
+- Innovation
+=> F35 (IsExcellent == true)
+=> BaseFC4
+
+BaseFC4:
+- Preparatory Touch
+=> FMERGE11 (IsExcellent == true)
+=> BaseFC5
+
+BaseFC5:
+- Preparatory Touch
+=> FMERGE11 (IsExcellent == true)
+=> BaseFC6
+
+BaseFC6:
+- Preparatory Touch
+=> F47 (IsExcellent == true)
+=> BaseFC7
+
+BaseFC7:
+- Byregots Blessing
+=> F50 (IsExcellent == true)
+=> BaseFC8
+
+BaseFC8:
+- Veneration
+=> F52 (IsExcellent == true)
+=> BaseFC9
+
+BaseFC9:
+- Groundwork
+=> FMERGE5 (IsExcellent == true)
+=> FMERGE8
+
+F1:
+- Preparatory Touch
+- Innovation
+- Waste Not II
+=> F2 (IsExcellent == true)
+=> F1C
+
+F1C:
+- Preparatory Touch
+=> FMERGE10 (IsExcellent == true)
+=> F1C2
+
+F1C2:
+- Great Strides
+=> FMERGE10 (IsExcellent == true)
+=> F1C3
+
+F1C3:
+- Byregots Blessing
+=> F11 (IsExcellent == true)
+=> F1C4
+
+F1C4:
+- Veneration
+=> F13 (IsExcellent == true)
+=> F1C5
+
+F1C5:
+- Groundwork
+=> FMERGE6 (IsExcellent == true)
+=> FMERGE7
+
+F2:
+- Preparatory Touch
+- Veneration
+- Groundwork
+=> FMERGE6 (IsExcellent == true)
+=> FMERGE7
+
+F11:
+- Veneration
+- Groundwork
+- Groundwork
+=> FMERGE1 (IsExcellent == true)
+=> FMERGE1
+
+F13:
+- Groundwork
+- Groundwork
+- Groundwork
+
+F16:
+- Preparatory Touch
+- Manipulation
+- Delicate Synthesis
+=> F17 (IsExcellent == true)
+=> F16C
+
+F16C:
+- Delicate Synthesis
+=> F20 (IsExcellent == true)
+=> F16C2
+
+F16C2:
+- Great Strides
+=> F23 (IsExcellent == true)
+=> F16C3
+
+F16C3:
+- Byregots Blessing
+=> FMERGE2 (IsExcellent == true)
+=> FMERGE9
+
+F17:
+- Byregots Blessing
+- Prudent Synthesis
+- Veneration
+=> FMERGE6 (IsExcellent == true)
+=> FMERGE7
+
+F20:
+- Byregots Blessing
+- Veneration
+- Groundwork
+=> F21 (IsExcellent == true)
+=> F20C
+
+F20C:
+- Great Strides
+=> FMERGE1 (IsExcellent == true)
+=> FMERGE1
+
+F21:
+- Great Strides
+- Groundwork
+
+F23:
+- Byregots Blessing
+- Veneration
+- Groundwork
+=> FMERGE1 (IsExcellent == true)
+=> FMERGE1
+
+F28:
+- Preparatory Touch
+- Veneration
+- Delicate Synthesis
+=> F29 (IsExcellent == true)
+=> F28C
+
+F28C:
+- Delicate Synthesis
+=> F31 (IsExcellent == true)
+=> F28C2
+
+F28C2:
+- Groundwork
+=> FMERGE4 (IsExcellent == true)
+=> F28C3
+
+F28C3:
+- Great Strides
+=> FMERGE4 (IsExcellent == true)
+=> F28C4
+
+F28C4:
+- Byregots Blessing
+=> FMERGE1 (IsExcellent == true)
+=> FMERGE1
+
+F29:
+- Byregots Blessing
+- Groundwork
+- Delicate Synthesis
+=> FMERGE1 (IsExcellent == true)
+=> FMERGE1
+
+F31:
+- Byregots Blessing
+- Groundwork
+- Groundwork
+
+F35:
+- Preparatory Touch
+- Great Strides
+- Byregots Blessing
+=> F36 (IsExcellent == true)
+=> F35C
+
+F35C:
+- Groundwork
+=> FMERGE2 (IsExcellent == true)
+=> FMERGE9
+
+F36:
+- Groundwork
+- Veneration
+- Groundwork
+=> FMERGE1 (IsExcellent == true)
+=> FMERGE1
+
+F47:
+- Byregots Blessing
+- Veneration
+- Groundwork
+=> FMERGE5 (IsExcellent == true)
+=> FMERGE8
+
+F50:
+- Veneration
+- Groundwork
+- Groundwork
+=> FMERGE3 (IsExcellent == true)
+=> FMERGE3
+
+F52:
+- Groundwork
+- Groundwork
+- Careful Synthesis
+
+FMERGE1:
+- Groundwork
+
+FMERGE2:
+- Veneration
+- Groundwork
+- Groundwork
+
+FMERGE3:
+- Careful Synthesis
+
+FMERGE4:
+- Byregots Blessing
+- Groundwork
+
+FMERGE5:
+- Groundwork
+- Careful Synthesis
+
+FMERGE6:
+- Groundwork
+- Groundwork
+
+FMERGE7:
+- Groundwork
+=> FMERGE1 (IsExcellent == true)
+=> FMERGE1
+
+FMERGE8:
+- Groundwork
+=> FMERGE3 (IsExcellent == true)
+=> FMERGE3
+
+FMERGE9:
+- Veneration
+=> FMERGE6 (IsExcellent == true)
+=> FMERGE7
+
+FMERGE10:
+- Byregots Blessing
+- Veneration
+- Groundwork
+=> FMERGE6 (IsExcellent == true)
+=> FMERGE7
+
+FMERGE11:
+- Byregots Blessing
+- Groundwork
+- Veneration
+=> FMERGE6 (IsExcellent == true)
+=> FMERGE7
+
+BaseG:
+- Reflect
+=> G1 (IsExcellent == true)
+=> BaseGC
+
+BaseGC:
+- Delicate Synthesis
+=> G16 (IsExcellent == true)
+=> BaseGC2
+
+BaseGC2:
+- Waste Not II
+=> G28 (IsExcellent == true)
+=> BaseGC3
+
+BaseGC3:
+- Innovation
+=> G35 (IsExcellent == true)
+=> BaseGC4
+
+BaseGC4:
+- Preparatory Touch
+=> GMERGE9 (IsExcellent == true)
+=> BaseGC5
+
+BaseGC5:
+- Preparatory Touch
+=> GMERGE9 (IsExcellent == true)
+=> BaseGC6
+
+BaseGC6:
+- Preparatory Touch
+=> G47 (IsExcellent == true)
+=> BaseGC7
+
+BaseGC7:
+- Byregots Blessing
+=> G50 (IsExcellent == true)
+=> BaseGC8
+
+BaseGC8:
+- Veneration
+=> G52 (IsExcellent == true)
+=> BaseGC9
+
+BaseGC9:
+- Groundwork
+=> GMERGE5 (IsExcellent == true)
+=> GMERGE7
+
+G1:
+- Preparatory Touch
+- Innovation
+- Waste Not II
+=> G2 (IsExcellent == true)
+=> G1C
+
+G1C:
+- Preparatory Touch
+=> GMERGE10 (IsExcellent == true)
+=> G1C2
+
+G1C2:
+- Great Strides
+=> GMERGE10 (IsExcellent == true)
+=> G1C3
+
+G1C3:
+- Byregots Blessing
+=> G11 (IsExcellent == true)
+=> G1C4
+
+G1C4:
+- Veneration
+=> G13 (IsExcellent == true)
+=> G1C5
+
+G1C5:
+- Groundwork
+=> GMERGE4 (IsExcellent == true)
+=> GMERGE8
+
+G2:
+- Preparatory Touch
+- Veneration
+- Groundwork
+=> GMERGE4 (IsExcellent == true)
+=> GMERGE8
+
+G11:
+- Veneration
+- Groundwork
+- Groundwork
+=> GMERGE2 (IsExcellent == true)
+=> GMERGE2
+
+G13:
+- Groundwork
+- Groundwork
+- Groundwork
+
+G16:
+- Preparatory Touch
+- Manipulation
+- Delicate Synthesis
+=> G17 (IsExcellent == true)
+=> G16C
+
+G16C:
+- Delicate Synthesis
+=> G20 (IsExcellent == true)
+=> G16C2
+
+G16C2:
+- Great Strides
+=> G23 (IsExcellent == true)
+=> G16C3
+
+G16C3:
+- Byregots Blessing
+=> GMERGE6 (IsExcellent == true)
+=> GMERGE11
+
+G17:
+- Byregots Blessing
+- Prudent Synthesis
+- Veneration
+=> GMERGE4 (IsExcellent == true)
+=> GMERGE8
+
+G20:
+- Byregots Blessing
+- Veneration
+- Groundwork
+=> G21 (IsExcellent == true)
+=> G20C
+
+G20C:
+- Great Strides
+=> GMERGE2 (IsExcellent == true)
+=> GMERGE2
+
+G21:
+- Great Strides
+- Groundwork
+
+G23:
+- Byregots Blessing
+- Veneration
+- Groundwork
+=> GMERGE2 (IsExcellent == true)
+=> GMERGE2
+
+G28:
+- Preparatory Touch
+- Veneration
+- Delicate Synthesis
+=> G29 (IsExcellent == true)
+=> G28C
+
+G28C:
+- Delicate Synthesis
+=> G31 (IsExcellent == true)
+=> G28C2
+
+G28C2:
+- Groundwork
+=> GMERGE1 (IsExcellent == true)
+=> G28C3
+
+G28C3:
+- Great Strides
+=> GMERGE1 (IsExcellent == true)
+=> G28C4
+
+G28C4:
+- Byregots Blessing
+=> GMERGE2 (IsExcellent == true)
+=> GMERGE2
+
+G29:
+- Byregots Blessing
+- Groundwork
+- Delicate Synthesis
+=> GMERGE2 (IsExcellent == true)
+=> GMERGE2
+
+G31:
+- Byregots Blessing
+- Groundwork
+- Groundwork
+
+G35:
+- Preparatory Touch
+- Great Strides
+- Byregots Blessing
+=> G36 (IsExcellent == true)
+=> G35C
+
+G35C:
+- Groundwork
+=> GMERGE6 (IsExcellent == true)
+=> GMERGE11
+
+G36:
+- Groundwork
+- Veneration
+- Groundwork
+=> GMERGE2 (IsExcellent == true)
+=> GMERGE2
+
+G47:
+- Byregots Blessing
+- Veneration
+- Groundwork
+=> GMERGE5 (IsExcellent == true)
+=> GMERGE7
+
+G50:
+- Veneration
+- Groundwork
+- Groundwork
+=> GMERGE3 (IsExcellent == true)
+=> GMERGE3
+
+G52:
+- Groundwork
+- Groundwork
+- Careful Synthesis
+
+GMERGE1:
+- Byregots Blessing
+- Groundwork
+
+GMERGE2:
+- Groundwork
+
+GMERGE3:
+- Careful Synthesis
+
+GMERGE4:
+- Groundwork
+- Groundwork
+
+GMERGE5:
+- Groundwork
+- Careful Synthesis
+
+GMERGE6:
+- Veneration
+- Groundwork
+- Groundwork
+
+GMERGE7:
+- Groundwork
+=> GMERGE3 (IsExcellent == true)
+=> GMERGE3
+
+GMERGE8:
+- Groundwork
+=> GMERGE2 (IsExcellent == true)
+=> GMERGE2
+
+GMERGE9:
+- Byregots Blessing
+- Groundwork
+- Veneration
+=> GMERGE4 (IsExcellent == true)
+=> GMERGE8
+
+GMERGE10:
+- Byregots Blessing
+- Veneration
+- Groundwork
+=> GMERGE4 (IsExcellent == true)
+=> GMERGE8
+
+GMERGE11:
+- Veneration
+=> GMERGE4 (IsExcellent == true)
+=> GMERGE8
+

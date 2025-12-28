@@ -1,0 +1,417 @@
+Name: [Lv100] Star Tech Grind2
+Type: Craft
+Enabled: True
+Conditions: (MaxDurability == 80 && MaxProgress == 6600 && Craftsmanship >= 5404 && Craftsmanship <= 5420 && Control >= 4808 && CP >= 642 && RecipeLevel == 690)
+Cost: 0
+
+BaseA:
+- Reflect
+=> A1 (IsExcellent == true)
+=> BaseAC
+
+BaseAC:
+- Manipulation
+=> A85 (IsExcellent == true)
+=> BaseAC2
+
+BaseAC2:
+- Innovation
+=> A147 (IsExcellent == true)
+=> BaseAC3
+
+BaseAC3:
+- Preparatory Touch
+=> A184 (IsExcellent == true)
+=> BaseAC4
+
+BaseAC4:
+- Delicate Synthesis
+=> A216 (IsExcellent == true)
+=> BaseAC5
+
+BaseAC5:
+- Preparatory Touch
+=> AMERGE26 (IsExcellent == true)
+=> BaseAC6
+
+BaseAC6:
+- Preparatory Touch
+=> AMERGE26 (IsExcellent == true)
+=> BaseAC7
+
+BaseAC7:
+- Great Strides
+=> AMERGE22 (IsExcellent == true)
+=> BaseAC8
+
+BaseAC8:
+- Innovation
+=> AMERGE22 (IsExcellent == true)
+=> AMERGE30
+
+A1:
+- Preparatory Touch
+- Waste Not II
+- Delicate Synthesis
+=> A2 (IsExcellent == true)
+=> A1C
+
+A1C:
+- Preparatory Touch
+=> AMERGE28 (IsExcellent == true)
+=> A1C2
+
+A1C2:
+- Innovation
+=> A46 (IsExcellent == true)
+=> A1C3
+
+A1C3:
+- Preparatory Touch
+=> AMERGE22 (IsExcellent == true)
+=> AMERGE30
+
+A2:
+- Preparatory Touch
+- Innovation
+- Preparatory Touch
+=> AMERGE22 (IsExcellent == true)
+=> AMERGE29
+
+A46:
+- Preparatory Touch
+- Immaculate Mend
+- Byregots Blessing
+=> AMERGE13 (IsExcellent == true)
+=> AMERGE21
+
+A85:
+- Preparatory Touch
+- Delicate Synthesis
+- Preparatory Touch
+=> AMERGE28 (IsExcellent == true)
+=> A85C
+
+A85C:
+- Innovation
+=> A105 (IsExcellent == true)
+=> A85C2
+
+A85C2:
+- Preparatory Touch
+=> AMERGE22 (IsExcellent == true)
+=> A85C3
+
+A85C3:
+- Preparatory Touch
+=> A120 (IsExcellent == true)
+=> AMERGE29
+
+A105:
+- Byregots Blessing
+- Waste Not II
+- Preparatory Touch
+=> AMERGE13 (IsExcellent == true)
+=> AMERGE21
+
+A120:
+- Trained Finesse
+- Byregots Blessing
+- Immaculate Mend
+=> AMERGE13 (IsExcellent == true)
+=> AMERGE21
+
+A147:
+- Preparatory Touch
+- Waste Not II
+- Preparatory Touch
+=> AMERGE20 (IsExcellent == true)
+=> A147C
+
+A147C:
+- Preparatory Touch
+=> AMERGE20 (IsExcellent == true)
+=> A147C2
+
+A147C2:
+- Preparatory Touch
+=> AMERGE20 (IsExcellent == true)
+=> A147C3
+
+A147C3:
+- Veneration
+=> A166 (IsExcellent == true)
+=> A147C4
+
+A147C4:
+- Groundwork
+=> A172 (IsExcellent == true)
+=> A147C5
+
+A147C5:
+- Groundwork
+=> A176 (IsExcellent == true)
+=> A147C6
+
+A147C6:
+- Groundwork
+=> A179 (IsExcellent == true)
+=> A147C7
+
+A147C7:
+- Groundwork
+=> A181 (IsExcellent == true)
+=> A147C8
+
+A147C8:
+- Great Strides
+=> AMERGE1 (IsExcellent == true)
+=> A147C9
+
+A147C9:
+- Byregots Blessing
+=> AMERGE1 (IsExcellent == true)
+=> AMERGE1
+
+A166:
+- Byregots Blessing
+- Groundwork
+- Groundwork
+=> A167 (IsExcellent == true)
+=> A166C
+
+A166C:
+- Groundwork
+=> AMERGE2 (IsExcellent == true)
+=> AMERGE12
+
+A167:
+- Groundwork
+- Veneration
+- Groundwork
+=> AMERGE1 (IsExcellent == true)
+=> AMERGE1
+
+A172:
+- Byregots Blessing
+- Groundwork
+- Groundwork
+=> AMERGE2 (IsExcellent == true)
+=> AMERGE12
+
+A176:
+- Byregots Blessing
+- Groundwork
+- Veneration
+=> AMERGE3 (IsExcellent == true)
+=> AMERGE10
+
+A179:
+- Byregots Blessing
+- Veneration
+- Groundwork
+=> AMERGE1 (IsExcellent == true)
+=> AMERGE1
+
+A181:
+- Byregots Blessing
+- Delicate Synthesis
+
+A184:
+- Preparatory Touch
+- Great Strides
+- Preparatory Touch
+=> A185 (IsExcellent == true)
+=> A184C
+
+A184C:
+- Waste Not II
+=> AMERGE20 (IsExcellent == true)
+=> A184C2
+
+A184C2:
+- Delicate Synthesis
+=> AMERGE17 (IsExcellent == true)
+=> AMERGE25
+
+A185:
+- Byregots Blessing
+- Delicate Synthesis
+- Immaculate Mend
+=> AMERGE13 (IsExcellent == true)
+=> AMERGE21
+
+A216:
+- Preparatory Touch
+- Innovation
+- Waste Not II
+=> AMERGE17 (IsExcellent == true)
+=> A216C
+
+A216C:
+- Preparatory Touch
+=> AMERGE17 (IsExcellent == true)
+=> AMERGE25
+
+AMERGE1:
+- Delicate Synthesis
+
+AMERGE2:
+- Veneration
+- Groundwork
+- Delicate Synthesis
+
+AMERGE3:
+- Groundwork
+- Delicate Synthesis
+
+AMERGE4:
+- Groundwork
+- Groundwork
+
+AMERGE5:
+- Groundwork
+- Groundwork
+- Groundwork
+
+AMERGE6:
+- Groundwork
+- Groundwork
+- Delicate Synthesis
+
+AMERGE7:
+- Groundwork
+
+AMERGE8:
+- Groundwork
+=> AMERGE7 (IsExcellent == true)
+=> AMERGE7
+
+AMERGE9:
+- Groundwork
+- Groundwork
+- Groundwork
+=> AMERGE1 (IsExcellent == true)
+=> AMERGE1
+
+AMERGE10:
+- Groundwork
+=> AMERGE1 (IsExcellent == true)
+=> AMERGE1
+
+AMERGE11:
+- Groundwork
+- Groundwork
+- Groundwork
+=> AMERGE7 (IsExcellent == true)
+=> AMERGE7
+
+AMERGE12:
+- Veneration
+=> AMERGE3 (IsExcellent == true)
+=> AMERGE10
+
+AMERGE13:
+- Veneration
+- Groundwork
+- Groundwork
+=> AMERGE4 (IsExcellent == true)
+=> AMERGE8
+
+AMERGE14:
+- Groundwork
+=> AMERGE4 (IsExcellent == true)
+=> AMERGE8
+
+AMERGE15:
+- Groundwork
+=> AMERGE3 (IsExcellent == true)
+=> AMERGE10
+
+AMERGE16:
+- Groundwork
+=> AMERGE5 (IsExcellent == true)
+=> AMERGE14
+
+AMERGE17:
+- Byregots Blessing
+- Veneration
+- Groundwork
+=> AMERGE5 (IsExcellent == true)
+=> AMERGE14
+
+AMERGE18:
+- Groundwork
+=> AMERGE6 (IsExcellent == true)
+=> AMERGE15
+
+AMERGE19:
+- Immaculate Mend
+- Veneration
+- Groundwork
+=> AMERGE5 (IsExcellent == true)
+=> AMERGE14
+
+AMERGE20:
+- Byregots Blessing
+- Veneration
+- Groundwork
+=> AMERGE9 (IsExcellent == true)
+=> AMERGE18
+
+AMERGE21:
+- Veneration
+=> AMERGE11 (IsExcellent == true)
+=> AMERGE16
+
+AMERGE22:
+- Byregots Blessing
+- Immaculate Mend
+- Veneration
+=> AMERGE11 (IsExcellent == true)
+=> AMERGE16
+
+AMERGE23:
+- Immaculate Mend
+=> AMERGE13 (IsExcellent == true)
+=> AMERGE21
+
+AMERGE24:
+- Byregots Blessing
+=> AMERGE13 (IsExcellent == true)
+=> AMERGE21
+
+AMERGE25:
+- Great Strides
+=> AMERGE17 (IsExcellent == true)
+=> AMERGE24
+
+AMERGE26:
+- Preparatory Touch
+- Great Strides
+- Byregots Blessing
+=> AMERGE19 (IsExcellent == true)
+=> AMERGE23
+
+AMERGE27:
+- Byregots Blessing
+=> AMERGE19 (IsExcellent == true)
+=> AMERGE23
+
+AMERGE28:
+- Preparatory Touch
+- Great Strides
+- Innovation
+=> AMERGE22 (IsExcellent == true)
+=> AMERGE27
+
+AMERGE29:
+- Great Strides
+=> AMERGE22 (IsExcellent == true)
+=> AMERGE27
+
+AMERGE30:
+- Preparatory Touch
+=> AMERGE22 (IsExcellent == true)
+=> AMERGE29
+

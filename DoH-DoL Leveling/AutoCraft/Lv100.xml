@@ -3,9 +3,12 @@
 <Name>Crafting Lv100 Gear</Name>
 <Order>
     <RunCode Name="SwitchCombatJob"/>
-    <If Condition="not ((HqHasAtLeast(43267, 1)) and (HqHasAtLeast(43263, 1)) and (HqHasAtLeast(43274, 1)) and (HqHasAtLeast(43264, 1)) and (HqHasAtLeast(43275, 1)) and (HqHasAtLeast(43266, 1)) and (HqHasAtLeast(43277, 1)) and (HqHasAtLeast(43265, 1)) and (HqHasAtLeast(43276, 1)) and (HqHasAtLeast(43268, 1)) and (HqHasAtLeast(43279, 1)) and (HqHasAtLeast(43269, 1)) and (HqHasAtLeast(43281, 1)) and (HqHasAtLeast(43314, 1)) and (HqHasAtLeast(43315, 1)) and (HqHasAtLeast(43316, 1)) and (HqHasAtLeast(43317, 1)) and (HqHasAtLeast(43318, 1)) and (HqHasAtLeast(43340, 1)) and (HqHasAtLeast(43341, 1)) and (HqHasAtLeast(43342, 1)) and (HqHasAtLeast(43343, 2)) and (HqHasAtLeast(43282, 1)) and (HqHasAtLeast(43283, 1)) and (HqHasAtLeast(43344, 1)) and (HqHasAtLeast(43345, 1)) and (HqHasAtLeast(43346, 1)) and (HqHasAtLeast(43347, 2)) and (HqHasAtLeast(43278, 1)) and (HqHasAtLeast(43280, 1)) and (HqHasAtLeast(43270, 1)))">
+    <If Condition="not HqHasAtLeast(43276, 1)">
     <RunCode Name="SetLisbethJson" />
     </If>
+    <While Condition="ClassName != ClassJobType.Armorer">
+		<ChangeClass Job="Armorer"/>
+	</While>
     <AutoInventoryEquip/>
 
     <While Condition="(Core.Me.Levels[ClassJobType.Botanist] &lt; 100) or (Core.Me.Levels[ClassJobType.Miner] &lt; 100)">
@@ -19,9 +22,45 @@
 			<UseUnlockables />
 		</While>
 
+    
+    <RunCode Name="SwitchCombatJob"/>
+    <If Condition="not ((HasAtLeast(49339, 1)) and (HasAtLeast(49328, 1)))">
+        <While Condition="ClassName != ClassJobType.Armorer">
+		<ChangeClass Job="Armorer"/>
+	</While>
+        <RunCode Name="SetLisbethJson2" />
+        <While Condition="ClassName != ClassJobType.Armorer">
+		<ChangeClass Job="Armorer"/>
+	</While>
+    <AutoInventoryEquip/>
+    </If>
 
     <RunCode Name="SwitchCombatJob"/>
-    <RunCode Name="SetLisbethJson2" />
+
+    <If Condition="not HasAtLeast(49348, 1)">
+    <While Condition="ClassName != ClassJobType.Armorer">
+		<ChangeClass Job="Armorer"/>
+	</While>
+    <RunCode Name="SetLisbethJson3" />
+    <While Condition="ClassName != ClassJobType.Armorer">
+		<ChangeClass Job="Armorer"/>
+	</While>
+    <AutoInventoryEquip/>
+    </If>
+
+    <RunCode Name="SwitchCombatJob"/>
+
+    <If Condition="not HasAtLeast(49326, 1)">
+    <While Condition="ClassName != ClassJobType.Armorer">
+		<ChangeClass Job="Armorer"/>
+	</While>
+    <RunCode Name="SetLisbethJson4" />
+    <While Condition="ClassName != ClassJobType.Armorer">
+		<ChangeClass Job="Armorer"/>
+	</While>
+    <AutoInventoryEquip/>
+    </If>
+
     <LogMessage Message="Crafted Lv100 Gear! Unlocking Master Books now..."/>
     <AutoInventoryEquip/>
 
@@ -291,7 +330,7 @@
     // Try to get profile path and construct relative path from there
     var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
     var profileDir = System.IO.Path.GetDirectoryName(profilePath);
-    var jsonPath = System.IO.Path.Combine(profileDir, "../Lisbeth/GearSets/GEAR100-1.json");
+    var jsonPath = System.IO.Path.Combine(profileDir, "../Lisbeth/GearSets/GEAR100-Part1.json");
     
     var json = System.IO.File.ReadAllText(jsonPath);
     var lisbeth = BotManager.Bots.FirstOrDefault(c => c.Name == "Lisbeth");
@@ -351,7 +390,127 @@
     // Try to get profile path and construct relative path from there
     var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
     var profileDir = System.IO.Path.GetDirectoryName(profilePath);
-    var jsonPath = System.IO.Path.Combine(profileDir, "../Lisbeth/GearSets/GEAR100-2.json");
+    var jsonPath = System.IO.Path.Combine(profileDir, "../Lisbeth/GearSets/GEAR100-Part2.json");
+    
+    var json = System.IO.File.ReadAllText(jsonPath);
+    var lisbeth = BotManager.Bots.FirstOrDefault(c => c.Name == "Lisbeth");
+    if (lisbeth != null)
+   {
+       var lisbethObject = lisbeth.GetType().GetProperty("Lisbeth").GetValue(lisbeth);
+       if (lisbethObject != null)
+       {
+           Func<Task> executeWithRetry = null;
+           executeWithRetry = async () => {
+               try 
+               {
+                   var orderMethod = lisbethObject.GetType().GetMethod("ExecuteOrders");
+                   await (Task<bool>)orderMethod.Invoke(lisbethObject, new object[] { json, false });
+               }
+               catch (Exception ex) when (
+                   ex.ToString().Contains("HttpRequestException") || 
+                   ex.ToString().Contains("No response from the server") ||
+                   ex.ToString().Contains("Max sessions reached")
+               )
+               {
+                   // Log and stop gently
+                   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Attempting to stop Lisbeth gently...");
+                   var stopGentlyMethod = lisbethObject.GetType().GetMethod("StopGently");
+                   await (Task)stopGentlyMethod.Invoke(lisbethObject, null);
+                   
+                   // Log and try to exit crafting
+                   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Attempting to exit crafting state...");
+                   try 
+                   {
+                       var exitCraftingMethod = lisbethObject.GetType().GetMethod("ExitCrafting");
+                       await (Task<bool>)exitCraftingMethod.Invoke(lisbethObject, null);
+                   }
+                   catch {}
+                   
+                   // Log waiting period
+                   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Waiting 5 minutes before attempting restart...");
+                   await Task.Delay(TimeSpan.FromMinutes(5));
+                   
+                   // Log and request restart
+                   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Requesting Lisbeth to restart orders...");
+                   var restartMethod = lisbethObject.GetType().GetMethod("RequestRestart");
+                   restartMethod.Invoke(lisbethObject, new object[] { json });
+                   
+                   await executeWithRetry();
+               }
+           };
+
+           await executeWithRetry();
+       }
+   }
+]]>
+</CodeChunk>
+
+<CodeChunk Name="SetLisbethJson3">
+<![CDATA[
+    // Try to get profile path and construct relative path from there
+    var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+    var profileDir = System.IO.Path.GetDirectoryName(profilePath);
+    var jsonPath = System.IO.Path.Combine(profileDir, "../Lisbeth/GearSets/GEAR100-Part3.json");
+    
+    var json = System.IO.File.ReadAllText(jsonPath);
+    var lisbeth = BotManager.Bots.FirstOrDefault(c => c.Name == "Lisbeth");
+    if (lisbeth != null)
+   {
+       var lisbethObject = lisbeth.GetType().GetProperty("Lisbeth").GetValue(lisbeth);
+       if (lisbethObject != null)
+       {
+           Func<Task> executeWithRetry = null;
+           executeWithRetry = async () => {
+               try 
+               {
+                   var orderMethod = lisbethObject.GetType().GetMethod("ExecuteOrders");
+                   await (Task<bool>)orderMethod.Invoke(lisbethObject, new object[] { json, false });
+               }
+               catch (Exception ex) when (
+                   ex.ToString().Contains("HttpRequestException") || 
+                   ex.ToString().Contains("No response from the server") ||
+                   ex.ToString().Contains("Max sessions reached")
+               )
+               {
+                   // Log and stop gently
+                   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Attempting to stop Lisbeth gently...");
+                   var stopGentlyMethod = lisbethObject.GetType().GetMethod("StopGently");
+                   await (Task)stopGentlyMethod.Invoke(lisbethObject, null);
+                   
+                   // Log and try to exit crafting
+                   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Attempting to exit crafting state...");
+                   try 
+                   {
+                       var exitCraftingMethod = lisbethObject.GetType().GetMethod("ExitCrafting");
+                       await (Task<bool>)exitCraftingMethod.Invoke(lisbethObject, null);
+                   }
+                   catch {}
+                   
+                   // Log waiting period
+                   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Waiting 5 minutes before attempting restart...");
+                   await Task.Delay(TimeSpan.FromMinutes(5));
+                   
+                   // Log and request restart
+                   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Requesting Lisbeth to restart orders...");
+                   var restartMethod = lisbethObject.GetType().GetMethod("RequestRestart");
+                   restartMethod.Invoke(lisbethObject, new object[] { json });
+                   
+                   await executeWithRetry();
+               }
+           };
+
+           await executeWithRetry();
+       }
+   }
+]]>
+</CodeChunk>
+
+<CodeChunk Name="SetLisbethJson4">
+<![CDATA[
+    // Try to get profile path and construct relative path from there
+    var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+    var profileDir = System.IO.Path.GetDirectoryName(profilePath);
+    var jsonPath = System.IO.Path.Combine(profileDir, "../Lisbeth/GearSets/GEAR100-Part4.json");
     
     var json = System.IO.File.ReadAllText(jsonPath);
     var lisbeth = BotManager.Bots.FirstOrDefault(c => c.Name == "Lisbeth");

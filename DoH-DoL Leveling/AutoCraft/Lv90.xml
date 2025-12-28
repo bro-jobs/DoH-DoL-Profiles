@@ -7,7 +7,7 @@
     <!-- Buy Command VII materia from Firmament Scrip Exchange -->
     <BuyShopExchangeCurrency NpcId="1031680" ItemId="25195" Count="99" SelectString="2"/>
 
-	<!-- Craft Lv80 Gear -->
+	<!-- Craft Lv90 Gear -->
 	<RunCode Name="SwitchCombatJob"/>
 	<Lisbeth Json="[{'Id':1,'Group':1,'Item':33914,'Amount':2600,'Enabled':true,'Type':'GatherMasterpiece','AmountMode':'Restock'}]"/>
 	
