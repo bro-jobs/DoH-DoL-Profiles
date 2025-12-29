@@ -3233,7 +3233,7 @@ Authors:  Kayla / Angles24
 </CodeChunk>
 <CodeChunk Name="SetLisbethJsonCUL98">
 	<![CDATA[
-		int amount = 7;
+		int amount = 10;
 		int level = Core.Me.Levels[ClassJobType.Culinarian];
 		int exp = (int)Experience.CurrentExperience;
 

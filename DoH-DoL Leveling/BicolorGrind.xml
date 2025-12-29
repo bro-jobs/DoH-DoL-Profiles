@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Profile>
+<Name>Grinding Bicolor for Lv80-100 Mats</Name>
+<Order>
+<RunCode Name="SwitchCombatJob"/>
+
+	<While Condition="not ((HasAtLeast(36242, 148)) and (HasAtLeast(27736, 64)) and (HasAtLeast(36243, 96)) and (HasAtLeast(36203, 164)) and (HasAtLeast(36244, 92)) and (HasAtLeast(36258, 39)) and (HasAtLeast(36245, 20)) and (HasAtLeast(36246, 40)) and (HasAtLeast(44053, 160)) and (HasAtLeast(36257, 60)) and (HasAtLeast(36260, 10)) and (HasAtLeast(44063, 30)) and (HasAtLeast(44067, 50)) and (HasAtLeast(44054, 180)) and (HasAtLeast(36256, 34)) and (HasAtLeast(44055, 116)) and (HasAtLeast(44069, 15)) and (HasAtLeast(44070, 10)) and (HasAtLeast(44056, 100)) and (HasAtLeast(44027, 100)) and (HasAtLeast(44071, 40)) and (HasAtLeast(44057, 60)))">
+		<!-- Trading with vendor logic not yet complete... got to hunt down each NPC one by one. -->
+		<If Condition="ItemCount(26807) &gt; 200">
+		<!-- todo -->
+		</If>
+		<If condition="not IsOnMap(961)">
+			<TeleportTo AetheryteId="177"/> <!-- The Twelve Wonders -->
+		</If>
+		<LLFate UseFlight="True" MinProgress="0" MinLevel="0" MaxLevel="91" BlacklistIds="1838" while="IsOnMap(961) and ItemCount(26807) &lt; 200"/>
+	</While>
+    <LLoadProfile Path="Start.xml"/>
+</Order>
+<CodeChunks>
+<CodeChunk Name="SwitchCombatJob">
+            <![CDATA[ 
+            var Combat = Enumerable.Range(8, 11).Append(0).Append(36);
+            var gearSets = GearsetManager.GearSets.Where(i => i.InUse && !Combat.Contains((int)i.Class)).ToList().OrderByDescending(i=> i.Gear.First().Item.ItemLevel);
+
+            if (gearSets.Any())
+            {
+                gearSets.First().Activate();
+                await Coroutine.Sleep(2000);
+            }
+            ]]>
+        </CodeChunk>
+<CodeChunk Name="SetLisbethJson">
+<![CDATA[
+    // Try to get profile path and construct relative path from there
+    var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+    var profileDir = System.IO.Path.GetDirectoryName(profilePath);
+    var jsonPath = System.IO.Path.Combine(profileDir, "../Lisbeth/GearSets/GEAR80.json");
+    
+    var json = System.IO.File.ReadAllText(jsonPath);
+    var lisbeth = BotManager.Bots.FirstOrDefault(c => c.Name == "Lisbeth");
+    if (lisbeth != null)
+    {
+        var lisbethObject = lisbeth.GetType().GetProperty("Lisbeth").GetValue(lisbeth);
+        if (lisbethObject != null)
+				   {
+					   Func<Task> executeWithRetry = null;
+					   executeWithRetry = async () => {
+						   try 
+						   {
+							   var orderMethod = lisbethObject.GetType().GetMethod("ExecuteOrders");
+							   await (Task<bool>)orderMethod.Invoke(lisbethObject, new object[] { json, false });
+						   }
+						   catch (Exception ex) when (
+							   ex.ToString().Contains("HttpRequestException") || 
+							   ex.ToString().Contains("No response from the server") ||
+							   ex.ToString().Contains("Max sessions reached")
+						   )
+						   {
+							   // Log and stop gently
+							   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Attempting to stop Lisbeth gently...");
+							   var stopGentlyMethod = lisbethObject.GetType().GetMethod("StopGently");
+							   await (Task)stopGentlyMethod.Invoke(lisbethObject, null);
+							   
+							   // Log and try to exit crafting
+							   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Attempting to exit crafting state...");
+							   try 
+							   {
+								   var exitCraftingMethod = lisbethObject.GetType().GetMethod("ExitCrafting");
+								   await (Task<bool>)exitCraftingMethod.Invoke(lisbethObject, null);
+							   }
+							   catch {}
+							   
+							   // Log waiting period
+							   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Waiting 5 minutes before attempting restart...");
+							   await Task.Delay(TimeSpan.FromMinutes(5));
+							   
+							   // Log and request restart
+							   ff14bot.Helpers.Logging.Write("[MaxSessionRestarter] Requesting Lisbeth to restart orders...");
+							   var restartMethod = lisbethObject.GetType().GetMethod("RequestRestart");
+							   restartMethod.Invoke(lisbethObject, new object[] { json });
+							   
+							   await executeWithRetry();
+						   }
+					   };
+
+					   await executeWithRetry();
+				   }
+    }
+]]>
+</CodeChunk>
+<CodeChunk Name="Logger">
+    <![CDATA[
+        try
+        {
+            string workingDirectory = Directory.GetCurrentDirectory();
+            string settingsPath = Path.Combine(workingDirectory, "Settings");
+            string logFilePath = Path.Combine(settingsPath, $"autocraft.txt");
+            
+            File.AppendAllText(logFilePath, "craft80" + Environment.NewLine);
+        }
+        catch (Exception ex)
+        {
+        }
+    ]]>
+</CodeChunk>
+</CodeChunks>
+</Profile>

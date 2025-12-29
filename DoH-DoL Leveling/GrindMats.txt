@@ -1,0 +1,82 @@
+Lv21-40: LTW Collectable: 23x (Aldgoat Skin x1)
+Lv21-40: ALC Collectable: 23x (Acidic Secretions x1)
+-------------------------------------------------------
+Lv41-63: LTW Collectable: 40x (Peiste Skin x1)
+Lv41-63: WVR Collectable: 38x (Fleece x2) (76x)
+-------------------------------------------------------
+Lv70-80: ARM Collectable: 29x (Tiger Skin x3) (87x)
+Lv70-80: WVR Collectable: 29x (Tiger Skin x3) (87x)
+Lv70-80: ALC Collectable: 29x (Bear Fat x2) (58x)
+-------------------------------------------------------
+Lv80-82: LTW Leve: 6x (8x Gaja Hide, 4x Sea Swallow Skin) [48 / 24]
+Lv82-84: LTW Leve: 5x (4x Gaja Hide, 12x Luncheon Toad Skin) [20 / 60]
+Lv82-86: BSM Leve: 10x (4x Sea Swallow Skin) [40]
+Lv82-86: WVR Leve: 9x (4x Gaja Hide, 12x Almasty Fur) [36 / 108]
+Lv80-82: ARM Leve: 6x (4x Gaja Hide) [24]
+Lv82-84: ARM Leve: 5x (4x Gaja Hide, 4x Almasty Fur) [20 / 20]
+Lv84-87: LTW Leve: 9x (4x Luncheon Toad Skin, 8x Saiga Hide, 4x Almasty Fur, 1x Lunatender Blossom) [36 / 72 / 36 / 9]
+Lv86-88: WVR Leve: 5x (4x Saiga Hide, 4x Kumbhira Skin, 1x Lunatender Blossom) [20 / 20 / 5]
+Lv88-100: WVR Leve: 5x (4x Ophiotaurous Hide, 1x Lunatender Blossom) [20 / 5]
+-------------------------------------------------------
+Lv90-92: GSM Leve: 5x (3x Mousse Flesh, 1x Lunatender Blossom) [15 / 5]
+Lv90-92: LTW Collectable: 10x (8x Silver Lobo Hide) [80]
+Lv90-92: WVR Leve: 5x (4x Ophiotauros Hide, 8x Silver Lobo Hide) [20 / 40]
+Lv90-92: ALC Leve: 5x (1x Lunatender Blossom, 3x Mousse Flesh, 1x Petalouda Scales, 4x Silver Lobo Hide) [5 / 15 / 5 / 20]
+Lv90-92: CUL Collectable: 10x (2x Alpaca Fillet, 5x Megamaguey Pineapple) [20 / 50]
+Lv92-94: WVR Leve: 5x (8x Hammerhead Crocodile Skin, 4x Silver Lobo Hide) [40 / 20]
+Lv92-94: ALC Leve: 5x (8x Hammerhead Crocodile Skin, 1x Lunatender Blossom, 3x Mousse Flesh, 1x Petalouda Scales) [40 / 5 / 15 / 5]
+Lv92-98: CUL Collectable: 34x (1x Egg of Elpis) [34]
+Lv92-94: LTW Collectable: 10x (8x Hammerhead Crocodile Skin) [80]
+Lv98-100: CUL Collectable: 10x (1x Alpaca Fillet) [10]
+Lv94-96: WVR Leve: 5x (8x Br'aax Hide, 4x Hammerhead Crocodile Skin, 1x Lesser Apollyon Shell) [40 / 20 / 5]
+Lv94-96: ALC Leve: 5x (1x Lunatender Blossom, 3x Mousse Flesh, 2x Ty'aitya Wingblade) [5 / 15 / 10]
+Lv94-96: LTW Leve: 7x (8x Br'aax Hide) [56]
+Lv96-98: WVR Leve: 5x (8x Gomphotherium Skin, 8x Rroneek Fleece) [40 / 40]
+Lv96-98: ALC Collectable: 10x (4x Tumbleclaw Weeds) [40]
+Lv96-98: LTW Leve: 5x (4x Br'aax Hide, 8x Gomphotherium Skin, 8x Rroneek Fleece) [20 / 40 / 40]
+Lv98-100: LTW Leve: 5x (8x Gargantua Hide, 4x Gomphotherium Skin, 1x Lesser Apollyon Shell) [40 / 20 / 5]
+Lv98-100: WVR Leve: 5x (4x Gargantua Hide, 1x Lesser Apollyon Shell, 4x Rroneek Fleece) [20 / 5 / 20]
+-------------------------------------------------------
+Gaja Hide: 148x
+Sea Swallow Skin: 64x
+Luncheon Toad Skin: 96x
+Almasty Fur: 164x
+Saiga Hide: 92x
+Lunatender Blossom: 39x
+Kumbhira Skin: 20x
+Ophiotaurous Hide: 40x
+Silver Lobo Hide: 160x
+Mousse Flesh: 60x
+Petalouda Scales: 10x
+Alpaca Fillet: 30x
+Megamaguey Pineapple: 50x
+Hammerhead Crocodile Skin: 180x
+Egg of Elpis: 34x
+Br'aax Hide: 116x
+Lesser Apollyon Shell: 15x
+Ty'aitya Wingblade: 10x
+Gomphotherium Skin: 100x
+Rroneek Fleece: 100x
+Tumbleclaw Weeds: 40x
+Gargantua Hide: 60x
+
+1628x Bicolor gemstones
+-------------------------------------------------------
+
+Long grinds in gear:
+
+GEAR21: Aldgoat Skin x7
+GEAR53: Wyvern Skin x51
+GEAR63: Gyuki Hide x72
+
+-------------------------------------------------------
+Purchases:
+
+Aldgoat Skin x30
+Wyvern Skin x51
+Acidic Secretions x23
+Peiste Skin x40
+Fleece x76
+Gyuki Hide x72
+Tiger Skin x174
+Bear Fat x58
