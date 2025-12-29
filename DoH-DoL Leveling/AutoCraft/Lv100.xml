@@ -50,7 +50,7 @@
 
     <RunCode Name="SwitchCombatJob"/>
 
-    <If Condition="not HasAtLeast(49326, 1)">
+    <If Condition="not ((HasAtLeast(49326, 1)) and (HasAtLeast(44848, 112)) and (HasAtLeast(46252, 112)) and (HasAtLeast(41776, 3)) and (HasAtLeast(41779, 3)))">
     <While Condition="ClassName != ClassJobType.Armorer">
 		<ChangeClass Job="Armorer"/>
 	</While>

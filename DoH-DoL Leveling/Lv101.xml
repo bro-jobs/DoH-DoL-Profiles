@@ -15,14 +15,14 @@
 	<WaitTimer WaitTime="5"/>
 	<UseUnlockables />
 	
-	<While Condition="(not HasItem(44432)) or (not HasItem(44433)) or (not HasItem(44434)) or (not HasItem(44435)) or (not HasItem(44436)) or (not HasItem(44437)) or (not HasItem(44438)) or (not HasItem(44439)) or (not HasItem(44440)) or (not HasItem(44441)) or (not HasItem(44411)) or (not HasItem(44412)) or (not HasItem(44413)) or (not HasItem(44414)) or (not HasItem(44415)) or (not HasItem(44416)) or (not HasItem(44417)) or (not HasItem(44418)) or (not HasItem(44419)) or (not HasItem(44420)) or (not HasItem(44422)) or (not HasItem(44423)) or (not HasItem(44424)) or (not HasItem(44425)) or (not HasItem(44426)) or (not HasItem(44427)) or (not HasItem(44428)) or (not HasItem(44429)) or (not HasItem(44430)) or (not HasItem(44431))">
+	<While Condition="(not HasItem(47163)) or (not HasItem(47164)) or (not HasItem(47165)) or (not HasItem(47166)) or (not HasItem(47167)) or (not HasItem(47168)) or (not HasItem(47169)) or (not HasItem(47170)) or (not HasItem(47171)) or (not HasItem(47172)) or (not HasItem(47174)) or (not HasItem(47175)) or (not HasItem(47176)) or (not HasItem(47177)) or (not HasItem(47178)) or (not HasItem(47179)) or (not HasItem(47180)) or (not HasItem(47181)) or (not HasItem(47182)) or (not HasItem(47183)) or (not HasItem(47184)) or (not HasItem(47185)) or (not HasItem(47186)) or (not HasItem(47187)) or (not HasItem(47188)) or (not HasItem(47189)) or (not HasItem(47190)) or (not HasItem(47191)) or (not HasItem(47192)) or (not HasItem(47193)) or (not HasItem(47194)) or (not HasItem(47195)) or (not HasItem(47196)) or (not HasItem(47197)) or (not HasItem(47198)) or (not HasItem(47199)) or (not HasItem(47200)) or (not HasItem(47201))">
     	<RunCode Name="SwitchCombatJob"/>
 		<RunCode Name="SetLisbethJson1" />
 	</While>
 
 	<RunCode Name="SwitchCombatJob"/>
 
-	<If Condition="HasItem(44432) and HasItem(44433) and HasItem(44434) and HasItem(44435) and HasItem(44436) and HasItem(44437) and HasItem(44438) and HasItem(44439) and HasItem(44440) and HasItem(44441) and HasItem(44411)" >
+	<If Condition="HasItem(47163) and HasItem(47164) and HasItem(47165) and HasItem(47166) and HasItem(47167) and HasItem(47168) and HasItem(47169) and HasItem(47170) and HasItem(47171) and HasItem(47172) and HasItem(47174) and HasItem(47175) and HasItem(47176) and HasItem(47177) and HasItem(47178) and HasItem(47179) and HasItem(47180) and HasItem(47181) and HasItem(47182) and HasItem(47183) and HasItem(47184) and HasItem(47185) and HasItem(47186) and HasItem(47187) and HasItem(47188) and HasItem(47189) and HasItem(47190) and HasItem(47191) and HasItem(47192) and HasItem(47193) and HasItem(47194) and HasItem(47195) and HasItem(47196) and HasItem(47197) and HasItem(47198) and HasItem(47199) and HasItem(47200) and HasItem(47201)" >
 		<RunCode Name="autosellcheck102" />
 	</If>
 </Order>

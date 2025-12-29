@@ -1327,8 +1327,8 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		<If Condition="not IsOnMap(129)">
 			<GetTo ZoneId="129" XYZ="-84.08636, 18.60033, -12.41393"/><!-- Limsa Lominsa Lower Decks -->
 		</If>
-		<LogMessage Message="Change from Quick Synth All to Normal. Disable Equipment optimization. 1) Meld 3 Guile XII on your gathering gear, and 3 Cunning XII on your crafter gear. 2) Purchase mats: 48x Neo Abrasive, 82x Hydrophobic Preservative, 140x Shaaloani Coke, 62x Diatryma Pelt, 56x Cronopio Skin. 3) Run Lv101.xml"/>
-		<UserDialog DialogText="Change from Quick Synth All to Normal. Disable Equipment optimization.  1) Meld 3 Guile XII on your gathering gear, and 3 Cunning XII on your crafter gear. 2) Purchase mats: 48x Neo Abrasive, 82x Hydrophobic Preservative, 140x Shaaloani Coke, 62x Diatryma Pelt, 56x Cronopio Skin. 3) Run Lv101.xml"/>
+		<LogMessage Message="To Craft Crested Gear: 1) Meld 3 Guile XII on your gathering gear, and 3 Cunning XII on your crafter gear. 2) Purchase mats: 48x Neo Abrasive, 82x Hydrophobic Preservative, 140x Shaaloani Coke, 62x Diatryma Pelt, 56x Cronopio Skin. 3) Run Lv101.xml"/>
+		<UserDialog DialogText="To Craft Crested Gear: 1) Meld 3 Guile XII on your gathering gear, and 3 Cunning XII on your crafter gear. 2) Purchase mats: 48x Neo Abrasive, 82x Hydrophobic Preservative, 140x Shaaloani Coke, 62x Diatryma Pelt, 56x Cronopio Skin. 3) Run Lv101.xml"/>
 	
 	</Order>
 	<CodeChunks>
