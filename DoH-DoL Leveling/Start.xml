@@ -735,6 +735,16 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 			<LogMessage Message="Craft level 80 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and make sure your gearsets are updated with the new gear."/>
 			<UserDialog DialogText="Craft level 80 gear, import order into lisbeth. You can find it under Gear Sets folder, remove any items you don't want to craft and make sure your gearsets are updated with the new gear.\n\nIf you keep seeing this popup even though you have upgraded your gear edit the Start.xml profile and change 'craft80 1' to 'craft80 0', save and start thebot again."/>	
 		</If>
+
+		<!-- Unlocking gemstone traders -->
+
+		<If Condition="&autocraft; == 1">
+			<RunCode Name="autocraftcheck400" />
+		</If>
+
+		<If Condition="&autocraft; == 1">
+			<RunCode Name="bicolorgrind" />
+		</If>
 		
 		<!-- Expanding House of Splendors -->
 		<If Condition="not IsQuestCompleted(69711)">
@@ -1406,10 +1416,58 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 			}
 		]]>
 		</CodeChunk>
+
+		<CodeChunk Name="bicolorgrind">
+		<![CDATA[
+				try 
+				{
+					string workingDirectory = Directory.GetCurrentDirectory();
+					string settingsPath = Path.Combine(workingDirectory, "Settings");
+					string logFilePath = Path.Combine(settingsPath, "autocraft.txt");
+					
+					// Create the file if it doesn't exist
+					if (!File.Exists(logFilePath))
+					{
+						File.WriteAllText(logFilePath, "");
+					}
+					
+					// Read content and check for craft{level}
+					string content = File.ReadAllText(logFilePath);
+					if (content.Contains($"bicolor"))
+					{
+						return true;
+					}
+					
+					// If we get here, we need to run the profile
+					var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+					var profileDir = Path.GetDirectoryName(profilePath);
+					var autoCraftPath = Path.Combine(profileDir, $"BicolorGrind.xml");
+					
+					if (File.Exists(autoCraftPath))
+					{
+						await Coroutine.Sleep(500);
+						ff14bot.NeoProfiles.NeoProfileManager.Load(autoCraftPath);
+						await Coroutine.Sleep(1000);
+					}
+					
+					return true;
+				}
+				catch
+				{
+					return true;
+				}
+		]]>
+		</CodeChunk>
 		
 		<CodeChunk Name="autocraftcheck21">
 		<![CDATA[
 			await CheckAutocraftLevel(21);
+		]]>
+		</CodeChunk>
+
+		<CodeChunk Name="autocraftcheck400">
+		<![CDATA[
+			await CheckAutocraftLevel(400);
 		]]>
 		</CodeChunk>
 

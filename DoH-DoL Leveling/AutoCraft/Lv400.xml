@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Profile>
+<Name>Unlocking Gemstone Traders</Name>
+<Order>
+<RunCode Name="SwitchCombatJob"/>
+
+    <!-- Thavnair -->
+    <GetTo ZoneId="957" XYZ="217.9855, 4.7637, 655.8533"/>
+    <WaitTimer WaitTime="3"/>
+    <RunCode Name="UnlockGemstoneTrader" />
+    <WaitTimer WaitTime="3"/>
+
+    <!-- Garlemald -->
+    <GetTo ZoneId="958" XYZ="-423.1353, 22.204987, 430.73117"/>
+    <WaitTimer WaitTime="3"/>
+    <RunCode Name="UnlockGemstoneTrader" />
+    <WaitTimer WaitTime="3"/>
+
+    <!-- Moon -->
+    <GetTo ZoneId="959" XYZ="23.594229, -132.94643, -461.33685"/>
+    <WaitTimer WaitTime="3"/>
+    <RunCode Name="UnlockGemstoneTrader" />
+    <WaitTimer WaitTime="3"/>
+
+    <!-- Labyrinthos -->
+    <GetTo ZoneId="956" XYZ="427.63828, 166.28354, -424.6029"/>
+    <WaitTimer WaitTime="3"/>
+    <RunCode Name="UnlockGemstoneTrader" />
+    <WaitTimer WaitTime="3"/>
+
+    <!-- Elpis -->
+    <GetTo ZoneId="961" XYZ="149.28677, 10.385857, 98.87985"/>
+    <WaitTimer WaitTime="3"/>
+    <RunCode Name="UnlockGemstoneTrader" />
+    <WaitTimer WaitTime="3"/>
+
+    <!-- Ultima Thule -->
+    <GetTo ZoneId="960" XYZ="472.0426, 437.00165, 332.80014"/>
+    <WaitTimer WaitTime="3"/>
+    <RunCode Name="UnlockGemstoneTrader" />
+    <WaitTimer WaitTime="3"/>
+
+    <!-- Lakeland -->
+    <GetTo ZoneId="813" XYZ="701.30853, 21.798542, -42.777428"/>
+    <WaitTimer WaitTime="3"/>
+    <RunCode Name="UnlockGemstoneTrader" />
+    <WaitTimer WaitTime="3"/>
+
+    <!-- Kholusia -->
+    <GetTo ZoneId="814" XYZ="-486.4857, 417.18915, -628.6227"/>
+    <WaitTimer WaitTime="3"/>
+    <RunCode Name="UnlockGemstoneTrader" />
+    <WaitTimer WaitTime="3"/>
+
+    <!-- Amh Araeng  -->
+    <GetTo ZoneId="815" XYZ="-538.3992, 45.60158, -216.36465"/>
+    <WaitTimer WaitTime="3"/>
+    <RunCode Name="UnlockGemstoneTrader" />
+    <WaitTimer WaitTime="3"/>
+
+    <!-- Il Mheg  -->
+    <GetTo ZoneId="816" XYZ="-252.08415, 40.324028, 468.94614"/>
+    <WaitTimer WaitTime="3"/>
+    <RunCode Name="UnlockGemstoneTrader" />
+    <WaitTimer WaitTime="3"/>
+
+    <!-- Rak'tika -->
+    <GetTo ZoneId="817" XYZ="327.595, 33.762863, -162.61554"/>
+    <WaitTimer WaitTime="3"/>
+    <RunCode Name="UnlockGemstoneTrader" />
+    <WaitTimer WaitTime="3"/>
+
+    <!-- Tempest -->
+    <GetTo ZoneId="818" XYZ="584.1594, 349.0089, -177.11697"/>
+    <WaitTimer WaitTime="3"/>
+    <RunCode Name="UnlockGemstoneTrader" />
+    <WaitTimer WaitTime="3"/>
+
+    <!-- Urqopacha -->
+    <GetTo ZoneId="1187" XYZ="298.12204, -172.58315, -486.9503"/>
+    <WaitTimer WaitTime="3"/>
+    <RunCode Name="UnlockGemstoneTrader" />
+    <WaitTimer WaitTime="3"/>
+
+    <!-- Kozama'Uka -->
+    <GetTo ZoneId="1188" XYZ="-200.28322, 6.2771482, -519.113"/>
+    <WaitTimer WaitTime="3"/>
+    <RunCode Name="UnlockGemstoneTrader" />
+    <WaitTimer WaitTime="3"/>
+
+    <!-- Yak Tel -->
+    <GetTo ZoneId="1189" XYZ="-382.5761, 23.535583, -432.70758"/>
+    <WaitTimer WaitTime="3"/>
+    <RunCode Name="UnlockGemstoneTrader" />
+    <WaitTimer WaitTime="3"/>
+
+    <!-- Shaaloani -->
+    <GetTo ZoneId="1190" XYZ="360.1592, -1.6124972, 465.1963"/>
+    <WaitTimer WaitTime="3"/>
+    <RunCode Name="UnlockGemstoneTrader" />
+    <WaitTimer WaitTime="3"/>
+
+    <!-- Heritage Found -->
+    <GetTo ZoneId="1191" XYZ="-252.56512, 30, -592.878"/>
+    <WaitTimer WaitTime="3"/>
+    <RunCode Name="UnlockGemstoneTrader" />
+    <WaitTimer WaitTime="3"/>
+
+    <!-- Living Memory -->
+    <GetTo ZoneId="1192" XYZ="28.811235, 53.20001, 808.80066"/>
+    <WaitTimer WaitTime="3"/>
+    <RunCode Name="UnlockGemstoneTrader" />
+    <WaitTimer WaitTime="3"/>
+
+    <RunCode Name="Logger" />
+
+</Order>
+<CodeChunks>
+<CodeChunk Name="SwitchCombatJob">
+            <![CDATA[ 
+            var Combat = Enumerable.Range(8, 11).Append(0).Append(36);
+            var gearSets = GearsetManager.GearSets.Where(i => i.InUse && !Combat.Contains((int)i.Class)).ToList().OrderByDescending(i=> i.Gear.First().Item.ItemLevel);
+
+            if (gearSets.Any())
+            {
+                gearSets.First().Activate();
+                await Coroutine.Sleep(2000);
+            }
+            ]]>
+        </CodeChunk>
+<CodeChunk Name="UnlockGemstoneTrader">
+    <![CDATA[
+    var npc = GameObjectManager.GameObjects
+        .Where(obj => obj.IsTargetable && obj.Type == GameObjectType.EventNpc)
+        .OrderBy(obj => obj.Distance())
+        .FirstOrDefault();
+    
+    if (npc != null)
+    {
+        npc.Interact();
+        await Coroutine.Sleep(1500);
+        
+        while (Talk.DialogOpen)
+        {
+            Talk.Next();
+            await Coroutine.Sleep(1500);
+        }
+
+        while (Talk.DialogOpen)
+        {
+            Talk.Next();
+            await Coroutine.Sleep(1500);
+        }
+        
+        await Coroutine.Sleep(5000);
+        
+        if (ShopExchangeCurrency.Open)
+        {
+            ShopExchangeCurrency.Close();
+        }
+
+        if (Shop.Open)
+        {
+            Shop.Close();
+        }
+
+        while (Talk.DialogOpen)
+        {
+            Talk.Next();
+            await Coroutine.Sleep(1500);
+        }
+        
+        Core.Player.ClearTarget();
+
+        await Coroutine.Sleep(1000);
+
+        if (ShopExchangeCurrency.Open)
+        {
+            ShopExchangeCurrency.Close();
+        }
+
+        if (Shop.Open)
+        {
+            Shop.Close();
+        }
+    }
+    ]]>
+</CodeChunk>
+<CodeChunk Name="Logger">
+    <![CDATA[
+        try
+        {
+            string workingDirectory = Directory.GetCurrentDirectory();
+            string settingsPath = Path.Combine(workingDirectory, "Settings");
+            string logFilePath = Path.Combine(settingsPath, $"autocraft.txt");
+            
+            File.AppendAllText(logFilePath, "craft400" + Environment.NewLine);
+        }
+        catch (Exception ex)
+        {
+        }
+    ]]>
+</CodeChunk>
+</CodeChunks>
+</Profile>

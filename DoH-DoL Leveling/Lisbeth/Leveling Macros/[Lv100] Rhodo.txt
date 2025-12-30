@@ -1,7 +1,7 @@
 Name: [Lv100] Rhodo
 Type: Craft
 Enabled: True
-Conditions: (MaxDurability == 35 && MaxProgress == 5130 && MaxQuality == 12716 && Craftsmanship >= 5404 && Craftsmanship <= 5450 && Control >= 4808 && CP >= 702 && RecipeLevel == 750)
+Conditions: (MaxDurability == 35 && MaxProgress == 5130 && MaxQuality == 12716 && Craftsmanship >= 5404 && Craftsmanship <= 5450 && Control >= 4808 && CP >= 702 && RecipeLevel == 740)
 Cost: 0
 
 BaseA:
