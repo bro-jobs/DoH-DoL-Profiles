@@ -1419,44 +1419,31 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 
 		<CodeChunk Name="bicolorgrind">
 		<![CDATA[
-				try 
+			string workingDirectory = Directory.GetCurrentDirectory();
+			string settingsPath = Path.Combine(workingDirectory, "Settings");
+			string logFilePath = Path.Combine(settingsPath, "autocraft.txt");
+			
+			// Create the file if it doesn't exist
+			if (!File.Exists(logFilePath))
+			{
+				File.WriteAllText(logFilePath, "");
+			}
+			
+			// Read content and check for bicolor
+			string content = File.ReadAllText(logFilePath);
+			if (!content.Contains($"bicolor"))
+			{
+				var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+				var profileDir = Path.GetDirectoryName(profilePath);
+				var autoCraftPath = Path.Combine(profileDir, $"BicolorGrind.xml");
+				if (File.Exists(autoCraftPath))
 				{
-					string workingDirectory = Directory.GetCurrentDirectory();
-					string settingsPath = Path.Combine(workingDirectory, "Settings");
-					string logFilePath = Path.Combine(settingsPath, "autocraft.txt");
-					
-					// Create the file if it doesn't exist
-					if (!File.Exists(logFilePath))
-					{
-						File.WriteAllText(logFilePath, "");
-					}
-					
-					// Read content and check for craft{level}
-					string content = File.ReadAllText(logFilePath);
-					if (content.Contains($"bicolor"))
-					{
-						return true;
-					}
-					
-					// If we get here, we need to run the profile
-					var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
-					var profileDir = Path.GetDirectoryName(profilePath);
-					var autoCraftPath = Path.Combine(profileDir, $"BicolorGrind.xml");
-					
-					if (File.Exists(autoCraftPath))
-					{
-						await Coroutine.Sleep(500);
-						ff14bot.NeoProfiles.NeoProfileManager.Load(autoCraftPath);
-						await Coroutine.Sleep(1000);
-					}
-					
-					return true;
+					await Coroutine.Sleep(500);
+					ff14bot.NeoProfiles.NeoProfileManager.Load(autoCraftPath);
+					await Coroutine.Sleep(1000);
 				}
-				catch
-				{
-					return true;
-				}
-		]]>
+			}
+	]]>
 		</CodeChunk>
 		
 		<CodeChunk Name="autocraftcheck21">

@@ -193,7 +193,7 @@
             string settingsPath = Path.Combine(workingDirectory, "Settings");
             string logFilePath = Path.Combine(settingsPath, $"autocraft.txt");
             
-            File.AppendAllText(logFilePath, "craft400" + Environment.NewLine);
+            File.AppendAllText(logFilePath, "bicolor" + Environment.NewLine);
         }
         catch (Exception ex)
         {
