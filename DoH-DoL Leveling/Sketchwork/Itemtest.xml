@@ -3,9 +3,7 @@
 <name>Test</name>
 <Order>
     <!-- Unlocking Sharlayan Leves -->
-		<If Condition="ItemCount(42601) &lt; 1" >
-		<LLToast message="agoge horns not found when worn."/>
-		</If>
+	<LLQualityLower ItemIds="2219" ForceLower="true" />
 </Order>
 <CodeChunks>
 <CodeChunk Name="SwitchDoHJob2">
