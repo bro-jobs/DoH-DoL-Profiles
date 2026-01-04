@@ -3,6 +3,27 @@
 <Name>Crafting Lv41 Gear</Name>
 <Order>
     <RunCode Name="SwitchCombatJob"/>
+    <If Condition="ItemCount(2657) &lt; 1">
+        <GetTo ZoneId="139" XYZ="237.82053, -0.9224499, 248.70209"/>
+        <BuyItem ItemIds="2657" ItemCount="1" NpcId="1003270" DialogOption="5" XYZ="234.48535, -0.91215116, 248.27954" />
+        <WaitTimer WaitTime="2"/>
+    </If>
+    <If Condition="ItemCount(3012) &lt; 1">
+        <GetTo ZoneId="139" XYZ="237.82053, -0.9224499, 248.70209"/>
+        <BuyItem ItemIds="3012"  ItemCount="1" NpcId="1003270"  DialogOption="5" XYZ="234.48535, -0.91215116, 248.27954" />
+        <WaitTimer WaitTime="2"/>
+    </If>
+    <If Condition="ItemCount(3602) &lt; 1">
+        <GetTo ZoneId="139" XYZ="237.82053, -0.9224499, 248.70209"/>
+        <BuyItem ItemIds="3602"  ItemCount="1" NpcId="1003270"  DialogOption="5" XYZ="234.48535, -0.91215116, 248.27954" />
+        <WaitTimer WaitTime="2"/>
+    </If>
+    <If Condition="ItemCount(3830) &lt; 1">
+        <GetTo ZoneId="139" XYZ="237.82053, -0.9224499, 248.70209"/>
+        <BuyItem ItemIds="3830"  ItemCount="1" NpcId="1003270"  DialogOption="5" XYZ="234.48535, -0.91215116, 248.27954" />
+        <WaitTimer WaitTime="2"/>
+    </If>
+
     <RunCode Name="SetLisbethJson" />
     <LogMessage Message="Crafted Lv41 Gear!"/>
     <AutoInventoryEquip/>

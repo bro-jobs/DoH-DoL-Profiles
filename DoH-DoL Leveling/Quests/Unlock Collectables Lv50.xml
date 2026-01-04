@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Kayla / Angles24
+-->
+<Profile>
+	<Name>Unlock Collectables (Lv50)</Name>
+	<KillRadius>90</KillRadius>
+	<Order>
+	
+		<WaitTimer WaitTime="2"/>
+		<RunCode Name="SwitchDoHJob"/>
+		<WaitTimer WaitTime="2"/>
+		
+	<If Condition="ClassName == (ClassJobType.Carpenter) or (ClassJobType.Blacksmith) or (ClassJobType.Armorer) or (ClassJobType.Goldsmith) or (ClassJobType.Leatherworker) or (ClassJobType.Weaver) or (ClassJobType.Alchemist) or (ClassJobType.Culinarian)">
+		<!-- Gone to Pieces -->
+		<If Condition="not IsQuestCompleted(65688) and not HasQuest(65688)">
+			<LogMessage Message="Going to Learn Desynth!"/>
+			<GetTo ZoneId="131" XYZ="138.4237, 4, -58.45789"/>
+			<LLPickupQuest NpcId="1001679" QuestId="65688"/>
+			<LLSmallTalk WaitTime="1500"/>
+		</If>
+		<If Condition="HasQuest(65688) and not IsQuestCompleted(65688) and GetQuestStep(65688) == 255">
+			<LisbethTravel Zone="141" Position="96.27642, 27.04044, -352.4858"/>
+			<TurnIn QuestId="65688" NpcId="1009295" XYZ="96.27642, 27.04044, -352.4858"/>
+			<LLSmallTalk WaitTime="1500"/>
+			<LogMessage Message="Learnt Desynth!"/>
+		</If>
+		<!-- End - Gone to Pieces -->
+	
+		<!-- Inscrutable Tastes -->
+		<If Condition="not IsQuestCompleted(67631) and not HasQuest(67631)">
+			<LogMessage Message="Going to Learn Collectables!"/>
+			<GetTo ZoneId="418" XYZ="-54.42902, 15.14058, -38.10181"/>
+			<LLPickupQuest NpcId="1012161" QuestId="67631"/>
+			<LLSmallTalk WaitTime="1500"/>
+		</If>
+		<If Condition="HasQuest(67631) and not IsQuestCompleted(67631) and GetQuestStep(67631) == 255">
+			<LisbethTravel Zone="156" Position="45.60925, 31.19533, -732.9061"/>
+			<TurnIn QuestId="67631" NpcId="1013395" ItemId="2001784" XYZ="45.60925, 31.19533, -732.9061"/>
+			<LLSmallTalk WaitTime="1500"/>
+			<LogMessage Message="Learnt Collectables!"/>
+		</If>
+		<!-- End - Inscrutable Tastes -->
+		
+	</If>
+			
+		
+		<ALoadProfile Path="../Start.xml"/>
+		
+	</Order>
+	<CodeChunks>
+	<CodeChunk Name="SwitchDoHJob">
+			<![CDATA[ 
+				var DoH = Enumerable.Range(8, 7);
+				var gearSets = GearsetManager.GearSets.Where(i => i.InUse && DoH.Contains((int)i.Class) && Core.Player.Levels[i.Class] > 55);
+
+				if (gearSets.Any())
+				{
+					gearSets.First().Activate();
+					await Coroutine.Sleep(2000);
+				}
+			]]>
+		</CodeChunk>
+		<CodeChunk Name="SwitchDoLJob">
+			<![CDATA[ 
+				var DoL = Enumerable.Range(16, 3);
+				var gearSets = GearsetManager.GearSets.Where(i => i.InUse && DoL.Contains((int)i.Class) && Core.Player.Levels[i.Class] > 55);
+
+				if (gearSets.Any())
+				{
+					gearSets.First().Activate();
+					await Coroutine.Sleep(2000);
+				}
+			]]>
+		</CodeChunk>
+	</CodeChunks>
+</Profile>
