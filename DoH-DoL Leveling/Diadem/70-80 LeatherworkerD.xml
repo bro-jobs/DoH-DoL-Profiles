@@ -153,7 +153,7 @@ Authors:  Kayla / Angles24
 			var lisbethObject = lisbeth.GetType().GetProperty("Lisbeth").GetValue(lisbeth);
 			if (lisbethObject != null)
 			{
-				var json = $"[{{'Group':1,'Item':31941,'Amount':{amount},'Enabled':true,'Type':'Leatherworker','Collectable':false}}]";
+				var json = $"[{{'Group':1,'Item':31941,'Amount':{amount},'Enabled':true,'Type':'Leatherworker','Macro':'[Lv70] Grade 4 Skybuilder Lv70','Collectable':false}}]";
 				var orderMethod = lisbethObject.GetType().GetMethod("ExecuteOrders");
 				await (Task<bool>)orderMethod.Invoke(lisbethObject, new object[] { json, false });
 			}
