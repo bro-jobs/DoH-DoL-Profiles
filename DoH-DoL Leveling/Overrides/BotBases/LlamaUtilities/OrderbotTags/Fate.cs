@@ -496,8 +496,8 @@ namespace LlamaUtilities.OrderbotTags
                 // Add some vertical offset to avoid terrain issues
                 Position = new Vector3(
                     currentfate.Location.X, 
-                    currentfate.Location.Y,
-                    currentfate.Location.Z + 3f // Fly 3 units higher
+                    currentfate.Location.Y + 3f, // Fly 3 units higher
+                    currentfate.Location.Z 
                 );
                 Log.Information($"Position updated to: {Position}");
                 fateid = currentfate.Id;
@@ -542,8 +542,8 @@ namespace LlamaUtilities.OrderbotTags
                     // Maintain the Z offset
                     Position = new Vector3(
                         item.Location.X,
-                        item.Location.Y,
-                        item.Location.Z + 3f
+                        item.Location.Y + 3f,
+                        item.Location.Z
                     );
                     fateName = item.Name;
                     fateStatus = item.Status.ToString();
