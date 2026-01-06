@@ -497,7 +497,7 @@ namespace LlamaUtilities.OrderbotTags
                 Position = new Vector3(
                     currentfate.Location.X, 
                     currentfate.Location.Y,
-                    currentfate.Location.Z + 2f // Fly 2 units higher
+                    currentfate.Location.Z + 3f // Fly 3 units higher
                 );
                 Log.Information($"Position updated to: {Position}");
                 fateid = currentfate.Id;
@@ -543,7 +543,7 @@ namespace LlamaUtilities.OrderbotTags
                     Position = new Vector3(
                         item.Location.X,
                         item.Location.Y,
-                        item.Location.Z + 2f
+                        item.Location.Z + 3f
                     );
                     fateName = item.Name;
                     fateStatus = item.Status.ToString();
