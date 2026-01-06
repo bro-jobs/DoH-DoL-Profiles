@@ -207,7 +207,7 @@ namespace LlamaUtilities.OrderbotTags
                                                                                          ret => UseFlight,
                                                                                          new ActionRunCoroutine(obj => Lisbeth.TravelToZones(WorldManager.ZoneId, Position))
                                                                                         ),
-                                                                           new ActionRunCoroutine(obj => Navigation.FlightorMove(currentfate))
+                                                                           new ActionRunCoroutine(obj => Navigation.FlightorMove(Position))
                                                                           )
                                                      ),
                                         new Decorator(r => currentfate != null && FateManager.WithinFate && currentfate.Icon == FateIconType.KillHandIn && currentfate.TimeLeft.Minutes <= 8,
@@ -496,9 +496,10 @@ namespace LlamaUtilities.OrderbotTags
                 // Add some vertical offset to avoid terrain issues
                 Position = new Vector3(
                     currentfate.Location.X, 
-                    currentfate.Location.Y + 2.5f,  // Fly 2.5 units higher
-                    currentfate.Location.Z
+                    currentfate.Location.Y,
+                    currentfate.Location.Z + 2f // Fly 2 units higher
                 );
+                Log.Information($"Position updated to: {Position}");
                 fateid = currentfate.Id;
                 currentstep = 1;
             }
