@@ -114,6 +114,10 @@
 
     <RunCode Name="Logger" />
 
+    <LogMessage Message="Unlocked all Bicolor Gemstone Traders."/>
+	<WaitTimer WaitTime="5"/>
+	<LLoadProfile Path="../Start.xml"/>
+
 </Order>
 <CodeChunks>
 <CodeChunk Name="SwitchCombatJob">
