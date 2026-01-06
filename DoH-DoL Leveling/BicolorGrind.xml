@@ -167,7 +167,7 @@
 		<If condition="not IsOnMap(961)">
 			<TeleportTo AetheryteId="177"/> <!-- The Twelve Wonders -->
 		</If>
-		<LLFate UseFlight="True" MinProgress="0" MinLevel="0" MaxLevel="91" BlacklistIds="1838" while="IsOnMap(961) and ItemCount(26807) &lt; 200"/>
+		<LLFate UseFlight="True" MinProgress="0" MinLevel="0" MaxLevel="91" BlacklistIds="1838, 1827" while="IsOnMap(961) and ItemCount(26807) &lt; 200"/>
 	</While>
     <RunCode Name="Logger" />
     <LLoadProfile Path="Start.xml"/>
