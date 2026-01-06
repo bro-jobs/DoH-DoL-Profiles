@@ -539,7 +539,12 @@ namespace LlamaUtilities.OrderbotTags
             {
                 if (item.Id == fateid)
                 {
-                    Position = item.Location;
+                    // Maintain the Z offset
+                    Position = new Vector3(
+                        item.Location.X,
+                        item.Location.Y,
+                        item.Location.Z + 2f
+                    );
                     fateName = item.Name;
                     fateStatus = item.Status.ToString();
                 }
