@@ -9,154 +9,154 @@
 		<!-- Trading with vendor logic not yet complete... got to hunt down each NPC one by one. -->
 		<If Condition="ItemCount(26807) &gt; 200">
 		
-            <If Condition="(ItemCount(36242) &lt; 148) and ItemCount(26807) &gt; 0">
+            <If Condition="(ItemCount(36242) &lt; 148) and ItemCount(26807) &gt; 3">
             <!-- THAVNAIR: 148x Gaja Hide -->
             <GetTo ZoneId="957" XYZ="217.9855, 4.7637, 655.8533"/>
             <WaitTimer WaitTime="3"/>
             <BuyShopExchangeCurrency Dialog="True" NpcId="1037635" ItemId="36242" Count="148" />
             </If>
 
-            <If Condition="ItemCount(27736) &lt; 64 and ItemCount(26807) &gt; 0">
+            <If Condition="ItemCount(27736) &lt; 64 and ItemCount(26807) &gt; 3">
             <!-- TEMPEST: 64x Sea Swallow Skin -->
             <GetTo ZoneId="818" XYZ="584.1594, 349.0089, -177.11697"/>
             <WaitTimer WaitTime="3"/>
             <BuyShopExchangeCurrency Dialog="True" NpcId="1027766" ItemId="27736" Count="64" />
             </If>
 
-            <If Condition="ItemCount(36243) &lt; 96 and ItemCount(26807) &gt; 0">
+            <If Condition="ItemCount(36243) &lt; 96 and ItemCount(26807) &gt; 3">
             <!-- LABYRINTHOS: 96x Luncheon Toad Skin -->
             <GetTo ZoneId="956" XYZ="427.63828, 166.28354, -424.6029"/>
             <WaitTimer WaitTime="3"/>
             <BuyShopExchangeCurrency Dialog="True" NpcId="1037484" ItemId="36243" Count="96" />
             </If>
 
-            <If Condition="ItemCount(36203) &lt; 164 and ItemCount(26807) &gt; 0">
+            <If Condition="ItemCount(36203) &lt; 164 and ItemCount(26807) &gt; 3">
             <!-- GARLEMALD: 164x Almasty Fur -->
             <GetTo ZoneId="958" XYZ="-423.1353, 22.204987, 430.73117"/>
             <WaitTimer WaitTime="3"/>
             <BuyShopExchangeCurrency Dialog="True" NpcId="1037724" ItemId="36203" Count="164" />
             </If>
 
-            <If Condition="ItemCount(36244) &lt; 92 and ItemCount(26807) &gt; 0">
+            <If Condition="ItemCount(36244) &lt; 92 and ItemCount(26807) &gt; 3">
             <!-- GARLEMALD: 92x Saiga Hide -->
             <GetTo ZoneId="958" XYZ="-423.1353, 22.204987, 430.73117"/>
             <WaitTimer WaitTime="3"/>
             <BuyShopExchangeCurrency Dialog="True" NpcId="1037724" ItemId="36244" Count="92" />
             </If>
 
-            <If Condition="ItemCount(36258) &lt; 39 and ItemCount(26807) &gt; 0">
+            <If Condition="ItemCount(36258) &lt; 39 and ItemCount(26807) &gt; 3">
             <!-- MARE LAMENTORUM: 39x Lunatender Blossom -->
             <GetTo ZoneId="959" XYZ="23.594229, -132.94643, -461.33685"/>
             <WaitTimer WaitTime="3"/>
             <BuyShopExchangeCurrency Dialog="True" NpcId="1037793" ItemId="36258" Count="39" />
             </If>
 
-            <If Condition="ItemCount(36245) &lt; 20 and ItemCount(26807) &gt; 0">
+            <If Condition="ItemCount(36245) &lt; 20 and ItemCount(26807) &gt; 3">
             <!-- THAVNAIR: 20x Kumbhira Skin -->
             <GetTo ZoneId="957" XYZ="217.9855, 4.7637, 655.8533"/>
             <WaitTimer WaitTime="3"/>
             <BuyShopExchangeCurrency Dialog="True" NpcId="1037635" ItemId="36245" Count="20" />
             </If>
 
-            <If Condition="ItemCount(36246) &lt; 40 and ItemCount(26807) &gt; 0">
+            <If Condition="ItemCount(36246) &lt; 40 and ItemCount(26807) &gt; 3">
             <!-- ELPIS: 40x Ophiotauros Hide -->
             <GetTo ZoneId="961" XYZ="149.28677, 10.385857, 98.87985"/>
             <WaitTimer WaitTime="3"/>
             <BuyShopExchangeCurrency Dialog="True" NpcId="1037909" ItemId="36246" Count="40" />
             </If>
 
-            <If Condition="ItemCount(44053) &lt; 160 and ItemCount(26807) &gt; 0">
+            <If Condition="ItemCount(44053) &lt; 160 and ItemCount(26807) &gt; 3">
             <!-- URQOPACHA: 160x Silver Lobo Hide -->
             <GetTo ZoneId="1187" XYZ="298.12204, -172.58315, -486.9503"/>
             <WaitTimer WaitTime="3"/>
             <BuyShopExchangeCurrency Dialog="True" NpcId="1048628" ItemId="44053" Count="160" />
             </If>
 
-            <If Condition="ItemCount(36257) &lt; 60 and ItemCount(26807) &gt; 0">
+            <If Condition="ItemCount(36257) &lt; 60 and ItemCount(26807) &gt; 3">
             <!-- MARE LAMENTORUM: 60x Mousse Flesh -->
             <GetTo ZoneId="959" XYZ="23.594229, -132.94643, -461.33685"/>
             <WaitTimer WaitTime="3"/>
             <BuyShopExchangeCurrency Dialog="True" NpcId="1037793" ItemId="36257" Count="60" />
             </If>
 
-            <If Condition="ItemCount(36260) &lt; 10 and ItemCount(26807) &gt; 0">
+            <If Condition="ItemCount(36260) &lt; 10 and ItemCount(26807) &gt; 3">
             <!-- ELPIS: 10x Petalouda Scales -->
             <GetTo ZoneId="961" XYZ="149.28677, 10.385857, 98.87985"/>
             <WaitTimer WaitTime="3"/>
             <BuyShopExchangeCurrency Dialog="True" NpcId="1037909" ItemId="36260" Count="10" />
             </If>
 
-            <If Condition="ItemCount(44063) &lt; 30 and ItemCount(26807) &gt; 0">
+            <If Condition="ItemCount(44063) &lt; 30 and ItemCount(26807) &gt; 3">
             <!-- URQOPACHA: 30x Alpaca Fillet -->
             <GetTo ZoneId="1187" XYZ="298.12204, -172.58315, -486.9503"/>
             <WaitTimer WaitTime="3"/>
             <BuyShopExchangeCurrency Dialog="True" NpcId="1048628" ItemId="44063" Count="30" />
             </If>
 
-            <If Condition="ItemCount(44067) &lt; 50 and ItemCount(26807) &gt; 0">
+            <If Condition="ItemCount(44067) &lt; 50 and ItemCount(26807) &gt; 3">
             <!-- URQOPACHA: 50x Megamaguey Pineapple -->
             <GetTo ZoneId="1187" XYZ="298.12204, -172.58315, -486.9503"/>
             <WaitTimer WaitTime="3"/>
             <BuyShopExchangeCurrency Dialog="True" NpcId="1048628" ItemId="44067" Count="50" />
             </If>
 
-            <If Condition="ItemCount(44054) &lt; 180 and ItemCount(26807) &gt; 0">
+            <If Condition="ItemCount(44054) &lt; 180 and ItemCount(26807) &gt; 3">
             <!-- KOZAMA'UKA: 180x Hammerhead Crocodile Skin -->
             <GetTo ZoneId="1188" XYZ="-200.28322, 6.2771482, -519.113"/>
             <WaitTimer WaitTime="3"/>
             <BuyShopExchangeCurrency Dialog="True" NpcId="1048778" ItemId="44054" Count="180" />
             </If>
 
-            <If Condition="ItemCount(36256) &lt; 34 and ItemCount(26807) &gt; 0">
+            <If Condition="ItemCount(36256) &lt; 34 and ItemCount(26807) &gt; 3">
             <!-- ELPIS: 34x Egg of Elpis -->
             <GetTo ZoneId="961" XYZ="149.28677, 10.385857, 98.87985"/>
             <WaitTimer WaitTime="3"/>
             <BuyShopExchangeCurrency Dialog="True" NpcId="1037909" ItemId="36256" Count="34" />
             </If>
 
-            <If Condition="ItemCount(44055) &lt; 116 and ItemCount(26807) &gt; 0">
+            <If Condition="ItemCount(44055) &lt; 116 and ItemCount(26807) &gt; 3">
             <!-- YAK T'EL: 116x Br'aax Hide -->
             <GetTo ZoneId="1189" XYZ="-382.5761, 23.535583, -432.70758"/>
             <WaitTimer WaitTime="3"/>
             <BuyShopExchangeCurrency Dialog="True" NpcId="1048933" ItemId="44055" Count="116" />
             </If>
 
-            <If Condition="ItemCount(44069) &lt; 15 and ItemCount(26807) &gt; 0">
+            <If Condition="ItemCount(44069) &lt; 15 and ItemCount(26807) &gt; 3">
             <!-- KOZAMA'UKA: 15x Lesser Apollyon Shell -->
             <GetTo ZoneId="1188" XYZ="-200.28322, 6.2771482, -519.113"/>
             <WaitTimer WaitTime="3"/>
             <BuyShopExchangeCurrency Dialog="True" NpcId="1048778" ItemId="44069" Count="15" />
             </If>
 
-            <If Condition="ItemCount(44070) &lt; 10 and ItemCount(26807) &gt; 0">
+            <If Condition="ItemCount(44070) &lt; 10 and ItemCount(26807) &gt; 3">
             <!-- YAK T'EL: 10x Ty'aitya Wingblade -->
             <GetTo ZoneId="1189" XYZ="-382.5761, 23.535583, -432.70758"/>
             <WaitTimer WaitTime="3"/>
             <BuyShopExchangeCurrency Dialog="True" NpcId="1048933" ItemId="44070" Count="10" />
             </If>
 
-            <If Condition="ItemCount(44056) &lt; 100 and ItemCount(26807) &gt; 0">
+            <If Condition="ItemCount(44056) &lt; 100 and ItemCount(26807) &gt; 3">
             <!-- HERITAGE FOUND: 100x Gomphotherium Skin -->
             <GetTo ZoneId="1191" XYZ="-252.56512, 30, -592.878"/>
             <WaitTimer WaitTime="3"/>
             <BuyShopExchangeCurrency Dialog="True" NpcId="1049438" ItemId="44056" Count="100" />
             </If>
 
-            <If Condition="ItemCount(44027) &lt; 100 and ItemCount(26807) &gt; 0">
+            <If Condition="ItemCount(44027) &lt; 100 and ItemCount(26807) &gt; 3">
             <!-- SHAALOANI: 100x Rroneek Fleece -->
             <GetTo ZoneId="1190" XYZ="360.1592, -1.6124972, 465.1963"/>
             <WaitTimer WaitTime="3"/>
             <BuyShopExchangeCurrency Dialog="True" NpcId="1049283" ItemId="44027" Count="100" />
             </If>
 
-            <If Condition="ItemCount(44071) &lt; 40 and ItemCount(26807) &gt; 0">
+            <If Condition="ItemCount(44071) &lt; 40 and ItemCount(26807) &gt; 3">
             <!-- SHAALOANI: 40x Tumbleclaw Weeds -->
             <GetTo ZoneId="1190" XYZ="360.1592, -1.6124972, 465.1963"/>
             <WaitTimer WaitTime="3"/>
             <BuyShopExchangeCurrency Dialog="True" NpcId="1049283" ItemId="44071" Count="40" />
             </If>
 
-            <If Condition="ItemCount(44057) &lt; 60 and ItemCount(26807) &gt; 0">
+            <If Condition="ItemCount(44057) &lt; 60 and ItemCount(26807) &gt; 3">
             <!-- LIVING MEMORY: 60x Gargantua Hide -->
             <GetTo ZoneId="1192" XYZ="28.811235, 53.20001, 808.80066"/>
             <WaitTimer WaitTime="3"/>
