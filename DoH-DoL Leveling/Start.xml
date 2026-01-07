@@ -949,7 +949,15 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		
 
 
-		
+		<If Condition="&autocraft; == 1">
+			<RunCode Name="studiumwave1" />
+		</If>
+		<If Condition="&autocraft; == 1">
+			<RunCode Name="studiumwave2" />
+		</If>
+		<If Condition="&autocraft; == 1">
+			<RunCode Name="studiumwave3" />
+		</If>
 
 
 		<If Condition="(Core.Me.Levels[ClassJobType.Armorer] &lt; 90) or (Core.Me.Levels[ClassJobType.Leatherworker] &lt; 90) or (Core.Me.Levels[ClassJobType.Alchemist] &lt; 90)">
@@ -1441,6 +1449,93 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 			}
 	]]>
 		</CodeChunk>
+
+		<CodeChunk Name="studiumwave1">
+		<![CDATA[
+			string workingDirectory = Directory.GetCurrentDirectory();
+			string settingsPath = Path.Combine(workingDirectory, "Settings");
+			string logFilePath = Path.Combine(settingsPath, "autocraft.txt");
+			
+			// Create the file if it doesn't exist
+			if (!File.Exists(logFilePath))
+			{
+				File.WriteAllText(logFilePath, "");
+			}
+			
+			// Read content and check for studium
+			string content = File.ReadAllText(logFilePath);
+			if (!content.Contains($"studium1"))
+			{
+				var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+				var profileDir = Path.GetDirectoryName(profilePath);
+				var autoCraftPath = Path.Combine(profileDir, $"Quests/StudiumWave1.xml");
+				if (File.Exists(autoCraftPath))
+				{
+					await Coroutine.Sleep(500);
+					ff14bot.NeoProfiles.NeoProfileManager.Load(autoCraftPath);
+					await Coroutine.Sleep(1000);
+				}
+			}
+	]]>
+		</CodeChunk>
+
+		<CodeChunk Name="studiumwave2">
+		<![CDATA[
+			string workingDirectory = Directory.GetCurrentDirectory();
+			string settingsPath = Path.Combine(workingDirectory, "Settings");
+			string logFilePath = Path.Combine(settingsPath, "autocraft.txt");
+			
+			// Create the file if it doesn't exist
+			if (!File.Exists(logFilePath))
+			{
+				File.WriteAllText(logFilePath, "");
+			}
+			
+			// Read content and check for studium
+			string content = File.ReadAllText(logFilePath);
+			if (!content.Contains($"studium2"))
+			{
+				var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+				var profileDir = Path.GetDirectoryName(profilePath);
+				var autoCraftPath = Path.Combine(profileDir, $"Quests/StudiumWave2.xml");
+				if (File.Exists(autoCraftPath))
+				{
+					await Coroutine.Sleep(500);
+					ff14bot.NeoProfiles.NeoProfileManager.Load(autoCraftPath);
+					await Coroutine.Sleep(1000);
+				}
+			}
+	]]>
+		</CodeChunk>
+
+		<CodeChunk Name="studiumwave3">
+		<![CDATA[
+			string workingDirectory = Directory.GetCurrentDirectory();
+			string settingsPath = Path.Combine(workingDirectory, "Settings");
+			string logFilePath = Path.Combine(settingsPath, "autocraft.txt");
+			
+			// Create the file if it doesn't exist
+			if (!File.Exists(logFilePath))
+			{
+				File.WriteAllText(logFilePath, "");
+			}
+			
+			// Read content and check for studium
+			string content = File.ReadAllText(logFilePath);
+			if (!content.Contains($"studium3"))
+			{
+				var profilePath = ff14bot.NeoProfiles.NeoProfileManager.CurrentProfile.Path;
+				var profileDir = Path.GetDirectoryName(profilePath);
+				var autoCraftPath = Path.Combine(profileDir, $"Quests/StudiumWave3.xml");
+				if (File.Exists(autoCraftPath))
+				{
+					await Coroutine.Sleep(500);
+					ff14bot.NeoProfiles.NeoProfileManager.Load(autoCraftPath);
+					await Coroutine.Sleep(1000);
+				}
+			}
+	]]>
+		</CodeChunk>
 		
 		<CodeChunk Name="autocraftcheck21">
 		<![CDATA[
@@ -1448,6 +1543,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		]]>
 		</CodeChunk>
 
+		<!-- Gemstone unlock -->
 		<CodeChunk Name="autocraftcheck400">
 		<![CDATA[
 			await CheckAutocraftLevel(400);

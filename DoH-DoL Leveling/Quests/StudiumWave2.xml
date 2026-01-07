@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Profile>
+<Name>NQfying Studium items</Name>
+<Order>
+
+	<RunCode Name="ReduceAndCombine"/>
+	<RunCode Name="FirstWaveLogger" />	
+    <LLoadProfile Path="../Start.xml"/>
+</Order>
+<CodeChunks>
+
+<CodeChunk Name="ReduceAndCombine">
+            <![CDATA[
+				// Settings
+				const string ChunkName = "ItemQualityReducer";
+
+				// Logging setup
+				var log = new LlamaLibrary.Logging.LLogger(ChunkName, System.Windows.Media.Colors.Pink);
+
+				// List of item IDs to process
+				var itemIds = new System.Collections.Generic.List<int> { 27693, 27706, 27709, 27714, 27715, 27742, 27757, 27839, 36079, 36080, 36082, 36169, 36170, 36172, 36183, 36184, 36186, 36197, 36198, 36200, 36209, 36210, 36212, 36231, 36248, 36249, 36251 };
+
+				foreach (var itemId in itemIds) {
+					log.Information($"Processing item {itemId}");
+					await LlamaLibrary.Helpers.InventoryHelpers.LowerQualityAndCombine(itemId);
+				}
+
+				log.Information("Finished processing all items");
+            ]]>
+        </CodeChunk>
+
+<CodeChunk Name="FirstWaveLogger">
+    <![CDATA[
+        try
+        {
+            string workingDirectory = Directory.GetCurrentDirectory();
+            string settingsPath = Path.Combine(workingDirectory, "Settings");
+            string logFilePath = Path.Combine(settingsPath, $"autocraft.txt");
+            
+            File.AppendAllText(logFilePath, "studium2" + Environment.NewLine);
+        }
+        catch (Exception ex)
+        {
+        }
+    ]]>
+</CodeChunk>
+
+</CodeChunks>
+</Profile>
