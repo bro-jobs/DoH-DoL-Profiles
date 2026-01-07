@@ -378,89 +378,44 @@
 				<BuyInclusionShopItem ItemId="39848" Count="1"/>
 			</If>
 			<If Condition="ItemCount(39849) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39849" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39849) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39849" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39849" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39850) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39850" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39850) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39850" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39850" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39856) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39856" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39856) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39856" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39856" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39857) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39857" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39857) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39857" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39857" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39858) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39858" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39858) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39858" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39858" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39859) &lt; 2 and ItemCount(&PurpleCraftersScrip;) &gt; 74" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
@@ -477,7 +432,7 @@
 			</While>
 					</While>				
 					<GetTo ZoneId="962" XYZ="-299.9291, 21.68615, -159.1658"/>
-					<UserDialog DialogText="Please turn-in manually for now and turn the quest in."/>
+					<RunCode name="TurnIn"/>
 					<LLTurnIn QuestId="69676" NpcId="1038525" XYZ="-299.9291, 21.68615, -159.1658"/>
 					<LLSmallTalk/>
 	  <StopBusy />
@@ -583,89 +538,44 @@
 				<BuyInclusionShopItem ItemId="39848" Count="1"/>
 			</If>
 			<If Condition="ItemCount(39849) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39849" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39849) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39849" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39849" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39850) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39850" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39850) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39850" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39850" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39856) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39856" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39856) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39856" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39856" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39857) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39857" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39857) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39857" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39857" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39858) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39858" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39858) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39858" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39858" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39859) &lt; 2 and ItemCount(&PurpleCraftersScrip;) &gt; 74" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
@@ -685,7 +595,7 @@
 		</While>
 					</While>				
 					<GetTo ZoneId="962" XYZ="-299.9291, 21.68615, -159.1658"/> 
-					<UserDialog DialogText="Please turn-in manually for now and turn the quest in."/>
+					<RunCode name="TurnIn"/>
 					<LLTurnIn QuestId="69677" NpcId="1038525" XYZ="-299.254, 21.84602, -160.175"/>
 					<LLSmallTalk/>
 	  <StopBusy />
@@ -791,89 +701,44 @@
 				<BuyInclusionShopItem ItemId="39848" Count="1"/>
 			</If>
 			<If Condition="ItemCount(39849) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39849" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39849) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39849" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39849" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39850) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39850" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39850) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39850" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39850" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39856) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39856" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39856) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39856" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39856" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39857) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39857" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39857) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39857" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39857" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39858) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39858" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39858) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39858" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39858" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39859) &lt; 2 and ItemCount(&PurpleCraftersScrip;) &gt; 74" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
@@ -893,7 +758,7 @@
 		</While>
 					</While>				
 					<GetTo ZoneId="962" XYZ="-299.9291, 21.68615, -159.1658"/> 
-					<UserDialog DialogText="Please turn-in manually for now and turn the quest in."/>
+					<RunCode name="TurnIn"/>
 					<LLTurnIn QuestId="69678" NpcId="1038525" XYZ="-296.5591, 21.84602, -162.1577"/>
 					<LLSmallTalk/>
 	  <StopBusy />
@@ -1056,89 +921,44 @@
 				<BuyInclusionShopItem ItemId="39848" Count="1"/>
 			</If>
 			<If Condition="ItemCount(39849) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39849" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39849) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39849" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39849" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39850) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39850" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39850) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39850" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39850" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39856) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39856" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39856) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39856" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39856" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39857) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39857" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39857) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39857" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39857" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39858) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39858" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39858) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39858" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39858" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39859) &lt; 2 and ItemCount(&PurpleCraftersScrip;) &gt; 74" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
@@ -1156,7 +976,7 @@
 		</While>
 					</While>				
 					<GetTo ZoneId="962" XYZ="-299.9291, 21.68615, -159.1658"/> 
-					<UserDialog DialogText="Please turn-in manually for now and turn the quest in."/>
+					<RunCode name="TurnIn"/>
 					<LLTurnIn QuestId="69680" NpcId="1038525" XYZ="-296.5591, 21.84602, -162.1577"/>
 					<StopBusy />
 					<WaitTimer WaitTime="3" />
@@ -1298,89 +1118,44 @@
 				<BuyInclusionShopItem ItemId="39848" Count="1"/>
 			</If>
 			<If Condition="ItemCount(39849) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39849" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39849) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39849" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39849" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39850) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39850" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39850) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39850" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39850" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39856) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39856" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39856) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39856" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39856" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39857) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39857" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39857) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39857" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39857" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39858) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39858" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39858) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39858" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39858" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39859) &lt; 2 and ItemCount(&PurpleCraftersScrip;) &gt; 74" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
@@ -1400,7 +1175,7 @@
 		</While>
 					</While>				
 					<GetTo ZoneId="962" XYZ="-279.287, 21.84602, -138.3546"/>					
-					<UserDialog DialogText="Please turn-in manually for now and turn the quest in."/>
+					<RunCode name="TurnIn"/>
 					<LLTurnIn QuestId="69669" NpcId="1039203" XYZ="-279.287, 21.84602, -138.3546"/>
 					<LLSmallTalk/>
 	  <StopBusy />
@@ -1507,89 +1282,44 @@
 				<BuyInclusionShopItem ItemId="39848" Count="1"/>
 			</If>
 			<If Condition="ItemCount(39849) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39849" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39849) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39849" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39849" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39850) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39850" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39850) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39850" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39850" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39856) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39856" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39856) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39856" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39856" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39857) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39857" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39857) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39857" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39857" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39858) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39858" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39858) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39858" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39858" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39859) &lt; 2 and ItemCount(&PurpleCraftersScrip;) &gt; 74" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
@@ -1609,7 +1339,7 @@
 		</While>
 					</While>				
 					<GetTo ZoneId="962" XYZ="-279.287, 21.84602, -138.3546"/>					
-					<UserDialog DialogText="Please turn-in manually for now and turn the quest in."/>
+					<RunCode name="TurnIn"/>
 					<LLTurnIn QuestId="69670" NpcId="1039203" XYZ="-279.287, 21.84602, -138.3546"/>
 					<LLSmallTalk/>
 	  <StopBusy />
@@ -1715,89 +1445,44 @@
 				<BuyInclusionShopItem ItemId="39848" Count="1"/>
 			</If>
 			<If Condition="ItemCount(39849) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39849" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39849) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39849" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39849" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39850) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39850" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39850) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39850" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39850" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39856) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39856" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39856) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39856" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39856" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39857) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39857" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39857) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39857" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39857" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39858) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39858" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39858) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39858" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39858" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39859) &lt; 2 and ItemCount(&PurpleCraftersScrip;) &gt; 74" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
@@ -1817,7 +1502,7 @@
 		</While>
 					</While>				
 					<GetTo ZoneId="962" XYZ="-279.287, 21.84602, -138.3546"/> 					
-					<UserDialog DialogText="Please turn-in manually for now and turn the quest in."/>
+					<RunCode name="TurnIn"/>
 					<LLTurnIn QuestId="69671" NpcId="1039203" XYZ="-279.287, 21.84602, -138.3546"/>
 					<LLSmallTalk/>
 	  <StopBusy />
@@ -1977,7 +1662,6 @@
 				<WaitTimer WaitTime="2" />
 				<AffixMateria EquipmentId="39849" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-
 			</If>
 			<If Condition="ItemCount(39850) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
 				<BuyInclusionShopItem ItemId="39850" Count="1"/>
@@ -2029,7 +1713,7 @@
 		</While>
 					</While>				
 					<GetTo ZoneId="962" XYZ="-279.287, 21.84602, -138.3546"/> 				
-					<UserDialog DialogText="Please turn-in manually for now and turn the quest in."/>
+					<RunCode name="TurnIn"/>
 					<LLTurnIn QuestId="69673" NpcId="1039203" XYZ="-279.287, 21.84602, -138.3546"/>
 					<LLSmallTalk/>
 	  <StopBusy />
@@ -2169,89 +1853,44 @@
 				<BuyInclusionShopItem ItemId="39848" Count="1"/>
 			</If>
 			<If Condition="ItemCount(39849) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39849" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39849) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39849" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39849" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39850) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39850" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39850) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39850" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39850" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39856) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39856" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39856) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39856" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39856" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39857) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39857" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39857) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39857" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39857" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39858) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39858" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39858) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39858" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39858" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39859) &lt; 2 and ItemCount(&PurpleCraftersScrip;) &gt; 74" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
@@ -2271,7 +1910,7 @@
 		</While>
 					</While>				
 					<GetTo ZoneId="962" XYZ="-289.3946, 21.84602, -148.49"/>  				
-					<UserDialog DialogText="Please turn-in manually for now and turn the quest in."/>
+					<RunCode name="TurnIn"/>
 					<LLTurnIn QuestId="69683" NpcId="1039220" XYZ="-289.3946, 21.84602, -148.49"/>
 					<LLSmallTalk/>
 	  <StopBusy />
@@ -2375,89 +2014,44 @@
 				<BuyInclusionShopItem ItemId="39848" Count="1"/>
 			</If>
 			<If Condition="ItemCount(39849) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39849" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39849) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39849" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39849" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39850) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39850" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39850) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39850" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39850" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39856) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39856" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39856) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39856" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39856" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39857) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39857" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39857) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39857" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39857" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39858) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39858" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39858) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39858" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39858" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39859) &lt; 2 and ItemCount(&PurpleCraftersScrip;) &gt; 74" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
@@ -2477,7 +2071,7 @@
 		</While>
 					</While>
 					<GetTo ZoneId="962" XYZ="-289.3946, 21.84602, -148.49"/>  
-					<UserDialog DialogText="Please turn-in manually for now and turn the quest in."/>
+					<RunCode name="TurnIn"/>
 					<LLTurnIn QuestId="69684" NpcId="1039220" XYZ="-289.3946, 21.84602, -148.49"/>
 					<LLSmallTalk/>
 	  <StopBusy />
@@ -2580,89 +2174,44 @@
 				<BuyInclusionShopItem ItemId="39848" Count="1"/>
 			</If>
 			<If Condition="ItemCount(39849) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39849" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39849) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39849" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39849" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39850) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39850" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39850) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39850" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39850" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39856) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39856" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39856) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39856" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39856" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39857) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39857" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39857) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39857" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39857" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39858) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39858" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39858) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39858" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39858" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39859) &lt; 2 and ItemCount(&PurpleCraftersScrip;) &gt; 74" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
@@ -2682,7 +2231,7 @@
 		</While>
 					</While>				
 					<GetTo ZoneId="962" XYZ="-289.3946, 21.84602, -148.49"/>  
-					<UserDialog DialogText="Please turn-in manually for now and turn the quest in."/>
+					<RunCode name="TurnIn"/>
 					<LLTurnIn QuestId="69685" NpcId="1039220" XYZ="-289.3946, 21.84602, -148.49"/>
 					<LLSmallTalk/>
 	  <StopBusy />
@@ -2847,89 +2396,44 @@
 				<BuyInclusionShopItem ItemId="39848" Count="1"/>
 			</If>
 			<If Condition="ItemCount(39849) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39849" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39849) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39849" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39849" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39850) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39850" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39850) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39850" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39850" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39856) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39856" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39856) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39856" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39856" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39857) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39857" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39857) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39857" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39857" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39858) &lt; 1 and ItemCount(&PurpleCraftersScrip;) &gt; 99" >
-				<StopBusy />
-				<WaitTimer WaitTime="2" />
 				<BuyInclusionShopItem ItemId="39858" Count="1"/>
 				<WaitTimer WaitTime="2" />
 				<StopBusy />
 				<WaitTimer WaitTime="2" />
-				<If Condition="ItemCount(39858) &gt; 0">
-					<If Condition="ItemCount(33939) &lt;= 1 and ItemCount(&PurpleCraftersScrip;) &gt; 249" >
-						<BuyInclusionShopItem ItemId="33939" Count="1"/>
-						<StopBusy />
-					</If>
-					<AffixMateria EquipmentId="39858" MateriaId="33939"/>
-				</If>
+				<AffixMateria EquipmentId="39858" MateriaId="33939"/>
 				<WaitTimer WaitTime="2" />
-				<StopBusy />
 			</If>
 			<If Condition="ItemCount(39859) &lt; 2 and ItemCount(&PurpleCraftersScrip;) &gt; 74" >
 				<BuyInclusionShopItem ItemId="39859" Count="1"/>
@@ -2949,7 +2453,7 @@
 		</While>
 					</While>				
 					<GetTo ZoneId="962" XYZ="-289.3946, 21.84602, -148.49"/>  
-					<UserDialog DialogText="Please turn-in manually for now and turn the quest in."/>
+					<RunCode name="TurnIn"/>
 					<LLTurnIn QuestId="69687" NpcId="1039220" XYZ="-289.3946, 21.84602, -148.49"/>
 					<LLSmallTalk/>
 	  <StopBusy />
@@ -3045,7 +2549,7 @@
 							<BuyInclusionShopItem ItemId="&BuyGatherItem;" Count="0"/>
 						</While>				
 						<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/> 
-						<UserDialog DialogText="Please turn-in manually for now and turn the quest in."/>
+						<RunCode name="TurnIn"/>
 						<LLTurnIn QuestId="69690" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
 						<WaitTimer WaitTime="3" />
 					</If>
@@ -3076,7 +2580,7 @@
 						<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/>
 						<ChangeClass Job="Botanist" Force="True"/>
 						<WaitTimer WaitTime="3" />	
-						<UserDialog DialogText="Please turn-in manually for now and turn the quest in."/>
+						<RunCode name="TurnIn"/>
 						<LLTurnIn QuestId="69690" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
 						<WaitTimer WaitTime="3" />
 					</If>
@@ -3109,7 +2613,7 @@
 							<BuyInclusionShopItem ItemId="&BuyGatherItem;" Count="0"/>
 						</While>				
 						<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/> 
-						<UserDialog DialogText="Please turn-in manually for now and turn the quest in."/>
+						<RunCode name="TurnIn"/>
 						<LLTurnIn QuestId="69691" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
 						<LLSmallTalk/>
 	  <StopBusy />
@@ -3144,7 +2648,7 @@
 						<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/>
 						<ChangeClass Job="Botanist" Force="True"/>
 						<WaitTimer WaitTime="3" />	
-						<UserDialog DialogText="Please turn-in manually for now and turn the quest in."/>
+						<RunCode name="TurnIn"/>
 						<LLTurnIn QuestId="69691" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
 						<LLSmallTalk/>
 	  <StopBusy />
@@ -3179,7 +2683,7 @@
 							<BuyInclusionShopItem ItemId="&BuyGatherItem;" Count="0"/>
 						</While>				
 						<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/> 
-						<UserDialog DialogText="Please turn-in manually for now and turn the quest in."/>
+						<RunCode name="TurnIn"/>
 						<LLTurnIn QuestId="69692" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
 						<LLSmallTalk/>
 	  <StopBusy />
@@ -3214,7 +2718,7 @@
 						<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/>
 						<ChangeClass Job="Botanist" Force="True"/>
 						<WaitTimer WaitTime="3" />	
-						<UserDialog DialogText="Please turn-in manually for now and turn the quest in."/>
+						<RunCode name="TurnIn"/>
 						<LLTurnIn QuestId="69692" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
 						<LLSmallTalk/>
 	  <StopBusy />
@@ -3358,7 +2862,7 @@
 							<BuyInclusionShopItem ItemId="&BuyGatherItem;" Count="0"/>
 						</While>				
 						<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/> 
-						<UserDialog DialogText="Please turn-in manually for now and turn the quest in."/>
+						<RunCode name="TurnIn"/>
 						<LLTurnIn QuestId="69694" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
 						<LLSmallTalk/>
 	  <StopBusy />
@@ -3393,7 +2897,7 @@
 						<ChangeClass Job="Botanist" Force="True"/>
 						<WaitTimer WaitTime="3" />				
 						<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/> 
-						<UserDialog DialogText="Please turn-in manually for now and turn the quest in."/>
+						<RunCode name="TurnIn"/>
 						<LLTurnIn QuestId="69694" NpcId="1038501" XYZ="-365.2913, 21.84602, -104.0976"/>
 						<LLSmallTalk/>
 	  <StopBusy />
