@@ -2225,9 +2225,7 @@ Authors:  Kayla / Angles24
 		_ => amount
 		};
 
-		if (Core.Me.HasAura(1411)) {
-			amount = (int)Math.Ceiling((amount + 1) / 2.0);
-		}
+
 
 		ff14bot.Helpers.Logging.Write($"Estimated amount of collectables needed to level to next checkpoint: {amount}");
 
@@ -2317,9 +2315,7 @@ Authors:  Kayla / Angles24
 		_ => amount
 		};
 
-		if (Core.Me.HasAura(1411)) {
-			amount = (int)Math.Ceiling((amount + 1) / 2.0);
-		}
+
 
 		ff14bot.Helpers.Logging.Write($"Estimated amount of collectables needed to level to next checkpoint: {amount}");
 
@@ -2360,9 +2356,7 @@ Authors:  Kayla / Angles24
 		_ => amount
 		};
 
-		if (Core.Me.HasAura(1411)) {
-			amount = (int)Math.Ceiling((amount + 1) / 2.0);
-		}
+
 
 		ff14bot.Helpers.Logging.Write($"Estimated amount of collectables needed to level to next checkpoint: {amount}");
 
@@ -2416,9 +2410,7 @@ Authors:  Kayla / Angles24
 		_ => amount
 		};
 
-		if (Core.Me.HasAura(1411)) {
-			amount = (int)Math.Ceiling((amount + 1) / 2.0);
-		}
+
 
 		ff14bot.Helpers.Logging.Write($"Estimated amount of collectables needed to level to next checkpoint: {amount}");
 
@@ -2459,9 +2451,7 @@ Authors:  Kayla / Angles24
 		_ => amount
 		};
 
-		if (Core.Me.HasAura(1411)) {
-			amount = (int)Math.Ceiling((amount + 1) / 2.0);
-		}
+
 
 		ff14bot.Helpers.Logging.Write($"Estimated amount of collectables needed to level to next checkpoint: {amount}");
 
@@ -2502,9 +2492,7 @@ Authors:  Kayla / Angles24
 		_ => amount
 		};
 
-		if (Core.Me.HasAura(1411)) {
-			amount = (int)Math.Ceiling((amount + 1) / 2.0);
-		}
+
 
 		ff14bot.Helpers.Logging.Write($"Estimated amount of collectables needed to level to next checkpoint: {amount}");
 
@@ -2540,9 +2528,7 @@ Authors:  Kayla / Angles24
 		_ => amount
 		};
 
-		if (Core.Me.HasAura(1411)) {
-			amount = (int)Math.Ceiling((amount + 1) / 2.0);
-		}
+
 
 		ff14bot.Helpers.Logging.Write($"Estimated amount of leves needed to level to next checkpoint: {amount}");
 
@@ -2583,9 +2569,7 @@ Authors:  Kayla / Angles24
 		_ => amount
 		};
 
-		if (Core.Me.HasAura(1411)) {
-			amount = (int)Math.Ceiling((amount + 1) / 2.0);
-		}
+
 
 		ff14bot.Helpers.Logging.Write($"Estimated amount of collectables needed to level to next checkpoint: {amount}");
 
@@ -2626,9 +2610,7 @@ Authors:  Kayla / Angles24
 		_ => amount
 		};
 
-		if (Core.Me.HasAura(1411)) {
-			amount = (int)Math.Ceiling((amount + 1) / 2.0);
-		}
+
 
 		ff14bot.Helpers.Logging.Write($"Estimated amount of collectables needed to level to next checkpoint: {amount}");
 
@@ -2664,9 +2646,7 @@ Authors:  Kayla / Angles24
 		_ => amount
 		};
 
-		if (Core.Me.HasAura(1411)) {
-			amount = (int)Math.Ceiling((amount + 1) / 2.0);
-		}
+
 
 		ff14bot.Helpers.Logging.Write($"Estimated amount of leves needed to level to next checkpoint: {amount}");
 
@@ -2702,9 +2682,7 @@ Authors:  Kayla / Angles24
 		_ => amount
 		};
 
-		if (Core.Me.HasAura(1411)) {
-			amount = (int)Math.Ceiling((amount + 1) / 2.0);
-		}
+
 
 		ff14bot.Helpers.Logging.Write($"Estimated amount of leves needed to level to next checkpoint: {amount}");
 
@@ -2745,9 +2723,7 @@ Authors:  Kayla / Angles24
 		_ => amount
 		};
 
-		if (Core.Me.HasAura(1411)) {
-			amount = (int)Math.Ceiling((amount + 1) / 2.0);
-		}
+
 
 		ff14bot.Helpers.Logging.Write($"Estimated amount of collectables needed to level to next checkpoint: {amount}");
 
@@ -2783,9 +2759,7 @@ Authors:  Kayla / Angles24
 		_ => amount
 		};
 
-		if (Core.Me.HasAura(1411)) {
-			amount = (int)Math.Ceiling((amount + 1) / 2.0);
-		}
+
 
 		ff14bot.Helpers.Logging.Write($"Estimated amount of leves needed to level to next checkpoint: {amount}");
 
@@ -2821,9 +2795,7 @@ Authors:  Kayla / Angles24
 		_ => amount
 		};
 
-		if (Core.Me.HasAura(1411)) {
-			amount = (int)Math.Ceiling((amount + 1) / 2.0);
-		}
+
 
 		ff14bot.Helpers.Logging.Write($"Estimated amount of leves needed to level to next checkpoint: {amount}");
 
@@ -2892,9 +2864,7 @@ Authors:  Kayla / Angles24
 		_ => amount
 		};
 
-		if (Core.Me.HasAura(1411)) {
-			amount = (int)Math.Ceiling((amount + 1) / 2.0);
-		}
+
 
 		ff14bot.Helpers.Logging.Write($"Estimated amount of collectables needed to level to next checkpoint: {amount}");
 
@@ -2935,9 +2905,7 @@ Authors:  Kayla / Angles24
 		_ => amount
 		};
 
-		if (Core.Me.HasAura(1411)) {
-			amount = (int)Math.Ceiling((amount + 1) / 2.0);
-		}
+
 
 		ff14bot.Helpers.Logging.Write($"Estimated amount of collectables needed to level to next checkpoint: {amount}");
 
@@ -2979,9 +2947,7 @@ Authors:  Kayla / Angles24
 		_ => amount
 		};
 
-		if (Core.Me.HasAura(1411)) {
-			amount = (int)Math.Ceiling((amount + 1) / 2.0);
-		}
+
 
 		ff14bot.Helpers.Logging.Write($"Estimated amount of collectables needed to level to next checkpoint: {amount}");
 
@@ -3036,9 +3002,7 @@ Authors:  Kayla / Angles24
 		};
 
 
-		if (Core.Me.HasAura(1411)) {
-			amount = (int)Math.Ceiling((amount + 1) / 2.0);
-		}
+
 
 		ff14bot.Helpers.Logging.Write($"Estimated amount of collectables needed to level to next checkpoint: {amount}");
 
@@ -3079,9 +3043,7 @@ Authors:  Kayla / Angles24
 		_ => amount
 		};
 
-		if (Core.Me.HasAura(1411)) {
-			amount = (int)Math.Ceiling((amount + 1) / 2.0);
-		}
+
 
 		ff14bot.Helpers.Logging.Write($"Estimated amount of collectables needed to level to next checkpoint: {amount}");
 
@@ -3150,9 +3112,7 @@ Authors:  Kayla / Angles24
 		_ => amount
 		};
 
-		if (Core.Me.HasAura(1411)) {
-			amount = (int)Math.Ceiling((amount + 1) / 2.0);
-		}
+
 
 		ff14bot.Helpers.Logging.Write($"Estimated amount of collectables needed to level to next checkpoint: {amount}");
 
@@ -3221,9 +3181,7 @@ Authors:  Kayla / Angles24
 		_ => amount
 		};
 
-		if (Core.Me.HasAura(1411)) {
-			amount = (int)Math.Ceiling((amount + 1) / 2.0);
-		}
+
 
 		ff14bot.Helpers.Logging.Write($"Estimated amount of collectables needed to level to next checkpoint: {amount}");
 
@@ -3264,9 +3222,7 @@ Authors:  Kayla / Angles24
 		_ => amount
 		};
 
-		if (Core.Me.HasAura(1411)) {
-			amount = (int)Math.Ceiling((amount + 1) / 2.0);
-		}
+
 
 		ff14bot.Helpers.Logging.Write($"Estimated amount of collectables needed to level to next checkpoint: {amount}");
 
@@ -3307,9 +3263,7 @@ Authors:  Kayla / Angles24
 		_ => amount
 		};
 
-		if (Core.Me.HasAura(1411)) {
-			amount = (int)Math.Ceiling((amount + 1) / 2.0);
-		}
+
 
 		ff14bot.Helpers.Logging.Write($"Estimated amount of collectables needed to level to next checkpoint: {amount}");
 
@@ -3345,9 +3299,7 @@ Authors:  Kayla / Angles24
 		_ => amount
 		};
 
-		if (Core.Me.HasAura(1411)) {
-			amount = (int)Math.Ceiling((amount + 1) / 2.0);
-		}
+
 
 		ff14bot.Helpers.Logging.Write($"Estimated amount of leves needed to level to next checkpoint: {amount}");
 
@@ -3383,9 +3335,7 @@ Authors:  Kayla / Angles24
 		_ => amount
 		};
 
-		if (Core.Me.HasAura(1411)) {
-			amount = (int)Math.Ceiling((amount + 1) / 2.0);
-		}
+
 
 		ff14bot.Helpers.Logging.Write($"Estimated amount of leves needed to level to next checkpoint: {amount}");
 
@@ -3445,9 +3395,7 @@ Authors:  Kayla / Angles24
 		_ => amount
 		};
 
-		if (Core.Me.HasAura(1411)) {
-			amount = (int)Math.Ceiling((amount + 1) / 2.0);
-		}
+
 
 		ff14bot.Helpers.Logging.Write($"Estimated amount of leves needed to level to next checkpoint: {amount}");
 
@@ -3485,9 +3433,7 @@ Authors:  Kayla / Angles24
 		_ => amount
 		};
 
-		if (Core.Me.HasAura(1411)) {
-			amount = (int)Math.Ceiling((amount + 1) / 2.0);
-		}
+
 
 		ff14bot.Helpers.Logging.Write($"Estimated amount of collectables needed to level to next checkpoint: {amount}");
 
@@ -3523,9 +3469,7 @@ Authors:  Kayla / Angles24
 		_ => amount
 		};
 
-		if (Core.Me.HasAura(1411)) {
-			amount = (int)Math.Ceiling((amount + 1) / 2.0);
-		}
+
 
 		ff14bot.Helpers.Logging.Write($"Estimated amount of leves needed to level to next checkpoint: {amount}");
 
@@ -3566,9 +3510,7 @@ Authors:  Kayla / Angles24
 		_ => amount
 		};
 
-		if (Core.Me.HasAura(1411)) {
-			amount = (int)Math.Ceiling((amount + 1) / 2.0);
-		}
+
 
 		ff14bot.Helpers.Logging.Write($"Estimated amount of leves needed to level to next checkpoint: {amount}");
 
@@ -3605,9 +3547,7 @@ Authors:  Kayla / Angles24
 		_ => amount
 		};
 
-		if (Core.Me.HasAura(1411)) {
-			amount = (int)Math.Ceiling((amount + 1) / 2.0);
-		}
+
 
 		ff14bot.Helpers.Logging.Write($"Estimated amount of leves needed to level to next checkpoint: {amount}");
 
@@ -3643,9 +3583,7 @@ Authors:  Kayla / Angles24
 		_ => amount
 		};
 
-		if (Core.Me.HasAura(1411)) {
-			amount = (int)Math.Ceiling((amount + 1) / 2.0);
-		}
+
 
 		ff14bot.Helpers.Logging.Write($"Estimated amount of leves needed to level to next checkpoint: {amount}");
 
@@ -3699,9 +3637,7 @@ Authors:  Kayla / Angles24
 		_ => amount
 		};
 
-		if (Core.Me.HasAura(1411)) {
-			amount = (int)Math.Ceiling((amount + 1) / 2.0);
-		}
+
 
 		ff14bot.Helpers.Logging.Write($"Estimated amount of collectables needed to level to next checkpoint: {amount}");
 
@@ -3755,9 +3691,7 @@ Authors:  Kayla / Angles24
 		_ => amount
 		};
 
-		if (Core.Me.HasAura(1411)) {
-			amount = (int)Math.Ceiling((amount + 1) / 2.0);
-		}
+
 
 		ff14bot.Helpers.Logging.Write($"Estimated amount of collectables needed to level to next checkpoint: {amount}");
 
@@ -3799,9 +3733,7 @@ Authors:  Kayla / Angles24
 		};
 
 
-		if (Core.Me.HasAura(1411)) {
-			amount = (int)Math.Ceiling((amount + 1) / 2.0);
-		}
+
 
 		ff14bot.Helpers.Logging.Write($"Estimated amount of collectables needed to level to next checkpoint: {amount}");
 
@@ -3843,9 +3775,7 @@ Authors:  Kayla / Angles24
 		};
 
 
-		if (Core.Me.HasAura(1411)) {
-			amount = (int)Math.Ceiling((amount + 1) / 2.0);
-		}
+
 
 		ff14bot.Helpers.Logging.Write($"Estimated amount of collectables needed to level to next checkpoint: {amount}");
 
@@ -3886,9 +3816,7 @@ Authors:  Kayla / Angles24
 		_ => amount
 		};
 
-		if (Core.Me.HasAura(1411)) {
-			amount = (int)Math.Ceiling((amount + 1) / 2.0);
-		}
+
 
 		ff14bot.Helpers.Logging.Write($"Estimated amount of collectables needed to level to next checkpoint: {amount}");
 
@@ -3929,9 +3857,7 @@ Authors:  Kayla / Angles24
 		_ => amount
 		};
 
-		if (Core.Me.HasAura(1411)) {
-			amount = (int)Math.Ceiling((amount + 1) / 2.0);
-		}
+
 
 		ff14bot.Helpers.Logging.Write($"Estimated amount of collectables needed to level to next checkpoint: {amount}");
 
@@ -3967,9 +3893,7 @@ Authors:  Kayla / Angles24
 		_ => amount
 		};
 
-		if (Core.Me.HasAura(1411)) {
-			amount = (int)Math.Ceiling((amount + 1) / 2.0);
-		}
+
 
 		ff14bot.Helpers.Logging.Write($"Estimated amount of leves needed to level to next checkpoint: {amount}");
 
@@ -4005,9 +3929,7 @@ Authors:  Kayla / Angles24
 		_ => amount
 		};
 
-		if (Core.Me.HasAura(1411)) {
-			amount = (int)Math.Ceiling((amount + 1) / 2.0);
-		}
+
 
 		ff14bot.Helpers.Logging.Write($"Estimated amount of leves needed to level to next checkpoint: {amount}");
 
@@ -4043,9 +3965,7 @@ Authors:  Kayla / Angles24
 		_ => amount
 		};
 
-		if (Core.Me.HasAura(1411)) {
-			amount = (int)Math.Ceiling((amount + 1) / 2.0);
-		}
+
 
 		ff14bot.Helpers.Logging.Write($"Estimated amount of leves needed to level to next checkpoint: {amount}");
 
@@ -4171,9 +4091,7 @@ Authors:  Kayla / Angles24
 		_ => amount
 		};
 
-		if (Core.Me.HasAura(1411)) {
-			amount = (int)Math.Ceiling((amount + 1) / 2.0);
-		}
+
 
 		ff14bot.Helpers.Logging.Write($"Estimated amount of leves needed to level to next checkpoint: {amount}");
 
