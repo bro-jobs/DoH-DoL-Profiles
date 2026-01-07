@@ -1221,42 +1221,6 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 		</If>
 
 
-
-
-
-		<!-- Gatherers to 95 -->
-
-
-		<If Condition="&min; == 1">
-
-
-			<If Condition="Core.Me.Levels[ClassJobType.Miner] &lt; 95">
-
-
-				<LLoadProfile Path="Gathering/90-95 Miner.xml"/>
-
-
-			</If>
-
-
-		</If>
-
-
-		<If Condition="&btn; == 1">
-
-
-			<If Condition="Core.Me.Levels[ClassJobType.Botanist] &lt; 95">
-
-
-				<LLoadProfile Path="Gathering/90-95 Botanist.xml"/>
-
-
-			</If>
-
-
-		</If>
-
-
 		
 
 

@@ -851,6 +851,15 @@ Authors:  Kayla / Angles24
 		</While>
 	</While>
 
+	<!-- Gatherers to 95 -->
+	<If Condition="Core.Me.Levels[ClassJobType.Miner] &lt; 95">
+		<LLoadProfile Path="../Gathering/90-95 Miner.xml"/>
+	</If>
+
+	<If Condition="Core.Me.Levels[ClassJobType.Botanist] &lt; 95">
+		<LLoadProfile Path="../Gathering/90-95 Botanist.xml"/>
+	</If>
+
     <!-- CRP to Lv98 -->
 	<While Condition="(Core.Me.Levels[ClassJobType.Carpenter] &gt; 95) and  (Core.Me.Levels[ClassJobType.Carpenter] &lt; 98)">
 		<If Condition="ClassName != ClassJobType.Carpenter">
