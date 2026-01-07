@@ -6,7 +6,6 @@
 	<RunCode Name="SetLisbethJson" />
     <AutoInventoryEquip/>
     <WaitTimer WaitTime="5"/>
-	</If>
 	<RunCode Name="FirstWaveLogger" />	
     <LLoadProfile Path="../Start.xml"/>
 </Order>
