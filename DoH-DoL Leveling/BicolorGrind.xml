@@ -7,7 +7,7 @@
 
 	<While Condition="not ((HasAtLeast(36242, 148)) and (HasAtLeast(27736, 64)) and (HasAtLeast(36243, 96)) and (HasAtLeast(36203, 164)) and (HasAtLeast(36244, 92)) and (HasAtLeast(36258, 39)) and (HasAtLeast(36245, 20)) and (HasAtLeast(36246, 40)) and (HasAtLeast(44053, 160)) and (HasAtLeast(36257, 60)) and (HasAtLeast(36260, 10)) and (HasAtLeast(44063, 30)) and (HasAtLeast(44067, 50)) and (HasAtLeast(44054, 180)) and (HasAtLeast(36256, 34)) and (HasAtLeast(44055, 116)) and (HasAtLeast(44069, 15)) and (HasAtLeast(44070, 10)) and (HasAtLeast(44056, 100)) and (HasAtLeast(44027, 100)) and (HasAtLeast(44071, 40)) and (HasAtLeast(44057, 60)))">
 		<!-- Trading with vendor logic not yet complete... got to hunt down each NPC one by one. -->
-		<If Condition="ItemCount(26807) &gt; 200">
+		<If Condition="ItemCount(26807) &gt; 199">
 		
             <While Condition="(ItemCount(36242) &lt; 148) and ItemCount(26807) &gt; 3">
             <!-- THAVNAIR: 148x Gaja Hide -->
