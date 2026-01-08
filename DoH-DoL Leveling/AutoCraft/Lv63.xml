@@ -4,12 +4,13 @@
 <Order>
 <RunCode Name="SwitchCombatJob"/>
     <RunCode Name="SetLisbethJson" />
+    <If Condition="ItemCount(19626) &gt; 0 AND ItemCount(19625) &gt; 0 AND ItemCount(19624) &gt; 0 AND ItemCount(19623) &gt; 0 AND ItemCount(19622) &gt; 0 AND ItemCount(19627) &gt; 0 AND ItemCount(19628) &gt; 0 AND ItemCount(19629) &gt; 0 AND ItemCount(19630) &gt; 0 AND ItemCount(19631) &gt; 0 AND ItemCount(19731) &gt; 1 AND ItemCount(19730) &gt; 0 AND ItemCount(19729) &gt; 0 AND ItemCount(19728) &gt; 0 AND ItemCount(19512) &gt; 0 AND ItemCount(19523) &gt; 0 AND ItemCount(19513) &gt; 0 AND ItemCount(19524) &gt; 0 AND ItemCount(19506) &gt; 0 AND ItemCount(19517) &gt; 0 AND ItemCount(19511) &gt; 0 AND ItemCount(19522) &gt; 0 AND ItemCount(19510) &gt; 0 AND ItemCount(19521) &gt; 0 AND ItemCount(19509) &gt; 0 AND ItemCount(19520) &gt; 0 AND ItemCount(19508) &gt; 0 AND ItemCount(19519) &gt; 0 AND ItemCount(19507) &gt; 0 AND ItemCount(19518) &gt; 0 AND ItemCount(19733) &gt; 0 AND ItemCount(19734) &gt; 0 AND ItemCount(19735) &gt; 0 AND ItemCount(19736) &gt; 1 AND ItemCount(19514) &gt; 0 AND ItemCount(19525) &gt; 0 AND ItemCount(19526) &gt; 0 AND ItemCount(19515) &gt; 0">
     <LogMessage Message="Crafted Lv63 Gear!"/>
     <AutoInventoryEquip/>
     <WaitTimer WaitTime="5"/>
-    	<RunCode Name="Logger" />
+    <RunCode Name="Logger" />
+    </If>
     <LLoadProfile Path="../Start.xml"/>
-	<WaitTimer WaitTime="5"/>
 </Order>
 <CodeChunks>
 <CodeChunk Name="SwitchCombatJob">

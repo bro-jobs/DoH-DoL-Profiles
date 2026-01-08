@@ -25,10 +25,13 @@
     </If>
 
     <RunCode Name="SetLisbethJson" />
-    <LogMessage Message="Crafted Lv41 Gear!"/>
-    <AutoInventoryEquip/>
-    <WaitTimer WaitTime="5"/>
-	<RunCode Name="Logger" />
+    <If Condition="ItemCount(2808) &gt; 0 AND ItemCount(3137) &gt; 0 AND ItemCount(2785) &gt; 0 AND ItemCount(3691) &gt; 0 AND ItemCount(3415) &gt; 0 AND ItemCount(3911) &gt; 0 AND ItemCount(4231) &gt; 0 AND ItemCount(4353) &gt; 0 AND ItemCount(4126) &gt; 0 AND ItemCount(4467) &gt; 1 AND ItemCount(2323) &gt; 0 AND ItemCount(2335) &gt; 0 AND ItemCount(2350) &gt; 0 AND ItemCount(2361) &gt; 0 AND ItemCount(2375) &gt; 0 AND ItemCount(2386) &gt; 0 AND ItemCount(2400) &gt; 0 AND ItemCount(2411) &gt; 0 AND ItemCount(2425) &gt; 0 AND ItemCount(2437) &gt; 0 AND ItemCount(2451) &gt; 0 AND ItemCount(2464) &gt; 0 AND ItemCount(2476) &gt; 0 AND ItemCount(2488) &gt; 0 AND ItemCount(2502) &gt; 0 AND ItemCount(2514) &gt; 0 AND ItemCount(2528) &gt; 0 AND ItemCount(2540) &gt; 0 AND ItemCount(2554) &gt; 0 AND ItemCount(2566) &gt; 0 AND ItemCount(4232) &gt; 0 AND ItemCount(4333) &gt; 0 AND ItemCount(4132) &gt; 0 AND ItemCount(4482) &gt; 1 AND ItemCount(3163) &gt; 0 AND ItemCount(3627) &gt; 0 AND ItemCount(3410) &gt; 0 AND ItemCount(3853) &gt; 0">
+        <LogMessage Message="Crafted Lv41 Gear!"/>
+        <AutoInventoryEquip/>
+        <WaitTimer WaitTime="5"/>
+	    <RunCode Name="Logger" />
+    </If >
+    
 	<WaitTimer WaitTime="5"/>
     <LLoadProfile Path="../Start.xml"/>
 </Order>
