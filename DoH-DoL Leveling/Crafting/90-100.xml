@@ -689,12 +689,6 @@ Authors:  Kayla / Angles24
 		</While>
 	</While>
 
-	<!-- Craft Lv94 gear -->
-	<RunCode Name="SetLisbethJsonGear94" />
-	
-	<RunCode Name="Logger94" />
-
-
     <!-- ALC to Lv94 -->
 	<While Condition="(Core.Me.Levels[ClassJobType.Alchemist] &gt; 91) and  (Core.Me.Levels[ClassJobType.Alchemist] &lt; 94)">
 		<If Condition="ClassName != ClassJobType.Alchemist">
@@ -859,6 +853,13 @@ Authors:  Kayla / Angles24
 	<If Condition="Core.Me.Levels[ClassJobType.Botanist] &lt; 95">
 		<LLoadProfile Path="../Gathering/90-95 Botanist.xml"/>
 	</If>
+
+	
+	<!-- Craft Lv94 gear -->
+	<RunCode Name="SetLisbethJsonGear94" />
+	
+	<RunCode Name="Logger94" />
+
 
     <!-- CRP to Lv98 -->
 	<While Condition="(Core.Me.Levels[ClassJobType.Carpenter] &gt; 95) and  (Core.Me.Levels[ClassJobType.Carpenter] &lt; 98)">
@@ -1307,6 +1308,11 @@ Authors:  Kayla / Angles24
 			</While>
 		</While>
 	</While>
+
+	<!-- Discard Br'aaxskin halfgloves of crafting leftover from the LTW leve. -->
+	<!-- This needs to be done because it's unpredictable and screws with macros. -->
+	<LLDiscardItem ItemIds="43296" Armory="true" />
+
 	<!-- Check to see if have collectables -->
 	<While Condition="HasRarefiedItem() &gt; 0">
 		<While Condition="ItemCount(33913) &gt; 249"> <!-- 33913 = Purple Crafters' Scrip Scrip -->
