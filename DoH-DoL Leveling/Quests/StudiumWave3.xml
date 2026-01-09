@@ -3,6 +3,161 @@
 <Name>Crafting Studium Items</Name>
 <Order>
 
+<If Condition="not IsQuestCompleted(69916)">
+		<LLToast message="Please complete MSQ 'Sound the Bell, School's In.'"/>
+	</If>
+	<If Condition="IsQuestCompleted(69916)">
+    <!-- The Faculty -->
+    <If Condition="not IsQuestCompleted(70009)">
+      <If Condition="not HasQuest(70009)">
+        <GetTo ZoneId="962" XYZ="-355.8746, 21.84602, -93.05553"/> <!-- Area="Old Sharlayan" -->
+        <If Condition="IsQuestAcceptQualified(70009)">
+          <LLPickupQuest QuestId="70009" NpcId="1038500"/>
+          <LLSmallTalk/>
+	  <StopBusy />
+        </If>
+      </If>
+    </If>
+    <If Condition="GetQuestStep(70009) == 255">
+      <GetTo ZoneId="962" XYZ="-355.8746, 21.84602, -93.05553"/> <!-- Area="Old Sharlayan" -->
+      <LLTurnIn QuestId="70009" NpcId="1038500" XYZ="-357.8394, 21.84602, -91.32526"/>
+      <LLSmallTalk/>
+	  <StopBusy />
+	  <StopBusy />
+    </If>
+	</If>	
+	<!-- Unlock first! -->	
+	<!-- Carpenter/Leatherworker/Weaver -->	
+	<If Condition="not IsQuestCompleted(69681)">
+		<While Condition="not ClassName == ClassJobType.Leatherworker">
+			<ChangeClass Job="Leatherworker" Force="True"/>
+			<WaitTimer WaitTime="3" />		
+		</While>
+    <!-- In Search of the Azure Star -->
+    <If Condition="IsQuestCompleted(70009) and not IsQuestCompleted(69675)">
+      <If Condition="not HasQuest(69675)">
+      <GetTo ZoneId="962" XYZ="-352.9726, 22.40005, -101.0074"/>  
+        <If Condition="IsQuestAcceptQualified(69675)">
+          <LLPickupQuest QuestId="69675" NpcId="1038562"/>
+          <LLSmallTalk/>
+	  <StopBusy />
+        </If>
+      </If>
+			<If Condition="GetQuestStep(69675) == 1">
+				<GetTo ZoneId="962" XYZ="-365.1847, 19, 89.69978"/>  
+				<LLTalkTo NpcId="1038528" XYZ="-368.5207, 19, 91.81348" QuestId="69675" StepId="1"/>
+			</If>
+			<If Condition="GetQuestStep(69675) == 2">
+				<GetTo ZoneId="962" XYZ="-374.9073, 18.99995, 86.1198"/>  
+				<UseObject NpcIds="2011749,2011750,2011751" XYZ="-374.9073, 18.99995, 86.1198" QuestId="69675" StepId="2"/>
+			</If>
+			<If Condition="GetQuestStep(69675) == 3">
+				<GetTo ZoneId="962" XYZ="-369.9159, 19, 91.07926"/>  
+				<LLHandOver ItemIds="2003101,2003103,2003102" NpcId="1038528" XYZ="-368.5207, 19, 91.81348" QuestId="69675" StepId="3"/>
+			</If>
+			<If Condition="GetQuestStep(69675) == 255">
+				<GetTo ZoneId="962" XYZ="-298.1129, 21.84602, -159.9294"/>  
+				<LLTurnIn QuestId="69675" NpcId="1038525" XYZ="-296.5591, 21.84602, -162.1577"/>
+				<LLSmallTalk/>
+	  <StopBusy />
+			</If>			
+    </If>
+	</If>
+	<!-- MIN/BTN -->
+	<If Condition="not IsQuestCompleted(69695)">	
+		<While Condition="not ClassName == ClassJobType.Miner">
+			<ChangeClass Job="Miner" Force="True"/>
+			<WaitTimer WaitTime="3" />		
+		</While>
+    <!-- Cultured Pursuits -->
+    <If Condition="IsQuestCompleted(69916) and not IsQuestCompleted(69689)">
+      <If Condition="not HasQuest(69689)">
+      <GetTo ZoneId="962" XYZ="-356.373, 21.64856, -96.78683"/>  
+        <If Condition="IsQuestAcceptQualified(69689)">
+          <LLPickupQuest QuestId="69689" NpcId="1038504"/>
+          <LLSmallTalk/>
+	  <StopBusy />
+        </If>
+      </If>
+			<If Condition="GetQuestStep(69689) == 1">
+				<GetTo ZoneId="962" XYZ="-374.7939, 19, 38.69832"/>  
+				<LLTalkTo NpcId="1038505" XYZ="-376.4554, 19, 37.00305" QuestId="69689" StepId="1"/>
+			</If>
+			<If Condition="GetQuestStep(69689) == 2">
+				<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/>  
+				<LLTalkTo NpcId="1038503" XYZ="-367.0863, 21.84602, -101.7014" QuestId="69689" StepId="2"/>
+			</If>
+			<If Condition="GetQuestStep(69689) == 255">
+				<GetTo ZoneId="962" XYZ="-365.2913, 21.84602, -104.0976"/>  
+				<LLTurnIn QuestId="69689" NpcId="1038501" XYZ="-367.3305, 21.84602, -102.9832"/>
+				<LLSmallTalk/>
+	  <StopBusy />
+			</If>			
+    </If>
+	</If>
+	
+	<!-- Blacksmith/Armorer/Goldsmith -->	
+	<If Condition="not IsQuestCompleted(69674)">
+		<While Condition="not ClassName == ClassJobType.Armorer">
+			<ChangeClass Job="Armorer" Force="True"/>
+			<WaitTimer WaitTime="3" />		
+		</While>	
+    <!-- Professor Rurusha's New Friend -->
+    <If Condition="IsQuestCompleted(69916) and not IsQuestCompleted(69668)">
+      <If Condition="not HasQuest(69668)">
+      <GetTo ZoneId="962" XYZ="-350.3354, 21.64856, -89.95975"/>  
+        <If Condition="IsQuestAcceptQualified(69668)">
+          <LLPickupQuest QuestId="69668" NpcId="1039211"/>
+          <LLSmallTalk/>
+	  <StopBusy />
+        </If>
+      </If>
+			<If Condition="GetQuestStep(69668) == 1">
+				<GetTo ZoneId="962" XYZ="-288.642, 22.29997, -126.1782"/>  
+				<LLTalkTo NpcId="1039212" XYZ="-286.7323, 22.29998, -126.3295" QuestId="69668" StepId="1"/>
+			</If>
+			<If Condition="GetQuestStep(69668) == 255">
+				<GetTo ZoneId="962" XYZ="-279.287, 21.84602, -138.3546"/>  
+				<LLTurnIn QuestId="69668" NpcId="1039203" XYZ="-277.699, 21.84602, -139.0861"/>
+				<LLSmallTalk/>
+	  <StopBusy />
+			</If>			
+    </If>
+	</If>
+	
+	<!-- Alchemist/Culinarian -->	
+	<If Condition="not IsQuestCompleted(69688)">
+		<While Condition="not ClassName == ClassJobType.Alchemist">
+			<ChangeClass Job="Alchemist" Force="True"/>
+			<WaitTimer WaitTime="3" />		
+		</While>
+    <!-- Perfectly Awful -->
+    <If Condition="IsQuestCompleted(69916) and not IsQuestCompleted(69682)">
+      <If Condition="not HasQuest(69682)">
+      <GetTo ZoneId="962" XYZ="-350.3933, 22.30602, -97.17285"/>  
+        <If Condition="IsQuestAcceptQualified(69682)">
+          <LLPickupQuest QuestId="69682" NpcId="1039227"/>
+          <LLSmallTalk/>
+	  <StopBusy />
+        </If>
+      </If>
+			<If Condition="GetQuestStep(69682) == 1">
+				<GetTo ZoneId="962" XYZ="-288.8122, 21.84602, -149.0919"/>  
+				<LLTalkTo NpcId="1039220" XYZ="-287.1595, 21.84602, -150.7745" QuestId="69682" StepId="1"/>
+			</If>
+			<If Condition="GetQuestStep(69682) == 2">
+				<GetTo ZoneId="962" XYZ="-83.69991, -13.777, 121.9688"/>  
+				<LLTalkTo NpcId="1039228" XYZ="-85.83203, -13.777, 121.7517" QuestId="69682" StepId="2"/>
+			</If>			
+			<If Condition="GetQuestStep(69682) == 255">
+				<GetTo ZoneId="962" XYZ="-289.2391, 21.84602, -149.1731"/>  
+				<LLTurnIn QuestId="69682" NpcId="1039220" XYZ="-287.1595, 21.84602, -150.7745"/>
+				<LLSmallTalk/>
+	  <StopBusy />
+			</If>			
+    </If>
+	</If>
+
 	<RunCode Name="SetLisbethJson" />
     <AutoInventoryEquip/>
     <WaitTimer WaitTime="5"/>
