@@ -17,7 +17,7 @@
 		<LLSellItem ItemIds="2652, 1002652, 3023, 1003023, 3019, 1003019, 3014, 1003014" Armory="true"/>
 		<LLSellItem ItemIds="5343, 5275, 1005275, 5432, 5509, 5534, 4863, 1004863" Armory="true"/>
 		<LLSellItem ItemIds="2314, 2340, 2366, 2391, 2416, 2442, 2467, 2493" Armory="true"/>
-		<LLSellItem ItemIds="2519, 2545" Armory="true"/>
+		<LLSellItem ItemIds="2519, 2545, 4760" Armory="true"/>
 		<LLSellItem ItemIds="2328, 2355, 2380, 2405, 2430, 2456, 2481, 2507" Armory="true"/>
 		<LLSellItem ItemIds="2534, 2560, 5519, 5130, 4832, 5383, 5086, 1005086" Armory="true"/>
 		<LLSellItem ItemIds="4766, 5487, 1005487, 4597, 1004597, 4564, 1004564" Armory="true"/>
@@ -29,7 +29,7 @@
 		<LLSellItem ItemIds="2808, 3163, 3627, 3410, 3853" Armory="true" />
 
 		<!-- Miscellaneous gear from lv1-21 crafting -->
-		<LLSellItem ItemIds="2472, 2342, 2498, 2419, 2469, 2496, 2547, 2343, 2393, 2356, 2381, 2482, 2536, 3543, 3322, 3317, 3324, 3763, 3779, 4307" Armory="true"/>
+		<LLSellItem ItemIds="2472, 2342, 2470, 2498, 2419, 2469, 2496, 2547, 2343, 2393, 2356, 2381, 2482, 2536, 3543, 3322, 3317, 3324, 3763, 3779, 4307" Armory="true"/>
 		<LLSellItem ItemIds="3064, 3805" Armory="true" />
 		
 		<!-- Lv21-41 Stuff -->
