@@ -1215,7 +1215,7 @@ At least 1 Combat class level 60+ or in post Heavensward with a Gear Set
 				and IsAetherCurrentCompleted(1192,12) and IsAetherCurrentCompleted(1192,13) and IsAetherCurrentCompleted(1192,14))">
 
 
-			<LLoadProfile Path="Aether Currents/Dreamtrail Aether Currents All.xml"/>
+			<LLoadProfile Path="Aether Currents/Dawntrail Aether Currents All.xml"/>
 
 
 		</If>
